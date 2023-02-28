@@ -8,9 +8,14 @@ import { RouterLink } from 'vue-router'
         <RouterLink to="/">VCA4D website</RouterLink>
 
         <div>
+            <!--
             <img src="/images/logo/agrinatura.jpeg" alt="agrinatura network logo">
             <img src="/images/logo/VCA4D.jpeg" alt="VCA4D logo">
             <img src="/images/logo/european-commission.jpeg" alt="european commission logo">
+            -->
+            <img alt="agrinatura network logo">
+            <img alt="VCA4D logo">
+            <img alt="european commission logo">
         </div>
     </header>
 
