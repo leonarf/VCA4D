@@ -10,6 +10,10 @@ This template should help get you started developing with Vue 3 in Vite.
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## Install
+
+- Install [Node.js](https://nodejs.org/en/) (which installs npm in the process)
+
 ## Project Setup
 
 ```sh
@@ -28,8 +32,10 @@ npm run dev
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Lint and prettier
 
 ```sh
 npm run lint
+
+npm run prettier
 ```

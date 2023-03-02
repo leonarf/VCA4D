@@ -2,5 +2,11 @@
     "id": "cashew-mali-2021",
     "product": "Cashew nuts",
     "country": "Mali",
-    "year": 2021
+    "year": 2021,
+    "environment": {
+        "brief": [
+            "Sustainability of walnut and almond production and export sub-sectors.",
+            "Optimization of energy consumption to be sought for the embryonic juice sub-sector from cashew apples."
+        ]
+    }
 }
