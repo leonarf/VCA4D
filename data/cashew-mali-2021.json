@@ -7,6 +7,124 @@
         "brief": [
             "Sustainability of walnut and almond production and export sub-sectors.",
             "Optimization of energy consumption to be sought for the embryonic juice sub-sector from cashew apples."
-        ]
+        ],
+        "impacts" : {
+            "mid-points": {
+                "Global-warming": {
+                    "Agricultural-production": -154565235.678,
+                    "Collection": 102549.907115,
+                    "Processing": 198568.619229,
+                    "Retail": 1924.33492,
+                    "Export": 0,
+                    "Transport": 3763849.3292988
+                },
+                "Stratospheric-ozone-depletion": {
+                    "Agricultural-production": 28.90294639575,
+                    "Collection": 0.056650125186,
+                    "Processing": 1.63613197687,
+                    "Retail": 0.001105149,
+                    "Export": 0,
+                    "Transport": 2.1820214281845
+                },
+                "Ionizing-radiation": {
+                    "Agricultural-production": 32691.12756042,
+                    "Collection": 17619.4683194,
+                    "Processing": 4702.8165507,
+                    "Retail": 297.30166,
+                    "Export": 0,
+                    "Transport": 565328.92152534
+                },
+                "Ozone-formation-human-health": {
+                    "Agricultural-production": 4171.156200435,
+                    "Collection": 470.61287818,
+                    "Processing": 1503.91500265,
+                    "Retail": 9.8170512,
+                    "Export": 0,
+                    "Transport": 19679.843720523
+                },
+                "x": {
+                    "Agricultural-production": -1,
+                    "Collection": -1,
+                    "Processing": -1,
+                    "Retail": -1,
+                    "Export": 0,
+                    "Transport": -1
+                }
+            },
+            "human-health" : {
+                "Global-warming-human-health": {
+                    "Agricultural-production": -143.4336813315,
+                    "Collection": 0.095167188356,
+                    "Processing": 0.184375752037,
+                    "Retail": 0.00178580208,
+                    "Export": 0,
+                    "Transport": 3.4928912650716
+                },
+                "Stratospheric-ozone-depletion": {
+                    "Agricultural-production": 0.01534480418499,
+                    "Collection": 0.0000300577262171,
+                    "Processing": 0.00086916969847,
+                    "Retail": 0.00000058638192,
+                    "Export": 0,
+                    "Transport": 0.00115776329416797
+                },
+                "Ionizing-radiation": {
+                    "Agricultural-production": 0.0002773563184077,
+                    "Collection": 0.000149479705486,
+                    "Processing": 0.000039901212634,
+                    "Retail": 0.00000252224244,
+                    "Export": 0,
+                    "Transport": 0.0047961276047286
+                },
+                "Ozone-formation-human-health": {
+                    "Agricultural-production": 0.003793773513285,
+                    "Collection": 0.00042826083775,
+                    "Processing": 0.00136768300978,
+                    "Retail": 0.000008933564,
+                    "Export": 0,
+                    "Transport": 0.017908744728378
+                },
+                "Fine-particulate-matter-formation": { 
+                    "Agricultural-production": 1.944441248358,
+                    "Collection": 0.082726442617,
+                    "Processing": 1.42965930651,
+                    "Retail": 0.00155118196,
+                    "Export": 0,
+                    "Transport": 3.0334241805966
+                },
+                "Human-carcinogenic-toxicity": {
+                    "Agricultural-production": 0.08672719829046,
+                    "Collection": 0.0149955266767,
+                    "Processing": 0.0148546092952,
+                    "Retail": 0.000265783408,
+                    "Export": 0,
+                    "Transport": 0.51227955904419
+                },
+                "Human-non-carcinogenic-toxicity": {
+                    "Agricultural-production": 0.09191459917395,
+                    "Collection": 0.032245608235,
+                    "Processing": 0.0261660881502,
+                    "Retail": 0.0005226232,
+                    "Export": 0,
+                    "Transport": 0.98219875003257
+                },
+                "Water-consumption-human-health": {
+                    "Agricultural-production": 0.05779269102957,
+                    "Collection": 0.5582300364,
+                    "Processing": 0.054504001302,
+                    "Retail": 0.009398398,
+                    "Export": 0,
+                    "Transport": 17.8600960388172
+                },
+                "x": {
+                    "Agricultural-production": false,
+                    "Collection": false,
+                    "Processing": false,
+                    "Retail": false,
+                    "Export": 0,
+                    "Transport": false
+                }
+            }
+        }
     }
 }
