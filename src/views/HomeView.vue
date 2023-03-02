@@ -39,19 +39,19 @@ import Skeleton from '../components/Skeleton.vue'
                 <h4>Orchards</h4>
                 <ul>
                     <li>
-                        <a href="/study?id=cashew-mali-2021">
+                        <RouterLink to="/study?id=cashew-mali-2021">
                             <img class="TODO" src="../images/product-pictograms/cashew.jpeg" alt="cashew pictogram - link to Mali 2021 cashew study">
-                        </a>
+                        </RouterLink>
                     </li>
                     <li>
-                        <a href="/study?id=cashew-mali-2021">
+                        <RouterLink to="/study?id=cashew-mali-2021">
                             <img class="TODO" src="../images/product-pictograms/cashew.jpeg" alt="cashew pictogram - link to Mali 2021 cashew study">
-                        </a>
+                        </RouterLink>
                     </li>
                     <li>
-                        <a href="/study?id=cashew-mali-2021">
+                        <RouterLink to="/study?id=cashew-mali-2021">
                             <img class="TODO" src="../images/product-pictograms/cashew.jpeg" alt="cashew pictogram - link to Mali 2021 cashew study">
-                        </a>
+                        </RouterLink>
                     </li>
                 </ul>
                 
