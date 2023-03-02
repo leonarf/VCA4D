@@ -2,26 +2,32 @@
 
 import {json} from 'd3-fetch'
 
-/**
- * @typedef { 'cashew-mali-2021' | 'autre' } StudyId
- */
+import './types.js'
 
 /**
- * @typedef {Object} Study
- * @property {string} country
- * @property {string} product
- * @property {number} year
+ * @param {any} data
+ * @returns {data is StudyEnvironment}
  */
+function isStudyEnvironment(data){
+    console.log('data for StudyEnvironment', data)
+    return Object(data) === data &&
+        Array.isArray(data.brief) &&
+        Object(data.impacts) === data.impacts // vérification faible. PPP : à améliorer
+}
+
 
 /**
  * @param {any} data
  * @returns {data is Study}
  */
-export function isStudy(data){
+function isStudy(data){
+    console.log('data for Study', data)
+
     return Object(data) === data &&
         typeof data.country === 'string' &&
         typeof data.product === 'string' &&
-        Number.isFinite(data.year) && data.year >= 2000;
+        Number.isFinite(data.year) && data.year >= 2000 &&
+        isStudyEnvironment(data.environment)
 }
 
 
