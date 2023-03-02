@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import Skeleton from '../components/Skeleton.vue'
 </script>
 
@@ -66,7 +67,7 @@ import Skeleton from '../components/Skeleton.vue'
                 <h4>Mali</h4>
                 <ul>
                     <li>
-                        <a href="/study?id=cashew-mali-2021">Anacarde 2021</a>
+                        <RouterLink to="/study?id=cashew-mali-2021">Anacarde 2021</RouterLink>
                     </li>
                 </ul>
 
