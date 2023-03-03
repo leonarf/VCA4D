@@ -104,7 +104,7 @@ section.banner {
         max-width: 50%;
         padding: 1rem;
         border-radius: 2rem;
-        background-color: hsla(0, 0, 0, 0.7);
+        background-color: hsla(0, 0%, 0%, 0.7);
 
         position: relative;
         left: 4rem;
