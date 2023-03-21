@@ -11,11 +11,15 @@
         <section class="climate-change">
             <h3>Climate change</h3>
 
+            <h4>Proportions des impacts sur le réchauffement climatique</h4>
+
+            <p class="TODO">Descriptif de l’indicateur. Empreinte carbone calculée en kg d’équivalent CO2)</p>
+
             <ol v-if="studyData">
-                <li v-for="{value, label} in climateImpactPerStep.perStep">
-                    <div class="bar-space" :title="value">
-                        <div class="bar" :style="'height: ' + (value*100/climateImpactPerStep.max) + '%;'"></div>
-                    </div>
+                <li v-for="{value, label, cssClass} in climateImpactPerStep.perStep" 
+                    :style="'width: ' + (value*100/climateImpactPerStep.max) + '%;'"
+                    :class="cssClass"
+                    :title="value">
                     <div>{{ label }}</div>
                 </li>
             </ol>
@@ -33,8 +37,6 @@
                 </li>
             </ol>
         </section>
-
-        <pre>{{ JSON.stringify(studyData, null, 2) }}</pre>
 
     </article>
 
@@ -65,6 +67,7 @@ export default {
 
                 const perStep = Object.entries(globalWarmingPerStep).map(([label, value]) => {
                     return {
+                        cssClass: label.toLowerCase(),
                         label, 
                         value: Math.max(0, value) // ignoring negative values for now. PPP : properly handle the case
                     }
@@ -113,6 +116,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../../style/colors.scss';
 
 pre{
     font-size: 8px;
@@ -124,33 +128,37 @@ article {
         ol{
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: flex-start;
 
             list-style: none;
             margin: 0;
 
+            height: 3rem;
+
             li{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
+                height: 100%;
 
-                margin-left: 0.5rem;
-
-                .bar-space{
-                    height: 5rem;
-                    width: 3rem;
-
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    
-
-                    .bar{
-                        width: 100%;
-                        
-                    }
+                &.agricultural-production{
+                    background-color: $step-agricultural-production-color;
+                }
+                &.collection{
+                    background-color: $step-collection-color;
+                }
+                &.processing{
+                    background-color: $step-processing-color;
+                }
+                &.wholesale{
+                    background-color: $step-wholesale-color;
+                }
+                &.retail{
+                    background-color: $step-retail-color;
+                }
+                &.export{
+                    background-color: $step-export-color;
+                }
+                &.transport{
+                    background-color: $step-transport-color;
                 }
             }
         }
