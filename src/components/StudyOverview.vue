@@ -55,7 +55,7 @@
 
             </p>
             -->
-            <RouterLink :to="'/study?id=' + studyData.id + '&view=economics'">
+            <RouterLink :to="'/study?id=' + studyData.id + '&view=economic-growth'">
                 <h3>Contribution to growth</h3>
                 <p>Learn more about <em>Contribution to GDP</em>, <em>Public finances</em>, 
                     <em>Balance of trade</em> and <em>Viability in international economy</em></p>
@@ -65,7 +65,7 @@
                 <p>Learn more about <em>Employment</em>, <em>Profits distribution across actors</em> and 
                     <em>Impact of governance</em></p>
             </RouterLink>
-            <RouterLink :to="'/study?id=' + studyData.id + '&view=social'">
+            <RouterLink :to="'/study?id=' + studyData.id + '&view=social-sustainability'">
                 <h3>Social sustainability</h3>
                 <p>Learn more about <em>Working conditions</em>, <em>Land and water rights</em>, 
                     <em>Gender equality</em>, <em>Food & nutrition security</em>,
