@@ -26,10 +26,10 @@
                     <RouterLink :to="'/study?id=' + studyData.id + '&view=economic-growth'">Contribution to economic growth</RouterLink>
                 </li>
                 <li>
-                    <a class="TODO">Inclusiveness</a>
+                    <RouterLink :to="'/study?id=' + studyData.id + '&view=inclusiveness'">Inclusiveness</RouterLink>
                 </li>
                 <li>
-                    <a class="TODO">Social sustainability</a>
+                    <RouterLink :to="'/study?id=' + studyData.id + '&view=social-sustainability'">Social sustainability</RouterLink>
                 </li>
                 <li>
                     <RouterLink :to="'/study?id=' + studyData.id + '&view=environment'">Environmental sustainability</RouterLink>
@@ -43,8 +43,8 @@
         <StudyOverview v-if="view === undefined" :studyData="studyData"></StudyOverview>
         <StudyEnvironment v-if="view === 'environment'" :studyData="studyData"></StudyEnvironment>
         <StudyEconomicGrowth v-if="view === 'economic-growth'" :studyData="studyData"></StudyEconomicGrowth>
-
-        
+        <StudyInclusiveness v-if="view === 'inclusiveness'" :studyData="studyData"></StudyInclusiveness>
+        <StudySocialSustainability v-if="view === 'social-sustainability'" :studyData="studyData"></StudySocialSustainability>
     </Skeleton>
 </template>
 
@@ -54,6 +54,8 @@ import Skeleton from '../components/Skeleton.vue'
 import StudyOverview from '../components/StudyOverview.vue'
 import StudyEnvironment from '../components/StudyEnvironment.vue'
 import StudyEconomicGrowth from '../components/StudyEconomicGrowth.vue'
+import StudyInclusiveness from '../components/StudyInclusiveness.vue'
+import StudySocialSustainability from '../components/StudySocialSustainability.vue'
 
 </script>
 
