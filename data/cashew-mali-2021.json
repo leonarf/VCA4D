@@ -126,5 +126,113 @@
                 }
             }
         }
+    },
+    "data": {
+        "Value Chain": [
+            {
+                "Property": "Country",
+                "Value": "Mali",
+                "Unit": "-"
+            },
+            {
+                "Property": "Commodity",
+                "Value": "Anacarde",
+                "Unit": "-"
+            },
+            {
+                "Property": "Reference Year",
+                "Value": 2014,
+                "Unit": "-"
+            },
+            {
+                "Property": "Currency",
+                "Value": "CFA",
+                "Unit": "-"
+            },
+            {
+                "Property": "Change rate to euro"
+            },
+            {
+                "Property": "Change rate to dollar"
+            },
+            {
+                "Property": "Total volume Of commdity production",
+                "Value": "noix",
+                "Unit": 42000000,
+                "__EMPTY": "Kilogram"
+            },
+            {
+                "Property": "Total volume Of commdity production",
+                "Value": "pomme",
+                "Unit": 80000,
+                "__EMPTY": "Kilogram"
+            },
+            {
+                "Property": "Nominal protection coefficient",
+                "Unit": "-"
+            },
+            {
+                "Property": "Public fund balance",
+                "Unit": "local currency"
+            },
+            {
+                "Property": "Total value added",
+                "Unit": "local currency"
+            },
+            {
+                "Property": "Value added share Of national GDP",
+                "Unit": "%"
+            },
+            {
+                "Property": "Value added share Of the agricultural sector GDP",
+                "Unit": "%"
+            },
+            {
+                "Property": "Rate Of integration into domestic economy",
+                "Unit": "%"
+            },
+            {
+                "Property": "Public funds balance / Public budget",
+                "Unit": "%"
+            },
+            {
+                "Property": "Balance Of trade Of the value chain",
+                "Unit": "local currency"
+            },
+            {
+                "Property": "Domestic resource cost ratio",
+                "Unit": "-"
+            },
+            {
+                "Property": "Gini index",
+                "Unit": "-"
+            }
+        ],
+        "Stages description": [
+            {
+                "Stages": "Agricultural producers",
+                "Description": "a aa aaa"
+            },
+            {
+                "Stages": "Collectors",
+                "Description": "b bb bbb"
+            },
+            {
+                "Stages": "Processors",
+                "Description": "c cc ccc"
+            },
+            {
+                "Stages": "Wholesalers",
+                "Description": "d dd ddd"
+            },
+            {
+                "Stages": "Retailers",
+                "Description": "e ee eee"
+            },
+            {
+                "Stages": "Exporters",
+                "Description": "f ff fff"
+            }
+        ]
     }
 }

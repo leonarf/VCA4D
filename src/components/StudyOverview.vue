@@ -4,35 +4,10 @@
         <section class="introduction">
             <h2>Main steps in the value chain</h2>
             <ol>
-                <li>
-                    <img class="TODO" alt="agricultural production illustration">
-                    <strong>Agricultural production</strong>
-                    <p class="TODO">The cow farmers producing milk, animals and manure using various 
-                        techniques: stabling, grazing and mixes thereof.</p>
-                </li>
-                <li>
-                    <img class="TODO" alt="collection illustration">
-                    <strong>Collection</strong>
-                    <p class="TODO">Collection is typically done by bike using 4 twenty-liters milk cans.</p>
-                </li>
-                <li>
-                    <img class="TODO" alt="Processing illustration">
-                    <strong>Processing</strong>
-                    <p class="TODO">Mostly done in artisanal dairy (making yoghurt and cheese), but also 
-                        in 10-15 semi-industrial facilities with more modern equipment 
-                        and 1 industrial facility.</p>
-                </li>
-                <li>
-                    <img class="TODO" alt="Wholesale illustration">
-                    <strong>Wholesale</strong>
-                    <p class="TODO">Assembles milk from individual collectors. The wholesaler generally 
-                        takes care of pasteurizing the milk and then sends it by truck to retailers.</p>
-                </li>
-                <li>
-                    <img class="TODO" alt="Retail illustration">
-                    <strong>Retail</strong>
-                    <p class="TODO">Either taking place in milk bars or through 
-                        subscription-based milk distributing services, by bike.</p>
+                <li v-for="step in populatedSteps" :key="step.label">
+                    <img class="TODO" :alt="step.label + ' illustration'">
+                    <strong>{{ step.label }}</strong>
+                    <p class="TODO">{{ step.description }}</p>
                 </li>
             </ol>
         </section>
@@ -136,20 +111,59 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import { computed } from 'vue';
 
-</script>
+const props = defineProps({
+  studyData: Object
+});
 
-<script>
-//@ts-check
-
-export default {
-    name: 'StudyOverview',
-    props: ['studyData'],
-    data() {
-        return {
-        }
+const steps = [
+    {
+        label: "Agricultural production",
+        image: "TODO",
+        dataKey: "Agricultural producers" 
+    },
+    {
+        label: "Collection",
+        image: "TODO",
+        dataKey: "Collectors" 
+    },
+    {
+        label: "Processing",
+        image: "TODO",
+        dataKey: "Processors" 
+    },
+    {
+        label: "Wholesale",
+        image: "TODO",
+        dataKey: "Wholesalers" 
+    },
+    {
+        label: "Retail",
+        image: "TODO",
+        dataKey: "Retailers" 
+    },
+    {
+        label: "Export",
+        image: "TODO",
+        dataKey: "Exporters" 
     }
-}
+];
+
+
+
+const getStepDescription = (studyData, dataKey) => {
+    return studyData?.data["Stages description"]?.find(el => {return el["Stages"] === dataKey;} )["Description"];
+};
+
+const populatedSteps = computed( () => {
+    return steps.map((step) => {
+        return {
+            ...step,
+            description: getStepDescription(props.studyData, step.dataKey) // we take into account the fact that at first rendering, `studyData` can be undefined
+        };
+    });
+});
 </script>
 
 <style scoped lang="scss">
