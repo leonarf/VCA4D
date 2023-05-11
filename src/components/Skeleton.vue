@@ -26,6 +26,7 @@ import { RouterLink } from 'vue-router'
     <footer class="TODO">
         <ul>
             <li><a href="https://github.com/DavidBruant/VCA4D">Code source sur Github</a></li>
+            <li><a href="./convert-xls-to-json.html">(admin) Convert an XLS file to JSON</a></li>
         </ul>
     </footer>
 </template>

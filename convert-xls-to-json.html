@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Convert an XLS file to JSON</title>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.3/xlsx.full.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <h1>Convert an XLS file to JSON</h1>
+    <input type="file" id="fileUpload" accept=".xls,.xlsx" /><br />
+    <button type="button" id="uploadExcel">Convert</button>
+    <br/>
+    <br/>
+    Output:
+    <br/>
+    <textarea id="jsonData" style="width: 100%; height: 400px;"></textarea>
+  </body>
+  <script>
+    var selectedFile;
+    document
+      .getElementById("fileUpload")
+      .addEventListener("change", function (event) {
+        selectedFile = event.target.files[0];
+      });
+    document
+      .getElementById("uploadExcel")
+      .addEventListener("click", function () {
+        if (selectedFile) {
+          //console.log("hi");
+          var fileReader = new FileReader();
+          fileReader.onload = function (event) {
+            var data = event.target.result;
+
+            var workbook = XLSX.read(data, {
+              type: "binary"
+            });
+            var output = {};
+            workbook.SheetNames.forEach((sheet) => {
+              console.log("sheet:", sheet);
+              let rowObject = XLSX.utils.sheet_to_row_object_array(
+                workbook.Sheets[sheet]
+              );
+              output[sheet] = rowObject;
+              console.log("rowObject:", rowObject);
+              let jsonObject = JSON.stringify(rowObject);
+              //document.getElementById("jsonData").innerHTML = jsonObject;
+              console.log("rowObject as JSON:", jsonObject);
+            });
+            console.log("output:", output);
+            var outputAsJson = JSON.stringify(output);
+            console.log("outputAsJson:", outputAsJson);
+            document.getElementById("jsonData").innerHTML = outputAsJson;
+          };
+          fileReader.readAsBinaryString(selectedFile);
+          
+
+        }
+      });
+  </script>
+</html>

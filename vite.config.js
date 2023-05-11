@@ -16,7 +16,8 @@ export default defineConfig({
     rollupOptions: {
       input: [
         'index.html',
-        'study.html'
+        'study.html',
+        'convert-xls-to-json.html'
       ].map(f => resolve(__dirname, f))
     },
   }
