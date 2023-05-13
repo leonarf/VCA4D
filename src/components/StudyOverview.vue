@@ -13,8 +13,7 @@
         </section>
 
         <section>
-            <h2>The various actors and their share in the flows of the value chain</h2>
-            <div class="TODO">Sankey diagram</div>
+            <SankeyChart :options="populatedSankeyChartData"></SankeyChart>
         </section>
 
 
@@ -113,6 +112,8 @@
 import { RouterLink } from 'vue-router'
 import { computed } from 'vue';
 
+import SankeyChart from './SankeyChart.vue';
+
 const props = defineProps({
   studyData: Object
 });
@@ -164,10 +165,55 @@ const populatedSteps = computed( () => {
         };
     });
 });
+
+const populatedSankeyChartData = computed ( () => {
+    let chartTitle = "The various actors and their share in the flows of the value chain";
+    let nodes = [];
+    let links = [];
+    if (!props.studyData){
+        chartTitle += "(NOT ENOUGH DATA)";
+    } else {
+        let actorTypes = props.studyData?.data["Actor types"];
+        nodes = actorTypes.map((actor) => {
+            return {
+                "name": actor["Actor type name"]
+            };
+        });
+        let flowByActorTypes = props.studyData?.data["Flow by actor type"];
+        links = flowByActorTypes.map((row) => {
+            const sourceActor = actorTypes.find((actor) => {return actor["Actor type code"] === row["Seller actor type code"];});
+            const targetActor = actorTypes.find((actor) => {return actor["Actor type code"] === row["Buyer actor type code"];});
+            return {
+                "source": sourceActor["Actor type name"],
+                "target": targetActor["Actor type name"],
+                "value": row["Monetary value"]
+            };
+        });
+    }
+    const result = {
+        title: {
+            text: chartTitle,
+            //left: "center"
+        },
+        tooltip: {
+            trigger: 'item',
+            triggerOn: 'mousemove'
+        },
+        series: {
+            type: 'sankey',
+            layout: 'none',
+            emphasis: {
+                focus: 'adjacency'
+            },
+            "nodes": nodes, // It looks like in echarts, "nodes" key can also be named "data"
+            "links": links
+        }
+    };
+    return result;
+});
 </script>
 
 <style scoped lang="scss">
-
 article {
     section.introduction{
         ol{
@@ -237,5 +283,4 @@ article {
     }
 
 }
-
 </style>

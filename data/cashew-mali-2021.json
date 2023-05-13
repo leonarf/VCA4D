@@ -233,6 +233,160 @@
                 "Stages": "Exporters",
                 "Description": "f ff fff"
             }
+        ],
+        "Actor types": [
+            {
+              "Actor type code": 47,
+              "Stage": "Producers",
+              "Actor type name": "Producteur"
+            },
+            {
+              "Actor type code": 48,
+              "Stage": "Processors",
+              "Actor type name": "TransfAmandesManuel"
+            },
+            {
+              "Actor type code": 49,
+              "Stage": "Processors",
+              "Actor type name": "TransfAmandesUnité"
+            },
+            {
+              "Actor type code": 50,
+              "Stage": "Collectors",
+              "Actor type name": "Pisteur / Collecteur"
+            },
+            {
+              "Actor type code": 51,
+              "Stage": "Wholesalers",
+              "Actor type name": "Grossiste / Exportateur Noix"
+            },
+            {
+              "Actor type code": 52,
+              "Stage": "Processors",
+              "Actor type name": "TransfPomme"
+            },
+            {
+              "Actor type code": 53,
+              "Stage": "Exporters",
+              "Actor type name": "Grossiste / Exportateur Amandes"
+            },
+            {
+              "Actor type code": 54,
+              "Stage": "Export",
+              "Actor type name": "MarcheExterieur Noix"
+            },
+            {
+              "Actor type code": 55,
+              "Stage": "Consumer",
+              "Actor type name": "Consommateur Jus"
+            },
+            {
+              "Actor type code": 56,
+              "Stage": "Consumer",
+              "Actor type name": "Consommateur Amande"
+            }
+        ],
+        "Farm gate price In final price": [],
+        "Flow by actor type": [
+            {
+                "Seller actor type code": 47,
+                "Seller Name": "Producteur",
+                "Buyer actor type code": 48,
+                "Buyer Name": "TransfAmandesManuel",
+                "Products": "Noix",
+                "Volume exchanged (kg Of product)": 336000,
+                "Monetary value": 228480000,
+                "Unitary price (local curency)": 680,
+                "Volume Unit": "Kilogram"
+            },
+            {
+                "Seller actor type code": 47,
+                "Seller Name": "Producteur",
+                "Buyer actor type code": 49,
+                "Buyer Name": "TransfAmandesUnité",
+                "Products": "Noix",
+                "Volume exchanged (kg Of product)": 1344000,
+                "Monetary value": 913920000,
+                "Unitary price (local curency)": 680,
+                "Volume Unit": "Kilogram"
+            },
+            {
+                "Seller actor type code": 47,
+                "Seller Name": "Producteur",
+                "Buyer actor type code": 50,
+                "Buyer Name": "Pisteur / Collecteur",
+                "Products": "Noix",
+                "Volume exchanged (kg Of product)": 40320000,
+                "Monetary value": 27417600000,
+                "Unitary price (local curency)": 680,
+                "Volume Unit": "Kilogram"
+            },
+            {
+                "Seller actor type code": 47,
+                "Seller Name": "Producteur",
+                "Buyer actor type code": 52,
+                "Buyer Name": "TransfPomme",
+                "Products": "Pomme",
+                "Volume exchanged (kg Of product)": 80000,
+                "Monetary value": 4800000,
+                "Unitary price (local curency)": 60,
+                "Volume Unit": "Kilogram"
+            },
+            {
+                "Seller actor type code": 48,
+                "Seller Name": "TransfAmandesManuel",
+                "Buyer actor type code": 56,
+                "Buyer Name": "Consommateur Amande",
+                "Products": "Amande",
+                "Volume exchanged (kg Of product)": 73500,
+                "Monetary value": 294000000,
+                "Unitary price (local curency)": 4000,
+                "Volume Unit": "Kilogram"
+            },
+            {
+                "Seller actor type code": 49,
+                "Seller Name": "TransfAmandesUnité",
+                "Buyer actor type code": 53,
+                "Buyer Name": "Grossiste / Exportateur Amandes",
+                "Products": "Amande",
+                "Volume exchanged (kg Of product)": 268800,
+                "Monetary value": 1344000000,
+                "Unitary price (local curency)": 5000,
+                "Volume Unit": "Kilogram"
+            },
+            {
+                "Seller actor type code": 50,
+                "Seller Name": "Pisteur / Collecteur",
+                "Buyer actor type code": 51,
+                "Buyer Name": "Grossiste / Exportateur Noix",
+                "Products": "Noix",
+                "Volume exchanged (kg Of product)": 40320000,
+                "Monetary value": 28224000000,
+                "Unitary price (local curency)": 700,
+                "Volume Unit": "Kilogram"
+            },
+            {
+                "Seller actor type code": 51,
+                "Seller Name": "Grossiste / Exportateur Noix",
+                "Buyer actor type code": 54,
+                "Buyer Name": "MarcheExterieur Noix",
+                "Products": "Noix",
+                "Volume exchanged (kg Of product)": 40320000,
+                "Monetary value": 30240000000,
+                "Unitary price (local curency)": 750,
+                "Volume Unit": "Kilogram"
+            },
+            {
+                "Seller actor type code": 52,
+                "Seller Name": "TransfPomme",
+                "Buyer actor type code": 55,
+                "Buyer Name": "Consommateur Jus",
+                "Products": "Jus",
+                "Volume exchanged (kg Of product)": 40000,
+                "Monetary value": 30600000,
+                "Unitary price (local curency)": 765,
+                "Volume Unit": "Liter"
+            }
         ]
     }
 }
