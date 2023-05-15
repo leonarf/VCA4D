@@ -170,7 +170,7 @@ const populatedSankeyChartData = computed ( () => {
     let chartTitle = "The various actors and their share in the flows of the value chain";
     let nodes = [];
     let links = [];
-    let monetaryCurrency = "&euro;"
+    let monetaryCurrency = "&euro;";
     if (!props.studyData){
         chartTitle += "(NOT ENOUGH DATA)";
     } else {
@@ -189,7 +189,18 @@ const populatedSankeyChartData = computed ( () => {
             return {
                 "source": sourceActor["Actor type name"],
                 "target": targetActor["Actor type name"],
-                "value": row["Monetary value"]
+                "value": row["Monetary value"],
+                "edgeLabel": {
+                    show: true,
+                    formatter: () => {
+                        return row["Products"];
+                    }
+                },
+                "Volume exchanged (kg Of product)": row["Volume exchanged (kg Of product)"],
+                "Products": row["Products"],
+                "Unitary price (local curency)": row["Unitary price (local curency)"],
+                "Volume Unit": row["Volume Unit"],
+                "Remark": row["Remark"]
             };
         });
     }
@@ -201,7 +212,60 @@ const populatedSankeyChartData = computed ( () => {
         tooltip: {
             trigger: 'item',
             triggerOn: 'mousemove',
-            formatter: '{b}: {c} ' + monetaryCurrency
+            //formatter: '{b}: {c} ' + monetaryCurrency
+            formatter: (params, ticket) => {
+                console.log("tooltip.formatter params:", params, "ticket:", ticket);
+                if (params?.dataType === "node"){
+                    return params.data.name;
+                }
+                if (params?.dataType === "edge"){
+                    let items = [
+                        {
+                            label: "Source",
+                            value: params.data.source,
+                        },
+                        {
+                            label: "Target",
+                            value: params.data.target
+                        },
+                        {
+                            label: "Monetary value",
+                            value: `${params.data.value} ${monetaryCurrency}`
+                        },
+                        {
+                            label: "Products",
+                            value: params.data['Products']
+                        },
+                        {
+                            label: "Unitary price (local curency)",
+                            value: params.data['Unitary price (local curency)']
+                        },
+                        {
+                            label: "Volume exchanged (kg Of product)",
+                            value: params.data['Volume exchanged (kg Of product)']
+                        },
+                        {
+                            label: "Volume unit",
+                            value: params.data['Volume unit']
+                        },
+                        {
+                            label: "Remark",
+                            value: params.data['Remark']
+                        }
+                    ];
+                    const rendered_items = items.map((item) => {
+                        if (item.value === undefined){
+                            return null;
+                        }
+                        return `<li><strong>${item.label}</strong>: ${item.value}</li>`;
+                    });
+
+                    return `<div style='max-width: 400px; white-space: normal;'><ul style='list-style: initial; margin: 0 10px; padding: initial;'>${rendered_items.join('')}</ul></div>`;
+                }
+                else {
+                    return '';
+                }
+            }
         },
         series: {
             type: 'sankey',
