@@ -17,7 +17,7 @@ export default defineConfig({
       input: [
         'index.html',
         'study.html',
-        'convert-xls-to-json.html'
+        'import-study.html'
       ].map(f => resolve(__dirname, f))
     },
   }

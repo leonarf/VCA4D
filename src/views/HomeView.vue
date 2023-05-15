@@ -44,8 +44,8 @@ import Skeleton from '../components/Skeleton.vue'
                         </RouterLink>
                     </li>
                     <li>
-                        <RouterLink to="/study?id=cashew-mali-2021">
-                            <img class="TODO" src="../images/product-pictograms/cashew.jpeg" alt="cashew pictogram - link to Mali 2021 cashew study">
+                        <RouterLink to="/study?id=mangue-burkina-faso-2016">
+                            <img class="TODO" src="../images/product-pictograms/mango.png" alt="mango pictogram - link to Burkina-Faso 2016 mango study">
                         </RouterLink>
                     </li>
                     <li>
@@ -63,6 +63,13 @@ import Skeleton from '../components/Skeleton.vue'
 
             <section class="by-country">
                 <h3>Studies by <strong>country</strong></h3>
+
+                <h4>Burkina-Faso</h4>
+                <ul>
+                    <li>
+                        <RouterLink to="/study?id=mangue-burkina-faso-2016">Mangue 2016</RouterLink>
+                    </li>
+                </ul>
 
                 <h4>Mali</h4>
                 <ul>
