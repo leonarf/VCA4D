@@ -170,9 +170,12 @@ const populatedSankeyChartData = computed ( () => {
     let chartTitle = "The various actors and their share in the flows of the value chain";
     let nodes = [];
     let links = [];
+    let monetaryCurrency = "&euro;"
     if (!props.studyData){
         chartTitle += "(NOT ENOUGH DATA)";
     } else {
+        let valueChain = props.studyData?.data["Value Chain"];
+        monetaryCurrency = valueChain.find((row) => {return row["Property"] === "Currency"})["Value"];
         let actorTypes = props.studyData?.data["Actor types"];
         nodes = actorTypes.map((actor) => {
             return {
@@ -197,7 +200,8 @@ const populatedSankeyChartData = computed ( () => {
         },
         tooltip: {
             trigger: 'item',
-            triggerOn: 'mousemove'
+            triggerOn: 'mousemove',
+            formatter: '{b}: {c} ' + monetaryCurrency
         },
         series: {
             type: 'sankey',
