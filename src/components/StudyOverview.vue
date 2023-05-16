@@ -154,7 +154,7 @@ const steps = [
 
 
 const getStepDescription = (studyData, dataKey) => {
-    return studyData?.data["Stages description"]?.find(el => {return el["Stages"] === dataKey;} )["Description"];
+    return studyData?.data["Stages description"]?.find(el => {return el["Stages"] === dataKey;} )?.["Description"];
 };
 
 const populatedSteps = computed( () => {
@@ -171,21 +171,76 @@ const populatedSankeyChartData = computed ( () => {
     let nodes = [];
     let links = [];
     let monetaryCurrency = "&euro;";
+    let stages = [];
+    let levels = [];
+    let result = {
+        title: {
+            text: chartTitle,
+            //left: "center"
+        },
+        series: {
+            type: 'sankey',
+            layout: 'none',
+            emphasis: {
+                focus: 'adjacency'
+            },
+            nodes: [],
+            links: []
+        }
+    };
+    const colors = [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ];
     if (!props.studyData){
         chartTitle += "(NOT ENOUGH DATA)";
+        result.title.text = chartTitle;
+        return result;
     } else {
-        let valueChain = props.studyData?.data["Value Chain"];
-        monetaryCurrency = valueChain.find((row) => {return row["Property"] === "Currency"})["Value"];
-        let actorTypes = props.studyData?.data["Actor types"];
-        nodes = actorTypes.map((actor) => {
+        let valueChainTab = props.studyData?.data["Value Chain"];
+        monetaryCurrency = valueChainTab.find((row) => {return row["Property"] === "Currency"})["Value"];
+        let stagesTab = props.studyData?.data["Stages description"];
+        stages = stagesTab.map((row, index) => {
             return {
-                "name": actor["Actor type name"]
+                label: row["Stages"],
+                description: row["Description"],
+                index: index
             };
         });
-        let flowByActorTypes = props.studyData?.data["Flow by actor type"];
-        links = flowByActorTypes.map((row) => {
-            const sourceActor = actorTypes.find((actor) => {return actor["Actor type code"] === row["Seller actor type code"];});
-            const targetActor = actorTypes.find((actor) => {return actor["Actor type code"] === row["Buyer actor type code"];});
+        levels = stagesTab.map((row, index) => {
+            //const stageColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            const stageColor = colors[index%colors.length];
+            return {
+              depth: index,
+              itemStyle: {
+                color: stageColor
+              },
+              lineStyle: {
+                color: 'source',
+                opacity: 0.6
+              }
+            };
+        });
+
+        let actorTypesTab = props.studyData?.data["Actor types"];
+        nodes = actorTypesTab.map((actor) => {
+            const actorStage = stages.find((stage) => { return stage.label === actor["Stage"]});
+            return {
+                "name": actor["Actor type name"],
+                "depth": actorStage?.index
+            };
+        });
+        let flowByactorTypesTab = props.studyData?.data["Flow by actor type"];
+        links = flowByactorTypesTab.map((row) => {
+            const sourceActor = actorTypesTab.find((actor) => {return actor["Actor type code"] === row["Seller actor type code"];});
+            const targetActor = actorTypesTab.find((actor) => {return actor["Actor type code"] === row["Buyer actor type code"];});
             return {
                 "source": sourceActor["Actor type name"],
                 "target": targetActor["Actor type name"],
@@ -203,80 +258,81 @@ const populatedSankeyChartData = computed ( () => {
                 "Remark": row["Remark"]
             };
         });
-    }
-    const result = {
-        title: {
-            text: chartTitle,
-            //left: "center"
-        },
-        tooltip: {
+        result.tooltip = {
             trigger: 'item',
             triggerOn: 'mousemove',
-            //formatter: '{b}: {c} ' + monetaryCurrency
             formatter: (params, ticket) => {
-                console.log("tooltip.formatter params:", params, "ticket:", ticket);
-                if (params?.dataType === "node"){
-                    return params.data.name;
-                }
-                if (params?.dataType === "edge"){
-                    let items = [
-                        {
-                            label: "Source",
-                            value: params.data.source,
-                        },
-                        {
-                            label: "Target",
-                            value: params.data.target
-                        },
-                        {
-                            label: "Monetary value",
-                            value: `${params.data.value} ${monetaryCurrency}`
-                        },
-                        {
-                            label: "Products",
-                            value: params.data['Products']
-                        },
-                        {
-                            label: "Unitary price (local curency)",
-                            value: params.data['Unitary price (local curency)']
-                        },
-                        {
-                            label: "Volume exchanged (kg Of product)",
-                            value: params.data['Volume exchanged (kg Of product)']
-                        },
-                        {
-                            label: "Volume unit",
-                            value: params.data['Volume unit']
-                        },
-                        {
-                            label: "Remark",
-                            value: params.data['Remark']
-                        }
-                    ];
-                    const rendered_items = items.map((item) => {
+                // console.log("tooltip.formatter params:", params, "ticket:", ticket);
+                if (params?.dataType === "node" || params?.dataType === "edge"){
+                    let items = [];
+                    let rendered_items = [];
+                    if (params?.dataType === "node"){
+                        const actorStage = actorTypesTab.find((actor) => { return actor["Actor type name"] === params.data.name});
+                        const actorStageLabel = actorStage ? actorStage["Stage"] : undefined;
+                        items = [
+                            {
+                                label: "Name",
+                                value: params.data.name
+                            },
+                            {
+                                label: "Stage",
+                                value: actorStageLabel
+                            }
+                        ];
+                    }
+                    else if (params?.dataType === "edge"){
+                        items = [
+                            {
+                                label: "Source",
+                                value: params.data.source,
+                            },
+                            {
+                                label: "Target",
+                                value: params.data.target
+                            },
+                            {
+                                label: "Monetary value",
+                                value: `${params.data.value} ${monetaryCurrency}`
+                            },
+                            {
+                                label: "Products",
+                                value: params.data['Products']
+                            },
+                            {
+                                label: "Unitary price (local curency)",
+                                value: params.data['Unitary price (local curency)']
+                            },
+                            {
+                                label: "Volume exchanged (kg Of product)",
+                                value: params.data['Volume exchanged (kg Of product)']
+                            },
+                            {
+                                label: "Volume unit",
+                                value: params.data['Volume unit']
+                            },
+                            {
+                                label: "Remark",
+                                value: params.data['Remark']
+                            }
+                        ];
+                    }
+                    rendered_items = items.map((item) => {
                         if (item.value === undefined){
                             return null;
                         }
                         return `<li><strong>${item.label}</strong>: ${item.value}</li>`;
                     });
-
                     return `<div style='max-width: 400px; white-space: normal;'><ul style='list-style: initial; margin: 0 10px; padding: initial;'>${rendered_items.join('')}</ul></div>`;
                 }
                 else {
                     return '';
                 }
             }
-        },
-        series: {
-            type: 'sankey',
-            layout: 'none',
-            emphasis: {
-                focus: 'adjacency'
-            },
-            "nodes": nodes, // It looks like in echarts, "nodes" key can also be named "data"
-            "links": links
-        }
-    };
+        };
+        result.series.nodes = nodes; // It looks like in echarts, "nodes" key can also be named "data"
+        result.series.links = links;
+        result.series.levels = levels;
+    }
     return result;
 });
 </script>
