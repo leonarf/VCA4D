@@ -14,6 +14,7 @@
 
         <section>
             <SankeyChart :options="populatedSankeyChartData"></SankeyChart>
+            <div>Display mode: <button @click="toggleSankeyGraphDisplayMode">{{ sankeyGraphPossibleDisplayModesList[sankeyGraphDisplayMode] }}</button></div>
         </section>
 
 
@@ -110,13 +111,24 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 import SankeyChart from './SankeyChart.vue';
 
 const props = defineProps({
   studyData: Object
 });
+
+const sankeyGraphPossibleDisplayModesList = [
+    "Monetary value",
+    "Volume exchanged (kg Of product)"
+];
+
+const sankeyGraphDisplayMode = ref(0);
+
+const toggleSankeyGraphDisplayMode = () => {
+    sankeyGraphDisplayMode.value = (sankeyGraphDisplayMode.value + 1) % sankeyGraphPossibleDisplayModesList.length;
+};
 
 const steps = [
     {
@@ -244,13 +256,14 @@ const populatedSankeyChartData = computed ( () => {
             return {
                 "source": sourceActor["Actor type name"],
                 "target": targetActor["Actor type name"],
-                "value": row["Monetary value"],
+                "value": row[sankeyGraphPossibleDisplayModesList[sankeyGraphDisplayMode.value]],
                 "edgeLabel": {
                     show: true,
                     formatter: () => {
                         return row["Products"];
                     }
                 },
+                "Monetary value": row["Monetary value"],
                 "Volume exchanged (kg Of product)": row["Volume exchanged (kg Of product)"],
                 "Products": row["Products"],
                 "Unitary price (local curency)": row["Unitary price (local curency)"],
@@ -292,7 +305,7 @@ const populatedSankeyChartData = computed ( () => {
                             },
                             {
                                 label: "Monetary value",
-                                value: `${params.data.value} ${monetaryCurrency}`
+                                value: `${params.data["Monetary value"]} ${monetaryCurrency}`
                             },
                             {
                                 label: "Products",
