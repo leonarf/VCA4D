@@ -39,6 +39,11 @@ import Skeleton from '../components/Skeleton.vue'
                 <h4>Orchards</h4>
                 <ul>
                     <li>
+                        <RouterLink to="/study?id=anacarde-mali-2014">
+                            <img class="TODO" src="../images/product-pictograms/cashew.jpeg" alt="cashew pictogram - link to Mali 2014 anacarde study">
+                        </RouterLink>
+                    </li>
+                    <li>
                         <RouterLink to="/study?id=cashew-mali-2021">
                             <img class="TODO" src="../images/product-pictograms/cashew.jpeg" alt="cashew pictogram - link to Mali 2021 cashew study">
                         </RouterLink>
@@ -80,6 +85,9 @@ import Skeleton from '../components/Skeleton.vue'
 
                 <h4>Mali</h4>
                 <ul>
+                    <li>
+                        <RouterLink to="/study?id=anacarde-mali-2014">Anacarde 2014</RouterLink>
+                    </li>
                     <li>
                         <RouterLink to="/study?id=cashew-mali-2021">Anacarde 2021</RouterLink>
                     </li>

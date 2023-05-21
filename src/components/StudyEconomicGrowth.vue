@@ -19,6 +19,7 @@
         <h2>Who <strong>creates and receives</strong> value added?</h2>
 
         <h2>How <strong>profitable</strong> and viable are the value chain activities for the actors involved?</h2>
+        <BarChart :options="populatedBarChartData"></BarChart>
 
         <h2>What is the contribution of the value chain to the <strong>balance of trade</strong>?</h2>
 
@@ -30,23 +31,55 @@
 </template>
 
 <script setup>
+import { computed, ref } from 'vue';
+
 import NiceMetricGroup from './NiceMetricGroup.vue';
 import NiceMetric from './NiceMetric.vue';
-</script>
+import BarChart from './BarChart.vue';
 
-<script>
-//@ts-check
+const props = defineProps({
+  studyData: Object
+});
 
-import '../types.js'
-
-export default {
-    name: 'StudyEconomicGrowth',
-    props: ['studyData'],
-    data() {
-        return {
+const populatedBarChartData = computed(() => {
+    let chartTitle = `How profitable and viable are the value chain activities for the actors involved?`;
+    const categories = props.studyData ? props.studyData.data["Indicator by actor type"].map(row => {
+        return row["Actor type Name"]
+    }) : [];
+    const values = props.studyData ? props.studyData.data["Indicator by actor type"].map(row => {
+        const v1 = row['Net operating profit (local currency)'];
+        const v2 = row['Total costs (local currency)'];
+        return v1/v2;
+    }) : [];
+    let result = {
+        title: {
+            text: chartTitle,
+            //left: "center"
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            axisTick: {
+                alignWithLabel: true
+            },
+            axisLabel: {
+                interval: 0,
+                rotate: -10,
+                margin: 20
+            },
+            data: categories
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: {
+            type: 'bar',
+            data: values
         }
-    }
-}
+    };
+    console.log("result:", result);
+    return result;
+});
 </script>
 
 <style scoped lang="scss">

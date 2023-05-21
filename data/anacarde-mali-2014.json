@@ -1,0 +1,1117 @@
+{
+  "id": "anacarde-mali-2014",
+  "product": "Anacarde",
+  "country": "Mali",
+  "year": 2014,
+  "environment": {
+    "brief": [
+      "Sustainability of walnut and almond production and export sub-sectors.",
+      "Optimization of energy consumption to be sought for the embryonic juice sub-sector from cashew apples."
+    ],
+    "impacts": {
+      "mid-points": {
+        "Global-warming": {
+          "Agricultural-production": -154565235.678,
+          "Collection": 102549.907115,
+          "Processing": 198568.619229,
+          "Retail": 1924.33492,
+          "Export": 0,
+          "Transport": 3763849.3292988
+        },
+        "Stratospheric-ozone-depletion": {
+          "Agricultural-production": 28.90294639575,
+          "Collection": 0.056650125186,
+          "Processing": 1.63613197687,
+          "Retail": 0.001105149,
+          "Export": 0,
+          "Transport": 2.1820214281845
+        },
+        "Ionizing-radiation": {
+          "Agricultural-production": 32691.12756042,
+          "Collection": 17619.4683194,
+          "Processing": 4702.8165507,
+          "Retail": 297.30166,
+          "Export": 0,
+          "Transport": 565328.92152534
+        },
+        "Ozone-formation-human-health": {
+          "Agricultural-production": 4171.156200435,
+          "Collection": 470.61287818,
+          "Processing": 1503.91500265,
+          "Retail": 9.8170512,
+          "Export": 0,
+          "Transport": 19679.843720523
+        },
+        "x": {
+          "Agricultural-production": -1,
+          "Collection": -1,
+          "Processing": -1,
+          "Retail": -1,
+          "Export": 0,
+          "Transport": -1
+        }
+      },
+      "human-health": {
+        "Global-warming-human-health": {
+          "Agricultural-production": -143.4336813315,
+          "Collection": 0.095167188356,
+          "Processing": 0.184375752037,
+          "Retail": 0.00178580208,
+          "Export": 0,
+          "Transport": 3.4928912650716
+        },
+        "Stratospheric-ozone-depletion": {
+          "Agricultural-production": 0.01534480418499,
+          "Collection": 0.0000300577262171,
+          "Processing": 0.00086916969847,
+          "Retail": 5.8638192e-7,
+          "Export": 0,
+          "Transport": 0.00115776329416797
+        },
+        "Ionizing-radiation": {
+          "Agricultural-production": 0.0002773563184077,
+          "Collection": 0.000149479705486,
+          "Processing": 0.000039901212634,
+          "Retail": 0.00000252224244,
+          "Export": 0,
+          "Transport": 0.0047961276047286
+        },
+        "Ozone-formation-human-health": {
+          "Agricultural-production": 0.003793773513285,
+          "Collection": 0.00042826083775,
+          "Processing": 0.00136768300978,
+          "Retail": 0.000008933564,
+          "Export": 0,
+          "Transport": 0.017908744728378
+        },
+        "Fine-particulate-matter-formation": {
+          "Agricultural-production": 1.944441248358,
+          "Collection": 0.082726442617,
+          "Processing": 1.42965930651,
+          "Retail": 0.00155118196,
+          "Export": 0,
+          "Transport": 3.0334241805966
+        },
+        "Human-carcinogenic-toxicity": {
+          "Agricultural-production": 0.08672719829046,
+          "Collection": 0.0149955266767,
+          "Processing": 0.0148546092952,
+          "Retail": 0.000265783408,
+          "Export": 0,
+          "Transport": 0.51227955904419
+        },
+        "Human-non-carcinogenic-toxicity": {
+          "Agricultural-production": 0.09191459917395,
+          "Collection": 0.032245608235,
+          "Processing": 0.0261660881502,
+          "Retail": 0.0005226232,
+          "Export": 0,
+          "Transport": 0.98219875003257
+        },
+        "Water-consumption-human-health": {
+          "Agricultural-production": 0.05779269102957,
+          "Collection": 0.5582300364,
+          "Processing": 0.054504001302,
+          "Retail": 0.009398398,
+          "Export": 0,
+          "Transport": 17.8600960388172
+        },
+        "x": {
+          "Agricultural-production": false,
+          "Collection": false,
+          "Processing": false,
+          "Retail": false,
+          "Export": 0,
+          "Transport": false
+        }
+      }
+    }
+  },
+  "data": {
+    "Feuil1": [],
+    "Value Chain": [
+      { "Property": "Country", "Value": "Mali", "Unit": "-" },
+      { "Property": "Commodity", "Value": "Anacarde", "Unit": "-" },
+      { "Property": "Reference Year", "Value": 2014, "Unit": "-" },
+      { "Property": "Currency", "Value": "CFA", "Unit": "-" },
+      { "Property": "Change rate to euro" },
+      { "Property": "Change rate to dollar" },
+      {
+        "Property": "Total volume Of commdity production",
+        "Value": "noix",
+        "Unit": 42000000,
+        "__EMPTY": "Kilogram"
+      },
+      {
+        "Property": "Total volume Of commdity production",
+        "Value": "pomme",
+        "Unit": 80000,
+        "__EMPTY": "Kilogram"
+      },
+      { "Property": "Nominal protection coefficient", "Unit": "-" },
+      { "Property": "Public fund balance", "Unit": "local currency" },
+      { "Property": "Total value added", "Unit": "local currency" },
+      { "Property": "Value added share Of national GDP", "Unit": "%" },
+      { "Property": "Value added share Of the agricultural sector GDP", "Unit": "%" },
+      { "Property": "Rate Of integration into domestic economy", "Unit": "%" },
+      { "Property": "Public funds balance / Public budget", "Unit": "%" },
+      { "Property": "Balance Of trade Of the value chain", "Unit": "local currency" },
+      { "Property": "Domestic resource cost ratio", "Unit": "-" },
+      { "Property": "Gini index", "Unit": "-" }
+    ],
+    "Stages description": [
+      { "Stages": "Agricultural producers", "Description": "a" },
+      { "Stages": "Collectors", "Description": "b" },
+      { "Stages": "Processors", "Description": "c" },
+      { "Stages": "Wholesalers", "Description": "d" },
+      { "Stages": "Retailers", "Description": "e" },
+      { "Stages": "Exporters", "Description": "f" },
+      { "Stages": "Export", "Description": "A" },
+      { "Stages": "Consumer", "Description": "B" }
+    ],
+    "Actor types": [
+      { "Actor type code": 47, "Stage": "Producers", "Actor type name": "Producteur" },
+      { "Actor type code": 48, "Stage": "Processors", "Actor type name": "TransfAmandesManuel" },
+      { "Actor type code": 49, "Stage": "Processors", "Actor type name": "TransfAmandesUnité" },
+      { "Actor type code": 50, "Stage": "Collectors", "Actor type name": "Pisteur / Collecteur" },
+      {
+        "Actor type code": 51,
+        "Stage": "Wholesalers",
+        "Actor type name": "Grossiste / Exportateur Noix"
+      },
+      { "Actor type code": 52, "Stage": "Processors", "Actor type name": "TransfPomme" },
+      {
+        "Actor type code": 53,
+        "Stage": "Exporters",
+        "Actor type name": "Grossiste / Exportateur Amandes"
+      },
+      { "Actor type code": 54, "Stage": "Export", "Actor type name": "MarcheExterieur Noix" },
+      { "Actor type code": 55, "Stage": "Consumer", "Actor type name": "Consommateur Jus" },
+      { "Actor type code": 56, "Stage": "Consumer", "Actor type name": "Consommateur Amande" }
+    ],
+    "Farm gate price In final price": [],
+    "Flow by actor type": [
+      {
+        "Seller actor type code": 47,
+        "Seller Name": "Producteur",
+        "Buyer actor type code": 48,
+        "Buyer Name": "TransfAmandesManuel",
+        "Products": "Noix",
+        "Volume exchanged (kg Of product)": 336000,
+        "Monetary value": 228480000,
+        "Unitary price (local curency)": 680,
+        "Volume Unit": "Kilogram"
+      },
+      {
+        "Seller actor type code": 47,
+        "Seller Name": "Producteur",
+        "Buyer actor type code": 49,
+        "Buyer Name": "TransfAmandesUnité",
+        "Products": "Noix",
+        "Volume exchanged (kg Of product)": 1344000,
+        "Monetary value": 913920000,
+        "Unitary price (local curency)": 680,
+        "Volume Unit": "Kilogram"
+      },
+      {
+        "Seller actor type code": 47,
+        "Seller Name": "Producteur",
+        "Buyer actor type code": 50,
+        "Buyer Name": "Pisteur / Collecteur",
+        "Products": "Noix",
+        "Volume exchanged (kg Of product)": 40320000,
+        "Monetary value": 27417600000,
+        "Unitary price (local curency)": 680,
+        "Volume Unit": "Kilogram"
+      },
+      {
+        "Seller actor type code": 47,
+        "Seller Name": "Producteur",
+        "Buyer actor type code": 52,
+        "Buyer Name": "TransfPomme",
+        "Products": "Pomme",
+        "Volume exchanged (kg Of product)": 80000,
+        "Monetary value": 4800000,
+        "Unitary price (local curency)": 60,
+        "Volume Unit": "Kilogram"
+      },
+      {
+        "Seller actor type code": 48,
+        "Seller Name": "TransfAmandesManuel",
+        "Buyer actor type code": 56,
+        "Buyer Name": "Consommateur Amande",
+        "Products": "Amande",
+        "Volume exchanged (kg Of product)": 73500,
+        "Monetary value": 294000000,
+        "Unitary price (local curency)": 4000,
+        "Volume Unit": "Kilogram"
+      },
+      {
+        "Seller actor type code": 49,
+        "Seller Name": "TransfAmandesUnité",
+        "Buyer actor type code": 53,
+        "Buyer Name": "Grossiste / Exportateur Amandes",
+        "Products": "Amande",
+        "Volume exchanged (kg Of product)": 268800,
+        "Monetary value": 1344000000,
+        "Unitary price (local curency)": 5000,
+        "Volume Unit": "Kilogram"
+      },
+      {
+        "Seller actor type code": 50,
+        "Seller Name": "Pisteur / Collecteur",
+        "Buyer actor type code": 51,
+        "Buyer Name": "Grossiste / Exportateur Noix",
+        "Products": "Noix",
+        "Volume exchanged (kg Of product)": 40320000,
+        "Monetary value": 28224000000,
+        "Unitary price (local curency)": 700,
+        "Volume Unit": "Kilogram"
+      },
+      {
+        "Seller actor type code": 51,
+        "Seller Name": "Grossiste / Exportateur Noix",
+        "Buyer actor type code": 54,
+        "Buyer Name": "MarcheExterieur Noix",
+        "Products": "Noix",
+        "Volume exchanged (kg Of product)": 40320000,
+        "Monetary value": 30240000000,
+        "Unitary price (local curency)": 750,
+        "Volume Unit": "Kilogram"
+      },
+      {
+        "Seller actor type code": 52,
+        "Seller Name": "TransfPomme",
+        "Buyer actor type code": 55,
+        "Buyer Name": "Consommateur Jus",
+        "Products": "Jus",
+        "Volume exchanged (kg Of product)": 40000,
+        "Monetary value": 30600000,
+        "Unitary price (local curency)": 765,
+        "Volume Unit": "Liter"
+      }
+    ],
+    "Indicator by actor type": [
+      {
+        "Actor type code": 47,
+        "Actor type Name": "Producteur",
+        "Number Of actors In the value chain": 33694.3441636582,
+        "Direct added value (local currency)": 26344221965.3179,
+        "Public funds balance (local currency)": 0,
+        "Net operating profit (local currency)": 21143675982.2074,
+        "Total costs (local currency)": 7421124017.79263
+      },
+      {
+        "Actor type code": 48,
+        "Actor type Name": "TransfAmandesManuel",
+        "Number Of actors In the value chain": 1,
+        "Direct added value (local currency)": 23835000,
+        "Public funds balance (local currency)": 0,
+        "Net operating profit (local currency)": 10108875,
+        "Total costs (local currency)": 283891125
+      },
+      {
+        "Actor type code": 49,
+        "Actor type Name": "TransfAmandesUnité",
+        "Number Of actors In the value chain": 25,
+        "Direct added value (local currency)": 276256000,
+        "Public funds balance (local currency)": 0,
+        "Net operating profit (local currency)": -306144000,
+        "Total costs (local currency)": 1650144000
+      },
+      {
+        "Actor type code": 50,
+        "Actor type Name": "Pisteur / Collecteur",
+        "Number Of actors In the value chain": 1,
+        "Direct added value (local currency)": 585446400,
+        "Public funds balance (local currency)": 0,
+        "Net operating profit (local currency)": 460051200,
+        "Total costs (local currency)": 27763948800
+      },
+      {
+        "Actor type code": 51,
+        "Actor type Name": "Grossiste / Exportateur Noix",
+        "Number Of actors In the value chain": 1,
+        "Direct added value (local currency)": 620121600,
+        "Public funds balance (local currency)": 62899200,
+        "Net operating profit (local currency)": 71164800,
+        "Total costs (local currency)": 30168835200
+      },
+      {
+        "Actor type code": 52,
+        "Actor type Name": "TransfPomme",
+        "Number Of actors In the value chain": 1,
+        "Direct added value (local currency)": 10870000,
+        "Public funds balance (local currency)": 0,
+        "Net operating profit (local currency)": 36666.640625,
+        "Total costs (local currency)": 30563333.359375
+      }
+    ],
+    "Imported And exported goods": [],
+    "Direct value added receivers": [
+      {
+        "Receiver Code": 47,
+        "Receiver Name": "Producteur",
+        "value (local currency)": 21143675982.2074
+      },
+      {
+        "Receiver Code": 48,
+        "Receiver Name": "TransfAmandesManuel",
+        "value (local currency)": 10108875
+      },
+      {
+        "Receiver Code": 49,
+        "Receiver Name": "TransfAmandesUnité",
+        "value (local currency)": -306144000
+      },
+      {
+        "Receiver Code": 50,
+        "Receiver Name": "Pisteur / Collecteur",
+        "value (local currency)": 460051200
+      },
+      {
+        "Receiver Code": 51,
+        "Receiver Name": "Grossiste / Exportateur Noix",
+        "value (local currency)": 71164800
+      },
+      {
+        "Receiver Code": 52,
+        "Receiver Name": "TransfPomme",
+        "value (local currency)": 36666.640625
+      },
+      { "Receiver Name": "Land owners (land fees)", "value (local currency)": 0 },
+      { "Receiver Name": "Depreciation", "value (local currency)": 3057344893.34854 },
+      { "Receiver Name": "Employees (wages)", "value (local currency)": 3361613348.12139 },
+      {
+        "Receiver Name": "Financial institutions (interests On loans)",
+        "value (local currency)": 0
+      },
+      { "Receiver Name": "Government (taxes - subsidies)", "value (local currency)": 62899200 }
+    ],
+    "Employment": [
+      {
+        "Actor type Name": "Grossiste / Exportateur Noix",
+        "Temporary Male": 966470.4,
+        "Unit": "Day",
+        "Temporary Female": 0,
+        "Unit_1": "Day",
+        "Permanent Unskilled Male": 0,
+        "Unit_2": "Day",
+        "Permanent Unskilled Female": 0,
+        "Unit_3": "Day",
+        "Permanent Skilled Male": 0,
+        "Unit_4": "Day",
+        "Permanent Skilled Female": 0,
+        "Unit_5": "Day"
+      },
+      {
+        "Actor type Name": "Pisteur / Collecteur",
+        "Temporary Male": 241920,
+        "Unit": "Day",
+        "Temporary Female": 0,
+        "Unit_1": "Day",
+        "Permanent Unskilled Male": 0,
+        "Unit_2": "Day",
+        "Permanent Unskilled Female": 0,
+        "Unit_3": "Day",
+        "Permanent Skilled Male": 0,
+        "Unit_4": "Day",
+        "Permanent Skilled Female": 0,
+        "Unit_5": "Day"
+      },
+      {
+        "Actor type Name": "Producteur",
+        "Temporary Male": 0,
+        "Unit": "Day",
+        "Temporary Female": 0,
+        "Unit_1": "Day",
+        "Permanent Unskilled Male": 1578034.68208093,
+        "Unit_2": "Day",
+        "Permanent Unskilled Female": 0,
+        "Unit_3": "Day",
+        "Permanent Skilled Male": 0,
+        "Unit_4": "Day",
+        "Permanent Skilled Female": 0,
+        "Unit_5": "Day"
+      },
+      {
+        "Actor type Name": "TransfAmandesManuel",
+        "Temporary Male": 27452.25,
+        "Unit": "Day",
+        "Temporary Female": 0,
+        "Unit_1": "Day",
+        "Permanent Unskilled Male": 0,
+        "Unit_2": "Day",
+        "Permanent Unskilled Female": 0,
+        "Unit_3": "Day",
+        "Permanent Skilled Male": 0,
+        "Unit_4": "Day",
+        "Permanent Skilled Female": 0,
+        "Unit_5": "Day"
+      },
+      {
+        "Actor type Name": "TransfAmandesUnité",
+        "Temporary Male": 538214.4140625,
+        "Unit": "Day",
+        "Temporary Female": 0,
+        "Unit_1": "Day",
+        "Permanent Unskilled Male": 0,
+        "Unit_2": "Day",
+        "Permanent Unskilled Female": 0,
+        "Unit_3": "Day",
+        "Permanent Skilled Male": 10857.7292413088,
+        "Unit_4": "Day",
+        "Permanent Skilled Female": 0,
+        "Unit_5": "Day"
+      },
+      {
+        "Actor type Name": "TransfPomme",
+        "Temporary Male": 16000,
+        "Unit": "Day",
+        "Temporary Female": 0,
+        "Unit_1": "Day",
+        "Permanent Unskilled Male": 0,
+        "Unit_2": "Day",
+        "Permanent Unskilled Female": 0,
+        "Unit_3": "Day",
+        "Permanent Skilled Male": 0,
+        "Unit_4": "Day",
+        "Permanent Skilled Female": 0,
+        "Unit_5": "Day"
+      }
+    ],
+    "Account by actor type": [
+      {
+        "Actor type code": 47,
+        "Actor type name": "Producteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Depreciation",
+        "Value": 2833493959.98916
+      },
+      {
+        "Actor type code": 48,
+        "Actor type name": "TransfAmandesManuel",
+        "Cost Or revenue": "Cost",
+        "Item": "Depreciation",
+        "Value": 0
+      },
+      {
+        "Actor type code": 49,
+        "Actor type name": "TransfAmandesUnité",
+        "Cost Or revenue": "Cost",
+        "Item": "Depreciation",
+        "Value": 213760000
+      },
+      {
+        "Actor type code": 50,
+        "Actor type name": "Pisteur / Collecteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Depreciation",
+        "Value": 4435200
+      },
+      {
+        "Actor type code": 51,
+        "Actor type name": "Grossiste / Exportateur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Depreciation",
+        "Value": 2822400
+      },
+      {
+        "Actor type code": 52,
+        "Actor type name": "TransfPomme",
+        "Cost Or revenue": "Cost",
+        "Item": "Depreciation",
+        "Value": 2833333.359375
+      },
+      {
+        "Actor type code": 53,
+        "Actor type name": "Grossiste / Exportateur Amandes",
+        "Cost Or revenue": "Cost",
+        "Item": "Depreciation",
+        "Value": 0
+      },
+      {
+        "Actor type code": 54,
+        "Actor type name": "MarcheExterieur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Depreciation",
+        "Value": 0
+      },
+      {
+        "Actor type code": 55,
+        "Actor type name": "Consommateur Jus",
+        "Cost Or revenue": "Cost",
+        "Item": "Depreciation",
+        "Value": 0
+      },
+      {
+        "Actor type code": 56,
+        "Actor type name": "Consommateur Amande",
+        "Cost Or revenue": "Cost",
+        "Item": "Depreciation",
+        "Value": 0
+      },
+      {
+        "Actor type code": 47,
+        "Actor type name": "Producteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Consumables",
+        "Value": 1739884393.06358
+      },
+      {
+        "Actor type code": 48,
+        "Actor type name": "TransfAmandesManuel",
+        "Cost Or revenue": "Cost",
+        "Item": "Consumables",
+        "Value": 270165000
+      },
+      {
+        "Actor type code": 49,
+        "Actor type name": "TransfAmandesUnité",
+        "Cost Or revenue": "Cost",
+        "Item": "Consumables",
+        "Value": 1067744000
+      },
+      {
+        "Actor type code": 50,
+        "Actor type name": "Pisteur / Collecteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Consumables",
+        "Value": 27638553600
+      },
+      {
+        "Actor type code": 51,
+        "Actor type name": "Grossiste / Exportateur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Consumables",
+        "Value": 29482790400
+      },
+      {
+        "Actor type code": 52,
+        "Actor type name": "TransfPomme",
+        "Cost Or revenue": "Cost",
+        "Item": "Consumables",
+        "Value": 19730000
+      },
+      {
+        "Actor type code": 53,
+        "Actor type name": "Grossiste / Exportateur Amandes",
+        "Cost Or revenue": "Cost",
+        "Item": "Consumables",
+        "Value": 0
+      },
+      {
+        "Actor type code": 54,
+        "Actor type name": "MarcheExterieur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Consumables",
+        "Value": 0
+      },
+      {
+        "Actor type code": 55,
+        "Actor type name": "Consommateur Jus",
+        "Cost Or revenue": "Cost",
+        "Item": "Consumables",
+        "Value": 0
+      },
+      {
+        "Actor type code": 56,
+        "Actor type name": "Consommateur Amande",
+        "Cost Or revenue": "Cost",
+        "Item": "Consumables",
+        "Value": 0
+      },
+      {
+        "Actor type code": 47,
+        "Actor type name": "Producteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Interest on loan",
+        "Value": 0
+      },
+      {
+        "Actor type code": 48,
+        "Actor type name": "TransfAmandesManuel",
+        "Cost Or revenue": "Cost",
+        "Item": "Interest on loan",
+        "Value": 0
+      },
+      {
+        "Actor type code": 49,
+        "Actor type name": "TransfAmandesUnité",
+        "Cost Or revenue": "Cost",
+        "Item": "Interest on loan",
+        "Value": 0
+      },
+      {
+        "Actor type code": 50,
+        "Actor type name": "Pisteur / Collecteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Interest on loan",
+        "Value": 0
+      },
+      {
+        "Actor type code": 51,
+        "Actor type name": "Grossiste / Exportateur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Interest on loan",
+        "Value": 0
+      },
+      {
+        "Actor type code": 52,
+        "Actor type name": "TransfPomme",
+        "Cost Or revenue": "Cost",
+        "Item": "Interest on loan",
+        "Value": 0
+      },
+      {
+        "Actor type code": 53,
+        "Actor type name": "Grossiste / Exportateur Amandes",
+        "Cost Or revenue": "Cost",
+        "Item": "Interest on loan",
+        "Value": 0
+      },
+      {
+        "Actor type code": 54,
+        "Actor type name": "MarcheExterieur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Interest on loan",
+        "Value": 0
+      },
+      {
+        "Actor type code": 55,
+        "Actor type name": "Consommateur Jus",
+        "Cost Or revenue": "Cost",
+        "Item": "Interest on loan",
+        "Value": 0
+      },
+      {
+        "Actor type code": 56,
+        "Actor type name": "Consommateur Amande",
+        "Cost Or revenue": "Cost",
+        "Item": "Interest on loan",
+        "Value": 0
+      },
+      {
+        "Actor type code": 47,
+        "Actor type name": "Producteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Land Fee",
+        "Value": 0
+      },
+      {
+        "Actor type code": 48,
+        "Actor type name": "TransfAmandesManuel",
+        "Cost Or revenue": "Cost",
+        "Item": "Land Fee",
+        "Value": 0
+      },
+      {
+        "Actor type code": 49,
+        "Actor type name": "TransfAmandesUnité",
+        "Cost Or revenue": "Cost",
+        "Item": "Land Fee",
+        "Value": 0
+      },
+      {
+        "Actor type code": 50,
+        "Actor type name": "Pisteur / Collecteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Land Fee",
+        "Value": 0
+      },
+      {
+        "Actor type code": 51,
+        "Actor type name": "Grossiste / Exportateur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Land Fee",
+        "Value": 0
+      },
+      {
+        "Actor type code": 52,
+        "Actor type name": "TransfPomme",
+        "Cost Or revenue": "Cost",
+        "Item": "Land Fee",
+        "Value": 0
+      },
+      {
+        "Actor type code": 53,
+        "Actor type name": "Grossiste / Exportateur Amandes",
+        "Cost Or revenue": "Cost",
+        "Item": "Land Fee",
+        "Value": 0
+      },
+      {
+        "Actor type code": 54,
+        "Actor type name": "MarcheExterieur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Land Fee",
+        "Value": 0
+      },
+      {
+        "Actor type code": 55,
+        "Actor type name": "Consommateur Jus",
+        "Cost Or revenue": "Cost",
+        "Item": "Land Fee",
+        "Value": 0
+      },
+      {
+        "Actor type code": 56,
+        "Actor type name": "Consommateur Amande",
+        "Cost Or revenue": "Cost",
+        "Item": "Land Fee",
+        "Value": 0
+      },
+      {
+        "Actor type code": 47,
+        "Actor type name": "Producteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Net Operating Profit",
+        "Value": 21143675982.2074
+      },
+      {
+        "Actor type code": 48,
+        "Actor type name": "TransfAmandesManuel",
+        "Cost Or revenue": "Cost",
+        "Item": "Net Operating Profit",
+        "Value": 10108875
+      },
+      {
+        "Actor type code": 49,
+        "Actor type name": "TransfAmandesUnité",
+        "Cost Or revenue": "Cost",
+        "Item": "Net Operating Profit",
+        "Value": -306144000
+      },
+      {
+        "Actor type code": 50,
+        "Actor type name": "Pisteur / Collecteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Net Operating Profit",
+        "Value": 460051200
+      },
+      {
+        "Actor type code": 51,
+        "Actor type name": "Grossiste / Exportateur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Net Operating Profit",
+        "Value": 71164800
+      },
+      {
+        "Actor type code": 52,
+        "Actor type name": "TransfPomme",
+        "Cost Or revenue": "Cost",
+        "Item": "Net Operating Profit",
+        "Value": 36666.640625
+      },
+      {
+        "Actor type code": 53,
+        "Actor type name": "Grossiste / Exportateur Amandes",
+        "Cost Or revenue": "Cost",
+        "Item": "Net Operating Profit",
+        "Value": 0
+      },
+      {
+        "Actor type code": 54,
+        "Actor type name": "MarcheExterieur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Net Operating Profit",
+        "Value": 0
+      },
+      {
+        "Actor type code": 55,
+        "Actor type name": "Consommateur Jus",
+        "Cost Or revenue": "Cost",
+        "Item": "Net Operating Profit",
+        "Value": 0
+      },
+      {
+        "Actor type code": 56,
+        "Actor type name": "Consommateur Amande",
+        "Cost Or revenue": "Cost",
+        "Item": "Net Operating Profit",
+        "Value": 0
+      },
+      {
+        "Actor type code": 47,
+        "Actor type name": "Producteur",
+        "Cost Or revenue": "Revenue",
+        "Item": "Production",
+        "Value": 28564800000
+      },
+      {
+        "Actor type code": 48,
+        "Actor type name": "TransfAmandesManuel",
+        "Cost Or revenue": "Revenue",
+        "Item": "Production",
+        "Value": 294000000
+      },
+      {
+        "Actor type code": 49,
+        "Actor type name": "TransfAmandesUnité",
+        "Cost Or revenue": "Revenue",
+        "Item": "Production",
+        "Value": 1344000000
+      },
+      {
+        "Actor type code": 50,
+        "Actor type name": "Pisteur / Collecteur",
+        "Cost Or revenue": "Revenue",
+        "Item": "Production",
+        "Value": 28224000000
+      },
+      {
+        "Actor type code": 51,
+        "Actor type name": "Grossiste / Exportateur Noix",
+        "Cost Or revenue": "Revenue",
+        "Item": "Production",
+        "Value": 30240000000
+      },
+      {
+        "Actor type code": 52,
+        "Actor type name": "TransfPomme",
+        "Cost Or revenue": "Revenue",
+        "Item": "Production",
+        "Value": 30600000
+      },
+      {
+        "Actor type code": 53,
+        "Actor type name": "Grossiste / Exportateur Amandes",
+        "Cost Or revenue": "Revenue",
+        "Item": "Production",
+        "Value": 0
+      },
+      {
+        "Actor type code": 54,
+        "Actor type name": "MarcheExterieur Noix",
+        "Cost Or revenue": "Revenue",
+        "Item": "Production",
+        "Value": 0
+      },
+      {
+        "Actor type code": 55,
+        "Actor type name": "Consommateur Jus",
+        "Cost Or revenue": "Revenue",
+        "Item": "Production",
+        "Value": 0
+      },
+      {
+        "Actor type code": 56,
+        "Actor type name": "Consommateur Amande",
+        "Cost Or revenue": "Revenue",
+        "Item": "Production",
+        "Value": 0
+      },
+      {
+        "Actor type code": 47,
+        "Actor type name": "Producteur",
+        "Cost Or revenue": "Revenue",
+        "Item": "Subsidies",
+        "Value": 0
+      },
+      {
+        "Actor type code": 48,
+        "Actor type name": "TransfAmandesManuel",
+        "Cost Or revenue": "Revenue",
+        "Item": "Subsidies",
+        "Value": 0
+      },
+      {
+        "Actor type code": 49,
+        "Actor type name": "TransfAmandesUnité",
+        "Cost Or revenue": "Revenue",
+        "Item": "Subsidies",
+        "Value": 0
+      },
+      {
+        "Actor type code": 50,
+        "Actor type name": "Pisteur / Collecteur",
+        "Cost Or revenue": "Revenue",
+        "Item": "Subsidies",
+        "Value": 0
+      },
+      {
+        "Actor type code": 51,
+        "Actor type name": "Grossiste / Exportateur Noix",
+        "Cost Or revenue": "Revenue",
+        "Item": "Subsidies",
+        "Value": 0
+      },
+      {
+        "Actor type code": 52,
+        "Actor type name": "TransfPomme",
+        "Cost Or revenue": "Revenue",
+        "Item": "Subsidies",
+        "Value": 0
+      },
+      {
+        "Actor type code": 53,
+        "Actor type name": "Grossiste / Exportateur Amandes",
+        "Cost Or revenue": "Revenue",
+        "Item": "Subsidies",
+        "Value": 0
+      },
+      {
+        "Actor type code": 54,
+        "Actor type name": "MarcheExterieur Noix",
+        "Cost Or revenue": "Revenue",
+        "Item": "Subsidies",
+        "Value": 0
+      },
+      {
+        "Actor type code": 55,
+        "Actor type name": "Consommateur Jus",
+        "Cost Or revenue": "Revenue",
+        "Item": "Subsidies",
+        "Value": 0
+      },
+      {
+        "Actor type code": 56,
+        "Actor type name": "Consommateur Amande",
+        "Cost Or revenue": "Revenue",
+        "Item": "Subsidies",
+        "Value": 0
+      },
+      {
+        "Actor type code": 47,
+        "Actor type name": "Producteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Taxes",
+        "Value": 0
+      },
+      {
+        "Actor type code": 48,
+        "Actor type name": "TransfAmandesManuel",
+        "Cost Or revenue": "Cost",
+        "Item": "Taxes",
+        "Value": 0
+      },
+      {
+        "Actor type code": 49,
+        "Actor type name": "TransfAmandesUnité",
+        "Cost Or revenue": "Cost",
+        "Item": "Taxes",
+        "Value": 0
+      },
+      {
+        "Actor type code": 50,
+        "Actor type name": "Pisteur / Collecteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Taxes",
+        "Value": 0
+      },
+      {
+        "Actor type code": 51,
+        "Actor type name": "Grossiste / Exportateur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Taxes",
+        "Value": 62899200
+      },
+      {
+        "Actor type code": 52,
+        "Actor type name": "TransfPomme",
+        "Cost Or revenue": "Cost",
+        "Item": "Taxes",
+        "Value": 0
+      },
+      {
+        "Actor type code": 53,
+        "Actor type name": "Grossiste / Exportateur Amandes",
+        "Cost Or revenue": "Cost",
+        "Item": "Taxes",
+        "Value": 0
+      },
+      {
+        "Actor type code": 54,
+        "Actor type name": "MarcheExterieur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Taxes",
+        "Value": 0
+      },
+      {
+        "Actor type code": 55,
+        "Actor type name": "Consommateur Jus",
+        "Cost Or revenue": "Cost",
+        "Item": "Taxes",
+        "Value": 0
+      },
+      {
+        "Actor type code": 56,
+        "Actor type name": "Consommateur Amande",
+        "Cost Or revenue": "Cost",
+        "Item": "Taxes",
+        "Value": 0
+      },
+      {
+        "Actor type code": 47,
+        "Actor type name": "Producteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Wages",
+        "Value": 2367052023.12139
+      },
+      {
+        "Actor type code": 48,
+        "Actor type name": "TransfAmandesManuel",
+        "Cost Or revenue": "Cost",
+        "Item": "Wages",
+        "Value": 13726125
+      },
+      {
+        "Actor type code": 49,
+        "Actor type name": "TransfAmandesUnité",
+        "Cost Or revenue": "Cost",
+        "Item": "Wages",
+        "Value": 368640000
+      },
+      {
+        "Actor type code": 50,
+        "Actor type name": "Pisteur / Collecteur",
+        "Cost Or revenue": "Cost",
+        "Item": "Wages",
+        "Value": 120960000
+      },
+      {
+        "Actor type code": 51,
+        "Actor type name": "Grossiste / Exportateur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Wages",
+        "Value": 483235200
+      },
+      {
+        "Actor type code": 52,
+        "Actor type name": "TransfPomme",
+        "Cost Or revenue": "Cost",
+        "Item": "Wages",
+        "Value": 8000000
+      },
+      {
+        "Actor type code": 53,
+        "Actor type name": "Grossiste / Exportateur Amandes",
+        "Cost Or revenue": "Cost",
+        "Item": "Wages",
+        "Value": 0
+      },
+      {
+        "Actor type code": 54,
+        "Actor type name": "MarcheExterieur Noix",
+        "Cost Or revenue": "Cost",
+        "Item": "Wages",
+        "Value": 0
+      },
+      {
+        "Actor type code": 55,
+        "Actor type name": "Consommateur Jus",
+        "Cost Or revenue": "Cost",
+        "Item": "Wages",
+        "Value": 0
+      },
+      {
+        "Actor type code": 56,
+        "Actor type name": "Consommateur Amande",
+        "Cost Or revenue": "Cost",
+        "Item": "Wages",
+        "Value": 0
+      }
+    ],
+    "Feuil12": []
+  }
+}
