@@ -19,7 +19,9 @@
         <h2>Who <strong>creates and receives</strong> value added?</h2>
 
         <h2>How <strong>profitable</strong> and viable are the value chain activities for the actors involved?</h2>
-        <BarChart :options="populatedBarChartData"></BarChart>
+        <p>RETURN ON INVESTMENT (%) = percentage of net operating profit in total costs (NB : for producers this includes actor revenue)</p>
+        <BarChart v-if="studyData" :options="populatedBarChartData"></BarChart>
+        <a v-else class="TODO">Data are missing to display this GraphBar</a>
 
         <h2>What is the contribution of the value chain to the <strong>balance of trade</strong>?</h2>
 
@@ -36,26 +38,32 @@ import { computed, ref } from 'vue';
 import NiceMetricGroup from './NiceMetricGroup.vue';
 import NiceMetric from './NiceMetric.vue';
 import BarChart from './BarChart.vue';
+import Utils from '@/utils/utils.js';
+import CurrencyUtils from '@/utils/currencyUtils.js';
 
 const props = defineProps({
   studyData: Object
 });
 
 const populatedBarChartData = computed(() => {
-    let chartTitle = `How profitable and viable are the value chain activities for the actors involved?`;
-    const categories = props.studyData ? props.studyData.data["Indicator by actor type"].map(row => {
-        return row["Actor type Name"]
-    }) : [];
-    const values = props.studyData ? props.studyData.data["Indicator by actor type"].map(row => {
+    var categories = []
+    var values = []
+    var tooltip = {}
+
+    for (var row of props.studyData.data["Indicator by actor type"]) {
+        categories.push(row["Actor type Name"])
+        var stageName = Utils.getCorrespondingStage(row["Actor type Name"], props.studyData.data)
         const v1 = row['Net operating profit (local currency)'];
-        const v2 = row['Total costs (local currency)'];
-        return v1/v2;
-    }) : [];
+        var v2 = row['Total costs (local currency)'];
+        if (stageName == "Producers") {
+            v2 = v1 + v2 // Profits are considered as cost for producer while computing Return On Investment
+        }
+        values.push(100*v1/v2);
+        tooltip[row["Actor type Name"]] = `Net operating profit = ${CurrencyUtils.formatAmount(v1)}<br>
+                                           Total costs = ${CurrencyUtils.formatAmount(v2)}<br>
+                                           Return on investment = ${CurrencyUtils.formatPercent(100*v1/v2)}`
+    }
     let result = {
-        title: {
-            text: chartTitle,
-            //left: "center"
-        },
         xAxis: {
             type: 'category',
             boundaryGap: true,
@@ -69,8 +77,19 @@ const populatedBarChartData = computed(() => {
             },
             data: categories
         },
+        tooltip: {
+          trigger: "item",
+          formatter: function (info) {
+            return tooltip[info.name];
+          }
+        },
         yAxis: {
-            type: 'value'
+            type: 'value',
+            name: 'RETURN ON INVESTMENT (%)',
+            axisLine : {
+                show: true,
+                symbol: ['arrow', 'arrow']
+            }
         },
         series: {
             type: 'bar',

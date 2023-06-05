@@ -130,12 +130,32 @@
   "data": {
     "Feuil1": [],
     "Value Chain": [
-      { "Property": "Country", "Value": "Burkina Faso", "Unit": "-" },
-      { "Property": "Commodity", "Value": "Mangue", "Unit": "-" },
-      { "Property": "Reference Year", "Value": 2016, "Unit": "-" },
-      { "Property": "Currency", "Value": "CFA", "Unit": "-" },
-      { "Property": "Change rate to euro" },
-      { "Property": "Change rate to dollar" },
+      {
+        "Property": "Country",
+        "Value": "Burkina Faso",
+        "Unit": "-"
+      },
+      {
+        "Property": "Commodity",
+        "Value": "Mangue",
+        "Unit": "-"
+      },
+      {
+        "Property": "Reference Year",
+        "Value": 2016,
+        "Unit": "-"
+      },
+      {
+        "Property": "Currency",
+        "Value": "CFA",
+        "Unit": "-"
+      },
+      {
+        "Property": "Change rate to euro"
+      },
+      {
+        "Property": "Change rate to dollar"
+      },
       {
         "Property": "Total volume Of commdity production",
         "Value": "mg1",
@@ -160,53 +180,133 @@
         "Unit": 51825,
         "__EMPTY": "Ton"
       },
-      { "Property": "Nominal protection coefficient", "Unit": "-" },
-      { "Property": "Public fund balance", "Unit": "local currency" },
-      { "Property": "Total value added", "Unit": "local currency" },
-      { "Property": "Value added share Of national GDP", "Unit": "%" },
-      { "Property": "Value added share Of the agricultural sector GDP", "Unit": "%" },
-      { "Property": "Rate Of integration into domestic economy", "Unit": "%" },
-      { "Property": "Public funds balance / Public budget", "Unit": "%" },
-      { "Property": "Balance Of trade Of the value chain", "Unit": "local currency" },
-      { "Property": "Domestic resource cost ratio", "Unit": "-" },
-      { "Property": "Gini index", "Unit": "-" }
+      {
+        "Property": "Nominal protection coefficient",
+        "Unit": "-"
+      },
+      {
+        "Property": "Public fund balance",
+        "Unit": "local currency"
+      },
+      {
+        "Property": "Total value added",
+        "Unit": "local currency"
+      },
+      {
+        "Property": "Value added share Of national GDP",
+        "Unit": "%"
+      },
+      {
+        "Property": "Value added share Of the agricultural sector GDP",
+        "Unit": "%"
+      },
+      {
+        "Property": "Rate Of integration into domestic economy",
+        "Unit": "%"
+      },
+      {
+        "Property": "Public funds balance / Public budget",
+        "Unit": "%"
+      },
+      {
+        "Property": "Balance Of trade Of the value chain",
+        "Unit": "local currency"
+      },
+      {
+        "Property": "Domestic resource cost ratio",
+        "Unit": "-"
+      },
+      {
+        "Property": "Gini index",
+        "Unit": "-"
+      }
     ],
     "Stages description": [
-      { "Stages": "Agricultural producers", "Description": "abc" },
-      { "Stages": "Collectors", "Description": "def" },
-      { "Stages": "Processors", "Description": "hij" },
-      { "Stages": "Wholesalers", "Description": "klm" },
-      { "Stages": "Retailers", "Description": "nop" },
-      { "Stages": "Exporters", "Description": "qrs" },
-      { "Stages": "Exports", "Description": "tuv" },
-      { "Stages": "Consumers", "Description": "wxy" }
+      {
+        "Stages": "Agricultural producers"
+      },
+      {
+        "Stages": "Collectors"
+      },
+      {
+        "Stages": "Processors"
+      },
+      {
+        "Stages": "Wholesalers"
+      },
+      {
+        "Stages": "Retailers"
+      },
+      {
+        "Stages": "Exporters"
+      }
     ],
     "Actor types": [
       {
         "Actor type code": 57,
-        "Stage": "Agricultural producers",
+        "Stage": "Producers",
         "Actor type name": "Producteur Certifié"
       },
-      { "Actor type code": 58, "Stage": "Collectors", "Actor type name": "Pisteur Certifié" },
-      { "Actor type code": 59, "Stage": "Processors", "Actor type name": "TransfoSec" },
+      {
+        "Actor type code": 58,
+        "Stage": "Collectors",
+        "Actor type name": "Pisteur Certifié"
+      },
+      {
+        "Actor type code": 59,
+        "Stage": "Processors",
+        "Actor type name": "TransfoSec"
+      },
       {
         "Actor type code": 60,
         "Stage": "Processors",
         "Actor type name": "Transformation Purée & Nectars"
       },
-      { "Actor type code": 61, "Stage": "Exporters", "Actor type name": "Export Frais UE" },
-      { "Actor type code": 62, "Stage": "Exports", "Actor type name": "Importations Frais UE" },
-      { "Actor type code": 63, "Stage": "Exports", "Actor type name": "Importations Sec" },
-      { "Actor type code": 64, "Stage": "Exports", "Actor type name": "Importation de Puree" },
-      { "Actor type code": 65, "Stage": "Wholesalers", "Actor type name": "Grossistes Jus" },
-      { "Actor type code": 66, "Stage": "Retailers", "Actor type name": "Détaillant Jus" },
-      { "Actor type code": 67, "Stage": "Consumers", "Actor type name": "Consomateur Jus" },
+      {
+        "Actor type code": 61,
+        "Stage": "Exporters",
+        "Actor type name": "Export Frais UE"
+      },
+      {
+        "Actor type code": 62,
+        "Stage": "Exports",
+        "Actor type name": "Importations Frais UE"
+      },
+      {
+        "Actor type code": 63,
+        "Stage": "Exports",
+        "Actor type name": "Importations Sec"
+      },
+      {
+        "Actor type code": 64,
+        "Stage": "Exports",
+        "Actor type name": "Importation de Puree"
+      },
+      {
+        "Actor type code": 65,
+        "Stage": "Wholesalers",
+        "Actor type name": "Grossistes Jus"
+      },
+      {
+        "Actor type code": 66,
+        "Stage": "Retailers",
+        "Actor type name": "Détaillant Jus"
+      },
+      {
+        "Actor type code": 67,
+        "Stage": "Consumers",
+        "Actor type name": "Consomateur Jus"
+      },
       {
         "Actor type code": 68,
-        "Stage": "Agricultural producers",
+        "Stage": "Producers",
         "Actor type name": "Producteur non certifié"
       },
-      { "Actor type code": 69, "Stage": "Collectors", "Actor type name": "Pisteur non certfié" },
+      {
+        "Actor type code": 69,
+        "Stage": "Collectors",
+        "Actor type name": "Pisteur non certfié"
+      },
       {
         "Actor type code": 70,
         "Stage": "Wholesalers",
@@ -217,7 +317,11 @@
         "Stage": "Retailers",
         "Actor type name": "Demi-Grossiste  non certifié"
       },
-      { "Actor type code": 72, "Stage": "Retailers", "Actor type name": "Détaillant non certifié" },
+      {
+        "Actor type code": 72,
+        "Stage": "Retailers",
+        "Actor type name": "Détaillant non certifié"
+      },
       {
         "Actor type code": 73,
         "Stage": "Consumers",
@@ -225,7 +329,7 @@
       },
       {
         "Actor type code": 74,
-        "Stage": "Exports",
+        "Stage": "Export",
         "Actor type name": "Importations Frais Continental"
       }
     ],
@@ -635,9 +739,18 @@
         "Receiver Name": "Détaillant non certifié",
         "value (local currency)": 3125578917.9867
       },
-      { "Receiver Name": "Land owners (land fees)", "value (local currency)": 0 },
-      { "Receiver Name": "Depreciation", "value (local currency)": 1234834603.96494 },
-      { "Receiver Name": "Employees (wages)", "value (local currency)": 1184635940.50399 },
+      {
+        "Receiver Name": "Land owners (land fees)",
+        "value (local currency)": 0
+      },
+      {
+        "Receiver Name": "Depreciation",
+        "value (local currency)": 1234834603.96494
+      },
+      {
+        "Receiver Name": "Employees (wages)",
+        "value (local currency)": 1184635940.50399
+      },
       {
         "Receiver Name": "Financial institutions (interests On loans)",
         "value (local currency)": 47539566.9692307
