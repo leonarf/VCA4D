@@ -223,7 +223,7 @@
     ],
     "Stages description": [
       {
-        "Stages": "Agricultural producers"
+        "Stages": "Producers"
       },
       {
         "Stages": "Collectors"
@@ -570,7 +570,7 @@
     "Indicator by actor type": [
       {
         "Actor type code": 57,
-        "Actor type Name": "Producteur Certifié",
+        "Actor type name": "Producteur Certifié",
         "Number Of actors In the value chain": 3767.5,
         "Direct added value (local currency)": 1888525000,
         "Public funds balance (local currency)": 0,
@@ -579,7 +579,7 @@
       },
       {
         "Actor type code": 58,
-        "Actor type Name": "Pisteur Certifié",
+        "Actor type name": "Pisteur Certifié",
         "Number Of actors In the value chain": 470.9375,
         "Direct added value (local currency)": 1338585009.36388,
         "Public funds balance (local currency)": 38005000.257829,
@@ -588,7 +588,7 @@
       },
       {
         "Actor type code": 59,
-        "Actor type Name": "TransfoSec",
+        "Actor type name": "TransfoSec",
         "Number Of actors In the value chain": 52.98125,
         "Direct added value (local currency)": 2758312057.05,
         "Public funds balance (local currency)": 1027769981.06285,
@@ -597,7 +597,7 @@
       },
       {
         "Actor type code": 60,
-        "Actor type Name": "Transformation Purée & Nectars",
+        "Actor type name": "Transformation Purée & Nectars",
         "Number Of actors In the value chain": 1,
         "Direct added value (local currency)": 5907654767.62536,
         "Public funds balance (local currency)": 0,
@@ -606,7 +606,7 @@
       },
       {
         "Actor type code": 61,
-        "Actor type Name": "Export Frais UE",
+        "Actor type name": "Export Frais UE",
         "Number Of actors In the value chain": 8.00110619469027,
         "Direct added value (local currency)": 1400107517.05235,
         "Public funds balance (local currency)": 14451708.6414337,
@@ -615,7 +615,7 @@
       },
       {
         "Actor type code": 65,
-        "Actor type Name": "Grossistes Jus",
+        "Actor type name": "Grossistes Jus",
         "Number Of actors In the value chain": 19.7388888888889,
         "Direct added value (local currency)": 966362926.82927,
         "Public funds balance (local currency)": 0,
@@ -624,7 +624,7 @@
       },
       {
         "Actor type code": 66,
-        "Actor type Name": "Détaillant Jus",
+        "Actor type name": "Détaillant Jus",
         "Number Of actors In the value chain": 284.24,
         "Direct added value (local currency)": 3552804878.04874,
         "Public funds balance (local currency)": 0,
@@ -633,7 +633,7 @@
       },
       {
         "Actor type code": 68,
-        "Actor type Name": "Producteur non certifié",
+        "Actor type name": "Producteur non certifié",
         "Number Of actors In the value chain": 5182.5,
         "Direct added value (local currency)": 362775000,
         "Public funds balance (local currency)": 0,
@@ -642,7 +642,7 @@
       },
       {
         "Actor type code": 69,
-        "Actor type Name": "Pisteur non certfié",
+        "Actor type name": "Pisteur non certfié",
         "Number Of actors In the value chain": 647.8125,
         "Direct added value (local currency)": 663360000,
         "Public funds balance (local currency)": 38005000,
@@ -651,7 +651,7 @@
       },
       {
         "Actor type code": 70,
-        "Actor type Name": "Grossiste non certifié",
+        "Actor type name": "Grossiste non certifié",
         "Number Of actors In the value chain": 29.15125,
         "Direct added value (local currency)": 2622004186.60256,
         "Public funds balance (local currency)": 61486645.8249976,
@@ -660,7 +660,7 @@
       },
       {
         "Actor type code": 71,
-        "Actor type Name": "Demi-Grossiste  non certifié",
+        "Actor type name": "Demi-Grossiste  non certifié",
         "Number Of actors In the value chain": 916.190476190476,
         "Direct added value (local currency)": 1511716741.07144,
         "Public funds balance (local currency)": 9161919.64285715,
@@ -669,7 +669,7 @@
       },
       {
         "Actor type code": 72,
-        "Actor type Name": "Détaillant non certifié",
+        "Actor type name": "Détaillant non certifié",
         "Number Of actors In the value chain": 9925.27804070785,
         "Direct added value (local currency)": 3126004837.31251,
         "Public funds balance (local currency)": 68604.4597379066,
@@ -762,7 +762,7 @@
     ],
     "Employment": [
       {
-        "Actor type Name": "Demi-Grossiste  non certifié",
+        "Actor type name": "Demi-Grossiste  non certifié",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -777,7 +777,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Détaillant Jus",
+        "Actor type name": "Détaillant Jus",
         "Temporary Male": 203017.421602787,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -792,7 +792,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Détaillant non certifié",
+        "Actor type name": "Détaillant non certifié",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 102.089961734694,
@@ -807,7 +807,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Export Frais UE",
+        "Actor type name": "Export Frais UE",
         "Temporary Male": 68328.3721623229,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -822,7 +822,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Grossiste non certifié",
+        "Actor type name": "Grossiste non certifié",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -837,7 +837,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Grossistes Jus",
+        "Actor type name": "Grossistes Jus",
         "Temporary Male": 563.937282229966,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -852,7 +852,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Pisteur Certifié",
+        "Actor type name": "Pisteur Certifié",
         "Temporary Male": 32712.2074421663,
         "Unit": "Day",
         "Temporary Female": 65.5555273585399,
@@ -867,7 +867,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Pisteur non certfié",
+        "Actor type name": "Pisteur non certfié",
         "Temporary Male": 40687.4630497694,
         "Unit": "Day",
         "Temporary Female": 81.5380038728472,
@@ -882,7 +882,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Producteur Certifié",
+        "Actor type name": "Producteur Certifié",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -897,7 +897,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Producteur non certifié",
+        "Actor type name": "Producteur non certifié",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -912,7 +912,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Transformation Purée & Nectars",
+        "Actor type name": "Transformation Purée & Nectars",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -927,7 +927,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "TransfoSec",
+        "Actor type name": "TransfoSec",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,

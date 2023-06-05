@@ -130,12 +130,32 @@
   "data": {
     "Feuil1": [],
     "Value Chain": [
-      { "Property": "Country", "Value": "Mali", "Unit": "-" },
-      { "Property": "Commodity", "Value": "Anacarde", "Unit": "-" },
-      { "Property": "Reference Year", "Value": 2014, "Unit": "-" },
-      { "Property": "Currency", "Value": "CFA", "Unit": "-" },
-      { "Property": "Change rate to euro" },
-      { "Property": "Change rate to dollar" },
+      {
+        "Property": "Country",
+        "Value": "Mali",
+        "Unit": "-"
+      },
+      {
+        "Property": "Commodity",
+        "Value": "Anacarde",
+        "Unit": "-"
+      },
+      {
+        "Property": "Reference Year",
+        "Value": 2014,
+        "Unit": "-"
+      },
+      {
+        "Property": "Currency",
+        "Value": "CFA",
+        "Unit": "-"
+      },
+      {
+        "Property": "Change rate to euro"
+      },
+      {
+        "Property": "Change rate to dollar"
+      },
       {
         "Property": "Total volume Of commdity production",
         "Value": "noix",
@@ -148,46 +168,118 @@
         "Unit": 80000,
         "__EMPTY": "Kilogram"
       },
-      { "Property": "Nominal protection coefficient", "Unit": "-" },
-      { "Property": "Public fund balance", "Unit": "local currency" },
-      { "Property": "Total value added", "Unit": "local currency" },
-      { "Property": "Value added share Of national GDP", "Unit": "%" },
-      { "Property": "Value added share Of the agricultural sector GDP", "Unit": "%" },
-      { "Property": "Rate Of integration into domestic economy", "Unit": "%" },
-      { "Property": "Public funds balance / Public budget", "Unit": "%" },
-      { "Property": "Balance Of trade Of the value chain", "Unit": "local currency" },
-      { "Property": "Domestic resource cost ratio", "Unit": "-" },
-      { "Property": "Gini index", "Unit": "-" }
+      {
+        "Property": "Nominal protection coefficient",
+        "Unit": "-"
+      },
+      {
+        "Property": "Public fund balance",
+        "Unit": "local currency"
+      },
+      {
+        "Property": "Total value added",
+        "Unit": "local currency"
+      },
+      {
+        "Property": "Value added share Of national GDP",
+        "Unit": "%"
+      },
+      {
+        "Property": "Value added share Of the agricultural sector GDP",
+        "Unit": "%"
+      },
+      {
+        "Property": "Rate Of integration into domestic economy",
+        "Unit": "%"
+      },
+      {
+        "Property": "Public funds balance / Public budget",
+        "Unit": "%"
+      },
+      {
+        "Property": "Balance Of trade Of the value chain",
+        "Unit": "local currency"
+      },
+      {
+        "Property": "Domestic resource cost ratio",
+        "Unit": "-"
+      },
+      {
+        "Property": "Gini index",
+        "Unit": "-"
+      }
     ],
     "Stages description": [
-      { "Stages": "Agricultural producers", "Description": "a" },
-      { "Stages": "Collectors", "Description": "b" },
-      { "Stages": "Processors", "Description": "c" },
-      { "Stages": "Wholesalers", "Description": "d" },
-      { "Stages": "Retailers", "Description": "e" },
-      { "Stages": "Exporters", "Description": "f" },
-      { "Stages": "Export", "Description": "A" },
-      { "Stages": "Consumer", "Description": "B" }
+      {
+        "Stages": "Producers"
+      },
+      {
+        "Stages": "Collectors"
+      },
+      {
+        "Stages": "Processors"
+      },
+      {
+        "Stages": "Wholesalers"
+      },
+      {
+        "Stages": "Retailers"
+      },
+      {
+        "Stages": "Exporters"
+      }
     ],
     "Actor types": [
-      { "Actor type code": 47, "Stage": "Producers", "Actor type name": "Producteur" },
-      { "Actor type code": 48, "Stage": "Processors", "Actor type name": "TransfAmandesManuel" },
-      { "Actor type code": 49, "Stage": "Processors", "Actor type name": "TransfAmandesUnité" },
-      { "Actor type code": 50, "Stage": "Collectors", "Actor type name": "Pisteur / Collecteur" },
+      {
+        "Actor type code": 47,
+        "Stage": "Producers",
+        "Actor type name": "Producteur"
+      },
+      {
+        "Actor type code": 48,
+        "Stage": "Processors",
+        "Actor type name": "TransfAmandesManuel"
+      },
+      {
+        "Actor type code": 49,
+        "Stage": "Processors",
+        "Actor type name": "TransfAmandesUnité"
+      },
+      {
+        "Actor type code": 50,
+        "Stage": "Collectors",
+        "Actor type name": "Pisteur / Collecteur"
+      },
       {
         "Actor type code": 51,
         "Stage": "Wholesalers",
         "Actor type name": "Grossiste / Exportateur Noix"
       },
-      { "Actor type code": 52, "Stage": "Processors", "Actor type name": "TransfPomme" },
+      {
+        "Actor type code": 52,
+        "Stage": "Processors",
+        "Actor type name": "TransfPomme"
+      },
       {
         "Actor type code": 53,
         "Stage": "Exporters",
         "Actor type name": "Grossiste / Exportateur Amandes"
       },
-      { "Actor type code": 54, "Stage": "Export", "Actor type name": "MarcheExterieur Noix" },
-      { "Actor type code": 55, "Stage": "Consumer", "Actor type name": "Consommateur Jus" },
-      { "Actor type code": 56, "Stage": "Consumer", "Actor type name": "Consommateur Amande" }
+      {
+        "Actor type code": 54,
+        "Stage": "Export",
+        "Actor type name": "MarcheExterieur Noix"
+      },
+      {
+        "Actor type code": 55,
+        "Stage": "Consumer",
+        "Actor type name": "Consommateur Jus"
+      },
+      {
+        "Actor type code": 56,
+        "Stage": "Consumer",
+        "Actor type name": "Consommateur Amande"
+      }
     ],
     "Farm gate price In final price": [],
     "Flow by actor type": [
@@ -294,7 +386,7 @@
     "Indicator by actor type": [
       {
         "Actor type code": 47,
-        "Actor type Name": "Producteur",
+        "Actor type name": "Producteur",
         "Number Of actors In the value chain": 33694.3441636582,
         "Direct added value (local currency)": 26344221965.3179,
         "Public funds balance (local currency)": 0,
@@ -303,7 +395,7 @@
       },
       {
         "Actor type code": 48,
-        "Actor type Name": "TransfAmandesManuel",
+        "Actor type name": "TransfAmandesManuel",
         "Number Of actors In the value chain": 1,
         "Direct added value (local currency)": 23835000,
         "Public funds balance (local currency)": 0,
@@ -312,7 +404,7 @@
       },
       {
         "Actor type code": 49,
-        "Actor type Name": "TransfAmandesUnité",
+        "Actor type name": "TransfAmandesUnité",
         "Number Of actors In the value chain": 25,
         "Direct added value (local currency)": 276256000,
         "Public funds balance (local currency)": 0,
@@ -321,7 +413,7 @@
       },
       {
         "Actor type code": 50,
-        "Actor type Name": "Pisteur / Collecteur",
+        "Actor type name": "Pisteur / Collecteur",
         "Number Of actors In the value chain": 1,
         "Direct added value (local currency)": 585446400,
         "Public funds balance (local currency)": 0,
@@ -330,7 +422,7 @@
       },
       {
         "Actor type code": 51,
-        "Actor type Name": "Grossiste / Exportateur Noix",
+        "Actor type name": "Grossiste / Exportateur Noix",
         "Number Of actors In the value chain": 1,
         "Direct added value (local currency)": 620121600,
         "Public funds balance (local currency)": 62899200,
@@ -339,7 +431,7 @@
       },
       {
         "Actor type code": 52,
-        "Actor type Name": "TransfPomme",
+        "Actor type name": "TransfPomme",
         "Number Of actors In the value chain": 1,
         "Direct added value (local currency)": 10870000,
         "Public funds balance (local currency)": 0,
@@ -379,18 +471,30 @@
         "Receiver Name": "TransfPomme",
         "value (local currency)": 36666.640625
       },
-      { "Receiver Name": "Land owners (land fees)", "value (local currency)": 0 },
-      { "Receiver Name": "Depreciation", "value (local currency)": 3057344893.34854 },
-      { "Receiver Name": "Employees (wages)", "value (local currency)": 3361613348.12139 },
+      {
+        "Receiver Name": "Land owners (land fees)",
+        "value (local currency)": 0
+      },
+      {
+        "Receiver Name": "Depreciation",
+        "value (local currency)": 3057344893.34854
+      },
+      {
+        "Receiver Name": "Employees (wages)",
+        "value (local currency)": 3361613348.12139
+      },
       {
         "Receiver Name": "Financial institutions (interests On loans)",
         "value (local currency)": 0
       },
-      { "Receiver Name": "Government (taxes - subsidies)", "value (local currency)": 62899200 }
+      {
+        "Receiver Name": "Government (taxes - subsidies)",
+        "value (local currency)": 62899200
+      }
     ],
     "Employment": [
       {
-        "Actor type Name": "Grossiste / Exportateur Noix",
+        "Actor type name": "Grossiste / Exportateur Noix",
         "Temporary Male": 966470.4,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -405,7 +509,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Pisteur / Collecteur",
+        "Actor type name": "Pisteur / Collecteur",
         "Temporary Male": 241920,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -420,7 +524,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Producteur",
+        "Actor type name": "Producteur",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -435,7 +539,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "TransfAmandesManuel",
+        "Actor type name": "TransfAmandesManuel",
         "Temporary Male": 27452.25,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -450,7 +554,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "TransfAmandesUnité",
+        "Actor type name": "TransfAmandesUnité",
         "Temporary Male": 538214.4140625,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -465,7 +569,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "TransfPomme",
+        "Actor type name": "TransfPomme",
         "Temporary Male": 16000,
         "Unit": "Day",
         "Temporary Female": 0,

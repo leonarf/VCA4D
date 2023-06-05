@@ -130,74 +130,180 @@
   "data": {
     "Feuil1": [],
     "Value Chain": [
-      { "Property": "Country", "Value": "Burundi", "Unit": "-" },
-      { "Property": "Commodity", "Value": "Milk", "Unit": "-" },
-      { "Property": "Reference Year", "Value": 2020, "Unit": "-" },
-      { "Property": "Currency", "Value": "MBIF", "Unit": "-" },
-      { "Property": "Change rate to euro" },
-      { "Property": "Change rate to dollar" },
+      {
+        "Property": "Country",
+        "Value": "Burundi",
+        "Unit": "-"
+      },
+      {
+        "Property": "Commodity",
+        "Value": "Milk",
+        "Unit": "-"
+      },
+      {
+        "Property": "Reference Year",
+        "Value": 2020,
+        "Unit": "-"
+      },
+      {
+        "Property": "Currency",
+        "Value": "MBIF",
+        "Unit": "-"
+      },
+      {
+        "Property": "Change rate to euro"
+      },
+      {
+        "Property": "Change rate to dollar"
+      },
       {
         "Property": "Total volume Of commdity production",
         "Value": "lait",
         "Unit": 143000,
         "__EMPTY": "Ton"
       },
-      { "Property": "Nominal protection coefficient", "Unit": "-" },
-      { "Property": "Public fund balance", "Unit": "local currency" },
-      { "Property": "Total value added", "Unit": "local currency" },
-      { "Property": "Value added share Of national GDP", "Unit": "%" },
-      { "Property": "Value added share Of the agricultural sector GDP", "Unit": "%" },
-      { "Property": "Rate Of integration into domestic economy", "Unit": "%" },
-      { "Property": "Public funds balance / Public budget", "Unit": "%" },
-      { "Property": "Balance Of trade Of the value chain", "Unit": "local currency" },
-      { "Property": "Domestic resource cost ratio", "Unit": "-" },
-      { "Property": "Gini index", "Unit": "-" }
+      {
+        "Property": "Nominal protection coefficient",
+        "Unit": "-"
+      },
+      {
+        "Property": "Public fund balance",
+        "Unit": "local currency"
+      },
+      {
+        "Property": "Total value added",
+        "Unit": "local currency"
+      },
+      {
+        "Property": "Value added share Of national GDP",
+        "Unit": "%"
+      },
+      {
+        "Property": "Value added share Of the agricultural sector GDP",
+        "Unit": "%"
+      },
+      {
+        "Property": "Rate Of integration into domestic economy",
+        "Unit": "%"
+      },
+      {
+        "Property": "Public funds balance / Public budget",
+        "Unit": "%"
+      },
+      {
+        "Property": "Balance Of trade Of the value chain",
+        "Unit": "local currency"
+      },
+      {
+        "Property": "Domestic resource cost ratio",
+        "Unit": "-"
+      },
+      {
+        "Property": "Gini index",
+        "Unit": "-"
+      }
     ],
     "Stages description": [
-      { "Stages": "Agricultural producers", "Description": "AAA" },
-      { "Stages": "Collectors", "Description": "BBB" },
-      { "Stages": "Processors", "Description": "CCC" },
-      { "Stages": "Wholesalers", "Description": "DDD" },
-      { "Stages": "Retailers", "Description": "EEE" },
-      { "Stages": "Consumers", "Description": "FFF" }
+      {
+        "Stages": "Producers"
+      },
+      {
+        "Stages": "Collectors"
+      },
+      {
+        "Stages": "Processors"
+      },
+      {
+        "Stages": "Wholesalers"
+      },
+      {
+        "Stages": "Retailers"
+      },
+      {
+        "Stages": "Exporters"
+      }
     ],
     "Actor types": [
       {
         "Actor type code": 1,
-        "Stage": "Agricultural producers",
+        "Stage": "Producers",
         "Actor type name": "Agropastoral Divagation"
       },
       {
         "Actor type code": 2,
-        "Stage": "Agricultural producers",
+        "Stage": "Producers",
         "Actor type name": "Agropastoral Semipermanent"
       },
       {
         "Actor type code": 3,
-        "Stage": "Agricultural producers",
+        "Stage": "Producers",
         "Actor type name": "Stabulation intégré"
       },
       {
         "Actor type code": 4,
-        "Stage": "Agricultural producers",
+        "Stage": "Producers",
         "Actor type name": "Intensif diversification"
       },
-      { "Actor type code": 5, "Stage": "Collectors", "Actor type name": "Centre de Collecte" },
-      { "Actor type code": 6, "Stage": "Processors", "Actor type name": "Laiterie industrielle" },
+      {
+        "Actor type code": 5,
+        "Stage": "Collectors",
+        "Actor type name": "Centre de Collecte"
+      },
+      {
+        "Actor type code": 6,
+        "Stage": "Processors",
+        "Actor type name": "Laiterie industrielle"
+      },
       {
         "Actor type code": 7,
         "Stage": "Processors",
         "Actor type name": "Laiterie semi-industrielle"
       },
-      { "Actor type code": 8, "Stage": "Collectors", "Actor type name": "Collecteur" },
-      { "Actor type code": 9, "Stage": "Wholesalers", "Actor type name": "Grossiste" },
-      { "Actor type code": 10, "Stage": "Processors", "Actor type name": "Laiterie artisanale" },
-      { "Actor type code": 11, "Stage": "Retailers", "Actor type name": "Detaillant" },
-      { "Actor type code": 12, "Stage": "Retailers", "Actor type name": "Distributeur" },
-      { "Actor type code": 13, "Stage": "Consumers", "Actor type name": "Consommateur Rural" },
-      { "Actor type code": 14, "Stage": "Consumers", "Actor type name": "Consommateur  CUS" },
-      { "Actor type code": 15, "Stage": "Consumers", "Actor type name": "Consommateur BujumB" },
-      { "Actor type code": 16, "Stage": "Consumers", "Actor type name": "Utilisateur Animaux" }
+      {
+        "Actor type code": 8,
+        "Stage": "Collectors",
+        "Actor type name": "Collecteur"
+      },
+      {
+        "Actor type code": 9,
+        "Stage": "Wholesalers",
+        "Actor type name": "Grossiste"
+      },
+      {
+        "Actor type code": 10,
+        "Stage": "Processing",
+        "Actor type name": "Laiterie artisanale"
+      },
+      {
+        "Actor type code": 11,
+        "Stage": "Retailers",
+        "Actor type name": "Detaillant"
+      },
+      {
+        "Actor type code": 12,
+        "Stage": "Retailers",
+        "Actor type name": "Distributeur"
+      },
+      {
+        "Actor type code": 13,
+        "Stage": "Consumers",
+        "Actor type name": "Consommateur Rural"
+      },
+      {
+        "Actor type code": 14,
+        "Stage": "Consumers",
+        "Actor type name": "Consommateur  CUS"
+      },
+      {
+        "Actor type code": 15,
+        "Stage": "Consumers",
+        "Actor type name": "Consommateur BujumB"
+      },
+      {
+        "Actor type code": 16,
+        "Stage": "Consumers",
+        "Actor type name": "Utilisateur Animaux"
+      }
     ],
     "Farm gate price In final price": [],
     "Flow by actor type": [
@@ -601,7 +707,7 @@
     "Indicator by actor type": [
       {
         "Actor type code": 1,
-        "Actor type Name": "Agropastoral Divagation",
+        "Actor type name": "Agropastoral Divagation",
         "Number Of actors In the value chain": 59032.2576105036,
         "Direct added value (local currency)": 11299.4207740072,
         "Public funds balance (local currency)": -26.4823468169197,
@@ -610,7 +716,7 @@
       },
       {
         "Actor type code": 2,
-        "Actor type Name": "Agropastoral Semipermanent",
+        "Actor type name": "Agropastoral Semipermanent",
         "Number Of actors In the value chain": 36666.6666666667,
         "Direct added value (local currency)": 11652.9636018205,
         "Public funds balance (local currency)": -421.571727842093,
@@ -619,7 +725,7 @@
       },
       {
         "Actor type code": 3,
-        "Actor type Name": "Stabulation intégré",
+        "Actor type name": "Stabulation intégré",
         "Number Of actors In the value chain": 268800,
         "Direct added value (local currency)": 31871.2544279418,
         "Public funds balance (local currency)": -2615.48118178577,
@@ -628,7 +734,7 @@
       },
       {
         "Actor type code": 4,
-        "Actor type Name": "Intensif diversification",
+        "Actor type name": "Intensif diversification",
         "Number Of actors In the value chain": 638.297872340426,
         "Direct added value (local currency)": 16615.9552980271,
         "Public funds balance (local currency)": -224.312439614243,
@@ -637,7 +743,7 @@
       },
       {
         "Actor type code": 5,
-        "Actor type Name": "Centre de Collecte",
+        "Actor type name": "Centre de Collecte",
         "Number Of actors In the value chain": 54.12,
         "Direct added value (local currency)": 1050.22724277494,
         "Public funds balance (local currency)": -21.647404116004,
@@ -646,7 +752,7 @@
       },
       {
         "Actor type code": 6,
-        "Actor type Name": "Laiterie industrielle",
+        "Actor type name": "Laiterie industrielle",
         "Number Of actors In the value chain": 0.865833333333333,
         "Direct added value (local currency)": 2513.52365401773,
         "Public funds balance (local currency)": 1170.04497396917,
@@ -655,7 +761,7 @@
       },
       {
         "Actor type code": 7,
-        "Actor type Name": "Laiterie semi-industrielle",
+        "Actor type name": "Laiterie semi-industrielle",
         "Number Of actors In the value chain": 4.32291666666667,
         "Direct added value (local currency)": 1317.4687443191,
         "Public funds balance (local currency)": 309.457585490355,
@@ -664,7 +770,7 @@
       },
       {
         "Actor type code": 8,
-        "Actor type Name": "Collecteur",
+        "Actor type name": "Collecteur",
         "Number Of actors In the value chain": 5359.41666666667,
         "Direct added value (local currency)": 5667.6329275322,
         "Public funds balance (local currency)": 0,
@@ -673,7 +779,7 @@
       },
       {
         "Actor type code": 9,
-        "Actor type Name": "Grossiste",
+        "Actor type name": "Grossiste",
         "Number Of actors In the value chain": 32.1566666666667,
         "Direct added value (local currency)": 1192.73294283236,
         "Public funds balance (local currency)": 0.923016012405848,
@@ -682,7 +788,7 @@
       },
       {
         "Actor type code": 10,
-        "Actor type Name": "Laiterie artisanale",
+        "Actor type name": "Laiterie artisanale",
         "Number Of actors In the value chain": 64.8333333333333,
         "Direct added value (local currency)": 1212.10334687714,
         "Public funds balance (local currency)": 3.31362839002792,
@@ -691,7 +797,7 @@
       },
       {
         "Actor type code": 11,
-        "Actor type Name": "Detaillant",
+        "Actor type name": "Detaillant",
         "Number Of actors In the value chain": 249.444440039097,
         "Direct added value (local currency)": 419.66165505984,
         "Public funds balance (local currency)": 0,
@@ -700,7 +806,7 @@
       },
       {
         "Actor type code": 12,
-        "Actor type Name": "Distributeur",
+        "Actor type name": "Distributeur",
         "Number Of actors In the value chain": 158.25,
         "Direct added value (local currency)": 11612.6557486926,
         "Public funds balance (local currency)": 101.407131923486,
@@ -770,9 +876,18 @@
         "Receiver Name": "Distributeur",
         "value (local currency)": 9232.43687834596
       },
-      { "Receiver Name": "Land owners (land fees)", "value (local currency)": 261.322247378328 },
-      { "Receiver Name": "Depreciation", "value (local currency)": 24888.0190416619 },
-      { "Receiver Name": "Employees (wages)", "value (local currency)": 13328.4113960832 },
+      {
+        "Receiver Name": "Land owners (land fees)",
+        "value (local currency)": 261.322247378328
+      },
+      {
+        "Receiver Name": "Depreciation",
+        "value (local currency)": 24888.0190416619
+      },
+      {
+        "Receiver Name": "Employees (wages)",
+        "value (local currency)": 13328.4113960832
+      },
       {
         "Receiver Name": "Financial institutions (interests On loans)",
         "value (local currency)": 58.4479914299166
@@ -784,7 +899,7 @@
     ],
     "Employment": [
       {
-        "Actor type Name": "Agropastoral Divagation",
+        "Actor type name": "Agropastoral Divagation",
         "Temporary Male": 767135.966288091,
         "Unit": "Day",
         "Temporary Female": 221289.221044642,
@@ -799,7 +914,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Agropastoral Semipermanent",
+        "Actor type name": "Agropastoral Semipermanent",
         "Temporary Male": 752885.310891548,
         "Unit": "Day",
         "Temporary Female": 217178.45506487,
@@ -814,7 +929,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Centre de Collecte",
+        "Actor type name": "Centre de Collecte",
         "Temporary Male": 347670.319149328,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -829,7 +944,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Collecteur",
+        "Actor type name": "Collecteur",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -844,7 +959,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Detaillant",
+        "Actor type name": "Detaillant",
         "Temporary Male": 7480.60000943869,
         "Unit": "Day",
         "Temporary Female": 77683.1507287011,
@@ -859,7 +974,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Distributeur",
+        "Actor type name": "Distributeur",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -874,7 +989,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Grossiste",
+        "Actor type name": "Grossiste",
         "Temporary Male": 11965.0222586716,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -889,7 +1004,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Intensif diversification",
+        "Actor type name": "Intensif diversification",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -904,7 +1019,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Laiterie artisanale",
+        "Actor type name": "Laiterie artisanale",
         "Temporary Male": 117734.640866035,
         "Unit": "Day",
         "Temporary Female": 90565.1061092797,
@@ -919,7 +1034,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Laiterie industrielle",
+        "Actor type name": "Laiterie industrielle",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -934,7 +1049,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Laiterie semi-industrielle",
+        "Actor type name": "Laiterie semi-industrielle",
         "Temporary Male": 0,
         "Unit": "Day",
         "Temporary Female": 0,
@@ -949,7 +1064,7 @@
         "Unit_5": "Day"
       },
       {
-        "Actor type Name": "Stabulation intégré",
+        "Actor type name": "Stabulation intégré",
         "Temporary Male": 1806989.5428543,
         "Unit": "Day",
         "Temporary Female": 521246.983515662,
