@@ -1,0 +1,72 @@
+{
+    "categories": [
+        {
+            "id": "orchard",
+            "prettyName": "Orchard"
+        },
+        {
+            "id": "animal product",
+            "prettyName": "Animal product"
+        },
+        {
+            "id": "crop",
+            "prettyName": "Field crops"
+        }
+    ],
+    "countries": [
+        {
+            "id": "mali",
+            "prettyName": "Mali"
+        },
+        {
+            "id": "burundi",
+            "prettyName": "Burundi"
+        },
+        {
+            "id": "burkina faso",
+            "prettyName": "Burkina Faso"
+        }
+    ],
+    "studies": [
+        {
+            "fileName": "anacarde-mali-2014",
+            "title": "Mali 2014",
+            "year": 2014,
+            "country": "mali",
+            "category": "orchard",
+            "product": "cashew"
+        },
+        {
+            "fileName": "cashew-mali-2021",
+            "title": "Mali 2021",
+            "year": 2021,
+            "country": "mali",
+            "category": "orchard",
+            "product": "cashew"
+        },
+        {
+            "fileName": "mangue-burkina-faso-2016",
+            "title": "Burkina Faso 2016",
+            "year": 2016,
+            "country": "burkina faso",
+            "category": "orchard",
+            "product": "mango"
+        },
+        {
+            "fileName": "milk-burundi-2020",
+            "title": "Burundi 2020",
+            "year": 2020,
+            "country": "burundi",
+            "category": "animal product",
+            "product": "milk"
+        },
+        {
+            "fileName": "milk-burundi-2022",
+            "title": "Burundi 2022",
+            "year": 2022,
+            "country": "burundi",
+            "category": "animal product",
+            "product": "milk"
+        }
+    ]
+}

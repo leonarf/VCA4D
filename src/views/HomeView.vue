@@ -1,6 +1,29 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import Skeleton from '../components/Skeleton.vue'
+import { onMounted, ref } from 'vue';
+import jsonData from '../../data/data.json'
+
+const studies = ref([])
+const countries = ref([])
+const categories = ref([])
+onMounted(async () => {
+    studies.value = jsonData.studies
+    countries.value = jsonData.countries
+    categories.value = jsonData.categories
+})
+
+const filterStudiesByCategory = (category) => {
+  return studies.value.filter(item => item.category === category);
+};
+const filterStudiesByCountry = (country) => {
+  return studies.value.filter(item => item.country === country);
+};
+
+const setDefaultImage = (event) => {
+  event.target.src = 'src/images/product-pictograms/mango.png';
+};
+
 </script>
 
 <template>
@@ -33,66 +56,34 @@ import Skeleton from '../components/Skeleton.vue'
             <section class="by-product">
                 <h3>Studies by <strong>product</strong></h3>
                 
-                <h4>Animal Products</h4>
-                <strong class="TODO" >NOTHING</strong>
-                
-                <h4>Orchards</h4>
-                <ul>
-                    <li>
-                        <RouterLink to="/study?id=anacarde-mali-2014">
-                            <img class="TODO" src="../images/product-pictograms/cashew.jpeg" alt="cashew pictogram - link to Mali 2014 anacarde study">
-                        </RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink to="/study?id=cashew-mali-2021">
-                            <img class="TODO" src="../images/product-pictograms/cashew.jpeg" alt="cashew pictogram - link to Mali 2021 cashew study">
-                        </RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink to="/study?id=mangue-burkina-faso-2016">
-                            <img class="TODO" src="../images/product-pictograms/mango.png" alt="mango pictogram - link to Burkina-Faso 2016 mango study">
-                        </RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink to="/study?id=milk-burundi-2020">
-                            <img class="TODO" src="../images/product-pictograms/milk.png" alt="milk pictogram - link to Burundi 2020 milk study">
-                        </RouterLink>
-                    </li>
-                </ul>
-                
-                <h4>Field crops</h4>
-                <strong class="TODO" >NOTHING</strong>
-
-
+                <template v-for="category in categories" :key="category.id">
+                    <h4 style="margin-top: 48px;">{{ category.prettyName }}</h4>
+                    <ul>
+                        <li v-for="study in filterStudiesByCategory(category.id)" :key="study.fileName">
+                            <RouterLink :to="`/study?id=${study.fileName}`">
+                                <img class="TODO" :src="`src/images/product-pictograms/${study.product}.png`" 
+                                :alt="`Link to ${study.title} study`"
+                                @error="setDefaultImage">
+                            </RouterLink>
+                            <p>{{ study.title }}</p>
+                        </li>
+                        <li v-if="filterStudiesByCategory(category.id).length === 0">
+                            <strong class="TODO" >NOTHING</strong>
+                        </li>
+                    </ul>
+                </template>
             </section>
 
             <section class="by-country">
                 <h3>Studies by <strong>country</strong></h3>
-
-                <h4>Burundi</h4>
-                <ul>
-                    <li>
-                        <RouterLink to="/study?id=milk-burundi-2020">Milk 2020</RouterLink>
-                    </li>
-                </ul>
-
-                <h4>Burkina-Faso</h4>
-                <ul>
-                    <li>
-                        <RouterLink to="/study?id=mangue-burkina-faso-2016">Mangue 2016</RouterLink>
-                    </li>
-                </ul>
-
-                <h4>Mali</h4>
-                <ul>
-                    <li>
-                        <RouterLink to="/study?id=anacarde-mali-2014">Anacarde 2014</RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink to="/study?id=cashew-mali-2021">Anacarde 2021</RouterLink>
-                    </li>
-                </ul>
-
+                <template v-for="country in countries" :key="country.id">
+                    <h4>{{ country.prettyName }}</h4>
+                    <ul>
+                        <li v-for="study in filterStudiesByCountry(country.id)" :key="study.fileName">
+                            <RouterLink :to="`/study?id=${study.fileName}`">{{ study.title }}</RouterLink>
+                        </li>
+                    </ul>
+                </template> 
             </section>
 
 
