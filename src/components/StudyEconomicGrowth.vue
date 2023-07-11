@@ -21,7 +21,16 @@
     <p>= total value added / value of production</p>
 
     <h2>Who <strong>creates and receives</strong> value added?</h2>
-
+    <div class="flex flex-row justify-evenly">
+      <div class="flex flex-col items-center">
+        <Ring v-if="studyData" :options="addedValueCreatorsRingChartData" style="height: 400px; width: 400px;"></Ring>
+        <div class="font-semibold">{{ totalAddedValueCreators }}</div>
+      </div>
+      <div class="flex flex-col items-center">
+        <Ring v-if="studyData" :options="addedValueReceiversRingChartData" style="height: 400px; width: 400px;"></Ring>
+        <div class="font-semibold">{{ totalAddedValueReceivers }}</div>
+      </div>
+    </div>
     <h2>
       How <strong>profitable</strong> and viable are the value chain activities for the actors
       involved?
@@ -52,9 +61,140 @@ import NiceMetric from './NiceMetric.vue'
 import BarChart from './BarChart.vue'
 import Utils from '@/utils/utils.js'
 import CurrencyUtils from '@/utils/currencyUtils.js'
+import Ring from './charts/Ring.vue'
 
 const props = defineProps({
   studyData: Object
+})
+
+const formatNumber = (value) => value.toLocaleString(undefined, { maximumFractionDigits: 2})
+
+const stages = computed(() => {
+  Utils.sortDataStudyArrays(props.studyData.data)
+  return [...new Set(props.studyData.data['Actor types'].map(actorType => actorType.Stage))]
+})
+
+const actors = computed(() => {
+  Utils.sortDataStudyArrays(props.studyData.data)
+  return [...new Set(props.studyData.data['Actor types'].map(actorType => actorType['Actor type name']))]
+})
+
+const addedValueCreatorsRingChartData = computed(() => {
+
+  const tooltip = {}
+  const title = {
+    text: 'Who creates the direct value added',
+    left: 'center',
+    top: 50
+  }
+  let data = stages.value.map(stage => {
+    const actorNames = props.studyData.data['Actor types'].filter(actorType => actorType.Stage === stage).map(actorType => actorType['Actor type name'])
+    const stageItems = props.studyData.data['Indicator by actor type']
+      .filter(flow => actorNames.includes(flow['Actor type name']))
+      
+    const subTotal = stageItems
+      .map(flow => flow['Direct added value (local currency)'])
+      .reduce((res, value) => res + value, 0)
+
+    let toolTip = `${stage}: ${formatNumber(subTotal)} (local ccy)`
+    for (const stageItem of stageItems) {
+      toolTip += `<br>${stageItem['Actor type name']}: ${formatNumber(stageItem['Direct added value (local currency)'])} (local ccy)`
+    }
+    tooltip[stage] = toolTip
+    return {
+      value: subTotal,
+      name: stage
+    }
+  })
+
+  data = data.filter(item => item.value !== 0)
+
+  return {
+    title,
+    tooltip: {
+      trigger: 'item',
+      formatter: function (info) {
+        return tooltip[info.name]
+      }
+    },
+    series: [
+      {
+        type: 'pie',
+        data,
+        radius: ['30%', '40%']
+      }
+    ]
+  };
+})
+
+
+const addedValueReceiversRingChartData = computed(() => {
+
+  const tooltip = {}
+  const title = {
+    text: 'Who receives the direct value added',
+    left: 'center',
+    top: 50
+  }
+
+  let data = stages.value.map(stage => {
+    const actorNames = props.studyData.data['Actor types'].filter(actorType => actorType.Stage === stage).map(actorType => actorType['Actor type name'])
+    const stageItems = props.studyData.data['Direct value added receivers']
+      .filter(element => actorNames.includes(element['Receiver Name']))
+
+      console.log('stageItems', stageItems)
+
+
+    const subTotal = stageItems
+      .map(element => element['value (local currency)'])
+      .reduce((res, value) => res + value, 0)
+
+    let toolTip = `${stage}: ${formatNumber(subTotal)} (local ccy)`
+    for (const stageItem of stageItems) {
+      toolTip += `<br>${stageItem['Receiver Name']}: ${formatNumber(stageItem['value (local currency)'])} (local ccy)`
+    }
+    tooltip[stage] = toolTip
+
+    return {
+      value: subTotal,
+      name: stage
+    }
+  })
+
+  const noStageElements = props.studyData.data['Direct value added receivers'].filter(element => !actors.value.includes(element['Receiver Name']))
+  data = data.concat(noStageElements.map(noStageElement => {
+    tooltip[noStageElement['Receiver Name']] = `${noStageElement['Receiver Name']}: ${formatNumber(noStageElement['value (local currency)'])} (local ccy)` 
+    return {
+      value: noStageElement['value (local currency)'],
+      name: noStageElement['Receiver Name']
+    }
+  })) 
+  data = data.filter(item => item.value !== 0)
+
+  return {
+  title,
+    tooltip: {
+      trigger: 'item',
+      formatter: function (info) {
+        return tooltip[info.name]
+      }
+    },
+  series: [
+    {
+      type: 'pie',
+      data,
+      radius: ['30%', '40%']
+    }
+  ]
+};
+})
+
+const totalAddedValueReceivers = computed(() => {
+  return formatNumber(addedValueReceiversRingChartData.value.series[0].data.reduce((res, item) => res + item.value, 0))
+})
+
+const totalAddedValueCreators = computed(() => {
+  return formatNumber(addedValueCreatorsRingChartData.value.series[0].data.reduce((res, item) => res + item.value, 0))
 })
 
 const populatedBarChartData = computed(() => {
