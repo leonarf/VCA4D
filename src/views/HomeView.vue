@@ -30,14 +30,14 @@ const setDefaultImage = (event) => {
     <Skeleton>
         <section class="banner">
             <div>
-                <h1>Value Chain Analysis For Development</h1>
+                <h1><b>V</b>alue <b>C</b>hain <b>A</b>nalysis <b>F</b>or <b>D</b>evelopment</h1>
                 <h2>Providing value chain analysis for improving operations</h2>
             </div>
         </section>
 
         <section class="study-list">
             <section class="introduction">
-                <h2>Get insight into food value chains in developing countries</h2>
+                <h2 style="color: #303030;">Get insight into food value chains in developing countries</h2>
                 <p>
                     Welcome to the VCA4D website. You will find a tailored access to 35 value chain analyses
                     across 16 different agricultural commodities around the world. Based on a standardised
@@ -104,7 +104,7 @@ section.banner {
     height: 25rem;
     width: 100%;
 
-    background-image: url('../images/home-banner.png');
+    background-image: url('../images/home-banner.jpg');
     background-position: center center;
 
     display: flex;
@@ -116,7 +116,7 @@ section.banner {
         height: 60%;
         max-width: 50%;
         padding: 1rem;
-        border-radius: 2rem;
+        border-radius: 1.5rem;
         background-color: hsla(0, 0%, 0%, 0.7);
 
         position: relative;
@@ -134,7 +134,8 @@ section.banner {
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
+            font-weight: 500;
             line-height: 1.2;
         }
 

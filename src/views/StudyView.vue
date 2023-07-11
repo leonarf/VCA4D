@@ -5,17 +5,9 @@
 
             <div v-if="error" class="error">{{ error }}</div>
 
-            <ul v-if="studyData">
-                <li>
-                    <span>{{ studyData.product }}</span>
-                </li>
-                <li>
-                    <span>{{ studyData.country }}</span>
-                </li>
-                <li>
-                    <span>{{ studyData.year }}</span>
-                </li>
-            </ul>
+            <div v-if="studyData">
+                <StudyHeader :studyData="studyData"/>
+            </div>
         </header>
         <nav>
             <ol v-if="studyData">
@@ -56,6 +48,7 @@ import StudyEnvironment from '../components/StudyEnvironment.vue'
 import StudyEconomicGrowth from '../components/StudyEconomicGrowth.vue'
 import StudyInclusiveness from '../components/StudyInclusiveness.vue'
 import StudySocialSustainability from '../components/StudySocialSustainability.vue'
+import StudyHeader from '../components/study/StudyHeader.vue'
 
 </script>
 
@@ -99,26 +92,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-header, nav, article{
-    width: 64rem;
-}
-
-header{
-    font-size: 2rem;
-
-    ul{
-        background-color: lightgreen;
-
-        border-radius: 2rem;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-}
-
 nav {
     ol{
         list-style: none;

@@ -5,17 +5,12 @@ import { RouterLink } from 'vue-router'
 
 <template>
     <header>
-        <RouterLink to="/">VCA4D website</RouterLink>
+        <RouterLink to="/">VCA4D Information System</RouterLink>
 
-        <div>
-            <!--
-            <img src="/images/logo/agrinatura.jpeg" alt="agrinatura network logo">
-            <img src="/images/logo/VCA4D.jpeg" alt="VCA4D logo">
-            <img src="/images/logo/european-commission.jpeg" alt="european commission logo">
-            -->
-            <img class="TODO" alt="agrinatura network logo">
-            <img class="TODO" alt="VCA4D logo">
-            <img class="TODO" alt="european commission logo">
+        <div class="flex flex-row gap-6 items-center">
+            <img src="../images/logo/agrinatura.jpg" height="60" width="116" alt="agrinatura network logo">
+            <img src="../images/logo/vca4d.jpg" height="62" width="153" alt="VCA4D logo">
+            <img src="../images/logo/european_commission.jpg" height="81" width="117" alt="european commission logo">
         </div>
     </header>
 
@@ -41,27 +36,11 @@ header{
     align-items: center;
 
     & > a{
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
         color: #929292;
         text-transform: uppercase;
         text-decoration: none;
-    }
-
-    & > div{
-        height: 100%;
-
-        display: flex;
-        flex-direction: row;
-
-        img{
-            height: 100%;
-            width: 7rem;
-            margin: 0 1rem;
-            background-color: grey;
-
-            text-align: center;
-        }
     }
 }
 
