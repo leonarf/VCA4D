@@ -41,9 +41,28 @@
     </p>
     <BarChart v-if="studyData" :options="populatedBarChartData"></BarChart>
     <a v-else class="TODO">Data are missing to display this GraphBar</a>
-
+    <h2>What is the contribution of the value chain to the <strong>public finances</strong>?</h2>
+    <div class="flex flex-row items-center ml-12">
+      <div class="w-1/3">
+        <div class="uppercase font-semibold text-[#303030] text-xl">Public Funds Balance</div>
+        <div class="font-semibold text-2xl text-[#C1C1C1]">{{ publicFundsBalance }}</div>
+        <div class="mt-2">
+          Taxes - Subventions<br>
+          Positive if the sector contributes to the government income more than it receives in subsidies and tax break
+        </div>
+        <div class="uppercase font-semibold text-red-500 text-2xl mt-4 ">-5 % (TODO)</div>
+        <div class="uppercase font-semibold text-[#656565] text-base">Public Funds Balance / Public Budget</div>
+        <div class="mt-2">
+          Net share of the public funds balance in government budget
+        </div>
+      </div>
+      <div class="w-2/3">
+        <BarChart v-if="studyData" :options="publicFinancesBarData"></BarChart>
+      </div>
+    </div>
+    
     <h2>What is the contribution of the value chain to the <strong>balance of trade</strong>?</h2>
-
+    
     <h2>Is the value chain <strong>viable in the international economy</strong>?</h2>
     <p>
       The VCA4D methodology assesses for each value chain its dependency on international exports as
@@ -58,7 +77,7 @@ import { computed, ref } from 'vue'
 
 import NiceMetricGroup from './NiceMetricGroup.vue'
 import NiceMetric from './NiceMetric.vue'
-import BarChart from './BarChart.vue'
+import BarChart from './charts/BarChart.vue'
 import Utils from '@/utils/utils.js'
 import CurrencyUtils from '@/utils/currencyUtils.js'
 import Ring from './charts/Ring.vue'
@@ -195,6 +214,68 @@ const totalAddedValueReceivers = computed(() => {
 
 const totalAddedValueCreators = computed(() => {
   return formatNumber(addedValueCreatorsRingChartData.value.series[0].data.reduce((res, item) => res + item.value, 0))
+})
+
+const publicFundsBalance = computed(() => {
+  const balanceItem = props.studyData.data['Direct value added receivers'].filter(item => item['Receiver Name'] === 'Government (taxes - subsidies)')
+  console.log(balanceItem)
+  if (!balanceItem || balanceItem.length === 0) {
+    return 0
+  }
+  const balanceValue = balanceItem[0]['value (local currency)'] 
+  return (balanceValue > 0 ? "+" : "-") + formatNumber(balanceValue)
+})
+
+const publicFinancesBarData = computed(() => {
+
+  let tooltip = {}
+  let labels = []
+  let values = []
+  stages.value.map(stage => {
+    const actorNames = props.studyData.data['Actor types'].filter(actorType => actorType.Stage === stage).map(actorType => actorType['Actor type name'])
+    const stageItems = props.studyData.data['Indicator by actor type'].filter(element => actorNames.includes(element['Actor type name']))
+    
+    labels.push(stage)
+    const subTotal = stageItems
+      .map(stageItem => stageItem['Public funds balance (local currency)'])
+      .reduce((res, value) => res + value, 0) 
+    values.push(subTotal)
+    tooltip[stage] = `${formatNumber(subTotal)} (local ccy)`
+    
+  })
+
+  return {
+    xAxis: {
+      data: labels,
+      left: 0
+    },
+    label: {
+      show: true,
+      position: 'top',
+      formatter: function (d) {
+        if (!d.data) {
+          return ""
+        }
+        return formatNumber(d.data)
+      },
+    },
+    tooltip: {
+      trigger: 'item',
+      formatter: function (info) {
+        return tooltip[info.name]
+      }
+    },
+    yAxis: {
+      show: false
+    },
+    series: [
+      {
+        type: 'bar',
+        data: values,
+        barWidth: '100%'
+      }
+    ]
+  };
 })
 
 const populatedBarChartData = computed(() => {
