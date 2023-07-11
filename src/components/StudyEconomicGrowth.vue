@@ -58,7 +58,7 @@ import { computed, ref } from 'vue'
 
 import NiceMetricGroup from './NiceMetricGroup.vue'
 import NiceMetric from './NiceMetric.vue'
-import BarChart from './BarChart.vue'
+import BarChart from './charts/BarChart.vue'
 import Utils from '@/utils/utils.js'
 import CurrencyUtils from '@/utils/currencyUtils.js'
 import Ring from './charts/Ring.vue'
