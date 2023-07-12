@@ -26,6 +26,27 @@
             </div>
             <div class="w-4/5">
                 <BarChart v-if="studyData" :options="numberOfJobsData"></BarChart>
+                <div>
+                    <div class="flex flex-row justify-evenly">
+                        <div class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" v-for="stage in availableStages" @click="currentStage = stage">
+                            {{ stage }}
+                        </div>
+                    </div>
+                    <template v-if="currentStage !== ''">
+                        <div>Employment in {{ currentStage }}</div>
+                            <div class="flex flex-row">
+                                <div>
+                                    <Ring v-if="studyData" :options="currentStageEmploymentByTypeOfActorData" style="height: 300px; width: 300px;"></Ring>
+                            </div>
+                            <div>
+                                <Ring v-if="studyData" :options="currentStageEmploymentByQualificationData" style="height: 300px; width: 300px;"></Ring>
+                            </div>
+                            <div>
+                                <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px; width: 300px;"></Ring>
+                            </div>
+                        </div>
+                    </template>
+                </div>
             </div>
         </div>
 
@@ -40,16 +61,18 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import Utils from '@/utils/utils.js'
 import BarChart from './charts/BarChart.vue'
+import Ring from './charts/Ring.vue'
 
 const props = defineProps({
     studyData: Object
     })
 
-const formatNumber = (value) => value.toLocaleString(undefined, { maximumFractionDigits: 2})
+const currentStage = ref('')
 
+const formatNumber = (value) => value.toLocaleString(undefined, { maximumFractionDigits: 2})
 
 const stages = computed(() => {
   Utils.sortDataStudyArrays(props.studyData.data)
@@ -115,7 +138,6 @@ const numberOfActorsData = computed(() => {
 })
 
 const totalNumberOfActors = computed(() => {
-    console.log('numberOfActorsData.value.series[0].data', numberOfActorsData.value.series[0].data)
     return formatNumber(numberOfActorsData.value.series[0].data.reduce((res, item) => res + item, 0))
 })
 
@@ -124,19 +146,36 @@ const jobsByActors = computed(() => {
         const actorName = item['Actor type name']
         let stage = ""
         const actorTypeEntries = props.studyData.data['Actor types'].filter(element => element['Actor type name'] === actorName)
-        console.log('actorTypeEntries', actorTypeEntries)
         if (actorTypeEntries && actorTypeEntries.length === 1) {
             stage = actorTypeEntries[0]['Stage']
         }
+        const male_temp = item['Temporary Male']
+        const female_temp = item['Temporary Female']
+        const male_perm_unskilled = item['Permanent Unskilled Male']
+        const female_perm_unskilled = item['Permanent Unskilled Female']
+        const male_perm_skilled = item['Permanent Skilled Male']
+        const female_perm_skilled = item['Permanent Skilled Female']
+        const femaleTotal = female_temp + female_perm_skilled + female_perm_unskilled
+        const maleTotal = female_temp + female_perm_skilled + female_perm_unskilled
+        const total = femaleTotal + maleTotal
+        const tempTotal = female_temp + male_temp
+        const skilledTotal = female_perm_skilled + male_perm_skilled
+        const unskilledTotal = female_perm_unskilled + male_perm_unskilled
         return {
             actorName,
             stage,
-            male_temp: item['Temporary Male'],
-            female_temp: item['Temporary Female'],
-            male_perm_unskilled: item['Permanent Unskilled Male'],
-            female_perm_unskilled: item['Permanent Unskilled Female'],
-            male_perm_skilled: item['Permanent Skilled Male'],
-            female_perm_skilled: item['Permanent Skilled Female'],
+            male_temp,
+            female_temp,
+            male_perm_unskilled,
+            female_perm_unskilled,
+            male_perm_skilled,
+            female_perm_skilled,
+            femaleTotal,
+            maleTotal,
+            total,
+            tempTotal,
+            skilledTotal,
+            unskilledTotal
         }
     })
 })
@@ -149,20 +188,19 @@ const numberOfJobsData = computed(() => {
     let values = []
     stages.value.map(stage => {
         const jobItems = jobsByActors.value.filter(item => item.stage === stage)
-        console.log('jobItems', jobItems)
 
-        const subTotal = jobItems.map(jobItem => 
-            jobItem.male_temp 
-            + jobItem.female_temp
-            + jobItem.male_perm_unskilled
-            + jobItem.female_perm_unskilled
-            + jobItem.male_perm_skilled
-            + jobItem.female_perm_skilled
-        ).reduce((res, curr) => res + curr, 0)
+        const subTotal = jobItems.map(jobItem => jobItem.total)
+            .reduce((res, curr) => res + curr, 0)
 
         if (subTotal !== 0) {
             labels.push(stage)
-            values.push(subTotal)
+            const color = currentStage.value === stage ? 'orange' : 'lightBlue'
+            values.push({
+                value: subTotal,
+                itemStyle: {
+                    color
+                }
+            })
             let toolTipValue = `${stage}: ${subTotal}`
             toolTipValue += `<br>Male temp: ${jobItems.map(jobItem => jobItem.male_temp)
                 .reduce((res, curr) => res + curr, 0)}`
@@ -181,41 +219,45 @@ const numberOfJobsData = computed(() => {
     })
 
     return {
-    xAxis: {
-        data: labels,
-        left: 0
-    },
-    label: {
-        show: true,
-        position: 'top',
-        formatter: function (d) {
-        if (!d.data) {
-            return ""
-        }
-        return formatNumber(d.data)
+        xAxis: {
+            data: labels,
+            left: 0
         },
-    },
-    tooltip: {
-        trigger: 'item',
-        formatter: function (info) {
-        return tooltip[info.name]
-        }
-    },
-    yAxis: {
-        show: false
-    },
-    series: [
-        {
-        type: 'bar',
-        data: values,
-        barWidth: '100%'
-        }
-    ]
+        label: {
+            show: true,
+            position: 'top',
+            formatter: function (d) {
+            if (!d.data) {
+                return ""
+            }
+            return formatNumber(d.data.value)
+            },
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: function (info) {
+            return tooltip[info.name]
+            }
+        },
+        yAxis: {
+            show: false
+        },
+        series: [
+            {
+                type: 'bar',
+                data: values,
+                barWidth: '100%'
+            }
+        ]
     };
 })
 
+const availableStages = computed(() => {
+    return numberOfJobsData.value.xAxis.data
+})
+
 const totalNumberOfJobs = computed(() => {
-  return formatNumber(numberOfJobsData.value.series[0].data.reduce((res, item) => res + item, 0))
+  return formatNumber(numberOfJobsData.value.series[0].data.map(itemData => itemData.value).reduce((res, item) => res + item, 0))
 })
 
 
@@ -223,12 +265,114 @@ const percentFemaleEmployment = computed(() => {
     let femaleTotal = 0
     let total = 0
     for (const actor of jobsByActors.value) {
-        const tmpFemale = actor.female_temp + actor.female_perm_unskilled + actor.female_perm_skilled
-        const tmpMale = actor.male_temp + actor.male_perm_unskilled + actor.male_perm_skilled
-        femaleTotal += tmpFemale
-        total += tmpFemale + tmpMale
+        femaleTotal += actor.femaleTotal
+        total += actor.total
     }
     return parseInt(femaleTotal / total * 100)
+})
+
+const currentStageEmploymentByTypeOfActorData = computed(() => {
+    const jobItems = jobsByActors.value.filter(element => element.stage === currentStage.value)
+
+    const title = {
+        text: 'By type of actor',
+        left: 'center',
+        top: 50
+    }
+
+    let data = jobItems.map(jobItem => {
+        return {
+            value: jobItem.total,
+            name: jobItem.actorName
+        }
+    })
+
+    data = data.filter(item => item.value !== 0)
+
+    return {
+        title,
+        series: [
+            {
+                type: 'pie',
+                data,
+                radius: ['30%', '40%']
+            }
+        ]
+    };
+})
+
+
+const currentStageEmploymentByQualificationData = computed(() => {
+    const jobItems = jobsByActors.value.filter(element => element.stage === currentStage.value)
+
+    const title = {
+        text: 'By qualification',
+        left: 'center',
+        top: 50
+    }
+
+    let data = [
+        {
+            value: jobItems.map(jobItem => jobItem.skilledTotal).reduce((res, curr) => res + curr, 0),
+            name: 'Permanent qualified'
+        },
+        {
+            value: jobItems.map(jobItem => jobItem.unskilledTotal).reduce((res, curr) => res + curr, 0),
+            name: 'Permanent unqualified'
+        },
+        {
+            value: jobItems.map(jobItem => jobItem.tempTotal).reduce((res, curr) => res + curr, 0),
+            name: 'Temporary'
+        }
+    ]
+
+    data = data.filter(item => item.value !== 0)
+
+    return {
+        title,
+        series: [
+            {
+                type: 'pie',
+                data,
+                radius: ['30%', '40%']
+            }
+        ]
+    };
+})
+
+
+const currentStageEmploymentByGenderData = computed(() => {
+    const jobItems = jobsByActors.value.filter(element => element.stage === currentStage.value)
+
+    const title = {
+        text: 'By gender',
+        left: 'center',
+        top: 50
+    }
+
+    let data = [
+        {
+            value: jobItems.map(jobItem => jobItem.maleTotal).reduce((res, curr) => res + curr, 0),
+            name: 'Male'
+        },
+        {
+            value: jobItems.map(jobItem => jobItem.femaleTotal).reduce((res, curr) => res + curr, 0),
+            name: 'Female'
+        }
+    ]
+
+    data = data.filter(item => item.value !== 0)
+
+    return {
+        title,
+        series: [
+            {
+                type: 'pie',
+                data,
+                radius: ['30%', '40%']
+            }
+        ]
+    };
 })
 </script>
 
