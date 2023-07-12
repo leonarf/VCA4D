@@ -21,7 +21,7 @@
             <div class="w-1/5">
                 <div class="title">{{ totalNumberOfJobs }}</div>
                 <div class="subtitle">Waged employment</div>
-                <div class="title mt-2">30%</div>
+                <div class="title mt-2">{{ percentFemaleEmployment }}%</div>
                 <div class="subtitle">% female employment</div>
             </div>
             <div class="w-4/5">
@@ -216,6 +216,19 @@ const numberOfJobsData = computed(() => {
 
 const totalNumberOfJobs = computed(() => {
   return formatNumber(numberOfJobsData.value.series[0].data.reduce((res, item) => res + item, 0))
+})
+
+
+const percentFemaleEmployment = computed(() => {
+    let femaleTotal = 0
+    let total = 0
+    for (const actor of jobsByActors.value) {
+        const tmpFemale = actor.female_temp + actor.female_perm_unskilled + actor.female_perm_skilled
+        const tmpMale = actor.male_temp + actor.male_perm_unskilled + actor.male_perm_skilled
+        femaleTotal += tmpFemale
+        total += tmpFemale + tmpMale
+    }
+    return parseInt(femaleTotal / total * 100)
 })
 </script>
 
