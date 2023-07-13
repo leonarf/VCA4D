@@ -35,17 +35,17 @@ const setDefaultImage = (event) => {
             </div>
         </section>
 
-        <section class="study-list">
+        <section class="mx-4 sm:mx-8 md:mx-12 lg:mx-48 xl:mx-80">
             <section class="introduction">
-                <h2 style="color: #303030;">Get insight into food value chains in developing countries</h2>
-                <p>
+                <h2 class="text-[#303030] font-bold text-2xl mb-4">Get insight into food value chains in developing countries</h2>
+                <p class="text-justify mb-2">
                     Welcome to the VCA4D website. You will find a tailored access to 35 value chain analyses
                     across 16 different agricultural commodities around the world. Based on a standardised
                     methodology (*link), each analysis allows an assessment of the value chain's impact on
                     smallholders, businesses, society and environment. Any of the VCA4D academic study provides
                     information across 4 related domains:
                 </p>
-                <ul>
+                <ul class="list-disc ml-8">
                     <li>the various actors and <strong>structuration of the chain</strong></li>
                     <li>its contribution to <strong>economic growth</strong> and the state's public finance</li>
                     <li>the chain's <strong>inclusiveness</strong> and contribution to <strong>employment</strong></li>
@@ -53,33 +53,36 @@ const setDefaultImage = (event) => {
                 </ul>
             </section>
 
-            <section class="by-product">
-                <h3>Studies by <strong>product</strong></h3>
+            <section>
+                <h3>Browse studies by <strong>product</strong></h3>
                 
                 <template v-for="category in categories" :key="category.id">
-                    <h4 style="margin-top: 48px;">{{ category.prettyName }}</h4>
-                    <ul>
-                        <li v-for="study in filterStudiesByCategory(category.id)" :key="study.fileName">
-                            <RouterLink :to="`/study?id=${study.fileName}`">
-                                <img class="TODO" :src="`src/images/product-pictograms/${study.product}.png`" 
-                                :alt="`Link to ${study.title} study`"
-                                @error="setDefaultImage">
-                            </RouterLink>
-                            <p>{{ study.title }}</p>
-                        </li>
-                        <li v-if="filterStudiesByCategory(category.id).length === 0">
-                            <strong class="TODO" >NOTHING</strong>
-                        </li>
-                    </ul>
+                    <h4 :style="`margin-top: 48px; color: ${category.textColor};`" class="font-semibold">{{ category.prettyName }}</h4>
+                    <div class="border-t-[13px] pt-4" :style="`border-color: ${category.color};`">
+                        <ul class="flex flex-row">
+                            <li v-for="study in filterStudiesByCategory(category.id)" :key="study.fileName" class="h-full mr-4">
+                                <RouterLink :to="`/study?id=${study.fileName}`">
+                                    <img :src="`src/images/product-pictograms/${study.product}.png`" 
+                                    :alt="`Link to ${study.title} study`"
+                                    class="w-24"
+                                    @error="setDefaultImage">
+                                </RouterLink>
+                                <p>{{ study.title }}</p>
+                            </li>
+                            <li v-if="filterStudiesByCategory(category.id).length === 0">
+                                <strong class="TODO" >NOTHING</strong>
+                            </li>
+                        </ul>
+                    </div>
                 </template>
             </section>
 
             <section class="by-country">
-                <h3>Studies by <strong>country</strong></h3>
+                <h3>Browse studies by <strong>country</strong></h3>
                 <template v-for="country in countries" :key="country.id">
-                    <h4>{{ country.prettyName }}</h4>
+                    <h4 class="font-semibold mt-4">{{ country.prettyName }}</h4>
                     <ul>
-                        <li v-for="study in filterStudiesByCountry(country.id)" :key="study.fileName">
+                        <li v-for="study in filterStudiesByCountry(country.id)" :key="study.fileName" class="text-blue-600 dark:text-blue-500 hover:underline">
                             <RouterLink :to="`/study?id=${study.fileName}`">{{ study.title }}</RouterLink>
                         </li>
                     </ul>
@@ -98,6 +101,10 @@ const setDefaultImage = (event) => {
 
 section {
     padding: 1.5rem;
+}
+
+h3 {
+    @apply text-xl
 }
 
 section.banner {
@@ -143,46 +150,5 @@ section.banner {
             font-size: 1.2rem;
         }
     }
-}
-
-
-section.study-list {
-    max-width: 100ch;
-    margin: 0 auto;
-
-    section.introduction {
-
-        ul {
-            list-style-type: "- ";
-        }
-
-    }
-
-    section.by-product{
-        ul{
-            height: 6rem;
-            
-            display: flex;
-            flex-direction: row;
-
-            li{
-                height: 100%;
-                margin: 0 0.5rem;
-
-                &:first-child{
-                    margin-left: 0;
-                }
-
-                img{
-                    height: 100%;
-                    width: 6rem;
-                }
-            }
-            
-        }
-
-
-    }
-
 }
 </style>

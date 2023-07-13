@@ -62,7 +62,6 @@
 
 <script setup>
 import { computed, ref } from 'vue'
-import Utils from '@/utils/utils.js'
 import BarChart from './charts/BarChart.vue'
 import Ring from './charts/Ring.vue'
 
@@ -72,12 +71,10 @@ const props = defineProps({
 
 const currentStage = ref('')
 
-const formatNumber = (value) => value.toLocaleString(undefined, { maximumFractionDigits: 2})
+const formatNumber = (value) => value ? value.toLocaleString(undefined, { maximumFractionDigits: 2}) : "-"
 
-const stages = computed(() => {
-  Utils.sortDataStudyArrays(props.studyData.data)
-  return [...new Set(props.studyData.data['Actor types'].map(actorType => actorType.Stage))]
-})
+const stages = computed(() => props.studyData.data.stages)
+const actors = computed(() => props.studyData.data.actors)
 
 const numberOfActorsData = computed(() => {
 
@@ -85,18 +82,16 @@ const numberOfActorsData = computed(() => {
   let labels = []
   let values = []
   stages.value.map(stage => {
-    const actorNames = props.studyData.data['Actor types'].filter(actorType => actorType.Stage === stage).map(actorType => actorType['Actor type name'])
-    const stageItems = props.studyData.data['Indicator by actor type'].filter(element => actorNames.includes(element['Actor type name']))
+    const stageActors = actors.value.filter(actor => actor.stage === stage.name)
     
-    const subTotal = stageItems
-      .map(stageItem => stageItem['Number Of actors In the value chain'])
-      .reduce((res, value) => res + value, 0) 
+    const subTotal = stageActors
+      .reduce((res, actor) => res + actor.numberOfActors, 0) 
     if (subTotal !== 0) {
-        labels.push(stage)
+        labels.push(stage.name)
         values.push(subTotal)
-        let toolTipValue = `${stage}: ${formatNumber(subTotal)}`
-        for (const stageItem of stageItems) {
-            toolTipValue += `<br>${stageItem['Actor type name']}: ${formatNumber(stageItem['Number Of actors In the value chain'])}`
+        let toolTipValue = `${stage.name}: ${formatNumber(subTotal)}`
+        for (const actor of stageActors) {
+            toolTipValue += `<br>${actor.name}: ${formatNumber(actor.numberOfActors)}`
         }
 
         tooltip[stage] = toolTipValue
@@ -141,59 +136,19 @@ const totalNumberOfActors = computed(() => {
     return formatNumber(numberOfActorsData.value.series[0].data.reduce((res, item) => res + item, 0))
 })
 
-const jobsByActors = computed(() => {
-    return props.studyData.data['Employment'].map(item => {
-        const actorName = item['Actor type name']
-        let stage = ""
-        const actorTypeEntries = props.studyData.data['Actor types'].filter(element => element['Actor type name'] === actorName)
-        if (actorTypeEntries && actorTypeEntries.length === 1) {
-            stage = actorTypeEntries[0]['Stage']
-        }
-        const male_temp = item['Temporary Male']
-        const female_temp = item['Temporary Female']
-        const male_perm_unskilled = item['Permanent Unskilled Male']
-        const female_perm_unskilled = item['Permanent Unskilled Female']
-        const male_perm_skilled = item['Permanent Skilled Male']
-        const female_perm_skilled = item['Permanent Skilled Female']
-        const femaleTotal = female_temp + female_perm_skilled + female_perm_unskilled
-        const maleTotal = female_temp + female_perm_skilled + female_perm_unskilled
-        const total = femaleTotal + maleTotal
-        const tempTotal = female_temp + male_temp
-        const skilledTotal = female_perm_skilled + male_perm_skilled
-        const unskilledTotal = female_perm_unskilled + male_perm_unskilled
-        return {
-            actorName,
-            stage,
-            male_temp,
-            female_temp,
-            male_perm_unskilled,
-            female_perm_unskilled,
-            male_perm_skilled,
-            female_perm_skilled,
-            femaleTotal,
-            maleTotal,
-            total,
-            tempTotal,
-            skilledTotal,
-            unskilledTotal
-        }
-    })
-})
-
-
 const numberOfJobsData = computed(() => {
 
     let tooltip = {}
     let labels = []
     let values = []
     stages.value.map(stage => {
-        const jobItems = jobsByActors.value.filter(item => item.stage === stage)
+        const stageActors = actors.value.filter(actor => actor.stage === stage.name && actor.employment)
 
-        const subTotal = jobItems.map(jobItem => jobItem.total)
+        const subTotal = stageActors.map(actor => actor.employment.total)
             .reduce((res, curr) => res + curr, 0)
 
         if (subTotal !== 0) {
-            labels.push(stage)
+            labels.push(stage.name)
             const color = currentStage.value === stage ? 'orange' : 'lightBlue'
             values.push({
                 value: subTotal,
@@ -201,18 +156,18 @@ const numberOfJobsData = computed(() => {
                     color
                 }
             })
-            let toolTipValue = `${stage}: ${subTotal}`
-            toolTipValue += `<br>Male temp: ${jobItems.map(jobItem => jobItem.male_temp)
+            let toolTipValue = `${stage.name}: ${subTotal}`
+            toolTipValue += `<br>Male temp: ${stageActors.map(actor => actor.employment.male_temp)
                 .reduce((res, curr) => res + curr, 0)}`
-            toolTipValue += `<br>Female temp: ${jobItems.map(jobItem => jobItem.female_temp)
+            toolTipValue += `<br>Female temp: ${stageActors.map(actor => actor.employment.female_temp)
                 .reduce((res, curr) => res + curr, 0)}`
-            toolTipValue += `<br>Male unskilled: ${jobItems.map(jobItem => jobItem.male_perm_unskilled)
+            toolTipValue += `<br>Male unskilled: ${stageActors.map(actor => actor.employment.male_perm_unskilled)
                 .reduce((res, curr) => res + curr, 0)}`
-            toolTipValue += `<br>Female unskilled: ${jobItems.map(jobItem => jobItem.female_perm_unskilled)
+            toolTipValue += `<br>Female unskilled: ${stageActors.map(actor => actor.employment.female_perm_unskilled)
                 .reduce((res, curr) => res + curr, 0)}`
-            toolTipValue += `<br>Male skilled: ${jobItems.map(jobItem => jobItem.male_perm_skilled)
+            toolTipValue += `<br>Male skilled: ${stageActors.map(actor => actor.employment.male_perm_skilled)
                 .reduce((res, curr) => res + curr, 0)}`
-            toolTipValue += `<br>Female skilled: ${jobItems.map(jobItem => jobItem.female_perm_skilled)
+            toolTipValue += `<br>Female skilled: ${stageActors.map(actor => actor.employment.female_perm_skilled)
                 .reduce((res, curr) => res + curr, 0)}`
             tooltip[stage] = toolTipValue
         }
@@ -264,15 +219,15 @@ const totalNumberOfJobs = computed(() => {
 const percentFemaleEmployment = computed(() => {
     let femaleTotal = 0
     let total = 0
-    for (const actor of jobsByActors.value) {
-        femaleTotal += actor.femaleTotal
-        total += actor.total
+    for (const actor of actors.value) {
+        femaleTotal += actor.employment?.femaleTotal || 0
+        total += actor.employment?.total || 0
     }
     return parseInt(femaleTotal / total * 100)
 })
 
 const currentStageEmploymentByTypeOfActorData = computed(() => {
-    const jobItems = jobsByActors.value.filter(element => element.stage === currentStage.value)
+    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
 
     const title = {
         text: 'By type of actor',
@@ -280,10 +235,10 @@ const currentStageEmploymentByTypeOfActorData = computed(() => {
         top: 50
     }
 
-    let data = jobItems.map(jobItem => {
+    let data = currentStageActors.map(actor => {
         return {
-            value: jobItem.total,
-            name: jobItem.actorName
+            value: actor.employment.total,
+            name: actor.name
         }
     })
 
@@ -303,7 +258,7 @@ const currentStageEmploymentByTypeOfActorData = computed(() => {
 
 
 const currentStageEmploymentByQualificationData = computed(() => {
-    const jobItems = jobsByActors.value.filter(element => element.stage === currentStage.value)
+    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
 
     const title = {
         text: 'By qualification',
@@ -313,15 +268,15 @@ const currentStageEmploymentByQualificationData = computed(() => {
 
     let data = [
         {
-            value: jobItems.map(jobItem => jobItem.skilledTotal).reduce((res, curr) => res + curr, 0),
+            value: currentStageActors.map(actor => actor.employment.skilledTotal).reduce((res, curr) => res + curr, 0),
             name: 'Permanent qualified'
         },
         {
-            value: jobItems.map(jobItem => jobItem.unskilledTotal).reduce((res, curr) => res + curr, 0),
+            value: currentStageActors.map(actor => actor.employment.unskilledTotal).reduce((res, curr) => res + curr, 0),
             name: 'Permanent unqualified'
         },
         {
-            value: jobItems.map(jobItem => jobItem.tempTotal).reduce((res, curr) => res + curr, 0),
+            value: currentStageActors.map(actor => actor.employment.tempTotal).reduce((res, curr) => res + curr, 0),
             name: 'Temporary'
         }
     ]
@@ -342,7 +297,7 @@ const currentStageEmploymentByQualificationData = computed(() => {
 
 
 const currentStageEmploymentByGenderData = computed(() => {
-    const jobItems = jobsByActors.value.filter(element => element.stage === currentStage.value)
+    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
 
     const title = {
         text: 'By gender',
@@ -352,11 +307,11 @@ const currentStageEmploymentByGenderData = computed(() => {
 
     let data = [
         {
-            value: jobItems.map(jobItem => jobItem.maleTotal).reduce((res, curr) => res + curr, 0),
+            value: currentStageActors.map(actor => actor.employment.maleTotal).reduce((res, curr) => res + curr, 0),
             name: 'Male'
         },
         {
-            value: jobItems.map(jobItem => jobItem.femaleTotal).reduce((res, curr) => res + curr, 0),
+            value: currentStageActors.map(actor => actor.employment.femaleTotal).reduce((res, curr) => res + curr, 0),
             name: 'Female'
         }
     ]
