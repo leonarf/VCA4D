@@ -34,8 +34,7 @@ const setDefaultImage = (event) => {
                 <h2>Providing value chain analysis for improving operations</h2>
             </div>
         </section>
-
-        <section class="mx-4 sm:mx-8 md:mx-12 lg:mx-48 xl:mx-80">
+        <section class="mx-4 sm:mx-8 md:mx-12 lg:mx-48 xl:mx-60">
             <section class="introduction">
                 <h2 class="text-[#303030] font-bold text-2xl mb-4">Get insight into food value chains in developing countries</h2>
                 <p class="text-justify mb-2">
@@ -88,8 +87,6 @@ const setDefaultImage = (event) => {
                     </ul>
                 </template> 
             </section>
-
-
         </section>
     </Skeleton>
 </template>

@@ -45,10 +45,7 @@ header{
 }
 
 main{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    @apply flex flex-col justify-start items-center
 }
 
 

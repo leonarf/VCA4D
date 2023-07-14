@@ -1,42 +1,44 @@
 <template>
     <Skeleton>
-        <header>
-            <div v-if="!studyData && !error" class="loading">Loading...</div>
+        <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48">
+            <header>
+                <div v-if="!studyData && !error" class="loading">Loading...</div>
 
-            <div v-if="error" class="error">{{ error }}</div>
+                <div v-if="error" class="error">{{ error }}</div>
 
-            <div v-if="studyData">
-                <StudyHeader :studyData="studyData"/>
-            </div>
-        </header>
-        <nav>
-            <ol v-if="studyData">
-                <li>
-                    <RouterLink :to="'/study?id=' + studyData.id">Overview</RouterLink>
-                </li>
-                <li>
-                    <RouterLink :to="'/study?id=' + studyData.id + '&view=economic-growth'">Contribution to economic growth</RouterLink>
-                </li>
-                <li>
-                    <RouterLink :to="'/study?id=' + studyData.id + '&view=inclusiveness'">Inclusiveness</RouterLink>
-                </li>
-                <li>
-                    <RouterLink :to="'/study?id=' + studyData.id + '&view=social-sustainability'">Social sustainability</RouterLink>
-                </li>
-                <li>
-                    <RouterLink :to="'/study?id=' + studyData.id + '&view=environment'">Environmental sustainability</RouterLink>
-                </li>
-                <li>
-                    <a class="TODO">Study brief and full report</a>
-                </li>
-            </ol>
-        </nav>
+                <div v-if="studyData">
+                    <StudyHeader :studyData="studyData"/>
+                </div>
+            </header>
+            <nav>
+                <ol v-if="studyData">
+                    <li>
+                        <RouterLink :to="'/study?id=' + studyData.id">Overview</RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink :to="'/study?id=' + studyData.id + '&view=economic-growth'">Contribution to economic growth</RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink :to="'/study?id=' + studyData.id + '&view=inclusiveness'">Inclusiveness</RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink :to="'/study?id=' + studyData.id + '&view=social-sustainability'">Social sustainability</RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink :to="'/study?id=' + studyData.id + '&view=environment'">Environmental sustainability</RouterLink>
+                    </li>
+                    <li>
+                        <a class="TODO">Study brief and full report</a>
+                    </li>
+                </ol>
+            </nav>
 
-        <StudyOverview v-if="view === undefined" :studyData="studyData"></StudyOverview>
-        <StudyEnvironment v-if="view === 'environment'" :studyData="studyData"></StudyEnvironment>
-        <StudyEconomicGrowth v-if="view === 'economic-growth'" :studyData="studyData"></StudyEconomicGrowth>
-        <StudyInclusiveness v-if="view === 'inclusiveness'" :studyData="studyData"></StudyInclusiveness>
-        <StudySocialSustainability v-if="view === 'social-sustainability'" :studyData="studyData"></StudySocialSustainability>
+            <StudyOverview v-if="view === undefined" :studyData="studyData"></StudyOverview>
+            <StudyEnvironment v-if="view === 'environment'" :studyData="studyData"></StudyEnvironment>
+            <StudyEconomicGrowth v-if="view === 'economic-growth'" :studyData="studyData"></StudyEconomicGrowth>
+            <StudyInclusiveness v-if="view === 'inclusiveness'" :studyData="studyData"></StudyInclusiveness>
+            <StudySocialSustainability v-if="view === 'social-sustainability'" :studyData="studyData"></StudySocialSustainability>
+        </div>
     </Skeleton>
 </template>
 
