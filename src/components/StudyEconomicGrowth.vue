@@ -10,15 +10,16 @@
     </p>
 
     <NiceMetricGroup>
-      <NiceMetric label="Total value added" value="300 000 000 &euro;" />
-      <NiceMetric label="Value added share of the agricultural sector GDP" value="1.9 %" />
-      <NiceMetric label="Value added share of national GDP" value="0.3 %" />
+      <NiceMetric class="TODO" label="Total value added" value="TODO" />
+      <NiceMetric class="TODO" label="Value added share of the agricultural sector GDP" value="%" />
+      <NiceMetric class="TODO" label="Value added share of national GDP" value="%" />
     </NiceMetricGroup>
 
     <h3>Is the chain independent from foreign imports?</h3>
 
     <p>Rate of integration ito domestic economy</p>
     <p>= total value added / value of production</p>
+    <p class="TODO">Missing data to be able to display graphic</p>
 
     <h2>Who <strong>creates and receives</strong> value added?</h2>
     <div class="flex flex-row justify-evenly">
@@ -50,7 +51,7 @@
           Taxes - Subventions<br>
           Positive if the sector contributes to the government income more than it receives in subsidies and tax break
         </div>
-        <div class="uppercase font-semibold text-red-500 text-2xl mt-4 ">-5 % (TODO)</div>
+        <div class="TODO uppercase font-semibold text-red-500 text-2xl mt-4 ">-5 % (TODO)</div>
         <div class="uppercase font-semibold text-[#656565] text-base">Public Funds Balance / Public Budget</div>
         <div class="mt-2">
           Net share of the public funds balance in government budget
@@ -62,13 +63,19 @@
     </div>
     
     <h2>What is the contribution of the value chain to the <strong>balance of trade</strong>?</h2>
-    
+    <p class="TODO">Missing data to be able to display graphic</p>
+
     <h2>Is the value chain <strong>viable in the international economy</strong>?</h2>
     <p>
       The VCA4D methodology assesses for each value chain its dependency on international exports as
       well as its capacity to export on international markets with competitive price or on the
       contrary a higher remuneration of the actors supported by porection policies.
     </p>
+    <h1>Is it financially attractive to sell abroad ?</h1>
+    <p>Domestic resource cost ratio</p>
+    <p class="TODO">Missing data to be able to display graphic</p>
+    <p>Nominal protection Coefficient</p>
+    <p class="TODO">Missing data to be able to display graphic</p>
   </article>
 </template>
 
