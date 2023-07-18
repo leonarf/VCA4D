@@ -120,8 +120,8 @@ const props = defineProps({
 });
 
 const sankeyGraphPossibleDisplayModesList = [
-    "Monetary value",
-    "Volume exchanged (kg Of product)"
+    "monetaryValue",
+    "volumeExchanged"
 ];
 
 const sankeyGraphDisplayMode = ref(0);
@@ -166,7 +166,7 @@ const steps = [
 
 
 const getStepDescription = (studyData, dataKey) => {
-    return studyData?.data["Stages description"]?.find(el => {return el["Stages"] === dataKey;} )?.["Description"];
+    return studyData?.data.stages.find(stage => stage.name === dataKey)?.description;
 };
 
 const populatedSteps = computed( () => {
@@ -183,7 +183,6 @@ const populatedSankeyChartData = computed ( () => {
     let nodes = [];
     let links = [];
     let monetaryCurrency = "&euro;";
-    let stages = [];
     let levels = [];
     let result = {
         title: {
@@ -216,19 +215,15 @@ const populatedSankeyChartData = computed ( () => {
         result.title.text = chartTitle;
         return result;
     } else {
-        let valueChainTab = props.studyData?.data["Value Chain"];
-        monetaryCurrency = valueChainTab.find((row) => {return row["Property"] === "Currency"})["Value"];
-        let stagesTab = props.studyData?.data["Stages description"];
-        stages = stagesTab.map((row, index) => {
-            return {
-                label: row["Stages"],
-                description: row["Description"],
-                index: index
-            };
-        });
-        levels = stagesTab.map((row, index) => {
-            //const stageColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-            const stageColor = colors[index%colors.length];
+        const { stages, actors, flows } = props.studyData.data
+        console.log('stages', stages)
+        console.log('actors', actors)
+        console.log('flows', flows)
+
+        monetaryCurrency = props.studyData.localCurrency
+        
+        levels = stages.map(({ index }) => {
+            const stageColor = colors[index % colors.length];
             return {
               depth: index,
               itemStyle: {
@@ -241,47 +236,48 @@ const populatedSankeyChartData = computed ( () => {
             };
         });
 
-        let actorTypesTab = props.studyData?.data["Actor types"];
-        nodes = actorTypesTab.map((actor) => {
-            const actorStage = stages.find((stage) => { return stage.label === actor["Stage"]});
+
+        nodes = actors.map((actor) => {
+            const actorStage = stages.find((stage) => stage.name === actor.stage);
+            console.log('actor', actor)
+            console.log('actorStage', actorStage)
             return {
-                "name": actor["Actor type name"],
-                "depth": actorStage?.index
+                "name": actor.name,
+                "depth": actorStage?.index || 0
             };
         });
-        let flowByactorTypesTab = props.studyData?.data["Flow by actor type"];
-        links = flowByactorTypesTab.map((row) => {
-            const sourceActor = actorTypesTab.find((actor) => {return actor["Actor type code"] === row["Seller actor type code"];});
-            const targetActor = actorTypesTab.find((actor) => {return actor["Actor type code"] === row["Buyer actor type code"];});
+        links = flows.map((flow) => {
+            const { buyerActorName, sellerActorName, product, monetaryValue, volumeExchanged, unitPrice, volumeUnit } = flow
+            const sourceActor = actors.find((actor) => actor.name === sellerActorName);
+            const targetActor = actors.find((actor) => actor.name === buyerActorName);
             return {
-                "source": sourceActor["Actor type name"],
-                "target": targetActor["Actor type name"],
-                "value": row[sankeyGraphPossibleDisplayModesList[sankeyGraphDisplayMode.value]],
+                "source": sourceActor.name,
+                "target": targetActor.name,
+                "value": flow[sankeyGraphPossibleDisplayModesList[sankeyGraphDisplayMode.value]],
                 "edgeLabel": {
                     show: true,
                     formatter: () => {
-                        return row["Products"];
+                        return product;
                     }
                 },
-                "Monetary value": row["Monetary value"],
-                "Volume exchanged (kg Of product)": row["Volume exchanged (kg Of product)"],
-                "Products": row["Products"],
-                "Unitary price (local curency)": row["Unitary price (local curency)"],
-                "Volume Unit": row["Volume Unit"],
-                "Remark": row["Remark"]
+                "Monetary value": monetaryValue,
+                "Volume exchanged (kg Of product)": volumeExchanged,
+                "Products": product,
+                "Unitary price (local curency)": unitPrice,
+                "Volume Unit": volumeUnit,
+                "Remark": ''
             };
         });
         result.tooltip = {
             trigger: 'item',
             triggerOn: 'mousemove',
             formatter: (params, ticket) => {
-                // console.log("tooltip.formatter params:", params, "ticket:", ticket);
                 if (params?.dataType === "node" || params?.dataType === "edge"){
                     let items = [];
                     let rendered_items = [];
                     if (params?.dataType === "node"){
-                        const actorStage = actorTypesTab.find((actor) => { return actor["Actor type name"] === params.data.name});
-                        const actorStageLabel = actorStage ? actorStage["Stage"] : undefined;
+                        const actorStage = actors.find((actor) => actor.name === params.data.name);
+                        const actorStageLabel = actorStage ? actorStage.stage : undefined;
                         items = [
                             {
                                 label: "Name",

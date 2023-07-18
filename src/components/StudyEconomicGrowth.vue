@@ -80,7 +80,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 
 import NiceMetricGroup from './NiceMetricGroup.vue'
 import NiceMetric from './NiceMetric.vue'
@@ -96,13 +96,11 @@ const props = defineProps({
 const formatNumber = (value) => value.toLocaleString(undefined, { maximumFractionDigits: 2})
 
 const stages = computed(() => {
-  Utils.sortDataStudyArrays(props.studyData.data)
-  return [...new Set(props.studyData.data['Actor types'].map(actorType => actorType.Stage))]
+  return props.studyData.data.stages
 })
 
 const actors = computed(() => {
-  Utils.sortDataStudyArrays(props.studyData.data)
-  return [...new Set(props.studyData.data['Actor types'].map(actorType => actorType['Actor type name']))]
+  return props.studyData.data.actors
 })
 
 const addedValueCreatorsRingChartData = computed(() => {
@@ -113,23 +111,20 @@ const addedValueCreatorsRingChartData = computed(() => {
     left: 'center',
     top: 50
   }
-  let data = stages.value.map(stage => {
-    const actorNames = props.studyData.data['Actor types'].filter(actorType => actorType.Stage === stage).map(actorType => actorType['Actor type name'])
-    const stageItems = props.studyData.data['Indicator by actor type']
-      .filter(flow => actorNames.includes(flow['Actor type name']))
+  let data = stages.value.map(({ name: stageName }) => {
+    const stageActors = actors.value.filter(actor => actor.stage === stageName)
       
-    const subTotal = stageItems
-      .map(flow => flow['Direct added value (local currency)'])
-      .reduce((res, value) => res + value, 0)
-
-    let toolTip = `${stage}: ${formatNumber(subTotal)} (local ccy)`
-    for (const stageItem of stageItems) {
-      toolTip += `<br>${stageItem['Actor type name']}: ${formatNumber(stageItem['Direct added value (local currency)'])} (local ccy)`
+    const subTotal = stageActors.reduce((res, actor) => res + actor.directAddedValue, 0)
+    if (!isNaN(subTotal)) {
+      let toolTip = `${stageName}: ${formatNumber(subTotal)} (local ccy)`
+      for (const actor of stageActors) {
+        toolTip += `<br>${actor.name}: ${formatNumber(actor.directAddedValue)} (local ccy)`
+      }
+      tooltip[stageName] = toolTip
     }
-    tooltip[stage] = toolTip
     return {
-      value: subTotal,
-      name: stage
+        value: subTotal || 0,
+        name: stageName
     }
   })
 
@@ -163,38 +158,29 @@ const addedValueReceiversRingChartData = computed(() => {
     top: 50
   }
 
-  let data = stages.value.map(stage => {
-    const actorNames = props.studyData.data['Actor types'].filter(actorType => actorType.Stage === stage).map(actorType => actorType['Actor type name'])
-    const stageItems = props.studyData.data['Direct value added receivers']
-      .filter(element => actorNames.includes(element['Receiver Name']))
+  let data = stages.value.map(({ name: stageName }) => {
+    const stageActors = actors.value.filter(actor => actor.stage === stageName)
 
-      console.log('stageItems', stageItems)
+    const subTotal = stageActors.reduce((res, actor) => res + actor.receivedAddedValue, 0)
 
-
-    const subTotal = stageItems
-      .map(element => element['value (local currency)'])
-      .reduce((res, value) => res + value, 0)
-
-    let toolTip = `${stage}: ${formatNumber(subTotal)} (local ccy)`
-    for (const stageItem of stageItems) {
-      toolTip += `<br>${stageItem['Receiver Name']}: ${formatNumber(stageItem['value (local currency)'])} (local ccy)`
+    let toolTip = `${stageName}: ${formatNumber(subTotal)} (local ccy)`
+    for (const actor of stageActors) {
+      toolTip += `<br>${actor.name}: ${formatNumber(actor.receivedAddedValue)} (local ccy)`
     }
-    tooltip[stage] = toolTip
+    tooltip[stageName] = toolTip
 
     return {
       value: subTotal,
-      name: stage
+      name: stageName
     }
   })
-
-  const noStageElements = props.studyData.data['Direct value added receivers'].filter(element => !actors.value.includes(element['Receiver Name']))
-  data = data.concat(noStageElements.map(noStageElement => {
-    tooltip[noStageElement['Receiver Name']] = `${noStageElement['Receiver Name']}: ${formatNumber(noStageElement['value (local currency)'])} (local ccy)` 
-    return {
-      value: noStageElement['value (local currency)'],
-      name: noStageElement['Receiver Name']
-    }
-  })) 
+  for (let key in props.studyData.data.addedValue) {
+    tooltip[key] = `${key}: ${formatNumber(props.studyData.data.addedValue[key])} (local ccy)` 
+    data.push({
+      value: props.studyData.data.addedValue[key],
+      name: key
+    })
+  }
   data = data.filter(item => item.value !== 0)
 
   return {
@@ -224,12 +210,7 @@ const totalAddedValueCreators = computed(() => {
 })
 
 const publicFundsBalance = computed(() => {
-  const balanceItem = props.studyData.data['Direct value added receivers'].filter(item => item['Receiver Name'] === 'Government (taxes - subsidies)')
-  console.log(balanceItem)
-  if (!balanceItem || balanceItem.length === 0) {
-    return 0
-  }
-  const balanceValue = balanceItem[0]['value (local currency)'] 
+  const balanceValue = props.studyData.data.addedValue.government
   return (balanceValue > 0 ? "+" : "-") + formatNumber(balanceValue)
 })
 
@@ -238,16 +219,14 @@ const publicFinancesBarData = computed(() => {
   let tooltip = {}
   let labels = []
   let values = []
-  stages.value.map(stage => {
-    const actorNames = props.studyData.data['Actor types'].filter(actorType => actorType.Stage === stage).map(actorType => actorType['Actor type name'])
-    const stageItems = props.studyData.data['Indicator by actor type'].filter(element => actorNames.includes(element['Actor type name']))
+  stages.value.map(({ name: stageName }) => {
+    const stageActors = actors.value.filter(actor => actor.stage === stageName)
     
-    labels.push(stage)
-    const subTotal = stageItems
-      .map(stageItem => stageItem['Public funds balance (local currency)'])
-      .reduce((res, value) => res + value, 0) 
+    labels.push(stageName)
+    const subTotal = stageActors
+      .reduce((res, actor) => res + actor.publicFundsBalance, 0) 
     values.push(subTotal)
-    tooltip[stage] = `${formatNumber(subTotal)} (local ccy)`
+    tooltip[stageName] = `${formatNumber(subTotal)} (local ccy)`
     
   })
 
@@ -289,18 +268,17 @@ const populatedBarChartData = computed(() => {
   var categories = []
   var values = []
   var tooltip = {}
-  Utils.sortDataStudyArrays(props.studyData.data)
 
-  for (var row of props.studyData.data['Indicator by actor type']) {
-    categories.push(row['Actor type name'])
-    var stageName = Utils.getCorrespondingStage(row['Actor type name'], props.studyData.data)
-    const v1 = row['Net operating profit (local currency)']
-    var v2 = row['Total costs (local currency)']
+  for (const actor of actors.value) {
+    categories.push(actor.name)
+    var stageName = actor.stage
+    const v1 = actor.netOperatingProfit
+    var v2 = actor.totalCosts
     if (stageName == 'Producers') {
       v2 = v1 + v2 // Profits are considered as cost for producer while computing Return On Investment
     }
     values.push(((100 * v1) / v2).toFixed(0))
-    tooltip[row['Actor type name']] = `Net operating profit = ${CurrencyUtils.formatAmount(v1)}<br>
+    tooltip[actor.name] = `Net operating profit = ${CurrencyUtils.formatAmount(v1)}<br>
                                            Total costs = ${CurrencyUtils.formatAmount(v2)}<br>
                                            Return on investment = ${CurrencyUtils.formatPercent(
                                              (100 * v1) / v2
@@ -344,7 +322,7 @@ const populatedBarChartData = computed(() => {
       },
       itemStyle: {
         color: function (info) {
-          return Utils.getStageColor(Utils.getCorrespondingStage(info.name, props.studyData.data))
+          return Utils.getStageColor(actors.value.find(actor => actor.name === info.name).stage)
         }
       }
     }

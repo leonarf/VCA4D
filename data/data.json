@@ -2,15 +2,21 @@
     "categories": [
         {
             "id": "orchard",
-            "prettyName": "Orchard"
+            "prettyName": "Orchards",
+            "color": "#5F8A64",
+            "textColor": "#5F8A64"
         },
         {
             "id": "animal product",
-            "prettyName": "Animal product"
+            "prettyName": "Animal products",
+            "color": "#C46D4D",
+            "textColor": "#C46D4D"
         },
         {
             "id": "crop",
-            "prettyName": "Field crops"
+            "prettyName": "Field crops",
+            "color": "#F6E065",
+            "textColor": "#806C00"
         }
     ],
     "countries": [
@@ -30,23 +36,15 @@
     "studies": [
         {
             "fileName": "anacarde-mali-2014",
-            "title": "Mali 2014",
+            "title": "Mali Cashew 2014",
             "year": 2014,
             "country": "mali",
             "category": "orchard",
             "product": "cashew"
         },
         {
-            "fileName": "cashew-mali-2021",
-            "title": "Mali 2021",
-            "year": 2021,
-            "country": "mali",
-            "category": "orchard",
-            "product": "cashew"
-        },
-        {
             "fileName": "mangue-burkina-faso-2016",
-            "title": "Burkina Faso 2016",
+            "title": "Burkina Faso Mango 2016",
             "year": 2016,
             "country": "burkina faso",
             "category": "orchard",
@@ -54,7 +52,7 @@
         },
         {
             "fileName": "milk-burundi-2020",
-            "title": "Burundi 2020",
+            "title": "Burundi Milk 2020",
             "year": 2020,
             "country": "burundi",
             "category": "animal product",

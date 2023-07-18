@@ -54,7 +54,6 @@
       .getElementById("uploadExcel")
       .addEventListener("click", function () {
         if (selectedFile) {
-          //console.log("hi");
           var fileReader = new FileReader();
           fileReader.onload = function (event) {
             var data = event.target.result;
@@ -64,19 +63,12 @@
             });
             var output = {};
             workbook.SheetNames.forEach((sheet) => {
-              console.log("sheet:", sheet);
               let rowObject = XLSX.utils.sheet_to_row_object_array(
                 workbook.Sheets[sheet]
               );
               output[sheet] = rowObject;
-              console.log("rowObject:", rowObject);
-              let jsonObject = JSON.stringify(rowObject);
-              //document.getElementById("jsonData").innerHTML = jsonObject;
-              console.log("rowObject as JSON:", jsonObject);
             });
-            console.log("output:", output);
             var outputAsJson = JSON.stringify(output);
-            console.log("outputAsJson:", outputAsJson);
             window.json_from_xls = output;
             document.getElementById("jsonData").innerHTML = outputAsJson;
           };
@@ -103,6 +95,148 @@
         a.setAttribute('href', url); // Set "a" element link
         a.setAttribute('download', filename); // Set download filename
         a.click(); // Start downloading
+      }
+
+      const createStudyDataFromJson = (json) => {
+        const stages = json["Stages description"].map((stage, index) => ({
+            name: stage['Stages'],
+            description: stage['Description'] || '',
+            index
+          })
+        )
+
+        let actors = json["Actor types"].map(actor => ({
+            name: actor['Actor type name'],
+            stage: actor['Stage'] || '',
+            id: actor['Actor type code']
+          })
+        )
+        const flows = json["Flow by actor type"].map(flow => ({
+          sellerActorName: flow['Seller Name'],
+          buyerActorName: flow['Buyer Name'],
+          volumeExchanged: flow['Volume exchanged (kg Of product)'],
+          monetaryValue: flow['Monetary value'],
+          unitPrice: flow['Unitary price (local curency)'],
+          volumeUnit: flow['Volume Unit'],
+          product: flow['Products']
+        }))
+        const indicators = json["Indicator by actor type"].map(indicator => ({
+          actorName: indicator['Actor type Name'],
+          data: {
+            numberOfActors: indicator['Number Of actors In the value chain'] || 0,
+            directAddedValue: indicator['Direct added value (local currency)'] || 0,
+            publicFundsBalance: indicator['Public funds balance (local currency)'] || 0,
+            netOperatingProfit: indicator['Net operating profit (local currency)'] || 0,
+            totalCosts: indicator['Total costs (local currency)'] || 0
+          }
+        }))
+        actors = actors.map(actor => {
+          let indicator = indicators.filter(indicator => indicator.actorName === actor.name)
+          if (indicator && indicator.length === 1) {
+            indicator = indicator[0]
+            return {
+              ...actor,
+              ...indicator.data
+            }
+          }
+          return actor
+        })
+        const addedValueItems = json["Direct value added receivers"].map(addedValue => ({
+            receiverName: addedValue['Receiver Name'],
+            value: addedValue['value (local currency)'] || 0
+          })
+        )
+        actors = actors.map(actor => {
+          const addedValue = addedValueItems.filter(addedValue => addedValue.receiverName === actor.name)[0]
+          return {
+            ...actor,
+            receivedAddedValue: addedValue?.value || 0
+          }
+        })
+
+        const addedValue = {
+          landOwnersFees: addedValueItems.filter(element => element.receiverName === 'Land owners (land fees)')[0].value,
+          depreciation: addedValueItems.filter(element => element.receiverName === 'Depreciation')[0].value,
+          employeeWages: addedValueItems.filter(element => element.receiverName === 'Employees (wages)')[0].value,
+          financialInstitutionsInterests: addedValueItems.filter(element => element.receiverName === 'Financial institutions (interests On loans)')[0].value,
+          government: addedValueItems.filter(element => element.receiverName === 'Government (taxes - subsidies)')[0].value,
+        }
+
+        const employments = json["Employment"].map(employment => {
+          const tempMale = employment['Temporary Male']
+          const tempFemale = employment['Temporary Female']
+          const unskilledMale = employment['Permanent Unskilled Male']
+          const unskilledFemale = employment['Permanent Unskilled Female']
+          const skilledMale = employment['Permanent Skilled Male']
+          const skilledFemale = employment['Permanent Skilled Female']
+          return {
+            actorName: employment['Actor type Name'],
+            data: {
+              tempMale,
+              tempFemale,
+              unskilledMale,
+              unskilledFemale,
+              skilledMale,
+              skilledFemale,
+              totalMale: tempMale + unskilledMale + skilledMale,
+              totalFemale: tempFemale + unskilledFemale + skilledFemale,
+              totalTemp: tempMale + tempFemale,
+              totalSkilled: skilledFemale + skilledMale,
+              totalUnskilled: unskilledFemale + unskilledMale,
+              total: tempMale + tempFemale + skilledFemale + skilledMale + unskilledFemale + unskilledMale
+            }
+          }
+        })
+        actors = actors.map(actor => {
+          let employment = employments.filter(employment => employment.actorName === actor.name)
+          if (employment && employment.length === 1) {
+            employment = employment[0]
+            return {
+              ...actor,
+              employment: {
+                ...employment.data
+              }
+            }
+          }
+          return actor
+        })
+
+        const accountItems = json["Account by actor type"].map(accountItem => ({
+            actorName: accountItem['Actor type name'],
+            data: {
+              costOrRevenue: accountItem['Cost Or revenue'],
+              item: accountItem['Item'],
+              value: accountItem['Value']
+            }
+          })
+        )
+        actors = actors.map(actor => {
+          let accountItem = accountItems.filter(element => element.actorName === actor.name)
+          if (accountItem && accountItem.length === 1) {
+            accountItem = accountItem[0]
+            return {
+              ...actor,
+              accountItems: {
+                ...accountItem.data
+              }
+            }
+          }
+          return actor
+        })
+        console.log('actors', actors.map(actor => actor.name))
+        actors.sort((actor1, actor2) => {
+          const stage1 = stages.find(stage => stage.name === actor1.stage)
+          const stage2 = stages.find(stage => stage.name === actor2.stage)
+          return (stage1?.index || 0) - (stage2?.index || 0) 
+        })
+        console.log('actors', actors.map(actor => actor.name))
+
+        return {
+          stages,
+          actors,
+          flows,
+          addedValue
+        }
       }
 
       const studyDefaultEnvironment = {
@@ -237,14 +371,20 @@
         const country = getStudyProperty(json_from_xls, "Country");
         const commodity = getStudyProperty(json_from_xls, "Commodity");
         const year = getStudyProperty(json_from_xls, "Reference Year");
+        const localCurrency = getStudyProperty(json_from_xls, "Currency");
         const id = slugify(commodity + "-" + country + "-" + year);
+
+        console.log('json_from_xls', json_from_xls)
+        const studyData = createStudyDataFromJson(json_from_xls)
+        console.log('studyData', studyData)
         const study = {
-          id: id,
+          id,
           product: commodity,
-          country: country,
-          year: year,
+          country,
+          year,
+          localCurrency,
           environment : studyDefaultEnvironment, // TODO: fill. But it looks that data contained in this key comes from another xls file.
-          data: json_from_xls
+          data: studyData
         };
         window.study = study;
         const study_as_str = JSON.stringify(study);
