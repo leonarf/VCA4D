@@ -58,8 +58,13 @@
         <h2>How is <strong>income</strong> distributed across actors of the value chain?</h2>
         <p>Actors that are in small numbers but receive an important share of the value chain's net operating profit are in a stronger position of negociation in front of actore that are more divided.</p>
         <p>NB: The income data only relate to this specific value chain: the data do not include any other income from any other activity.</p>
-        <p>net operating profit across actor types</p>
-        <p class="TODO">Prendre les données dans l'excel économique, feuille Indicator by actor type, colonne Net operating profit (local currency)</p>
+        <h3>Net operating profit across actor types</h3>
+        <div class="flex flex-row items-center mt-4">
+            <div class="w-full">
+                <BarChart v-if="studyData" :options="netOperatingProfitData"></BarChart>
+            </div>
+        </div>
+        <br>
         <p class="TODO">Number of actors : c'est le même graphique qu'en haut de la page, est-ce qu'on le remet vraiment?</p>
 
         <h2>What is the impact of the <strong>governance systems</strong> on income distribution?</h2>
@@ -96,7 +101,7 @@ const numberOfActorsData = computed(() => {
     const stageActors = actors.value.filter(actor => actor.stage === stage.name)
     
     const subTotal = stageActors
-      .reduce((res, actor) => res + actor.numberOfActors, 0) 
+      .reduce((res, actor) => res + actor.numberOfActors || 0, 0) 
     if (subTotal !== 0) {
         labels.push(stage.name)
         values.push(subTotal)
@@ -279,20 +284,22 @@ const currentStageEmploymentByQualificationData = computed(() => {
 
     let data = [
         {
-            value: currentStageActors.map(actor => actor.employment.skilledTotal).reduce((res, curr) => res + curr, 0),
+            value: currentStageActors.map(actor => actor.employment?.totalSkilled || 0).reduce((res, curr) => res + curr, 0),
             name: 'Permanent qualified'
         },
         {
-            value: currentStageActors.map(actor => actor.employment.unskilledTotal).reduce((res, curr) => res + curr, 0),
+            value: currentStageActors.map(actor => actor.employment?.totalUnskilled || 0).reduce((res, curr) => res + curr, 0),
             name: 'Permanent unqualified'
         },
         {
-            value: currentStageActors.map(actor => actor.employment.tempTotal).reduce((res, curr) => res + curr, 0),
+            value: currentStageActors.map(actor => actor.employment?.totalTemp || 0).reduce((res, curr) => res + curr, 0),
             name: 'Temporary'
         }
     ]
 
     data = data.filter(item => item.value !== 0)
+
+    console.log('data', data)
 
     return {
         title,
@@ -318,11 +325,11 @@ const currentStageEmploymentByGenderData = computed(() => {
 
     let data = [
         {
-            value: currentStageActors.map(actor => actor.employment.maleTotal).reduce((res, curr) => res + curr, 0),
+            value: currentStageActors.map(actor => actor.employment?.totalMale || 0).reduce((res, curr) => res + curr, 0),
             name: 'Male'
         },
         {
-            value: currentStageActors.map(actor => actor.employment.femaleTotal).reduce((res, curr) => res + curr, 0),
+            value: currentStageActors.map(actor => actor.employment?.totalFemale || 0).reduce((res, curr) => res + curr, 0),
             name: 'Female'
         }
     ]
@@ -340,6 +347,62 @@ const currentStageEmploymentByGenderData = computed(() => {
         ]
     };
 })
+
+
+const netOperatingProfitData = computed(() => {
+
+    let tooltip = {}
+    let labels = []
+    let values = []
+
+    stages.value.map(stage => {
+        const stageActors = actors.value.filter(actor => actor.stage === stage.name)
+        const subTotal = stageActors
+            .reduce((res, actor) => res + actor.netOperatingProfit || 0, 0) 
+        if (subTotal !== 0) {
+            labels.push(stage.name)
+            values.push(subTotal)
+            let toolTipValue = `${stage.name}: ${formatNumber(subTotal)}`
+            for (const actor of stageActors) {
+                toolTipValue += `<br>${actor.name}: ${formatNumber(actor.numberOfActors)}`
+            }
+
+            tooltip[stage] = toolTipValue
+        }
+    })
+
+    return {
+        xAxis: {
+            data: labels,
+            left: 0
+        },
+        label: {
+            show: true,
+            position: 'top',
+            formatter: function (d) {
+                if (!d.data) {
+                    return ""
+                }
+                return formatNumber(d.data)
+            },
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: function (info) {
+                return tooltip[info.name]
+            }
+        },
+        yAxis: {
+            show: false
+        },
+        series: [
+            {
+                type: 'bar',
+                data: values,
+                barWidth: '100%'
+            }
+        ]};
+    })
 </script>
 
 <script>
