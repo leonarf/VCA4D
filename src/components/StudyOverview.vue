@@ -1,8 +1,10 @@
 <template>
     <article class="mt-4">
-        <h1 class="text-[#303030] text-2xl font-semibold">Overview</h1>
-        <section class="mt-0.5 pt-6 border-t-[4px]" :style="`border-color: #303030;`">
-            <h2 class="text-[#303030] text-sm font-bold">Main steps in the value chain</h2>
+        <SectionTitle>
+            <h1><strong>Overview</strong></h1>
+        </SectionTitle> 
+        <section class="pt-2">
+            <h3><strong>Main steps in the value chain</strong></h3>
             <div class="flex flex-row justify-evenly mt-4 mb-8">
                 <div class="text-[#303030] text-center flex flex-col space-y-2 items-center" v-for="step in populatedSteps" :key="step.name">
                     <img style="height: 50px; width: 50px;" :src="getStepLogo(step)" :alt="step.name + ' illustration'"/>
@@ -118,6 +120,7 @@ import WholesaleLogo from '../images/icons/wholesale.svg'
 import CollectionLogo from '../images/icons/collection.svg'
 import ProductionLogo from '../images/icons/production.svg'
 import ExportLogo from '../images/icons/export.svg'
+import SectionTitle from './typography/SectionTitle.vue'
 
 
 import SankeyChart from './SankeyChart.vue';

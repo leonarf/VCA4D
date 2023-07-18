@@ -46,9 +46,9 @@ const getProductLogo = (product) => {
             </div>
         </section>
         <section class="mx-4 sm:mx-8 md:mx-12 lg:mx-48 xl:mx-60">
-            <section class="introduction">
-                <h2 class="text-[#303030] font-bold text-2xl mb-4">Get insight into food value chains in developing countries</h2>
-                <p class="text-justify mb-2">
+            <section>
+                <h2>Get insight into food value chains in developing countries</h2>
+                <p>
                     Welcome to the VCA4D website. You will find a tailored access to 35 value chain analyses
                     across 16 different agricultural commodities around the world. Based on a standardised
                     methodology (*link), each analysis allows an assessment of the value chain's impact on
@@ -67,7 +67,7 @@ const getProductLogo = (product) => {
                 <h3>Browse studies by <strong>product</strong></h3>
                 
                 <template v-for="category in categories" :key="category.id">
-                    <h4 :style="`margin-top: 48px; color: ${category.textColor};`" class="font-semibold">{{ category.prettyName }}</h4>
+                    <h4 :style="`margin-top: 48px; color: ${category.textColor};`">{{ category.prettyName }}</h4>
                     <div class="border-t-[13px] pt-4" :style="`border-color: ${category.color};`">
                         <ul class="flex flex-row">
                             <li v-for="study in filterStudiesByCategory(category.id)" :key="study.fileName" class="h-full mr-4">
@@ -93,10 +93,10 @@ const getProductLogo = (product) => {
                 </template>
             </section>
 
-            <section class="by-country">
+            <section>
                 <h3>Browse studies by <strong>country</strong></h3>
                 <template v-for="country in countries" :key="country.id">
-                    <h4 class="font-semibold mt-4">{{ country.prettyName }}</h4>
+                    <h4 class="mt-4">{{ country.prettyName }}</h4>
                     <ul>
                         <li v-for="study in filterStudiesByCountry(country.id)" :key="study.fileName" class="text-blue-600 dark:text-blue-500 hover:underline">
                             <RouterLink :to="`/study?id=${study.fileName}`">{{ study.title }}</RouterLink>
@@ -115,10 +115,6 @@ const getProductLogo = (product) => {
 
 section {
     padding: 1.5rem;
-}
-
-h3 {
-    @apply text-xl
 }
 
 section.banner {

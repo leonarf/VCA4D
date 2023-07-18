@@ -1,32 +1,29 @@
 <template>
-    <article class="study-section">
-        <h1>Is the economic growth <strong>inclusive</strong>?</h1>
-
+    <article class="mt-8">
+        <SectionTitle>
+            <h1>Is the economic growth <strong>inclusive</strong>?</h1>
+        </SectionTitle> 
         <p>A value chain is inclusive in one country not only by the number of jobs created, but also considering these jobs' quality. The way the income is distributed across the value chain from the samll producers to the consumers also tell about the power dynamics and the policies that may be improved for more inclusiveness. For detailed information on the value chain's impact on the most vulnerable groups, like women and youth, please go directly to Social sustainability part (*link).</p>
 
-        <h2>How is <strong>employment</strong> distributed across the value chain?</h2>
+        <h3 class="mt-8">How is <strong>employment</strong> distributed across the value chain?</h3>
 
         <p>Methodology</p>
         <p>Employment data only relate to full time equivalent jobs for this specific value chain and do not include total employment of each actor. In addition, the informal family workforce at the agricultural production level is not accounted for.</p>
-
-        <h3>Number of actors</h3>
+        <InfoTitle title="Number of actors" class="mb-4 mt-8"/>
         <div class="flex flex-row items-center mt-4">
             <div class="w-1/5">
-                <div class="title">{{ totalNumberOfActors }}</div>
-                <div class="subtitle">Number of actors</div>
+                <NiceMetric label="Number of actors" :value="totalNumberOfActors" />
             </div>
             <div class="w-4/5">
                 <BarChart v-if="studyData" :options="numberOfActorsData"></BarChart>
             </div>
         </div>
-        <br>
-        <h3>Number of jobs</h3>
-        <div class="flex flex-row items-center mt-4">
-            <div class="w-1/5">
-                <div class="title">{{ totalNumberOfJobs }}</div>
-                <div class="subtitle">Waged employment</div>
-                <div class="title mt-2">{{ percentFemaleEmployment }}%</div>
-                <div class="subtitle">% female employment</div>
+        <InfoTitle title="Jobs" class="mt-8"/>
+
+        <div class="flex flex-row items-start mb-8">
+            <div class="w-1/5 flex flex-col space-y-4 pt-8">
+                <NiceMetric label="Waged employment" :value="totalNumberOfJobs" />
+                <NiceMetric label="% female employment" :value="`${percentFemaleEmployment}%`"/>
             </div>
             <div class="w-4/5">
                 <BarChart v-if="studyData" :options="numberOfJobsData"></BarChart>
@@ -54,11 +51,10 @@
             </div>
         </div>
 
-
-        <h2>How is <strong>income</strong> distributed across actors of the value chain?</h2>
+        <h3>How is <strong>income</strong> distributed across actors of the value chain?</h3>
         <p>Actors that are in small numbers but receive an important share of the value chain's net operating profit are in a stronger position of negociation in front of actore that are more divided.</p>
         <p>NB: The income data only relate to this specific value chain: the data do not include any other income from any other activity.</p>
-        <h3>Net operating profit across actor types</h3>
+        <InfoTitle title="Net operating profit across actor types" class="mb-4 mt-8"/>
         <div class="flex flex-row items-center mt-4">
             <div class="w-full">
                 <BarChart v-if="studyData" :options="netOperatingProfitData"></BarChart>
@@ -67,10 +63,10 @@
         <br>
         <p class="TODO">Number of actors : c'est le même graphique qu'en haut de la page, est-ce qu'on le remet vraiment?</p>
 
-        <h2>What is the impact of the <strong>governance systems</strong> on income distribution?</h2>
-        <p>Share of farm gate price in final price</p>
+        <h3>What is the impact of the <strong>governance systems</strong> on income distribution?</h3>
+        <InfoTitle title="Share of farm gate price in final price" class="mb-4 mt-8"/>
         <p class="TODO">Missing data to be able to display graphic</p>
-        <p>Gini index</p>
+        <InfoTitle title="Gini index" class="mb-4 mt-8"/>
         <p class="TODO">Missing data to be able to display graphic</p>
     </article>
 
@@ -80,6 +76,9 @@
 import { computed, ref } from 'vue'
 import BarChart from './charts/BarChart.vue'
 import Ring from './charts/Ring.vue'
+import NiceMetric from './NiceMetric.vue'
+import SectionTitle from './typography/SectionTitle.vue'
+import InfoTitle from './typography/InfoTitle.vue'
 
 const props = defineProps({
     studyData: Object
@@ -420,42 +419,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../style/colors.scss';
-
-.subtitle {
-    @apply uppercase text-base font-semibold text-[#656565]
-}
-
-.title {
-    @apply text-3xl text-[#303030];
-}
-
-article.study-section {
-
-    h1 {
-        text-decoration: underline;
-        text-decoration-thickness: 3px;
-        font-weight: normal;
-        font-size: 24px;
-        color: #151515;
-        text-underline-offset: 5px;
-    }
-
-    h2 {
-        font-weight: normal;
-        font-size: 22px;
-        color: #151515;
-    }
-
-    h3 {
-        padding-left: 80px;
-        font-weight: bold;
-        font-size: 17px;
-        text-decoration: underline;
-        text-underline-offset: 5px;
-        text-decoration-thickness: 3px;
-        text-decoration-color: #999;
-    }
-}
-
 </style>

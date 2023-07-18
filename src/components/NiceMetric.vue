@@ -1,7 +1,7 @@
 <template>
-    <div class="nice-metric">
-        <div class="nice-metric__value">{{ value }}</div>
-        <div class="nice-metric__label">{{ label }}</div>
+    <div class="flex flex-col max-w-[300px]">
+        <div class="text-3xl text-[#303030]">{{ value }}</div>
+        <div class="uppercase text-base font-semibold text-[#656565]">{{ label }}</div>
     </div>
 </template>
 
@@ -13,23 +13,4 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
-@import '../../style/colors.scss';
-
-.nice-metric {
-    display: flex;
-    flex-direction: column;
-    max-width: 240px;
-}
-
-.nice-metric__value {
-    font-size: 20px
-}
-
-.nice-metric__label {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 11px;
-    color: #5c5c5c;
-}
-
 </style>

@@ -1,7 +1,8 @@
 <template>
-  <article class="study-section">
-    <h1>What is the contribution of the value chain to <strong>economic growth</strong>?</h1>
-
+  <article>
+    <SectionTitle>
+      <h1>What is the contribution of the value chain to <strong>economic growth</strong>?</h1>
+    </SectionTitle> 
     <p>
       VCA4D analyses show not only the value chain's contribution to the national wealth and to the
       wealth in agriculture. The methodology has also developped data on the distribution of the net
@@ -9,40 +10,34 @@
       state budget, after public investment in the value chain.
     </p>
 
-    <NiceMetricGroup>
+    <div class="flex flex-row justify-evenly w-full items-center my-8">
       <NiceMetric label="Total value added" :value="`${totalAddedValueCreators}`" />
       <NiceMetric class="TODO" label="Value added share of the agricultural sector GDP" value="%" />
       <NiceMetric class="TODO" label="Value added share of national GDP" value="%" />
-    </NiceMetricGroup>
+    </div>
 
-    <h3>Is the chain independent from foreign imports?</h3>
+    <h2>Is the chain independent from foreign imports?</h2>
 
-    <p>Rate of integration ito domestic economy</p>
-    <p>= total value added / value of production</p>
-    <p class="TODO">Missing data to be able to display graphic</p>
+    <InfoTitle title="Rate of integration into domestic economy" information="Total value added / value of production" class="mb-4"/>
+    <p class="TODO mb-6">Missing data to be able to display graphic</p>
 
-    <h2>Who <strong>creates and receives</strong> value added?</h2>
-    <div class="flex flex-row justify-evenly">
+    <h3>Who <strong>creates and receives</strong> value added?</h3>
+    <div class="flex flex-row justify-evenly my-12">
       <div class="flex flex-col items-center">
-        <Ring v-if="studyData" :options="addedValueCreatorsRingChartData" style="height: 400px; width: 400px;"></Ring>
+        <Ring v-if="studyData" :options="addedValueCreatorsRingChartData" style="height: 400px; width: 500px;"></Ring>
         <div class="font-semibold">{{ totalAddedValueCreators }}</div>
       </div>
       <div class="flex flex-col items-center">
-        <Ring v-if="studyData" :options="addedValueReceiversRingChartData" style="height: 400px; width: 400px;"></Ring>
+        <Ring v-if="studyData" :options="addedValueReceiversRingChartData" style="height: 400px; width: 500px;"></Ring>
         <div class="font-semibold">{{ totalAddedValueReceivers }}</div>
       </div>
     </div>
-    <h2>
-      How <strong>profitable</strong> and viable are the value chain activities for the actors
-      involved?
-    </h2>
-    <p>
-      RETURN ON INVESTMENT (%) = percentage of net operating profit in total costs (NB : for
-      producers this includes actor revenue)
-    </p>
+    <h3>How <strong>profitable</strong> and viable are the value chain activities for the actors involved?</h3>
+    <InfoTitle title="Return on investment (%)" information="percentage of net operating profit in total costs (NB : for
+      producers this includes actor revenue)" class="mb-4"/>
     <BarChart v-if="studyData" :options="populatedBarChartData"></BarChart>
     <a v-else class="TODO">Data are missing to display this GraphBar</a>
-    <h2>What is the contribution of the value chain to the <strong>public finances</strong>?</h2>
+    <h3 class="mt-12">What is the contribution of the value chain to the <strong>public finances</strong>?</h3>
     <div class="flex flex-row items-center ml-12">
       <div class="w-1/3">
         <div class="uppercase font-semibold text-[#303030] text-xl">Public Funds Balance</div>
@@ -62,19 +57,20 @@
       </div>
     </div>
     
-    <h2>What is the contribution of the value chain to the <strong>balance of trade</strong>?</h2>
+    <h3 class="mt-12">What is the contribution of the value chain to the <strong>balance of trade</strong>?</h3>
     <p class="TODO">Missing data to be able to display graphic</p>
 
-    <h2>Is the value chain <strong>viable in the international economy</strong>?</h2>
+    <h3 class="mt-12">Is the value chain <strong>viable in the international economy</strong>?</h3>
     <p>
       The VCA4D methodology assesses for each value chain its dependency on international exports as
       well as its capacity to export on international markets with competitive price or on the
       contrary a higher remuneration of the actors supported by porection policies.
     </p>
     <h1>Is it financially attractive to sell abroad ?</h1>
-    <p>Domestic resource cost ratio</p>
+
+    <InfoTitle title="Domestic resource cost ratio" class="mb-4"/>
     <p class="TODO">Missing data to be able to display graphic</p>
-    <p>Nominal protection Coefficient</p>
+    <InfoTitle title="Nominal protection Coefficient" information="Domestic price / Internation parity price" class="mb-4"/>
     <p class="TODO">Missing data to be able to display graphic</p>
   </article>
 </template>
@@ -82,12 +78,13 @@
 <script setup>
 import { computed } from 'vue'
 
-import NiceMetricGroup from './NiceMetricGroup.vue'
 import NiceMetric from './NiceMetric.vue'
+import InfoTitle from './typography/InfoTitle.vue'
 import BarChart from './charts/BarChart.vue'
 import Utils from '@/utils/utils.js'
 import CurrencyUtils from '@/utils/currencyUtils.js'
 import Ring from './charts/Ring.vue'
+import SectionTitle from './typography/SectionTitle.vue'
 
 const props = defineProps({
   studyData: Object
@@ -109,7 +106,7 @@ const addedValueCreatorsRingChartData = computed(() => {
   const title = {
     text: 'Who creates the direct value added',
     left: 'center',
-    top: 50
+    top: 0
   }
   let data = stages.value.map(({ name: stageName }) => {
     const stageActors = actors.value.filter(actor => actor.stage === stageName)
@@ -142,7 +139,7 @@ const addedValueCreatorsRingChartData = computed(() => {
       {
         type: 'pie',
         data,
-        radius: ['30%', '40%']
+        radius: ['65%', '75%']
       }
     ]
   };
@@ -155,7 +152,7 @@ const addedValueReceiversRingChartData = computed(() => {
   const title = {
     text: 'Who receives the direct value added',
     left: 'center',
-    top: 50
+    top: 0
   }
 
   let data = stages.value.map(({ name: stageName }) => {
@@ -195,7 +192,7 @@ const addedValueReceiversRingChartData = computed(() => {
     {
       type: 'pie',
       data,
-      radius: ['30%', '40%']
+      radius: ['65%', '75%']
     }
   ]
 };
@@ -333,32 +330,5 @@ const populatedBarChartData = computed(() => {
 </script>
 
 <style scoped lang="scss">
-@import '../../style/colors.scss';
 
-article.study-section {
-  h1 {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    font-weight: normal;
-    font-size: 24px;
-    color: #151515;
-    text-underline-offset: 5px;
-  }
-
-  h2 {
-    font-weight: normal;
-    font-size: 22px;
-    color: #151515;
-  }
-
-  h3 {
-    padding-left: 80px;
-    font-weight: bold;
-    font-size: 17px;
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    text-decoration-thickness: 3px;
-    text-decoration-color: #999;
-  }
-}
 </style>
