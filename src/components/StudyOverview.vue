@@ -1,15 +1,15 @@
 <template>
-    <article>
-        <h1>Overview</h1>
-        <section class="introduction">
-            <h2>Main steps in the value chain</h2>
-            <ol>
-                <li v-for="step in populatedSteps" :key="step.label">
-                    <img class="TODO" :alt="step.label + ' illustration'">
-                    <strong>{{ step.label }}</strong>
-                    <p class="TODO">{{ step.description }}Description missing from data</p>
-                </li>
-            </ol>
+    <article class="mt-4">
+        <h1 class="text-[#303030] text-2xl font-semibold">Overview</h1>
+        <section class="mt-0.5 pt-6 border-t-[4px]" :style="`border-color: #303030;`">
+            <h2 class="text-[#303030] text-sm font-bold">Main steps in the value chain</h2>
+            <div class="flex flex-row justify-evenly mt-4 mb-8">
+                <div class="text-[#303030] text-center flex flex-col space-y-2 items-center" v-for="step in populatedSteps" :key="step.name">
+                    <img style="height: 50px; width: 50px;" :src="getStepLogo(step)" :alt="step.name + ' illustration'"/>
+                    <div class="text-sm font-semibold">{{ step.name }}</div>
+                    <p class="text-sm font-light">{{ step.description || 'Pas de description' }}</p>
+                </div>
+            </div>
         </section>
 
         <section>
@@ -112,6 +112,13 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { computed, ref } from 'vue';
+import ProcessingLogo from '../images/icons/processing.svg'
+import RetailLogo from '../images/icons/retail.svg'
+import WholesaleLogo from '../images/icons/wholesale.svg'
+import CollectionLogo from '../images/icons/collection.svg'
+import ProductionLogo from '../images/icons/production.svg'
+import ExportLogo from '../images/icons/export.svg'
+
 
 import SankeyChart from './SankeyChart.vue';
 
@@ -130,53 +137,34 @@ const toggleSankeyGraphDisplayMode = () => {
     sankeyGraphDisplayMode.value = (sankeyGraphDisplayMode.value + 1) % sankeyGraphPossibleDisplayModesList.length;
 };
 
-const steps = [
-    {
-        label: "Agricultural production",
-        image: "TODO",
-        dataKey: "Agricultural producers" 
-    },
-    {
-        label: "Collection",
-        image: "TODO",
-        dataKey: "Collectors" 
-    },
-    {
-        label: "Processing",
-        image: "TODO",
-        dataKey: "Processors" 
-    },
-    {
-        label: "Wholesale",
-        image: "TODO",
-        dataKey: "Wholesalers" 
-    },
-    {
-        label: "Retail",
-        image: "TODO",
-        dataKey: "Retailers" 
-    },
-    {
-        label: "Export",
-        image: "TODO",
-        dataKey: "Exporters" 
-    }
-];
+const populatedSteps = computed(() => {
+    return props.studyData?.data.stages.map(stage => ({
+        ...stage,
+        image: ``
+    }))
+});
 
-
-
-const getStepDescription = (studyData, dataKey) => {
-    return studyData?.data.stages.find(stage => stage.name === dataKey)?.description;
+const getStepLogo = (step) => {
+    console.log('step', step)
+  switch (step.name) {
+    case 'Producers':
+      return ProductionLogo;
+    case 'Collectors':
+      return CollectionLogo;
+    case 'Processors':
+      return ProcessingLogo;
+    case 'Wholesalers':
+      return WholesaleLogo;
+    case 'Retailers':
+      return RetailLogo;
+    case 'Exporters':
+      return ExportLogo;
+    default:
+      return '';
+  }
 };
 
-const populatedSteps = computed( () => {
-    return steps.map((step) => {
-        return {
-            ...step,
-            description: getStepDescription(props.studyData, step.dataKey) // we take into account the fact that at first rendering, `studyData` can be undefined
-        };
-    });
-});
+
 
 const populatedSankeyChartData = computed ( () => {
     let chartTitle = "The various actors and their share in the flows of the value chain";
@@ -348,32 +336,6 @@ const populatedSankeyChartData = computed ( () => {
 
 <style scoped lang="scss">
 article {
-    section.introduction{
-        ol{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-
-            list-style: none;
-            margin: 0;
-
-            li{
-                width: 18%;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-
-                img{
-                    width: 70%;
-                    height: 5rem;
-                    margin-bottom: 1rem;
-                }
-            }
-        }
-    }
 
     section.explore{
         a{
