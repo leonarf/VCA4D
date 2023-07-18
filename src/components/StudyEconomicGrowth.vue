@@ -3,14 +3,14 @@
     <h1>What is the contribution of the value chain to <strong>economic growth</strong>?</h1>
 
     <p>
-      VCA4D analyses shows not only the value chain's contribution to the national wealth and to the
+      VCA4D analyses show not only the value chain's contribution to the national wealth and to the
       wealth in agriculture. The methodology has also developped data on the distribution of the net
-      benefits across the various actors of the value chain, includting the contribution left to the
+      benefits across the various actors of the value chain, including the contribution left to the
       state budget, after public investment in the value chain.
     </p>
 
     <NiceMetricGroup>
-      <NiceMetric class="TODO" label="Total value added" value="TODO" />
+      <NiceMetric label="Total value added" :value="`${totalAddedValueCreators}`" />
       <NiceMetric class="TODO" label="Value added share of the agricultural sector GDP" value="%" />
       <NiceMetric class="TODO" label="Value added share of national GDP" value="%" />
     </NiceMetricGroup>
