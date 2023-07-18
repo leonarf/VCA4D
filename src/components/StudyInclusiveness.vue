@@ -5,6 +5,10 @@
         <p>A value chain is inclusive in one country not only by the number of jobs created, but also considering these jobs' quality. The way the income is distributed across the value chain from the samll producers to the consumers also tell about the power dynamics and the policies that may be improved for more inclusiveness. For detailed information on the value chain's impact on the most vulnerable groups, like women and youth, please go directly to Social sustainability part (*link).</p>
 
         <h2>How is <strong>employment</strong> distributed across the value chain?</h2>
+
+        <p>Methodology</p>
+        <p>Employment data only relate to full time equivalent jobs for this specific value chain and do not include total employment of each actor. In addition, the informal family workforce at the agricultural production level is not accounted for.</p>
+
         <h3>Number of actors</h3>
         <div class="flex flex-row items-center mt-4">
             <div class="w-1/5">
@@ -28,7 +32,7 @@
                 <BarChart v-if="studyData" :options="numberOfJobsData"></BarChart>
                 <div>
                     <div class="flex flex-row justify-evenly">
-                        <div class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" v-for="stage in availableStages" @click="currentStage = stage">
+                        <div class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" v-for="stage in availableStages" @click="currentStage = stage" v-bind:key="stage">
                             {{ stage }}
                         </div>
                     </div>
@@ -54,8 +58,15 @@
         <h2>How is <strong>income</strong> distributed across actors of the value chain?</h2>
         <p>Actors that are in small numbers but receive an important share of the value chain's net operating profit are in a stronger position of negociation in front of actore that are more divided.</p>
         <p>NB: The income data only relate to this specific value chain: the data do not include any other income from any other activity.</p>
+        <p>net operating profit across actor types</p>
+        <p class="TODO">Prendre les données dans l'excel économique, feuille Indicator by actor type, colonne Net operating profit (local currency)</p>
+        <p class="TODO">Number of actors : c'est le même graphique qu'en haut de la page, est-ce qu'on le remet vraiment?</p>
 
-        <h2>What is the ompact of the <strong>governance systems</strong> on income distribution?</h2>
+        <h2>What is the impact of the <strong>governance systems</strong> on income distribution?</h2>
+        <p>Share of farm gate price in final price</p>
+        <p class="TODO">Missing data to be able to display graphic</p>
+        <p>Gini index</p>
+        <p class="TODO">Missing data to be able to display graphic</p>
     </article>
 
 </template>

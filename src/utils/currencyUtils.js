@@ -1,54 +1,25 @@
-let USDformatter = new Intl.NumberFormat(undefined, {
-  style: "currency",
-  currency: "USD",
-  minimumFractionDigits: 0,
-});
+import basicApi from '@/repositories/basicApi.js'
 
-let EURformatter = new Intl.NumberFormat(undefined, {
-  style: "currency",
-  currency: "EUR",
-  minimumFractionDigits: 0,
-});
+let CurrencyFormatters = {}
 
-let INRformatter = new Intl.NumberFormat(undefined, {
-  style: "currency",
-  currency: "INR",
-  minimumFractionDigits: 0,
-});
-
-let MGAformatter = new Intl.NumberFormat(undefined, {
-  style: "currency",
-  currency: "MGA",
-  minimumFractionDigits: 0,
-});
+const getCurrencyFormatter = (currency_requested) => {
+  if (!(currency_requested in CurrencyFormatters)) {
+    CurrencyFormatters[currency_requested] = new Intl.NumberFormat(undefined, {
+      style: "currency",
+      currency: currency_requested,
+      minimumFractionDigits: 0,
+    });
+  }
+  return CurrencyFormatters[currency_requested]
+}
 
 let currency = "INR"
 let currency_conversion_factor = 1
 
-const changeCurrency = (newCurrency) => {
+const changeCurrency = async (newCurrency) => {
   currency = newCurrency
-  if (currency == "EUR") {
-    currency_conversion_factor = {
-      2018 : 1.1809545,
-      2020 : 1.142196,
-      2022 : 1.05
-    }
-  }
-  else if (currency == "INR") {
-    currency_conversion_factor = {
-      2020 : 0.013495356,
-      2022 : 0.0127,
-    }
-  }
-   else if (currency == "MGA") {
-    currency_conversion_factor = {
-      2020 : 0.0002640087,
-      2022 : 0.00023,
-    }
-  }
-  else {
-    currency_conversion_factor = 1
-  }
+  var change_rates = await basicApi.getChangeRates()
+  currency_conversion_factor = change_rates[currency]
 }
 
 const getUserCurrency = () => {
@@ -56,19 +27,8 @@ const getUserCurrency = () => {
 }
 
 const formatAmount = (amount) => {
-  var formatted_amount = ""
-  if (currency == "USD") {
-    formatted_amount = USDformatter.format(amount);
-  }
-  else if (currency == "EUR") {
-    formatted_amount = EURformatter.format(amount)
-  }
-  else if (currency == "INR") {
-    formatted_amount = INRformatter.format(amount)
-  }
-  else if (currency == "MGA") {
-    formatted_amount = MGAformatter.format(amount)
-  }
+  var formatter = getCurrencyFormatter(currency)
+  var formatted_amount = formatter.format(amount);
   return formatted_amount//.replace(',', '.')
 }
 
@@ -76,9 +36,64 @@ const formatPercent = (amount) => {
   return amount.toFixed(2) + '%'
 }
 
+
+const convert_to_usd = (number, year) => {
+  if (year && year in currency_conversion_factor) {
+    var factor_to_use = currency_conversion_factor[year]
+  }
+  else {
+    throw 'Year is not defined in convert_to_usd()! ' + year;
+  }
+  return number / factor_to_use
+}
+
+const convert_all_amounts = (item, year) => {
+  if (currency_conversion_factor == 1) {
+    return item
+  }
+  if (year && year in currency_conversion_factor) {
+    var factor_to_use = currency_conversion_factor[year]
+  }
+  else {
+    throw 'Year is not defined in convert_all_amounts()! ' + year;
+  }
+  if (typeof (item) == "number") {
+    return item * factor_to_use
+  }
+  for (var property in item) {
+    if (["price", "price_part"].includes(property)) {
+      item[property].valeur = item[property].valeur * factor_to_use
+      if ("evolution" in item[property]) {
+        item[property].evolution = item[property].evolution * factor_to_use
+      }
+      item[property].currency = currency
+      continue
+    }
+    if (property == "costs") {
+      for (var thing of item[property]) {
+        thing.valeur = thing.valeur * factor_to_use
+        if ("evolution" in thing) {
+          thing.evolution = thing.evolution * factor_to_use
+        }
+        thing.currency = currency
+      }
+      continue
+    }
+    if (property == "TotalVentesValeur") {
+      item[property] = item[property] * factor_to_use
+    }
+    var type_property = typeof (item[property])
+    if (type_property == "object") {
+      convert_all_amounts(item[property], year)
+    }
+  }
+}
+
 export default {
   formatAmount,
   formatPercent,
   changeCurrency,
-  getUserCurrency
+  getUserCurrency,
+  convert_all_amounts,
+  convert_to_usd
 };

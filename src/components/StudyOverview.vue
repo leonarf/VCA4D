@@ -7,7 +7,7 @@
                 <li v-for="step in populatedSteps" :key="step.label">
                     <img class="TODO" :alt="step.label + ' illustration'">
                     <strong>{{ step.label }}</strong>
-                    <p class="TODO">{{ step.description }}</p>
+                    <p class="TODO">{{ step.description }}Description missing from data</p>
                 </li>
             </ol>
         </section>

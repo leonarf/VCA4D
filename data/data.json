@@ -59,14 +59,6 @@
             "country": "burundi",
             "category": "animal product",
             "product": "milk"
-        },
-        {
-            "fileName": "milk-burundi-2022",
-            "title": "Burundi 2022",
-            "year": 2022,
-            "country": "burundi",
-            "category": "animal product",
-            "product": "milk"
         }
     ]
 }
