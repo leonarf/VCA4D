@@ -3,6 +3,8 @@ import { RouterLink } from 'vue-router'
 import Skeleton from '../components/Skeleton.vue'
 import { onMounted, ref } from 'vue';
 import jsonData from '../../data/data.json'
+import MilkLogo from '../images/icons/products/milk.svg'
+import PineappleLogo from '../images/icons/products/pineapple.svg'
 
 const studies = ref([])
 const countries = ref([])
@@ -23,6 +25,15 @@ const filterStudiesByCountry = (country) => {
 const setDefaultImage = (event) => {
   event.target.src = 'src/images/product-pictograms/mango.png';
 };
+
+const getProductLogo = (product) => {
+    switch(product) {
+        case 'milk':
+            return MilkLogo
+        default:
+            return PineappleLogo
+    }
+}
 
 </script>
 
@@ -60,13 +71,19 @@ const setDefaultImage = (event) => {
                     <div class="border-t-[13px] pt-4" :style="`border-color: ${category.color};`">
                         <ul class="flex flex-row">
                             <li v-for="study in filterStudiesByCategory(category.id)" :key="study.fileName" class="h-full mr-4">
-                                <RouterLink :to="`/study?id=${study.fileName}`">
-                                    <img :src="`src/images/product-pictograms/${study.product}.png`" 
-                                    :alt="`Link to ${study.title} study`"
-                                    class="w-24"
-                                    @error="setDefaultImage">
-                                </RouterLink>
-                                <p>{{ study.title }}</p>
+                                <div class="flex flex-col items-center space-y-2">
+                                    <RouterLink :to="`/study?id=${study.fileName}`">
+                                        <div class="w-[130px] h-[130px] bg-[#DFDFDF] flex flex-col items-center justify-evenly text-[#303030] px-8 rounded-lg">
+                                            <img :src="getProductLogo(study.product)" 
+                                            :alt="`Link to ${study.title} study`"
+                                            style="height: 75px; width: 75px;"
+                                            class="w-24"
+                                            @error="setDefaultImage">
+                                            <p class="font-semibold capitalize">{{ study.product }}</p>
+                                        </div>
+                                    </RouterLink>
+                                    <p>{{  study.country }} {{ study.year }}</p>
+                                </div>
                             </li>
                             <li v-if="filterStudiesByCategory(category.id).length === 0">
                                 <strong class="TODO" >NOTHING</strong>
