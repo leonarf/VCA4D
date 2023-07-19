@@ -18,7 +18,7 @@
                 <StudyOverview v-if="view === undefined" :studyData="studyData"></StudyOverview>
                 <StudyEnvironment v-if="view === 'environment'" :studyData="studyData"></StudyEnvironment>
                 <StudyEconomicGrowth v-if="view === 'economic-growth'" :studyData="studyData" :currency="currency"></StudyEconomicGrowth>
-                <StudyInclusiveness v-if="view === 'inclusiveness'" :studyData="studyData"></StudyInclusiveness>
+                <StudyInclusiveness v-if="view === 'inclusiveness'" :studyData="studyData" :currency="currency"></StudyInclusiveness>
                 <StudySocialSustainability v-if="view === 'social-sustainability'" :studyData="studyData"></StudySocialSustainability>
             </template>
         </div>

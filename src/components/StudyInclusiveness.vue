@@ -55,9 +55,15 @@
         <p>Actors that are in small numbers but receive an important share of the value chain's net operating profit are in a stronger position of negociation in front of actore that are more divided.</p>
         <p>NB: The income data only relate to this specific value chain: the data do not include any other income from any other activity.</p>
         <InfoTitle title="Net operating profit across actor types" class="mb-4 mt-8"/>
-        <div class="flex flex-row items-center mt-4">
+        <div class="flex flex-row items-center mt-4 mb-4">
             <div class="w-full">
                 <BarChart v-if="studyData" :options="netOperatingProfitData"></BarChart>
+            </div>
+        </div>
+        <InfoTitle title="Net operating profit by number of actors across actor types" class="mb-4 mt-8"/>
+        <div class="flex flex-row items-center mt-4">
+            <div class="w-full">
+                <BarChart v-if="studyData" :options="netOperatingProfitByNumberActorsData"></BarChart>
             </div>
         </div>
         <br>
@@ -79,10 +85,21 @@ import Ring from './charts/Ring.vue'
 import NiceMetric from './NiceMetric.vue'
 import SectionTitle from './typography/SectionTitle.vue'
 import InfoTitle from './typography/InfoTitle.vue'
+import CurrencyUtils from '@/utils/currencyUtils.js'
 
 const props = defineProps({
-    studyData: Object
+    studyData: Object,
+    currency: String
     })
+
+
+const prettyAmount = computed(() => {
+  return (amount) => CurrencyUtils.prettyFormatAmount(amount, props.currency)
+})
+
+const convertAmount = computed(() => {
+  return (amount) => CurrencyUtils.getValueInCurrency(amount, props.studyData.localCurrency, props.currency, props.studyData.year)
+})
 
 const currentStage = ref('')
 
@@ -354,14 +371,14 @@ const netOperatingProfitData = computed(() => {
 
     stages.value.map(stage => {
         const stageActors = actors.value.filter(actor => actor.stage === stage.name)
-        const subTotal = stageActors
-            .reduce((res, actor) => res + actor.netOperatingProfit || 0, 0) 
+        const subTotal = convertAmount.value(stageActors
+            .reduce((res, actor) => res + actor.netOperatingProfit || 0, 0)) 
         if (subTotal !== 0) {
             labels.push(stage.name)
             values.push(subTotal)
-            let toolTipValue = `${stage.name}: ${formatNumber(subTotal)}`
+            let toolTipValue = `${stage.name}: ${prettyAmount.value(subTotal)}`
             for (const actor of stageActors) {
-                toolTipValue += `<br>${actor.name}: ${formatNumber(actor.numberOfActors)}`
+                toolTipValue += `<br>${actor.name}: ${prettyAmount.value(actor.netOperatingProfit)}`
             }
 
             tooltip[stage] = toolTipValue
@@ -380,7 +397,7 @@ const netOperatingProfitData = computed(() => {
                 if (!d.data) {
                     return ""
                 }
-                return formatNumber(d.data)
+                return prettyAmount.value(d.data)
             },
         },
         tooltip: {
@@ -400,6 +417,66 @@ const netOperatingProfitData = computed(() => {
             }
         ]};
     })
+
+
+const netOperatingProfitByNumberActorsData = computed(() => {
+
+    let tooltip = {}
+    let labels = []
+    let values = []
+
+    stages.value.map(stage => {
+        const stageActors = actors.value.filter(actor => actor.stage === stage.name)
+        const subTotalOperatingProfit = convertAmount.value(stageActors
+            .reduce((res, actor) => res + actor.netOperatingProfit || 0, 0))
+        const subTotalNumberOfActors = stageActors
+            .reduce((res, actor) => res + actor.numberOfActors || 0, 0)
+        if (subTotalOperatingProfit !== 0 && subTotalNumberOfActors !== 0) {
+            
+            labels.push(stage.name)
+            values.push(subTotalOperatingProfit / subTotalNumberOfActors)
+            let toolTipValue = `${stage.name}: ${prettyAmount.value(subTotalOperatingProfit / subTotalNumberOfActors)}`
+            for (const actor of stageActors) {
+                toolTipValue += `<br>${actor.name}: ${prettyAmount.value(actor.netOperatingProfit)} ${prettyAmount.value(actor.numberOfActors)} actors`
+            }
+
+            tooltip[stage.name] = toolTipValue
+        }
+    })
+
+    return {
+        xAxis: {
+            data: labels,
+            left: 0
+        },
+        label: {
+            show: true,
+            position: 'top',
+            formatter: function (d) {
+                if (!d.data) {
+                    return ""
+                }
+                return prettyAmount.value(d.data)
+            },
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: function (info) {
+                return tooltip[info.name]
+            }
+        },
+        yAxis: {
+            show: false
+        },
+        series: [
+            {
+                type: 'bar',
+                data: values,
+                barWidth: '100%'
+            }
+        ]};
+    }
+)
 </script>
 
 <script>

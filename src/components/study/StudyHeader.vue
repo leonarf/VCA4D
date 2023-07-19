@@ -9,7 +9,7 @@
             <div class="subtitle">Country</div>
         </div>
         <div class="bloc">
-            <div class="title">BIF</div>
+            <div class="title">{{ currencyUtils.getCurrencySymbol(studyData.localCurrency) }}</div>
             <div class="subtitle">Local currency</div>
         </div>
         <div class="bloc">
@@ -19,15 +19,14 @@
     </div>
 </template>
 
-<script>
-export default {
-  props: {
+<script setup>
+import currencyUtils from '../../utils/currencyUtils'
+const props = defineProps({
     studyData: {
       type: Object,
       required: true,
-    },
-  },
-};
+    }
+})
 </script>
 
 <style scoped lang="scss">
