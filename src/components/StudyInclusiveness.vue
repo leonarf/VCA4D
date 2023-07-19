@@ -298,8 +298,6 @@ const currentStageEmploymentByQualificationData = computed(() => {
 
     data = data.filter(item => item.value !== 0)
 
-    console.log('data', data)
-
     return {
         title,
         series: [

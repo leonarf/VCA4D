@@ -10,40 +10,24 @@
                     <StudyHeader :studyData="studyData"/>
                 </div>
             </header>
-            <nav>
-                <ol v-if="studyData">
-                    <li>
-                        <RouterLink :to="'/study?id=' + studyData.id">Overview</RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink :to="'/study?id=' + studyData.id + '&view=economic-growth'">Contribution to economic growth</RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink :to="'/study?id=' + studyData.id + '&view=inclusiveness'">Inclusiveness</RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink :to="'/study?id=' + studyData.id + '&view=social-sustainability'">Social sustainability</RouterLink>
-                    </li>
-                    <li>
-                        <RouterLink :to="'/study?id=' + studyData.id + '&view=environment'">Environmental sustainability</RouterLink>
-                    </li>
-                    <li>
-                        <a class="TODO">Study brief and full report</a>
-                    </li>
-                </ol>
-            </nav>
-
-            <StudyOverview v-if="view === undefined" :studyData="studyData"></StudyOverview>
-            <StudyEnvironment v-if="view === 'environment'" :studyData="studyData"></StudyEnvironment>
-            <StudyEconomicGrowth v-if="view === 'economic-growth'" :studyData="studyData"></StudyEconomicGrowth>
-            <StudyInclusiveness v-if="view === 'inclusiveness'" :studyData="studyData"></StudyInclusiveness>
-            <StudySocialSustainability v-if="view === 'social-sustainability'" :studyData="studyData"></StudySocialSustainability>
+            <div class="w-full text-left ml-24 my-8">
+                <StudyMenu v-if="studyData"  :studyId="studyData.id" :localCurrency="studyData.localCurrency" :currency="currency"
+                @update:currency="updateCurrency" />
+            </div>
+            <template v-if="studyData">
+                <StudyOverview v-if="view === undefined" :studyData="studyData"></StudyOverview>
+                <StudyEnvironment v-if="view === 'environment'" :studyData="studyData"></StudyEnvironment>
+                <StudyEconomicGrowth v-if="view === 'economic-growth'" :studyData="studyData" :currency="currency"></StudyEconomicGrowth>
+                <StudyInclusiveness v-if="view === 'inclusiveness'" :studyData="studyData"></StudyInclusiveness>
+                <StudySocialSustainability v-if="view === 'social-sustainability'" :studyData="studyData"></StudySocialSustainability>
+            </template>
         </div>
     </Skeleton>
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import { ref, onMounted, watch } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
 import Skeleton from '../components/Skeleton.vue'
 import StudyOverview from '../components/StudyOverview.vue'
 import StudyEnvironment from '../components/StudyEnvironment.vue'
@@ -51,60 +35,45 @@ import StudyEconomicGrowth from '../components/StudyEconomicGrowth.vue'
 import StudyInclusiveness from '../components/StudyInclusiveness.vue'
 import StudySocialSustainability from '../components/StudySocialSustainability.vue'
 import StudyHeader from '../components/study/StudyHeader.vue'
-
-</script>
-
-<script>
-//@ts-check
+import StudyMenu from '../components/study/StudyMenu.vue'
 import getStudyData from '../studyData.js'
 
-export default {
-    name: 'StudyView',
-    props: [],
-    data() {
-        return {
-            view: undefined,
-            studyData: undefined,
-            error: undefined
-        }
-    },
-    created: function() {
-        const studyId = this.$route.query.id
-        const studyView = this.$route.query.view
-        
-        console.log('studyId view', studyId, studyView)
-        this.view = studyView
+const route = useRoute();
 
-        getStudyData(studyId).then(studyData => {
-            this.studyData = studyData
-        })
-        .catch(err => {
-            this.error = err;
-        })
-    },
-    beforeRouteUpdate: function(to, from){
-        console.log('lifecycle beforeRouteLeave', to, from)
-
-        const view = to.query.view
-
-        this.view = view;
-        
-    }
+const currency = ref('')
+const updateCurrency = (event) => {
+    currency.value = event
 }
+
+
+const view = ref(undefined)
+const studyData = ref(undefined)
+const error = ref(undefined)
+
+watch (studyData, () => {
+    currency.value = studyData.value.localCurrency
+})
+
+onMounted(async () => {
+  const studyId = route.query.id;
+  const studyView = route.query.view;
+
+  view.value = studyView;
+
+  try {
+    const data = await getStudyData(studyId)
+    studyData.value = data
+  } catch(err) {
+    error.value = err;
+  }
+})
+
+const onBeforeRouteUpdate = (to, from) => {
+
+  const view = to.query.view;
+  view.value = view;
+};
 </script>
 
 <style scoped lang="scss">
-nav {
-    ol{
-        list-style: none;
-        margin: 0;
-        margin-left: 5rem;
-
-        li{
-
-        }
-    }
-}
-
-
 </style>

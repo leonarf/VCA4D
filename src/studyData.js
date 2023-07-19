@@ -37,6 +37,7 @@ function isStudy(data){
  * @returns {Promise<Study>}
  */
 export default function getStudyData(studyId){
+    console.log('getStudyData')
     return json(`../data/${studyId}.json`)
         .then(data => {
             if(isStudy(data))

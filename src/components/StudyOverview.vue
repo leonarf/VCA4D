@@ -148,7 +148,6 @@ const populatedSteps = computed(() => {
 });
 
 const getStepLogo = (step) => {
-    console.log('step', step)
   switch (step.name) {
     case 'Producers':
       return ProductionLogo;
@@ -207,9 +206,6 @@ const populatedSankeyChartData = computed ( () => {
         return result;
     } else {
         const { stages, actors, flows } = props.studyData.data
-        console.log('stages', stages)
-        console.log('actors', actors)
-        console.log('flows', flows)
 
         monetaryCurrency = props.studyData.localCurrency
         
@@ -230,8 +226,6 @@ const populatedSankeyChartData = computed ( () => {
 
         nodes = actors.map((actor) => {
             const actorStage = stages.find((stage) => stage.name === actor.stage);
-            console.log('actor', actor)
-            console.log('actorStage', actorStage)
             return {
                 "name": actor.name,
                 "depth": actorStage?.index || 0

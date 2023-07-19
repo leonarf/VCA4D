@@ -87,10 +87,17 @@ import Ring from './charts/Ring.vue'
 import SectionTitle from './typography/SectionTitle.vue'
 
 const props = defineProps({
-  studyData: Object
+  studyData: Object,
+  currency: String
 })
 
-const formatNumber = (value) => value.toLocaleString(undefined, { maximumFractionDigits: 2})
+const prettyAmount = computed(() => {
+  return (amount) => CurrencyUtils.prettyFormatAmount(amount, props.currency)
+})
+
+const convertAmount = computed(() => {
+  return (amount) => CurrencyUtils.getValueInCurrency(amount, props.studyData.localCurrency, props.currency, props.studyData.year)
+})
 
 const stages = computed(() => {
   return props.studyData.data.stages
@@ -111,11 +118,11 @@ const addedValueCreatorsRingChartData = computed(() => {
   let data = stages.value.map(({ name: stageName }) => {
     const stageActors = actors.value.filter(actor => actor.stage === stageName)
       
-    const subTotal = stageActors.reduce((res, actor) => res + actor.directAddedValue, 0)
+    const subTotal = convertAmount.value(stageActors.reduce((res, actor) => res + actor.directAddedValue, 0))
     if (!isNaN(subTotal)) {
-      let toolTip = `${stageName}: ${formatNumber(subTotal)} (local ccy)`
+      let toolTip = `${stageName}: ${prettyAmount.value(subTotal)}`
       for (const actor of stageActors) {
-        toolTip += `<br>${actor.name}: ${formatNumber(actor.directAddedValue)} (local ccy)`
+        toolTip += `<br>${actor.name}: ${prettyAmount.value(convertAmount.value(actor.directAddedValue))}`
       }
       tooltip[stageName] = toolTip
     }
@@ -139,7 +146,7 @@ const addedValueCreatorsRingChartData = computed(() => {
       {
         type: 'pie',
         data,
-        radius: ['65%', '75%']
+        radius: ['50%', '75%']
       }
     ]
   };
@@ -158,11 +165,11 @@ const addedValueReceiversRingChartData = computed(() => {
   let data = stages.value.map(({ name: stageName }) => {
     const stageActors = actors.value.filter(actor => actor.stage === stageName)
 
-    const subTotal = stageActors.reduce((res, actor) => res + actor.receivedAddedValue, 0)
+    const subTotal = convertAmount.value(stageActors.reduce((res, actor) => res + actor.receivedAddedValue, 0))
 
-    let toolTip = `${stageName}: ${formatNumber(subTotal)} (local ccy)`
+    let toolTip = `${stageName}: ${prettyAmount.value(subTotal)}`
     for (const actor of stageActors) {
-      toolTip += `<br>${actor.name}: ${formatNumber(actor.receivedAddedValue)} (local ccy)`
+      toolTip += `<br>${actor.name}: ${prettyAmount.value(convertAmount.value(actor.receivedAddedValue))}`
     }
     tooltip[stageName] = toolTip
 
@@ -172,9 +179,9 @@ const addedValueReceiversRingChartData = computed(() => {
     }
   })
   for (let key in props.studyData.data.addedValue) {
-    tooltip[key] = `${key}: ${formatNumber(props.studyData.data.addedValue[key])} (local ccy)` 
+    tooltip[key] = `${key}: ${prettyAmount.value(convertAmount.value(props.studyData.data.addedValue[key]))}` 
     data.push({
-      value: props.studyData.data.addedValue[key],
+      value: convertAmount.value(props.studyData.data.addedValue[key]),
       name: key
     })
   }
@@ -192,23 +199,23 @@ const addedValueReceiversRingChartData = computed(() => {
     {
       type: 'pie',
       data,
-      radius: ['65%', '75%']
+      radius: ['50%', '75%']
     }
   ]
 };
 })
 
 const totalAddedValueReceivers = computed(() => {
-  return formatNumber(addedValueReceiversRingChartData.value.series[0].data.reduce((res, item) => res + item.value, 0))
+  return prettyAmount.value(addedValueReceiversRingChartData.value.series[0].data.reduce((res, item) => res + item.value, 0))
 })
 
 const totalAddedValueCreators = computed(() => {
-  return formatNumber(addedValueCreatorsRingChartData.value.series[0].data.reduce((res, item) => res + item.value, 0))
+  return prettyAmount.value(addedValueCreatorsRingChartData.value.series[0].data.reduce((res, item) => res + item.value, 0))
 })
 
 const publicFundsBalance = computed(() => {
-  const balanceValue = props.studyData.data.addedValue.government
-  return (balanceValue > 0 ? "+" : "-") + formatNumber(balanceValue)
+  const balanceValue = convertAmount.value(props.studyData.data.addedValue.government)
+  return (balanceValue > 0 ? "+" : "-") + prettyAmount.value(balanceValue)
 })
 
 const publicFinancesBarData = computed(() => {
@@ -220,10 +227,9 @@ const publicFinancesBarData = computed(() => {
     const stageActors = actors.value.filter(actor => actor.stage === stageName)
     
     labels.push(stageName)
-    const subTotal = stageActors
-      .reduce((res, actor) => res + actor.publicFundsBalance, 0) 
+    const subTotal = convertAmount.value(stageActors.reduce((res, actor) => res + actor.publicFundsBalance, 0)) 
     values.push(subTotal)
-    tooltip[stageName] = `${formatNumber(subTotal)} (local ccy)`
+    tooltip[stageName] = `${prettyAmount.value(subTotal)}`
     
   })
 
@@ -239,7 +245,7 @@ const publicFinancesBarData = computed(() => {
         if (!d.data) {
           return ""
         }
-        return formatNumber(d.data)
+        return prettyAmount.value(d.data)
       },
     },
     tooltip: {
@@ -324,7 +330,6 @@ const populatedBarChartData = computed(() => {
       }
     }
   }
-  console.log('result:', result)
   return result
 })
 </script>

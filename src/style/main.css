@@ -53,3 +53,20 @@ p {
     background-color: pink;
     border: 5px dashed red;
 }
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    font-size: 0.9rem;
+    top: 9px;
+    right: 10px;
+    position: absolute;
+}
