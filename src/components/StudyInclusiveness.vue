@@ -26,25 +26,20 @@
                 <NiceMetric label="% female employment" :value="`${percentFemaleEmployment}%`"/>
             </div>
             <div class="w-4/5">
-                <BarChart v-if="studyData" :options="numberOfJobsData"></BarChart>
-                <div>
-                    <div class="flex flex-row justify-evenly">
-                        <div class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" v-for="stage in availableStages" @click="currentStage = stage" v-bind:key="stage">
-                            {{ stage }}
-                        </div>
-                    </div>
+                <BarChart v-if="studyData" :options="numberOfJobsData" @chartSeriesClick="handleNumberOfJobsDataChartSeriesClick"></BarChart>
+                <div class="bg-[#F7E9EB] rounded-2xl px-12 py-12">
                     <template v-if="currentStage !== ''">
-                        <div>Employment in {{ currentStage }}</div>
-                            <div class="flex flex-row">
-                                <div>
-                                    <Ring v-if="studyData" :options="currentStageEmploymentByTypeOfActorData" style="height: 300px; width: 300px;"></Ring>
-                            </div>
-                            <div>
-                                <Ring v-if="studyData" :options="currentStageEmploymentByQualificationData" style="height: 300px; width: 300px;"></Ring>
-                            </div>
-                            <div>
-                                <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px; width: 300px;"></Ring>
-                            </div>
+                        <span class="text-[#303030] text-xl"><strong>Employment</strong> in {{ currentStage }}</span>
+                            <div class="flex flex-row w-full justify-evenly mt-6">
+                                <div class="w-1/3 aspect-w-1 aspect-h-1">
+                                    <Ring v-if="studyData" :options="currentStageEmploymentByTypeOfActorData" style="height: 300px;"></Ring>
+                                </div>
+                                <div class="w-1/3 aspect-w-1 aspect-h-1">
+                                    <Ring v-if="studyData" :options="currentStageEmploymentByQualificationData" style="height: 300px;"></Ring>
+                                </div>
+                                <div class="w-1/3 aspect-w-1 aspect-h-1">
+                                    <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px;"></Ring>
+                                </div>
                         </div>
                     </template>
                 </div>
@@ -79,7 +74,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import BarChart from './charts/BarChart.vue'
 import Ring from './charts/Ring.vue'
 import NiceMetric from './NiceMetric.vue'
@@ -92,6 +87,7 @@ const props = defineProps({
     currency: String
     })
 
+const currentStage = ref('')
 
 const prettyAmount = computed(() => {
   return (amount) => CurrencyUtils.prettyFormatAmount(amount, props.currency)
@@ -100,8 +96,6 @@ const prettyAmount = computed(() => {
 const convertAmount = computed(() => {
   return (amount) => CurrencyUtils.getValueInCurrency(amount, props.studyData.localCurrency, props.currency, props.studyData.year)
 })
-
-const currentStage = ref('')
 
 const formatNumber = (value) => value ? value.toLocaleString(undefined, { maximumFractionDigits: 2}) : "-"
 
@@ -181,11 +175,15 @@ const numberOfJobsData = computed(() => {
 
         if (subTotal !== 0) {
             labels.push(stage.name)
-            const color = currentStage.value === stage ? 'orange' : 'lightBlue'
+            const color = currentStage.value === stage.name ? '#F7E9EB' : 'lightBlue'
+            const emphasisColor = currentStage.value === stage.name ? "#f7d9de" : '#90d0e5'
             values.push({
                 value: subTotal,
                 itemStyle: {
-                    color
+                    color,
+                    emphasis: {
+                        color: emphasisColor
+                    }
                 }
             })
             let toolTipValue = `${stage.name}: ${subTotal}`
@@ -243,6 +241,7 @@ const availableStages = computed(() => {
     return numberOfJobsData.value.xAxis.data
 })
 
+
 const totalNumberOfJobs = computed(() => {
   return formatNumber(numberOfJobsData.value.series[0].data.map(itemData => itemData.value).reduce((res, item) => res + item, 0))
 })
@@ -264,7 +263,7 @@ const currentStageEmploymentByTypeOfActorData = computed(() => {
     const title = {
         text: 'By type of actor',
         left: 'center',
-        top: 50
+        top: 0
     }
 
     let data = currentStageActors.map(actor => {
@@ -282,7 +281,7 @@ const currentStageEmploymentByTypeOfActorData = computed(() => {
             {
                 type: 'pie',
                 data,
-                radius: ['30%', '40%']
+                radius: ['20%', '40%']
             }
         ]
     };
@@ -295,7 +294,7 @@ const currentStageEmploymentByQualificationData = computed(() => {
     const title = {
         text: 'By qualification',
         left: 'center',
-        top: 50
+        top: 0
     }
 
     let data = [
@@ -321,7 +320,7 @@ const currentStageEmploymentByQualificationData = computed(() => {
             {
                 type: 'pie',
                 data,
-                radius: ['30%', '40%']
+                radius: ['20%', '40%']
             }
         ]
     };
@@ -334,7 +333,7 @@ const currentStageEmploymentByGenderData = computed(() => {
     const title = {
         text: 'By gender',
         left: 'center',
-        top: 50
+        top: 0
     }
 
     let data = [
@@ -356,7 +355,7 @@ const currentStageEmploymentByGenderData = computed(() => {
             {
                 type: 'pie',
                 data,
-                radius: ['30%', '40%']
+                radius: ['20%', '40%']
             }
         ]
     };
@@ -477,6 +476,12 @@ const netOperatingProfitByNumberActorsData = computed(() => {
         ]};
     }
 )
+
+const handleNumberOfJobsDataChartSeriesClick = (event) => currentStage.value = event.name
+
+onMounted(() => {
+    currentStage.value = availableStages.value[0]
+})
 </script>
 
 <script>

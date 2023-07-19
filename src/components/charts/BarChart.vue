@@ -1,6 +1,6 @@
 <template>
     <div class="bar-chart">
-      <v-chart class="chart" :option="options" />
+      <v-chart class="chart" :option="options" @click="$emit('chartSeriesClick', $event)"/>
     </div>
 </template>
 
@@ -28,13 +28,12 @@ use([
   LegendComponent,
   GridComponent
 ]);
+
 </script>
 
 <style scoped lang="scss">
 .bar-chart {
   height: 500px;
-  margin-top: 10px;
-  margin-bottom: 20px;
 }
 .chart {
   height: 500px;
