@@ -7,6 +7,12 @@ const CHANGE_RATES = {
     2020: 1915.04617583333,
     2021: 1975.95088138768
   },
+  "BIF": {
+    2018: 1782.876875,
+    2019: 1845.62289069697,
+    2020: 1915.04617583333,
+    2021: 1975.95088138768
+  },
   "CFA": {
     2014: 500.00,
     2015: 588.24,
@@ -173,5 +179,6 @@ export default {
   convert_to_usd,
   getCurrencySymbol,
   getValueInCurrency,
-  prettyFormatAmount
+  prettyFormatAmount,
+  CHANGE_RATES
 };

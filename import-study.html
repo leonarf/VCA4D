@@ -15,24 +15,28 @@
     <h1>Import a Study</h1>
 
     <h2>Step 1: Import study's XLS file and convert it to JSON</h1>
-    <input type="file" id="fileUpload" accept=".xls,.xlsx" /><br />
+      <input type="file" id="fileUpload" accept=".xls,.xlsx" /><br />
     <button type="button" id="uploadExcel">Convert</button>
     <br/>
     <br/>
     Output:
     <br/>
-    <textarea id="jsonData" style="width: 100%; height: 400px;"></textarea>
-
-
+    <textarea id="jsonData" style="width: 100%; height: 150px;"></textarea>
+    
+    
     <h2>Step 2: Generate the study JSON file (with data populated from the Excel file)</h2>
     <button type="button" id="convertToStudyFile">Generate</button>
     <br/>
     <br/>
     Output:
     <br/>
-    <textarea id="studyAsJson" style="width: 100%; height: 400px;"></textarea>
-
-
+    <textarea id="studyAsJson" style="width: 100%; height: 150px;"></textarea>
+    
+    <div id="errors" style="display: none;">
+      <div>Errors:</div>
+      <p id="error-details"></p>
+    </div>
+    
     <h2>Step 3: Download the generated study JSON file or save it to browser's localStorage</h2>
     <button type="button" id="downloadStudyFile">Download</button>
     <button type="button" id="saveStudyToBrowser">Save to localStorage</button>
@@ -75,6 +79,61 @@
           fileReader.readAsBinaryString(selectedFile);
         }
       });
+
+      const getErrors = (study) => {
+        let errors = []
+
+        if (!['BIF', 'CFA'].includes(study.localCurrency)) {
+          errors.push(`<span style="color: red;">Unknown currency ${study.localCurrency}</span>`)
+        }
+        for (const property of [
+          'product',
+          'country',
+          'year',
+        ]) {
+          if (!study[property]) {
+            errors.push(`<span style="color: red;">Missing property ${property}</span>`)
+          }
+        }
+        for (const property of [
+          'valueAddedShareOfGDP',
+          'valueAddedShareOfAgriculturalGDP',
+          'rateOfIntegrationIntoDomesticEconomy',
+          'publicFundsBalancePublicBudgetRatio',
+          'balanceOfTradeOfValueChain',
+          'domesticResourceCostRatio',
+          'giniIndex',
+          'totalValueAdded',
+          'publicFundBalance',
+          'nominalProtectionCoefficient',
+        ]) {
+          if (!study[property]) {
+            errors.push(`Missing property ${property}`)
+          }
+        }
+        study.data.stages.filter(stage => !stage.description).map(stage => {
+          errors.push(`Stage ${stage.name} has no description`)
+        })
+        const stageNames = study.data.stages.map(stage => stage.name)
+        study.data.actors.filter(actor => !stageNames.includes(actor.stage)).map(actor => {
+          errors.push(`<span style="color: red;">Actor ${actor.name} has a stage ${actor.stage} not defined in Stages</span>`)
+        })
+        const actorNames = study.data.actors.map(actor => actor.name)
+        study.data.flows.filter(flow => !actorNames.includes(flow.buyerActorName) || !actorNames.includes(flow.sellerActorName)).map(flow => {
+          errors.push(`<span style="color: red;">Unknown actor name in flow ${flow}</span>`)
+        })
+
+        const totalCreatedAddedValue = study.data.actors.map(actor => actor.directAddedValue || 0).reduce((res, curr) => res + curr, 0)
+        let totalReceivedAddedValue = study.data.actors.map(actor => actor.receivedAddedValue).reduce((res, curr) => res + curr, 0)
+        for (const key in study.data.addedValue) {
+          totalReceivedAddedValue += study.data.addedValue[key]
+        }
+        const diff = Math.round(Math.abs(totalCreatedAddedValue - totalReceivedAddedValue))
+        if (diff > 0) {
+          errors.push(`<span style="color: red;">Total added value created and received should match, diff = ${diff}</span>`)
+        }
+        return errors
+      }
 
       const getStudyProperty = (json_from_xls, property_name) => {
         return json_from_xls["Value Chain"].find((el => {return el["Property"] == property_name;}))["Value"];
@@ -223,13 +282,11 @@
           }
           return actor
         })
-        console.log('actors', actors.map(actor => actor.name))
         actors.sort((actor1, actor2) => {
           const stage1 = stages.find(stage => stage.name === actor1.stage)
           const stage2 = stages.find(stage => stage.name === actor2.stage)
           return (stage1?.index || 0) - (stage2?.index || 0) 
         })
-        console.log('actors', actors.map(actor => actor.name))
 
         return {
           stages,
@@ -372,9 +429,19 @@
         const commodity = getStudyProperty(json_from_xls, "Commodity");
         const year = getStudyProperty(json_from_xls, "Reference Year");
         const localCurrency = getStudyProperty(json_from_xls, "Currency");
+        const valueAddedShareOfGDP = getStudyProperty(json_from_xls, "Value added share Of national GDP");
+        const valueAddedShareOfAgriculturalGDP = getStudyProperty(json_from_xls, "Value added share Of the agricultural sector GDP");
+        const rateOfIntegrationIntoDomesticEconomy = getStudyProperty(json_from_xls, "Rate Of integration into domestic economy");
+        const publicFundsBalancePublicBudgetRatio = getStudyProperty(json_from_xls, "Public funds balance / Public budget");
+        const balanceOfTradeOfValueChain = getStudyProperty(json_from_xls, "Balance Of trade Of the value chain");
+        const domesticResourceCostRatio = getStudyProperty(json_from_xls, "Domestic resource cost ratio");
+        const giniIndex = getStudyProperty(json_from_xls, "Gini index");
+        const totalValueAdded = getStudyProperty(json_from_xls, "Total value added");
+        const publicFundBalance = getStudyProperty(json_from_xls, "Public fund balance");
+        const nominalProtectionCoefficient = getStudyProperty(json_from_xls, "Nominal protection coefficient");
+        
         const id = slugify(commodity + "-" + country + "-" + year);
 
-        console.log('json_from_xls', json_from_xls)
         const studyData = createStudyDataFromJson(json_from_xls)
         console.log('studyData', studyData)
         const study = {
@@ -383,9 +450,24 @@
           country,
           year,
           localCurrency,
+          valueAddedShareOfGDP,
+          valueAddedShareOfAgriculturalGDP,
+          rateOfIntegrationIntoDomesticEconomy,
+          publicFundsBalancePublicBudgetRatio,
+          balanceOfTradeOfValueChain,
+          domesticResourceCostRatio,
+          giniIndex,
+          totalValueAdded,
+          publicFundBalance,
+          nominalProtectionCoefficient,
           environment : studyDefaultEnvironment, // TODO: fill. But it looks that data contained in this key comes from another xls file.
           data: studyData
         };
+        const errors = getErrors(study)
+        if (errors.length > 0) {
+          document.getElementById('errors').style.display = 'inline-block'
+          document.getElementById('error-details').innerHTML = errors.join('<br>')
+        } 
         window.study = study;
         const study_as_str = JSON.stringify(study);
         document.getElementById("studyAsJson").innerHTML = study_as_str;
