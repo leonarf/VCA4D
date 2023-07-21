@@ -9,7 +9,6 @@ import './types.js'
  * @returns {data is StudyEnvironment}
  */
 function isStudyEnvironment(data){
-    console.log('data for StudyEnvironment', data)
     return Object(data) === data &&
         Array.isArray(data.brief) &&
         Object(data.impacts) === data.impacts // vérification faible. PPP : à améliorer
@@ -21,8 +20,6 @@ function isStudyEnvironment(data){
  * @returns {data is Study}
  */
 function isStudy(data){
-    console.log('data for Study', data)
-
     return Object(data) === data &&
         typeof data.country === 'string' &&
         typeof data.product === 'string' &&
@@ -37,7 +34,6 @@ function isStudy(data){
  * @returns {Promise<Study>}
  */
 export default function getStudyData(studyId){
-    console.log('getStudyData')
     return json(`../data/${studyId}.json`)
         .then(data => {
             if(isStudy(data))

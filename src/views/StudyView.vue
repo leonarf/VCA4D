@@ -27,7 +27,7 @@
 
 <script setup>
 import { ref, onMounted, watch } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 import Skeleton from '../components/Skeleton.vue'
 import StudyOverview from '../components/StudyOverview.vue'
 import StudyEnvironment from '../components/StudyEnvironment.vue'
@@ -39,26 +39,39 @@ import StudyMenu from '../components/study/StudyMenu.vue'
 import getStudyData from '../studyData.js'
 
 const route = useRoute();
+const router = useRouter()
 
 const currency = ref('')
 const updateCurrency = (event) => {
     currency.value = event
 }
 
-
 const view = ref(undefined)
 const studyData = ref(undefined)
 const error = ref(undefined)
 
 watch (studyData, () => {
-    currency.value = studyData.value.localCurrency
+    if (!currency.value) {
+        currency.value = studyData.value.localCurrency
+    }
+})
+
+watch(currency, (newCurrency) => {
+    router.push({ query: 
+        {
+            ...route.query,
+            currency: newCurrency
+        }
+    })
 })
 
 onMounted(async () => {
   const studyId = route.query.id;
   const studyView = route.query.view;
+  const currencyFromUrl = route.query.currency
 
   view.value = studyView;
+  currency.value = currencyFromUrl
 
   try {
     const data = await getStudyData(studyId)
@@ -69,7 +82,6 @@ onMounted(async () => {
 })
 
 const onBeforeRouteUpdate = (to, from) => {
-
   const view = to.query.view;
   view.value = view;
 };
