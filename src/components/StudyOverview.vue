@@ -217,9 +217,12 @@ const populatedSankeyChartData = computed ( () => {
     // It looks like in echarts, "nodes" key can also be named "data"
     result.series.nodes = actors.map((actor) => {
         const actorStage = stages.find((stage) => stage.name === actor.stage);
+        if (!actorStage) {
+            console.log("Stage not found for", actor)
+        }
         return {
             "name": actor.name,
-            "depth": actorStage?.index || 10 // Actor with unknown stages will be at far right
+            "depth": actorStage ? actorStage.index : 10 // Actor with unknown stages will be at far right
         };
     });
 
@@ -227,6 +230,9 @@ const populatedSankeyChartData = computed ( () => {
         const { buyerActorName, sellerActorName, product, monetaryValue, volumeExchanged, unitPrice, volumeUnit } = flow
         const sourceActor = actors.find((actor) => actor.name === sellerActorName);
         const targetActor = actors.find((actor) => actor.name === buyerActorName);
+        if (targetActor == sourceActor) {
+            return {} // Ignore autoconsumption
+        }
         return {
             "source": sourceActor.name,
             "target": targetActor.name,
@@ -286,7 +292,7 @@ const populatedSankeyChartData = computed ( () => {
                         },
                         {
                             label: "Unitary price (local curency)",
-                            value: params.data['Unitary price (local curency)']
+                            value: CurrencyUtils.prettyFormatAmount(params.data['Unitary price (local curency)'], monetaryCurrency)
                         },
                         {
                             label: "Volume exchanged (kg Of product)",
