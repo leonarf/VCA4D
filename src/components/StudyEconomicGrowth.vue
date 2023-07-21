@@ -275,14 +275,14 @@ const populatedBarChartData = computed(() => {
   for (const actor of actors.value) {
     categories.push(actor.name)
     var stageName = actor.stage
-    const v1 = actor.netOperatingProfit
-    var v2 = actor.totalCosts
+    const v1 = convertAmount.value(actor.netOperatingProfit) 
+    var v2 = convertAmount.value(actor.totalCosts) 
     if (stageName == 'Producers') {
       v2 = v1 + v2 // Profits are considered as cost for producer while computing Return On Investment
     }
     values.push(((100 * v1) / v2).toFixed(0))
-    tooltip[actor.name] = `Net operating profit = ${CurrencyUtils.formatAmount(v1)}<br>
-                                           Total costs = ${CurrencyUtils.formatAmount(v2)}<br>
+    tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(v1)}<br>
+                                           Total costs = ${prettyAmount.value(v2)}<br>
                                            Return on investment = ${CurrencyUtils.formatPercent(
                                              (100 * v1) / v2
                                            )}`
