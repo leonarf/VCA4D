@@ -215,7 +215,7 @@ const totalAddedValueCreators = computed(() => {
 
 const publicFundsBalance = computed(() => {
   const balanceValue = convertAmount.value(props.studyData.data.addedValue.government)
-  return (balanceValue > 0 ? "+" : "-") + prettyAmount.value(balanceValue)
+  return (balanceValue > 0 ? "+" : "") + prettyAmount.value(balanceValue)
 })
 
 const publicFinancesBarData = computed(() => {
