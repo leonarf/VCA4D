@@ -120,7 +120,7 @@ import WholesaleLogo from '../images/icons/wholesale.svg'
 import CollectionLogo from '../images/icons/collection.svg'
 import ProductionLogo from '../images/icons/production.svg'
 import ExportLogo from '../images/icons/export.svg'
-import SectionTitle from './typography/SectionTitle.vue'
+import SectionTitle from '@typography/SectionTitle.vue'
 
 
 import SankeyChart from './SankeyChart.vue';

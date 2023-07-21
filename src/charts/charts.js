@@ -1,7 +1,7 @@
 const RADIUSES_PIE = ['20%', '40%']
 const formatNumber = (value) => value ? value.toLocaleString(undefined, { maximumFractionDigits: 2 }) : "-"
 
-export const getNumberOfActorsData = (stages, actors) => {
+export const getNumberOfActorsData = (stages, actors, currentStage) => {
     let tooltip = {}
     let labels = []
     let values = []
@@ -12,7 +12,17 @@ export const getNumberOfActorsData = (stages, actors) => {
             .reduce((res, actor) => res + actor.numberOfActors || 0, 0)
         if (subTotal !== 0) {
             labels.push(stage.name)
-            values.push(subTotal)
+            const color = currentStage.value === stage.name ? '#F7E9EB' : 'lightBlue'
+            const emphasisColor = currentStage.value === stage.name ? "#f7d9de" : '#90d0e5'
+            values.push({
+                value: subTotal,
+                itemStyle: {
+                    color,
+                    emphasis: {
+                        color: emphasisColor
+                    }
+                }
+            })
             let toolTipValue = `${stage.name}: ${formatNumber(subTotal)}`
             for (const actor of stageActors) {
                 toolTipValue += `<br>${actor.name}: ${formatNumber(actor.numberOfActors)}`
@@ -38,7 +48,7 @@ export const getNumberOfActorsData = (stages, actors) => {
                 if (!d.data) {
                     return ""
                 }
-                return formatNumber(d.data)
+                return formatNumber(d.data.value)
             },
             textStyle: {
                 fontSize: 22,
@@ -207,6 +217,14 @@ export const getEmploymentByGenderData = (actors) => {
         }
     ]
     return getMiniPieChart(data, 'By gender')
+}
+
+export const getNumberOfActorsByTypeOfActorData = (actors) => {
+    let data = actors.map(actor => ({
+        value: actor.numberOfActors || 10,
+        name: actor.name
+    }))
+    return getMiniPieChart(data, 'By actor')
 }
 
 export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyAmount) => {

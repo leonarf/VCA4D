@@ -78,13 +78,13 @@
 <script setup>
 import { computed } from 'vue'
 
-import NiceMetric from './NiceMetric.vue'
-import InfoTitle from './typography/InfoTitle.vue'
-import BarChart from './charts/BarChart.vue'
+import NiceMetric from '@typography/NiceMetric.vue'
+import InfoTitle from '@typography/InfoTitle.vue'
+import BarChart from '@charts/BarChart.vue'
 import Utils from '@/utils/utils.js'
 import CurrencyUtils from '@/utils/currencyUtils.js'
-import Ring from './charts/Ring.vue'
-import SectionTitle from './typography/SectionTitle.vue'
+import Ring from '@charts/Ring.vue'
+import SectionTitle from '@typography/SectionTitle.vue'
 
 const props = defineProps({
   studyData: Object,
