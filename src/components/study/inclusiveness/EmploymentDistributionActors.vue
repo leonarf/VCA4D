@@ -1,13 +1,13 @@
 <template>
     <InfoTitle title="Number of actors" class="mb-4 mt-8" />
-    <div class="flex flex-row items-center mt-4">
+    <div class="flex flex-row items-start mt-4">
         <div class="w-1/5">
             <NiceMetric label="Number of actors" :value="totalNumberOfActors" />
         </div>
-        <div class="w-4/5 flex flex-row-reverse">
+        <div class="w-4/5">
             <BarChart v-if="studyData" :options="numberOfActorsData"
-                @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
-            <div class="bg-[#F7E9EB] rounded-2xl px-12 py-12 w-2/3">
+                        @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
+            <div class="bg-[#F7E9EB] rounded-2xl px-12 py-12 w-full">
                 <template v-if="currentStage !== ''">
                     <span class="text-[#303030] text-xl"><strong>Number of actors</strong> in {{ currentStage }}</span>
                     <div class="flex flex-row w-full justify-evenly mt-6">
@@ -49,7 +49,6 @@ const numberOfActorsData = computed(() => {
 })
 
 const availableStages = computed(() => numberOfActorsData.value.xAxis.data)
-console.log('availableStages', availableStages.value)
 
 
 const totalNumberOfActors = computed(() => {

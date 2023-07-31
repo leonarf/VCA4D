@@ -68,7 +68,7 @@ export const getNumberOfActorsData = (stages, actors, currentStage) => {
             {
                 type: 'bar',
                 data: values,
-                barWidth: '75%',
+                barWidth: '80%',
             }
         ]
     };
@@ -142,20 +142,20 @@ export const getNumberOfJobsData = (stages, actors, currentStage) => {
             {
                 type: 'bar',
                 data: values,
-                barWidth: '100%'
+                barWidth: '80%'
             }
         ]
     };
 }
 
-const getMiniPieChart = (data, title) => {
+const getMiniPieChart = (data, title, valueFormatter) => {
     const titleItem = {
         text: title,
         left: 'center',
         top: 0
     }
     let tooltip = {}
-    data.map(item => tooltip[item.name] = `<strong>${item.name}</strong>: ${formatNumber(item.value)}`)
+    data.map(item => tooltip[item.name] = `<strong>${item.name}</strong>: ${valueFormatter ? valueFormatter(item.value) : formatNumber(item.value)}`)
     data = data.filter(item => item.value !== 0)
 
     return {
@@ -185,6 +185,16 @@ export const getEmploymentByTypeOfActorData = (actors) => {
         }
     })
     return getMiniPieChart(data, 'By type of actor')
+}
+
+export const getNetOperatingProfitByTypeOfActorData = (actors, convertAmount, prettyAmount) => {
+    let data = actors.map(actor => {
+        return {
+            value: convertAmount(actor.netOperatingProfit || 0) ,
+            name: actor.name
+        }
+    })
+    return getMiniPieChart(data, 'By type of actor', prettyAmount)
 }
 
 export const getEmploymentByQualificationData = (actors) => {
@@ -227,7 +237,7 @@ export const getNumberOfActorsByTypeOfActorData = (actors) => {
     return getMiniPieChart(data, 'By actor')
 }
 
-export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyAmount) => {
+export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyAmount, currentStage) => {
 
     let tooltip = {}
     let labels = []
@@ -239,7 +249,17 @@ export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyA
             .reduce((res, actor) => res + actor.netOperatingProfit || 0, 0))
         if (subTotal !== 0) {
             labels.push(stage.name)
-            values.push(subTotal)
+            const color = currentStage.value === stage.name ? '#F7E9EB' : 'lightBlue'
+            const emphasisColor = currentStage.value === stage.name ? "#f7d9de" : '#90d0e5'
+            values.push({
+                value: subTotal,
+                itemStyle: {
+                    color,
+                    emphasis: {
+                        color: emphasisColor
+                    }
+                }
+            })
             let toolTipValue = `${stage.name}: ${prettyAmount.value(subTotal)}`
             for (const actor of stageActors) {
                 toolTipValue += `<br>${actor.name}: ${prettyAmount.value(actor.netOperatingProfit)}`
@@ -261,7 +281,7 @@ export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyA
                 if (!d.data) {
                     return ""
                 }
-                return prettyAmount.value(d.data)
+                return prettyAmount.value(d.data.value)
             },
         },
         tooltip: {
