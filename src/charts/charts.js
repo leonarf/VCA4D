@@ -1,5 +1,5 @@
+import { formatNumber } from '@/utils/utils.js'
 const RADIUSES_PIE = ['20%', '40%']
-const formatNumber = (value) => value ? value.toLocaleString(undefined, { maximumFractionDigits: 2 }) : "-"
 
 export const getNumberOfActorsData = (stages, actors, currentStage) => {
     let tooltip = {}

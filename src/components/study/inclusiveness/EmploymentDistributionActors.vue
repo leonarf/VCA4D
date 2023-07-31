@@ -29,6 +29,7 @@ import {
     getNumberOfActorsData,
     getNumberOfActorsByTypeOfActorData,
 } from '@/charts/charts'
+import { formatNumber } from '@/utils/utils.js'
 import Ring from '@charts/Ring.vue'
 import NiceMetric from '@typography/NiceMetric.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
@@ -38,8 +39,6 @@ const props = defineProps({
 })
 
 const currentStage = ref('')
-
-const formatNumber = (value) => value ? value.toLocaleString(undefined, { maximumFractionDigits: 2 }) : "-"
 
 const stages = computed(() => props.studyData.data.stages)
 const actors = computed(() => props.studyData.data.actors)

@@ -81,7 +81,7 @@ import { computed } from 'vue'
 import NiceMetric from '@typography/NiceMetric.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 import BarChart from '@charts/BarChart.vue'
-import Utils from '@/utils/utils.js'
+import { getStageColor } from '@/utils/utils.js'
 import CurrencyUtils from '@/utils/currencyUtils.js'
 import Ring from '@charts/Ring.vue'
 import SectionTitle from '@typography/SectionTitle.vue'
@@ -325,7 +325,7 @@ const populatedBarChartData = computed(() => {
       },
       itemStyle: {
         color: function (info) {
-          return Utils.getStageColor(actors.value.find(actor => actor.name === info.name).stage)
+          return getStageColor(actors.value.find(actor => actor.name === info.name).stage)
         }
       }
     }
