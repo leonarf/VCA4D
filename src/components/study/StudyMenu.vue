@@ -2,20 +2,8 @@
     <nav class="flex flex-col">
         <div class="text-[#868686] mb-2">Contents</div>
         <ol class="text-[#2E6BAD] space-y-2">
-            <li>
-                <RouterLink :to="'/study?id=' + studyId">Overview</RouterLink>
-            </li>
-            <li>
-                <RouterLink :to="'/study?id=' + studyId + '&view=economic-growth'">Contribution to economic growth</RouterLink>
-            </li>
-            <li>
-                <RouterLink :to="'/study?id=' + studyId + '&view=inclusiveness'">Inclusiveness</RouterLink>
-            </li>
-            <li>
-                <RouterLink :to="'/study?id=' + studyId + '&view=social-sustainability'">Social sustainability</RouterLink>
-            </li>
-            <li>
-                <RouterLink :to="'/study?id=' + studyId + '&view=environment'">Environmental sustainability</RouterLink>
+            <li v-for="(route, indexRoute) in routes" :key="indexRoute">
+                <RouterLink :to="`/study?id=${studyId}${route.view ? `&view=${route.view}` : ''}&currency=${currency}`">{{ route.label }}</RouterLink>
             </li>
             <li>
                 <a class="TODO">Study brief and full report</a>
@@ -46,6 +34,28 @@
         currency: String
     })
     const selectedCurrency = ref(props.currency);
+    const routes = [
+        {
+            view: undefined,
+            label: 'Overview'
+        },
+        {
+            view: 'economic-growth',
+            label: 'Contribution to economic growth'
+        },
+        {
+            view: 'inclusiveness',
+            label: 'Inclusiveness'
+        },
+        {
+            view: 'social-sustainability',
+            label: 'Social sustainability'
+        },
+        {
+            view: 'environment',
+            label: 'Environmental sustainability'
+        }
+    ]
 </script>
 
 <style scoped lang="scss">

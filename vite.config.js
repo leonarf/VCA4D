@@ -9,7 +9,9 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@typography': fileURLToPath(new URL('./src/components/typography', import.meta.url)),
+      '@charts': fileURLToPath(new URL('./src/components/charts', import.meta.url))
     }
   },
   build: {
