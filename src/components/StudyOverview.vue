@@ -14,12 +14,6 @@
             </div>
         </section>
 
-        <section>
-            <SankeyChart :options="populatedSankeyChartData"></SankeyChart>
-            <div>Display mode: <button @click="toggleSankeyGraphDisplayMode">{{ sankeyGraphPossibleDisplayModesList[sankeyGraphDisplayMode] }}</button></div>
-        </section>
-
-
         <section v-if="studyData" class="explore">
             <h2>Explore the 4 dimensions of the value chain</h2>
             
@@ -58,6 +52,13 @@
 
         </section>
 
+        <section v-if="studyData">
+            <SankeyChart :options="populatedSankeyChartData"></SankeyChart>
+            <div>Display mode: <button @click="toggleSankeyGraphDisplayMode">{{ sankeyGraphPossibleDisplayModesList[sankeyGraphDisplayMode] }}</button></div>
+        </section>
+        <section v-else class="TODO">
+            <p>Not enough data to display sankey diagram</p>
+        </section>
 
         <section>
             <h2>Where these data come from?</h2>
@@ -120,7 +121,8 @@ import WholesaleLogo from '../images/icons/wholesale.svg'
 import CollectionLogo from '../images/icons/collection.svg'
 import ProductionLogo from '../images/icons/production.svg'
 import ExportLogo from '../images/icons/export.svg'
-import SectionTitle from '@typography/SectionTitle.vue'
+import SectionTitle from './typography/SectionTitle.vue'
+import CurrencyUtils from '@/utils/currencyUtils.js'
 
 
 import SankeyChart from './SankeyChart.vue';
@@ -169,26 +171,9 @@ const getStepLogo = (step) => {
 
 
 const populatedSankeyChartData = computed ( () => {
-    let chartTitle = "The various actors and their share in the flows of the value chain";
-    let nodes = [];
-    let links = [];
-    let monetaryCurrency = "&euro;";
-    let levels = [];
-    let result = {
-        title: {
-            text: chartTitle,
-            //left: "center"
-        },
-        series: {
-            type: 'sankey',
-            layout: 'none',
-            emphasis: {
-                focus: 'adjacency'
-            },
-            nodes: [],
-            links: []
-        }
-    };
+    let monetaryCurrency = props.studyData.localCurrency
+    const { stages, actors, flows } = props.studyData.data
+
     const colors = [
         "#5470c6",
         "#91cc75",
@@ -200,133 +185,143 @@ const populatedSankeyChartData = computed ( () => {
         "#9a60b4",
         "#ea7ccc"
     ];
-    if (!props.studyData){
-        chartTitle += "(NOT ENOUGH DATA)";
-        result.title.text = chartTitle;
-        return result;
-    } else {
-        const { stages, actors, flows } = props.studyData.data
 
-        monetaryCurrency = props.studyData.localCurrency
-        
-        levels = stages.map(({ index }) => {
-            const stageColor = colors[index % colors.length];
-            return {
-              depth: index,
-              itemStyle: {
-                color: stageColor
-              },
-              lineStyle: {
-                color: 'source',
-                opacity: 0.6
-              }
-            };
-        });
+    let result = {
+        title: {
+            text: "The various actors and their share in the flows of the value chain",
+            //left: "center"
+        },
+        series: {
+            type: 'sankey',
+            layoutIterations: 200,
+            emphasis: {
+                focus: 'adjacency'
+            },
+        }
+    };
 
-
-        nodes = actors.map((actor) => {
-            const actorStage = stages.find((stage) => stage.name === actor.stage);
-            return {
-                "name": actor.name,
-                "depth": actorStage?.index || 0
-            };
-        });
-        links = flows.map((flow) => {
-            const { buyerActorName, sellerActorName, product, monetaryValue, volumeExchanged, unitPrice, volumeUnit } = flow
-            const sourceActor = actors.find((actor) => actor.name === sellerActorName);
-            const targetActor = actors.find((actor) => actor.name === buyerActorName);
-            return {
-                "source": sourceActor.name,
-                "target": targetActor.name,
-                "value": flow[sankeyGraphPossibleDisplayModesList[sankeyGraphDisplayMode.value]],
-                "edgeLabel": {
-                    show: true,
-                    formatter: () => {
-                        return product;
-                    }
-                },
-                "Monetary value": monetaryValue,
-                "Volume exchanged (kg Of product)": volumeExchanged,
-                "Products": product,
-                "Unitary price (local curency)": unitPrice,
-                "Volume Unit": volumeUnit,
-                "Remark": ''
-            };
-        });
-        result.tooltip = {
-            trigger: 'item',
-            triggerOn: 'mousemove',
-            formatter: (params, ticket) => {
-                if (params?.dataType === "node" || params?.dataType === "edge"){
-                    let items = [];
-                    let rendered_items = [];
-                    if (params?.dataType === "node"){
-                        const actorStage = actors.find((actor) => actor.name === params.data.name);
-                        const actorStageLabel = actorStage ? actorStage.stage : undefined;
-                        items = [
-                            {
-                                label: "Name",
-                                value: params.data.name
-                            },
-                            {
-                                label: "Stage",
-                                value: actorStageLabel
-                            }
-                        ];
-                    }
-                    else if (params?.dataType === "edge"){
-                        items = [
-                            {
-                                label: "Source",
-                                value: params.data.source,
-                            },
-                            {
-                                label: "Target",
-                                value: params.data.target
-                            },
-                            {
-                                label: "Monetary value",
-                                value: `${params.data["Monetary value"]} ${monetaryCurrency}`
-                            },
-                            {
-                                label: "Products",
-                                value: params.data['Products']
-                            },
-                            {
-                                label: "Unitary price (local curency)",
-                                value: params.data['Unitary price (local curency)']
-                            },
-                            {
-                                label: "Volume exchanged (kg Of product)",
-                                value: params.data['Volume exchanged (kg Of product)']
-                            },
-                            {
-                                label: "Volume unit",
-                                value: params.data['Volume unit']
-                            },
-                            {
-                                label: "Remark",
-                                value: params.data['Remark']
-                            }
-                        ];
-                    }
-                    rendered_items = items.map((item) => {
-                        if (item.value === undefined){
-                            return null;
-                        }
-                        return `<li><strong>${item.label}</strong>: ${item.value}</li>`;
-                    });
-                    return `<div style='max-width: 400px; white-space: normal;'><ul style='list-style: initial; margin: 0 10px; padding: initial;'>${rendered_items.join('')}</ul></div>`;
-                }
-                else {
-                    return '';
-                }
+    result.series.levels = stages.map(({ index }) => {
+        const stageColor = colors[index % colors.length];
+        return {
+            depth: index,
+            itemStyle: {
+            color: stageColor
+            },
+            lineStyle: {
+            color: 'source',
+            opacity: 0.6
             }
         };
-        result.series.nodes = nodes; // It looks like in echarts, "nodes" key can also be named "data"
-        result.series.links = links;
-        result.series.levels = levels;
-    }
+    });
+
+    // It looks like in echarts, "nodes" key can also be named "data"
+    result.series.nodes = actors.map((actor) => {
+        const actorStage = stages.find((stage) => stage.name === actor.stage);
+        if (!actorStage) {
+            console.log("Stage not found for", actor)
+        }
+        return {
+            "name": actor.name,
+            "depth": actorStage ? actorStage.index : 10 // Actor with unknown stages will be at far right
+        };
+    });
+
+    result.series.links = flows.map((flow) => {
+        const { buyerActorName, sellerActorName, product, monetaryValue, volumeExchanged, unitPrice, volumeUnit } = flow
+        const sourceActor = actors.find((actor) => actor.name === sellerActorName);
+        const targetActor = actors.find((actor) => actor.name === buyerActorName);
+        if (targetActor == sourceActor) {
+            return {} // Ignore autoconsumption
+        }
+        return {
+            "source": sourceActor.name,
+            "target": targetActor.name,
+            "value": flow[sankeyGraphPossibleDisplayModesList[sankeyGraphDisplayMode.value]],
+            "edgeLabel": {
+                show: true,
+                formatter: () => {
+                    return product;
+                }
+            },
+            "Monetary value": monetaryValue,
+            "Volume exchanged (kg Of product)": volumeExchanged,
+            "Products": product,
+            "Unitary price (local curency)": unitPrice,
+            "Volume Unit": volumeUnit,
+            "Remark": ''
+        };
+    });
+    result.tooltip = {
+        trigger: 'item',
+        triggerOn: 'mousemove',
+        formatter: (params, ticket) => {
+            if (params?.dataType === "node" || params?.dataType === "edge"){
+                let items = [];
+                let rendered_items = [];
+                if (params?.dataType === "node"){
+                    const actorStage = actors.find((actor) => actor.name === params.data.name);
+                    const actorStageLabel = actorStage ? actorStage.stage : undefined;
+                    items = [
+                        {
+                            label: "Name",
+                            value: params.data.name
+                        },
+                        {
+                            label: "Stage",
+                            value: actorStageLabel
+                        }
+                    ];
+                }
+                else if (params?.dataType === "edge"){
+                    items = [
+                        {
+                            label: "Source",
+                            value: params.data.source,
+                        },
+                        {
+                            label: "Target",
+                            value: params.data.target
+                        },
+                        {
+                            label: "Monetary value",
+                            value: CurrencyUtils.prettyFormatAmount(params.data["Monetary value"], monetaryCurrency)
+                        },
+                        {
+                            label: "Products",
+                            value: params.data['Products']
+                        },
+                        {
+                            label: "Unitary price (local curency)",
+                            value: CurrencyUtils.prettyFormatAmount(params.data['Unitary price (local curency)'], monetaryCurrency)
+                        },
+                        {
+                            label: "Volume exchanged (kg Of product)",
+                            value: params.data['Volume exchanged (kg Of product)']
+                        },
+                        {
+                            label: "Volume unit",
+                            value: params.data['Volume unit']
+                        },
+                        {
+                            label: "Remark",
+                            value: params.data['Remark']
+                        }
+                    ];
+                }
+                rendered_items = items.map((item) => {
+                    if (item.value === undefined){
+                        return null;
+                    }
+                    return `<li><strong>${item.label}</strong>: ${item.value}</li>`;
+                });
+                return `<div style='max-width: 400px; white-space: normal;'><ul style='list-style: initial; margin: 0 10px; padding: initial;'>${rendered_items.join('')}</ul></div>`;
+            }
+            else {
+                return '';
+            }
+        }
+    };
+
     return result;
 });
 </script>
