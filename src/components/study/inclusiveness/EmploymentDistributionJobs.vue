@@ -66,8 +66,8 @@ const totalNumberOfJobs = computed(() => {
 })
 
 const percentFemaleEmployment = computed(() => {
-    const totalFemale = actors.value.reduce((res, actor) => res + actor.employment?.totalFemale || 0, 0)
-    const total = actors.value.reduce((res, actor) => res + actor.employment?.total || 0, 0)
+    const totalFemale = actors.value.reduce((res, actor) => res + (actor.employment?.totalFemale || 0), 0)
+    const total = actors.value.reduce((res, actor) => res + (actor.employment?.total || 0), 0)
     return parseInt(totalFemale / total * 100)
 })
 
