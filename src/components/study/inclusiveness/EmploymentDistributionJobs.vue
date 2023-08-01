@@ -1,32 +1,33 @@
 <template>
     <InfoTitle title="Jobs" class="mt-8" />
-    <div class="flex flex-row items-start mb-8">
-        <div class="w-1/5 flex flex-col space-y-4 pt-8">
-            <NiceMetric label="Waged employment" :value="totalNumberOfJobs" />
-            <NiceMetric label="% female employment" :value="`${percentFemaleEmployment}%`" />
-        </div>
-        <div class="w-4/5">
-            <BarChart v-if="studyData" :options="numberOfJobsData"
-                @chartSeriesClick="handleNumberOfJobsDataChartSeriesClick"></BarChart>
-            <div class="bg-[#F7E9EB] rounded-2xl px-12 py-12">
-                <template v-if="currentStage !== ''">
-                    <span class="text-[#303030] text-xl"><strong>Employment</strong> in {{ currentStage }}</span>
-                    <div class="flex flex-row w-full justify-evenly mt-6">
-                        <div class="w-1/3 aspect-w-1 aspect-h-1">
-                            <Ring v-if="studyData" :options="currentStageEmploymentByTypeOfActorData"
-                                style="height: 300px;"></Ring>
-                        </div>
-                        <div class="w-1/3 aspect-w-1 aspect-h-1">
-                            <Ring v-if="studyData" :options="currentStageEmploymentByQualificationData"
-                                style="height: 300px;"></Ring>
-                        </div>
-                        <div class="w-1/3 aspect-w-1 aspect-h-1">
-                            <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px;">
-                            </Ring>
-                        </div>
-                    </div>
-                </template>
+    <div class="flex flex-col mb-8">
+        <div class="flex flex-row items-start">
+            <div class="w-1/5 flex flex-col space-y-4 pt-8">
+                <NiceMetric label="Waged employment" :value="totalNumberOfJobs" />
+                <NiceMetric label="% female employment" :value="`${percentFemaleEmployment}%`" />
             </div>
+            <div class="w-4/5">
+                <BarChart v-if="studyData" :options="numberOfJobsData"
+                    @chartSeriesClick="handleNumberOfJobsDataChartSeriesClick"></BarChart>
+            </div>
+        </div>
+        <div>
+            <MiniChartContainer :currentStage="currentStage" title="Employment">
+                <div class="flex flex-row w-full justify-evenly mt-6">
+                    <div class="w-1/3 aspect-w-1 aspect-h-1">
+                        <Ring v-if="studyData" :options="currentStageEmploymentByTypeOfActorData"
+                            style="height: 300px;"></Ring>
+                    </div>
+                    <div class="w-1/3 aspect-w-1 aspect-h-1">
+                        <Ring v-if="studyData" :options="currentStageEmploymentByQualificationData"
+                            style="height: 300px;"></Ring>
+                    </div>
+                    <div class="w-1/3 aspect-w-1 aspect-h-1">
+                        <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px;">
+                        </Ring>
+                    </div>
+                </div>
+            </MiniChartContainer>
         </div>
     </div>
 </template>
@@ -44,6 +45,7 @@ import { formatNumber } from '@/utils/utils.js'
 import Ring from '@charts/Ring.vue'
 import NiceMetric from '@typography/NiceMetric.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
+import MiniChartContainer from '@charts/MiniChartContainer.vue'
 
 const props = defineProps({
     studyData: Object,

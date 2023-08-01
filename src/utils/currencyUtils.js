@@ -113,11 +113,6 @@ const formatAmount = (amount) => {
   return formatted_amount
 }
 
-const formatPercent = (amount) => {
-  return amount.toFixed(2) + '%'
-}
-
-
 const convert_to_usd = (number, year) => {
   if (year && year in currency_conversion_factor) {
     var factor_to_use = currency_conversion_factor[year]
@@ -172,7 +167,6 @@ const convert_all_amounts = (item, year) => {
 
 export default {
   formatAmount,
-  formatPercent,
   changeCurrency,
   getUserCurrency,
   convert_all_amounts,
