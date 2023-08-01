@@ -14,8 +14,7 @@
             <MiniChartContainer :currentStage="currentStage" title="Number of actors">
                 <div class="flex flex-row w-full justify-evenly mt-6">
                     <div class="w-full flex flex-row justify-center">
-                        <Ring :options="currentStageNumberOfActorsByTypeOfActorData"
-                            style="height: 300px; width: 450px"></Ring>
+                        <Ring :options="currentStageNumberOfActorsByTypeOfActorData"></Ring>
                     </div>
                 </div>
             </MiniChartContainer>
