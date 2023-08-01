@@ -74,6 +74,7 @@
             });
             var outputAsJson = JSON.stringify(output);
             window.json_from_xls = output;
+            window.workbook = workbook
             document.getElementById("jsonData").innerHTML = outputAsJson;
           };
           fileReader.readAsBinaryString(selectedFile);
@@ -154,6 +155,13 @@
         a.setAttribute('href', url); // Set "a" element link
         a.setAttribute('download', filename); // Set download filename
         a.click(); // Start downloading
+      }
+
+      const getExcelType = (json) => {
+        if (json['Questionnaire']) {
+          return "Sustainability"
+        }
+        return "Eco"
       }
 
       const createStudyDataFromJson = (json) => {
@@ -296,6 +304,78 @@
         }
       }
 
+
+      const getQuestionsGroup = (ws, firstRow, lastRow) => {
+        return {
+          title: ws[`A${firstRow}`]?.v,
+          averageValue: ws[`E${lastRow}`]?.v,
+          averageText: ws[`D${lastRow}`]?.v,
+          questions: Array.from(Array(lastRow - 1 - (firstRow + 1) + 1).keys(), (num) => num + firstRow + 1).map(index => ({
+            text: ws[`A${index}`]?.v,
+              scoreValue: ws[`E${index}`]?.v,
+              scoreText: ws[`D${index}`]?.v,
+              comment: ws[`F${index}`]?.v
+          }))
+        }
+      }
+
+      const getSustainibilityDataFromWorksheet = (worksheet) => {
+        return [
+          {
+            title: worksheet['A3']?.v,
+            groups: [
+              getQuestionsGroup(worksheet, 4, 10),
+              getQuestionsGroup(worksheet, 11, 14),
+              getQuestionsGroup(worksheet, 15, 17),
+              getQuestionsGroup(worksheet, 18, 21),
+            ]
+          },
+          {
+            title: worksheet['A22']?.v,
+            groups: [
+              getQuestionsGroup(worksheet, 23, 26),
+              getQuestionsGroup(worksheet, 27, 32),
+              getQuestionsGroup(worksheet, 33, 38),
+            ]
+          },
+          {
+            title: worksheet['A39']?.v,
+            groups: [
+              getQuestionsGroup(worksheet, 40, 43),
+              getQuestionsGroup(worksheet, 44, 49),
+              getQuestionsGroup(worksheet, 50, 56),
+              getQuestionsGroup(worksheet, 57, 62),
+              getQuestionsGroup(worksheet, 63, 66),
+            ]
+          },
+          {
+            title: worksheet['A67']?.v,
+            groups: [
+              getQuestionsGroup(worksheet, 68, 71),
+              getQuestionsGroup(worksheet, 72, 75),
+              getQuestionsGroup(worksheet, 76, 80),
+              getQuestionsGroup(worksheet, 81, 84),
+            ]
+          },
+          {
+            title: worksheet['A85']?.v,
+            groups: [
+              getQuestionsGroup(worksheet, 86, 91),
+              getQuestionsGroup(worksheet, 92, 95),
+              getQuestionsGroup(worksheet, 96, 100),
+            ]
+          },
+          {
+            title: worksheet['A101']?.v,
+            groups: [
+              getQuestionsGroup(worksheet, 102, 106),
+              getQuestionsGroup(worksheet, 107, 110),
+              getQuestionsGroup(worksheet, 111, 115),
+            ]
+          }
+        ]  
+      }
+
       const studyDefaultEnvironment = {
         "brief": [
             "Sustainability of walnut and almond production and export sub-sectors.",
@@ -424,52 +504,68 @@
       document
       .getElementById("convertToStudyFile")
       .addEventListener("click", function () {
-        let json_from_xls = window.json_from_xls;
-        const country = getStudyProperty(json_from_xls, "Country");
-        const commodity = getStudyProperty(json_from_xls, "Commodity");
-        const year = getStudyProperty(json_from_xls, "Reference Year");
-        const localCurrency = getStudyProperty(json_from_xls, "Currency");
-        const valueAddedShareOfGDP = getStudyProperty(json_from_xls, "Value added share Of national GDP");
-        const valueAddedShareOfAgriculturalGDP = getStudyProperty(json_from_xls, "Value added share Of the agricultural sector GDP");
-        const rateOfIntegrationIntoDomesticEconomy = getStudyProperty(json_from_xls, "Rate Of integration into domestic economy");
-        const publicFundsBalancePublicBudgetRatio = getStudyProperty(json_from_xls, "Public funds balance / Public budget");
-        const balanceOfTradeOfValueChain = getStudyProperty(json_from_xls, "Balance Of trade Of the value chain");
-        const domesticResourceCostRatio = getStudyProperty(json_from_xls, "Domestic resource cost ratio");
-        const giniIndex = getStudyProperty(json_from_xls, "Gini index");
-        const totalValueAdded = getStudyProperty(json_from_xls, "Total value added");
-        const publicFundBalance = getStudyProperty(json_from_xls, "Public fund balance");
-        const nominalProtectionCoefficient = getStudyProperty(json_from_xls, "Nominal protection coefficient");
-        
-        const id = slugify(commodity + "-" + country + "-" + year);
+        const json_from_xls = window.json_from_xls;
+        const excel_type = getExcelType(json_from_xls)
+        let study
+        if (excel_type === 'Eco') {
+          const country = getStudyProperty(json_from_xls, "Country");
+          const commodity = getStudyProperty(json_from_xls, "Commodity");
+          const year = getStudyProperty(json_from_xls, "Reference Year");
+          const localCurrency = getStudyProperty(json_from_xls, "Currency");
+          const valueAddedShareOfGDP = getStudyProperty(json_from_xls, "Value added share Of national GDP");
+          const valueAddedShareOfAgriculturalGDP = getStudyProperty(json_from_xls, "Value added share Of the agricultural sector GDP");
+          const rateOfIntegrationIntoDomesticEconomy = getStudyProperty(json_from_xls, "Rate Of integration into domestic economy");
+          const publicFundsBalancePublicBudgetRatio = getStudyProperty(json_from_xls, "Public funds balance / Public budget");
+          const balanceOfTradeOfValueChain = getStudyProperty(json_from_xls, "Balance Of trade Of the value chain");
+          const domesticResourceCostRatio = getStudyProperty(json_from_xls, "Domestic resource cost ratio");
+          const giniIndex = getStudyProperty(json_from_xls, "Gini index");
+          const totalValueAdded = getStudyProperty(json_from_xls, "Total value added");
+          const publicFundBalance = getStudyProperty(json_from_xls, "Public fund balance");
+          const nominalProtectionCoefficient = getStudyProperty(json_from_xls, "Nominal protection coefficient");
+          
+          const id = slugify(commodity + "-" + country + "-" + year);
 
-        const studyData = createStudyDataFromJson(json_from_xls)
-        const study = {
-          id,
-          product: commodity,
-          country,
-          year,
-          localCurrency,
-          valueAddedShareOfGDP,
-          valueAddedShareOfAgriculturalGDP,
-          rateOfIntegrationIntoDomesticEconomy,
-          publicFundsBalancePublicBudgetRatio,
-          balanceOfTradeOfValueChain,
-          domesticResourceCostRatio,
-          giniIndex,
-          totalValueAdded,
-          publicFundBalance,
-          nominalProtectionCoefficient,
-          environment : studyDefaultEnvironment, // TODO: fill. But it looks that data contained in this key comes from another xls file.
-          data: studyData
-        };
-        const errors = getErrors(study)
-        if (errors.length > 0) {
-          document.getElementById('errors').style.display = 'inline-block'
-          document.getElementById('error-details').innerHTML = errors.join('<br>')
-        } 
+          const studyData = createStudyDataFromJson(json_from_xls)
+          study = {
+            id,
+            product: commodity,
+            country,
+            year,
+            localCurrency,
+            valueAddedShareOfGDP,
+            valueAddedShareOfAgriculturalGDP,
+            rateOfIntegrationIntoDomesticEconomy,
+            publicFundsBalancePublicBudgetRatio,
+            balanceOfTradeOfValueChain,
+            domesticResourceCostRatio,
+            giniIndex,
+            totalValueAdded,
+            publicFundBalance,
+            nominalProtectionCoefficient,
+            environment : studyDefaultEnvironment, // TODO: fill. But it looks that data contained in this key comes from another xls file.
+            data: studyData
+          };
+          const errors = getErrors(study)
+          if (errors.length > 0) {
+            document.getElementById('errors').style.display = 'inline-block'
+            document.getElementById('error-details').innerHTML = errors.join('<br>')
+          } 
+        } else {
+          const workbook = window.workbook
+          const questionnaireSheet = workbook.Sheets[workbook.SheetNames[2]] 
+
+          console.log('questionnaireSheet', questionnaireSheet)
+          const year = 2020
+          const country = questionnaireSheet['D1']?.v
+          const commodity = questionnaireSheet['B1']?.v
+          const id = slugify(commodity + "-" + country + "-" + year);
+
+          study = getSustainibilityDataFromWorksheet(questionnaireSheet)
+        }
         window.study = study;
         const study_as_str = JSON.stringify(study);
         document.getElementById("studyAsJson").innerHTML = study_as_str;
+        
       });
 
       document

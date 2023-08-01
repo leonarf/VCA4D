@@ -262,7 +262,6 @@ export const getNumberOfJobsData = (stages, actors, currentStage) => {
             .reduce((res, curr) => res + curr, 0)
 
         if (subTotal !== 0) {
-            console.log('stageActors', stageActors)
             let toolTipValue = `<b>${stage.name}</b>: ${formatNumber(subTotal)}`
             toolTipValue += `<br><b>Male temp</b>: ${formatNumber(stageActors.map(actor => actor.employment?.tempMale || 0)
                 .reduce((res, curr) => res + curr, 0))}`

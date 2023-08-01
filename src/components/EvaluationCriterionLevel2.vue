@@ -1,5 +1,9 @@
 <template>
-    <li class="evaluation-criterion-level-2" :style="{ background: scaleColor + '81'}">{{ label }}<span class="evaluation-criterion-level-2__scale" :style="{ background: scaleColor }">{{ scaleLabel }}</span></li>
+  <div class="flex flex-row items-center rounded-3xl px-3 py-2 max-w-[650px] my-8" :style="{ background: scaleColor + '81'}">
+    <div class="bg-[#8a8a8a] text-white py-0 px-3 mr-3 font-bold rounded-2xl">{{ counter }}</div>
+    <div class="font-bold flex-grow">{{ label }}</div>
+    <EvaluationCriterionLevel3ScaleTag :scale="scale" :appreciation="appreciation" />
+  </div>
     <ol class="evaluation-criterion-level-2__children">
       <slot></slot>
     </ol>
@@ -7,13 +11,8 @@
 
 <script setup>
 import { computed } from 'vue';
+import EvaluationCriterionLevel3ScaleTag from './EvaluationCriterionLevel3ScaleTag.vue';
 
-const scaleLabels = [
-  "Poor",
-  "Rather poor",
-  "Rather good",
-  "Good",
-];
 const scaleColors = [
   "#ffac9e",
   "#fec875",
@@ -22,66 +21,21 @@ const scaleColors = [
 ];
 const props = defineProps({
   label: String,
-  scale: {
-    type: Number,
-    validator(value){
-      return value >= 0 && value < 4; // 4 corresponds to scaleLabels.length
-    }
-  }
-});
-
-const scaleLabel = computed( () => {
-  return scaleLabels[props.scale];
+  counter: String,
+  scale: Number,
+  appreciation: String
 });
 
 const scaleColor = computed( () => {
-  return scaleColors[props.scale];
+  return scaleColors[parseInt(props.scale) - 1];
 });
 
 </script>
 
 <style scoped lang="scss">
-@import '../../style/colors.scss';
-
-%rounded-tag {
-  background: #8a8a8a;
-  border-radius: 12px;
-  color: white;
-  margin-right: 7px;
-  padding: 0px 7px;
-  font-weight: bold;
-}
 
 ol.evaluation-criterion-level-2__children {
   counter-reset: item;
   margin-left: 45px;
 }
-li.evaluation-criterion-level-2 {
-  display: block;
-  background: #ffa500a1;
-  border-radius: 100px;
-  padding: 7px;
-  margin-top: 5px;
-  margin-bottom: 12px;
-  font-weight: bold;
-  width: fit-content;
-}
-li.evaluation-criterion-level-2:before {
-  @extend %rounded-tag;
-  content: counters(item, ".") "";
-  counter-increment: item;
-}
-
-.evaluation-criterion-level-2__scale {
-  display: inline-block;
-  background: orange;
-  border-radius: 100px;
-  padding: 2px 7px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  font-weight: bold;
-  margin-left: 15px;
-  white-space: nowrap;
-}
-
 </style>

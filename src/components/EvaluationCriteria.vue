@@ -12,7 +12,6 @@
 
 ol.evaluation-criteria {
     counter-reset: item;
-    max-width: 700px;
 }
 li { 
     display: block;
