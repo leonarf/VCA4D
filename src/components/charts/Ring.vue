@@ -1,5 +1,7 @@
 <template>
+  <div class="ring-chart">
     <v-chart class="chart" :option="options" />
+  </div>
 </template>
 
 <script setup>
@@ -29,4 +31,8 @@ use([
 </script>
 
 <style scoped lang="scss">
+.ring-chart {
+  width: 100%;
+  height: 300px; 
+}
 </style>

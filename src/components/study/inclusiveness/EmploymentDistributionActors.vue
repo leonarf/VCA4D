@@ -1,23 +1,23 @@
 <template>
     <InfoTitle title="Number of actors" class="mb-4 mt-8" />
-    <div class="flex flex-row items-start mt-4">
-        <div class="w-1/5">
-            <NiceMetric label="Number of actors" :value="totalNumberOfActors" />
-        </div>
-        <div class="w-4/5">
-            <BarChart v-if="studyData" :options="numberOfActorsData"
-                        @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
-            <div class="bg-[#F7E9EB] rounded-2xl px-12 py-12 w-full">
-                <template v-if="currentStage !== ''">
-                    <span class="text-[#303030] text-xl"><strong>Number of actors</strong> in {{ currentStage }}</span>
-                    <div class="flex flex-row w-full justify-evenly mt-6">
-                        <div class="w-full flex flex-row justify-center">
-                            <Ring :options="currentStageNumberOfActorsByTypeOfActorData"
-                                style="height: 300px; width: 450px"></Ring>
-                        </div>
-                    </div>
-                </template>
+    <div class="flex flex-col mt-4">
+        <div class="flex flex-row items-center">
+            <div class="w-1/5">
+                <NiceMetric label="Number of actors" :value="totalNumberOfActors" />
             </div>
+            <div class="w-4/5">
+                <BarChart v-if="studyData" :options="numberOfActorsData"
+                        @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
+            </div>
+        </div>
+        <div>
+            <MiniChartContainer :currentStage="currentStage" title="Number of actors">
+                <div class="flex flex-row w-full justify-evenly mt-6">
+                    <div class="w-full flex flex-row justify-center">
+                        <Ring :options="currentStageNumberOfActorsByTypeOfActorData"></Ring>
+                    </div>
+                </div>
+            </MiniChartContainer>
         </div>
     </div>
 </template>
@@ -29,17 +29,17 @@ import {
     getNumberOfActorsData,
     getNumberOfActorsByTypeOfActorData,
 } from '@/charts/charts'
+import { formatNumber } from '@/utils/utils.js'
 import Ring from '@charts/Ring.vue'
 import NiceMetric from '@typography/NiceMetric.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
+import MiniChartContainer from '@charts/MiniChartContainer.vue'
 
 const props = defineProps({
     studyData: Object,
 })
 
 const currentStage = ref('')
-
-const formatNumber = (value) => value ? value.toLocaleString(undefined, { maximumFractionDigits: 2 }) : "-"
 
 const stages = computed(() => props.studyData.data.stages)
 const actors = computed(() => props.studyData.data.actors)

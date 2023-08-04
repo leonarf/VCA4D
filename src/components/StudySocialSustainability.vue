@@ -37,49 +37,23 @@
         <div class="study-snapshot">The study in a 6-pages snapshot</div>
 
         <EvaluationCriteria>
-            <EvaluationCriterion label="Working conditions">
-                <EvaluationCriterionLevel2 label="Respect of labour rights" scale="1">
-                    <EvaluationCriterionLevel3 label="To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR?" scale="1"></EvaluationCriterionLevel3>
-                    <EvaluationCriterionLevel3 label="Is freedom of association allowed and effective (collective bargaining)?" scale="1"></EvaluationCriterionLevel3>
-                    <EvaluationCriterionLevel3 label="To what extent do workers benefit from enforceable and fair contracts?" scale="0"></EvaluationCriterionLevel3>
-                    <EvaluationCriterionLevel3 label="To what extent are risks of forced labour in any segment of the value chain minimized?" scale="2"></EvaluationCriterionLevel3>
-                    <EvaluationCriterionLevel3 label="To what extent are any risks of discrimination in employment for specific categories of the population minimized?" scale="3"></EvaluationCriterionLevel3>
+            <EvaluationCriterion v-for="part in studyData.sustainability" :key="part.title" :label="part.title.split(' ').slice(1).join(' ')">
+                <EvaluationCriterionLevel2 v-for="group in part.groups" 
+                    :key="group.title" 
+                    :label="group.title.split(' ').slice(1).join(' ')"
+                    :counter="group.title.split(' ')[0]" 
+                    :scale="group.averageValue"
+                    :appreciation="group.averageText">
+                    <EvaluationCriterionLevel3 v-for="question in group.questions" 
+                        :key="question.text.split(' ')[0]" 
+                        :label="question.text.split(' ').slice(1).join(' ')"
+                        :counter="question.text.split(' ')[0]"
+                        :scale="question.scoreValue"
+                        :comment="question.comment"
+                        :appreciation="question.scoreText"/>
                 </EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Child labour" scale="2"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Job Safety" scale="1"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Attractiveness" scale="2"></EvaluationCriterionLevel2>
-            </EvaluationCriterion>
-            <EvaluationCriterion label="Land &amp; water rights">
-                <EvaluationCriterionLevel2 label="Adherence to VVGT" scale="0"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Transparency, participation and consultation" scale="1"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Equity, compensation and justice" scale="1"></EvaluationCriterionLevel2>
-            </EvaluationCriterion>
-            <EvaluationCriterion label="Gender equality">
-                <EvaluationCriterionLevel2 label="Economic activities" scale="3"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Access to resources and services" scale="1"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Decision making" scale="1"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Leadership and empowerment" scale="1"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Hardship and division of labour" scale="1"></EvaluationCriterionLevel2>
-            </EvaluationCriterion>
-            <EvaluationCriterion label="Food and nutrition security">
-                <EvaluationCriterionLevel2 label="Availability of food" scale="3"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Accessibility of food" scale="1"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Utilisation and nutritional adequacy" scale="1"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Stability" scale="1"></EvaluationCriterionLevel2>
-            </EvaluationCriterion>
-            <EvaluationCriterion label="Social capital">
-                <EvaluationCriterionLevel2 label="Strength of producer organisations" scale="3"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Information and confidence" scale="1"></EvaluationCriterionLevel2>
-                <EvaluationCriterionLevel2 label="Social involvement" scale="1"></EvaluationCriterionLevel2>
-            </EvaluationCriterion>
-            <EvaluationCriterion label="Living conditions">
-                <EvaluationCriterionLevel2 label="Health services" scale="3"></EvaluationCriterionLevel2>
             </EvaluationCriterion>
         </EvaluationCriteria>
-
-
-
-
     </article>
 
 </template>
@@ -91,52 +65,13 @@ import EvaluationCriteria from './EvaluationCriteria.vue';
 import EvaluationCriterion from './EvaluationCriterion.vue';
 import EvaluationCriterionLevel2 from './EvaluationCriterionLevel2.vue';
 import EvaluationCriterionLevel3 from './EvaluationCriterionLevel3.vue';
-</script>
 
-<script>
-//@ts-check
+const props = defineProps({
+  studyData: Object,
+  value: String
+})
 
-import '../types.js'
-
-export default {
-    name: 'StudyEconomicGrowth',
-    props: ['studyData'],
-    data() {
-        return {
-        }
-    }
-}
 </script>
 
 <style scoped lang="scss">
-@import '../../style/colors.scss';
-
-article.study-section {
-
-    h1 {
-        text-decoration: underline;
-        text-decoration-thickness: 3px;
-        font-weight: normal;
-        font-size: 24px;
-        color: #151515;
-        text-underline-offset: 5px;
-    }
-
-    h2 {
-        font-weight: normal;
-        font-size: 22px;
-        color: #151515;
-    }
-
-    h3 {
-        padding-left: 80px;
-        font-weight: bold;
-        font-size: 17px;
-        text-decoration: underline;
-        text-underline-offset: 5px;
-        text-decoration-thickness: 3px;
-        text-decoration-color: #999;
-    }
-}
-
 </style>

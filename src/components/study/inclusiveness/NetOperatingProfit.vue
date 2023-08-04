@@ -4,17 +4,14 @@
         <div class="w-full">
             <BarChart v-if="studyData" :options="netOperatingProfitData"
             @chartSeriesClick="handleNetOperatingProfitDataChartSeriesClick"></BarChart>
-            <div class="bg-[#F7E9EB] rounded-2xl px-12 py-12">
-                <template v-if="currentStage !== ''">
-                    <span class="text-[#303030] text-xl"><strong>Net Operating Profit</strong> in {{ currentStage }}</span>
-                    <div class="flex flex-row w-full justify-evenly mt-6">
-                        <div class="w-full flex flex-row justify-center">
-                            <Ring :options="currentStageNetOperatingProfitByTypeOfActorData"
-                                style="height: 300px; width: 450px"></Ring>
-                        </div>
+            <MiniChartContainer :currentStage="currentStage" title="Net Operating Profit">
+                <div class="flex flex-row w-full justify-evenly mt-6">
+                    <div class="w-full flex flex-row justify-center">
+                        <Ring :options="currentStageNetOperatingProfitByTypeOfActorData"
+                            style="height: 300px; width: 450px"></Ring>
                     </div>
-                </template>
-            </div>
+                </div>
+            </MiniChartContainer>
         </div>
     </div>
 </template>
@@ -29,6 +26,7 @@ import {
 import Ring from '@charts/Ring.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 import CurrencyUtils from '@/utils/currencyUtils.js'
+import MiniChartContainer from '@charts/MiniChartContainer.vue'
 
 const props = defineProps({
     studyData: Object,
