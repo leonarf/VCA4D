@@ -17,7 +17,7 @@
                 v-model="selectedCurrency"
                 @change="$emit('update:currency', $event.target.value)"
             >
-                <option :value="localCurrency">{{ localCurrency }} ({{  currencyUtils.getCurrencySymbol(localCurrency) }})</option>
+                <option value="LOCAL">{{ localCurrency }} ({{  currencyUtils.getCurrencySymbol(localCurrency) }})</option>
                 <option value="USD">Us Dollar (&dollar;)</option>
                 <option value="EUR">Euro (&euro;)</option>
             </select>

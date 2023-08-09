@@ -17,8 +17,8 @@
             <template v-if="studyData">
                 <StudyOverview v-if="view === undefined" :studyData="studyData"></StudyOverview>
                 <StudyEnvironment v-if="view === 'environment'" :studyData="studyData"></StudyEnvironment>
-                <StudyEconomicGrowth v-if="view === 'economic-growth'" :studyData="studyData" :currency="currency"></StudyEconomicGrowth>
-                <StudyInclusiveness v-if="view === 'inclusiveness'" :studyData="studyData" :currency="currency"></StudyInclusiveness>
+                <StudyEconomicGrowth v-if="view === 'economic-growth'" :studyData="studyData" :currency="currencySymbol"></StudyEconomicGrowth>
+                <StudyInclusiveness v-if="view === 'inclusiveness'" :studyData="studyData" :currency="currencySymbol"></StudyInclusiveness>
                 <StudySocialSustainability v-if="view === 'social-sustainability'" :studyData="studyData"></StudySocialSustainability>
             </template>
         </div>
@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, computed } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
 import Skeleton from '../components/Skeleton.vue'
 import StudyOverview from '../components/StudyOverview.vue'
@@ -50,12 +50,6 @@ const view = ref(undefined)
 const studyData = ref(undefined)
 const error = ref(undefined)
 
-watch (studyData, () => {
-    if (!currency.value) {
-        currency.value = studyData.value.localCurrency
-    }
-})
-
 watch(currency, (newCurrency) => {
     router.push({ query: 
         {
@@ -63,7 +57,10 @@ watch(currency, (newCurrency) => {
             currency: newCurrency
         }
     })
+    localStorage.setItem('currency', newCurrency);
 })
+
+const currencySymbol = computed( () => currency.value === 'LOCAL' ? studyData.value.localCurrency : currency.value);
 
 onMounted(async () => {
   const studyId = route.query.id;
@@ -73,9 +70,17 @@ onMounted(async () => {
   view.value = studyView;
   currency.value = currencyFromUrl
 
+  if (!currency.value && localStorage.getItem('currency')) {
+    currency.value = localStorage.getItem('currency')
+  }
+
   try {
     const data = await getStudyData(studyId)
     studyData.value = data
+
+    if (!currency.value) {
+        currency.value = studyData.value.localCurrency
+    }
   } catch(err) {
     error.value = err;
   }
