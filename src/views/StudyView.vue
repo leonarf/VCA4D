@@ -79,7 +79,7 @@ onMounted(async () => {
     studyData.value = data
 
     if (!currency.value) {
-        currency.value = studyData.value.localCurrency
+        currency.value = "LOCAL"
     }
   } catch(err) {
     error.value = err;
