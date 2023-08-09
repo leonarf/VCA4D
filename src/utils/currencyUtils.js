@@ -79,11 +79,11 @@ const prettyFormatAmount = (amount, currency) => {
   let numberDigits = 0
   let divisor = 1
   let textUnit = ''
-  if (amount > 1e9) {
+  if (Math.abs(amount) > 1e9) {
     numberDigits = 1
     divisor = 1e9
     textUnit = 'Billions '
-  } else if (amount > 1e6) {
+  } else if (Math.abs(amount) > 1e6) {
     numberDigits = 1
     divisor = 1e6
     textUnit = 'Millions '

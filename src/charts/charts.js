@@ -179,15 +179,15 @@ export const getReturnOnInvestmentData = (stages, actors, currentStage, convertA
         tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
             Total costs = ${prettyAmount.value(totalCosts)}<br>
             Return on investment = ${formatPercent(
-            (100 * netOperatingProfits) / totalCosts
+            netOperatingProfits / totalCosts
         )}`
         return {
             name: stage.name,
-            value: ((100 * netOperatingProfits) / totalCosts).toFixed(0)
+            value: (100 * netOperatingProfits / totalCosts)
         }
     }).filter(item => !!item)
 
-    const ret = getSelectableBarChart(items, currentStage.value, tooltip) 
+    const ret = getSelectableBarChart(items, currentStage.value, tooltip, (value) => formatPercent(value / 100)) 
     return {
         ...ret,
         yAxis: {
@@ -390,11 +390,11 @@ export const getReturnOnInvestmentByActorsData = (actors, convertAmount, prettyA
         tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
             Total costs = ${prettyAmount.value(totalCosts)}<br>
             Return on investment = ${formatPercent(
-            (100 * netOperatingProfits) / totalCosts
+            netOperatingProfits / totalCosts
         )}`
         return {
             name: actor.name,
-            value: ((100 * netOperatingProfits) / totalCosts).toFixed(0)
+            value: (100 * netOperatingProfits / totalCosts)
         }
     }).filter(item => !!item)
     return getMiniBarChart(items, tooltip)

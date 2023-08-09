@@ -28,15 +28,15 @@ export const formatNumber = (value) => {
     let numberDigits = 0
     let divisor = 1
     let textUnit = ''
-    if (value > 1e9) {
+    if (Math.abs(value) > 1e9) {
       numberDigits = 1
       divisor = 1e9
       textUnit = 'Billions'
-    } else if (value > 1e6) {
+    } else if (Math.abs(value) > 1e6) {
       numberDigits = 1
       divisor = 1e6
       textUnit = 'Millions'
-    } else if (value > 1e3) {
+    } else if (Math.abs(value) > 1e3) {
         numberDigits = 0
         divisor = 1e3
         textUnit = 'k'
@@ -45,7 +45,12 @@ export const formatNumber = (value) => {
 }
 
 export const formatPercent = (amount) => {
-  return amount.toFixed(2) + '%'
+  const numberDigits = amount < 0.01 ? 2 : (amount < 0.1 ? 1 : 0)
+  return (amount).toLocaleString(undefined, {
+    style: 'percent',
+    minimumFractionDigits: numberDigits,
+    maximumFractionDigits: numberDigits
+  })
 }
 
 export function useUtils(props) {

@@ -4,7 +4,7 @@
         <div class="flex flex-row items-start">
             <div class="w-1/5 flex flex-col space-y-4 pt-8">
                 <NiceMetric label="Waged employment" :value="totalNumberOfJobs" />
-                <NiceMetric label="% female employment" :value="`${percentFemaleEmployment}%`" />
+                <NiceMetric label="% female employment" :value="`${percentFemaleEmployment}`" />
             </div>
             <div class="w-4/5">
                 <BarChart v-if="studyData" :options="numberOfJobsData"
@@ -41,7 +41,7 @@ import {
     getEmploymentByQualificationData, 
     getEmploymentByGenderData,
 } from '@/charts/charts'
-import { formatNumber, useUtils } from '@/utils/utils.js'
+import { formatNumber, useUtils, formatPercent } from '@/utils/utils.js'
 import Ring from '@charts/Ring.vue'
 import NiceMetric from '@typography/NiceMetric.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
@@ -68,7 +68,9 @@ const totalNumberOfJobs = computed(() => {
 const percentFemaleEmployment = computed(() => {
     const totalFemale = actors.value.reduce((res, actor) => res + (actor.employment?.totalFemale || 0), 0)
     const total = actors.value.reduce((res, actor) => res + (actor.employment?.total || 0), 0)
-    return parseInt(totalFemale / total * 100)
+    console.log('total', total)
+    console.log('totalFemale', totalFemale)
+    return formatPercent(totalFemale / total)
 })
 
 const currentStageEmploymentByTypeOfActorData = computed(() => {
