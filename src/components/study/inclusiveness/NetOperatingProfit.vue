@@ -25,7 +25,7 @@ import {
 } from '@/charts/charts'
 import Ring from '@charts/Ring.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
-import CurrencyUtils from '@/utils/currencyUtils.js'
+import { useUtils } from '@/utils/utils.js'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 
 const props = defineProps({
@@ -35,16 +35,7 @@ const props = defineProps({
 
 const currentStage = ref('')
 
-const prettyAmount = computed(() => {
-    return (amount) => CurrencyUtils.prettyFormatAmount(amount, props.currency)
-})
-
-const convertAmount = computed(() => {
-    return (amount) => CurrencyUtils.getValueInCurrency(amount, props.studyData.localCurrency, props.currency, props.studyData.year)
-})
-
-const stages = computed(() => props.studyData.data.stages)
-const actors = computed(() => props.studyData.data.actors)
+const { prettyAmount, convertAmount, stages, actors } = useUtils(props);
 
 const netOperatingProfitData = computed(() => getNetOperatingProfitData(stages, actors, convertAmount, prettyAmount, currentStage))
 

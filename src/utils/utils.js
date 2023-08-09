@@ -1,3 +1,6 @@
+import { computed } from 'vue';
+import CurrencyUtils from '@/utils/currencyUtils.js'
+
 var StagesColors = {
     Producers: "#6AAB9C",
     Collectors: "#FA9284",
@@ -43,4 +46,29 @@ export const formatNumber = (value) => {
 
 export const formatPercent = (amount) => {
   return amount.toFixed(2) + '%'
+}
+
+export function useUtils(props) {
+  const prettyAmount = computed(() => (amount) =>
+    CurrencyUtils.prettyFormatAmount(amount, props.currency)
+  );
+
+  const convertAmount = computed(() => (amount) =>
+    CurrencyUtils.getValueInCurrency(
+      amount,
+      props.studyData.localCurrency,
+      props.currency,
+      props.studyData.year
+    )
+  );
+
+  const stages = computed(() => props.studyData.data.stages);
+  const actors = computed(() => props.studyData.data.actors);
+
+  return {
+    stages,
+    actors,
+    prettyAmount,
+    convertAmount,
+  };
 }

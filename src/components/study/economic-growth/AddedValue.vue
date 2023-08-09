@@ -31,17 +31,14 @@ import {
   getAddedValueReceiversData
 } from '@/charts/charts'
 import NiceMetric from '@typography/NiceMetric.vue'
-import CurrencyUtils from '@/utils/currencyUtils.js'
+import { useUtils } from '@/utils/utils.js'
 
 const props = defineProps({
     studyData: Object,
     currency: String
 })
-const prettyAmount = computed(() => (amount) => CurrencyUtils.prettyFormatAmount(amount, props.currency))
-const convertAmount = computed(() => (amount) => CurrencyUtils.getValueInCurrency(amount, props.studyData.localCurrency, props.currency, props.studyData.year))
-const stages = computed(() => props.studyData.data.stages)
-const actors = computed(() => props.studyData.data.actors)
 
+const { prettyAmount, convertAmount, stages, actors } = useUtils(props);
 
 const addedValueCreatorsRingChartData = computed(() => {
   return getAddedValueCreatorsData(stages, actors, convertAmount, prettyAmount)
