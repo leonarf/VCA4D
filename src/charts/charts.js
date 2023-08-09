@@ -300,62 +300,10 @@ export const getNetOperatingProfitByNumberActorsData = (stages, actors, convertA
             }
         }
     }).filter(item => !!item)
-    return getSelectableBarChart(items, currentStage.value, tooltip, prettyAmount.value)
+    return getSelectableBarChart(items, currentStage.value, tooltip, prettyAmount.value, currentStage)
 }
 
-/*
-* BAR CHART
-*/
-const getBarChart = (items, tooltip, formatLabel) => {
-    let labels = []
-    let values = []
-
-    items.map(item => {
-        labels.push(item.name)
-        values.push(item.value)
-    })
-
-
-    return {
-        xAxis: {
-            data: labels,
-            left: 0
-        },
-        label: {
-            show: true,
-            position: 'top',
-            formatter: function (d) {
-                if (!d.data) {
-                    return ""
-                }
-                return formatLabel ? formatLabel(d.data) : formatNumber(d.data)
-            },
-        },
-        tooltip: {
-            trigger: 'item',
-            formatter: function (info) {
-                return tooltip[info.name]
-            }
-        },
-        yAxis: {
-            show: false
-        },
-        series: [
-            {
-                type: 'bar',
-                data: values,
-                barWidth: '100%',
-                itemStyle: {
-                    color: function (info) {
-                        return getStageColor(info.name)
-                    }
-                }
-            }
-        ]
-    };
-}
-
-export const getPublicFinancesData = (stages, actors, convertAmount, prettyAmount) => {
+export const getPublicFinancesData = (stages, actors, convertAmount, prettyAmount, currentStage) => {
 
     let tooltip = {}
     const items = stages.value.map(({ name: stageName }) => {
@@ -367,9 +315,10 @@ export const getPublicFinancesData = (stages, actors, convertAmount, prettyAmoun
             name: stageName,
             value: subTotal
         }
-    })
-    return getBarChart(items, tooltip, prettyAmount.value)
+    }).filter(item => !!item && item.value > 0)
+    return getSelectableBarChart(items, currentStage.value, tooltip, prettyAmount.value)
 }
+
 
 /*
 * MINI BAR CHART
@@ -462,6 +411,19 @@ export const getNetOperatingProfitPerActorOfStage = (actors, convertAmount, pret
                 name: actor.name,
                 value: netOperatingProfit / numberOfActors
             }
+        }
+    }).filter(item => !!item && item.value > 0)
+    return getMiniBarChart(items, tooltip, prettyAmount)
+}
+
+export const getPublicFinancesPerStage = (actors, convertAmount, prettyAmount) => {
+    const tooltip = {}
+    const items = actors.map(actor => {
+        const subTotal = convertAmount(actor.publicFundsBalance || 0)
+        tooltip[actor.name] = `${prettyAmount(subTotal)}`
+        return {
+            name: actor.name,
+            value: subTotal
         }
     }).filter(item => !!item && item.value > 0)
     return getMiniBarChart(items, tooltip, prettyAmount)
