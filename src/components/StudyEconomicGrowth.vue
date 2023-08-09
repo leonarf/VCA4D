@@ -36,8 +36,22 @@
     <h3>How <strong>profitable</strong> and viable are the value chain activities for the actors involved?</h3>
     <InfoTitle title="Return on investment (%)" information="percentage of net operating profit in total costs (NB : for
       producers this includes actor revenue)" class="mb-4" />
-    <BarChart v-if="studyData" :options="populatedBarChartData"></BarChart>
-    <a v-else class="TODO">Data are missing to display this GraphBar</a>
+      <template v-if="studyData">
+        <BarChart  :options="populatedBarChartData" 
+          @chartSeriesClick="handleDataChartSeriesClick" />
+        <div>
+          <MiniChartContainer :currentStage="currentStage" title="Number of actors">
+              <div class="flex flex-row w-full justify-evenly mt-6">
+                  <div class="w-full flex flex-row justify-center">
+                    <Ring :options="currentStageReturnOnInvestmentData"></Ring>
+                  </div>
+              </div>
+          </MiniChartContainer>
+        </div>
+      </template>
+      <template v-else>
+        <a class="TODO">Data are missing to display this GraphBar</a>
+      </template>
     <h3 class="mt-12">What is the contribution of the value chain to the <strong>public finances</strong>?</h3>
     <div class="flex flex-row items-center ml-12">
       <div class="w-1/3">
@@ -78,15 +92,20 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 
 import NiceMetric from '@typography/NiceMetric.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 import BarChart from '@charts/BarChart.vue'
-import { getReturnOnInvestmentData, getAddedValueCreatorsData, getAddedValueReceiversData, getPublicFinancesData } from '@/charts/charts'
+import { getReturnOnInvestmentData, 
+  getAddedValueCreatorsData, 
+  getAddedValueReceiversData, 
+  getPublicFinancesData,
+  getReturnOnInvestmentByActorsData } from '@/charts/charts'
 import CurrencyUtils from '@/utils/currencyUtils.js'
 import Ring from '@charts/Ring.vue'
 import SectionTitle from '@typography/SectionTitle.vue'
+import MiniChartContainer from '@charts/MiniChartContainer.vue'
 
 const props = defineProps({
   studyData: Object,
@@ -135,8 +154,20 @@ const publicFinancesBarData = computed(() => {
   return getPublicFinancesData(stages, actors, convertAmount, prettyAmount)
 })
 
+const currentStage = ref('')
+
 const populatedBarChartData = computed(() => {
-  return getReturnOnInvestmentData(stages, actors, convertAmount, prettyAmount)
+  return getReturnOnInvestmentData(stages, actors, currentStage, convertAmount, prettyAmount)
+})
+const handleDataChartSeriesClick = (event) => currentStage.value = event.name
+
+onMounted(() => {
+    currentStage.value = stages.value[0].name
+})
+
+const currentStageReturnOnInvestmentData = computed(() => {
+    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
+    return getReturnOnInvestmentByActorsData(currentStageActors, convertAmount, prettyAmount, currentStage.value === 'Producers')
 })
 </script>
 

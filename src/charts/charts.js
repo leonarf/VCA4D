@@ -4,73 +4,6 @@ const RIADUSES_PIE = ['50%', '75%']
 const SELECTED_COLOR = "#F7E9EB"
 const SELECTED_COLOR_HOVER = "#f7d9de"
 
-export const getReturnOnInvestmentData = (stages, actors, convertAmount, prettyAmount) => {
-    let tooltip = {}
-    let labels = []
-    let values = []
-    stages.value.map(stage => {
-        const stageActors = actors.value.filter(actor => actor.stage === stage.name)
-
-        labels.push(stage.name)
-        const netOperatingProfits = convertAmount.value(stageActors.map(actor => actor.netOperatingProfit || 0).reduce((res, item) => res + item, 0))
-        let totalCosts = stageActors.map(actor => actor.totalCosts || 0).reduce((res, item) => res + item, 0)
-        if (stage.name === 'Producers') {
-            totalCosts += netOperatingProfits
-        }
-        totalCosts = convertAmount.value(totalCosts)
-        values.push(((100 * netOperatingProfits) / totalCosts).toFixed(0))
-        tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
-            Total costs = ${prettyAmount.value(totalCosts)}<br>
-            Return on investment = ${formatPercent(
-            (100 * netOperatingProfits) / totalCosts
-        )}`
-    })
-
-    return {
-        xAxis: {
-            type: 'category',
-            boundaryGap: true,
-            axisTick: {
-                alignWithLabel: true
-            },
-            axisLabel: {
-                interval: 0,
-                rotate: -10,
-                margin: 20
-            },
-            data: labels
-        },
-        tooltip: {
-            trigger: 'item',
-            formatter: function (info) {
-                return tooltip[info.name]
-            }
-        },
-        yAxis: {
-            type: 'value',
-            name: 'RETURN ON INVESTMENT (%)',
-            axisLine: {
-                show: true,
-                symbol: ['arrow', 'arrow']
-            }
-        },
-        series: {
-            type: 'bar',
-            data: values,
-            colorBy: 'data',
-            label: {
-                show: true,
-                position: 'top'
-            },
-            itemStyle: {
-                color: function (info) {
-                    return getStageColor(info.name)
-                }
-            }
-        }
-    }
-}
-
 /*
 * RING CHART
 */
@@ -194,7 +127,10 @@ const getSelectableBarChart = (items, currentItem, tooltip, formatLabel) => {
             axisLabel: {
                 fontSize: 15,
                 fontWeight: 500,
-            }
+            },
+            axisTick: {
+                alignWithLabel: true
+            },
         },
         label: {
             show: true,
@@ -227,6 +163,41 @@ const getSelectableBarChart = (items, currentItem, tooltip, formatLabel) => {
             }
         ]
     };
+}
+
+export const getReturnOnInvestmentData = (stages, actors, currentStage, convertAmount, prettyAmount) => {
+    let tooltip = {}
+    const items = stages.value.map(stage => {
+        const stageActors = actors.value.filter(actor => actor.stage === stage.name)
+
+        const netOperatingProfits = convertAmount.value(stageActors.map(actor => actor.netOperatingProfit || 0).reduce((res, item) => res + item, 0))
+        let totalCosts = stageActors.map(actor => actor.totalCosts || 0).reduce((res, item) => res + item, 0)
+        if (stage.name === 'Producers') {
+            totalCosts += netOperatingProfits
+        }
+        totalCosts = convertAmount.value(totalCosts)
+        tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
+            Total costs = ${prettyAmount.value(totalCosts)}<br>
+            Return on investment = ${formatPercent(
+            (100 * netOperatingProfits) / totalCosts
+        )}`
+        return {
+            name: stage.name,
+            value: ((100 * netOperatingProfits) / totalCosts).toFixed(0)
+        }
+    }).filter(item => !!item)
+
+    const ret = getSelectableBarChart(items, currentStage.value, tooltip) 
+    return {
+        ...ret,
+        yAxis: {
+            type: 'value',
+            name: 'RETURN ON INVESTMENT (%)',
+            axisLine: {
+                show: true,
+            }
+        }
+    }
 }
 
 export const getNumberOfActorsData = (stages, actors, currentStage) => {
@@ -456,6 +427,28 @@ const getMiniBarChart = (items, tooltip, formatLabel) => {
             }
         ]
     };
+}
+
+export const getReturnOnInvestmentByActorsData = (actors, convertAmount, prettyAmount, isProducer) => {
+    const tooltip = {}
+    const items = actors.map(actor => {
+        const netOperatingProfits = convertAmount.value(actor.netOperatingProfit || 0)
+        let totalCosts = actor.totalCosts
+        if (isProducer) {
+            totalCosts += netOperatingProfits
+        }
+        totalCosts = convertAmount.value(totalCosts)
+        tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
+            Total costs = ${prettyAmount.value(totalCosts)}<br>
+            Return on investment = ${formatPercent(
+            (100 * netOperatingProfits) / totalCosts
+        )}`
+        return {
+            name: actor.name,
+            value: ((100 * netOperatingProfits) / totalCosts).toFixed(0)
+        }
+    }).filter(item => !!item)
+    return getMiniBarChart(items, tooltip)
 }
 
 export const getNetOperatingProfitPerActorOfStage = (actors, convertAmount, prettyAmount) => {
