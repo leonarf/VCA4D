@@ -19,7 +19,6 @@ export default defineConfig({
       input: [
         'index.html',
         'study.html',
-        'import-study.html'
       ].map(f => resolve(__dirname, f))
     },
   }

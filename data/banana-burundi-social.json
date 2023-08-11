@@ -1,0 +1,570 @@
+{
+  "id": "banana-burundi-2020",
+  "country": "BURUNDI",
+  "commodity": "Banana",
+  "year": 2020,
+  "data": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Pas de syndicat, pas de SMIG mais des contrats,  des salaires et des avantages sociaux tels à la fonction publique."
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "La liberté d'association est permise, mais il n'ya pas de syndicats"
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Contrats de travail fixe en bonne et due forme, salaires égaux entre femmes et hommes"
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification. Dans le cadre de l'emploi des enfants"
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Très peu de Batwa (pygmées) sont actifs dans les différentes activités de la chaine"
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Risque moyennement élevé, les enfants travaillent les jours non ouvrables"
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.transport de régimes, de fumier, certains travaux dégradants "
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.Peu de couverture accident "
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 3.5,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Please add justification.l’Etat offre presque autant ou moins aux ouvriers non qualifiés"
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Salaire BTP un peu plus élevé + problème foncier "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.IMENA par exemple"
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.Acquisition dans l’opacité, exemple des chinois et des domaines de l’état"
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.Projets des chinois, projets de certains hauts responsables du pays"
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.Les femmes et certaines classessociales sont exclues"
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.12% des conflits sont liés à l’incertitude concernant les limites des terres de l’état"
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification. 12% des conflits sont liés à l’incertitude concernant les limites des terres de l’état"
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 2.25,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.36% des conflits fonciers sont non résolus,"
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.Flux migratoires du Burundi vers la sous-région "
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.12% des conflits sont liés à l’incertitude concernant les limites des terres de l’état"
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Elles existent mais manquent de ressources financières et humaines"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 3.5,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.IMENA, 30% de femmes au postes de direction, 60% d’ouvrières non qualifiées"
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Please add justification.Elles travaillent au tant que les hommes dans toute la chaine"
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Brasseries traditionnelles, bistrots, petits commerces, produits d’ élevage"
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.Société patrilinéaire"
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.Peu de crédits sont allouées au Burundi en général"
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Plus réservés aux chefs de familles mais émergence des groupements féminins et mixtes"
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Au sein des ménages, des groupements et des coopératives elles sont consultées"
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.Peu,  Souvent au four ( CV banane) et au moulin (cuisine, garde des enfants)"
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Please add justification.Elle gèrent une grande partie du budget (alimentation)"
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification. Petit commerce, élevage, "
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Elles sont consultées, conformement à la loi"
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2.75,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Existence de coopératives, de groupements féminins et mixtes très actifs"
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.IMENA, groupements féminins et mixtes, coopératives"
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.Moins que les hommes"
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Au travail, dans les groupements et différentes organisations, à l’église…."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.Les femmes travaillent presque équitablement dans la CV banane avec les hommes + seules pour le travail domestique et la garde des enfants"
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.80% des ménages interrogées on pris au moins 1 fois en 12 mois un ouvrier agricole "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.: Les céréales sont disponibles pour 78% et parfois disponibles pour 18%"
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Plus de 7.000 tonnes de produits importés par le PAM en 2017 pour les cantines solaires de 501.00 écoliers"
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.En avril 2016, presque un ménage sur deux (46%) estait en insécurité alimentaire"
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.En fonction des périodes de récoltes"
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification. Qualité des produits alimentaires est élevée mais les stratégies d’adaptation éloignent la population de cette qualité"
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Politiques, stratégies du gouvernement et des ONG"
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification. Plusieurs fois par an, les ménages réduisent leur consommation de féculents et de source de protéines en faveur des légumes et des fruits qui sont moins chers et/ou plus accessibles mais moins nutritifs en termes de calories. La consommation de lait et d’œuf, source de protéines et de vitamine A, est dérisoire."
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.52% de personnes déclarent avoir eu des difficultés à obtenir de la nourriture ou de l’argent pour acheter la nourriture dans le semestre précédant l’étude"
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.Elle va du simple au double ou plus à la veille des récoltes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 3.25,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Les coopératives de producteurs de bananes se rencontrent dans toutes les zones agroécologiques de la banane, elles sont en restructuration avec l’appui des ONG et des services de l’état"
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Please add justification.Sauf une minorité telle les Batwa très peu représentée"
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Il y a actuellement la montée remarquable d’un leadership des groupements et des coopératives de la CV"
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification. Des groupes tels les coopératives qui livrent à IMENA, des Coopératives encadrées par des ONG…"
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 3.5,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Informations sur les pratiques agricoles surtout"
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Please add justification.Contrats entre Coopératives et IMENA, entre Coopératives et grossiste, entre producteurs et grossistes, producteurs et détaillants, producteurs et transporteurs"
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Une avancée significative depuis quelques années"
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Certaines pratiques culturales traditionnelles sont encouragées et conservées dans CV banane"
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Très encouragée par le politique, un jour y est dédié (samedi)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.1 centre de santé pour 10.109 habitants et un hôpital pour 131.414 habitants (2013)"
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.62% des ménages des zones agroécologiques de la CV ont une assurance maladie "
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.77 de personnes estiment que les frais sont moyens ou moins chères"
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.Matériaux améliorés des ménages en 2014 : Sol (9,7%) ; Mur ((87%) ; Toit (98,4%)"
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Please add justification.77% à 80% taux d’accès à l’eau potable mais plus de 20% d’infrastructures en panne, taux d’accès à l’assainissement est de 35% à 41%. Près de 52% de personnes défèquent à l’air libre."
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification.: 96% à 98% de taux de scolarisation en 2015 mais une durée moyenne de 2,7 ans au lieu de 10.1 an"
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification.: taux d’inscription à l’enseignement secondaire a triplé entre 2003 et 2015, l’enseignement des métiers a augmenté de 30% dans la même période. "
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification.: Appui des ONG, OI et certains services de l’état. Toutes les zones rurales ne sont pas couvertes"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

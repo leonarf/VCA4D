@@ -1,0 +1,570 @@
+{
+  "id": "cashew-mali-2020",
+  "country": "Mali",
+  "commodity": "Cashew",
+  "year": 2020,
+  "data": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Ces Conventions et pactes bien que traduits dans les différents textes nationaux sont pour la plupart méconnus des partenaires sociaux, de la société civile, des services de l’inspection du travail et des magistrats dans le but de promouvoir les conditions de travail des acteurs des filières agricoles en général et de la transformation de l’anacarde en particulier"
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "A l’instar d’autres filières agricoles au Mali, la liberté d’association est effective pour l’anacarde qui compte une multitude et une diversité d’organisations socioprofessionnelles qui ont bénéficié de l’appui conseil de projets, de l’APCAM et des CRA: plusieurs dizaines de coopératives à la base, d''unions locales et une faitière pour le segment de la production; presque autant pour le segment de la transformation , en plus  d'un Groupement pour les tranformateurs privés; des assiciations de commerçants et exportateurs pour le segment de la commercialisation , enfin une interprofession de l’anacarde a été récemment mise en place"
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "L'impact modéré des organisations socio professionnelles de la chaine de valeur de l’anacarde sur le pouvoir de négociation et de gestion de contrats par les acteurs malgré la multitude des organisations et la mise en place de l'Interpofession. Au contraire prédominent, la concurrence intra et inter acteurs du même maillon de la filière et des relations occasionnelles et informelles"
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les activités de production de l'anacarde,  à l’instar des autres filières agricoles au Mali, sont réalisées dans le cadre familial, tandis qu'au niveau de la tranformation semi-artisanale les travailleurs sont recrutés sur la base de candidature volontaire "
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les employé(e)s des unités semi artisanales sont en grande majorité des contractuels peu qualifiés, recruté(e)s dans les localités voisines. Ils subissent une préselection à l'embauche et une une sélection finale  après la  formation technique."
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Le taux brut  de fréquentation scolaire est relativement élevé de la zone ( 75% en 2014), mais plus faible en milieu rural (66,3%), en grande partie pour des raisons liées au besoin de main d'oeuvre agricole en milieu rural  et autres fecteurs comme les élevés de scolarité et des fournitures scolaires,"
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "La durée des activités excercées par les enfants en zone cotonnière qui excéde largement celle prévue par la législation nationale en vigueur et leur exposition à des travaux  lourds ou dangéreux réservés aux adultes,"
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La non application de la règlementation en vigueur et la non protection sociale des travailleurs particulièrement dans le segment de la transformation exposent ceux ci à des risques qui nuisent à leur santé  et à leur sécurité. Tout ou partie des tâches liées à la transformation de l'anacarde est manuel, excécutées sans protection physique appropriée et sans couverture sociale . "
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 4,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "La culture de l'anacarde connait connait un niveau d'attractivité qui s’est traduit aussi bien par l’accoissement des superficies cultivées ( parfois au détriment d’autres cultures comme le coton ou les cultures céréalières ) que par l’augmentation du nombre d’es producteurs. Par ailleurs , la rémunération dans les unités semi artisanales de tranformation  est supérieur  à la  rémunération dans d’autres secteurs comparables ( aide ménagère, ouvrier agricole, petit commerce, etc.). Les ouvrières de l'unité de tranformation de Koumantou, payées au kg, perçoivent entre 25 000 FCFA et 50 000 FCFA par mois Koumantou contre 10 000 FCFA pour les aides ménagères et au plus 25 000 FCFA pour les ouvriers agricoles"
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "La  production de l'anacarde est attractives pour toutes les catégories d'exploitants du fait de l'appui de l'Etat et de ses  et des revenus complémentaires qu'elle génère. Cependant un des indicateurs de l'attrait de cette culture pour les jeunes  en particulier est la proportion plus élevée d'exploitations individuelles constituées en grande partie de  cadets sociaux par opposition aux exploitations familiales qui sont dirigées par les ainés ,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": 1,
+          "averageText": "Low",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Les Directives Volontaires pour une Gouvernance Responsable des régimes fonciers sont connues au Mali dans la zone l'OMVS, mais pas encore dans la région de Sikasso, principale zone de production de l’anacarde"
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Des investissements à grande échelle pour acquérir des terres ne sont pas prévus dans le cadre du PAFAM."
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Organisation et animations de réunion de sensibilisation et d'information des acteurs publics et privés des communes concernées sur les enjeux économiques, sociaux et environnementaux  du projet  par les agents du projet en collaboration avec les autorités communales."
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Les différents textes législatifs et réglementaires du secteur Agricole ainsi que les documents de politique du secteur restent mal connus des OPA à la base et au niveau local, mais certainement mieux connus au niveau des faitières"
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Le niveau de participation et de consultation aux prises de décision et de participation des acteurs aux différents segments de la filière a été relativement élevé pour l’ensemble des segments de la filière si l’on tient compte du nombre de participants par rapport aux prévisions de participation et du profil socio professionnel des participant. Cependant la representation des migrants, une des cibles du projet a été faible."
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Le consentement des parties prenantes a été facilement acquis, d’autant plus qu’au cours des assemblées de présentation du projet et de sensibilisation des populations, le PAFAM a été perçu comme une extension et une redynamisation des activités du CTARS. qui aura permis un essor significatif de la chaine de valeur de l’anacarde dans ces zones"
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La règlementation coutumière  mise en application par des institutions locales  promeut des droits fonciers sûrs et équitables aussi bien pour l’accès aux ressources foncières et à l’eau agricole  à l’ensemble des membres des communautés ou considérés comme tel. Cependant elle impose des limitations et contrôles à certaines couches de la société , notamment aux femmes et aux allochtones auxquels il est interdit de planter des arbres et à tout moment leur parcelle peut leur être retirée,"
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Aucune stratégie alternative n'est prise en considération par le projet en cas de perturbation des moyens d'existence alors que que sont signalés d'une part  des cas de risques de déficit alimentaire d'exploitations lié à des extensions de la culture de l'anacarde au détriment de cultures vivrières, d'autre part au risque de manque de main d'ouevre agricole féminine en hivernage du fait de sa mobiliation pour le travail salarié dans les unités de transformation,"
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "De par la nature de ses interventions, le PAPFAM n'est pas concerné  par la mise en place d’un système de compensation lié à l’expropriation de populations. "
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "De par la nature de ses interventions, le PAPFAM n'est pas concerné  pour lrepondre ux plaintes des parties prenantes et pour l'arbitrage de potentiels conflits causés par les investissements sur la CV. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les femmes en général ne sont pas exclues des segments de la chaine de valeur même si pour des raisons socioculturelles et ou techniques elles sont moins representées ou ne participent pas dans certains comme la commercialisation. Toutefois la perspective offerte par le projet d’une extension de la culture et d’un développement de la transformation augure d’une inclusion plus importante des femmes à l’ensemble des segments et maillons de la chaine de valeur"
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les femmes sont particulièrement actives dans le maillon « récolte » et le segment « transformation » artisanale et semi-artisanale. Elles sont  plus faiblement représentées dans le segment \" production \" et des maillons  \" transport \", \"séchage\" et \"mise en sac\" des noix.   "
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les femmes possèdent souvent de petits ruminants et de la volaille acquis par la vente de tout ou partie de la production de leurs parcelles individuelles de riz, arachide, fonio et légumes ou autres AGR. Avec l'appui de PTF, des organisations féminines à la base possèdent des matériels et équipements collectifs pour la production agricole, le transport, la transformation et ou la commercialisation de produits. "
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "De par le statut de chef d'exploitation attribué à l'homme, la terre lui revient exclusivement. Cependant il a obligation économique et morale de prêter des proportions de terre aux femmes à leur demande."
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Les femmes et notamment les femmes rurales ne disposent généralement pas la garantie indispensable pour bénéficier de crédit au niveau des institutions de crédit. Des expériences de micro crédit aux femmes ont été tentées sans succès par des organismes plus ou moins spécialisés,"
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Des groupements de femmes bénéficient de services de vulgarisation et d’accès aux intrants à travers des programme et projets de développement agricole notamment pour les cultures maraichères et la riziculture de bas-fonds. Cependant le nombre de ces groupements reste limité par rapport aux besoins."
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 2.6,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les femmes sont dependantes des décisions des hommes concernant la production de l'exploitation. Toutefois les femmes veuves et dont les enfants sont mineures et les femmes mariées qui disposent de parcelles individuelles décident de leur production "
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "L’autonomie des femmes est limitée dans l’organisation de leur travail, compte tenu de leur forte dépendance à leur mari et aux hommes de l’exploitation en général et aussi à leurs occupations aux travaux agricoles dans les champs de l’exploitation et les tâches domestiques qui absorbent une grande partie de leur temps. Les exceptions concernent  la femme chef de ménage et ou la femme âgée eayant des belles filles. Les femmes qui disposent de ressources financières peuvent aussi engager de la main d’œuvre pour la mise en valeur de leur parcelle individuelle,"
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Au sein des ménages, les valeurs sociétales veulent que   l’homme seul soit responsable des décisions majeures concernant l’exploitation, tels que la vente, l’achat et le transfert des biens, étant donné que c’est à lui que revient le devoir d’assurer l’essentiel des besoins du ménage,"
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les femmes qui exploitent des parcelles individuelles ou pratiquent des AGR disposent des revenus de ces activités qu’elles gèrent de façon autonome ou avec son autorisation."
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les femmes décident de la gestion des revenus de leur parcelle individuelle ou de leur AGR, de la vente , de l’achat ou du transfert des  biens qui leur appartiennent. "
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2.25,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les femmes sont membres d’organisations professionnelles agricoles, en particulier elles sont membres de groupements, associations et sociétés coopératives de production, de transformation et ou de commercialisation"
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les femmes  occupent des positions de leaders dans les OPA de base des femmes. Cependant leur représentation est inexistante ou très faible aux niveaux des instances de décision des organisations de base mixtes, des unions ou des faitières."
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Le pouvoir d’influence des décideurs politiques par les femmes est en général faible. Elles sont surtout mobilisées pour les campagnes électorales ou pour l’accueil des délégations officielles et des partenaires au développement."
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les leaders femmes des organisations féminines s’expriment  volontiers en public. Toutefois l’expression de la femme en public ( masculin ou mixte) est encore limitée notamment en milieu rural du fait de pesanateurs socioculturelles."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Les charges globales des femmes sont nettement plus élevées que celles des hommes  du fait notamment que les femmes participent activement aux travaux agricoles à côté des hommes, et en plus elles s’occupent des tâches domestiques, de la collecte et transformation de produits de cueillette, etc. Elles sont les premières à se lever et les dernières à se coucher dans la famille . Les hommes s’occupent  des travaux agricoles, de la commercialisation et une partie de l’entretien de la maison. "
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les charges de travail des femmes dans le segment de la production de l'anacarde sont relativement légères   comparées aux autres filières agricoles ou de cueillette. Pour la transformation, l’organisation du travail  dans les unités semi artisanales permet de minimiser l’impact du travail salariée sur les occupations domestiques des femmes et previent l’absentéisme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 4,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\n",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "la production céréalière de la région de Sikasso a augmenté régulièrement de 12,50% en moyenne durant la période 2005-2016 . Cette augmentation est en grande partie liée à une pluviométrie favorable et aux effets des mesures politiques dont la subvention aux intrants et aux équipements agricoles."
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": " La région de Sikasso, largement excédentaire pour toutes les céréales confondues, exporte en plus des céréales, des fruits , des légumes  et des tubercules . L’augmentation du volume de ces exportations constitue un indicateur de l’augmentation de la présence des produits alimentaires sur les marchés locaux et régionaux."
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 3.5,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Durant la période 2005-2015, le pouvoir d’achat des populations a évolué positivement à l’exception des périodes de crises alimentaires et sécuritaires notamment dans les communes au nord et au centre du pays.Pour les communes au sud du pays le pouvoir d’achat des populations a connu une nette amélioration grâce notamment aux  revenus tirés de la production et de la vente de produits agricoles, des petits métiers, de la production/vente de produits d'élevage, du commerce/revente de produits alimentaires au détail, du commerce/revente produits non alimentaires au détail, de l’orpaillage et des transferts d’argent.  "
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les prix à la consommation des produits alimentaires locaux ( mil, sorgho, maïs et riz local)  montrent une tendance à la baisse à partir de l’année 2015 . Toutefois cette baisse fait suite à une période de hausse durant les années précédantes.  "
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "le régime alimentaire notamment en milieu rural n’a quasiment pas évolué  durant les dernières decennies et les céréales représentent plus des deux-tiers des disponibilités énergétiques alimentaires. Toutefois on observe d’un côté une diminution de la part des céréales traditionnelles au profit de celle du riz et du maïs et de l’autre une tendance au changement de modèle de consommation alimentaire dans les centres urbains où le riz occupe une place de plus en plus prépondérante.  "
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Des améliorations de pratiques nutritionnelles sont signalées, portant notamment sur la consommation de plus fréquente de légumes frais ou séchés, la préparation de repas enrichi pour des couches vulnérables ou la consommation d’aliments plus riches en apports énergétiques ( viandes, poisson, lait, œufs, graisses vénégtales, etc.) et qui complètent les céréales traditionnellement consommées. Cependant force est de remarquer que ces améliorations concernent  surtout  d'une part, des ménages urbains qui disposent d'un revenu et d'un niveau d'instruction relativement élevés, d'autre part des exploitants de périmètres maraichers dans des zones aménagées à cet effet.  Pour la grande majorité des ménages de la région, cette amélioration reste marginale. "
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Le régime alimentaire d’une minorité de familles a tendance  à se diversifier légèrement grâce notamment à l’amélioration de leurs revenus et à l’accessibilité géographique des produits. Ces familles, urbaines ou rurales \"aisées\" consomment plus régulièrement de la viande ou du poisson, des pâtes alimentaires, des conserves, des légumes frais ou séchés, du riz, du sucre, du lait, etc.     "
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 4,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Au cours des dernières décennies, les populations de la zone d’intervention du projet ont été moins affectées que les autres zones de production du Mali  par les effets des chocs qui sont à la base des péneuries alimenatires périodiques. Les risques de péneurie ont été réduits notamment du fait de la disponibilité et l'accessibilité économique et physique des produits dans la région.  "
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "La période 2010/11 à 2014/15 a été marquée globalement par des variations faibles des prix des princiaples denrées alimentaires ( mil, sorgho, maïs et riz local) selon les saisons et les années."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2.25,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les organisations et coopératives de producteurs contribuent aux fonctions suivantes de la CV : la mobilisation sociale des producteurs et transformateurs, la production,  la commercialisation des noix."
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "L’appui institutionnel et organisationnel des coopératives a couvert tous les grands bassins de production de l’anacarde du pays. Aussi la quasi-totalité des producteurs et productrices dans ces principaux bassins sont formellement membres de ces coopératives et bénéficient des divers services fournis par ces organisations et leurs partenaires."
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les OPA mises en place sont dans l’ensemble faibles dans leur fonctionnalité et leur gestion, en grande partie du fait de leur récupération par des groupes qui n'ont pas un grand intéret dans la filière, mais pour des raisons de positionnement social et de leadership. "
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Les capacités de négociation des OPA de producteurs sur le marché des intrants et des produits sont quasi très faibles du fait de leur faible fonctionnalité et de l'insuffisance d'organisation du marché de la noix au Mali"
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les producteurs sont dans l’ensemble informés sur les pratiques et les politiques agricoles concernant l’anacarde, à travers notamment les séances de sensibilisation sur la filière et les formations techniques reçues. Par contre leur niveau d'information sur les prix du marché des noix demeure faible."
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Les relations entre les différentes catégories d’acteurs de lCV sont encore perçues par les acteurs eux-mêmes comme concurrentes au lieu d’être complémentaires . Ce manque de confiance se manifeste à travers notamment,  d'une part, la proportion très élevée des ventes individuelles aux commerçants au lieu des ventes groupées pronées par les organisations des producteurs, d'autre part  la sous information des producteurs sur les prix qui sont  fixés par les commerçants au moment de l’achat direct avec les producteurs.   "
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 3.66666666666667,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Toutes les décisions concernant le village sont prises par le conseil de village, sous l’autorité du chef de village. La  mise en œuvre de ces décisionspar des organisations communautaires de jeunes et de  femmes du village. "
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "La vie communautaire dans les villages  demeure dominée par le respect de valeurs et d’institutions locales qui résistent encore à l'épreuve de la modernité. Parmi ces valeurs on noté le respect des ainé(e)s et des personnes âgées, des rapports de cousinage ,  l’hospitalité et l'entraide.Des institutions locales assurent périodiquement des céremonies communautaires ou intercommunautaires, initiatiques ou de socialisation, au cours desquelles le respect des connaissances et valeurs traditionnelles est enseigné et célébré.Cependant force   est de reconnaitre que dans de nombreuses communautés, ces valeurs et  institutions sont de plus en menacées par la marchandisation, l’exode rural des jeunes et l’urbanisation et l’influence des religions monothéistes. "
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Une des raisons d’être des organisations communautaires de jeunes ou de femmes est la réalisation d’activités économiques et sociales au profit de leurs membres et de la communauté à travers des travaux d'intérêt collectif, des activités socioculturelles, de police villageoise, d'entraide et de solidarité en faveur de personnes vulnérables."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Une proportion élevée des ménages (95,9%) a accès aux soins de santé et 60% déclarent être satisfaits des soins et médicaments qui sont fournis dans les structures de santé qu'ils fréquentent.\n"
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les CSCOM constituent les structures de santé les plus accessibles économiquement et physiquement des populations rurales et 49% de la population de la région de Sikasso a accès à un CSCOM situé à moins de 5 km de son lieu de résidence  en 2017."
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "L’opinion des personnes consultées par rapport aux problèmes rencontrés dans les centres de santé montrent que la grande majorité ( 94,6%) n’a pas exprimé de problèmes.Toutefois cette proportion semble surévaluée si l’on tient que l'enquête a couvert seulement la population consultée."
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Le type d’habitat traditionnel est largement dominant dans la zone, constitué de matériaux sommaires partout disponibles. Il est très adapté aux condtions sociooéconomiques des populations et aux intempéries qui prévalent dans le milieu. La dernière enquête EMOP indique que 56,7% sont satisfaits à très satisfaits de leur condtions de logement."
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "la quasi-totalité de villages de la région de Sikasso disposent d’un point d’eau moderne dont des adductions d'eau modernes et des adductions d'eau sommaires.Par contre il est à signaler une insuffisance notoire d’ouvrages et équipements d’hygiène et d’assainissement. "
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 2.33333333333333,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "L’école primaire ou 1er cycle fondamental est largement accessible pour la très grande majorité de la population de la région de Sikasso. Le nombre de salles de classes est passé de 8 330 en 2011 à 10 247 en 2014 et le taux taux brut de scolarisation au fondamental est de 74,1% en 2014.Cependant ce taux cache une grande disparité entre les filles (68,9%)et les garçons (80,6%)."
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "L’enseignement secondaire général et l’enseignement secondaire professionnel connaissent également  un élan de progession grâce notamment à la création de lycées publics et privés et d’établissements d’enseignement professionnel.La région compte 84 lycées dont 11 publics et 73 privés et 62 établissements professionnels .  Cependant le taux d’augmentation des effectifs est ilargement nférieur à celui du fondamental pour des raisons de redoublement, d’abandon ou d’échec scolaire au fondamental."
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Il n’existe pas de formation professionnelle qui cible spécifiquement la chaine de valeur de l’anacarde au Mali."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -11,7 +11,7 @@
                 </div>
             </header>
             <div class="w-full text-left ml-24 my-8">
-                <StudyMenu v-if="studyData"  :studyId="studyData.id" :localCurrency="studyData.localCurrency" :currency="currency"
+                <StudyMenu v-if="studyData"  :studyId="studyData.id" :localCurrency="studyData.targetCurrency" :currency="currency"
                 @update:currency="updateCurrency" />
             </div>
             <template v-if="studyData">
@@ -60,7 +60,7 @@ watch(currency, (newCurrency) => {
     localStorage.setItem('currency', newCurrency);
 })
 
-const currencySymbol = computed( () => currency.value === 'LOCAL' ? studyData.value.localCurrency : currency.value);
+const currencySymbol = computed( () => currency.value === 'LOCAL' ? studyData.value.targetCurrency : currency.value);
 
 onMounted(async () => {
   const studyId = route.query.id;
@@ -75,9 +75,14 @@ onMounted(async () => {
   }
 
   try {
-    const data = await getStudyData(studyId)
-    studyData.value = data
-
+    const ecoData = await getStudyData(`${studyId}-eco`)
+    let splitStudyId = studyId.split('-')
+    splitStudyId.pop()
+    const socialData = await(getStudyData(`${splitStudyId.join('-')}-social`))
+    studyData.value = {
+        ...ecoData,
+        socialData: socialData.data
+    }
     if (!currency.value) {
         currency.value = "LOCAL"
     }

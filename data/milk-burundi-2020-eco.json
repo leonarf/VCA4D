@@ -1,0 +1,748 @@
+{
+  "id": "milk-burundi-2020",
+  "country": "Burundi",
+  "commodity": "Milk",
+  "product": "Animal products",
+  "year": 2020,
+  "localCurrency": "MBIF",
+  "targetCurrency": "BIF",
+  "currencyRatio": 1000000,
+  "data": {
+    "stages": [
+      {
+        "name": "Producers",
+        "description": "",
+        "index": 0
+      },
+      {
+        "name": "Collectors",
+        "description": "",
+        "index": 1
+      },
+      {
+        "name": "Processors",
+        "description": "",
+        "index": 2
+      },
+      {
+        "name": "Wholesalers",
+        "description": "",
+        "index": 3
+      },
+      {
+        "name": "Retailers",
+        "description": "",
+        "index": 4
+      },
+      {
+        "name": "Exporters",
+        "description": "",
+        "index": 5
+      }
+    ],
+    "actors": [
+      {
+        "name": "Agropastoral Divagation",
+        "stage": "Producers",
+        "id": 1,
+        "numberOfActors": 59032.2576105036,
+        "directAddedValue": 11299.4207740072,
+        "publicFundsBalance": -26.4823468169197,
+        "netOperatingProfit": 7136.67907444879,
+        "totalCosts": 6534.83174938913,
+        "receivedAddedValue": 7136.67907444879,
+        "employment": {
+          "tempMale": 767135.966288091,
+          "tempFemale": 221289.221044642,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 767135.966288091,
+          "totalFemale": 221289.221044642,
+          "totalTemp": 988425.1873327331,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 988425.1873327331
+        }
+      },
+      {
+        "name": "Agropastoral Semipermanent",
+        "stage": "Producers",
+        "id": 2,
+        "numberOfActors": 36666.6666666667,
+        "directAddedValue": 11652.9636018205,
+        "publicFundsBalance": -421.571727842093,
+        "netOperatingProfit": 6223.03620036482,
+        "totalCosts": 15651.6151074102,
+        "receivedAddedValue": 6223.03620036482,
+        "employment": {
+          "tempMale": 752885.310891548,
+          "tempFemale": 217178.45506487,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 752885.310891548,
+          "totalFemale": 217178.45506487,
+          "totalTemp": 970063.7659564181,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 970063.7659564181
+        }
+      },
+      {
+        "name": "Stabulation intégré",
+        "stage": "Producers",
+        "id": 3,
+        "numberOfActors": 268800,
+        "directAddedValue": 31871.2544279418,
+        "publicFundsBalance": -2615.48118178577,
+        "netOperatingProfit": 17444.1461494703,
+        "totalCosts": 31971.8098056063,
+        "receivedAddedValue": 17444.1461494703,
+        "employment": {
+          "tempMale": 1806989.5428543,
+          "tempFemale": 521246.983515662,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 1806989.5428543,
+          "totalFemale": 521246.983515662,
+          "totalTemp": 2328236.526369962,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 2328236.526369962
+        }
+      },
+      {
+        "name": "Intensif diversification",
+        "stage": "Producers",
+        "id": 4,
+        "numberOfActors": 638.297872340426,
+        "directAddedValue": 16615.9552980271,
+        "publicFundsBalance": -224.312439614243,
+        "netOperatingProfit": 10941.9222699632,
+        "totalCosts": 23338.1766419304,
+        "receivedAddedValue": 10941.9222699632,
+        "employment": {
+          "tempMale": 0,
+          "tempFemale": 0,
+          "unskilledMale": 607298.251305831,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 607298.251305831,
+          "totalFemale": 0,
+          "totalTemp": 0,
+          "totalSkilled": 0,
+          "totalUnskilled": 607298.251305831,
+          "total": 607298.251305831
+        }
+      },
+      {
+        "name": "Laiterie artisanale",
+        "stage": "Processing",
+        "id": 10,
+        "numberOfActors": 64.8333333333333,
+        "directAddedValue": 1212.10334687714,
+        "publicFundsBalance": 3.31362839002792,
+        "netOperatingProfit": 724.285703542014,
+        "totalCosts": 14234.2380674905,
+        "receivedAddedValue": 724.285703542014,
+        "employment": {
+          "tempMale": 117734.640866035,
+          "tempFemale": 90565.1061092797,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 117734.640866035,
+          "totalFemale": 90565.1061092797,
+          "totalTemp": 208299.7469753147,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 208299.7469753147
+        }
+      },
+      {
+        "name": "Consommateur Rural",
+        "stage": "Consumers",
+        "id": 13,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Consommateur  CUS",
+        "stage": "Consumers",
+        "id": 14,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Consommateur BujumB",
+        "stage": "Consumers",
+        "id": 15,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Utilisateur Animaux",
+        "stage": "Consumers",
+        "id": 16,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Centre de Collecte",
+        "stage": "Collectors",
+        "id": 5,
+        "numberOfActors": 54.12,
+        "directAddedValue": 1050.22724277494,
+        "publicFundsBalance": -21.647404116004,
+        "netOperatingProfit": 81.7521170353033,
+        "totalCosts": 15201.3152988309,
+        "receivedAddedValue": 81.7521170353033,
+        "employment": {
+          "tempMale": 347670.319149328,
+          "tempFemale": 0,
+          "unskilledMale": 36215.6573452961,
+          "unskilledFemale": 19315.0172508246,
+          "skilledMale": 1241.67968041015,
+          "skilledFemale": 1448.62629381185,
+          "totalMale": 385127.65617503424,
+          "totalFemale": 20763.64354463645,
+          "totalTemp": 347670.319149328,
+          "totalSkilled": 2690.3059742220003,
+          "totalUnskilled": 55530.674596120705,
+          "total": 405891.2997196707
+        }
+      },
+      {
+        "name": "Collecteur",
+        "stage": "Collectors",
+        "id": 8,
+        "numberOfActors": 5359.41666666667,
+        "directAddedValue": 5667.6329275322,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 5667.6329275322,
+        "totalCosts": 38588.1539915245,
+        "receivedAddedValue": 5667.6329275322,
+        "employment": {
+          "tempMale": 0,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 0,
+          "totalFemale": 0,
+          "totalTemp": 0,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 0
+        }
+      },
+      {
+        "name": "Laiterie industrielle",
+        "stage": "Processors",
+        "id": 6,
+        "numberOfActors": 0.865833333333333,
+        "directAddedValue": 2513.52365401773,
+        "publicFundsBalance": 1170.04497396917,
+        "netOperatingProfit": 76.239689081148,
+        "totalCosts": 7196.24931158579,
+        "receivedAddedValue": 76.239689081148,
+        "employment": {
+          "tempMale": 0,
+          "tempFemale": 0,
+          "unskilledMale": 39290.0395350325,
+          "unskilledFemale": 7619.8864036676,
+          "skilledMale": 1959.3993609431,
+          "skilledFemale": 1714.47448340464,
+          "totalMale": 41249.438895975596,
+          "totalFemale": 9334.36088707224,
+          "totalTemp": 0,
+          "totalSkilled": 3673.87384434774,
+          "totalUnskilled": 46909.9259387001,
+          "total": 50583.79978304784
+        }
+      },
+      {
+        "name": "Laiterie semi-industrielle",
+        "stage": "Processors",
+        "id": 7,
+        "numberOfActors": 4.32291666666667,
+        "directAddedValue": 1317.4687443191,
+        "publicFundsBalance": 309.457585490355,
+        "netOperatingProfit": 734.464823495297,
+        "totalCosts": 2363.96709414682,
+        "receivedAddedValue": 734.464823495297,
+        "employment": {
+          "tempMale": 0,
+          "tempFemale": 0,
+          "unskilledMale": 21654.9243282192,
+          "unskilledFemale": 5774.64648752512,
+          "skilledMale": 3341.04532948945,
+          "skilledFemale": 433.098486564384,
+          "totalMale": 24995.96965770865,
+          "totalFemale": 6207.7449740895045,
+          "totalTemp": 0,
+          "totalSkilled": 3774.143816053834,
+          "totalUnskilled": 27429.570815744322,
+          "total": 31203.714631798153
+        }
+      },
+      {
+        "name": "Grossiste",
+        "stage": "Wholesalers",
+        "id": 9,
+        "numberOfActors": 32.1566666666667,
+        "directAddedValue": 1192.73294283236,
+        "publicFundsBalance": 0.923016012405848,
+        "netOperatingProfit": 1173.86239343195,
+        "totalCosts": 13039.2750305291,
+        "receivedAddedValue": 1173.86239343195,
+        "employment": {
+          "tempMale": 11965.0222586716,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 11965.0222586716,
+          "totalFemale": 0,
+          "totalTemp": 11965.0222586716,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 11965.0222586716
+        }
+      },
+      {
+        "name": "Detaillant",
+        "stage": "Retailers",
+        "id": 11,
+        "numberOfActors": 249.444440039097,
+        "directAddedValue": 419.66165505984,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 177.290225027693,
+        "totalCosts": 1573.16990029046,
+        "receivedAddedValue": 177.290225027693,
+        "employment": {
+          "tempMale": 7480.60000943869,
+          "tempFemale": 77683.1507287011,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 7480.60000943869,
+          "totalFemale": 77683.1507287011,
+          "totalTemp": 85163.75073813979,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 85163.75073813979
+        }
+      },
+      {
+        "name": "Distributeur",
+        "stage": "Retailers",
+        "id": 12,
+        "numberOfActors": 158.25,
+        "directAddedValue": 11612.6557486926,
+        "publicFundsBalance": 101.407131923486,
+        "netOperatingProfit": 9232.43687834596,
+        "totalCosts": 27057.6456324098,
+        "receivedAddedValue": 9232.43687834596,
+        "employment": {
+          "tempMale": 0,
+          "tempFemale": 0,
+          "unskilledMale": 474752.445504823,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 474752.445504823,
+          "totalFemale": 0,
+          "totalTemp": 0,
+          "totalSkilled": 0,
+          "totalUnskilled": 474752.445504823,
+          "total": 474752.445504823
+        }
+      }
+    ],
+    "flows": [
+      {
+        "sellerActorName": "Agropastoral Divagation",
+        "buyerActorName": "Agropastoral Divagation",
+        "volumeExchanged": 26710.8996783256,
+        "monetaryValue": 8013269903.4977,
+        "unitPrice": 300000,
+        "volumeUnit": "Ton",
+        "product": "Lait"
+      },
+      {
+        "sellerActorName": "Agropastoral Divagation",
+        "buyerActorName": "Centre de Collecte",
+        "volumeExchanged": 849.119975566864,
+        "monetaryValue": 551927984.118462,
+        "unitPrice": 650000,
+        "volumeUnit": "Ton",
+        "product": "LaitCCL"
+      },
+      {
+        "sellerActorName": "Agropastoral Divagation",
+        "buyerActorName": "Collecteur",
+        "volumeExchanged": 8081.06047525406,
+        "monetaryValue": 4848636285.15244,
+        "unitPrice": 600000,
+        "volumeUnit": "Ton",
+        "product": "Lait"
+      },
+      {
+        "sellerActorName": "Agropastoral Divagation",
+        "buyerActorName": "Consommateur Rural",
+        "volumeExchanged": 958.919979929924,
+        "monetaryValue": 647270986.452699,
+        "unitPrice": 675000,
+        "volumeUnit": "Ton",
+        "product": "LaitRur"
+      },
+      {
+        "sellerActorName": "Agropastoral Divagation",
+        "buyerActorName": "Utilisateur Animaux",
+        "volumeExchanged": 505.079987347126,
+        "monetaryValue": 2550653936.10299,
+        "unitPrice": 5050000,
+        "volumeUnit": "Unitairy",
+        "product": "Animaux"
+      },
+      {
+        "sellerActorName": "Agropastoral Semipermanent",
+        "buyerActorName": "Agropastoral Semipermanent",
+        "volumeExchanged": 36494.7001552582,
+        "monetaryValue": 10948410046.5775,
+        "unitPrice": 300000,
+        "volumeUnit": "Ton",
+        "product": "Lait"
+      },
+      {
+        "sellerActorName": "Agropastoral Semipermanent",
+        "buyerActorName": "Centre de Collecte",
+        "volumeExchanged": 1386.00002229214,
+        "monetaryValue": 900900014.489891,
+        "unitPrice": 650000,
+        "volumeUnit": "Ton",
+        "product": "LaitCCL"
+      },
+      {
+        "sellerActorName": "Agropastoral Semipermanent",
+        "buyerActorName": "Collecteur",
+        "volumeExchanged": 15315.3002643585,
+        "monetaryValue": 9189180158.6151,
+        "unitPrice": 600000,
+        "volumeUnit": "Ton",
+        "product": "Lait"
+      },
+      {
+        "sellerActorName": "Agropastoral Semipermanent",
+        "buyerActorName": "Consommateur Rural",
+        "volumeExchanged": 1815.00007212162,
+        "monetaryValue": 1225125048.68209,
+        "unitPrice": 675000,
+        "volumeUnit": "Ton",
+        "product": "LaitRur"
+      },
+      {
+        "sellerActorName": "Agropastoral Semipermanent",
+        "buyerActorName": "Utilisateur Animaux",
+        "volumeExchanged": 881.099998950958,
+        "monetaryValue": 4449554994.70234,
+        "unitPrice": 5050000,
+        "volumeUnit": "Unitairy",
+        "product": "Animaux"
+      },
+      {
+        "sellerActorName": "Agropastoral Semipermanent",
+        "buyerActorName": "Utilisateur Animaux",
+        "volumeExchanged": 29150.0010490418,
+        "monetaryValue": 291500010.490418,
+        "unitPrice": 10000,
+        "volumeUnit": "Ton",
+        "product": "Fumier1"
+      },
+      {
+        "sellerActorName": "Stabulation intégré",
+        "buyerActorName": "Stabulation intégré",
+        "volumeExchanged": 83112.2548241491,
+        "monetaryValue": 24933676447.2447,
+        "unitPrice": 300000,
+        "volumeUnit": "Ton",
+        "product": "Lait"
+      },
+      {
+        "sellerActorName": "Stabulation intégré",
+        "buyerActorName": "Centre de Collecte",
+        "volumeExchanged": 7845.31193475072,
+        "monetaryValue": 5099452757.58797,
+        "unitPrice": 650000,
+        "volumeUnit": "Ton",
+        "product": "LaitCCL"
+      },
+      {
+        "sellerActorName": "Stabulation intégré",
+        "buyerActorName": "Collecteur",
+        "volumeExchanged": 40917.2266906692,
+        "monetaryValue": 24550336014.4015,
+        "unitPrice": 600000,
+        "volumeUnit": "Ton",
+        "product": "Lait"
+      },
+      {
+        "sellerActorName": "Stabulation intégré",
+        "buyerActorName": "Consommateur Rural",
+        "volumeExchanged": 2500.69318833494,
+        "monetaryValue": 1687967902.12608,
+        "unitPrice": 675000,
+        "volumeUnit": "Ton",
+        "product": "LaitRur"
+      },
+      {
+        "sellerActorName": "Stabulation intégré",
+        "buyerActorName": "Utilisateur Animaux",
+        "volumeExchanged": 1117.95699454108,
+        "monetaryValue": 5645682822.43245,
+        "unitPrice": 5050000,
+        "volumeUnit": "Unitairy",
+        "product": "Animaux"
+      },
+      {
+        "sellerActorName": "Stabulation intégré",
+        "buyerActorName": "Utilisateur Animaux",
+        "volumeExchanged": 26968.2609630145,
+        "monetaryValue": 269682609.630145,
+        "unitPrice": 10000,
+        "volumeUnit": "Ton",
+        "product": "Fumier1"
+      },
+      {
+        "sellerActorName": "Intensif diversification",
+        "buyerActorName": "Intensif diversification",
+        "volumeExchanged": 30880.9840040867,
+        "monetaryValue": 13124418201.7368,
+        "unitPrice": 425000,
+        "volumeUnit": "Ton",
+        "product": "Lait"
+      },
+      {
+        "sellerActorName": "Intensif diversification",
+        "buyerActorName": "Centre de Collecte",
+        "volumeExchanged": 743.270184041487,
+        "monetaryValue": 483125619.626967,
+        "unitPrice": 650000,
+        "volumeUnit": "Ton",
+        "product": "LaitCCL"
+      },
+      {
+        "sellerActorName": "Intensif diversification",
+        "buyerActorName": "Distributeur",
+        "volumeExchanged": 28485.1494654694,
+        "monetaryValue": 24212377045.649,
+        "unitPrice": 850000,
+        "volumeUnit": "Ton",
+        "product": "Lait"
+      },
+      {
+        "sellerActorName": "Intensif diversification",
+        "buyerActorName": "Utilisateur Animaux",
+        "volumeExchanged": 242.474485849257,
+        "monetaryValue": 1224496153.53875,
+        "unitPrice": 5050000,
+        "volumeUnit": "Unitairy",
+        "product": "Animaux"
+      },
+      {
+        "sellerActorName": "Intensif diversification",
+        "buyerActorName": "Utilisateur Animaux",
+        "volumeExchanged": 56822.7025671684,
+        "monetaryValue": 7386951333.73189,
+        "unitPrice": 130000,
+        "volumeUnit": "Ton",
+        "product": "Fumier2"
+      },
+      {
+        "sellerActorName": "Centre de Collecte",
+        "buyerActorName": "Centre de Collecte",
+        "volumeExchanged": 10823.7021166512,
+        "monetaryValue": 7035406375.82328,
+        "unitPrice": 650000,
+        "volumeUnit": "Ton",
+        "product": "LaitCCL"
+      },
+      {
+        "sellerActorName": "Centre de Collecte",
+        "buyerActorName": "Laiterie industrielle",
+        "volumeExchanged": 3117.22620959555,
+        "monetaryValue": 2337919657.19666,
+        "unitPrice": 750000,
+        "volumeUnit": "Ton",
+        "product": "LaitPast"
+      },
+      {
+        "sellerActorName": "Centre de Collecte",
+        "buyerActorName": "Laiterie semi-industrielle",
+        "volumeExchanged": 1450.37608363126,
+        "monetaryValue": 1087782062.72345,
+        "unitPrice": 750000,
+        "volumeUnit": "Ton",
+        "product": "LaitPast"
+      },
+      {
+        "sellerActorName": "Centre de Collecte",
+        "buyerActorName": "Grossiste",
+        "volumeExchanged": 5736.56212182514,
+        "monetaryValue": 4302421591.36885,
+        "unitPrice": 750000,
+        "volumeUnit": "Ton",
+        "product": "LaitPast"
+      },
+      {
+        "sellerActorName": "Centre de Collecte",
+        "buyerActorName": "Consommateur  CUS",
+        "volumeExchanged": 519.537701599258,
+        "monetaryValue": 389653276.199443,
+        "unitPrice": 750000,
+        "volumeUnit": "Ton",
+        "product": "LaitPast"
+      },
+      {
+        "sellerActorName": "Laiterie industrielle",
+        "buyerActorName": "Consommateur BujumB",
+        "volumeExchanged": 3117.22620959555,
+        "monetaryValue": 7272488746.98642,
+        "unitPrice": 2333000,
+        "volumeUnit": "Ton",
+        "product": "LaitUHT"
+      },
+      {
+        "sellerActorName": "Laiterie semi-industrielle",
+        "buyerActorName": "Consommateur BujumB",
+        "volumeExchanged": 0.385594403228,
+        "monetaryValue": 3855944.03228,
+        "unitPrice": 10000000,
+        "volumeUnit": "Ton",
+        "product": "Beurre"
+      },
+      {
+        "sellerActorName": "Laiterie semi-industrielle",
+        "buyerActorName": "Consommateur BujumB",
+        "volumeExchanged": 20.565034021637,
+        "monetaryValue": 246780408.259644,
+        "unitPrice": 12000000,
+        "volumeUnit": "Ton",
+        "product": "Fromage"
+      },
+      {
+        "sellerActorName": "Laiterie semi-industrielle",
+        "buyerActorName": "Consommateur BujumB",
+        "volumeExchanged": 1232.27849785137,
+        "monetaryValue": 2847795608.53452,
+        "unitPrice": 2311000,
+        "volumeUnit": "Ton",
+        "product": "YaourtInd"
+      },
+      {
+        "sellerActorName": "Collecteur",
+        "buyerActorName": "Grossiste",
+        "volumeExchanged": 9647.03841402576,
+        "monetaryValue": 7235278810.51932,
+        "unitPrice": 750000,
+        "volumeUnit": "Ton",
+        "product": "Lait"
+      },
+      {
+        "sellerActorName": "Collecteur",
+        "buyerActorName": "Consommateur Rural",
+        "volumeExchanged": 43411.6736118246,
+        "monetaryValue": 29302879687.9816,
+        "unitPrice": 675000,
+        "volumeUnit": "Ton",
+        "product": "LaitRur"
+      },
+      {
+        "sellerActorName": "Collecteur",
+        "buyerActorName": "Consommateur  CUS",
+        "volumeExchanged": 9647.03841402576,
+        "monetaryValue": 7717630731.22061,
+        "unitPrice": 800000,
+        "volumeUnit": "Ton",
+        "product": "LaitCUS"
+      },
+      {
+        "sellerActorName": "Grossiste",
+        "buyerActorName": "Laiterie artisanale",
+        "volumeExchanged": 13614.6895826822,
+        "monetaryValue": 12933955103.5481,
+        "unitPrice": 950000,
+        "volumeUnit": "Ton",
+        "product": "LaitPast"
+      },
+      {
+        "sellerActorName": "Grossiste",
+        "buyerActorName": "Detaillant",
+        "volumeExchanged": 1346.50776092461,
+        "monetaryValue": 1279182372.87838,
+        "unitPrice": 950000,
+        "volumeUnit": "Ton",
+        "product": "LaitPast"
+      },
+      {
+        "sellerActorName": "Laiterie artisanale",
+        "buyerActorName": "Consommateur BujumB",
+        "volumeExchanged": 6.483185565879,
+        "monetaryValue": 64831855.65879,
+        "unitPrice": 10000000,
+        "volumeUnit": "Ton",
+        "product": "Beurre"
+      },
+      {
+        "sellerActorName": "Laiterie artisanale",
+        "buyerActorName": "Consommateur BujumB",
+        "volumeExchanged": 181.529192825646,
+        "monetaryValue": 2178350313.90775,
+        "unitPrice": 12000000,
+        "volumeUnit": "Ton",
+        "product": "Fromage"
+      },
+      {
+        "sellerActorName": "Laiterie artisanale",
+        "buyerActorName": "Consommateur BujumB",
+        "volumeExchanged": 10596.1183176031,
+        "monetaryValue": 12715341981.1237,
+        "unitPrice": 1200000,
+        "volumeUnit": "Ton",
+        "product": "Yaourt"
+      },
+      {
+        "sellerActorName": "Detaillant",
+        "buyerActorName": "Consommateur BujumB",
+        "volumeExchanged": 1346.50776092461,
+        "monetaryValue": 1750460089.20199,
+        "unitPrice": 1300000,
+        "volumeUnit": "Ton",
+        "product": "LaitPast"
+      },
+      {
+        "sellerActorName": "Distributeur",
+        "buyerActorName": "Consommateur BujumB",
+        "volumeExchanged": 27915.4470194711,
+        "monetaryValue": 36290081125.3124,
+        "unitPrice": 1300000,
+        "volumeUnit": "Ton",
+        "product": "Lait"
+      }
+    ],
+    "addedValue": {
+      "landOwnersFees": 261.322247378328,
+      "depreciation": 24888.0190416619,
+      "employeeWages": 13328.4113960832,
+      "financialInstitutionsInterests": 58.4479914299166,
+      "government": -1724.34876438959
+    }
+  }
+}

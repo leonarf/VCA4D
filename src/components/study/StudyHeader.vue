@@ -1,7 +1,7 @@
 <template>
     <div class="text-xl rounded bg-[#dcefbb] flex flex-row py-3 px-8 rounded-full">
         <div class="bloc">
-            <div class="title">{{ studyData.product }}</div>
+            <div class="title">{{ studyData.commodity }}</div>
             <div class="subtitle">Commodity</div>
         </div>
         <div class="bloc">
@@ -9,7 +9,7 @@
             <div class="subtitle">Country</div>
         </div>
         <div class="bloc">
-            <div class="title">{{ currencyUtils.getCurrencySymbol(studyData.localCurrency) }}</div>
+            <div class="title">{{ currencyUtils.getCurrencySymbol(studyData.targetCurrency) }}</div>
             <div class="subtitle">Local currency</div>
         </div>
         <div class="bloc">

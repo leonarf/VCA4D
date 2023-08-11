@@ -1,5 +1,13 @@
-<script>
+<script setup>
+import { defineProps } from 'vue';
 import { RouterLink } from 'vue-router'
+
+const props = defineProps({
+    skipFooter: {
+        type: Boolean,
+        default: false,
+    },
+});
 
 </script>
 
@@ -18,16 +26,18 @@ import { RouterLink } from 'vue-router'
         <slot></slot>
     </main>
 
-    <footer class="TODO">
+    <footer v-if="!skipFooter" class="TODO">
         <ul>
             <li><a href="https://github.com/leonarf/VCA4D">Code source sur Github</a></li>
-            <li><a href="./import-study.html">(admin) Import a study</a></li>
+            <li>
+                <RouterLink to="/admin-import">(admin) Import a study</RouterLink>
+            </li>
         </ul>
     </footer>
 </template>
 
 <style scoped lang="scss">
-header{
+header {
     height: 10rem;
 
     display: flex;
@@ -35,7 +45,7 @@ header{
     justify-content: space-between;
     align-items: center;
 
-    & > a{
+    &>a {
         font-size: 1.5rem;
         font-weight: bold;
         color: #929292;
@@ -44,14 +54,13 @@ header{
     }
 }
 
-main{
+main {
     @apply flex flex-col justify-start items-center
 }
 
 
-footer{
+footer {
     min-height: 10rem;
     background-color: grey;
 }
-
 </style>

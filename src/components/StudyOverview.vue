@@ -171,7 +171,7 @@ const getStepLogo = (step) => {
 
 
 const populatedSankeyChartData = computed ( () => {
-    let monetaryCurrency = props.studyData.localCurrency
+    let monetaryCurrency = props.studyData.targetCurrency
     const { stages, actors, flows } = props.studyData.data
 
     const colors = [

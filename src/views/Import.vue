@@ -1,0 +1,174 @@
+<template>
+    <Skeleton :skipFooter="true">
+        <h1 class="mb-4">Import a study file</h1>
+        <div class="w-full px-8 flex flex-col text-center">
+            <div>
+                <input
+                    class="relative m-0 inline min-w-0 flex-auto cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] font-normal leading-[2.15] text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
+                    type="file" @change="handleFileUpload" />
+            </div>
+            <div v-if="excelData" class="flex flex-col text-left mt-2 text-lg">
+                <div class="flex flex-row">
+                    <div class="w-1/2">
+
+                        <div class="flex flex-row">
+                            <div class="w-[350px]">Type of file: </div>
+                            <div class="font-semibold">{{ typeOfFile }}</div>
+                        </div>
+                        <div class="flex flex-row" v-for="[property, value] in Object.entries(studyProperties)"
+                            :key="property">
+                            <div class="w-[350px]">{{ property }}: </div>
+                            <div class="font-semibold">{{ value }}</div>
+                        </div>
+                    </div>
+                    <div class="w-1/2" v-if="errors.length > 0">
+                        <div v-for="(error, index) in errors" :key="index">
+                            <div :class="`${error.level === 'error' ? 'bg-red-500' : ''}`">{{ error.message }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="flex flex-row mb-2 gap-x-2">
+                        <button
+                            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                            @click="copyStudyToClipboard">Copy To Clipboard</button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            @click="downloadStudy">Download Study</button>
+                    </div>
+                    <pre class="bg-slate-600 text-white overflow-x-auto rounded ">{{ jsonFile }}</pre>
+                </div>
+            </div>
+        </div>
+    </Skeleton>
+</template>
+  
+<script setup>
+import { computed, ref } from 'vue';
+import * as XLSX from 'xlsx'
+import Skeleton from '../components/Skeleton.vue'
+import { slugify, parseSustainabilityWorksheet, parseEconomicsJson, getErrors } from '@/utils/utils.js'
+
+const excelData = ref(undefined);
+const workbook = ref(undefined)
+
+const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = (e) => {
+            const data = e.target.result;
+            const wb = XLSX.read(data, { type: 'binary' });
+            let output = {}
+            wb.SheetNames.forEach((workSheet) => {
+                const rowObject = XLSX.utils.sheet_to_row_object_array(
+                    wb.Sheets[workSheet]
+                )
+                output[workSheet] = rowObject
+            })
+            excelData.value = output
+            workbook.value = wb
+        };
+
+        reader.readAsArrayBuffer(file);
+    }
+};
+
+const typeOfFile = computed(() => {
+    if (!excelData.value) {
+        return ""
+    }
+    if (excelData.value["Questionnaire"]) {
+        return "Sustainability"
+    }
+    return "Economics"
+})
+
+const getValueChainProperty = (json, propertyName) => json["Value Chain"].find(element => element["Property"] === propertyName)["Value"]
+
+const studyProperties = computed(() => {
+    if (typeOfFile.value === 'Sustainability') {
+        if (!workbook.value) {
+            return {}
+        }
+        const questionnaireSheet = workbook.value.Sheets[workbook.value.SheetNames[2]]
+        const country = questionnaireSheet['D1']?.v
+        const commodity = questionnaireSheet['B1']?.v
+        const year = 2020
+        return {
+            id: slugify(commodity + "-" + country),
+            country,
+            commodity,
+            year,
+        }
+
+    }
+    const country = getValueChainProperty(excelData.value, "Country")
+    const commodity = getValueChainProperty(excelData.value, "Commodity")
+    const year = getValueChainProperty(excelData.value, "Reference Year")
+    const localCurrency = getValueChainProperty(excelData.value, "Study's local currency");
+    const targetCurrency = getValueChainProperty(excelData.value, "Standard currency code");
+    const currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency");
+    const giniIndex = getValueChainProperty(excelData.value, "Gini index");
+    const category = getValueChainProperty(excelData.value, "Product Type")
+
+    return {
+        id: slugify(commodity + "-" + country + "-" + year),
+        country,
+        commodity,
+        category,
+        year,
+        localCurrency,
+        targetCurrency,
+        currencyRatio,
+        giniIndex,
+    }
+})
+
+const studyData = computed(() => {
+    if (typeOfFile.value === 'Sustainability') {
+        if (!workbook.value) {
+            return {}
+        }
+        const questionnaireSheet = workbook.value.Sheets[workbook.value.SheetNames[2]]
+        return {
+            ...studyProperties.value,
+            data: parseSustainabilityWorksheet(questionnaireSheet)
+        }
+    }
+    if (!excelData.value) {
+        return {}
+    }
+    return {
+        ...studyProperties.value,
+        data: parseEconomicsJson(excelData.value)
+    }
+})
+
+const errors = computed(() => typeOfFile.value === 'Sustainability' ? [] : getErrors(studyData.value))
+
+const jsonFile = computed(() => {
+    return JSON.stringify(
+        studyData.value
+        , null, 2)
+})
+
+const copyStudyToClipboard = () => {
+    navigator.clipboard.writeText(jsonFile.value)
+}
+
+const downloadStudy = () => {
+    const blob = new Blob([jsonFile.value], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${studyProperties.value.id}-${typeOfFile.value === 'Sustainability' ? 'social' : 'eco'}.json`;
+    a.click();
+
+    URL.revokeObjectURL(url);
+}
+</script>
+  
+
+<style scoped lang="scss"></style>

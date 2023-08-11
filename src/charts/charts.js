@@ -171,11 +171,10 @@ export const getReturnOnInvestmentData = (stages, actors, currentStage, convertA
         const stageActors = actors.value.filter(actor => actor.stage === stage.name)
 
         const netOperatingProfits = convertAmount.value(stageActors.map(actor => actor.netOperatingProfit || 0).reduce((res, item) => res + item, 0))
-        let totalCosts = stageActors.map(actor => actor.totalCosts || 0).reduce((res, item) => res + item, 0)
+        let totalCosts = convertAmount.value(stageActors.map(actor => actor.totalCosts || 0).reduce((res, item) => res + item, 0))
         if (stage.name === 'Producers') {
             totalCosts += netOperatingProfits
         }
-        totalCosts = convertAmount.value(totalCosts)
         tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
             Total costs = ${prettyAmount.value(totalCosts)}<br>
             Return on investment = ${formatPercent(
@@ -267,7 +266,7 @@ export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyA
         if (subTotal !== 0) {
             let toolTipValue = `${stage.name}: ${prettyAmount.value(subTotal)}`
             for (const actor of stageActors) {
-                toolTipValue += `<br>${actor.name}: ${prettyAmount.value(actor.netOperatingProfit)}`
+                toolTipValue += `<br>${actor.name}: ${prettyAmount.value(convertAmount.value(actor.netOperatingProfit))}`
             }
             tooltip[stage.name] = toolTipValue
             return {
@@ -291,7 +290,7 @@ export const getNetOperatingProfitByNumberActorsData = (stages, actors, convertA
         if (subTotalOperatingProfit !== 0 && subTotalNumberOfActors !== 0) {
             let toolTipValue = `${stage.name}: ${prettyAmount.value(subTotalOperatingProfit / subTotalNumberOfActors)} per actor`
             for (const actor of stageActors) {
-                toolTipValue += `<br>${actor.name}: net operating profit= ${prettyAmount.value(actor.netOperatingProfit)} -- #actors= ${formatNumber(actor.numberOfActors)}`
+                toolTipValue += `<br>${actor.name}: net operating profit= ${prettyAmount.value(convertAmount.value(actor.netOperatingProfit))} -- #actors= ${formatNumber(actor.numberOfActors)}`
             }
             tooltip[stage.name] = toolTipValue
             return {
@@ -382,11 +381,10 @@ export const getReturnOnInvestmentByActorsData = (actors, convertAmount, prettyA
     const tooltip = {}
     const items = actors.map(actor => {
         const netOperatingProfits = convertAmount.value(actor.netOperatingProfit || 0)
-        let totalCosts = actor.totalCosts
+        let totalCosts = convertAmount.value(actor.totalCosts)
         if (isProducer) {
             totalCosts += netOperatingProfits
         }
-        totalCosts = convertAmount.value(totalCosts)
         tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
             Total costs = ${prettyAmount.value(totalCosts)}<br>
             Return on investment = ${formatPercent(

@@ -35,7 +35,7 @@
     ],
     "studies": [
         {
-            "fileName": "anacarde-mali-2014",
+            "id": "cashew-mali-2014",
             "title": "Mali Cashew 2014",
             "year": 2014,
             "country": "mali",
@@ -43,7 +43,7 @@
             "product": "cashew"
         },
         {
-            "fileName": "mangue-burkina-faso-2016",
+            "id": "mango-burkina-faso-2016",
             "title": "Burkina Faso Mango 2016",
             "year": 2016,
             "country": "burkina faso",
@@ -51,7 +51,7 @@
             "product": "mango"
         },
         {
-            "fileName": "milk-burundi-2020",
+            "id": "milk-burundi-2020",
             "title": "Burundi Milk 2020",
             "year": 2020,
             "country": "burundi",

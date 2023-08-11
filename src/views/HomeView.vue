@@ -70,9 +70,9 @@ const getProductLogo = (product) => {
                     <h4 :style="`margin-top: 48px; color: ${category.textColor};`">{{ category.prettyName }}</h4>
                     <div class="border-t-[13px] pt-4" :style="`border-color: ${category.color};`">
                         <ul class="flex flex-row">
-                            <li v-for="study in filterStudiesByCategory(category.id)" :key="study.fileName" class="h-full mr-4">
+                            <li v-for="study in filterStudiesByCategory(category.id)" :key="study.id" class="h-full mr-4">
                                 <div class="flex flex-col items-center space-y-2">
-                                    <RouterLink :to="`/study?id=${study.fileName}`">
+                                    <RouterLink :to="`/study?id=${study.id}`">
                                         <div class="w-[130px] h-[130px] bg-[#DFDFDF] flex flex-col items-center justify-evenly text-[#303030] px-8 rounded-lg">
                                             <img :src="getProductLogo(study.product)" 
                                             :alt="`Link to ${study.title} study`"
@@ -98,8 +98,8 @@ const getProductLogo = (product) => {
                 <template v-for="country in countries" :key="country.id">
                     <h4 class="mt-4">{{ country.prettyName }}</h4>
                     <ul>
-                        <li v-for="study in filterStudiesByCountry(country.id)" :key="study.fileName" class="text-blue-600 dark:text-blue-500 hover:underline">
-                            <RouterLink :to="`/study?id=${study.fileName}`">{{ study.title }}</RouterLink>
+                        <li v-for="study in filterStudiesByCountry(country.id)" :key="study.id" class="text-blue-600 dark:text-blue-500 hover:underline">
+                            <RouterLink :to="`/study?id=${study.id}`">{{ study.title }}</RouterLink>
                         </li>
                     </ul>
                 </template> 

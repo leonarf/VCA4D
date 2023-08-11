@@ -37,7 +37,7 @@
         <div class="study-snapshot">The study in a 6-pages snapshot</div>
 
         <EvaluationCriteria>
-            <EvaluationCriterion v-for="part in studyData.sustainability" :key="part.title" :label="part.title.split(' ').slice(1).join(' ')">
+            <EvaluationCriterion v-for="part in studyData.socialData" :key="part.title" :label="part.title.split(' ').slice(1).join(' ')">
                 <EvaluationCriterionLevel2 v-for="group in part.groups" 
                     :key="group.title" 
                     :label="group.title.split(' ').slice(1).join(' ')"
