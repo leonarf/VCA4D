@@ -17,9 +17,7 @@ const anchorLink = computed( () => {
 });
 
 const slideTo = (id) => {
-    console.log("slideTo: ", id);
     var element = document.getElementById(id);
-    console.log("element:", element);
     window.scrollTo({
         top: element.offsetTop-10,
         behavior: 'smooth'

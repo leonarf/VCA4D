@@ -2,7 +2,7 @@
     <div class="browsable-radar-chart__item__question">
         <div class="browsable-radar-chart__item__question__highlight"></div>
         <div class="browsable-radar-chart__item__question__label">{{ label }}</div>
-        <div class="browsable-radar-chart__item__question__answer__container"><EvaluationCriterionLevel3ScaleTag :scale="scale"></EvaluationCriterionLevel3ScaleTag></div>
+        <div class="browsable-radar-chart__item__question__answer__container"><EvaluationCriterionLevel3ScaleTag :scale="scale" :appreciation="appreciation"></EvaluationCriterionLevel3ScaleTag></div>
     </div>
 </template>
 
@@ -10,7 +10,8 @@
 import EvaluationCriterionLevel3ScaleTag from './EvaluationCriterionLevel3ScaleTag.vue';
 const props = defineProps({
   label: String,
-  scale: Number
+  scale: Number,
+  appreciation: String
 })
 </script>
 
