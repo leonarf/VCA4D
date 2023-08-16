@@ -3,6 +3,8 @@
         <SectionTitle>
             <h1><strong>Overview</strong></h1>
         </SectionTitle> 
+
+        <PdfSection :study-id="studyData.id" />
         <section class="pt-2">
             <h3><strong>Main steps in the value chain</strong></h3>
             <div class="flex flex-row justify-evenly mt-4 mb-8">
@@ -69,42 +71,6 @@
                 <a href="https://europa.eu/capacity4dev/value-chain-analysis-for-development-vca4d-/wiki/221-mali-cashew" target="_blank">Go to full study</a>
             </p>
 
-            <section>
-                <h3>Study conclusion</h3>
-                <p>La CV anacarde au Mali est moins développée que dans les pays voisins en Afrique 
-                    de l'Ouest, mais elle crée de la valeur ajoutée et de la croissance inclusive pour 
-                    les acteurs. Le principal levier pour améliorer sa performance et sa durabilité se 
-                    situe au niveau de la transformation. Il pourrait être envisagé la création de 
-                    20-40 unités de transformation semi-industrielles/ artisanales de noix brutes 
-                    en amandes et de pommes en jus. Ces créations pourraient se faire sous forme 
-                    d'entreprises privées ou de coopératives, offrant des avantages en matière d'intégration 
-                    de plusieurs activités de transformation, d'intégration de plusieurs étapes de la CV, 
-                    de renforcement du pouvoir de négociation des producteurs, d'accès aux équipements et 
-                    connaissances pour augmenter les rendements.
-                </p>
-                <p>Une plus grande efficience des processus techniques et de gestion de la production
-                    et de la transformation doit être encouragée à tous les niveaux de la 
-                    CV : efficience des rendements agronomiques, efficience énergétique, 
-                    efficience générale de la productivité des unités de transformation, efficience 
-                    du marketing...</p>
-                <p>La durabilité sociale de la CV est exposée à plusieurs risques qui demandent
-                    de la vigilance : exposition de la main d'œuvre aux travaux pénibles et/ou 
-                    dangereux, fragilisation sociale et alimentaire des exploitations agricoles 
-                    familiales, marginalisation et/ou accroissement de la dépendance des femmes et 
-                    autres couches vulnérables, réduction de la part des producteurs dans les revenus de la CV.
-                </p>
-                <p>Un accent particulier doit être mis sur la fonctionnalité des organisations 
-                    de producteurs notamment par le renforcement du leadership et de la bonne 
-                    gouvernance. Il faut renforcer les capacités d'accès des producteurs et de leurs 
-                    organisations à l'information, en particulier à l'information sur les politiques 
-                    agricoles, sur les prix de marché et sur l'organisation de la CV, dans le but d'améliorer 
-                    les relations de confiance entre les acteurs des différents segments et entre ces acteurs 
-                    et leurs partenaires publics et privés nationaux et étrangers.</p>
-                <p>Des marges d'amélioration existent également pour la durabilité environnementale, 
-                    elles résident dans l'exploration des possibilités et des effets d'une valorisation 
-                    par les plantations d'anacarde des terres dégradées par l'orpaillage ; et dans la 
-                    valorisation des coques d'anacarde pour remplacer le bois de feu.</p>
-            </section>
 
         </section>
 
@@ -123,6 +89,7 @@ import ProductionLogo from '../images/icons/production.svg'
 import ExportLogo from '../images/icons/export.svg'
 import SectionTitle from './typography/SectionTitle.vue'
 import CurrencyUtils from '@/utils/currencyUtils.js'
+import PdfSection from './pdf/PdfSection.vue';
 
 
 import SankeyChart from './SankeyChart.vue';
