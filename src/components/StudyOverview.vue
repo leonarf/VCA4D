@@ -4,7 +4,6 @@
             <h1><strong>Overview</strong></h1>
         </SectionTitle> 
 
-        <PdfSection :study-id="studyData.id" />
         <section class="pt-2">
             <h3><strong>Main steps in the value chain</strong></h3>
             <div class="flex flex-row justify-evenly mt-4 mb-8">
@@ -61,18 +60,7 @@
         <section v-else class="TODO">
             <p>Not enough data to display sankey diagram</p>
         </section>
-
-        <section>
-            <h2>Where these data come from?</h2>
-            <p>
-                <a href="../study-briefs/VCA4D 25- Mali cashew_0.pdf" target="_blank">Download the 6-page report</a>
-            </p>
-            <p>
-                <a href="https://europa.eu/capacity4dev/value-chain-analysis-for-development-vca4d-/wiki/221-mali-cashew" target="_blank">Go to full study</a>
-            </p>
-
-
-        </section>
+        <PdfSection :study-id="studyData.id" />
 
     </article>
 
