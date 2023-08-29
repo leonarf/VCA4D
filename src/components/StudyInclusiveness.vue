@@ -26,8 +26,6 @@
         <NetOperatingProfit :studyData="studyData" :currency="currency" class="mb-4 mt-8"/>
         <NetOperatingProfitPerActor :studyData="studyData" :currency="currency" class="mb-4 mt-8" />
         <br>
-        <p class="TODO">Number of actors : c'est le même graphique qu'en haut de la page, est-ce qu'on le remet vraiment?
-        </p>
 
         <h3>What is the impact of the <strong>governance systems</strong> on income distribution?</h3>
         <InfoTitle title="Share of farm gate price in final price" class="mb-4 mt-8" />

@@ -73,11 +73,7 @@
                     </BrowsableRadarChartItemQuestion>
                 </BrowsableRadarChartItem>
             </div>
-
-
         </div>
-
-        <div class="study-snapshot">The study in a 6-pages snapshot</div>
 
         <EvaluationCriteria>
             <EvaluationCriterion v-for="part in studyData.socialData" :key="part.title"
