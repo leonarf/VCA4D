@@ -392,10 +392,10 @@ export const getReturnOnInvestmentByActorsData = (actors, convertAmount, prettyA
         )}`
         return {
             name: actor.name,
-            value: (100 * netOperatingProfits / totalCosts)
+            value: (netOperatingProfits / totalCosts)
         }
     }).filter(item => !!item)
-    return getMiniBarChart(items, tooltip)
+    return getMiniBarChart(items, tooltip, formatPercent)
 }
 
 export const getNetOperatingProfitPerActorOfStage = (actors, convertAmount, prettyAmount) => {
