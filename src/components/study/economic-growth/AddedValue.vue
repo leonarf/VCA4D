@@ -5,11 +5,20 @@
       <NiceMetric class="TODO" label="Value added share of national GDP" value="%" />
     </div>
 
-    <h2>Is the chain independent from foreign imports?</h2>
+    <h2>Is the value chain independent from foreign imports?</h2>
 
     <InfoTitle title="Rate of integration into domestic economy" information="Total value added / value of production"
       class="mb-4" />
-    <p class="TODO mb-6">Missing data to be able to display graphic</p>
+    <div class="text-red-500">Default value for now</div>
+    <HorizontalSlider 
+        :value="0.78" 
+        :min="0.0" 
+        :max="1.0" 
+        :labels="['0%', '100%']"
+        textLeft="<b>Total value added / value of production  &lt; 70 % :</b><br>The chain depends on imports and is not well integrated into the local economy"
+        textRight="<b>> 70% :</b><br> Only few goods need to be imported"
+        is-percent="true"
+    />
     <h3>Who <strong>creates and receives</strong> value added?</h3>
     <div class="flex flex-row justify-evenly my-12">
       <div class="flex flex-col items-center">
@@ -32,6 +41,8 @@ import {
 } from '@/charts/charts'
 import NiceMetric from '@typography/NiceMetric.vue'
 import { useUtils } from '@/utils/utils.js'
+import InfoTitle from '@typography/InfoTitle.vue'
+import HorizontalSlider from '../../charts/HorizontalSlider.vue'
 
 const props = defineProps({
     studyData: Object,
