@@ -17,6 +17,12 @@
             "prettyName": "Field crops",
             "color": "#F6E065",
             "textColor": "#806C00"
+        },
+        {
+            "id": "unknown",
+            "prettyName": "Unknown",
+            "color": "#808080",
+            "textColor": "#808080"
         }
     ],
     "countries": [
