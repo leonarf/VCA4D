@@ -3,7 +3,7 @@
         <div class="text-[#868686] mb-2">Contents</div>
         <ol class="text-[#2E6BAD] space-y-2">
             <li v-for="(route, indexRoute) in routes" :key="indexRoute">
-                <RouterLink :to="`/study?id=${studyId}${route.view ? `&view=${route.view}` : ''}&currency=${currency}`">{{ route.label }}</RouterLink>
+                <RouterLink :to="`/study?id=${isLocalStudy ? 'localStorage' : studyId}${route.view ? `&view=${route.view}` : ''}&currency=${currency}`">{{ route.label }}</RouterLink>
             </li>
             <li>
                 <a class="TODO">Study brief and full report</a>
@@ -31,7 +31,8 @@
     const props = defineProps({
         studyId: String,
         localCurrency : String,
-        currency: String
+        currency: String,
+        isLocalStudy: Boolean
     })
     const selectedCurrency = ref(props.currency);
     const routes = [
