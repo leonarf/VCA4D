@@ -12,7 +12,7 @@
         <div>
             Access the recommendations of the full study and the four analysis dimensions of the value chain in this synthesis.
         </div>
-        <PdfReader :path="`../../study-briefs/${studyId}.pdf`" />
+        <PdfReader :path="`/study-briefs/${studyId}.pdf`" />
     </div>
 </template>
 
@@ -26,7 +26,7 @@ const props = defineProps({
 const downloadPdf = async () => {
 
     try {
-        const response = await fetch(`/../../study-briefs/${props.studyId}.pdf`);
+        const response = await fetch(`/study-briefs/${props.studyId}.pdf`);
         const blob = await response.blob();
         const url = URL.createObjectURL(blob);
         
