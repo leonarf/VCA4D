@@ -24,13 +24,15 @@
       well as its capacity to export on international markets with competitive price or on the
       contrary a higher remuneration of the actors supported by porection policies.
     </p>
-    <h1>Is it financially attractive to sell abroad ?</h1>
+    <br>
+    <h2>Is it financially attractive to sell abroad ?</h2>
 
     <InfoTitle title="Domestic resource cost ratio" class="mb-4" />
-    <p class="TODO">Missing data to be able to display graphic</p>
+    <DomesticResourceCostRatio :value="1.2" />
+    <br>
     <InfoTitle title="Nominal protection Coefficient" information="Domestic price / Internation parity price"
       class="mb-4" />
-    <p class="TODO">Missing data to be able to display graphic</p>
+    <NominalProtectionCoefficient :value="1.4" />
   </article>
 </template>
 
@@ -40,6 +42,8 @@ import AddedValue from './study/economic-growth/AddedValue.vue'
 import PublicFinances from './study/economic-growth/PublicFinances.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 import SectionTitle from '@typography/SectionTitle.vue'
+import DomesticResourceCostRatio from './study/economic-growth/DomesticResourceCostRatio.vue'
+import NominalProtectionCoefficient from './study/economic-growth/NominalProtectionCoefficient.vue'
 
 const props = defineProps({
   studyData: Object,
