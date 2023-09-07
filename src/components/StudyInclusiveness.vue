@@ -31,7 +31,7 @@
         <InfoTitle title="Share of farm gate price in final price" class="mb-4 mt-8" />
         <p class="TODO">Missing data to be able to display graphic</p>
         <InfoTitle title="Gini index" class="mb-4 mt-8" />
-        <p class="TODO">Missing data to be able to display graphic</p>
+        <GiniIndex :value="0.3"/>
     </article>
 </template>
 
@@ -42,6 +42,7 @@ import EmploymentDistributionJobs from './study/inclusiveness/EmploymentDistribu
 import NetOperatingProfit from './study/inclusiveness/NetOperatingProfit.vue'
 import NetOperatingProfitPerActor from './study/inclusiveness/NetOperatingProfitPerActor.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
+import GiniIndex from './study/inclusiveness/GiniIndex.vue'
 
 const props = defineProps({
     studyData: Object,
