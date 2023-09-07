@@ -45,7 +45,7 @@ export const formatNumber = (value) => {
 }
 
 export const formatPercent = (amount) => {
-  const numberDigits = amount < 0.01 ? 2 : (amount < 0.1 ? 1 : 0)
+  const numberDigits = Math.abs(amount) < 0.01 ? 2 : (Math.abs(amount) < 0.1 ? 1 : 0)
   return (amount).toLocaleString(undefined, {
     style: 'percent',
     minimumFractionDigits: numberDigits,
