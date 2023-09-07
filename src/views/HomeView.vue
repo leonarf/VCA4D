@@ -5,6 +5,8 @@ import { onMounted, ref } from 'vue';
 import jsonData from '../../data/data.json'
 import MilkLogo from '../images/icons/products/milk.svg'
 import PineappleLogo from '../images/icons/products/pineapple.svg'
+import BananaLogo from '../images/icons/products/banana.svg'
+import CoffeeLogo from '../images/icons/products/coffee.svg'
 
 const studies = ref([])
 const countries = ref([])
@@ -55,6 +57,10 @@ const getProductLogo = (product) => {
     switch(product) {
         case 'milk':
             return MilkLogo
+        case 'banana':
+            return BananaLogo
+        case 'coffee':
+            return CoffeeLogo
         default:
             return PineappleLogo
     }
