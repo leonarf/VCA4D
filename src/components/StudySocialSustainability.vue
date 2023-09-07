@@ -125,8 +125,8 @@ const questionLivingHealth = computed(() => props.studyData.socialData[5].groups
 const questionLivingEducation = computed(() => props.studyData.socialData[5].groups[2].questions[0])
 
 const average = (array) => array.reduce((a, b) => a + b) / array.length
-const getAverageGroup = (index) => average(props.studyData.socialData[index].groups.map(group => group.averageValue))
-console.log(props.studyData.socialData)
+const getAverageGroup = (index) => Math.round(average(props.studyData.socialData[index].groups.map(group => Number(group.averageValue) || 0)), 2)
+
 const averageWorking = computed(() => getAverageGroup(0))
 const averageLand = computed(() => getAverageGroup(1))
 const averageGender = computed(() => getAverageGroup(2))
@@ -135,6 +135,7 @@ const averageSocial = computed(() => getAverageGroup(4))
 const averageLiving = computed(() => getAverageGroup(5))
 
 const chartData = computed(() => {
+    const values = [averageWorking.value, averageLiving.value, averageSocial.value, averageFood.value, averageGender.value, averageLand.value]
     return {
         radar: {
             indicator: [
@@ -170,7 +171,7 @@ const chartData = computed(() => {
                 },
                 data: [
                     {
-                        value: [averageWorking.value, averageLand.value, averageGender.value, averageFood.value, averageSocial.value, averageLiving.value],
+                        value: values,
                         name: 'Allocated Budget',
                     }
                     
