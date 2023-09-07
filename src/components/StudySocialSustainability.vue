@@ -136,6 +136,7 @@ const averageLiving = computed(() => getAverageGroup(5))
 
 const chartData = computed(() => {
     const values = [averageWorking.value, averageLiving.value, averageSocial.value, averageFood.value, averageGender.value, averageLand.value]
+
     return {
         radar: {
             indicator: [
@@ -160,6 +161,19 @@ const chartData = computed(() => {
                 show: false,
             }
         },
+        tooltip: {
+            show: true, 
+            trigger: 'item',
+            formatter: function () {
+                return `Working: ${averageWorking.value}<br />
+                Living: ${averageLiving.value}<br />
+                Social: ${averageSocial.value}<br />
+                Food: ${averageFood.value}<br />
+                Gender: ${averageGender.value}<br />
+                Land: ${averageLand.value}<br />
+                `;
+            }
+        },
         series: [
             {
                 type: 'radar',
@@ -172,7 +186,6 @@ const chartData = computed(() => {
                 data: [
                     {
                         value: values,
-                        name: 'Allocated Budget',
                     }
                     
                 ]
