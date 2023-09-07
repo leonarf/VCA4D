@@ -1,12 +1,33 @@
 <template>
     <Skeleton :skipFooter="true">
         <h1 class="mb-4">Import a study file</h1>
-        <div class="w-full px-8 flex flex-col text-center">
+        <div v-if="isObjectNotEmpty(studyProperties)" class="flex flex-col items-center">
+            <div class="flex flex-row items-center">
+
+                <div>Current study: <b>{{ studyProperties['id'] }}</b></div>
+                <div class="ml-4">
+                    <button 
+                    @click="clearData"
+                    class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-1 px-1.5 border border-red-500 hover:border-transparent rounded"
+                    >Remove</button>
+                </div>
+            </div>
             <div>
+                <RouterLink to="/">
+                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                        Home page
+                    </button>
+                </RouterLink>
+                
+            </div>
+        </div>
+        <div class="w-full px-8 flex flex-col text-center">
+            <div v-if="!isObjectNotEmpty(studyProperties)">
                 <input
                     class="relative m-0 inline min-w-0 flex-auto cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] font-normal leading-[2.15] text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
                     type="file" @change="handleFileUpload" />
             </div>
+
             <div v-if="excelData" class="flex flex-col text-left mt-2 text-lg">
                 <div class="flex flex-row">
                     <div class="w-1/2">
@@ -43,13 +64,27 @@
 </template>
   
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import * as XLSX from 'xlsx'
 import Skeleton from '../components/Skeleton.vue'
 import { slugify, parseSustainabilityWorksheet, parseEconomicsJson, getErrors } from '@/utils/utils.js'
+import { RouterLink } from 'vue-router'
 
 const excelData = ref(undefined);
 const workbook = ref(undefined)
+
+const clearData = () => {
+    localStorage.removeItem('localStudyProperties')
+    localStorage.removeItem('localStudyData')
+    window.location.reload()
+}
+
+const isObjectNotEmpty = (obj) => {
+    if (!obj) {
+        return false
+    }
+    return Object.keys(obj).length > 0;
+}
 
 const handleFileUpload = (event) => {
     const file = event.target.files[0];
@@ -87,6 +122,12 @@ const typeOfFile = computed(() => {
 const getValueChainProperty = (json, propertyName) => json["Value Chain"].find(element => element["Property"] === propertyName)["Value"]
 
 const studyProperties = computed(() => {
+
+    const localStorageValue = localStorage.getItem('localStudyProperties')
+    if (localStorageValue) {
+        return JSON.parse(localStorageValue)
+    }
+
     if (typeOfFile.value === 'Sustainability') {
         if (!workbook.value) {
             return {}
@@ -102,6 +143,9 @@ const studyProperties = computed(() => {
             year,
         }
 
+    }
+    if (!excelData.value) {
+        return {}
     }
     const country = getValueChainProperty(excelData.value, "Country")
     const commodity = getValueChainProperty(excelData.value, "Commodity")
@@ -125,7 +169,17 @@ const studyProperties = computed(() => {
     }
 })
 
+watch(studyProperties, (newValue) => {
+    localStorage.setItem('localStudyProperties', JSON.stringify(newValue))
+})
+
 const studyData = computed(() => {
+
+    const localStorageValue = localStorage.getItem('localStudyData')
+    if (localStorageValue) {
+        return JSON.parse(localStorageValue)
+    }
+
     if (typeOfFile.value === 'Sustainability') {
         if (!workbook.value) {
             return {}
@@ -143,6 +197,11 @@ const studyData = computed(() => {
         ...studyProperties.value,
         data: parseEconomicsJson(excelData.value)
     }
+
+})
+
+watch(studyData, (newValue) => {
+    localStorage.setItem('localStudyData', JSON.stringify(newValue))
 })
 
 const errors = computed(() => typeOfFile.value === 'Sustainability' ? [] : getErrors(studyData.value))

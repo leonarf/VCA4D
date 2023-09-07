@@ -9,10 +9,35 @@ import PineappleLogo from '../images/icons/products/pineapple.svg'
 const studies = ref([])
 const countries = ref([])
 const categories = ref([])
+
+const geAllJsonData = () => {
+    const localStudy = JSON.parse(localStorage.getItem('localStudyProperties'))
+    if (!localStudy) {
+        return jsonData
+    }
+    const category = jsonData.categories.find(category => category.prettyName === localStudy.category)
+    return {
+        ...jsonData,
+        studies: [
+            ...jsonData.studies,
+            {
+                category: category ? category.id : 'unknown',
+                country: localStudy.country.toLowerCase(),
+                id: localStudy.id,
+                product: localStudy.commodity.toLowerCase(),
+                title: ["Local", localStudy.country, localStudy.commodity, localStudy.year].join(' '),
+                year: localStudy.year,
+                local: true
+            }
+        ]
+    }
+}
+
 onMounted(async () => {
-    studies.value = jsonData.studies
-    countries.value = jsonData.countries
-    categories.value = jsonData.categories
+    const allJsonData = geAllJsonData()
+    studies.value = allJsonData.studies
+    countries.value = allJsonData.countries
+    categories.value = allJsonData.categories
 })
 
 const filterStudiesByCategory = (category) => {
@@ -72,8 +97,8 @@ const getProductLogo = (product) => {
                         <ul class="flex flex-row">
                             <li v-for="study in filterStudiesByCategory(category.id)" :key="study.id" class="h-full mr-4">
                                 <div class="flex flex-col items-center space-y-2">
-                                    <RouterLink :to="`/study?id=${study.id}`">
-                                        <div class="w-[130px] h-[130px] bg-[#DFDFDF] flex flex-col items-center justify-evenly text-[#303030] px-8 rounded-lg">
+                                    <RouterLink :to="`/study?id=${study.local ? 'localStorage' : study.id}`">
+                                        <div :class="`w-[130px] h-[130px] ${study.local ? 'bg-[#868686]' : 'bg-[#DFDFDF]'} flex flex-col items-center justify-evenly text-[#303030] px-8 rounded-lg`">
                                             <img :src="getProductLogo(study.product)" 
                                             :alt="`Link to ${study.title} study`"
                                             style="height: 75px; width: 75px;"

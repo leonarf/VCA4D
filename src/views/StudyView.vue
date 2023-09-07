@@ -11,7 +11,12 @@
                 </div>
             </header>
             <div class="w-full text-left ml-24 my-8">
-                <StudyMenu v-if="studyData"  :studyId="studyData.id" :localCurrency="studyData.targetCurrency" :currency="currency"
+                <StudyMenu 
+                    v-if="studyData"  
+                    :studyId="studyData.id" 
+                    :localCurrency="studyData.targetCurrency" 
+                    :currency="currency"
+                    :isLocalStudy="isLocal"
                 @update:currency="updateCurrency" />
             </div>
             <template v-if="studyData">
@@ -49,6 +54,7 @@ const updateCurrency = (event) => {
 const view = ref(undefined)
 const studyData = ref(undefined)
 const error = ref(undefined)
+const isLocal = ref(undefined)
 
 watch(currency, (newCurrency) => {
     router.push({ query: 
@@ -74,15 +80,22 @@ onMounted(async () => {
     currency.value = localStorage.getItem('currency')
   }
 
+  const isLocalStudy = studyId === 'localStorage'
+  isLocal.value =  isLocalStudy
   try {
-    const ecoData = await getStudyData(`${studyId}-eco`)
-    let splitStudyId = studyId.split('-')
-    splitStudyId.pop()
-    const socialData = await(getStudyData(`${splitStudyId.join('-')}-social`))
-    studyData.value = {
-        ...ecoData,
-        socialData: socialData.data
+    if (isLocalStudy) {
+        studyData.value = JSON.parse(localStorage.getItem('localStudyData'))
+    } else {
+        const ecoData = await getStudyData(`${studyId}-eco`)
+        let splitStudyId = studyId.split('-')
+        splitStudyId.pop()
+        const socialData = await(getStudyData(`${splitStudyId.join('-')}-social`))
+        studyData.value = {
+            ...ecoData,
+            socialData: socialData.data
+        }
     }
+    
     if (!currency.value) {
         currency.value = "LOCAL"
     }
