@@ -14,9 +14,7 @@
     <ReturnOnInvestment :studyData="studyData" :currency="currency"/>
     <PublicFinances :studyData="studyData" :currency="currency"/>
       
-
-    <h3 class="mt-12">What is the contribution of the value chain to the <strong>balance of trade</strong>?</h3>
-    <p class="TODO">Missing data to be able to display graphic</p>
+    <BalanceOfTrade :study-data="studyData" :currency="currency" />
 
     <h3 class="mt-12">Is the value chain <strong>viable in the international economy</strong>?</h3>
     <p>
@@ -44,12 +42,12 @@ import InfoTitle from '@typography/InfoTitle.vue'
 import SectionTitle from '@typography/SectionTitle.vue'
 import DomesticResourceCostRatio from './study/economic-growth/DomesticResourceCostRatio.vue'
 import NominalProtectionCoefficient from './study/economic-growth/NominalProtectionCoefficient.vue'
+import BalanceOfTrade from './study/economic-growth/BalanceOfTrade.vue'
 
 const props = defineProps({
   studyData: Object,
   currency: String
 })
-
 </script>
 
 <style scoped lang="scss"></style>

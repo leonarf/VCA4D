@@ -53,7 +53,7 @@ export const getAddedValueCreatorsData = (stages, actors, convertAmount, prettyA
             }
         }
     }).filter(item => !!item)
-    .filter(item => item.value !== 0)
+        .filter(item => item.value !== 0)
 
     return getRingChart(items, tooltip, 'Who creates the direct value added')
 }
@@ -85,9 +85,84 @@ export const getAddedValueReceiversData = (stages, actors, convertAmount, pretty
             name: key
         })
     }
-    
+
     items = items.filter(item => !!item).filter(item => item.value !== 0)
     return getRingChart(items, tooltip, 'Who receives the direct value added')
+}
+
+/*
+*  STACKED BAR CHART
+*/
+const getStackedBarChart = (label, data, prettyAmount, convertAmount) => {
+    const seriesData = data.map(({ value, name, color }) => ({
+        name,
+        type: 'bar',
+        stack: 'stack',
+        label: {
+            show: true,
+            position: 'right',
+            formatter: () => name,
+        },
+        data: [convertAmount(value)],
+        itemStyle: {
+            color
+        }
+    }))
+    const totalText = prettyAmount(convertAmount(data.reduce((total, item) => total + item.value, 0))) 
+
+    return {
+        title: {
+            text: totalText,
+            top: '5%',
+            left: '40%'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow',
+            },
+            formatter: (params) => {
+                return params.map(({ seriesName, value }) => `${seriesName}: ${prettyAmount(value)}`).join('<br />')
+              },
+        },
+        xAxis: {
+            type: 'category',
+            data: [label],
+            axisLabel: {
+                interval: 0,
+                textStyle: {
+                    fontSize: 20,
+                    textColor: '#8A8A8A',
+                    fontWeight: 'bold'
+
+                }
+            },
+        },
+        yAxis: {
+            show: false
+        },
+        series: seriesData,
+    }
+}
+
+export const getImportedProductsData = (prettyAmount, convertAmount) => {
+    const dataImported = [
+        { value: 400000, name: 'Input 1', color: '#5F8A64' },
+        { value: 250000, name: 'Input 2', color: '#71A578' },
+        { value: 200000, name: 'Input 3', color: '#9DB95F' },
+        { value: 150000, name: 'Input 4', color: '#C1CC5E' }
+    ]
+
+    return getStackedBarChart('IMPORTED INPUTS', dataImported, prettyAmount, convertAmount)
+}
+
+export const getExportedProductsData = (prettyAmount, convertAmount) => {
+    const dataImported = [
+        { value: 15000, name: 'Product 1', color: '#C46D4D' },
+        { value: 75000, name: 'Product 2', color: '#C46D4D' },
+    ]
+
+    return getStackedBarChart('EXPORTED PRODUCTS', dataImported, prettyAmount, convertAmount)
 }
 
 /*
@@ -110,13 +185,13 @@ const getSelectableBarChart = (items, currentItem, tooltip, formatLabel) => {
                     color: emphasisColor
                 },
                 ... (
-                    currentItem === item.name 
-                    ? {
-                        borderColor: "black",
-                        borderWidth: 2,
-                        borderRadius: 5
-                        
-                    } : {})
+                    currentItem === item.name
+                        ? {
+                            borderColor: "black",
+                            borderWidth: 2,
+                            borderRadius: 5
+
+                        } : {})
             }
         })
     })
@@ -186,7 +261,7 @@ export const getReturnOnInvestmentData = (stages, actors, currentStage, convertA
         }
     }).filter(item => !!item)
 
-    const ret = getSelectableBarChart(items, currentStage.value, tooltip, (value) => formatPercent(value / 100)) 
+    const ret = getSelectableBarChart(items, currentStage.value, tooltip, (value) => formatPercent(value / 100))
     return {
         ...ret,
         yAxis: {
