@@ -56,7 +56,7 @@ const addedValueCreatorsRingChartData = computed(() => {
 })
 
 const addedValueReceiversRingChartData = computed(() => {
-  return getAddedValueReceiversData(stages, actors, convertAmount, prettyAmount, props.studyData.data.addedValue)
+  return getAddedValueReceiversData(stages, actors, convertAmount, prettyAmount, props.studyData.ecoData.addedValue)
 })
 
 const totalAddedValueReceivers = computed(() => {

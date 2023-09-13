@@ -141,6 +141,7 @@ const studyProperties = computed(() => {
             country,
             commodity,
             year,
+            type: 'social'
         }
 
     }
@@ -166,6 +167,7 @@ const studyProperties = computed(() => {
         targetCurrency,
         currencyRatio,
         giniIndex,
+        type: 'eco'
     }
 })
 
@@ -187,7 +189,7 @@ const studyData = computed(() => {
         const questionnaireSheet = workbook.value.Sheets[workbook.value.SheetNames[2]]
         return {
             ...studyProperties.value,
-            data: parseSustainabilityWorksheet(questionnaireSheet)
+            socialData: parseSustainabilityWorksheet(questionnaireSheet)
         }
     }
     if (!excelData.value) {
@@ -195,7 +197,7 @@ const studyData = computed(() => {
     }
     return {
         ...studyProperties.value,
-        data: parseEconomicsJson(excelData.value)
+        ecoData: parseEconomicsJson(excelData.value)
     }
 
 })

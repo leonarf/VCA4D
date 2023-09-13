@@ -67,8 +67,8 @@ export function useUtils(props) {
     )
   );
 
-  const stages = computed(() => props.studyData.data.stages);
-  const actors = computed(() => props.studyData.data.actors);
+  const stages = computed(() => props.studyData.ecoData.stages);
+  const actors = computed(() => props.studyData.ecoData.actors);
 
   return {
     stages,
@@ -336,31 +336,31 @@ export const getErrors = (study) => {
       })
     }
   }
-  study.data.stages.filter(stage => !stage.description).map(stage => {
+  study.ecoData.stages.filter(stage => !stage.description).map(stage => {
     errors.push({
       level: 'info',
       message: `Stage ${stage.name} has no description`
     })
   })
-  const stageNames = study.data.stages.map(stage => stage.name)
-  study.data.actors.filter(actor => !stageNames.includes(actor.stage)).map(actor => {
+  const stageNames = study.ecoData.stages.map(stage => stage.name)
+  study.ecoData.actors.filter(actor => !stageNames.includes(actor.stage)).map(actor => {
     errors.push({
       level: 'error',
       message: `Actor ${actor.name} has a stage ${actor.stage} not defined in Stages`
     })
   })
-  const actorNames = study.data.actors.map(actor => actor.name)
-  study.data.flows.filter(flow => !actorNames.includes(flow.buyerActorName) || !actorNames.includes(flow.sellerActorName)).map(flow => {
+  const actorNames = study.ecoData.actors.map(actor => actor.name)
+  study.ecoData.flows.filter(flow => !actorNames.includes(flow.buyerActorName) || !actorNames.includes(flow.sellerActorName)).map(flow => {
     errors.push({
       level: 'error',
       message: `Unknown actor name in flow ${flow}`
     })
   })
 
-  const totalCreatedAddedValue = study.data.actors.map(actor => actor.directAddedValue || 0).reduce((res, curr) => res + curr, 0)
-  let totalReceivedAddedValue = study.data.actors.map(actor => actor.receivedAddedValue).reduce((res, curr) => res + curr, 0)
-  for (const key in study.data.addedValue) {
-    totalReceivedAddedValue += study.data.addedValue[key]
+  const totalCreatedAddedValue = study.ecoData.actors.map(actor => actor.directAddedValue || 0).reduce((res, curr) => res + curr, 0)
+  let totalReceivedAddedValue = study.ecoData.actors.map(actor => actor.receivedAddedValue).reduce((res, curr) => res + curr, 0)
+  for (const key in study.ecoData.addedValue) {
+    totalReceivedAddedValue += study.ecoData.addedValue[key]
   }
   const diff = Math.round(Math.abs(totalCreatedAddedValue - totalReceivedAddedValue))
   if (diff > 0) {

@@ -98,7 +98,7 @@ const toggleSankeyGraphDisplayMode = () => {
 };
 
 const populatedSteps = computed(() => {
-    return props.studyData?.data.stages.map(stage => ({
+    return props.studyData?.ecoData.stages.map(stage => ({
         ...stage,
         image: ``
     }))
@@ -127,7 +127,7 @@ const getStepLogo = (step) => {
 
 const populatedSankeyChartData = computed ( () => {
     let monetaryCurrency = props.studyData.targetCurrency
-    const { stages, actors, flows } = props.studyData.data
+    const { stages, actors, flows } = props.studyData.ecoData
 
     const colors = [
         "#5470c6",

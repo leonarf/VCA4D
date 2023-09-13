@@ -48,7 +48,7 @@ const currentStage = ref('')
 const { prettyAmount, convertAmount, stages, actors } = useUtils(props);
 
 const publicFundsBalance = computed(() => {
-  const balanceValue = convertAmount.value(props.studyData.data.addedValue.government)
+  const balanceValue = convertAmount.value(props.studyData.ecoData.addedValue.government)
   return (balanceValue > 0 ? "+" : "") + prettyAmount.value(balanceValue)
 })
 

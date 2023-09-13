@@ -9,7 +9,7 @@
             <div class="subtitle">Country</div>
         </div>
         <div class="bloc">
-            <div class="title">{{ currencyUtils.getCurrencySymbol(studyData.targetCurrency) }}</div>
+            <div class="title">{{ studyData.targetCurrency ? currencyUtils.getCurrencySymbol(studyData.targetCurrency) : '-'}}</div>
             <div class="subtitle">Local currency</div>
         </div>
         <div class="bloc">

@@ -17,9 +17,11 @@
                     :localCurrency="studyData.targetCurrency" 
                     :currency="currency"
                     :isLocalStudy="isLocal"
+                    :hasEco="!!studyData.ecoData"
+                    :hasSocial="!!studyData.socialData"
                 @update:currency="updateCurrency" />
             </div>
-            <template v-if="studyData">
+             <template v-if="studyData">
                 <StudyOverview v-if="view === undefined" :studyData="studyData"></StudyOverview>
                 <StudyEnvironment v-if="view === 'environment'" :studyData="studyData"></StudyEnvironment>
                 <StudyEconomicGrowth v-if="view === 'economic-growth'" :studyData="studyData" :currency="currencySymbol"></StudyEconomicGrowth>
@@ -68,6 +70,12 @@ watch(currency, (newCurrency) => {
 
 const currencySymbol = computed( () => currency.value === 'LOCAL' ? studyData.value.targetCurrency : currency.value);
 
+watch(studyData, () => {
+    if (!studyData.value.ecoData) {
+        view.value = 'social-sustainability'
+    }
+})
+
 onMounted(async () => {
   const studyId = route.query.id;
   const studyView = route.query.view;
@@ -92,6 +100,7 @@ onMounted(async () => {
         const socialData = await(getStudyData(`${splitStudyId.join('-')}-social`))
         studyData.value = {
             ...ecoData,
+            ecoData: ecoData.data,
             socialData: socialData.data
         }
     }
