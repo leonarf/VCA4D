@@ -134,7 +134,7 @@ const studyProperties = computed(() => {
         }
         const questionnaireSheet = workbook.value.Sheets[workbook.value.SheetNames[2]]
         const country = questionnaireSheet['D1']?.v
-        const commodity = questionnaireSheet['B1']?.v
+        const commodity = questionnaireSheet['B1']?.v.trim()
         const year = 2020
         return {
             id: slugify(commodity + "-" + country),
