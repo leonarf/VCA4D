@@ -11,7 +11,7 @@
                 </svg>
             </button>
             <div class="px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 bg-gray-50 md:inline-flex">
-                {{ currentPage }}
+                {{ currentPage }} / 6
             </div>
             <button 
                 :disabled="!canNext" 
