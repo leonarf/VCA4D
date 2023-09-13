@@ -7,6 +7,15 @@ import MilkLogo from '../images/icons/products/milk.svg'
 import PineappleLogo from '../images/icons/products/pineapple.svg'
 import BananaLogo from '../images/icons/products/banana.svg'
 import CoffeeLogo from '../images/icons/products/coffee.svg'
+import MangoLogo from '../images/icons/products/mango.svg'
+import CashewLogo from '../images/icons/products/cashew.svg'
+import CocoaLogo from '../images/icons/products/cocoa.svg'
+import BeefLogo from '../images/icons/products/beef.svg'
+import CornLogo from '../images/icons/products/corn.svg'
+import VanillaLogo from '../images/icons/products/vanilla.svg'
+import EggLogo from '../images/icons/products/egg.svg'
+import CottonLogo from '../images/icons/products/cotton.svg'
+import PeanutLogo from '../images/icons/products/peanut.svg'
 
 const studies = ref([])
 const countries = ref([])
@@ -43,7 +52,8 @@ onMounted(async () => {
 })
 
 const filterStudiesByCategory = (category) => {
-  return studies.value.filter(item => item.category === category);
+    const productsForCategory = jsonData.categories.find(item => item.id === category).commodities
+    return studies.value.filter(item => productsForCategory.includes(item.product));
 };
 const filterStudiesByCountry = (country) => {
   return studies.value.filter(item => item.country === country);
@@ -61,6 +71,24 @@ const getProductLogo = (product) => {
             return BananaLogo
         case 'coffee':
             return CoffeeLogo
+        case 'mango':
+            return MangoLogo
+        case 'cashew':
+            return CashewLogo
+        case 'cocoa':
+            return CocoaLogo
+        case 'beef':
+            return BeefLogo
+        case 'corn':
+            return CornLogo
+        case 'vanilla':
+            return VanillaLogo
+        case 'egg':
+            return EggLogo
+        case 'cotton':
+            return CottonLogo
+        case 'groundnut':
+            return PeanutLogo
         default:
             return PineappleLogo
     }
@@ -100,9 +128,9 @@ const getProductLogo = (product) => {
                 <template v-for="category in categories" :key="category.id">
                     <h4 :style="`margin-top: 48px; color: ${category.textColor};`">{{ category.prettyName }}</h4>
                     <div class="border-t-[13px] pt-4" :style="`border-color: ${category.color};`">
-                        <ul class="flex flex-row">
+                        <ul class="flex flex-row flex-wrap gap-y-4">
                             <li v-for="study in filterStudiesByCategory(category.id)" :key="study.id" class="h-full mr-4">
-                                <div class="flex flex-col items-center space-y-2">
+                                <div class="flex flex-col items-center space-y-2 w-[130px]">
                                     <RouterLink :to="`/study?id=${study.local ? 'localStorage' : study.id}`">
                                         <div :class="`w-[130px] h-[130px] ${study.local ? 'bg-[#868686]' : 'bg-[#DFDFDF]'} flex flex-col items-center justify-evenly text-[#303030] px-8 rounded-lg`">
                                             <img :src="getProductLogo(study.product)" 
@@ -113,7 +141,7 @@ const getProductLogo = (product) => {
                                             <p class="font-semibold capitalize">{{ study.product }}</p>
                                         </div>
                                     </RouterLink>
-                                    <p>{{  study.country }} {{ study.year }}</p>
+                                    <p class="text-center">{{  study.country }} {{ study.year }}</p>
                                 </div>
                             </li>
                             <li v-if="filterStudiesByCategory(category.id).length === 0">

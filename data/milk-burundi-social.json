@@ -1,9 +1,10 @@
 {
-  "id": "milk-burundi-2020",
+  "id": "milk-burundi",
   "country": "Burundi",
   "commodity": "Milk",
   "year": 2020,
-  "data": [
+  "type": "social",
+  "socialData": [
     {
       "title": "1. WORKING CONDITIONS",
       "groups": [

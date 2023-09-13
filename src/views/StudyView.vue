@@ -94,14 +94,27 @@ onMounted(async () => {
     if (isLocalStudy) {
         studyData.value = JSON.parse(localStorage.getItem('localStudyData'))
     } else {
-        const ecoData = await getStudyData(`${studyId}-eco`)
+        let ecoData = undefined
+        try {
+            ecoData = await getStudyData(`${studyId}-eco`)
+        } catch {
+            console.log(`did not found eco data for ${studyId}`)
+        }
+
         let splitStudyId = studyId.split('-')
         splitStudyId.pop()
-        const socialData = await(getStudyData(`${splitStudyId.join('-')}-social`))
+        let socialData = undefined
+        try {
+            socialData = await(getStudyData(`${splitStudyId.join('-')}-social`))
+        } catch {
+            console.log(`did not found social data for ${studyId}`)
+        }
+        const metaInfo = ecoData ? ecoData : socialData
+
         studyData.value = {
-            ...ecoData,
-            ecoData: ecoData.data,
-            socialData: socialData.data
+            ...metaInfo,
+            ecoData: ecoData?.data,
+            socialData: socialData.socialData
         }
     }
     

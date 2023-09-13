@@ -4,25 +4,29 @@
             "id": "orchard",
             "prettyName": "Orchards",
             "color": "#5F8A64",
-            "textColor": "#5F8A64"
+            "textColor": "#5F8A64",
+            "commodities": ["cashew", "mango", "banana", "vanilla", "groundnut"]
         },
         {
             "id": "animal product",
             "prettyName": "Animal products",
             "color": "#C46D4D",
-            "textColor": "#C46D4D"
+            "textColor": "#C46D4D",
+            "commodities": ["milk", "beef"]
         },
         {
             "id": "crop",
             "prettyName": "Field crops",
             "color": "#F6E065",
-            "textColor": "#806C00"
+            "textColor": "#806C00",
+            "commodities": ["coffee", "cocoa"]
         },
         {
             "id": "unknown",
             "prettyName": "Unknown",
             "color": "#808080",
-            "textColor": "#808080"
+            "textColor": "#808080",
+            "commodities": []
         }
     ],
     "countries": [
@@ -37,6 +41,34 @@
         {
             "id": "burkina faso",
             "prettyName": "Burkina Faso"
+        },
+        {
+            "id": "honduras",
+            "prettyName": "Honduras"
+        },
+        {
+            "id": "nicaragua",
+            "prettyName": "Nicaragua"
+        },
+        {
+            "id": "tanzania",
+            "prettyName": "Tanzania"
+        },
+        {
+            "id": "ecuador",
+            "prettyName": "Ecuador"
+        },
+        {
+            "id": "papua new guinea",
+            "prettyName": "Papua New Guinea"
+        },
+        {
+            "id": "sierra leone",
+            "prettyName": "Sierra Leone"
+        },
+        {
+            "id": "ghana",
+            "prettyName": "Ghana"
         }
     ],
     "studies": [
@@ -45,7 +77,6 @@
             "title": "Mali Cashew 2014",
             "year": 2014,
             "country": "mali",
-            "category": "orchard",
             "product": "cashew"
         },
         {
@@ -53,7 +84,6 @@
             "title": "Burkina Faso Mango 2016",
             "year": 2016,
             "country": "burkina faso",
-            "category": "orchard",
             "product": "mango"
         },
         {
@@ -61,8 +91,91 @@
             "title": "Burundi Milk 2020",
             "year": 2020,
             "country": "burundi",
-            "category": "animal product",
             "product": "milk"
+        },
+        {
+            "id": "coffee-honduras-2020",
+            "title": "Honduras Coffee 2020",
+            "year": 2020,
+            "country": "honduras",
+            "product": "coffee"
+        },
+        {
+            "id": "banana-burundi-2020",
+            "title": "Burundi Banana 2020",
+            "year": 2020,
+            "country": "burundi",
+            "product": "banana"
+        },
+        {
+            "id": "banana-bostwana-2020",
+            "title": "Bostwana Banana 2020",
+            "year": 2020,
+            "country": "bostwana",
+            "product": "banana"
+        },
+        {
+            "id": "cocoa-nicaragua-2020",
+            "title": "Nicaragua Cocoa 2020",
+            "year": 2020,
+            "country": "nicaragua",
+            "product": "cocoa"
+        },
+        {
+            "id": "coffee-tanzania-2020",
+            "title": "Tanzania Coffee 2020",
+            "year": 2020,
+            "country": "tanzania",
+            "product": "coffee"
+        },
+        {
+            "id": "beef-swaziland-2020",
+            "title": "Swaziland Beef 2020",
+            "year": 2020,
+            "country": "swaziland",
+            "product": "beef"
+        },
+        {
+            "id": "cocoa-ecuador-2020",
+            "title": "Ecuador Cocoa 2020",
+            "year": 2020,
+            "country": "ecuador",
+            "product": "cocoa"
+        },
+        {
+            "id": "coffee-ecuador-2020",
+            "title": "Ecuador Coffee 2020",
+            "year": 2020,
+            "country": "ecuador",
+            "product": "coffee"
+        },
+        {
+            "id": "cocoa-papua-new-guinea-2020",
+            "title": "Papua New Guinea Cocoa 2020",
+            "year": 2020,
+            "country": "papua new guinea",
+            "product": "cocoa"
+        },
+        {
+            "id": "cashew-sierra-leone-2020",
+            "title": "Sierra Leone Cashew 2020",
+            "year": 2020,
+            "country": "sierra leone",
+            "product": "cashew"
+        },
+        {
+            "id": "vanilla-papua-new-guinea-2020",
+            "title": "Papua New Guinea Vanilla 2020",
+            "year": 2020,
+            "country": "papua new guinea",
+            "product": "vanilla"
+        },
+        {
+            "id": "groundnut-ghana-2020",
+            "title": "Ghana Groundnut 2020",
+            "year": 2020,
+            "country": "ghana",
+            "product": "groundnut"
         }
     ]
 }

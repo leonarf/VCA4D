@@ -48,7 +48,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="my-4">
+                    <h4 class="font-bold">Add this part to "studies" in data.json</h4>
+                    <div class="flex flex-row mb-2 gap-x-2">
+                        <button
+                            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                            @click="copyRecapToClipboard">Copy To Clipboard</button>
+                    </div>
+                    <pre class="bg-slate-600 text-white overflow-x-auto rounded ">{{ jsonRecap }}</pre>
+                </div>
                 <div class="mt-4">
+                    <h4 class="font-bold">Preview data</h4>
                     <div class="flex flex-row mb-2 gap-x-2">
                         <button
                             class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
@@ -155,13 +165,11 @@ const studyProperties = computed(() => {
     const targetCurrency = getValueChainProperty(excelData.value, "Standard currency code");
     const currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency");
     const giniIndex = getValueChainProperty(excelData.value, "Gini index");
-    const category = getValueChainProperty(excelData.value, "Product Type")
 
     return {
         id: slugify(commodity + "-" + country + "-" + year),
         country,
         commodity,
-        category,
         year,
         localCurrency,
         targetCurrency,
@@ -213,6 +221,23 @@ const jsonFile = computed(() => {
         studyData.value
         , null, 2)
 })
+
+const jsonRecap = computed(() => {
+    return JSON.stringify(
+        {
+            id: `${studyData.value.id}-${studyData.value.year}`,
+            title: `${studyData.value.country} ${studyData.value.commodity} ${studyData.value.year}`,
+            year: studyData.value.year,
+            country: studyData.value.country.toLowerCase(),
+            product: studyData.value.commodity.toLowerCase()
+        }
+        , null, 2)
+    
+})
+
+const copyRecapToClipboard = () => {
+    navigator.clipboard.writeText(jsonRecap.value)
+}
 
 const copyStudyToClipboard = () => {
     navigator.clipboard.writeText(jsonFile.value)

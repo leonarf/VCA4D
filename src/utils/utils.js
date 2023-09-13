@@ -305,12 +305,6 @@ export const getErrors = (study) => {
       message: `Unknown currency ${study.targetCurrency}`
     })
   }
-  if (!['Orchards', 'Animal products', 'Field crops'].includes(study.product)) {
-    errors.push({
-      level: "error",
-      message: `Unknown product ${study.product}`
-    })
-  }
   for (const property of [
     'commodity',
     'country',

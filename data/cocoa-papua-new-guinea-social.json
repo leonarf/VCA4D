@@ -1,0 +1,570 @@
+{
+  "id": "cocoa-papua-new-guinea",
+  "country": "Papua New Guinea",
+  "commodity": "Cocoa",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 2.8,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Papua New Guinea has ratified the international conventions in question. As far as it could be ascertained, companies in the VC respect these. There are, however, (1) remaining discrepancies between the 8 fundamental ILO conventions and relevant national labour legislation frameworks, which are in the process of review; (2) shortcomings in monitoring and enforcing the adherence to national labour legislation (including reporting to ILO) through the PNG Department of Labour and Industrial Relations."
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Freedom of association is allowed but hardly effective. Employees in companies visited did not count with internal associations or membership in external organisations (e.g. labour unions) to represent their interests. In part this may be due due to generally very limited reach of labour unions in PNG. According to exporters, the majority of their employees are employed on the basis of the legal minimum wage and do not engage in collective bargaining through employee associations or labour unions."
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Contracts are fair, in the limited sense of being in accordance with minimum wage regulations. The enforceability of contracts, e.g. in relation to preventing premature dismissal or termination through employers, is low. Processes of arbitration in cases of industrial disputes are lenghty and may provide a hindrance to the effective enforcement of employee rights."
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Forced labour is, by all available indications, neither present nor a risk in the cocoa value chain."
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "There are no apparent generalized risks of discrimination in employment for specific categories of the population in the value chain. However, if discrimination occurs, there may be little means open to employees to effectively redress it."
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 3.5,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Primary school attendance of children working in cocoa production (smallholder family labour) is high. Net primary school attendance of children active in the cocoa value chain (smallholders) can be expected to be higher than the average net enrollment of 87% in 2012 (World Bank) for following reasons: (1) increasing levels of school attendance since a Tuition Fee Free education policy from 2012 onwards, (2) availability of monetary income of cocoa growers to support children in school, (3) relatively better infrastructure and school coverage in major cocoa producing areas compared to more remote areas of PNG. In general, families give high priority to children's education, especially at primary school level."
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Children provide family labour input among smallholder cocoa producers, especially in harvesting easily accessible cocoa pods. Risks may arise where farmers use pesticides (still rare), due to lack of awareness of safe handling in the household context. "
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In warehouses of cocoa exporters there is little (although some) evidence of workplace accident protection (e.g., no protective workwear, lack of procedural safety in moving pallets of cocoa bags with forklifts). Smallholders: risk of health damages through unsafe handling of pesticides (pesticide use remains currently rare)."
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Formal employment in the sector (exporters) is usually based on minimum wage, and is in these terms in accordance to local standards. Income levels at minimum wage are relatively low in any case, and may not be sufficient to support a family when the only source of income. Exceptions apply for plantation workforce where exemptions from minmum wages were approved by the PNG Department of Labour and Industrial Relations (e.g. Agmark), concerning a tiny segment of the sector. Plantation workforce is usually residential on small pockets of remaining plantations, also if not any more formally emplyed on defunct or unprofitable plantations. Families of fomer plantation workforce often engage in food gardening on plantation land, not having elsehwere to go, and seek labor outside the plantation where possible."
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Cocoa is attractive as it creates remunerated labour for youth, both within (extended) family cocoa blocks, cooperatives, and fermentary/drier oprerations. The attractiveness of activities for youth in smallholder cocoa production depends on the conditions provided by the male household head (e.g. cocoa income distribution among family members). Attractiveness for male youth is higher in patrilineal contexts with availability of land, e.g. where youth is able to plant and manage cocoa on their own (e.g. Sepik region), including control over income. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": "n/a",
+          "averageText": "n/a",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "The VGGT seems not to play any role in PNG to date, and is not relevant in the current configuration of the cocoa value chain in PNG, which is smallholder-based. It may become relevant in the cocoa sector for large-scale cocoa projects, including plantations, that the PNG government places renewed interest in towards increasing national revenue through cocoa exports. While cocoa has overwhelmingly become a smallholder crop with a negligible remaining share of plantations, there are risks for governance of tenure associated with large-scale cocoa plantation projects that are becoming part of the government's sector policy again."
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "This does not apply to the current configuration of the cocoa value chain. Where large scale investments are at stake, however, there are serious issues with due diligence, for example land acquisition (99 year leases) in agribusiness projects that affect land and property rights. Issues have been reported with the Special Agricultural and Business Lease (SABL) scheme in PNG, which has been a primary vehicle for facilitating land acquisition for large scale investments. Issues include lack of informed consent, lack of inclusive landowner representation, and the amount of forest logging undertaken in the name of agricultural projects. While the issuing of SABL's was largely discontinued since 2011, and in 2014 cancellation of existing SABL's was announced, revocation of individual leases is still pending. Underlying issues have not been sufficiently addressed towards strenghtening due diligence in large scale investment for agribusiness projects, constituting a risk where large scale investment becomes a consideration."
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "General assessment with relevance for potential large-scale cocoa agribusiness investments: Challenges remain to achieve adequate prior disclosure of project related information to local stakeholders."
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "General assessment: There are frequent challenges for stakeholders to access relevant intervention policies, laws, procedures and decisions in large-scale agribusiness interventions. Most planning processes in PNG follow a top-down approach."
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "General assessment: Challenges remain for inclusive participation and consultation in decision-making processes in PNG. In case of agribusiness investments, formerly unregistered customary landowners usually form Incorporated Land Groups (ILGs). ILGs become the formal representative entities for decision-making. By experience, however, many ILGs that were formed towards enabling agribusiness investments are found not to act in the inclusive interest of individual members, or at times are not inclusive in membership of all relevant stakeholders in the first place. Factors are corruption in the Lands Department, illiteracy among stakeholders, inadequate knowledge on ILGs functioning, and remaining issues with the legal framework of ILGs in the first place."
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Formal contracts do generally exist, although the circumstances of their contractual consent is often questionable in relation to points above, and challenges to their breach (or legality) are ardous and lengthy processes that frequently fail to deliver justice."
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The exisiting legal framework that acknowledges customary land ownership also without formal registration under Incorporated Land Groups (ILGs) provides challenges for tenure security, external investment and credit access in smallholder agrculture (Kutan & Chand 2014). Customary tenrure arrangements are arguably, however, the best guarantor for equitable tenure rights and access to land in practice. This is due to numerous access paths to local and temporal usufruct rights in the context of often multi-layered and sometimes overlapping ancestral land rights claims. Formalisation of tenure rights (in contrast to local and informal customary rules) risks introducing a new exclusivity of tenure rights and in practice complicates access paths for more vulnerable stakeholders. Risks ensue especially for large scale agribusiness investment (as in points above)."
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a"
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Inadequate compensation valuation indicators (Tagliarino 2017). Not applicable to cocoa value chain."
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There is generally a lack of adequate provisions to address stakeholder complaints and arbitration in large scale agribusiness investments. This may not be relevant in the current configuration of the value chain and investments in the value chain based on smallholders producers and exporters of cocoa, but may apply if large scale agribusiness investments related to cocoa are incorporated by the PNG government to meet poduction / export targets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women are not per se excluded from specific segments of the value chain. Women are, however, underrepresented or absent in positions of leadership and business."
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women are active especially as producers, although usually regarded as 'helpers' to men who often take responsibility for planting, managing, and marketing cash crops such as cocoa. All segments of the cocoa value chain are in most instances dominated by men."
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 1.75,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Household assets are not usually distinguished as belonging to men or women. Ultimate claim on assets may be by men. Larger assets, such as vehicles, are usually owned by men."
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Women have no claim or specific rights on land in patrilineal societies (PNG mainland). Women have ownership claims to customary land in matrilineal societies, although men increasingly take part in land transactions and land obtained outside customary arrangements becomes patrilineally inherited to sons. (In matrilineal societies land is usually inherited by nieces, not own daughters). "
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women have very limited access to credit, often not at all. This mirrors a general lack of credit availability in PNG in the absence of land as a collateral to credit, but is more pronounced for women who are less likely to own significant assets that could serve as a collateral to obtain credit on their own."
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women are not excluded from extension services, agricultural input services, etc., however, men are usually more prominent in availing of such services."
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 2.2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Men usually take initiative and retain responsibility over cash crop production such as cocoa. The planting of crops is an important aspect for ownership of trees and control over the management and income from crops. Providing cocoa seedlings specifically for women to be planted separately may alleviate this. This is attempted in Bougainville. Ambaku women's group in Maprik (East Sepik Province) also suggested this as a way to empower women in the cocoa value chain."
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women are generally to a substantial degree autonomous in the organisation of their work."
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women have control over certain income, deriving from specific activities that women have control over (food gardens, informal marketing). Income deriving from surplus sales from food gardens and other informal marketing activities is usually moderate and used for immediate household consumption needs. Occasionally such activities are increased to support men in raising resources for customary obligations. Income from cash crops, such as cocoa, however, is mostly controlled by men. Women and youth are 'paid' for their help in cocoa production from such income, which determines women's and youths motivation to work in cocoa. Nevertheless, intra-household tensions about income distribution (specifically for its retention by men) often ensue."
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women earn income through specific activities, such as marketing crops from gardens primarily aimed at subsistence, and in some instances through other entrepreneurial activities or formal employment. Income earned independently by women is usually considerably lower than the income of men, e.g. from marketing cash crops (such as cocoa) that men retain control over."
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Yes, although ultimate decisions may be determined by male household heads."
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women are part of cocoa producer societies, cooperatives, and women's groups (where they exist). Most operational activities of farmers' organisations are conducted by men, however. Women are usually underrepresented in farmers' organisations, and more markedly so in positions of leadership."
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women are not barred from leadership positions within organisations they are part of, but are clearly underrepresented in them. "
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "To low extent only. Women have more territorial power in matrilineal societies in the PNG islands region, e.g. East New Britain, parts of Bougainville. "
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Yes, although much less commonly than men."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There is a tendency for increased intra-household cooperation in tasks traditionally associated with gender based labour division, overall work loads may not be regarded equal, however. Especially the intensification of agricultural acitivities may increase the relative overall work load of women compared to that of men (Bourke & Harwood 2009)."
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women often remain subject to strenous work, including fetching water and other heavy carrying. Division of labour is usually organised in a way that men perform the heavy tasks of clearing land and digging drains for gardens where applicable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 3.5,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Local food production has been steadily increasing over the last decades, generally keeping pace with population growth. In some locations, the potential for expanding local food production becomes increasingly limited with ongoing population growth."
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Local markets and imports have been offsetting increasing local demand, especially in catering for increasing urban populations that more exclusively rely on food markets. Since the devaluation of the kina (making exports more expensive) in the 1990's, and for a current foreign exchange shortage, it can be assumed that in tendency more of local food demand has been met by local food production. Imports, of rice for example, spiked in 1997 and 2016 with an El Nino Southern Oscillation related drought phenomenon that considerably reduced local food production, partially offsetting local food shortages."
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Generally yes, from a long-term perspective. For a majority of the population, cash crops such as cocoa are the major source of income to allocate to food purchases. Income from cash crops such as cocoa is vital for offsetting food shortages related to seasonal variations and adverse weather phenomena affecting garden produce. Income from cash crops is also important to complement diets with purchased foods, especially protein, fats, oil. With the appearance of the Cocoa Pod Borer in PNG in 2006, however, the income of many people relying on cocoa for income has been substantially reduced or disrupted."
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Consumer price index has been increasing (136 in 2016, baseline 100 in 2010). In the same period, minimum wages were increasing from <40 to 140 Kina per week. This does not correspond to average wage increases though, and for a wide spectrum of the population consumer prices relative to income may have stagnated or decreased. Casual agricultural labour (extended family) in East New Britain continues to be paid 10 Kina per day (plus food), same as reported in 2002 (Martin 2018)."
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "To some extent, although difficult to ascertain based on available data. Food imports and the wider availability of certain foods throughout the country, tinned fish for example, allow people with cash income to complement dietary needs through purchased food. There remains a widespread challenge with nutritional quality of foods, rather than quantity, in diets mainly based on root crops and sago, which are low in energy, protein, and other essential nutrients."
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "UNICEF and other entities have stepped up efforts to improve nutritional health in PNG. A multi-sectoral National Nutrition Policy by the government also aims to tackle challenges related to nutritional practices. There remain challenges in implementation, however."
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Difficult to ascertain based on available data. Prevalence in stunting in children under 5, for example, was assessed to be higher in 2010 compared to a previous survey in 2005. Nutrition-related health-targets are generally deemed off-target, often without progress, by the WHO."
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Diversified food production, social support networks, and income from cash crops such as cocoa are the major mitigators to risks of periodic food shortages. Unstable and changing weather patterns due to climate change and the El Nino Southern Oscillation (ENSO) phenomena of years with excessive rainfall and severe droughts in some years (1997, 2016) create major challenges, especially drought years causing locally dramatic food shortages (less pronounced in areas with cash crop income and market access)."
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Food prices, especially locally marketed produce, fluctuate considerably based on growing seasons and weather patterns. Subsistence food production is highly responsive to imported food price variations, offsetting some of its potentially adverse effects for food security."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Yes, although of mixed success and in varied form. Cooperatives often form in response to external incentives, such as governmental cocoa programs that require registered cooperatives as beneficiaries. In the Sepik region, farmers organise in societies for the purpose of marketing with Rainforest Allicane certification. Other farmer cooperatives have formed as a strategy to remain viable following the Cocoa Pod Borer infestation of cocoa, such as the Ilugi Cooperative Society in East New Britain, constituted by settlers purchasing land from customary landowners. Ilugi Society made a name for itself for the quality of its cocoa, but struggles to establish marketing links on the boutique market. On a more general level, many cooperatives in PNG have failed for governance issues, lack of knowledge of cooperative management and functions, and internal conflicts."
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Cooperative membership is often limited to variable geographical and political-administrative zones (such as Local Level Government wards), or clan-based afiliation. Within these limitations, cooperative membership is inclusive based on paying memberships dues and meeting membership criteria (such as counting with a certain number of cocoa trees)."
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Many cooperatives and other farmers' organisations have failed for lacking representative and accountable leadership, attributable to lack of knowledge of cooperative functions and management, and in some instances mismanagement for personal gain."
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Farmer groups and cooperatives are both formed in response to specific external opportunities and as a platform to improve livelihoods through specific means (e.g. cocoa marketing) or varied strategies (women's groups). There are success stories, though overall the success in negotiating in input and output markets by groups and cooperatives for their lasting benefit is limited in PNG."
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Cocoa farmers have access to the cocoa price offered by exporters (which is usually displayed on notice boards outside buying points), and information on prices and their daily change circulates among cocoa growers (in contrast to international cooca prices that farmers are generally not aware of). Information on agricultural practices is much more limited, and farmers lack vital knowledge on adapting cocoa management to the Cocoa Pod Borer. Similarly, agricultural policies are usually beyond the reach of farmers."
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "A fundamental lack of trust has been voiced by stakeholders both upstream and downstream the cocoa value chain, including accusations of price manipulation by exporters and fermentary owners. Exporters stopped previous initiatives to bind farmers through advance of input and services. Trust between farmers and exporters is possibly improved through the partnerships established between the private sector and farmers in the PPAP project."
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 2.6666666666666665,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Communities, if not subject to large scale development that involves expropriation or effective land alienation, have high autonomy in determining their livelihood trajectories. When agribusiness and state investment are at stake, however, these often lack transparent governance, inclusive decision-making, and effective grievance mechanisms. Risks are associated with this for large scale government driven cocoa sector plans.  "
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There is a lack of affirmative actions to ensure respect of traditional knowledge and resources. In the smallholder cocoa sector, these are not specifically under threat though."
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Many people participate in voluntary activities for the benefit of the community. These are often based on local church congregations, but may also involve activities to look after local schools and other communal infrastructure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Health facilities (local aid posts, regional health centers, urban/provincial hospitals) are unevenly distributed, for many locations at considerable distance, and frequently in a state of underequipped disrepair, including irregular availability of essential medical supplies."
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Health services are sketchy in provision. Health centers undertake community outreach visits, especially for immunisation campaigns, including other services to different extent. Community visits are often infrequent, and hampered by shortages of staff, equipment, and supplies."
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Health services remain expensive despite free healthcare plans by the government, and costs for health services constitute a high burden on households in case of illnesses, including curable diseases. No health insurance schemes."
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "There are significant regional variations in PNG in the relative share of modern houses built by 'permanent' material, and houses/huts of locally available material that require more frequent maintenance or rebuilding. Lack of housing quality is not a priority concern for many rural dwellers, and can on general average be cautiously deemed satisfactory. In some areas people express a preference for housing of cheaper locally available material for the risk of having houses of permanent material becoming a target in local unrest between supporters of different factions following elections, and a concern to not become subject to envy by other community members."
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Access to good quality water is a concern for many rural households in particular. A large proportion of the rural population relies on rivers, streams, and other local water sources. People in East New Britain adopting pesticides in cocoa management to combat the Cooca Pod Borer have reported to refrain from drawing from previously used water sources in proximity of cocoa blocks for a concern about pesticide residues. Water tanks to collect rainwater are a partially adopted alternative, but are too costly for many households."
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Primary education is accessible to households in the cocoa value chain, both in terms of finance, and in terms of proximity of schools. Exceptions apply for more remote areas."
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "People enjoy moderate access to secondary schooling, due to uneven distribution of high schools (grade 9-10) and secondary schools (grade 11-12). Despite the Tution Fee Free education policy of the government, parents are also often charged (informally) a modest fee for school upkeep not covered in governmental budget grants (or its late disbursal to schools). In areas of high competition for places in secondary education these fees can reach high proportions. While access to secondary schools has significantly improved in the last years, access to vocational education remains much more limited."
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "There are no vocational training opportunities offered by investors in the cocoa value chain, as far as could be determined. (This question may not be applicable in the current configuration of the value chain based on smallholder production)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

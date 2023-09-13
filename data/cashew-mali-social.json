@@ -1,9 +1,10 @@
 {
-  "id": "cashew-mali-2020",
+  "id": "cashew-mali",
   "country": "Mali",
   "commodity": "Cashew",
   "year": 2020,
-  "data": [
+  "type": "social",
+  "socialData": [
     {
       "title": "1. WORKING CONDITIONS",
       "groups": [
