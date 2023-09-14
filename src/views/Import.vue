@@ -164,7 +164,7 @@ const studyProperties = computed(() => {
     const localCurrency = getValueChainProperty(excelData.value, "Study's local currency");
     const targetCurrency = getValueChainProperty(excelData.value, "Standard currency code");
     const currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency");
-    const giniIndex = getValueChainProperty(excelData.value, "Gini index");
+    const giniIndex = getValueChainProperty(excelData.value, "Gini index") || 0.3;
 
     return {
         id: slugify(commodity + "-" + country + "-" + year),

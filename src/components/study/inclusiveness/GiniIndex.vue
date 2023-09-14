@@ -1,5 +1,5 @@
 <template >
-    <div class="text-red-500">Default value for now</div>
+    <div class="text-red-500">Default value 0.3 if not provided in study file</div>
     <HorizontalSlider 
         :value="value" 
         :min="0.0" 

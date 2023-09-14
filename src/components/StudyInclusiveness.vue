@@ -31,7 +31,7 @@
         <InfoTitle title="Share of farm gate price in final price" class="mb-4 mt-8" />
         <ShareOfFarmPrice />
         <InfoTitle title="Gini index" class="mb-4 mt-8" />
-        <GiniIndex :value="0.3"/>
+        <GiniIndex :value="studyData.giniIndex"/>
     </article>
 </template>
 
