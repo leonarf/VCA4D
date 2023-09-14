@@ -52,6 +52,10 @@ onMounted(async () => {
 })
 
 const filterStudiesByCategory = (category) => {
+    if (category === 'unknown') {
+        const allProducts = jsonData.categories.reduce((array, curr) => array.concat(curr.commodities), [])
+        return studies.value.filter(item => !allProducts.includes(item.product))
+    }
     const productsForCategory = jsonData.categories.find(item => item.id === category).commodities
     return studies.value.filter(item => productsForCategory.includes(item.product));
 };
