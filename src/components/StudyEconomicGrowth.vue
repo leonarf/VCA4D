@@ -25,8 +25,8 @@
     <br>
     <h2>Is it financially attractive to sell abroad ?</h2>
 
-    <InfoTitle title="Domestic resource cost ratio" class="mb-4" />
-    <DomesticResourceCostRatio :value="1.2" />
+    <InfoTitle title="Domestic resource cost ratio" class="mb-4" :class="{'TODO': !studyData.domesticResourceCostRatio}" />
+    <DomesticResourceCostRatio v-if="studyData.domesticResourceCostRatio" :value="studyData.domesticResourceCostRatio" />
     <br>
     <InfoTitle title="Nominal protection Coefficient" information="Domestic price / Internation parity price"
       class="mb-4" />

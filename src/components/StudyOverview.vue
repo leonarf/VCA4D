@@ -10,7 +10,7 @@
                 <div class="text-[#303030] text-center flex flex-col space-y-2 items-center" v-for="step in populatedSteps" :key="step.name">
                     <img style="height: 50px; width: 50px;" :src="getStepLogo(step)" :alt="step.name + ' illustration'"/>
                     <div class="text-sm font-semibold">{{ step.name }}</div>
-                    <p class="text-sm font-light">{{ step.description || 'Pas de description' }}</p>
+                    <p class="text-sm font-light text-center">{{ step.description || 'Pas de description' }}</p>
                 </div>
             </div>
         </section>

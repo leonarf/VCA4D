@@ -28,10 +28,11 @@
         <br>
 
         <h3>What is the impact of the <strong>governance systems</strong> on income distribution?</h3>
-        <InfoTitle title="Share of farm gate price in final price" class="mb-4 mt-8" />
-        <ShareOfFarmPrice />
-        <InfoTitle title="Gini index" class="mb-4 mt-8" />
-        <GiniIndex :value="studyData.giniIndex"/>
+        <InfoTitle title="Share of farm gate price in final price" class="mb-4 mt-8" :class="{'TODO': !hasPricesData}" />
+        <ShareOfFarmPrice v-if="hasPricesData" :data="pricesData"/>
+        <br />
+        <InfoTitle title="Gini index" class="mb-4 mt-8" :class="{ 'TODO': !studyData.giniIndex}" />
+        <GiniIndex v-if="studyData.giniIndex" :value="studyData.giniIndex"/>
     </article>
 </template>
 
@@ -44,26 +45,35 @@ import NetOperatingProfitPerActor from './study/inclusiveness/NetOperatingProfit
 import InfoTitle from '@typography/InfoTitle.vue'
 import GiniIndex from './study/inclusiveness/GiniIndex.vue'
 import ShareOfFarmPrice from './study/inclusiveness/ShareOfFarmPrice.vue'
+import { computed } from 'vue'
+import { useUtils } from '../utils/utils'
 
 const props = defineProps({
     studyData: Object,
     currency: String
 })
 
-</script>
+const { prettyAmount, convertAmount } = useUtils(props);
 
-<script>
-//@ts-check
-
-import '../types.js'
-export default {
-    name: 'StudyEconomicGrowth',
-    props: ['studyData'],
-    data() {
-        return {
-        }
+const hasPricesData = computed(() => {
+    if (!props.studyData.ecoData.farmToFinalPricesRatio) {
+        return false
     }
-}
+    return props.studyData.ecoData.farmToFinalPricesRatio.length > 0
+})
+
+const pricesData = computed(() => {
+    if (!hasPricesData.value) {
+        return null
+    }
+    return props.studyData.ecoData.farmToFinalPricesRatio.map(item => ({
+        label: item.label,
+        farm: prettyAmount.value(convertAmount.value(item.farmPrice)),
+        final: prettyAmount.value(convertAmount.value(item.finalPrice)),
+        ratio: item.farmPrice / item.finalPrice * 100
+    }))
+})
+
 </script>
 
 <style scoped lang="scss"></style>

@@ -1,17 +1,28 @@
 <template>
     <div class="flex flex-row justify-evenly w-full items-center my-8">
-      <NiceMetric label="Total value added" :value="`${totalAddedValueCreators}`" />
-      <NiceMetric class="TODO" label="Value added share of the agricultural sector GDP" value="%" />
-      <NiceMetric class="TODO" label="Value added share of national GDP" value="%" />
+      <NiceMetric 
+        label="Total value added" 
+        :value="totalAddedValueCreators" 
+      />
+      <NiceMetric 
+        label="Value added share of the agricultural sector GDP" 
+        :value="studyData.valueAddedShareAgriculturalGdp * 100"
+        :isPercent="true"
+      />
+      <NiceMetric 
+        label="Value added share of national GDP" 
+        :value="studyData.valueAddedShareNationalGdp * 100" 
+        :isPercent="true"
+      />
     </div>
 
     <h2>Is the value chain independent from foreign imports?</h2>
 
     <InfoTitle title="Rate of integration into domestic economy" information="Total value added / value of production"
-      class="mb-4" />
-    <div class="text-red-500">Default value for now</div>
-    <HorizontalSlider 
-        :value="0.78" 
+      class="mb-4" :class="{'TODO': !studyData.rateOfIntegration}" />
+    <HorizontalSlider
+        v-if="!!studyData.rateOfIntegration"
+        :value="studyData.rateOfIntegration" 
         :min="0.0" 
         :max="1.0" 
         :labels="['0%', '100%']"

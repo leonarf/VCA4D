@@ -131,6 +131,14 @@ const typeOfFile = computed(() => {
 
 const getValueChainProperty = (json, propertyName) => json["Value Chain"].find(element => element["Property"] === propertyName)["Value"]
 
+const readPercentValue = (identifier) => {
+    const valueInExcel = getValueChainProperty(excelData.value, identifier)
+    if (!valueInExcel) {
+        return undefined
+    }
+    return (valueInExcel / 100.0).toFixed(2)
+}
+
 const studyProperties = computed(() => {
 
     const localStorageValue = localStorage.getItem('localStudyProperties')
@@ -164,7 +172,12 @@ const studyProperties = computed(() => {
     const localCurrency = getValueChainProperty(excelData.value, "Study's local currency");
     const targetCurrency = getValueChainProperty(excelData.value, "Standard currency code");
     const currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency");
-    const giniIndex = getValueChainProperty(excelData.value, "Gini index") || 0.3;
+    const giniIndex = getValueChainProperty(excelData.value, "Gini index") || undefined;
+    const rateOfIntegration = readPercentValue("Rate of integration into domestic economy")
+    const publicFundsBalance = readPercentValue("Public funds balance / Public budget")
+    const valueAddedShareNationalGdp = readPercentValue("Value added share of national GDP")
+    const valueAddedShareAgriculturalGdp = readPercentValue("Value added share of the agricultural sector GDP")
+    const domesticResourceCostRatio = getValueChainProperty(excelData.value, "Domestic resource cost ratio") || undefined;
 
     return {
         id: slugify(commodity + "-" + country + "-" + year),
@@ -175,6 +188,11 @@ const studyProperties = computed(() => {
         targetCurrency,
         currencyRatio,
         giniIndex,
+        rateOfIntegration,
+        publicFundsBalance,
+        valueAddedShareNationalGdp,
+        valueAddedShareAgriculturalGdp,
+        domesticResourceCostRatio,
         type: 'eco'
     }
 })

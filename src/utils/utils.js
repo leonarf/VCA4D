@@ -288,11 +288,30 @@ export const parseEconomicsJson = (json) => {
     return (stage1?.index || 0) - (stage2?.index || 0)
   })
 
+  const importExportItems = json["Imported And exported goods"].map(importExportItem => ({
+        label: importExportItem['Goods'],
+        importExport: importExportItem['Imported Or Exported'],
+        amount: importExportItem['Value (local currency)'],
+    })
+  )
+  const importExport = {
+    import: importExportItems.filter(item => item.importExport === 'IMPORT'),
+    export: importExportItems.filter(item => item.importExport === 'EXPORT'),
+  }
+
+  const farmToFinalPricesRatio = json["Farm gate price In final price"].map(priceItem => ({
+    label: priceItem["Case Of start And End price"],
+    farmPrice: priceItem["Farm gate price (local currency)"],
+    finalPrice: priceItem["End price"]
+  }))
+  
   return {
     stages,
     actors,
     flows,
-    addedValue
+    addedValue,
+    importExport,
+    farmToFinalPricesRatio
   }
 }
 

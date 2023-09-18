@@ -145,24 +145,28 @@ const getStackedBarChart = (label, data, prettyAmount, convertAmount) => {
     }
 }
 
-export const getImportedProductsData = (prettyAmount, convertAmount) => {
-    const dataImported = [
-        { value: 400000, name: 'Input 1', color: '#5F8A64' },
-        { value: 250000, name: 'Input 2', color: '#71A578' },
-        { value: 200000, name: 'Input 3', color: '#9DB95F' },
-        { value: 150000, name: 'Input 4', color: '#C1CC5E' }
-    ]
+export const getImportedProductsData = (ecoData, prettyAmount, convertAmount) => {
+    const colors = ['#5F8A64', '#71A578', '#9DB95F', '#C1CC5E' ]
+
+    const dataImported = ecoData.importExport.import.map((importItem, index) => ({
+        value: importItem.amount,
+        name: importItem.label,
+        color: colors[index % colors.length]
+    }))
 
     return getStackedBarChart('IMPORTED INPUTS', dataImported, prettyAmount, convertAmount)
 }
 
-export const getExportedProductsData = (prettyAmount, convertAmount) => {
-    const dataImported = [
-        { value: 15000, name: 'Product 1', color: '#C46D4D' },
-        { value: 75000, name: 'Product 2', color: '#C46D4D' },
-    ]
+export const getExportedProductsData = (ecoData, prettyAmount, convertAmount) => {
+    const colors = ['#b06245', '#C46D4D']
 
-    return getStackedBarChart('EXPORTED PRODUCTS', dataImported, prettyAmount, convertAmount)
+    const dataExported = ecoData.importExport.export.map((importItem, index) => ({
+        value: importItem.amount,
+        name: importItem.label,
+        color: colors[index % colors.length]
+    }))
+
+    return getStackedBarChart('EXPORTED PRODUCTS', dataExported, prettyAmount, convertAmount)
 }
 
 /*
