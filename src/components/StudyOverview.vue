@@ -37,7 +37,7 @@
                 <p>Learn more about <em>Employment</em>, <em>Profits distribution across actors</em> and 
                     <em>Impact of governance</em></p>
             </RouterLink>
-            <RouterLink :to="'/study?id=' + studyData.id + '&view=social-sustainability'">
+            <RouterLink v-if="!!studyData.socialData" :to="'/study?id=' + studyData.id + '&view=social-sustainability'">
                 <h3>Social sustainability</h3>
                 <p>Learn more about <em>Working conditions</em>, <em>Land and water rights</em>, 
                     <em>Gender equality</em>, <em>Food & nutrition security</em>,
@@ -45,7 +45,7 @@
                     <em>Living conditions</em>
                 </p>
             </RouterLink>
-            <RouterLink :to="'/study?id=' + studyData.id + '&view=environment'">
+            <RouterLink v-if="false" :to="'/study?id=' + studyData.id + '&view=environment'">
                 <h3>Environmental sustainability</h3>
                 <p>Learn more about <em>Climate change</em>, <em>human health</em> and
                     <em>Ecosystems</em> </p>
