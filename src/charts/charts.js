@@ -93,7 +93,7 @@ export const getAddedValueReceiversData = (stages, actors, convertAmount, pretty
 /*
 *  STACKED BAR CHART
 */
-const getStackedBarChart = (label, data, prettyAmount, convertAmount) => {
+const getStackedBarChart = (label, data, maxValue, prettyAmount, convertAmount) => {
     const seriesData = data.map(({ value, name, color }) => ({
         name,
         type: 'bar',
@@ -139,10 +139,17 @@ const getStackedBarChart = (label, data, prettyAmount, convertAmount) => {
             },
         },
         yAxis: {
-            show: false
+            show: false,
+            max: convertAmount(maxValue) 
         },
         series: seriesData,
     }
+}
+
+const getMaxImportExportValue = (ecoData) => {
+    const exportTotal = ecoData.importExport.export.map(item => item.amount).reduce((res, curr) => res + curr, 0)
+    const importTotal = ecoData.importExport.import.map(item => item.amount).reduce((res, curr) => res + curr, 0)
+    return Math.max(exportTotal, importTotal)
 }
 
 export const getImportedProductsData = (ecoData, prettyAmount, convertAmount) => {
@@ -154,7 +161,8 @@ export const getImportedProductsData = (ecoData, prettyAmount, convertAmount) =>
         color: colors[index % colors.length]
     }))
 
-    return getStackedBarChart('IMPORTED INPUTS', dataImported, prettyAmount, convertAmount)
+    const maxValue = getMaxImportExportValue(ecoData)
+    return getStackedBarChart('IMPORTED INPUTS', dataImported, maxValue, prettyAmount, convertAmount)
 }
 
 export const getExportedProductsData = (ecoData, prettyAmount, convertAmount) => {
@@ -165,8 +173,9 @@ export const getExportedProductsData = (ecoData, prettyAmount, convertAmount) =>
         name: importItem.label,
         color: colors[index % colors.length]
     }))
-
-    return getStackedBarChart('EXPORTED PRODUCTS', dataExported, prettyAmount, convertAmount)
+    
+    const maxValue = getMaxImportExportValue(ecoData)
+    return getStackedBarChart('EXPORTED PRODUCTS', dataExported, maxValue, prettyAmount, convertAmount)
 }
 
 /*
