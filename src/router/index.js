@@ -20,6 +20,14 @@ const router = createRouter({
             path: '/admin-import',
             name: 'import',
             component: Import
+        },
+        {
+            path: '/:catchAll(.*)',
+            name: 'not-found',
+            component: HomeView,
+            beforeEnter: (to, from, next) => {
+                next({ name: 'home', replace: true });
+            }
         }
     ]
 })
