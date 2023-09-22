@@ -21,6 +21,15 @@ export const getStageColor = (stageName) => {
   return "#ff1100"
 }
 
+const tagsColors = [
+  "#ffac9e",
+  "#fec875",
+  "#d7e275",
+  "#94d99d",
+];
+
+export const getTagColor = (value) => tagsColors[parseInt(value)  - 1];
+
 export const formatNumber = (value) => {
   if (!value) {
     return '-'
