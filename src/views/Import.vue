@@ -180,7 +180,7 @@ const studyProperties = computed(() => {
     const domesticResourceCostRatio = getValueChainProperty(excelData.value, "Domestic resource cost ratio") || undefined;
 
     return {
-        id: slugify(commodity + "-" + country + "-" + year),
+        id: slugify(commodity + "-" + country),
         country,
         commodity,
         year,
@@ -243,8 +243,8 @@ const jsonFile = computed(() => {
 const jsonRecap = computed(() => {
     return JSON.stringify(
         {
-            id: `${studyData.value.id}-${studyData.value.year}`,
-            title: `${studyData.value.country} ${studyData.value.commodity} ${studyData.value.year}`,
+            id: `${studyData.value.id}`,
+            title: `${studyData.value.country} ${studyData.value.commodity}`,
             year: studyData.value.year,
             country: studyData.value.country.toLowerCase(),
             product: studyData.value.commodity.toLowerCase()

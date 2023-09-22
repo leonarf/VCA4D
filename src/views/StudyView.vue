@@ -101,11 +101,9 @@ onMounted(async () => {
             console.log(`did not found eco data for ${studyId}`)
         }
 
-        let splitStudyId = studyId.split('-')
-        splitStudyId.pop()
         let socialData = undefined
         try {
-            socialData = await(getStudyData(`${splitStudyId.join('-')}-social`))
+            socialData = await(getStudyData(`${studyId}-social`))
         } catch {
             console.log(`did not found social data for ${studyId}`)
         }

@@ -73,109 +73,116 @@
     ],
     "studies": [
         {
-            "id": "cashew-mali-2014",
-            "title": "Mali Cashew 2014",
+            "id": "cashew-mali",
+            "title": "Mali Cashew",
             "year": 2014,
             "country": "mali",
             "product": "cashew"
         },
         {
-            "id": "mango-burkina-faso-2016",
-            "title": "Burkina Faso Mango 2016",
+            "id": "mango-burkina-faso",
+            "title": "Burkina Faso Mango",
             "year": 2016,
             "country": "burkina faso",
             "product": "mango"
         },
         {
-            "id": "milk-burundi-2020",
-            "title": "Burundi Milk 2020",
+            "id": "milk-burundi",
+            "title": "Burundi Milk",
             "year": 2020,
             "country": "burundi",
             "product": "milk"
         },
         {
-            "id": "coffee-honduras-2020",
-            "title": "Honduras Coffee 2020",
+            "id": "coffee-honduras",
+            "title": "Honduras Coffee",
             "year": 2020,
             "country": "honduras",
             "product": "coffee"
         },
         {
-            "id": "banana-burundi-2020",
-            "title": "Burundi Banana 2020",
+            "id": "banana-burundi",
+            "title": "Burundi Banana",
             "year": 2020,
             "country": "burundi",
             "product": "banana"
         },
         {
-            "id": "banana-bostwana-2020",
-            "title": "Bostwana Banana 2020",
+            "id": "banana-bostwana",
+            "title": "Bostwana Banana",
             "year": 2020,
             "country": "bostwana",
             "product": "banana"
         },
         {
-            "id": "cocoa-nicaragua-2020",
-            "title": "Nicaragua Cocoa 2020",
+            "id": "cocoa-nicaragua",
+            "title": "Nicaragua Cocoa",
             "year": 2020,
             "country": "nicaragua",
             "product": "cocoa"
         },
         {
-            "id": "coffee-tanzania-2020",
-            "title": "Tanzania Coffee 2020",
+            "id": "coffee-tanzania",
+            "title": "Tanzania Coffee",
             "year": 2020,
             "country": "tanzania",
             "product": "coffee"
         },
         {
-            "id": "beef-swaziland-2020",
-            "title": "Swaziland Beef 2020",
+            "id": "beef-swaziland",
+            "title": "Swaziland Beef",
             "year": 2020,
             "country": "swaziland",
             "product": "beef"
         },
         {
-            "id": "cocoa-ecuador-2020",
-            "title": "Ecuador Cocoa 2020",
+            "id": "cocoa-ecuador",
+            "title": "Ecuador Cocoa",
             "year": 2020,
             "country": "ecuador",
             "product": "cocoa"
         },
         {
-            "id": "coffee-ecuador-2020",
-            "title": "Ecuador Coffee 2020",
+            "id": "coffee-ecuador",
+            "title": "Ecuador Coffee",
             "year": 2020,
             "country": "ecuador",
             "product": "coffee"
         },
         {
-            "id": "cocoa-papua-new-guinea-2020",
-            "title": "Papua New Guinea Cocoa 2020",
+            "id": "cocoa-papua-new-guinea",
+            "title": "Papua New Guinea Cocoa",
             "year": 2020,
             "country": "papua new guinea",
             "product": "cocoa"
         },
         {
-            "id": "cashew-sierra-leone-2020",
-            "title": "Sierra Leone Cashew 2020",
+            "id": "cashew-sierra-leone",
+            "title": "Sierra Leone Cashew",
             "year": 2020,
             "country": "sierra leone",
             "product": "cashew"
         },
         {
-            "id": "vanilla-papua-new-guinea-2020",
-            "title": "Papua New Guinea Vanilla 2020",
+            "id": "vanilla-papua-new-guinea",
+            "title": "Papua New Guinea Vanilla",
             "year": 2020,
             "country": "papua new guinea",
             "product": "vanilla"
         },
         {
-            "id": "groundnut-ghana-2020",
-            "title": "Ghana Groundnut 2020",
+            "id": "groundnut-ghana",
+            "title": "Ghana Groundnut",
             "year": 2020,
             "country": "ghana",
             "product": "groundnut"
+        },
+        {
+            "id": "oil-palm-sierra-leone",
+            "title": "Sierra Leone Oil Palm",
+            "year": 2020,
+            "country": "sierra leone",
+            "product": "oil palm"
         }
     ]
 }
