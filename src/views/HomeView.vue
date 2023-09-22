@@ -51,14 +51,26 @@ onMounted(async () => {
     categories.value = allJsonData.categories
 })
 
-const filterStudiesByCategory = (category) => {
+const getStudiesByCategory = (studies, category) => {
     if (category === 'unknown') {
         const allProducts = jsonData.categories.reduce((array, curr) => array.concat(curr.commodities), [])
-        return studies.value.filter(item => !allProducts.includes(item.product))
+        return studies.filter(item => !allProducts.includes(item.product))
     }
     const productsForCategory = jsonData.categories.find(item => item.id === category).commodities
-    return studies.value.filter(item => productsForCategory.includes(item.product));
+    return studies.filter(item => productsForCategory.includes(item.product));
+}
+
+const filterStudiesByCategory = (category) => {
+    const filteredStudies = getStudiesByCategory(studies.value, category)
+    return filteredStudies.sort((study1, study2) => {
+        const productSort = study1.product.localeCompare(study2.product)
+        if (productSort) {
+            return productSort
+        }
+        return study1.country.localeCompare(study2.country)
+    })
 };
+
 const filterStudiesByCountry = (country) => {
   return studies.value.filter(item => item.country === country);
 };
