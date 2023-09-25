@@ -4,21 +4,19 @@
 
 <script setup>
 import { computed } from 'vue';
+import { getSocialAverageGroup } from '@/utils/utils.js'
 
 import Radar from '@charts/Radar.vue'
 const props = defineProps({
     studyData: Object
 })
 
-const average = (array) => array.reduce((a, b) => a + b) / array.length
-const getAverageGroup = (index) => Math.round(average(props.studyData.socialData[index].groups.map(group => Number(group.averageValue) || 0)), 2)
-
-const averageWorking = computed(() => getAverageGroup(0))
-const averageLand = computed(() => getAverageGroup(1))
-const averageGender = computed(() => getAverageGroup(2))
-const averageFood = computed(() => getAverageGroup(3))
-const averageSocial = computed(() => getAverageGroup(4))
-const averageLiving = computed(() => getAverageGroup(5))
+const averageWorking = computed(() => getSocialAverageGroup(props.studyData.socialData, 0))
+const averageLand = computed(() => getSocialAverageGroup(props.studyData.socialData, 1))
+const averageGender = computed(() => getSocialAverageGroup(props.studyData.socialData, 2))
+const averageFood = computed(() => getSocialAverageGroup(props.studyData.socialData, 3))
+const averageSocial = computed(() => getSocialAverageGroup(props.studyData.socialData, 4))
+const averageLiving = computed(() => getSocialAverageGroup(props.studyData.socialData, 5))
 
 const chartData = computed(() => {
     const values = [averageWorking.value, averageLiving.value, averageSocial.value, averageFood.value, averageGender.value, averageLand.value]

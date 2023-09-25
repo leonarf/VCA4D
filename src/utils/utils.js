@@ -30,6 +30,9 @@ const tagsColors = [
 
 export const getTagColor = (value) => tagsColors[parseInt(value)  - 1];
 
+const average = (array) => array.reduce((a, b) => a + b) / array.length
+export const getSocialAverageGroup = (socialData, index) => Math.round(average(socialData[index].groups.map(group => Number(group.averageValue) || 0)), 2)
+
 export const formatNumber = (value) => {
   if (!value) {
     return '-'
