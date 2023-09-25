@@ -49,23 +49,16 @@
                     </div>
                 </div>
                 <div class="my-4">
-                    <h4 class="font-bold">Add this part to "studies" in data.json</h4>
+                    <h4 class="font-bold">{{ `Replace data file and add study file in /data/ ` }}</h4>
                     <div class="flex flex-row mb-2 gap-x-2">
-                        <button
-                            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-                            @click="copyRecapToClipboard">Copy To Clipboard</button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            @click="downloadDataJson">Download data file</button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            @click="downloadStudy">Download study file</button>
                     </div>
-                    <pre class="bg-slate-600 text-white overflow-x-auto rounded ">{{ jsonRecap }}</pre>
                 </div>
                 <div class="mt-4">
                     <h4 class="font-bold">Preview data</h4>
-                    <div class="flex flex-row mb-2 gap-x-2">
-                        <button
-                            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-                            @click="copyStudyToClipboard">Copy To Clipboard</button>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                            @click="downloadStudy">Download Study</button>
-                    </div>
                     <pre class="bg-slate-600 text-white overflow-x-auto rounded ">{{ jsonFile }}</pre>
                 </div>
             </div>
@@ -77,6 +70,7 @@
 import { computed, ref, watch } from 'vue';
 import * as XLSX from 'xlsx'
 import Skeleton from '../components/Skeleton.vue'
+import jsonData from '../../data/data.json'
 import { slugify, parseSustainabilityWorksheet, parseEconomicsJson, getErrors } from '@/utils/utils.js'
 import { RouterLink } from 'vue-router'
 
@@ -240,37 +234,54 @@ const jsonFile = computed(() => {
         , null, 2)
 })
 
-const jsonRecap = computed(() => {
-    return JSON.stringify(
-        {
+const dataFile = computed(() => {
+    if (!jsonData.studies.find(study => study.id === studyData.value.id && study.year === studyData.value.year)) {
+        jsonData.studies.push({
             id: `${studyData.value.id}`,
             title: `${studyData.value.country} ${studyData.value.commodity}`,
             year: studyData.value.year,
             country: studyData.value.country.toLowerCase(),
             product: studyData.value.commodity.toLowerCase()
-        }
-        , null, 2)
+        })
+    }
+    const slugifiedCountry = slugify(studyData.value.country)
+    if (!jsonData.countries.find(country => country.id === slugifiedCountry)) {
+        jsonData.countries.push({
+            id: slugifiedCountry,
+            prettyName: studyData.value.country
+        })
+    }
+    const existingCommodities = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
+    const slugifiedCommodity = slugify(studyData.value.commodity)
+    if (!existingCommodities.includes(slugifiedCommodity)) {
+        jsonData.categories.find(category => category.id === 'unknown').commodities.push(slugifiedCommodity)
+    }
     
+    return JSON.stringify(
+        jsonData
+        , null, 2)
 })
 
-const copyRecapToClipboard = () => {
-    navigator.clipboard.writeText(jsonRecap.value)
-}
+const studyFileName = computed(() => `${studyProperties.value.id}-${typeOfFile.value === 'Sustainability' ? 'social' : 'eco'}.json`)
 
-const copyStudyToClipboard = () => {
-    navigator.clipboard.writeText(jsonFile.value)
-}
-
-const downloadStudy = () => {
-    const blob = new Blob([jsonFile.value], { type: 'application/json' });
+const downloadFile = (data, fileName) => {
+    const blob = new Blob([data], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
 
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${studyProperties.value.id}-${typeOfFile.value === 'Sustainability' ? 'social' : 'eco'}.json`;
+    a.download = fileName;
     a.click();
 
     URL.revokeObjectURL(url);
+
+}
+const downloadStudy = () => {
+    downloadFile(jsonFile.value, studyFileName.value)
+}
+
+const downloadDataJson = () => {
+    downloadFile(dataFile.value, 'data.json')
 }
 </script>
   
