@@ -108,6 +108,10 @@
     {
       "id": "togo",
       "prettyName": "Togo"
+    },
+    {
+      "id": "sao-tome-e-principe",
+      "prettyName": "Sao Tome e Principe"
     }
   ],
   "studies": [
@@ -264,6 +268,13 @@
       "year": 2020,
       "country": "togo",
       "product": "pineapple"
+    },
+    {
+      "id": "cocoa-sao-tome-e-principe",
+      "title": "Sao Tome e Principe Cocoa",
+      "year": 2020,
+      "country": "sao tome e principe",
+      "product": "cocoa"
     }
   ]
 }
