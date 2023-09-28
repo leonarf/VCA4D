@@ -33,7 +33,8 @@
       "commodities": [
         "coffee",
         "cocoa",
-        "oil palm"
+        "oil palm",
+        "cotton"
       ]
     },
     {
@@ -41,7 +42,9 @@
       "prettyName": "Unknown",
       "color": "#808080",
       "textColor": "#808080",
-      "commodities": []
+      "commodities": [
+        "cotton"
+      ]
     }
   ],
   "countries": [
@@ -275,6 +278,13 @@
       "year": 2020,
       "country": "sao tome e principe",
       "product": "cocoa"
+    },
+    {
+      "id": "cotton-cameroon",
+      "title": "Cameroon Cotton",
+      "year": 2020,
+      "country": "cameroon",
+      "product": "cotton"
     }
   ]
 }
