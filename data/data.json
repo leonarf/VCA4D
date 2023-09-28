@@ -41,8 +41,7 @@
       "prettyName": "Unknown",
       "color": "#808080",
       "textColor": "#808080",
-      "commodities": [
-      ]
+      "commodities": []
     }
   ],
   "countries": [
@@ -97,6 +96,10 @@
     {
       "id": "benin",
       "prettyName": "Benin"
+    },
+    {
+      "id": "dominican-republic",
+      "prettyName": "Dominican Republic"
     }
   ],
   "studies": [
@@ -232,6 +235,13 @@
       "year": 2020,
       "country": "benin",
       "product": "pineapple"
+    },
+    {
+      "id": "banana-dominican-republic",
+      "title": "Dominican Republic Banana",
+      "year": 2020,
+      "country": "dominican republic",
+      "product": "banana"
     }
   ]
 }
