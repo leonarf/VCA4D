@@ -16,6 +16,7 @@ import VanillaLogo from '../images/icons/products/vanilla.svg'
 import EggLogo from '../images/icons/products/egg.svg'
 import CottonLogo from '../images/icons/products/cotton.svg'
 import PeanutLogo from '../images/icons/products/peanut.svg'
+import DefaultLogo from '../images/icons/products/default.svg'
 
 const studies = ref([])
 const countries = ref([])
@@ -75,10 +76,6 @@ const filterStudiesByCountry = (country) => {
   return studies.value.filter(item => item.country === country);
 };
 
-const setDefaultImage = (event) => {
-  event.target.src = 'src/images/product-pictograms/mango.png';
-};
-
 const getProductLogo = (product) => {
     switch(product) {
         case 'milk':
@@ -105,8 +102,10 @@ const getProductLogo = (product) => {
             return CottonLogo
         case 'groundnut':
             return PeanutLogo
-        default:
+        case 'pineapple':
             return PineappleLogo
+        default:
+            return DefaultLogo
     }
 }
 
@@ -149,7 +148,8 @@ const getProductLogo = (product) => {
                                 <div class="flex flex-col items-center space-y-2 w-[130px]">
                                     <RouterLink :to="`/study?id=${study.local ? 'localStorage' : study.id}`">
                                         <div :class="`w-[130px] h-[130px] ${study.local ? 'bg-[#868686]' : 'bg-[#DFDFDF]'} flex flex-col items-center justify-evenly text-[#303030] px-8 rounded-lg`">
-                                            <img :src="getProductLogo(study.product)" 
+                                            <img 
+                                            :src="getProductLogo(study.product)" 
                                             :alt="`Link to ${study.title} study`"
                                             style="height: 75px; width: 75px;"
                                             class="w-24"
