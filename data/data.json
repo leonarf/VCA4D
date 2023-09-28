@@ -104,6 +104,10 @@
     {
       "id": "cameroon",
       "prettyName": "Cameroon"
+    },
+    {
+      "id": "togo",
+      "prettyName": "Togo"
     }
   ],
   "studies": [
@@ -253,6 +257,13 @@
       "year": 2020,
       "country": "cameroon",
       "product": "cocoa"
+    },
+    {
+      "id": "pineapple-togo",
+      "title": "Togo Pineapple",
+      "year": 2020,
+      "country": "togo",
+      "product": "pineapple"
     }
   ]
 }
