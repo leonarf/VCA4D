@@ -10,7 +10,8 @@
         "mango",
         "banana",
         "vanilla",
-        "groundnut"
+        "groundnut",
+        "pineapple"
       ]
     },
     {
@@ -31,7 +32,8 @@
       "textColor": "#806C00",
       "commodities": [
         "coffee",
-        "cocoa"
+        "cocoa",
+        "oil palm"
       ]
     },
     {
@@ -91,6 +93,10 @@
     {
       "id": "zambia",
       "prettyName": "Zambia"
+    },
+    {
+      "id": "benin",
+      "prettyName": "Benin"
     }
   ],
   "studies": [
@@ -219,6 +225,13 @@
       "year": 2020,
       "country": "zambia",
       "product": "egg"
+    },
+    {
+      "id": "pineapple-benin",
+      "title": "Benin Pineapple",
+      "year": 2020,
+      "country": "benin",
+      "product": "pineapple"
     }
   ]
 }
