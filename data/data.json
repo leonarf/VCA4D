@@ -20,7 +20,8 @@
       "textColor": "#C46D4D",
       "commodities": [
         "milk",
-        "beef"
+        "beef",
+        "egg"
       ]
     },
     {
@@ -38,7 +39,8 @@
       "prettyName": "Unknown",
       "color": "#808080",
       "textColor": "#808080",
-      "commodities": []
+      "commodities": [
+      ]
     }
   ],
   "countries": [
@@ -85,6 +87,10 @@
     {
       "id": "angola",
       "prettyName": "Angola"
+    },
+    {
+      "id": "zambia",
+      "prettyName": "Zambia"
     }
   ],
   "studies": [
@@ -206,6 +212,13 @@
       "year": 2020,
       "country": "angola",
       "product": "coffee"
+    },
+    {
+      "id": "egg-zambia",
+      "title": "Zambia Egg",
+      "year": 2020,
+      "country": "zambia",
+      "product": "egg"
     }
   ]
 }
