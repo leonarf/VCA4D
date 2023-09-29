@@ -112,6 +112,7 @@ const getProductLogo = (product) => {
         case 'cassava':
             return CassavaLogo
         case 'aquaculture tilapia':
+        case 'aquaculture':
             return FishLogo
         default:
             return DefaultLogo

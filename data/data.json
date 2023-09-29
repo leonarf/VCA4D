@@ -45,7 +45,8 @@
       "color": "#0073CF",
       "textColor": "#0073CF",
       "commodities": [
-        "aquaculture tilapia"
+        "aquaculture tilapia",
+        "aquaculture"
       ]
     },
     {
@@ -141,6 +142,10 @@
     {
       "id": "ivory-coast",
       "prettyName": "Ivory coast"
+    },
+    {
+      "id": "georgia",
+      "prettyName": "georgia"
     }
   ],
   "studies": [
@@ -346,6 +351,13 @@
       "year": 2020,
       "country": "zambia",
       "product": "aquaculture tilapia"
+    },
+    {
+      "id": "aquaculture-georgia",
+      "title": "georgia Aquaculture",
+      "year": 2020,
+      "country": "georgia",
+      "product": "aquaculture"
     }
   ]
 }
