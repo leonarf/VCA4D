@@ -60,311 +60,334 @@
   "countries": [
     {
       "id": "mali",
-      "prettyName": "Mali"
+      "prettyName": "Mali",
+      "continent": "Africa"
     },
     {
       "id": "burundi",
-      "prettyName": "Burundi"
+      "prettyName": "Burundi",
+      "continent": "Africa"
     },
     {
       "id": "burkina-faso",
-      "prettyName": "Burkina Faso"
+      "prettyName": "Burkina Faso",
+      "continent": "Africa"
     },
     {
       "id": "honduras",
-      "prettyName": "Honduras"
+      "prettyName": "Honduras",
+      "continent": "America"
     },
     {
       "id": "nicaragua",
-      "prettyName": "Nicaragua"
+      "prettyName": "Nicaragua",
+      "continent": "America"
     },
     {
       "id": "tanzania",
-      "prettyName": "Tanzania"
+      "prettyName": "Tanzania",
+      "continent": "Africa"
     },
     {
       "id": "ecuador",
-      "prettyName": "Ecuador"
+      "prettyName": "Ecuador",
+      "continent": "America"
     },
     {
       "id": "papua-new-guinea",
-      "prettyName": "Papua New Guinea"
+      "prettyName": "Papua New Guinea",
+      "continent": "Asia - Pacific"
     },
     {
       "id": "sierra-leone",
-      "prettyName": "Sierra Leone"
+      "prettyName": "Sierra Leone",
+      "continent": "Africa"
     },
     {
       "id": "ghana",
-      "prettyName": "Ghana"
+      "prettyName": "Ghana",
+      "continent": "Africa"
     },
     {
       "id": "angola",
-      "prettyName": "Angola"
+      "prettyName": "Angola",
+      "continent": "Africa"
     },
     {
       "id": "zambia",
-      "prettyName": "Zambia"
+      "prettyName": "Zambia",
+      "continent": "Africa"
     },
     {
       "id": "benin",
-      "prettyName": "Benin"
+      "prettyName": "Benin",
+      "continent": "Africa"
     },
     {
       "id": "dominican-republic",
-      "prettyName": "Dominican Republic"
+      "prettyName": "Dominican Republic",
+      "continent": "America"
     },
     {
       "id": "cameroon",
-      "prettyName": "Cameroon"
+      "prettyName": "Cameroon",
+      "continent": "Africa"
     },
     {
       "id": "togo",
-      "prettyName": "Togo"
+      "prettyName": "Togo",
+      "continent": "Africa"
     },
     {
       "id": "sao-tome-e-principe",
-      "prettyName": "Sao Tome e Principe"
+      "prettyName": "Sao Tome e Principe",
+      "continent": "Africa"
     },
     {
       "id": "swaziland",
-      "prettyName": "Swaziland"
+      "prettyName": "Swaziland",
+      "continent": "Africa"
     },
     {
       "id": "zimbabwe",
-      "prettyName": "Zimbabwe"
+      "prettyName": "Zimbabwe",
+      "continent": "Africa"
     },
     {
       "id": "nigeria",
-      "prettyName": "Nigeria"
+      "prettyName": "Nigeria",
+      "continent": "Africa"
     },
     {
       "id": "ivory-coast",
-      "prettyName": "Ivory coast"
+      "prettyName": "Ivory Coast",
+      "continent": "Africa"
     },
     {
       "id": "georgia",
-      "prettyName": "georgia"
+      "prettyName": "Georgia",
+      "continent": "Europe"
     },
     {
       "id": "cambodia",
-      "prettyName": "cambodia"
+      "prettyName": "Cambodia",
+      "continent": "Asia - Pacific"
     }
   ],
   "studies": [
     {
       "id": "cashew-mali",
-      "title": "Mali Cashew",
+      "title": "Cashew",
       "year": 2014,
       "country": "mali",
       "product": "cashew"
     },
     {
       "id": "mango-burkina-faso",
-      "title": "Burkina Faso Mango",
+      "title": "Mango",
       "year": 2016,
       "country": "burkina-faso",
       "product": "mango"
     },
     {
       "id": "milk-burundi",
-      "title": "Burundi Milk",
+      "title": "Milk",
       "year": 2020,
       "country": "burundi",
       "product": "milk"
     },
     {
       "id": "coffee-honduras",
-      "title": "Honduras Coffee",
+      "title": "Coffee",
       "year": 2020,
       "country": "honduras",
       "product": "coffee"
     },
     {
       "id": "banana-burundi",
-      "title": "Burundi Banana",
+      "title": "Banana",
       "year": 2020,
       "country": "burundi",
       "product": "banana"
     },
     {
       "id": "banana-bostwana",
-      "title": "Bostwana Banana",
+      "title": "Banana",
       "year": 2020,
       "country": "bostwana",
       "product": "banana"
     },
     {
       "id": "cocoa-nicaragua",
-      "title": "Nicaragua Cocoa",
+      "title": "Cocoa",
       "year": 2020,
       "country": "nicaragua",
       "product": "cocoa"
     },
     {
       "id": "coffee-tanzania",
-      "title": "Tanzania Coffee",
+      "title": "Coffee",
       "year": 2020,
       "country": "tanzania",
       "product": "coffee"
     },
     {
       "id": "beef-swaziland",
-      "title": "Swaziland Beef",
+      "title": "Beef",
       "year": 2020,
       "country": "swaziland",
       "product": "beef"
     },
     {
       "id": "cocoa-ecuador",
-      "title": "Ecuador Cocoa",
+      "title": "Cocoa",
       "year": 2020,
       "country": "ecuador",
       "product": "cocoa"
     },
     {
       "id": "coffee-ecuador",
-      "title": "Ecuador Coffee",
+      "title": "Coffee",
       "year": 2020,
       "country": "ecuador",
       "product": "coffee"
     },
     {
       "id": "cocoa-papua-new-guinea",
-      "title": "Papua New Guinea Cocoa",
+      "title": "Cocoa",
       "year": 2020,
       "country": "papua-new-guinea",
       "product": "cocoa"
     },
     {
       "id": "cashew-sierra-leone",
-      "title": "Sierra Leone Cashew",
+      "title": "Cashew",
       "year": 2020,
       "country": "sierra-leone",
       "product": "cashew"
     },
     {
       "id": "vanilla-papua-new-guinea",
-      "title": "Papua New Guinea Vanilla",
+      "title": "Vanilla",
       "year": 2020,
       "country": "papua-new-guinea",
       "product": "vanilla"
     },
     {
       "id": "groundnut-ghana",
-      "title": "Ghana Groundnut",
+      "title": "Groundnut",
       "year": 2020,
       "country": "ghana",
       "product": "groundnut"
     },
     {
       "id": "oil-palm-sierra-leone",
-      "title": "Sierra Leone Oil Palm",
+      "title": "Oil Palm",
       "year": 2020,
       "country": "sierra-leone",
       "product": "oil palm"
     },
     {
       "id": "coffee-angola",
-      "title": "Angola coffee",
+      "title": "Coffee",
       "year": 2020,
       "country": "angola",
       "product": "coffee"
     },
     {
       "id": "egg-zambia",
-      "title": "Zambia Egg",
+      "title": "Egg",
       "year": 2020,
       "country": "zambia",
       "product": "egg"
     },
     {
       "id": "pineapple-benin",
-      "title": "Benin Pineapple",
+      "title": "Pineapple",
       "year": 2020,
       "country": "benin",
       "product": "pineapple"
     },
     {
       "id": "banana-dominican-republic",
-      "title": "Dominican Republic Banana",
+      "title": "Banana",
       "year": 2020,
       "country": "dominican-republic",
       "product": "banana"
     },
     {
       "id": "cocoa-cameroon",
-      "title": "Cameroon Cocoa",
+      "title": "Cocoa",
       "year": 2020,
       "country": "cameroon",
       "product": "cocoa"
     },
     {
       "id": "pineapple-togo",
-      "title": "Togo Pineapple",
+      "title": "Pineapple",
       "year": 2020,
       "country": "togo",
       "product": "pineapple"
     },
     {
       "id": "cocoa-sao-tome-e-principe",
-      "title": "Sao Tome e Principe Cocoa",
+      "title": "Cocoa",
       "year": 2020,
       "country": "sao-tome-e-principe",
       "product": "cocoa"
     },
     {
       "id": "cotton-cameroon",
-      "title": "Cameroon Cotton",
+      "title": "Cotton",
       "year": 2020,
       "country": "cameroon",
       "product": "cotton"
     },
     {
       "id": "beef-zimbabwe",
-      "title": "Zimbabwe Beef",
+      "title": "Beef",
       "year": 2020,
       "country": "zimbabwe",
       "product": "beef"
     },
     {
       "id": "corn-nigeria",
-      "title": "Nigeria Corn",
+      "title": "Corn",
       "year": 2020,
       "country": "nigeria",
       "product": "corn"
     },
     {
       "id": "corn-zambia",
-      "title": "Zambia Corn",
+      "title": "Corn",
       "year": 2020,
       "country": "zambia",
       "product": "corn"
     },
     {
       "id": "cassava-ivory-coast",
-      "title": "Ivory coast Cassava",
+      "title": "Cassava",
       "year": 2020,
       "country": "ivory-coast",
       "product": "cassava"
     },
     {
       "id": "aquaculture-tilapia-zambia",
-      "title": "zambia Aquaculture (tilapia)",
+      "title": "Aquaculture (tilapia)",
       "year": 2020,
       "country": "zambia",
       "product": "aquaculture tilapia"
     },
     {
       "id": "aquaculture-georgia",
-      "title": "georgia Aquaculture",
+      "title": "Aquaculture",
       "year": 2020,
       "country": "georgia",
       "product": "aquaculture"
     },
     {
       "id": "aquaculture-cambodia",
-      "title": "cambodia Aquaculture",
+      "title": "Aquaculture",
       "year": 2020,
       "country": "cambodia",
       "product": "aquaculture"

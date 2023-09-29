@@ -23,6 +23,7 @@ import DefaultLogo from '../images/icons/products/default.svg'
 
 const studies = ref([])
 const countries = ref([])
+const continents = ref([])
 const categories = ref([])
 
 const geAllJsonData = () => {
@@ -40,7 +41,7 @@ const geAllJsonData = () => {
                 country: localStudy.country.toLowerCase(),
                 id: localStudy.id,
                 product: localStudy.commodity.toLowerCase(),
-                title: ["Local", localStudy.country, localStudy.commodity, localStudy.year].join(' '),
+                title: ["Local", localStudy.commodity, localStudy.year].join(' '),
                 year: localStudy.year,
                 local: true
             }
@@ -52,6 +53,7 @@ onMounted(async () => {
     const allJsonData = geAllJsonData()
     studies.value = allJsonData.studies
     countries.value = allJsonData.countries
+    continents.value = [...new Set(countries.value.map(country => country.continent))] 
     categories.value = allJsonData.categories
 })
 
@@ -74,6 +76,8 @@ const filterStudiesByCategory = (category) => {
         return study1.country.localeCompare(study2.country)
     })
 };
+
+const countriesByContinent = (continent) => countries.value.filter(country => country.continent === continent).sort((country1, country2) => country1.prettyName.localeCompare(country2.prettyName))
 
 const filterStudiesByCountry = (country) => {
   return studies.value.filter(item => item.country === country);
@@ -180,14 +184,19 @@ const getProductLogo = (product) => {
 
             <section>
                 <h3>Browse studies by <strong>country</strong></h3>
-                <template v-for="country in countries" :key="country.id">
-                    <h4 class="mt-4">{{ country.prettyName }}</h4>
-                    <ul>
-                        <li v-for="study in filterStudiesByCountry(country.id)" :key="study.id" class="text-blue-600 dark:text-blue-500 hover:underline">
-                            <RouterLink :to="`/study?id=${study.id}`">{{ study.title }}</RouterLink>
-                        </li>
-                    </ul>
-                </template> 
+                <div class="flex flex-row justify-evenly">
+                <div v-for="continent in continents" :key="continent">
+                    <div class="text-xl font-bold">{{ continent }}</div>
+                    <div v-for="country in countriesByContinent(continent)" :key="country.id">
+                        <h4 class="mt-4">{{ country.prettyName }}</h4>
+                        <ul>
+                            <li v-for="study in filterStudiesByCountry(country.id)" :key="study.id" class="text-blue-600 dark:text-blue-500 hover:underline">
+                                <RouterLink :to="`/study?id=${study.id}`">{{ study.title + " " + study.year }}</RouterLink>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
             </section>
         </section>
     </Skeleton>
