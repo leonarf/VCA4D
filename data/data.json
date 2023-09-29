@@ -54,8 +54,7 @@
       "prettyName": "Unknown",
       "color": "#808080",
       "textColor": "#808080",
-      "commodities": [
-      ]
+      "commodities": []
     }
   ],
   "countries": [
@@ -146,6 +145,10 @@
     {
       "id": "georgia",
       "prettyName": "georgia"
+    },
+    {
+      "id": "cambodia",
+      "prettyName": "cambodia"
     }
   ],
   "studies": [
@@ -357,6 +360,13 @@
       "title": "georgia Aquaculture",
       "year": 2020,
       "country": "georgia",
+      "product": "aquaculture"
+    },
+    {
+      "id": "aquaculture-cambodia",
+      "title": "cambodia Aquaculture",
+      "year": 2020,
+      "country": "cambodia",
       "product": "aquaculture"
     }
   ]
