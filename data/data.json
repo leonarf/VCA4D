@@ -34,7 +34,8 @@
         "coffee",
         "cocoa",
         "oil palm",
-        "cotton"
+        "cotton",
+        "corn"
       ]
     },
     {
@@ -43,7 +44,6 @@
       "color": "#808080",
       "textColor": "#808080",
       "commodities": [
-        "cotton"
       ]
     }
   ],
@@ -123,6 +123,10 @@
     {
       "id": "zimbabwe",
       "prettyName": "Zimbabwe"
+    },
+    {
+      "id": "nigeria",
+      "prettyName": "Nigeria"
     }
   ],
   "studies": [
@@ -300,6 +304,20 @@
       "year": 2020,
       "country": "zimbabwe",
       "product": "beef"
+    },
+    {
+      "id": "corn-nigeria",
+      "title": "Nigeria Corn",
+      "year": 2020,
+      "country": "nigeria",
+      "product": "corn"
+    },
+    {
+      "id": "corn-zambia",
+      "title": "Zambia Corn",
+      "year": 2020,
+      "country": "zambia",
+      "product": "corn"
     }
   ]
 }
