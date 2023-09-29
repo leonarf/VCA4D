@@ -145,7 +145,7 @@ const studyProperties = computed(() => {
             return {}
         }
         const questionnaireSheet = workbook.value.Sheets[workbook.value.SheetNames[2]]
-        const country = questionnaireSheet['D1']?.v
+        const country = slugify(questionnaireSheet['D1']?.v)
         const commodity = questionnaireSheet['B1']?.v.trim()
         const year = 2020
         return {
@@ -160,7 +160,7 @@ const studyProperties = computed(() => {
     if (!excelData.value) {
         return {}
     }
-    const country = getValueChainProperty(excelData.value, "Country")
+    const country = slugify(getValueChainProperty(excelData.value, "Country"))
     const commodity = getValueChainProperty(excelData.value, "Commodity")
     const year = getValueChainProperty(excelData.value, "Reference Year")
     const localCurrency = getValueChainProperty(excelData.value, "Study's local currency");

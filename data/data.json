@@ -35,7 +35,17 @@
         "cocoa",
         "oil palm",
         "cotton",
-        "corn"
+        "corn",
+        "cassava"
+      ]
+    },
+    {
+      "id": "halieutic",
+      "prettyName": "Halieutic",
+      "color": "#0073CF",
+      "textColor": "#0073CF",
+      "commodities": [
+        "aquaculture tilapia"
       ]
     },
     {
@@ -57,7 +67,7 @@
       "prettyName": "Burundi"
     },
     {
-      "id": "burkina faso",
+      "id": "burkina-faso",
       "prettyName": "Burkina Faso"
     },
     {
@@ -77,11 +87,11 @@
       "prettyName": "Ecuador"
     },
     {
-      "id": "papua new guinea",
+      "id": "papua-new-guinea",
       "prettyName": "Papua New Guinea"
     },
     {
-      "id": "sierra leone",
+      "id": "sierra-leone",
       "prettyName": "Sierra Leone"
     },
     {
@@ -127,6 +137,10 @@
     {
       "id": "nigeria",
       "prettyName": "Nigeria"
+    },
+    {
+      "id": "ivory-coast",
+      "prettyName": "Ivory coast"
     }
   ],
   "studies": [
@@ -141,7 +155,7 @@
       "id": "mango-burkina-faso",
       "title": "Burkina Faso Mango",
       "year": 2016,
-      "country": "burkina faso",
+      "country": "burkina-faso",
       "product": "mango"
     },
     {
@@ -211,21 +225,21 @@
       "id": "cocoa-papua-new-guinea",
       "title": "Papua New Guinea Cocoa",
       "year": 2020,
-      "country": "papua new guinea",
+      "country": "papua-new-guinea",
       "product": "cocoa"
     },
     {
       "id": "cashew-sierra-leone",
       "title": "Sierra Leone Cashew",
       "year": 2020,
-      "country": "sierra leone",
+      "country": "sierra-leone",
       "product": "cashew"
     },
     {
       "id": "vanilla-papua-new-guinea",
       "title": "Papua New Guinea Vanilla",
       "year": 2020,
-      "country": "papua new guinea",
+      "country": "papua-new-guinea",
       "product": "vanilla"
     },
     {
@@ -239,7 +253,7 @@
       "id": "oil-palm-sierra-leone",
       "title": "Sierra Leone Oil Palm",
       "year": 2020,
-      "country": "sierra leone",
+      "country": "sierra-leone",
       "product": "oil palm"
     },
     {
@@ -318,6 +332,20 @@
       "year": 2020,
       "country": "zambia",
       "product": "corn"
+    },
+    {
+      "id": "cassava-ivory-coast",
+      "title": "Ivory coast Cassava",
+      "year": 2020,
+      "country": "ivory-coast",
+      "product": "cassava"
+    },
+    {
+      "id": "aquaculture-tilapia-zambia",
+      "title": "zambia Aquaculture (tilapia)",
+      "year": 2020,
+      "country": "zambia",
+      "product": "aquaculture tilapia"
     }
   ]
 }

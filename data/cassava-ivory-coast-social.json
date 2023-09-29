@@ -1,0 +1,571 @@
+{
+  "id": "cassava-ivory-coast",
+  "country": "Ivory coast",
+  "commodity": "Cassava",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "La Côte d'Ivoire  a ratifié certaines conventions internationales (OIT), et sous-régionales (OHADA) relatives au droit du travail. Ces convention sont méconnues des acteurs de la chaine de valeur manioc. Sinon que tout le monde a le droit de cultiver le maniocn sauf que les cultures de rente constituent la priorité des paysans et des autorités politiques"
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Le droit d'association est autorisée, mais celle-ci ne fait l'unanimtié. Dans des régions comme le Centre, l'on enregistre des associations, tandis que les autres régions peinent à se mettre en association "
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification. "
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les activités dans la chaine de valeur manioc se font librement, aucune activités n'est forcée"
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les femmes et les jeunes n'étant pas propriétaires de terre ont du mal à produire convenablemant. Le manque de moyen financier limite des personnes dans le maillon transformation et commercialisation "
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Le taux de fréquentation des enfants est élévé surtout qu\"ils ne travaillent pas dans la chaine de valeur manioc"
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Aucune mesure de protection n'est mise à la disposition de quelques enfants intervenant dans la chaine de valeur manioc."
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 1,
+          "averageText": "Not at all",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Aucune mesure de protection contre les accidents et les dommages pour la santé dans la chaine de valeur manioc.La couverture maladie universelle n'est pas encore effective"
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les remunérations dans la chaine de valeur manioc ne sont alignée sur aucune norme locale. Les prix ne sont pas homologués, ils sont fixé selon les acteurs"
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Le manioc attire de plus en plus les jeunes, surtout les descolarisés et les sans emplois"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": 1,
+          "averageText": "Low",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Aucune entreprise de la chaine de valeur manioc n'a adhéré au VGGT"
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Les acquisitions de terres par les grandes firmes ne sont pas clairement definies, ce qui entraine souvent des conflits entre ces entreprises et les paysans"
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 1.33333333333333,
+          "averageText": "Low",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les acteurs locaux ne sont pas tout le temps informés  au préalable, des projets,"
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Les politiques, les lois, les procédures et les décisions d'intervention ne sont pas accessibles à toutes les parties prenantes de la chaine de valeur. "
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Dans le processus decisionnel, aucun acteur de la chaine de valeur n'est consulté, ils subissent les decisions prises."
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 1.75,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "La loi sur le foncier peine à être appliquée"
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les stratégies alternatives envisagée en cas de perturbation des moyens de subsistence se résument à l'intervention immediate de l'Etat aux sinistrés."
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "L'expropriation des terres se résument à une indemnisation financière qui n'est pas durable, donc pas équitable."
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Au niveau local, comme national, il existe des dispositions pour traiter les plaintes des parties prenantes (les juridictions coutumières, traditionnelles, et étatiques)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 3.5,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les risque sont minisés, car les femmes sont les principales actrices de la chaine de valeur manioc en Côte d'Ivoire. "
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les femmes sont actives à 90% dans la production, 100% dans la transformation et 80% dans la commercialisation"
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 1.75,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Majoritairement, les biens autre que la terre sont de la propriété de la femme"
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "La femme a le même droit que l'homme selon la loi, mais difficilement applicable à cause des droits coutumiers"
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Les crédits ne sont pas accordés aux femmes"
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les femmes bénéficient souvent des conseils et de l'assistance des certaines structures étatiques comme privées"
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 2.8,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les femmes étant actives à 90% dans la production, ce sont-elles qui organisent leurs activités"
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les femmes sont autonomes à 100% dans l'organistation de leur activités"
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Toutes les femmes ne contrôlent pas leurs revenus à cause de certaines pésanteurs sociales"
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les femmes gagnent des revenus independants, qui interviennent le plus dans la prise ne charge du ménage"
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les femmes commenecnt à étre de plus en plus associées aux décisions concernant l'achat, la vente…"
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les potentiels membres des groupements et associations sont les femmes"
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les femmes sont les principales animatrices des groupements, des associations de la chaine de valeur manioc"
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les femmes commencent à être influentes, elles sont de plus en plus visibles dans les instances de prise de décision"
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La tradition n'autorisait pas la prise de parole de la femme en public, mais de nos jours elles le font"
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Dans la division sexuelle du travail, les femmes sont les plus nombreuses dans les champs de vivriers, des travaux domestiques et les services de garde"
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Les femmes travaillent toujours de manière archaique"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 3.5,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\n",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "La production de manioc augmente de manière considérable ces dernières années, près de 2 millions de tonnes"
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "La forte production entraine une disponibilité non stable du manioc sur les différents marchés. Le manioc produit est plus exporté vers les pays de la sous-région."
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les revenus des ménages sont majoritairement affectés aux depenses alimentaires"
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les prix des denrées alimentaires varient en fonction des différentes saisons"
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 2.66666666666667,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La qualité nutritionnelle n'est pas améliorée à cause des methodes de fermentation, d'emballage et de stockage"
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les pratiques nutritionnelles sont moyennement améliorées avec la consommation des feuilles de manioc"
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Le manioc offre une diversité de sous-produits (attiéké, le placali, les cossettes, le gari, le tapioca, les galettes…"
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Le risque de pénurie alimentaire périodique des menages est peu réduit car le manioc peut se récolter à tout moment de l'année, mais il subit la forte demande des pays limitrophes"
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La variation excessive des prix est moyennement reduite à cause de la loi de l'offre et de la demande"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "De plus en plus les acteurs de la chaine de valeur manioc se mette en coopérative, ou groupement formel ou informel"
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Une inclusion moyenne pour cause de leaderschip et des problèmes de personne"
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Le leaderschip et la responsabilité ne sont pas trop affichés dans les groupements, seuls quelques uns s'en sortent"
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Les négaciations sur les marchés des intrants et des produits se fait de manioc individuelle par chaque groupement dans les differents maillons, ce qui n'est pas à leur avantage"
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Avec l'installation des Bureaux de Vente des Producteurs, l'information sur les pratiques agricoles, les politiques agricoles et les prix du marché commencent à étre diffusée auprès des producteurs, mais pour l'instant ciblée au niveau de Bouaké, quand même que le BVP soit installé sur toute l'étendue du territoire national"
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Pas de confiance entre les acteurs de la chaine de valeur, ils agissent de manière disparate ignorant même l'existence de l'autre"
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Au niveau local, les communautés sont désormais associées aux décisions qui influent sur leurs moyens d'existence. Ils sont pris en compte dans la  mise en place des projets. "
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les mesures pour assurer le respect des connaissances et des ressources traditionnelles sont de moins en moins appliquées."
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Une participation effective à des activités communautaires "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 2.66666666666667,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "La majorité des menages a accès aux établissements de santé (seulement pour 21% des ménages, il n'existe pas d'infrastructures sanitaires de premier contact)"
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les ménages ont accès au service de santé. Pour certaines maladies les soins sont administrés gratuitement."
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les services de santé sont moyennement abordables pour les ménages à cause du taux élevé de la pauvreté"
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "L'accès aux logements de bonne qualité est moyen. La promotion des logements sociaux est en cours avec une première tranche de 130 maison livrée en septembre"
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les ménages ont accès à des installation d'eau et d'assainissement de bonne qualité (l’hydraulique villageoise à savoir les pompes villageoises et fontaines sont les plus dominants (67,16%))."
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 2.66666666666667,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Avec la promotion de l'école obligatoire et gratuite pour le primaire"
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Avec la construction des collèges de proximité, ce qui désengorgerait les grandes villes"
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Aucune formation professionnelle mise ne place par les investisseurs de la chaine de valeur manioc"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

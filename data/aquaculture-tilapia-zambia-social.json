@@ -1,0 +1,571 @@
+{
+  "id": "aquaculture-tilapia-zambia",
+  "country": "zambia",
+  "commodity": "Aquaculture (tilapia)",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Labor laws in Zambia are pro-employee. Larger farms, input suppliers, retailers/wholesalers very likely to comply, also more rural-based large farms might be more inclined to casualize part of their labor force given seasonal peaks with some activities (e.g., harvesting)."
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Labor laws in Zambia are pro-employee."
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Given casualization likely on some larger farms, a portion of staff at some companies likely not given contracts.  Longer-term contracts provided by larger farms/retail/wholesale companies would be fair/comply with labor laws."
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Forced labour is not a prominent issue in Zambia.  Children would provide some source of labour on family-run farms, but not employeed by registered/larger companies."
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Very low given the perception that women cannot carry out tasks that require a great deal of physical strength. Some companies explained their desire to integrate more women because they are trusted or given their male-biased labor force, but none indicated they have programs that are directly addressing the issue."
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "While children can be found in major cities lingering around markets, attempting to sell small items or provide services (e.g., washing window screens), they are not involved in say trading fish or selling aquaculture inputs, etc. Children do provide labor on their parent's land (e.g., helping construct ponds or feeding/harvesting fish). Highprimary school attendance rates achieved in Zambia over the past decade, although some children still unable to attend secondary school given costs, but not because of engaging in aquaculture VC activities."
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "In urban spaces, there is a small percentage of children who are forced to find opportunities to generate income.  In rural areas, children provide substantial inputs into agricultural/non-agricultural production."
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "It appears job safety is ensured on larger farms according to site visits."
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Again, labor laws support employees receiving a locally-appropriate wage. However, casualization means a portion of employees would not receive adequate benefits and is illegal."
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "While some youth work on larger farms and at retail/wholesale centers, youth are not adequately represented at rural levels."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Appears aquaculture companies/institutions comply."
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Generally, many examples exist that suggest larger investors do not always apply."
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Within the aquaculture VC, substantial."
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Seems consultation processes occur when larger farms start up.  Very difficult to simply start a larger farm in Zambia and not follow local norms/practices."
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Same as above."
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Seems substantial based on a few examples."
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "On paper, yes. Difficult for rural people to acquire title deeds for their lands. Also, given residence patterns, when a woman shifts to live with her husband upon marrying, she no longer controls/owns the land she helps cultivate.  Matrilineal norms are more pro-women, although beginning to shift towards patrilineal."
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Outside the aquaculture value chain, seems there are too many stories that suggest there is a lack of effort considering alternative strategies."
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "National Resettlement Programme and Policy exist, but many cases suggest they are poorly implemented."
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In theory, but in practice seems rather low."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women are excluded from providing their labour on larger farms, and are the minority fish farm producers in rural areas.  Women comprise majority fish traders, however, and some processing (but minor with farmed fish)."
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Absent as general labourers on larger farms, somewhat active in fish farming in rural areas.Processors at largest fish farms (Yalelo, Lake Harvest), dominate trading of farmed fish."
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 1.75,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women's ownership of aquaculture value chain assets low (men's too)."
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women have the right to own land, but residence norms take a woman off their land when they shift to stay with their husband's natal village."
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Access to credit amongst majority of smaller value chain actors is non-existent to low."
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Where extension services are provided (albeit at a low level), there generally seems to be a trend that women have moderate access to them."
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Production is a male-dominated domain, although women do participate in production or assist with production."
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Depends on the domain.  Women carry the double burden of doing both paid and unpaid work.  They are very autonomous in their organization of their unpaid work, but given this socially-assigned role, they cannot participate as freely as they wish in activities outside the home (compared to men)."
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "From interviews, it appears women have moderate control over their income."
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women earn independent income, however, given their major involvement in doing unpaid work activities, the income generated is constrained."
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "According to interviews with fish farmers and groups, it appears the make joint decisions with their husbands about such matters.  It was highlighted by some that \"final\" decisions are made by men as heads of households."
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2.75,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Vast majority of interviews uncovered women do participate and in some case at greater levels."
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Vast majority of interviews suggest women hold leadership positions as chairs or treasurers, among other leadership positions."
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Few (especially rural people) have the power to influence."
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Vast majority of interviews suggest that women speak freely in public."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Very low given women's dominate position in the household carrying out domestic/cargiving activities."
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "No real labour-saving technologies identified in rural areas other than hoes or ploughs, shovels, wheelbarrows, of which men own most of these aquaculture-related assets.  Major efforts made by women to carry out domestic chores using their hands + a hand hoe to cultivate, among other minor labour-saving technologies."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In most rural areas visited, it was believed that local food production has increased over the past 5 years."
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The increase in production has resulted in an increase in food supplies, although fish production has not increased and there is still a \"hungry\" season during Dec-March in rural areas."
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In most rural areas visited, incomes have increased."
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Food prices have increased and are relatively high during the hungry/cultivation season."
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "It appears people are growing more diverse foods."
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Malnutrition (under weight) is marginally decreasing but is still high."
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The focus in rural areas is staple crop production (e.g., maize, cassava, millett, sorghum), while other minor food crops are cultivated but not in large quantities.  Fish is grown and increases dietary diversity when consumed."
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "For some, yes, but still quite prevalent in rural areas."
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Food prices increase especially when the rainy season approaches."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Yes, plenty of examples exist, although production/productivity seems quite low."
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Appears quite diverse/inclusive.  What was not investigaed adequately is whether the poorest are included.  Strong thinking is they are not goven their need to identify alternative ways of finding food/cash (through piecework)."
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Of the few interviewed, it appears so."
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Very little to no evidence suggests they access inputs UNLESS provided by government/non-government organizations, but not on their own."
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Very little access to information other tan market prices.  Some people interviewed knew about upcoming investments by Government."
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Given the level of vertical integration at both larger/smaller-scales, this is hard to tell.  There are so few big players and they mostly do all/majority of roles throughout the chain, that trustworthiness seems \"not applicable\"."
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "When working with rural people, they are often consulted and help inform decisions about their livelihoods. There are a number of stories however that suggest when land acquisitions occur, they may be excluded or marginalized by the process."
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Local knowledge it appears is respected by extension and non-government officers when working with rural people."
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "While sometimes involuntary (demanded by tradiitonal leaders), there is a general coming together by rural people to carry out tasks to improve their communities (e.g., build schools, repair health clinics, etc.)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 2.3333333333333335,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "According to most interviewed, access to health facilities is relatively high. However, compared to urban populations moderate to low."
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Likewise, people can get basic health care services in their locales.  Standards would obviously be classified as low when compared to other (urban) contexts."
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Health care at government institutions is free."
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Relatively good quality accomodation (brick/mud house thatched or roofed with iron sheets)."
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Boreholes, wells, springs exist in most rural areas and toilets used by many. However, compared to better-off groups in urban settings, moderate."
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "High, but not of the same quality as urban populations."
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "While more children are attending secondary school, some still cannot afford.  Vocation training in aquaculture is non-existent for rural people and instead for people who wish to work in the sector at private/public institutions."
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "While each companies develops their employees capacities to do fish farming, explicit vocational training likely low. Yalelo is developing a training institution on-farm."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

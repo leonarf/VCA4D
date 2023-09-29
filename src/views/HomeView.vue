@@ -17,6 +17,8 @@ import EggLogo from '../images/icons/products/egg.svg'
 import CottonLogo from '../images/icons/products/cotton.svg'
 import PeanutLogo from '../images/icons/products/peanut.svg'
 import PalmOilLogo from '../images/icons/products/palm-tree.svg'
+import CassavaLogo from '../images/icons/products/cassava.svg'
+import FishLogo from '../images/icons/products/fish.svg'
 import DefaultLogo from '../images/icons/products/default.svg'
 
 const studies = ref([])
@@ -107,6 +109,10 @@ const getProductLogo = (product) => {
             return PineappleLogo
         case 'oil palm':
             return PalmOilLogo
+        case 'cassava':
+            return CassavaLogo
+        case 'aquaculture tilapia':
+            return FishLogo
         default:
             return DefaultLogo
     }
