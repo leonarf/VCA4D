@@ -115,6 +115,14 @@
     {
       "id": "sao-tome-e-principe",
       "prettyName": "Sao Tome e Principe"
+    },
+    {
+      "id": "swaziland",
+      "prettyName": "Swaziland"
+    },
+    {
+      "id": "zimbabwe",
+      "prettyName": "Zimbabwe"
     }
   ],
   "studies": [
@@ -255,7 +263,7 @@
       "id": "banana-dominican-republic",
       "title": "Dominican Republic Banana",
       "year": 2020,
-      "country": "dominican republic",
+      "country": "dominican-republic",
       "product": "banana"
     },
     {
@@ -276,7 +284,7 @@
       "id": "cocoa-sao-tome-e-principe",
       "title": "Sao Tome e Principe Cocoa",
       "year": 2020,
-      "country": "sao tome e principe",
+      "country": "sao-tome-e-principe",
       "product": "cocoa"
     },
     {
@@ -285,6 +293,13 @@
       "year": 2020,
       "country": "cameroon",
       "product": "cotton"
+    },
+    {
+      "id": "beef-zimbabwe",
+      "title": "Zimbabwe Beef",
+      "year": 2020,
+      "country": "zimbabwe",
+      "product": "beef"
     }
   ]
 }
