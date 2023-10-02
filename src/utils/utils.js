@@ -49,7 +49,7 @@ export const formatNumber = (value) => {
     divisor = 1e6
     textUnit = 'Millions'
   } else if (Math.abs(value) > 1e3) {
-    numberDigits = 0
+    numberDigits = 1
     divisor = 1e3
     textUnit = 'k'
   }
@@ -233,31 +233,53 @@ export const parseEconomicsJson = (json) => {
     government: addedValueItems.filter(element => element.receiverName === 'Government (taxes - subsidies)')[0].value,
   }
 
+  var missingColumns = new Set()
+  var foundColumns = new Set()
   const employments = json["Employment"].map(employment => {
-    const tempMale = employment['Temporary Male']
-    const tempFemale = employment['Temporary Female']
-    const unskilledMale = employment['Permanent Unskilled Male']
-    const unskilledFemale = employment['Permanent Unskilled Female']
-    const skilledMale = employment['Permanent Skilled Male']
-    const skilledFemale = employment['Permanent Skilled Female']
-    return {
-      actorName: employment['Actor type Name'],
-      data: {
-        tempMale,
-        tempFemale,
-        unskilledMale,
-        unskilledFemale,
-        skilledMale,
-        skilledFemale,
-        totalMale: tempMale + unskilledMale + skilledMale,
-        totalFemale: tempFemale + unskilledFemale + skilledFemale,
-        totalTemp: tempMale + tempFemale,
-        totalSkilled: skilledFemale + skilledMale,
-        totalUnskilled: unskilledFemale + unskilledMale,
-        total: tempMale + tempFemale + skilledFemale + skilledMale + unskilledFemale + unskilledMale
+    var result = {
+      actorName: 'Actor type Name',
+      data : {
+        tempMale : 'Temporary Male',
+        tempFemale : 'Temporary Female',
+        unskilledMale : 'Permanent Unskilled Male',
+        unskilledFemale : 'Permanent Unskilled Female',
+        skilledMale : 'Permanent Skilled Male',
+        skilledFemale : 'Permanent Skilled Female'
       }
     }
+    if (result.actorName in employment) {
+      foundColumns.add(result.actorName)
+      result.actorName = employment[result.actorName]
+    }
+    else {
+      missingColumns.add(result.actorName)
+    }
+    for (var item in result.data) {
+      var colonne = result.data[item]
+      if (colonne in employment) {
+        result.data[item] = employment[colonne]
+        foundColumns.add(colonne)
+      }
+      else {
+        missingColumns.add(colonne)
+      }
+    }
+    result.data = {
+      ...result.data,
+      totalMale: result.data.tempMale + result.data.unskilledMale + result.data.skilledMale,
+      totalFemale: result.data.tempFemale + result.data.unskilledFemale + result.data.skilledFemale,
+      totalTemp: result.data.tempMale + result.data.tempFemale,
+      totalSkilled: result.data.skilledFemale + result.data.skilledMale,
+      totalUnskilled: result.data.unskilledFemale + result.data.unskilledMale,
+      total: result.data.tempMale + result.data.tempFemale + result.data.skilledFemale + result.data.skilledMale + result.data.unskilledFemale + result.data.unskilledMale
+    }
+    return result
   })
+  const headerColumnMissing = [...missingColumns].filter(x => !foundColumns.has(x));
+  if (headerColumnMissing.length > 0) {
+    setImportErrors(`Missing columns headers [${headerColumnMissing.join(', ')}] on first row of excel spreadsheet named 'Employment'`)
+  }
+
   actors = actors.map(actor => {
     let employment = employments.filter(employment => employment.actorName === actor.name)
     if (employment && employment.length === 1) {
