@@ -1,5 +1,4 @@
 <template >
-    <div class="text-red-500">DEFAULT VALUE</div>
     <div class="flex flex-col w-1/2 ml-36 relative">
         <div class="bg-gradient-to-r from-green-300 via-yellow-200 to-red-300 w-full h-[40px] mt-10"></div>
         <div class="absolute top-20 transform -translate-x-1/2 -translate-y-full flex flex-col items-center" :style="{ left: leftPosition }">

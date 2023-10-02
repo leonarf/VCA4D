@@ -30,7 +30,7 @@
     <br>
     <InfoTitle title="Nominal protection Coefficient" information="Domestic price / Internation parity price"
       class="mb-4" />
-    <NominalProtectionCoefficient :value="1.4" />
+    <NominalProtectionCoefficient :value="studyData.nominalProtectionCoefficient" />
   </article>
 </template>
 

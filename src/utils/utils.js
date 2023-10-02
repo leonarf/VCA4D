@@ -307,8 +307,12 @@ export const parseEconomicsJson = (json) => {
     })
   )
   const importExport = {
-    import: importExportItems.filter(item => item.importExport === 'IMPORT'),
-    export: importExportItems.filter(item => item.importExport === 'EXPORT'),
+    import: importExportItems.filter(item => item.importExport.localeCompare('IMPORT', undefined, { sensitivity: "base" }) === 0),
+    export: importExportItems.filter(item => item.importExport.localeCompare('EXPORT', undefined, { sensitivity: "base" }) === 0),
+  }
+
+  if (importExportItems.length > 0 && importExport.import.length == 0 && importExport.import.length == 0) {
+    setImportErrors("Column 'Imported Or Exported' of excel spreadsheet 'Imported And exported goods' seems to be wrongly filled. It should contains 'IMPORT' or 'EXPORT")
   }
 
   const farmToFinalPricesRatio = json["Farm gate price In final price"].map(priceItem => ({
@@ -327,8 +331,22 @@ export const parseEconomicsJson = (json) => {
   }
 }
 
+let ImportErrors = []
+
+export const clearImportErrors = () => {
+  ImportErrors = []
+}
+
+export const setImportErrors = (message, level = "error") => {
+  ImportErrors.push({
+    level: level,
+    message: message
+  })
+}
+
+
 export const getErrors = (study) => {
-  let errors = []
+  let errors = ImportErrors
 
   if (!['BIF', 'XOF'].includes(study.targetCurrency)) {
     errors.push({
@@ -345,19 +363,6 @@ export const getErrors = (study) => {
       errors.push({
         level: "error",
         message: `Missing property ${property}`
-      })
-    }
-  }
-  for (const property of [
-    'giniIndex',
-    'totalValueAdded',
-    'publicFundBalance',
-    'nominalProtectionCoefficient',
-  ]) {
-    if (!study[property]) {
-      errors.push({
-        level: 'info',
-        message: `Missing property ${property}` 
       })
     }
   }

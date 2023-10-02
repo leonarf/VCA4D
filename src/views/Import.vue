@@ -71,7 +71,7 @@ import { computed, ref, watch } from 'vue';
 import * as XLSX from 'xlsx'
 import Skeleton from '../components/Skeleton.vue'
 import jsonData from '../../data/data.json'
-import { slugify, parseSustainabilityWorksheet, parseEconomicsJson, getErrors } from '@/utils/utils.js'
+import { slugify, parseSustainabilityWorksheet, parseEconomicsJson, getErrors, setImportErrors, clearImportErrors } from '@/utils/utils.js'
 import { RouterLink } from 'vue-router'
 
 const excelData = ref(undefined);
@@ -80,6 +80,7 @@ const workbook = ref(undefined)
 const clearData = () => {
     localStorage.removeItem('localStudyProperties')
     localStorage.removeItem('localStudyData')
+    clearImportErrors()
     window.location.reload()
 }
 
@@ -123,7 +124,14 @@ const typeOfFile = computed(() => {
     return "Economics"
 })
 
-const getValueChainProperty = (json, propertyName) => json["Value Chain"].find(element => element["Property"] === propertyName)["Value"]
+const getValueChainProperty = (json, propertyName) => {
+    var elementFound = json["Value Chain"].find(element => element["Property"] === propertyName)
+    if (elementFound) {
+        return elementFound["Value"]
+    }
+    setImportErrors(`Couldn't find '${propertyName}' in excel spreadsheet 'Value Chain'`)
+    return null
+}
 
 const readPercentValue = (identifier) => {
     const valueInExcel = getValueChainProperty(excelData.value, identifier)
@@ -172,6 +180,7 @@ const studyProperties = computed(() => {
     const valueAddedShareNationalGdp = readPercentValue("Value added share of national GDP")
     const valueAddedShareAgriculturalGdp = readPercentValue("Value added share of the agricultural sector GDP")
     const domesticResourceCostRatio = getValueChainProperty(excelData.value, "Domestic resource cost ratio") || undefined;
+    const nominalProtectionCoefficient = getValueChainProperty(excelData.value, "Nominal protection coefficient") || undefined;
 
     return {
         id: slugify(commodity + "-" + country),
@@ -187,6 +196,7 @@ const studyProperties = computed(() => {
         valueAddedShareNationalGdp,
         valueAddedShareAgriculturalGdp,
         domesticResourceCostRatio,
+        nominalProtectionCoefficient,
         type: 'eco'
     }
 })
