@@ -51,7 +51,8 @@ import {
   getAddedValueReceiversData
 } from '@/charts/charts'
 import NiceMetric from '@typography/NiceMetric.vue'
-import { useUtils } from '@/utils/utils.js'
+import { useCurrencyUtils } from '@/utils/format.js'
+import { useActorsAndStages } from '@/utils/misc.js'
 import InfoTitle from '@typography/InfoTitle.vue'
 import HorizontalSlider from '../../charts/HorizontalSlider.vue'
 
@@ -60,7 +61,8 @@ const props = defineProps({
     currency: String
 })
 
-const { prettyAmount, convertAmount, stages, actors } = useUtils(props);
+const { prettyAmount, convertAmount } = useCurrencyUtils(props);
+const { stages, actors } = useActorsAndStages(props);
 
 const addedValueCreatorsRingChartData = computed(() => {
   return getAddedValueCreatorsData(stages, actors, convertAmount, prettyAmount)

@@ -28,13 +28,15 @@ import InfoTitle from '@typography/InfoTitle.vue'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
-import { useUtils } from '@/utils/utils.js'
+import { useCurrencyUtils } from '@/utils/format.js'
+import { useActorsAndStages } from '@/utils/misc.js'
 
 const props = defineProps({
     studyData: Object,
     currency: String
 })
-const { prettyAmount, convertAmount, stages, actors } = useUtils(props);
+const { prettyAmount, convertAmount } = useCurrencyUtils(props);
+const { stages, actors } = useActorsAndStages(props);
 
 const currentStage = ref('')
 

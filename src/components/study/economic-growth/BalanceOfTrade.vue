@@ -26,13 +26,13 @@
 import BarChart from '@charts/BarChart.vue'
 import { getImportedProductsData, getExportedProductsData } from '@/charts/charts'
 import { computed } from 'vue';
-import { useUtils } from '@/utils/utils.js'
+import { useCurrencyUtils } from '@/utils/format'
 const props = defineProps({
   studyData: Object,
   currency: String
 })
 
-const { prettyAmount, convertAmount } = useUtils(props);
+const { prettyAmount, convertAmount } = useCurrencyUtils(props);
 
 const hasData = computed(() => {
   if (!props.studyData?.ecoData?.importExport) {

@@ -1,4 +1,5 @@
-import { formatNumber, formatPercent, getStageColor } from '@/utils/utils.js'
+import { formatNumber, formatPercent } from '@/utils/format.js'
+import { getStageColor, COLORS_IMPORTED_PRODUCTS, COLORS_EXPORTED_PRODUCTS } from '@/utils/colors.js'
 const RADIUSES_MINI_PIE = ['20%', '40%']
 const RIADUSES_PIE = ['50%', '75%']
 const SELECTED_COLOR = "#F7E9EB"
@@ -108,7 +109,7 @@ const getStackedBarChart = (label, data, maxValue, prettyAmount, convertAmount) 
             color
         }
     }))
-    const totalText = prettyAmount(convertAmount(data.reduce((total, item) => total + item.value, 0))) 
+    const totalText = prettyAmount(convertAmount(data.reduce((total, item) => total + item.value, 0)))
 
     return {
         title: {
@@ -123,7 +124,7 @@ const getStackedBarChart = (label, data, maxValue, prettyAmount, convertAmount) 
             },
             formatter: (params) => {
                 return params.map(({ seriesName, value }) => `${seriesName}: ${prettyAmount(value)}`).join('<br />')
-              },
+            },
         },
         xAxis: {
             type: 'category',
@@ -140,7 +141,7 @@ const getStackedBarChart = (label, data, maxValue, prettyAmount, convertAmount) 
         },
         yAxis: {
             show: false,
-            max: convertAmount(maxValue) 
+            max: convertAmount(maxValue)
         },
         series: seriesData,
     }
@@ -153,12 +154,11 @@ const getMaxImportExportValue = (ecoData) => {
 }
 
 export const getImportedProductsData = (ecoData, prettyAmount, convertAmount) => {
-    const colors = ['#5F8A64', '#71A578', '#9DB95F', '#C1CC5E' ]
 
     const dataImported = ecoData.importExport.import.map((importItem, index) => ({
         value: importItem.amount,
         name: importItem.label,
-        color: colors[index % colors.length]
+        color: COLORS_IMPORTED_PRODUCTS[index % COLORS_IMPORTED_PRODUCTS.length]
     }))
 
     const maxValue = getMaxImportExportValue(ecoData)
@@ -166,14 +166,13 @@ export const getImportedProductsData = (ecoData, prettyAmount, convertAmount) =>
 }
 
 export const getExportedProductsData = (ecoData, prettyAmount, convertAmount) => {
-    const colors = ['#b06245', '#C46D4D']
 
     const dataExported = ecoData.importExport.export.map((importItem, index) => ({
         value: importItem.amount,
         name: importItem.label,
-        color: colors[index % colors.length]
+        color: COLORS_EXPORTED_PRODUCTS[index % COLORS_EXPORTED_PRODUCTS.length]
     }))
-    
+
     const maxValue = getMaxImportExportValue(ecoData)
     return getStackedBarChart('EXPORTED PRODUCTS', dataExported, maxValue, prettyAmount, convertAmount)
 }

@@ -36,7 +36,8 @@ import {
   getPublicFinancesData,
   getPublicFinancesPerStage
 } from '@/charts/charts'
-import { useUtils } from '@/utils/utils.js'
+import { useCurrencyUtils } from '@/utils/format.js'
+import { useActorsAndStages } from '@/utils/misc.js'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 
 const props = defineProps({
@@ -45,7 +46,8 @@ const props = defineProps({
 })
 const currentStage = ref('')
 
-const { prettyAmount, convertAmount, stages, actors } = useUtils(props);
+const { prettyAmount, convertAmount } = useCurrencyUtils(props);
+const { stages, actors } = useActorsAndStages(props);
 
 const publicFundsBalance = computed(() => {
   const balanceValue = convertAmount.value(props.studyData.ecoData.addedValue.government)

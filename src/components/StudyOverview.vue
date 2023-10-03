@@ -76,7 +76,7 @@ import CollectionLogo from '../images/icons/collection.svg'
 import ProductionLogo from '../images/icons/production.svg'
 import ExportLogo from '../images/icons/export.svg'
 import SectionTitle from './typography/SectionTitle.vue'
-import CurrencyUtils from '@/utils/currencyUtils.js'
+import { prettyFormatAmount } from '@/utils/currency.js'
 import PdfSection from './pdf/PdfSection.vue';
 
 
@@ -239,7 +239,7 @@ const populatedSankeyChartData = computed ( () => {
                         },
                         {
                             label: "Monetary value",
-                            value: CurrencyUtils.prettyFormatAmount(params.data["Monetary value"], monetaryCurrency)
+                            value: prettyFormatAmount(params.data["Monetary value"], monetaryCurrency)
                         },
                         {
                             label: "Products",
@@ -247,7 +247,7 @@ const populatedSankeyChartData = computed ( () => {
                         },
                         {
                             label: "Unitary price (local curency)",
-                            value: CurrencyUtils.prettyFormatAmount(params.data['Unitary price (local curency)'], monetaryCurrency)
+                            value: prettyFormatAmount(params.data['Unitary price (local curency)'], monetaryCurrency)
                         },
                         {
                             label: "Volume exchanged (kg Of product)",

@@ -24,7 +24,8 @@ import {
     getNetOperatingProfitPerActorOfStage
 } from '@/charts/charts'
 import InfoTitle from '@typography/InfoTitle.vue'
-import { useUtils } from '@/utils/utils.js'
+import { useCurrencyUtils } from '@/utils/format.js'
+import { useActorsAndStages } from '@/utils/misc.js'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 
 const props = defineProps({
@@ -34,7 +35,8 @@ const props = defineProps({
 
 const currentStage = ref('')
 
-const { prettyAmount, convertAmount, stages, actors } = useUtils(props);
+const { prettyAmount, convertAmount } = useCurrencyUtils(props);
+const { stages, actors } = useActorsAndStages(props);
 
 const netOperatingProfitByNumberActorsData = computed(() => getNetOperatingProfitByNumberActorsData(stages, actors, convertAmount, prettyAmount, currentStage))
 const currentStageSplitData = computed(() => {

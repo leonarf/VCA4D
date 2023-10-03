@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { getStageColor } from '@/utils/utils.js'
+import { getStageColor } from '@/utils/colors.js'
 
 const props = defineProps({
     currentStage: String,

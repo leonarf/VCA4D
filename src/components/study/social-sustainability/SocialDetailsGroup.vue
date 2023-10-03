@@ -19,7 +19,7 @@
 <script setup>
 import { ref } from 'vue';
 import Tag from './Tag.vue'
-import { getTagColor } from '@/utils/utils.js'
+import { getTagColor } from '@/utils/colors.js'
 
 const props = defineProps({
     group: Object

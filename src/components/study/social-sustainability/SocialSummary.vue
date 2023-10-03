@@ -73,7 +73,7 @@ import { computed } from 'vue';
 import SocialRadar from './SocialRadar.vue';
 import SummaryBlock from './SummaryBlock.vue'
 import SummaryBlockQuestion from './SummaryBlockQuestion.vue'
-import { getSocialAverageGroup } from '@/utils/utils.js'
+import { getSocialAverageGroup } from '@/utils/misc.js'
 
 const props = defineProps({
     studyData: Object

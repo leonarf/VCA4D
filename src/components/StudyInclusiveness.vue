@@ -46,14 +46,14 @@ import InfoTitle from '@typography/InfoTitle.vue'
 import GiniIndex from './study/inclusiveness/GiniIndex.vue'
 import ShareOfFarmPrice from './study/inclusiveness/ShareOfFarmPrice.vue'
 import { computed } from 'vue'
-import { useUtils } from '../utils/utils'
+import { useCurrencyUtils } from '@/utils/format'
 
 const props = defineProps({
     studyData: Object,
     currency: String
 })
 
-const { prettyAmount, convertAmount } = useUtils(props);
+const { prettyAmount, convertAmount } = useCurrencyUtils(props);
 
 const hasPricesData = computed(() => {
     if (!props.studyData.ecoData.farmToFinalPricesRatio) {

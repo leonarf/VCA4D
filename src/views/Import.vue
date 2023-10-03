@@ -76,7 +76,9 @@ import { computed, ref, watch } from 'vue';
 import * as XLSX from 'xlsx'
 import Skeleton from '../components/Skeleton.vue'
 import jsonData from '../../data/data.json'
-import { slugify, parseSustainabilityWorksheet, parseEconomicsJson, getErrors, setImportErrors, clearImportErrors } from '@/utils/utils.js'
+import { slugify } from '@/utils/format.js'
+import { parseSustainabilityWorksheet } from '@/utils/import/social.js'
+import { parseEconomicsJson, getErrors, setImportErrors, clearImportErrors } from '@/utils/import/eco.js'
 import { RouterLink } from 'vue-router'
 
 const excelData = ref(undefined);

@@ -9,7 +9,7 @@
             <div class="subtitle">Country</div>
         </div>
         <div class="bloc">
-            <div class="title">{{ studyData.targetCurrency ? currencyUtils.getCurrencySymbol(studyData.targetCurrency) : '-'}}</div>
+            <div class="title">{{ studyData.targetCurrency ? getCurrencySymbol(studyData.targetCurrency) : '-'}}</div>
             <div class="subtitle">Local currency</div>
         </div>
         <div class="bloc">
@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import currencyUtils from '../../utils/currencyUtils'
+import { getCurrencySymbol } from '@/utils/currency.js'
 const props = defineProps({
     studyData: {
       type: Object,

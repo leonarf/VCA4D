@@ -29,7 +29,8 @@ import {
     getNumberOfActorsData,
     getNumberOfActorsByTypeOfActorData,
 } from '@/charts/charts'
-import { formatNumber, useUtils } from '@/utils/utils.js'
+import { formatNumber } from '@/utils/format.js'
+import { useActorsAndStages } from '@/utils/misc.js'
 import Ring from '@charts/Ring.vue'
 import NiceMetric from '@typography/NiceMetric.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
@@ -41,7 +42,7 @@ const props = defineProps({
 
 const currentStage = ref('')
 
-const { stages, actors } = useUtils(props);
+const { stages, actors } = useActorsAndStages(props);
 
 const numberOfActorsData = computed(() => {
     return getNumberOfActorsData(stages, actors, currentStage)
