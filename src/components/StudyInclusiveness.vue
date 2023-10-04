@@ -70,7 +70,7 @@ const pricesData = computed(() => {
         label: item.label,
         farm: prettyAmount.value(convertAmount.value(item.farmPrice)),
         final: prettyAmount.value(convertAmount.value(item.finalPrice)),
-        ratio: item.farmPrice / item.finalPrice * 100
+        ratio: item.farmPrice / item.finalPrice
     }))
 })
 

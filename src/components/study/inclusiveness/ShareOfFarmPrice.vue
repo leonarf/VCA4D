@@ -14,13 +14,14 @@
               <td class="whitespace-nowrap  px-3 py-2 font-medium">{{ item.label}}</td>
               <td class="whitespace-nowrap  px-3 py-2">{{ item.farm}} per kg</td>
               <td class="whitespace-nowrap  px-3 py-2">{{ item.final}} per kg</td>
-              <td class="whitespace-nowrap  px-3 py-2">{{ item.ratio }}%</td>
+              <td class="whitespace-nowrap  px-3 py-2">{{ formatPercent(item.ratio) }}</td>
             </tr>
           </tbody>
         </table>
 </template>
 
 <script setup>
+import { formatPercent } from '@/utils/format.js'
 const props = defineProps({
     data: Array,
 })
