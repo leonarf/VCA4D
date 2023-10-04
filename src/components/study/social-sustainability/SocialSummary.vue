@@ -3,7 +3,7 @@
     <br />
     <div class="flex flex-col flex-wrap">
         <div class="flex flex-row w-full justify-center">
-            <SummaryBlock title="Working conditions" class="w-full" anchor="1" :average-value="getSocialAverageGroup(studyData.socialData, 0)">
+            <SummaryBlock title="Working conditions" class="w-full" :anchor="1" :average-value="getSocialAverageGroup(studyData.socialData, 0)">
                 <SummaryBlockQuestion
                     :question="questionSchoolChildren">
                 </SummaryBlockQuestion>
@@ -15,7 +15,7 @@
 
         <div class="flex flex-row">
             <div class="flex flex-col w-1/3 justify-around">
-                <SummaryBlock title="Living conditions" class="max-w-1/3" anchor="6" :average-value="getSocialAverageGroup(studyData.socialData, 5)">
+                <SummaryBlock title="Living conditions" class="max-w-1/3" :anchor="6" :average-value="getSocialAverageGroup(studyData.socialData, 5)">
                     <SummaryBlockQuestion
                         :question="questionLivingHealth">
                     </SummaryBlockQuestion>
@@ -23,7 +23,7 @@
                         :question="questionLivingEducation">
                     </SummaryBlockQuestion>
                 </SummaryBlock>
-                <SummaryBlock title="Social capital" class="max-w-1/3" anchor="5" :average-value="getSocialAverageGroup(studyData.socialData, 4)">
+                <SummaryBlock title="Social capital" class="max-w-1/3" :anchor="5" :average-value="getSocialAverageGroup(studyData.socialData, 4)">
                     <SummaryBlockQuestion
                         :question="questionFarmerParticipation">
                     </SummaryBlockQuestion>
@@ -36,7 +36,7 @@
                 <SocialRadar :study-data="studyData" />
             </div>
             <div class="flex flex-col w-1/3 justify-around">
-                <SummaryBlock title="Land &amp; water rights" anchor="2" :average-value="getSocialAverageGroup(studyData.socialData, 1)">
+                <SummaryBlock title="Land &amp; water rights" :anchor="2" :average-value="getSocialAverageGroup(studyData.socialData, 1)">
                     <SummaryBlockQuestion
                         :question="questionVGGT">
                     </SummaryBlockQuestion>
@@ -44,7 +44,7 @@
                         :question="questionParticipation">
                     </SummaryBlockQuestion>
                 </SummaryBlock>
-                <SummaryBlock title="Gender equality" anchor="3" :average-value="getSocialAverageGroup(studyData.socialData, 2)">
+                <SummaryBlock title="Gender equality" :anchor="3" :average-value="getSocialAverageGroup(studyData.socialData, 2)">
                     <SummaryBlockQuestion
                         :question="questionWomenRights">
                     </SummaryBlockQuestion>
@@ -56,7 +56,7 @@
         </div>
         <div class="flex flex-row w-full justify-center">
 
-            <SummaryBlock title="Food &amp; nutrition security" class="max-w-1/3" anchor="4" :average-value="getSocialAverageGroup(studyData.socialData, 3)">
+            <SummaryBlock title="Food &amp; nutrition security" class="max-w-1/3" :anchor="4" :average-value="getSocialAverageGroup(studyData.socialData, 3)">
                     <SummaryBlockQuestion
                         :question="questionFoodIncrease">
                     </SummaryBlockQuestion>
