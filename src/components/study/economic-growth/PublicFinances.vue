@@ -8,7 +8,7 @@
           Taxes - Subventions<br>
           Positive if the sector contributes to the government income more than it receives in subsidies and tax break
         </div>
-        <div class="TODO uppercase font-semibold text-red-500 text-2xl mt-4 ">-5 % (TODO)</div>
+        <div class="uppercase font-semibold text-[#C1C1C1] text-2xl mt-4 ">{{ formatPercent(parseFloat(studyData.publicFundsBalance)) }}</div>
         <div class="uppercase font-semibold text-[#656565] text-base">Public Funds Balance / Public Budget</div>
         <div class="mt-2">
           Net share of the public funds balance in government budget
@@ -36,7 +36,7 @@ import {
   getPublicFinancesData,
   getPublicFinancesPerStage
 } from '@/charts/charts'
-import { useCurrencyUtils } from '@/utils/format.js'
+import { useCurrencyUtils, formatPercent } from '@/utils/format.js'
 import { useActorsAndStages } from '@/utils/misc.js'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 
