@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import Skeleton from '../components/Skeleton.vue'
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import jsonData from '../../data/data.json'
 import MilkLogo from '../images/icons/products/milk.svg'
 import PineappleLogo from '../images/icons/products/pineapple.svg'
@@ -123,6 +123,8 @@ const getProductLogo = (product) => {
     }
 }
 
+const currency = computed(() => localStorage.getItem('currency') || 'LOCAL')
+
 </script>
 
 <template>
@@ -160,7 +162,7 @@ const getProductLogo = (product) => {
                         <ul class="flex flex-row flex-wrap gap-y-4">
                             <li v-for="study in filterStudiesByCategory(category.id)" :key="study.id" class="h-full mr-4">
                                 <div class="flex flex-col items-center space-y-2 w-[130px]">
-                                    <RouterLink :to="`/study?id=${study.local ? 'localStorage' : study.id}`">
+                                    <RouterLink :to="`/study?id=${study.local ? 'localStorage' : study.id}&currency=${currency}`">
                                         <div :class="`w-[130px] h-[130px] ${study.local ? 'bg-[#868686]' : 'bg-[#DFDFDF]'} flex flex-col items-center justify-evenly text-[#303030] px-8 rounded-lg`">
                                             <img 
                                             :src="getProductLogo(study.product)" 
@@ -191,7 +193,7 @@ const getProductLogo = (product) => {
                         <h4 class="mt-4">{{ country.prettyName }}</h4>
                         <ul>
                             <li v-for="study in filterStudiesByCountry(country.id)" :key="study.id" class="text-blue-600 dark:text-blue-500 hover:underline">
-                                <RouterLink :to="`/study?id=${study.id}`">{{ study.title + " " + study.year }}</RouterLink>
+                                <RouterLink :to="`/study?id=${study.id}&currency=${currency}`">{{ study.title + " " + study.year }}</RouterLink>
                             </li>
                         </ul>
                     </div>
