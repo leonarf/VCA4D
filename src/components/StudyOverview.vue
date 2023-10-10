@@ -97,8 +97,12 @@ const toggleSankeyGraphDisplayMode = () => {
     sankeyGraphDisplayMode.value = (sankeyGraphDisplayMode.value + 1) % sankeyGraphPossibleDisplayModesList.length;
 };
 
+const DISPLAY_STEPS = ['Producers', 'Collectors', 'Processors', 'Wholesalers', 'Retailers']
+
 const populatedSteps = computed(() => {
-    return props.studyData?.ecoData.stages.map(stage => ({
+    return props.studyData?.ecoData.stages
+    .filter(stage => DISPLAY_STEPS.includes(stage.name))
+    .map(stage => ({
         ...stage,
         image: ``
     }))
