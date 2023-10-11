@@ -30,11 +30,11 @@ use([
 
 <style scoped lang="scss">
 .sankey-chart {
-  height: 500px;
+  height: 800px;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 .chart {
-  height: 500px;
+  height: 800px;
 }
 </style>
