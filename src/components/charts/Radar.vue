@@ -1,6 +1,6 @@
 <template>
   <div class="radar-chart">
-    <v-chart class="chart" :option="options" />
+    <v-chart class="" :option="options" auto-resize/>
   </div>
 </template>
 
@@ -33,6 +33,6 @@ use([
 <style scoped lang="scss">
 .radar-chart {
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 </style>

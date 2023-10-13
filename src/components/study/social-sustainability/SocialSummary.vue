@@ -2,20 +2,8 @@
     <h1>Is the value chain <strong>socially sustainable</strong>?</h1>
     <br />
     <div class="flex flex-col flex-wrap">
-        <div class="flex flex-row w-full justify-center">
-            <SummaryBlock title="Working conditions" class="w-full" :anchor="1" :average-value="getSocialAverageGroup(studyData.socialData, 0)">
-                <SummaryBlockQuestion
-                    :question="questionSchoolChildren">
-                </SummaryBlockQuestion>
-                <SummaryBlockQuestion
-                    :question="questionRemuneration">
-                </SummaryBlockQuestion>
-            </SummaryBlock>
-        </div>
-
-        <div class="flex flex-row">
-            <div class="flex flex-col w-1/3 justify-around">
-                <SummaryBlock title="Living conditions" class="max-w-1/3" :anchor="6" :average-value="getSocialAverageGroup(studyData.socialData, 5)">
+        <div class="flex flex-row w-full items-start gap-x-4">
+            <SummaryBlock title="Living conditions" class="max-w-1/3 mt-24" :anchor="6" :average-value="getSocialAverageGroup(studyData.socialData, 5)">
                     <SummaryBlockQuestion
                         :question="questionLivingHealth">
                     </SummaryBlockQuestion>
@@ -23,20 +11,15 @@
                         :question="questionLivingEducation">
                     </SummaryBlockQuestion>
                 </SummaryBlock>
-                <SummaryBlock title="Social capital" class="max-w-1/3" :anchor="5" :average-value="getSocialAverageGroup(studyData.socialData, 4)">
-                    <SummaryBlockQuestion
-                        :question="questionFarmerParticipation">
-                    </SummaryBlockQuestion>
-                    <SummaryBlockQuestion
-                        :question="questionFarmerInformation">
-                    </SummaryBlockQuestion>
-                </SummaryBlock>
-            </div>
-            <div class="w-full">
-                <SocialRadar :study-data="studyData" />
-            </div>
-            <div class="flex flex-col w-1/3 justify-around">
-                <SummaryBlock title="Land &amp; water rights" :anchor="2" :average-value="getSocialAverageGroup(studyData.socialData, 1)">
+            <SummaryBlock title="Working conditions" class="max-w-1/3" :anchor="1" :average-value="getSocialAverageGroup(studyData.socialData, 0)">
+                <SummaryBlockQuestion
+                    :question="questionSchoolChildren">
+                </SummaryBlockQuestion>
+                <SummaryBlockQuestion
+                    :question="questionRemuneration">
+                </SummaryBlockQuestion>
+            </SummaryBlock>
+            <SummaryBlock title="Land &amp; water rights" class="max-w-1/3 mt-24" :anchor="2" :average-value="getSocialAverageGroup(studyData.socialData, 1)">
                     <SummaryBlockQuestion
                         :question="questionVGGT">
                     </SummaryBlockQuestion>
@@ -44,24 +27,34 @@
                         :question="questionParticipation">
                     </SummaryBlockQuestion>
                 </SummaryBlock>
-                <SummaryBlock title="Gender equality" :anchor="3" :average-value="getSocialAverageGroup(studyData.socialData, 2)">
+        </div>
+
+        <div class="w-full h-[600px]">
+            <SocialRadar :study-data="studyData" />
+        </div>
+        <div class="flex flex-row w-full items-end gap-x-4">
+            <SummaryBlock title="Social capital" class="max-w-1/3 mb-12" :anchor="5" :average-value="getSocialAverageGroup(studyData.socialData, 4)">
                     <SummaryBlockQuestion
-                        :question="questionWomenRights">
+                        :question="questionFarmerParticipation">
                     </SummaryBlockQuestion>
                     <SummaryBlockQuestion
-                        :question="questionWomenIncome">
+                        :question="questionFarmerInformation">
                     </SummaryBlockQuestion>
                 </SummaryBlock>
-            </div>
-        </div>
-        <div class="flex flex-row w-full justify-center">
-
             <SummaryBlock title="Food &amp; nutrition security" class="max-w-1/3" :anchor="4" :average-value="getSocialAverageGroup(studyData.socialData, 3)">
                     <SummaryBlockQuestion
                         :question="questionFoodIncrease">
                     </SummaryBlockQuestion>
                     <SummaryBlockQuestion
                         :question="questionFoodIncome">
+                    </SummaryBlockQuestion>
+                </SummaryBlock>
+                <SummaryBlock title="Gender equality" class="max-w-1/3 mb-12" :anchor="3" :average-value="getSocialAverageGroup(studyData.socialData, 2)">
+                    <SummaryBlockQuestion
+                        :question="questionWomenRights">
+                    </SummaryBlockQuestion>
+                    <SummaryBlockQuestion
+                        :question="questionWomenIncome">
                     </SummaryBlockQuestion>
                 </SummaryBlock>
         </div>

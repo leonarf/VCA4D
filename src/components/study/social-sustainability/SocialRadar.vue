@@ -24,26 +24,40 @@ const chartData = computed(() => {
     return {
         radar: {
             indicator: [
-                { name: '', max: 4 },
-                { name: '', max: 4 },
-                { name: '', max: 4 },
-                { name: '', max: 4 },
-                { name: '', max: 4 },
-                { name: '', max: 4 }
+                { name: 'Working Conditions', max: 4 },
+                { name: 'Living Conditions', max: 4 },
+                { name: 'Social Capital', max: 4 },
+                { name: 'Food & nutrition security', max: 4 },
+                { name: 'Gender equality', max: 4 },
+                { name: 'Land & water rights', max: 4 }
             ],
             center: ['50%', '50%'],
-            radius: '75%',
+            radius: '85%',
+            splitNumber: 4,
             splitArea: {
-                show: false,
+                areaStyle: {
+        color: [
+          'rgba(255, 0, 0, 0.3)', 
+          'rgba(255, 165, 0, 0.3)',
+          'rgba(124, 252, 0, 0.3)',
+          'rgba(0, 230, 65, 0.3)', 
+        ],
+      },
             },
             axisLine: {
                 lineStyle: {
-                    color: '#FF9933'
+                    color: '#941B33'
                 }
             },
             axisLabel: {
                 show: false,
-            }
+            },
+            name: {
+                textStyle: {
+                    fontWeight: 'bold',
+                    fontSize: '18px'
+                },
+        },
         },
         tooltip: {
             show: true, 
@@ -65,7 +79,7 @@ const chartData = computed(() => {
                     color: "#FFCC99"
                 },
                 itemStyle: {
-                    color: "#FF9933"
+                    color: "#941B33"
                 },
                 data: [
                     {
@@ -74,7 +88,7 @@ const chartData = computed(() => {
                     
                 ]
             }
-        ]
+        ],
     };
 })
 </script>
