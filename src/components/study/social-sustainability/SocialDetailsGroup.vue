@@ -8,7 +8,7 @@
         <Tag :scale="group.averageValue" :appreciation="group.averageText" />
     </div>
     <div v-if="isOpen" v-for="question in group.questions" :key="question.text.split(' ')[0]"
-        class="flex flex-row items-start w-full my-3 pl-10">
+        class="flex flex-row items-start w-full my-3 pl-10 w-full md:w-4/5">
         <div class="tag-number">{{ getNumberInTitle(question.text) }}
         </div>
         <div class="flex-grow">{{ removeNumberFromTitle(question.text) }}</div>

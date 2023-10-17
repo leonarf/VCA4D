@@ -1,6 +1,8 @@
 <template>
-    <SocialSummary :studyData="studyData"/>        
-    <SocialDetails :studyData="studyData"/>
+    <div class="flex flex-col gap-y-24">
+        <SocialSummary :studyData="studyData"/>
+        <SocialDetails :studyData="studyData"/>
+    </div>
 </template>
 
 <script setup>

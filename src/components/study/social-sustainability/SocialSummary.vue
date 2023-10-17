@@ -1,6 +1,5 @@
 <template>
     <h1>Is the value chain <strong>socially sustainable</strong>?</h1>
-    <br />
     <div class="flex flex-col flex-wrap">
         <div class="flex flex-row w-full items-start gap-x-4">
             <SummaryBlock title="Living conditions" class="max-w-1/3 mt-24" :anchor="6" :average-value="getSocialAverageGroup(studyData.socialData, 5)">
