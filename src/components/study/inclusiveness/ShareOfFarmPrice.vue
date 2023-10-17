@@ -1,5 +1,5 @@
 <template >
-    <table class="w-full md:w-1/3 text-center text-sm font-light ml-36">
+    <table class="w-full md:w-1/3 text-center text-sm font-light ml-4 lg:ml-36">
           <thead
             class="border-b bg-[#E4E4E4] font-medium text-[#303030] ">
             <tr>

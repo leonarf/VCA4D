@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-row justify-evenly w-full items-center my-8">
+    <div class="flex flex-row flex-wrap justify-evenly w-full items-center my-8 gap-y-8">
       <NiceMetric 
         label="Total value added" 
         :value="totalAddedValueCreators" 
@@ -31,7 +31,7 @@
         is-percent="true"
     />
     <h3>Who <strong>creates and receives</strong> value added?</h3>
-    <div class="flex flex-row justify-evenly my-12">
+    <div class="flex flex-row flex-wrap gap-y-8 justify-evenly my-12">
       <div class="flex flex-col items-center">
         <Ring v-if="studyData" :options="addedValueCreatorsRingChartData" style="height: 400px; width: 500px;"></Ring>
         <div class="font-semibold">{{ totalAddedValueCreators }}</div>

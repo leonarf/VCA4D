@@ -1,6 +1,6 @@
 <template >
 
-<div class="flex flex-col w-2/3 xl:w-1/2 ml-36 relative mt-12">
+<div class="flex flex-col w-[90%] lg:w-2/3 xl:w-1/2 ml-4 md:ml-12 relative mt-12">
     <div class="relative">
         <div class="bg-gray-200 w-full h-[40px]"></div>
         <div class="bg-yellow-300 absolute top-0 h-[40px]" :style="{ width: leftPosition }"></div>

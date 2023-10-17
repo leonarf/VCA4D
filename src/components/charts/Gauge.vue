@@ -1,5 +1,5 @@
 <template >
-    <div class="flex flex-col w-1/2 ml-36 relative">
+    <div class="flex flex-col w-4/5 lg:w-3/4 xl:w-1/2 ml-4 lg:ml-18 xl:ml-36 relative mt-8">
         <div class="bg-gradient-to-r from-green-300 via-yellow-200 to-red-300 w-full h-[40px] mt-10"></div>
         <div class="absolute top-20 transform -translate-x-1/2 -translate-y-full flex flex-col items-center" :style="{ left: leftPosition }">
             <div class="bg-[#EDEDED] text-black text-2xl font-bold p-2 rounded shadow">{{ value }}</div>

@@ -1,6 +1,6 @@
 <template>
     <Skeleton>
-        <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48">
+        <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 max-w-[90%]">
             <header>
                 <div v-if="!studyData && !error" class="loading">Loading...</div>
 
