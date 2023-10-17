@@ -24,15 +24,15 @@ const chartData = computed(() => {
     return {
         radar: {
             indicator: [
-                { name: 'Working Conditions', max: 4 },
-                { name: 'Living Conditions', max: 4 },
-                { name: 'Social Capital', max: 4 },
-                { name: 'Food & nutrition security', max: 4 },
-                { name: 'Gender equality', max: 4 },
-                { name: 'Land & water rights', max: 4 }
+                { name: '', max: 4 },
+                { name: '', max: 4 },
+                { name: '', max: 4 },
+                { name: '', max: 4 },
+                { name: '', max: 4 },
+                { name: '', max: 4 }
             ],
             center: ['50%', '50%'],
-            radius: '85%',
+            radius: '100%',
             splitNumber: 4,
             splitArea: {
                 areaStyle: {

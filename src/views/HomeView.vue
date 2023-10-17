@@ -227,7 +227,7 @@ section.banner {
 
     div {
         height: 60%;
-        max-width: 50%;
+        max-width: 75%;
         padding: 1rem;
         border-radius: 1.5rem;
         background-color: hsla(0, 0%, 0%, 0.7);

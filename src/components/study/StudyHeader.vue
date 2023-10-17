@@ -1,5 +1,5 @@
 <template>
-    <div class="text-xl rounded bg-[#dcefbb] flex flex-row py-3 px-8 rounded-full">
+    <div class="text-xl rounded bg-[#dcefbb] flex flex-row flex-wrap gap-y-4 py-3 pl-8 rounded-none md:rounded-full justify-center md:justify-start">
         <div class="bloc">
             <div class="title">{{ studyData.commodity }}</div>
             <div class="subtitle">Commodity</div>

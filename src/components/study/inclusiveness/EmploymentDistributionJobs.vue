@@ -1,12 +1,12 @@
 <template>
     <InfoTitle title="Jobs" class="mt-8" />
     <div class="flex flex-col mb-8">
-        <div class="flex flex-row items-start">
-            <div class="w-1/5 flex flex-col space-y-4 pt-8">
+        <div class="flex flex-row flex-wrap items-start justify-center">
+            <div class="w-1/2 md:w-1/5 flex flex-col space-y-4 pt-8">
                 <NiceMetric label="Waged employment" :value="totalNumberOfJobs" />
                 <NiceMetric label="% female employment" :value="`${percentFemaleEmployment}`" />
             </div>
-            <div class="w-4/5">
+            <div class="w-full md:w-4/5">
                 <BarChart v-if="studyData" :options="numberOfJobsData"
                     @chartSeriesClick="handleNumberOfJobsDataChartSeriesClick"></BarChart>
             </div>
