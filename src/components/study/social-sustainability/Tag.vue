@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-xl min-w-[9rem] font-bold py-1 text-center" :style="{ background: scaleColor }">{{ appreciation }}
+  <div :title="`Rating: ${scale}`" class="rounded-xl min-w-[9rem] font-bold py-1 text-center" :style="{ background: scaleColor }">{{ appreciation }}
   </div>
 </template>
 
