@@ -76,7 +76,7 @@ const chartData = computed(() => {
             {
                 type: 'radar',
                 areaStyle: {
-                    color: "#FFCC99"
+                    color: "#FFFFFF66"
                 },
                 itemStyle: {
                     color: "#941B33"
