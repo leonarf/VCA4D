@@ -3,23 +3,22 @@
         <h1 class="mb-4">Import a study file</h1>
         <div v-if="isObjectNotEmpty(studyProperties)" class="flex flex-col items-center">
             <div class="flex flex-row items-center">
-
-                <div>Current study: <b>{{ studyProperties['id'] }}</b></div>
+                <div>Imported study: <b>{{ studyProperties['id'] }}</b></div>
                 <div class="ml-4">
-                    <button 
-                    @click="clearData"
-                    class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-1 px-1.5 border border-red-500 hover:border-transparent rounded"
-                    >Remove</button>
+                    <button @click="clearData"
+                        class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-1 px-1.5 border border-red-500 hover:border-transparent rounded">Remove</button>
                 </div>
             </div>
-            <div>
+            <div class="mt-4 flex flex-row gap-x-4">
                 <RouterLink to="/">
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <button
+                        class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                         Find your new study on the home page
                     </button>
                 </RouterLink>
                 <RouterLink :to="'/study?id=localStorage'">
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <button
+                        class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                         Browse your new study's pages
                     </button>
                 </RouterLink>
@@ -72,13 +71,14 @@
 </template>
   
 <script setup>
-import { computed, ref, watch } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import * as XLSX from 'xlsx'
 import Skeleton from '../components/Skeleton.vue'
-import jsonData from '../../data/data.json'
 import { slugify } from '@/utils/format.js'
+import jsonData from '../../data/data.json'
 import { parseSustainabilityWorksheet } from '@/utils/import/social.js'
 import { parseEconomicsJson, getErrors, setImportErrors, clearImportErrors } from '@/utils/import/eco.js'
+
 import { RouterLink } from 'vue-router'
 
 const excelData = ref(undefined);
@@ -87,6 +87,8 @@ const workbook = ref(undefined)
 const clearData = () => {
     localStorage.removeItem('localStudyProperties')
     localStorage.removeItem('localStudyData')
+    localStorage.removeItem('localExcel')
+    localStorage.removeItem('localWorkbook')
     clearImportErrors()
     window.location.reload()
 }
@@ -115,11 +117,14 @@ const handleFileUpload = (event) => {
             })
             excelData.value = output
             workbook.value = wb
+            localStorage.setItem('localExcel', JSON.stringify(output))
+            localStorage.setItem('localWorkbook', JSON.stringify(wb))
+
         };
 
         reader.readAsArrayBuffer(file);
     }
-};
+}
 
 const typeOfFile = computed(() => {
     if (!excelData.value) {
@@ -130,6 +135,7 @@ const typeOfFile = computed(() => {
     }
     return "Economics"
 })
+
 
 const getValueChainProperty = (json, propertyName) => {
     var elementFound = json["Value Chain"].find(element => element["Property"] === propertyName)
@@ -245,6 +251,7 @@ watch(studyData, (newValue) => {
 
 const errors = computed(() => typeOfFile.value === 'Sustainability' ? [] : getErrors(studyData.value))
 
+
 const jsonFile = computed(() => {
     return JSON.stringify(
         studyData.value
@@ -273,7 +280,7 @@ const dataFile = computed(() => {
     if (!existingCommodities.includes(slugifiedCommodity)) {
         jsonData.categories.find(category => category.id === 'unknown').commodities.push(slugifiedCommodity)
     }
-    
+
     return JSON.stringify(
         jsonData
         , null, 2)
@@ -300,6 +307,18 @@ const downloadStudy = () => {
 const downloadDataJson = () => {
     downloadFile(dataFile.value, 'data.json')
 }
+
+onMounted(() => {
+    const localStorageExcel = localStorage.getItem('localExcel')
+    if (localStorageExcel) {
+        excelData.value = JSON.parse(localStorageExcel)
+    }
+
+    const localStorageWorkbook = localStorage.getItem('localWorkbook')
+    if (localStorageWorkbook) {
+        workbook.value = JSON.parse(localStorageWorkbook)
+    }
+})
 </script>
   
 
