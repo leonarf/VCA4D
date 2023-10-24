@@ -262,6 +262,9 @@ export const getReturnOnInvestmentData = (stages, actors, currentStage, convertA
         if (stage.name === 'Producers') {
             totalCosts += netOperatingProfits
         }
+        if (!netOperatingProfits) {
+            return null
+        }
         tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
             Total costs = ${prettyAmount.value(totalCosts)}<br>
             Return on investment = ${formatPercent(
