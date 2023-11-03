@@ -36,7 +36,8 @@
         "oil palm",
         "cotton",
         "corn",
-        "cassava"
+        "cassava",
+        "french beans"
       ]
     },
     {
@@ -172,6 +173,11 @@
       "id": "cambodia",
       "prettyName": "Cambodia",
       "continent": "Asia - Pacific"
+    },
+    {
+      "id": "kenya",
+      "prettyName": "Kenya",
+      "continent": "Africa"
     }
   ],
   "studies": [
@@ -391,6 +397,13 @@
       "year": 2020,
       "country": "cambodia",
       "product": "aquaculture"
+    },
+    {
+      "id": "french-beans-kenya",
+      "title": "French Beans",
+      "year": 2020,
+      "country": "kenya",
+      "product": "french beans"
     }
   ]
 }

@@ -126,11 +126,12 @@ const handleFileUpload = (event) => {
     }
 }
 
+const sheetNameForSustainabilityData = "Questionnaire"
 const typeOfFile = computed(() => {
     if (!excelData.value) {
         return ""
     }
-    if (excelData.value["Questionnaire"]) {
+    if (excelData.value[sheetNameForSustainabilityData]) {
         return "Sustainability"
     }
     return "Economics"
@@ -165,7 +166,7 @@ const studyProperties = computed(() => {
         if (!workbook.value) {
             return {}
         }
-        const questionnaireSheet = workbook.value.Sheets[workbook.value.SheetNames[2]]
+        const questionnaireSheet = workbook.value.Sheets[sheetNameForSustainabilityData]
         const country = slugify(questionnaireSheet['D1']?.v)
         const commodity = questionnaireSheet['B1']?.v.trim()
         const year = 2020
