@@ -62,122 +62,152 @@
     {
       "id": "mali",
       "prettyName": "Mali",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "ml"
     },
     {
       "id": "burundi",
       "prettyName": "Burundi",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "bi"
     },
     {
       "id": "burkina-faso",
       "prettyName": "Burkina Faso",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "bf"
     },
     {
       "id": "honduras",
       "prettyName": "Honduras",
-      "continent": "America"
+      "continent": "America",
+      "iso": "hn"
     },
     {
       "id": "nicaragua",
       "prettyName": "Nicaragua",
-      "continent": "America"
+      "continent": "America",
+      "iso": "ni"
     },
     {
       "id": "tanzania",
       "prettyName": "Tanzania",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "tz"
     },
     {
       "id": "ecuador",
       "prettyName": "Ecuador",
-      "continent": "America"
+      "continent": "America",
+      "iso": "ec"
     },
     {
       "id": "papua-new-guinea",
       "prettyName": "Papua New Guinea",
-      "continent": "Asia - Pacific"
+      "continent": "Asia - Pacific",
+      "iso": "pg"
     },
     {
       "id": "sierra-leone",
       "prettyName": "Sierra Leone",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "sl"
     },
     {
       "id": "ghana",
       "prettyName": "Ghana",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "gh"
     },
     {
       "id": "angola",
       "prettyName": "Angola",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "ao"
     },
     {
       "id": "zambia",
       "prettyName": "Zambia",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "zm"
     },
     {
       "id": "benin",
       "prettyName": "Benin",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "bj"
     },
     {
       "id": "dominican-republic",
       "prettyName": "Dominican Republic",
-      "continent": "America"
+      "continent": "America",
+      "iso": "do"
     },
     {
       "id": "cameroon",
       "prettyName": "Cameroon",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "cm"
     },
     {
       "id": "togo",
       "prettyName": "Togo",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "tg"
     },
     {
       "id": "sao-tome-e-principe",
       "prettyName": "Sao Tome e Principe",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "st"
     },
     {
       "id": "swaziland",
       "prettyName": "Swaziland",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "sz"
     },
     {
       "id": "zimbabwe",
       "prettyName": "Zimbabwe",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "zw"
     },
     {
       "id": "nigeria",
       "prettyName": "Nigeria",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "ng"
     },
     {
       "id": "ivory-coast",
       "prettyName": "Ivory Coast",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "ci"
     },
     {
       "id": "georgia",
       "prettyName": "Georgia",
-      "continent": "Europe"
+      "continent": "Europe",
+      "iso": "ge"
     },
     {
       "id": "cambodia",
       "prettyName": "Cambodia",
-      "continent": "Asia - Pacific"
+      "continent": "Asia - Pacific",
+      "iso": "kh"
     },
     {
       "id": "kenya",
       "prettyName": "Kenya",
-      "continent": "Africa"
+      "continent": "Africa",
+      "iso": "ke"
+    },
+    {
+      "id": "bostwana",
+      "prettyName": "Bostwana",
+      "continent": "Africa",
+      "iso": "bw"
     }
   ],
   "studies": [
