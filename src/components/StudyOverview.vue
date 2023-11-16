@@ -17,16 +17,6 @@
 
         <section v-if="studyData" class="explore">
             <h2>Explore the 4 dimensions of the value chain</h2>
-            
-            <!--
-            <p class="TODO">
-                Implémenter l'idée de Sofia où on reprend les 4 dimensions
-                avec pour chacune le sous-menu
-                et aucun graphique
-                et juste un lien vers la section correspondante
-
-            </p>
-            -->
             <RouterLink :to="'/study?id=' + studyData.id + '&view=economic-growth'">
                 <h3>Contribution to growth</h3>
                 <p>Learn more about <em>Contribution to GDP</em>, <em>Public finances</em>, 

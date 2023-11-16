@@ -1,18 +1,15 @@
+import { setImportErrors, getImportErrors, parseActorTypes } from '@/utils/import/generic.js'
 
 export const parseEconomicsJson = (json) => {
-    const stages = json["Stages description"].map((stage, index) => ({
-      name: stage['Stages'],
-      description: stage['Description'] || '',
-      index
-    })
-    )
+  const stages = json["Stages description"].map((stage, index) => ({
+    name: stage['Stages'],
+    description: stage['Description'] || '',
+    index
+  })
+  )
+
+  let actors = parseActorTypes(json)
   
-    let actors = json["Actor types"].map(actor => ({
-      name: actor['Actor type name'],
-      stage: actor['Stage'] || '',
-      id: actor['Actor type code']
-    })
-    )
     const flows = json["Flow by actor type"].map(flow => ({
       sellerActorName: flow['Seller Name'],
       buyerActorName: flow['Buyer Name'],
@@ -183,23 +180,9 @@ export const parseEconomicsJson = (json) => {
       farmToFinalPricesRatio
     }
   }
-  
-  let ImportErrors = []
-  
-  export const clearImportErrors = () => {
-    ImportErrors = []
-  }
-  
-  export const setImportErrors = (message, level = "error") => {
-    ImportErrors.push({
-      level: level,
-      message: message
-    })
-  }
-  
-  
+
   export const getErrors = (study) => {
-    let errors = ImportErrors
+    let errors = getImportErrors()
   
     if (!['BIF', 'XOF'].includes(study.targetCurrency)) {
       errors.push({

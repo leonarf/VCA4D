@@ -37,7 +37,8 @@
         currency: String,
         isLocalStudy: Boolean,
         hasEco: Boolean,
-        hasSocial: Boolean
+        hasSocial: Boolean,
+        hasACV: Boolean
     })
     const selectedCurrency = ref(props.currency);
     const routes = [
@@ -64,7 +65,7 @@
         {
             view: 'environment',
             label: 'Environmental sustainability',
-            accessible: false
+            accessible: props.hasACV
         }
     ]
 </script>

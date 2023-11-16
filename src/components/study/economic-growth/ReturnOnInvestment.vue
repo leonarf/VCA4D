@@ -35,10 +35,11 @@ const props = defineProps({
     studyData: Object,
     currency: String
 })
+const currentStage = ref('')
+
 const { prettyAmount, convertAmount } = useCurrencyUtils(props);
 const { stages, actors } = useActorsAndStages(props);
 
-const currentStage = ref('')
 
 const populatedBarChartData = computed(() => {
   return getReturnOnInvestmentData(stages, actors, currentStage, convertAmount, prettyAmount)

@@ -16,11 +16,24 @@ var StagesColors = {
   financialInstitutionsInterests: ADDITIONAL_COLORS[3]
 }
 
+var ChainValuesColors = {}
 
+export const addColorsForValueChains = (valuechains) => {
+  // TODO remplir ChainValuesColors avec de bonnes couleurs en utilisant une heuristique basée sur l'impact de la chaîne de valeur si possible
+  // Du genre + polluant = plus rouge
+}
 
 export const getStageColor = (stageName) => {
   if (stageName in StagesColors) {
     return StagesColors[stageName]
+  }
+  if (stageName in ChainValuesColors) {
+    return ChainValuesColors[stageName]
+  }
+  else {
+    var pickedColor = ADDITIONAL_COLORS[Object.keys(ChainValuesColors).length % ADDITIONAL_COLORS.length]
+    ChainValuesColors[stageName] = pickedColor
+    return ChainValuesColors[stageName]
   }
   return "#ff1100"
 }

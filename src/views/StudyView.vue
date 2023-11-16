@@ -19,6 +19,7 @@
                     :isLocalStudy="isLocal"
                     :hasEco="!!studyData.ecoData"
                     :hasSocial="!!studyData.socialData"
+                    :hasACV="!!studyData.acvData"
                 @update:currency="updateCurrency" />
             </div>
              <template v-if="studyData">
@@ -34,7 +35,7 @@
 
 <script setup>
 import { ref, onMounted, watch, computed } from 'vue'
-import { RouterLink, useRoute, useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import Skeleton from '../components/Skeleton.vue'
 import StudyOverview from '../components/StudyOverview.vue'
 import StudyEnvironment from '../components/StudyEnvironment.vue'
@@ -58,6 +59,14 @@ const studyData = ref(undefined)
 const error = ref(undefined)
 const isLocal = ref(undefined)
 
+const TypeOfViews = ref({
+    overview: undefined,
+    environment: "environment",
+    'economic-growth': 'economic-growth',
+    inclusiveness: "inclusiveness",
+    'social-sustainability': 'social-sustainability'
+})
+
 watch(currency, (newCurrency) => {
     router.push({ query: 
         {
@@ -70,18 +79,11 @@ watch(currency, (newCurrency) => {
 
 const currencySymbol = computed( () => currency.value === 'LOCAL' ? studyData.value.targetCurrency : currency.value);
 
-watch(studyData, () => {
-    if (!studyData.value.ecoData) {
-        view.value = 'social-sustainability'
-    }
-})
 
 onMounted(async () => {
   const studyId = route.query.id;
-  const studyView = route.query.view;
   const currencyFromUrl = route.query.currency
 
-  view.value = studyView;
   currency.value = currencyFromUrl
 
   if (!currency.value && localStorage.getItem('currency')) {
@@ -121,6 +123,21 @@ onMounted(async () => {
     }
   } catch(err) {
     error.value = err;
+  }
+
+  view.value = TypeOfViews.overview
+  if (route.query.view) {
+    view.value = route.query.view;
+  }
+  else if (!studyData.value.ecoData) {
+    if (!studyData.value.acvData) {
+      // Display social view if we only have social data
+      view.value = TypeOfViews.value['social-sustainability']
+    }
+    else if (!studyData.value.socialData) {
+      // Display environmental view if we only have environmental data
+      view.value = TypeOfViews.value.environment
+    }
   }
 })
 
