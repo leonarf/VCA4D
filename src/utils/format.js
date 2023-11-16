@@ -21,6 +21,9 @@ export const formatNumber = (value) => {
     divisor = 1e3
     textUnit = 'k'
   }
+  else if (Math.abs(value) < 100) {
+    return `${(value / divisor).toLocaleString(undefined, { maximumSignificantDigits: 2 })} ${textUnit}`
+  }
   return `${(value / divisor).toLocaleString(undefined, { maximumFractionDigits: numberDigits })} ${textUnit}`
 }
 

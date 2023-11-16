@@ -77,7 +77,9 @@ import Skeleton from '../components/Skeleton.vue'
 import { slugify } from '@/utils/format.js'
 import jsonData from '../../data/data.json'
 import { parseSustainabilityWorksheet } from '@/utils/import/social.js'
-import { parseEconomicsJson, getErrors, setImportErrors, clearImportErrors } from '@/utils/import/eco.js'
+import { parseEconomicsJson, getErrors } from '@/utils/import/eco.js'
+import { parseEnvironmentJson } from '@/utils/import/environment.js'
+import { setImportErrors, clearImportErrors, getImportErrors } from '@/utils/import/generic.js'
 
 import { RouterLink } from 'vue-router'
 
@@ -100,17 +102,21 @@ const isObjectNotEmpty = (obj) => {
     return Object.keys(obj).length > 0;
 }
 
+const sheetNameForSustainabilityData = "Questionnaire"
+const sheetsNameForEnvironmentalData = ["Value chains description"]
+const sheetsNameForEconomicData = ["Stages description"]
+
 const handleFileUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
-
         reader.onload = (e) => {
             const data = e.target.result;
             const wb = XLSX.read(data, { type: 'binary' });
             let output = {}
             wb.SheetNames.forEach((workSheet) => {
-                const rowObject = XLSX.utils.sheet_to_row_object_array(
+                console.log("Converting to JSON sheet", workSheet)
+                const rowObject = XLSX.utils.sheet_to_json(
                     wb.Sheets[workSheet]
                 )
                 output[workSheet] = rowObject
@@ -119,31 +125,49 @@ const handleFileUpload = (event) => {
             workbook.value = wb
             localStorage.setItem('localExcel', JSON.stringify(output))
             localStorage.setItem('localWorkbook', JSON.stringify(wb))
-
         };
-
         reader.readAsArrayBuffer(file);
     }
 }
 
-const sheetNameForSustainabilityData = "Questionnaire"
+const TypesOfFile = {
+    Sustainability: 'Sustainability',
+    Environment: 'Environment',
+    Economics: 'Economics',
+};
+
 const typeOfFile = computed(() => {
     if (!excelData.value) {
-        return ""
+        return null
     }
     if (excelData.value[sheetNameForSustainabilityData]) {
-        return "Sustainability"
+        return TypesOfFile.Sustainability
     }
-    return "Economics"
+    if (excelData.value[sheetsNameForEnvironmentalData[0]]) {
+        return TypesOfFile.Environment
+    }
+    if (excelData.value[sheetsNameForEconomicData[0]]) {
+        return TypesOfFile.Economics
+    }
+    setImportErrors(`The excel spreadsheet is missing a sheet named '${sheetNameForSustainabilityData}', '${sheetsNameForEnvironmentalData[0]}' or '${sheetsNameForEconomicData[0]}' depending of the excel type, ${Object.keys(TypesOfFile)}`)
+    return null
 })
 
 
 const getValueChainProperty = (json, propertyName) => {
-    var elementFound = json["Value Chain"].find(element => element["Property"] === propertyName)
+    var sheetName = "Study id"
+    if (!Object.keys(json).includes(sheetName)) {
+        var sheetName = "Value Chain"
+        if (!Object.keys(json).includes(sheetName)) {
+            setImportErrors(`The excel spreadsheet is missing a sheet named 'Study id'`)
+            return null
+        }
+    }
+    var elementFound = json[sheetName].find(element => element["Property"] === propertyName)
     if (elementFound) {
         return elementFound["Value"]
     }
-    setImportErrors(`Couldn't find '${propertyName}' in excel spreadsheet 'Value Chain'`)
+    setImportErrors(`Couldn't find '${propertyName}' in excel's sheet '${sheetName}'`)
     return null
 }
 
@@ -156,13 +180,19 @@ const readPercentValue = (identifier) => {
 }
 
 const studyProperties = computed(() => {
-
+    if (typeOfFile.value == null) {
+        return null
+    }
     const localStorageValue = localStorage.getItem('localStudyProperties')
     if (localStorageValue) {
-        return JSON.parse(localStorageValue)
+        try {
+            return JSON.parse(localStorageValue);
+        } catch (e) {
+            console.log("value of 'studyProperties' saved in the local storage in invalid", localStorageValue, typeof(localStorageValue))
+        }
     }
 
-    if (typeOfFile.value === 'Sustainability') {
+    if (typeOfFile.value === TypesOfFile.Sustainability) {
         if (!workbook.value) {
             return {}
         }
@@ -182,37 +212,49 @@ const studyProperties = computed(() => {
     if (!excelData.value) {
         return {}
     }
+
     const country = slugify(getValueChainProperty(excelData.value, "Country"))
     const commodity = getValueChainProperty(excelData.value, "Commodity")
-    const year = getValueChainProperty(excelData.value, "Reference Year")
-    const localCurrency = getValueChainProperty(excelData.value, "Study's local currency");
-    const targetCurrency = getValueChainProperty(excelData.value, "Standard currency code");
-    const currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency");
-    const giniIndex = getValueChainProperty(excelData.value, "Gini index") || undefined;
-    const rateOfIntegration = readPercentValue("Rate of integration into domestic economy")
-    const publicFundsBalance = readPercentValue("Public funds balance / Public budget")
-    const valueAddedShareNationalGdp = readPercentValue("Value added share of national GDP")
-    const valueAddedShareAgriculturalGdp = readPercentValue("Value added share of the agricultural sector GDP")
-    const domesticResourceCostRatio = getValueChainProperty(excelData.value, "Domestic resource cost ratio") || undefined;
-    const nominalProtectionCoefficient = getValueChainProperty(excelData.value, "Nominal protection coefficient") || undefined;
 
-    return {
+    var result = {
         id: slugify(commodity + "-" + country),
         country,
-        commodity,
-        year,
-        localCurrency,
-        targetCurrency,
-        currencyRatio,
-        giniIndex,
-        rateOfIntegration,
-        publicFundsBalance,
-        valueAddedShareNationalGdp,
-        valueAddedShareAgriculturalGdp,
-        domesticResourceCostRatio,
-        nominalProtectionCoefficient,
-        type: 'eco'
+        commodity
     }
+
+    if (typeOfFile.value === TypesOfFile.Economics) {
+        const year = getValueChainProperty(excelData.value, "Reference Year")
+        const localCurrency = getValueChainProperty(excelData.value, "Study's local currency");
+        const targetCurrency = getValueChainProperty(excelData.value, "Standard currency code");
+        const currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency");
+        const giniIndex = getValueChainProperty(excelData.value, "Gini index") || undefined;
+        const rateOfIntegration = readPercentValue("Rate of integration into domestic economy")
+        const publicFundsBalance = readPercentValue("Public funds balance / Public budget")
+        const valueAddedShareNationalGdp = readPercentValue("Value added share of national GDP")
+        const valueAddedShareAgriculturalGdp = readPercentValue("Value added share of the agricultural sector GDP")
+        const domesticResourceCostRatio = getValueChainProperty(excelData.value, "Domestic resource cost ratio") || undefined;
+        const nominalProtectionCoefficient = getValueChainProperty(excelData.value, "Nominal protection coefficient") || undefined;
+
+        result = {...result,
+            year,
+            localCurrency,
+            targetCurrency,
+            currencyRatio,
+            giniIndex,
+            rateOfIntegration,
+            publicFundsBalance,
+            valueAddedShareNationalGdp,
+            valueAddedShareAgriculturalGdp,
+            domesticResourceCostRatio,
+            nominalProtectionCoefficient,
+            type: 'eco'
+        }
+    }
+    else if (typeOfFile.value === TypesOfFile.Environment) {
+        result.type = "ACV"
+    }
+    console.log("studyProperties will be", result)
+    return result
 })
 
 watch(studyProperties, (newValue) => {
@@ -220,17 +262,19 @@ watch(studyProperties, (newValue) => {
 })
 
 const studyData = computed(() => {
-
+    if (typeOfFile.value == null) {
+        return null
+    }
     const localStorageValue = localStorage.getItem('localStudyData')
     if (localStorageValue) {
         return JSON.parse(localStorageValue)
     }
 
-    if (typeOfFile.value === 'Sustainability') {
+    if (typeOfFile.value === TypesOfFile.Sustainability) {
         if (!workbook.value) {
             return {}
         }
-        const questionnaireSheet = workbook.value.Sheets[workbook.value.SheetNames[2]]
+        const questionnaireSheet = workbook.value.Sheets[sheetNameForSustainabilityData]
         return {
             ...studyProperties.value,
             socialData: parseSustainabilityWorksheet(questionnaireSheet)
@@ -239,19 +283,25 @@ const studyData = computed(() => {
     if (!excelData.value) {
         return {}
     }
-    return {
-        ...studyProperties.value,
-        ecoData: parseEconomicsJson(excelData.value)
+    if (typeOfFile.value === TypesOfFile.Economics) {
+        return {
+            ...studyProperties.value,
+            ecoData: parseEconomicsJson(excelData.value)
+        }
     }
-
+    if (typeOfFile.value === TypesOfFile.Environment) {
+        return {
+            ...studyProperties.value,
+            acvData: parseEnvironmentJson(excelData.value)
+        }
+    }
 })
 
 watch(studyData, (newValue) => {
     localStorage.setItem('localStudyData', JSON.stringify(newValue))
 })
 
-const errors = computed(() => typeOfFile.value === 'Sustainability' ? [] : getErrors(studyData.value))
-
+const errors = computed(() => typeOfFile.value === TypesOfFile.Economics ? getErrors(studyData.value) : getImportErrors())
 
 const jsonFile = computed(() => {
     return JSON.stringify(

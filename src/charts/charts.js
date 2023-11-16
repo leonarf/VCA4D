@@ -180,7 +180,7 @@ export const getExportedProductsData = (ecoData, prettyAmount, convertAmount) =>
 /*
 * SELECTABLE BAR CHART
 */
-const getSelectableBarChart = (items, currentItem, tooltip, formatLabel) => {
+export const getSelectableBarChart = (items, currentItem, tooltip, formatLabel) => {
     let labels = []
     let values = []
     items.map(item => {

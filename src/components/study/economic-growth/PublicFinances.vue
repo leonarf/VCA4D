@@ -68,7 +68,6 @@ const currentStagePublicFinancesData = computed(() => {
     const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
     return getPublicFinancesPerStage(currentStageActors, convertAmount.value, prettyAmount.value)
 })
-
 </script>
 
 <style scoped lang="scss">
