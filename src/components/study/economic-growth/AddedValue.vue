@@ -4,14 +4,14 @@
         label="Total value added" 
         :value="totalAddedValueCreators" 
       />
-      <NiceMetric 
-        label="Value added share of the agricultural sector GDP" 
+      <NiceMetric
+        label="Value added share of the agricultural sector GDP"
         :value="studyData.valueAddedShareAgriculturalGdp * 100"
         :isPercent="true"
       />
-      <NiceMetric 
-        label="Value added share of national GDP" 
-        :value="studyData.valueAddedShareNationalGdp * 100" 
+      <NiceMetric
+        label="Value added share of national GDP"
+        :value="studyData.valueAddedShareNationalGdp * 100"
         :isPercent="true"
       />
     </div>
