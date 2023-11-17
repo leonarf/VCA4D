@@ -1,0 +1,1819 @@
+{
+  "id": "cocoa-ecuador",
+  "country": "ecuador",
+  "commodity": "Cocoa",
+  "type": "ACV",
+  "acvData": {
+    "valuechains": [
+      {
+        "name": "Volume",
+        "volume": 204249.6,
+        "volumeYear": 2019,
+        "volumeUnit": "t",
+        "actors": {
+          "Producer (small)": "X",
+          "Producer (small, business)": "X",
+          "Ecuador cocoa post-harvest opperations in collection centre. thermal drying": "X",
+          "Traders": "X",
+          "Ecuador cocoa transport": "X"
+        }
+      },
+      {
+        "name": "Quality",
+        "volume": 56736,
+        "volumeYear": 2019,
+        "volumeUnit": "t",
+        "actors": {
+          "Producer (intermediate)": "X",
+          "Producer (large)": "X",
+          "Ecuador cocoa post-harvest opperations in collection centre. sun-drying": "X",
+          "Collection centre": "X",
+          "Traders": "X",
+          "Ecuador cocoa transport": "X"
+        }
+      },
+      {
+        "name": "Organic",
+        "volume": 2836.8,
+        "volumeYear": 2019,
+        "volumeUnit": "t",
+        "actors": {
+          "Producer (small)": "X",
+          "Producer (small, business)": "X",
+          "Producer (intermediate)": "X",
+          "Ecuador cocoa post-harvest opperations in collection centre. sun-drying": "X",
+          "Collection centre": "X",
+          "Traders": "X",
+          "Ecuador cocoa transport": "X"
+        }
+      },
+      {
+        "name": "Semi-finished",
+        "volume": 19857.6,
+        "volumeYear": 2019,
+        "volumeUnit": "t",
+        "actors": {
+          "Producer (small)": "X",
+          "Producer (small, business)": "X",
+          "Producer (large)": "X",
+          "Ecuador cocoa post-harvest opperations in collection centre. sun-drying": "X",
+          "Collection centre": "X",
+          "Industrial processor 1": "X",
+          "Ecuador cocoa transport": "X"
+        }
+      },
+      {
+        "name": "Premium",
+        "volumeYear": 2019,
+        "volumeUnit": "t",
+        "actors": {
+          "Producer (small)": "X",
+          "Producer (intermediate)": "X",
+          "Ecuador cocoa post-harvest opperations in collection centre. sun-drying": "X",
+          "Collection centre": "X",
+          "Ecuador cocoa transport": "X"
+        }
+      }
+    ],
+    "actors": [
+      {
+        "name": "Producer (small)",
+        "stage": ""
+      },
+      {
+        "name": "Producer (small, business)",
+        "stage": ""
+      },
+      {
+        "name": "Producer (intermediate)",
+        "stage": ""
+      },
+      {
+        "name": "Producer (large)",
+        "stage": ""
+      },
+      {
+        "name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+        "stage": ""
+      },
+      {
+        "name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+        "stage": ""
+      },
+      {
+        "name": "Collection centre",
+        "stage": ""
+      },
+      {
+        "name": "Traders",
+        "stage": ""
+      },
+      {
+        "name": "Industrial processor 1",
+        "stage": ""
+      },
+      {
+        "name": "Ecuador cocoa transport",
+        "stage": ""
+      }
+    ],
+    "impacts": [
+      {
+        "name": "Global warming",
+        "method": "Environmental Footprint 3.1 (adapted) V1.00 / EF 3.1 normalization and weighting set",
+        "functional_unit": "1 t",
+        "unit": "kg CO2 eq",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 862.2749
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 988.45965
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 471.40187
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 60.6147566
+          }
+        ]
+      },
+      {
+        "name": "Climate Change",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 14.949604127021
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 16.864220469721
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 7.7708140591609
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 1.00183679540832
+          }
+        ]
+      },
+      {
+        "name": "Global warming, Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 14.253415
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 16.078517
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 7.4083814
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.95510865
+          }
+        ]
+      },
+      {
+        "name": "Stratospheric ozone depletion",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.20990325
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.16696494
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.00146036
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.000082517284
+          }
+        ]
+      },
+      {
+        "name": "Ionizing radiation",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.0012311827
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.0023469358
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.00021125088
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.000083567672
+          }
+        ]
+      },
+      {
+        "name": "Ozone formation, Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.044642676
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.071147671
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.02996675
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0058305997
+          }
+        ]
+      },
+      {
+        "name": "Fine particulate matter formation",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 8.7596496
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 16.838426
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 4.7423454
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.89938947
+          }
+        ]
+      },
+      {
+        "name": "Human carcinogenic toxicity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.81680583
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 1.5090178
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.51389857
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.172868831
+          }
+        ]
+      },
+      {
+        "name": "Human non-carcinogenic toxicity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 1.0247944
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 2.0434841
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.12083982
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.190449459
+          }
+        ]
+      },
+      {
+        "name": "Water consumption, Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 2.2536265
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 3.2467702
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": -0.037680165
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.00219327095
+          }
+        ]
+      },
+      {
+        "name": "Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 27.364068
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 39.956674
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 12.779423
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 2.22600639
+          },
+          {
+            "valuechain_name": "Quality",
+            "actor_name": "Producer (large)",
+            "value": 82.174904
+          },
+          {
+            "valuechain_name": "Quality",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 3.7380987
+          },
+          {
+            "valuechain_name": "Quality",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 2.05737167
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Producer (small)",
+            "value": 32.836882
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Producer (small, business)",
+            "value": 47.948009
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 4.5037334
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Industrial processor 1",
+            "value": 5.2506542
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 2.22600639
+          },
+          {
+            "valuechain_name": "Premium",
+            "actor_name": "Producer (intermediate)",
+            "value": 29.498591
+          },
+          {
+            "valuechain_name": "Premium",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 3.7380987
+          },
+          {
+            "valuechain_name": "Premium",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 2.51911507
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Producer (small)",
+            "value": 28.021242
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Producer (small, business)",
+            "value": 14.862955
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Producer (intermediate)",
+            "value": 1.3547501
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 3.7380987
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 2.22600639
+          }
+        ]
+      },
+      {
+        "name": "Global warming. Terrestrial ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.6961701
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.785682
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.36242276
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0467268692
+          }
+        ]
+      },
+      {
+        "name": "Global warming. Freshwater ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.000019027021
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.000021469721
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.0000098991609
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.00000127620832
+          }
+        ]
+      },
+      {
+        "name": "Ozone formation. Terrestrial ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.10460151
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.16681673
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.071025
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0138382753
+          }
+        ]
+      },
+      {
+        "name": "Terrestrial acidification",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.093232765
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.23627443
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.058279104
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0112973539
+          }
+        ]
+      },
+      {
+        "name": "Freshwater eutrophication",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.012034585
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.024163468
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.0058343482
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.00096845679
+          }
+        ]
+      },
+      {
+        "name": "Marine eutrophication",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.000002127302
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.000015503845
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.0000075794617
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 6.58923327e-7
+          }
+        ]
+      },
+      {
+        "name": "Terrestrial ecotoxicity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.0022598844
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.0044933979
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.00083906392
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.00287011935
+          }
+        ]
+      },
+      {
+        "name": "Freshwater ecotoxicity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.00085962468
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.0018064423
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.00034069198
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.000279548379
+          }
+        ]
+      },
+      {
+        "name": "Marine ecotoxicity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.00018598827
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.00039266422
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.000072974839
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0000707064719
+          }
+        ]
+      },
+      {
+        "name": "Land use",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 52.152772
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 42.064481
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.006646453
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.00576060574
+          }
+        ]
+      },
+      {
+        "name": "Water consumption. Terrestrial ecosystem",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.25036272
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.36975642
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": -0.0035250121
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.00030247589
+          }
+        ]
+      },
+      {
+        "name": "Water consumption. Aquatic ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.00010937056
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.00018841934
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": -1.0293905e-7
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 4.08620813e-8
+          }
+        ]
+      },
+      {
+        "name": "Ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 53.312609
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 43.654092
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.50195276
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.082116387
+          },
+          {
+            "valuechain_name": "Quality",
+            "actor_name": "Producer (large)",
+            "value": 46.727467
+          },
+          {
+            "valuechain_name": "Quality",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 0.16578871
+          },
+          {
+            "valuechain_name": "Quality",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.075826131
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Producer (small)",
+            "value": 63.975131
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Producer (small, business)",
+            "value": 52.384911
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 0.19974544
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Industrial processor 1",
+            "value": 0.17668608
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.082116387
+          },
+          {
+            "valuechain_name": "Premium",
+            "actor_name": "Producer (intermediate)",
+            "value": 71.268492
+          },
+          {
+            "valuechain_name": "Premium",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 0.16578871
+          },
+          {
+            "valuechain_name": "Premium",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.092940947
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Producer (small)",
+            "value": 68.059548
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Producer (small, business)",
+            "value": 29.607249
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Producer (intermediate)",
+            "value": 3.2730715
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 0.16578871
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.082116387
+          }
+        ]
+      },
+      {
+        "name": "Mineral resource scarcity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.0031932272
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.028045484
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.0006623006
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.000261383962
+          }
+        ]
+      },
+      {
+        "name": "Fossil resource scarcity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.26738416
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.48405281
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.29985636
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0584282046
+          }
+        ]
+      },
+      {
+        "name": "Resources",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.27057738
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.5120983
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.30051866
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0586895887
+          },
+          {
+            "valuechain_name": "Quality",
+            "actor_name": "Producer (large)",
+            "value": 1.0529935
+          },
+          {
+            "valuechain_name": "Quality",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 0.031264606
+          },
+          {
+            "valuechain_name": "Quality",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.054113332
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Producer (small)",
+            "value": 0.32469286
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Producer (small, business)",
+            "value": 0.61451795
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 0.0376682
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Industrial processor 1",
+            "value": 0.12160138
+          },
+          {
+            "valuechain_name": "Semi-finished",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0586895887
+          },
+          {
+            "valuechain_name": "Premium",
+            "actor_name": "Producer (intermediate)",
+            "value": 0.18784513
+          },
+          {
+            "valuechain_name": "Premium",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 0.031264606
+          },
+          {
+            "valuechain_name": "Premium",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.066439858
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Producer (small)",
+            "value": 0.20768685
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Producer (small, business)",
+            "value": 0.11478913
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Producer (intermediate)",
+            "value": 0.0086269617
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. sun-drying",
+            "value": 0.031264606
+          },
+          {
+            "valuechain_name": "Organic",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0586895887
+          }
+        ]
+      },
+      {
+        "name": "Global warming. Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "DALY",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.00085452128
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.00096393985
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.00044414756
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0000572607102
+          }
+        ]
+      },
+      {
+        "name": "Stratospheric ozone depletion",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "DALY",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.000012584128
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.000010009889
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 8.7551559e-8
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 4.94707943e-9
+          }
+        ]
+      },
+      {
+        "name": "Ionizing radiation",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "DALY",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 7.3811911e-8
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 1.4070359e-7
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 1.2664921e-8
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 5.01005224e-9
+          }
+        ]
+      },
+      {
+        "name": "Ozone formation. Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "DALY",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.0000026764195
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.0000042654479
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.0000017965677
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 3.49556335e-7
+          }
+        ]
+      },
+      {
+        "name": "Fine particulate matter formation",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "DALY",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.00052515885
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.0010094979
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.00028431327
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0000539202316
+          }
+        ]
+      },
+      {
+        "name": "Human carcinogenic toxicity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "DALY",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.000048969175
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.000090468694
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.000030809267
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0000103638389
+          }
+        ]
+      },
+      {
+        "name": "Human non-carcinogenic toxicity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "DALY",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.000061438512
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.00012251104
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.0000072445935
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0000114178333
+          }
+        ]
+      },
+      {
+        "name": "Water consumption. Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "DALY",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.0001351095
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.00019465049
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": -0.0000022590027
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 1.31491063e-7
+          }
+        ]
+      },
+      {
+        "name": "Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "DALY",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.001640531676411
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.00239548401449
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.00076615247198
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.00013345361852967
+          }
+        ]
+      },
+      {
+        "name": "Global warming. Terrestrial ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.0000025745936
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.0000029056287
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.0000013403209
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 1.72806463e-7
+          }
+        ]
+      },
+      {
+        "name": "Global warming. Freshwater ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 7.0366201e-11
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 7.9399857e-11
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 3.6609323e-11
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 4.71970532e-12
+          }
+        ]
+      },
+      {
+        "name": "Ozone formation. Terrestrial ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 3.8683991e-7
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 6.1692577e-7
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 2.6266642e-7
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 5.1177054e-8
+          }
+        ]
+      },
+      {
+        "name": "Terrestrial acidification",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 3.4479573e-7
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 8.7379596e-7
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 2.1552923e-7
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 4.17801549e-8
+          }
+        ]
+      },
+      {
+        "name": "Freshwater eutrophication",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 4.4506602e-8
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 8.9361937e-8
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 2.1576732e-8
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 3.58157096e-9
+          }
+        ]
+      },
+      {
+        "name": "Marine eutrophication",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 7.8672413e-12
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 5.7336703e-11
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 2.8030554e-11
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 2.43684662e-12
+          }
+        ]
+      },
+      {
+        "name": "Terrestrial ecotoxicity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 8.3575607e-9
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 1.6617596e-8
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 3.103047e-9
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 1.06143468e-8
+          }
+        ]
+      },
+      {
+        "name": "Freshwater ecotoxicity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 3.1790854e-9
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 6.68063e-9
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 1.2599556e-9
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 1.03383276e-9
+          }
+        ]
+      },
+      {
+        "name": "Marine ecotoxicity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 6.8782646e-10
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 1.4521606e-9
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 2.6987736e-10
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 2.6148843e-10
+          }
+        ]
+      },
+      {
+        "name": "Land use",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.00019287268
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.00015556391
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 2.4580078e-8
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 2.13040147e-8
+          }
+        ]
+      },
+      {
+        "name": "Water consumption. Terrestrial ecosystem",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 9.2589763e-7
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.0000013674424
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": -1.3036287e-8
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 1.11862385e-9
+          }
+        ]
+      },
+      {
+        "name": "Water consumption. Aquatic ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 4.0447693e-10
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 6.9681707e-10
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": -3.8069175e-13
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 1.51117166e-13
+          }
+        ]
+      },
+      {
+        "name": "Ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.000197162020654932
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0.00016144264870723
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.00000185633421214525
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 3.03684857069106e-7
+          }
+        ]
+      },
+      {
+        "name": "Mineral resource scarcity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "USD2013",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 0.44723071
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 3.9279389
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 0.092759188
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 0.0366083975
+          }
+        ]
+      },
+      {
+        "name": "Fossil resource scarcity",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "USD2013",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 37.448762
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 67.794511
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 41.99669
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 8.1832219
+          }
+        ]
+      },
+      {
+        "name": "Resources",
+        "method": "ReCiPe 2016 Endpoint (H) V1.07 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "USD2013",
+        "values": [
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small)",
+            "value": 159.9277172
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Producer (small, business)",
+            "value": 0
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa post-harvest opperations in collection centre. thermal drying",
+            "value": 37.89599271
+          },
+          {
+            "valuechain_name": "Volume",
+            "actor_name": "Ecuador cocoa transport",
+            "value": 119.421929506
+          }
+        ]
+      }
+    ]
+  }
+}

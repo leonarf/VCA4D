@@ -109,12 +109,20 @@ onMounted(async () => {
         } catch {
             console.log(`did not found social data for ${studyId}`)
         }
-        const metaInfo = ecoData ? ecoData : socialData
+
+        let acvData = undefined
+        try {
+            acvData = await(getStudyData(`${studyId}-acv`))
+        } catch {
+            console.log(`did not found environmental data for ${studyId}`)
+        }
+        const metaInfo = ecoData ? ecoData : socialData ? socialData : acvData
 
         studyData.value = {
             ...metaInfo,
             ecoData: ecoData?.data,
-            socialData: socialData.socialData
+            socialData: socialData?.socialData,
+            acvData: acvData?.acvData
         }
     }
     

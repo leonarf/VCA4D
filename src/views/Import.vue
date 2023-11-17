@@ -342,7 +342,19 @@ const dataFile = computed(() => {
         , null, 2)
 })
 
-const studyFileName = computed(() => `${studyProperties.value.id}-${typeOfFile.value === 'Sustainability' ? 'social' : 'eco'}.json`)
+const studyFileName = computed(() => {
+    var suffix = ""
+    if (typeOfFile.value == TypesOfFile.Economics) {
+        suffix = "eco"
+    }
+    else if (typeOfFile.value == TypesOfFile.Environment) {
+        suffix = "acv"
+    }
+    else if (typeOfFile.value == TypesOfFile.Sustainability) {
+        suffix = "social"
+    }
+    return `${studyProperties.value.id}-${suffix}.json`
+})
 
 const downloadFile = (data, fileName) => {
     const blob = new Blob([data], { type: 'application/json' });

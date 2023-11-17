@@ -43,7 +43,7 @@
 
         </section>
 
-        <section v-if="studyData">
+        <section v-if="studyData && studyData.ecoData">
             <Sankey :studyData="studyData"/>
         </section>
         <section v-else class="TODO">
@@ -75,7 +75,7 @@ const props = defineProps({
 const DISPLAY_STEPS = ['Producers', 'Collectors', 'Processors', 'Wholesalers', 'Retailers']
 
 const populatedSteps = computed(() => {
-    return props.studyData?.ecoData.stages
+    return props.studyData?.ecoData?.stages
     .filter(stage => DISPLAY_STEPS.includes(stage.name))
     .map(stage => ({
         ...stage,
