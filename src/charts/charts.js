@@ -8,7 +8,7 @@ const SELECTED_COLOR_HOVER = "#f7d9de"
 /*
 * RING CHART
 */
-const getRingChart = (items, tooltip, title) => {
+export const getRingChart = (items, tooltip, title) => {
     return {
         title: {
             text: title,

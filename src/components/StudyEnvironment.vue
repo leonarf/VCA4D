@@ -11,18 +11,17 @@
       step or of some actors to improve the overall sustainability of the value chain.
     </p>
     <template v-if="studyData">
-      <div v-for="barChartOption, index in allBarChartsData" :key="index">
-        <BarChart :options="barChartOption" @chartSeriesClick="handleDataChartSeriesClick" />
+      <div v-for="allImpactData, impactName in allBarChartsData" :key="impactName">
+        <ImpactDataviz :impactData="allImpactData" :impactName="impactName"/>
       </div>
     </template>
   </article>
 </template>
 
 <script setup>
-import { computed, ref, onMounted } from 'vue'
+import { computed } from 'vue'
 import SectionTitle from '@typography/SectionTitle.vue'
-import { getSelectableBarChart } from '@/charts/charts'
-import BarChart from '@charts/BarChart.vue'
+import ImpactDataviz from '@/components/study/environment/ImpactDataviz.vue'
 import { ACVImpacts } from '@/utils/misc.js'
 
 const props = defineProps({
@@ -30,40 +29,17 @@ const props = defineProps({
 })
 
 const allBarChartsData = computed(() => {
-  let tooltip = {}
-  var majorImpactsnames = ACVImpacts.map((impact) => impact.name)
-  console.log(majorImpactsnames)
+  var majorImpactsNames = ACVImpacts.map((impact) => impact.name)
   var impactsToDrawOnGraph = props.studyData.acvData.impacts.filter((impact) => {
-    return majorImpactsnames.includes(impact.name)
+    return majorImpactsNames.includes(impact.name)
   })
-  var series = []
+
+  var series = {}
   for (var impact of impactsToDrawOnGraph) {
-    var valuesByChain = {}
-    for (var value of impact.values) {
-      if (!(value.valuechain_name in valuesByChain)) {
-        valuesByChain[value.valuechain_name] = 0
-      }
-      valuesByChain[value.valuechain_name] += value.value
+    if (!(impact.name in series)) {
+      series[impact.name] = {}
     }
-
-    const items = Object.keys(valuesByChain).map((chainName) => {
-      return {
-        name: chainName,
-        value: valuesByChain[chainName]
-      }
-    })
-
-    const ret = getSelectableBarChart(items, null, tooltip, null)
-    series.push({
-      ...ret,
-      yAxis: {
-        type: 'value',
-        name: `${impact.name} (${impact.unit})`,
-        axisLine: {
-          show: true
-        }
-      }
-    })
+    series[impact.name][impact.unit] = impact
   }
   return series
 })
