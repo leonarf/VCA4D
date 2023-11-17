@@ -105,7 +105,7 @@ export const parseEconomicsJson = (json) => {
     })
     const headerColumnMissing = [...missingColumns].filter(x => !foundColumns.has(x));
     if (headerColumnMissing.length > 0) {
-      setImportErrors(`Missing columns headers [${headerColumnMissing.join(', ')}] on first row of excel spreadsheet named 'Employment'`)
+      setImportErrors(`Missing columns headers [${headerColumnMissing.join(', ')}] on first row of excel spreadsheet named 'Employment', or these columns are empty`)
     }
   
     actors = actors.map(actor => {
@@ -150,19 +150,30 @@ export const parseEconomicsJson = (json) => {
       return (stage1?.index || 0) - (stage2?.index || 0)
     })
   
-    const importExportItems = json["Imported And exported goods"].map(importExportItem => ({
+    var sheetname = "Imported And exported goods"
+    const importExportItems = json[sheetname].map(importExportItem => ({
           label: importExportItem['Goods'],
           importExport: importExportItem['Imported Or Exported'],
           amount: importExportItem['Value (local currency)'],
       })
     )
-    const importExport = {
-      import: importExportItems.filter(item => item.importExport.localeCompare('IMPORT', undefined, { sensitivity: "base" }) === 0),
-      export: importExportItems.filter(item => item.importExport.localeCompare('EXPORT', undefined, { sensitivity: "base" }) === 0),
+
+    var importExport = {
+      import: [],
+      export: []
+    }
+
+    var acceptableImportKeyWord = ["IMPORT", "Imported"]
+    for (var keyword of acceptableImportKeyWord) {
+      importExport.import.push(...importExportItems.filter(item => item.importExport.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
+    }
+    var acceptableExportKeyWord = ["EXPORT", "Exported"]
+    for (var keyword of acceptableExportKeyWord) {
+      importExport.export.push(...importExportItems.filter(item => item.importExport.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
     }
   
     if (importExportItems.length > 0 && importExport.import.length == 0 && importExport.import.length == 0) {
-      setImportErrors("Column 'Imported Or Exported' of excel spreadsheet 'Imported And exported goods' seems to be wrongly filled. It should contains 'IMPORT' or 'EXPORT")
+      setImportErrors(`Column 'Imported Or Exported' of excel spreadsheet '${sheetname}' seems to be wrongly filled. It should contains one of '${acceptableImportKeyWord}' for import or one of '${acceptableExportKeyWord}' for export`)
     }
   
     const farmToFinalPricesRatio = json["Farm gate price In final price"].map(priceItem => ({

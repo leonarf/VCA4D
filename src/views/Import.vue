@@ -176,7 +176,7 @@ const readPercentValue = (identifier) => {
     if (!valueInExcel) {
         return undefined
     }
-    return (valueInExcel / 100.0).toFixed(2)
+    return (valueInExcel / 100.0)
 }
 
 const studyProperties = computed(() => {
@@ -215,6 +215,11 @@ const studyProperties = computed(() => {
 
     const country = slugify(getValueChainProperty(excelData.value, "Country"))
     const commodity = getValueChainProperty(excelData.value, "Commodity")
+
+    const existingCommodities = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
+    if (!existingCommodities.includes(slugify(commodity))) {
+        setImportErrors(`The commodity ${commodity} is not recognized. Known commidities are ${existingCommodities}`)
+    }
 
     var result = {
         id: slugify(commodity + "-" + country),
