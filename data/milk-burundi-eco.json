@@ -7,7 +7,7 @@
   "localCurrency": "MBIF",
   "targetCurrency": "BIF",
   "currencyRatio": 1000000,
-  "data": {
+  "ecoData": {
     "stages": [
       {
         "name": "Producers",

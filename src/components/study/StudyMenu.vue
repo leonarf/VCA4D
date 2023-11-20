@@ -45,7 +45,7 @@
         {
             view: undefined,
             label: 'Overview',
-            accessible: props.hasEco
+            accessible: (props.hasEco + props.hasSocial + props.hasACV) >= 2
         },
         {
             view: 'economic-growth',

@@ -7,7 +7,7 @@
   "localCurrency": "CFA",
   "targetCurrency": "XOF",
   "currencyRatio": 1,
-  "data": {
+  "ecoData": {
     "stages": [
       {
         "name": "Producers",

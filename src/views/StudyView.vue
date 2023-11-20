@@ -120,7 +120,7 @@ onMounted(async () => {
 
         studyData.value = {
             ...metaInfo,
-            ecoData: ecoData?.data,
+            ecoData: ecoData?.ecoData,
             socialData: socialData?.socialData,
             acvData: acvData?.acvData
         }

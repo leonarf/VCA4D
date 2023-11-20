@@ -14,7 +14,7 @@
   "domesticResourceCostRatio": 0.2,
   "nominalProtectionCoefficient": 1,
   "type": "eco",
-  "data": {
+  "ecoData": {
     "stages": [
       {
         "name": "Agricultural producers",
