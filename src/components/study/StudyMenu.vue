@@ -21,8 +21,8 @@
                 @change="$emit('update:currency', $event.target.value)"
             >
                 <option value="LOCAL">{{ localCurrency }} ({{  getCurrencySymbol(localCurrency) }})</option>
-                <option value="USD">Us Dollar (&dollar;)</option>
-                <option value="EUR">Euro (&euro;)</option>
+                <option v-if="localCurrency !== 'USD'" value="USD">Us Dollar (&dollar;)</option>
+                <option v-if="localCurrency !== 'EUR'" value="EUR">Euro (&euro;)</option>
             </select>
         </div>
     </nav>
