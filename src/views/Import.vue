@@ -230,8 +230,8 @@ const studyProperties = computed(() => {
     if (typeOfFile.value === TypesOfFile.Economics) {
         const year = getValueChainProperty(excelData.value, "Reference Year")
         const localCurrency = getValueChainProperty(excelData.value, "Study's local currency");
-        const targetCurrency = getValueChainProperty(excelData.value, "Standard currency code");
-        const currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency");
+        const targetCurrency = getValueChainProperty(excelData.value, "Standard currency code") || localCurrency;
+        const currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency") || 1.0;
         const giniIndex = getValueChainProperty(excelData.value, "Gini index") || undefined;
         const rateOfIntegration = readPercentValue("Rate of integration into domestic economy")
         const publicFundsBalance = readPercentValue("Public funds balance / Public budget")
@@ -377,6 +377,7 @@ const downloadDataJson = () => {
 }
 
 onMounted(() => {
+    clearImportErrors()
     const localStorageExcel = localStorage.getItem('localExcel')
     if (localStorageExcel) {
         excelData.value = JSON.parse(localStorageExcel)
