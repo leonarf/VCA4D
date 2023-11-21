@@ -6,13 +6,11 @@
       />
       <NiceMetric
         label="Value added share of the agricultural sector GDP"
-        :value="studyData.valueAddedShareAgriculturalGdp * 100"
-        :isPercent="true"
+        :value="formatPercent(+studyData.valueAddedShareAgriculturalGdp)"
       />
       <NiceMetric
         label="Value added share of national GDP"
-        :value="studyData.valueAddedShareNationalGdp * 100"
-        :isPercent="true"
+        :value="formatPercent(+studyData.valueAddedShareNationalGdp)"
       />
     </div>
 
@@ -55,6 +53,8 @@ import { useCurrencyUtils } from '@/utils/format.js'
 import { useActorsAndStages } from '@/utils/misc.js'
 import InfoTitle from '@typography/InfoTitle.vue'
 import HorizontalSlider from '../../charts/HorizontalSlider.vue'
+import { formatPercent } from '@/utils/format.js'
+
 
 const props = defineProps({
     studyData: Object,
