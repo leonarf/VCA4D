@@ -26,6 +26,9 @@ const CHANGE_RATES = {
     2022:	0.9523809523809523
   }
 }
+
+export const KNOWN_CURRENCIES = ["USD", "EUR", ...Object.keys(CHANGE_RATES)]
+
 let CurrencyFormatters = {}
 const getCurrencyFormatter = (currency) => {
   if (!(currency in CurrencyFormatters)) {

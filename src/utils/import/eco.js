@@ -1,4 +1,5 @@
 import { setImportErrors, getImportErrors, parseActorTypes } from '@/utils/import/generic.js'
+import { KNOWN_CURRENCIES } from '../currency'
 
 export const parseEconomicsJson = (json) => {
   const stages = json["Stages description"].map((stage, index) => ({
@@ -195,7 +196,7 @@ export const parseEconomicsJson = (json) => {
   export const getErrors = (study) => {
     let errors = getImportErrors()
   
-    if (!['BIF', 'XOF'].includes(study.targetCurrency)) {
+    if (!KNOWN_CURRENCIES.includes(study.targetCurrency)) {
       errors.push({
         level: "error",
         message: `Unknown currency ${study.targetCurrency}`
