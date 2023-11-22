@@ -11,8 +11,8 @@
       step or of some actors to improve the overall sustainability of the value chain.
     </p>
     <template v-if="studyData">
-      <div v-for="allImpactData, impactName in allBarChartsData" :key="impactName">
-        <ImpactDataviz :impactData="allImpactData" :impactName="impactName"/>
+      <div v-for="impact in allBarChartsData" :key="impact.name">
+        <ImpactDataviz :impact="impact" />
       </div>
     </template>
   </article>
@@ -34,14 +34,7 @@ const allBarChartsData = computed(() => {
     return majorImpactsNames.includes(impact.name)
   })
 
-  var series = {}
-  for (var impact of impactsToDrawOnGraph) {
-    if (!(impact.name in series)) {
-      series[impact.name] = {}
-    }
-    series[impact.name][impact.unit] = impact
-  }
-  return series
+  return impactsToDrawOnGraph
 })
 </script>
 

@@ -4,12 +4,17 @@ import { getStageColor } from '@/utils/colors.js'
 
 const props = defineProps({
     currentStage: String,
-    title: String
+    title: String,
+    isEnvironment: {
+        type: Boolean,
+        required: false,
+        default: false
+    }
 })
 
 const bgColor = computed(() => {
     return {
-        backgroundColor: getStageColor(props.currentStage) 
+        backgroundColor: getStageColor(props.currentStage, props.isEnvironment) 
     }
 })
 </script>

@@ -1,83 +1,86 @@
 <template>
   <div>
-    <div v-for="barChartOption, unit in populatedBarChartData" :key="unit">
-      <p>{{ impactName }} {{ unit }}</p>
-      <BarChart :options="barChartOption" @chartSeriesClick="handleDataChartSeriesClick" />
+
+      <h3>{{ impact.name }}</h3>
+      <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
       <div>
-        <MiniChartContainer :currentStage="selectedValueChain" :title="`${impactName} (${unit})`">
+        <MiniChartContainer :currentStage="selectedValueChain" :title="`${impact.name} (${impact.unit})`" :isEnvironment="true">
             <div class="flex flex-row w-full justify-evenly mt-6">
                 <div class="w-full flex flex-row justify-center">
-                  <Ring :options="populatedRingChartData[unit]"></Ring>
+                  <Ring :options="populatedRingChartData"></Ring>
                 </div>
             </div>
         </MiniChartContainer>
       </div>
     </div>
-  </div>
 </template>
 
 <script setup>
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref } from 'vue'
 import { getSelectableBarChart, getRingChart } from '@/charts/charts'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
 
 const props = defineProps({
-    impactData: Object,
-    impactName: String
+    impact: Object,
 })
 
-const selectedValueChain = ref('')
+
+const selectedValueChain = ref(props.impact.values[0].valuechain_name)
 const handleDataChartSeriesClick = (event) => selectedValueChain.value = event.name
 
 const populatedRingChartData = computed(() => {
   var tooltip = {}
-  console.log("selectedValueChain", selectedValueChain)
   var series = {}
-  for (var unit in props.impactData) {
-    var items = props.impactData[unit].values.filter(item => item.valuechain_name == selectedValueChain.value)
+    var items = props.impact.values.filter(item => item.valuechain_name == selectedValueChain.value)
     .map(item => {
       return {
         name: item.actor_name,
-        value: item.value
+        value: item.value,
+        label: {
+            width: 250,
+            overflow: 'break',
+            color: "#e2e0e0",
+            fontSize: 16
+        },
+        labelLine: {
+            length: 40,
+            length2: 10,
+            smooth: true,
+        },
       }
     })
-    series[unit] = getRingChart(items, tooltip, "ceci est un titre")
-  }
+    series = getRingChart(items, tooltip, "", true)
   return series
 })
 
 const populatedBarChartData = computed(() => {
-  console.log("props.impactData", props.impactData)
   var tooltip = {}
   var series = {}
-  for (var unit in props.impactData) {
-    var valuesByChain = {}
-    var impactValues = props.impactData[unit].values
-    for (var value of impactValues) {
-      if (!(value.valuechain_name in valuesByChain)) {
-        valuesByChain[value.valuechain_name] = 0
-      }
-      valuesByChain[value.valuechain_name] += value.value
+  var valuesByChain = {}
+  for (var value of props.impact.values) {
+    if (!(value.valuechain_name in valuesByChain)) {
+      valuesByChain[value.valuechain_name] = 0
     }
+    valuesByChain[value.valuechain_name] += value.value
+  }
 
-    const items = Object.keys(valuesByChain).map((chainName) => {
-      return {
-        name: chainName,
-        value: valuesByChain[chainName]
-      }
-    })
+  const items = Object.keys(valuesByChain).map((chainName) => {
+    return {
+      name: chainName,
+      value: valuesByChain[chainName]
+    }
+  })
 
-    const ret = getSelectableBarChart(items, null, tooltip, null)
-    series[unit] = {
-      ...ret,
-      yAxis: {
-        type: 'value',
-        name: `${props.impactName} (${unit})`,
-        axisLine: {
-          show: true
-        }
+  const ret = getSelectableBarChart(items, null, tooltip, null, true)
+  series = {
+    ...ret,
+    yAxis: {
+      type: 'value',
+      name: `${props.impact.unit}`,
+      axisLine: {
+        show: true
       }
     }
   }
