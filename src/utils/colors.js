@@ -23,7 +23,11 @@ export const addColorsForValueChains = (valuechains) => {
   // Du genre + polluant = plus rouge
 }
 
-export const getStageColor = (stageName) => {
+
+export const getStageColor = (stageName, isEnvironment = false) => {
+  if (isEnvironment) {
+    return getSubChainColor(stageName)
+  }
   if (stageName in StagesColors) {
     return StagesColors[stageName]
   }
@@ -37,6 +41,41 @@ export const getStageColor = (stageName) => {
   }
   return "#ff1100"
 }
+
+const SUB_CHAIN_COLORS = [
+  "#6AAB9C",
+  "#FA9284",
+  "#E06C78",
+  "#5874DC",
+  "#384E78",
+  "#b57ba6",
+]
+
+const RING_COLORS = [
+  '#8B0000',
+  '#00008B',
+  '#006400',
+  '#4B0082',
+  '#5A3A3A',
+  '#008080'
+]
+
+let subChainsColors = {}
+const getSubChainColor = (subchainName) => {
+  if (!(subchainName in subChainsColors)) {
+    subChainsColors[subchainName] = SUB_CHAIN_COLORS[Object.keys(subChainsColors).length % SUB_CHAIN_COLORS.length]
+  }
+  return subChainsColors[subchainName]
+
+}
+
+let ringColors = {}
+export const getRingColor = (name) => {
+  if (!(name in ringColors)) {
+    ringColors[name] = RING_COLORS[Object.keys(ringColors).length % RING_COLORS.length]
+  }
+  return ringColors[name]
+} 
 
 export const addColors = (sankeyStages) => {
   let ret = sankeyStages.map(sStage => (sStage.name in StagesColors) ? ({...sStage, color: StagesColors[sStage.name]}) : sStage)

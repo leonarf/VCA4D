@@ -1,5 +1,5 @@
 import { formatNumber, formatPercent } from '@/utils/format.js'
-import { getStageColor, COLORS_IMPORTED_PRODUCTS, COLORS_EXPORTED_PRODUCTS } from '@/utils/colors.js'
+import { getStageColor, getRingColor, COLORS_IMPORTED_PRODUCTS, COLORS_EXPORTED_PRODUCTS } from '@/utils/colors.js'
 const RADIUSES_MINI_PIE = ['20%', '40%']
 const RIADUSES_PIE = ['50%', '75%']
 const SELECTED_COLOR = "#F7E9EB"
@@ -8,7 +8,7 @@ const SELECTED_COLOR_HOVER = "#f7d9de"
 /*
 * RING CHART
 */
-export const getRingChart = (items, tooltip, title) => {
+export const getRingChart = (items, tooltip, title, isEnvironment = false) => {
     return {
         title: {
             text: title,
@@ -28,7 +28,7 @@ export const getRingChart = (items, tooltip, title) => {
                 radius: RIADUSES_PIE,
                 itemStyle: {
                     color: function (info) {
-                        return getStageColor(info.name)
+                        return isEnvironment ? getRingColor(info.name) : getStageColor(info.name)
                     }
                 }
             }
@@ -180,15 +180,15 @@ export const getExportedProductsData = (ecoData, prettyAmount, convertAmount) =>
 /*
 * SELECTABLE BAR CHART
 */
-export const getSelectableBarChart = (items, currentItem, tooltip, formatLabel) => {
+export const getSelectableBarChart = (items, currentItem, tooltip, formatLabel, isEnvironment = false) => {
     let labels = []
     let values = []
     items.map(item => {
         labels.push(item.name)
         // const color = currentItem === item.name ? SELECTED_COLOR : getStageColor(item.name)
         // const emphasisColor = currentItem === item.name ? SELECTED_COLOR_HOVER : getStageColor(item.name) + "B3"
-        const color = getStageColor(item.name)
-        const emphasisColor = getStageColor(item.name) + "B3"
+        const color = getStageColor(item.name, isEnvironment)
+        const emphasisColor = color + "B3"
         values.push({
             value: item.value,
             itemStyle: {
