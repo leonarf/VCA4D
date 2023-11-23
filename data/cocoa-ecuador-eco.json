@@ -349,171 +349,339 @@
     "flows": [
       {
         "sellerActorName": "Producer Subsistence",
-        "buyerActorName": "Collector Negociante"
+        "buyerActorName": "Collector Negociante",
+        "volumeExchanged": 30889.5,
+        "monetaryValue": 61779000,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer Subsistence",
-        "buyerActorName": "Collection point drying"
+        "buyerActorName": "Collection point drying",
+        "volumeExchanged": 86490.6,
+        "monetaryValue": 172981200,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer Subsistence",
-        "buyerActorName": "Collection point drying ferment"
+        "buyerActorName": "Collection point drying ferment",
+        "volumeExchanged": 6177.9,
+        "monetaryValue": 12355800,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer small",
-        "buyerActorName": "Collector Negociante"
+        "buyerActorName": "Collector Negociante",
+        "volumeExchanged": 43292,
+        "monetaryValue": 86584000,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer small",
-        "buyerActorName": "Collection point drying"
+        "buyerActorName": "Collection point drying",
+        "volumeExchanged": 43292,
+        "monetaryValue": 86584000,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer small",
-        "buyerActorName": "Collection point drying ferment"
+        "buyerActorName": "Collection point drying ferment",
+        "volumeExchanged": 10823,
+        "monetaryValue": 21646000,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer small",
-        "buyerActorName": "Exporter Cacao"
+        "buyerActorName": "Exporter Cacao",
+        "volumeExchanged": 10823,
+        "monetaryValue": 21646000,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer intermediate",
-        "buyerActorName": "Collection point drying"
+        "buyerActorName": "Collection point drying",
+        "volumeExchanged": 7653,
+        "monetaryValue": 15306000,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer intermediate",
-        "buyerActorName": "Collection point drying ferment"
+        "buyerActorName": "Collection point drying ferment",
+        "volumeExchanged": 12755,
+        "monetaryValue": 25510000,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer intermediate",
-        "buyerActorName": "Exporter Cacao"
+        "buyerActorName": "Exporter Cacao",
+        "volumeExchanged": 5102,
+        "monetaryValue": 10204000,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer large",
-        "buyerActorName": "Collection point drying ferment"
+        "buyerActorName": "Collection point drying ferment",
+        "volumeExchanged": 923,
+        "monetaryValue": 1846000,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer large",
-        "buyerActorName": "Exporter Cacao"
+        "buyerActorName": "Exporter Cacao",
+        "volumeExchanged": 14768,
+        "monetaryValue": 29536000,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Producer large",
-        "buyerActorName": "Exporter processed cacao"
+        "buyerActorName": "Exporter processed cacao",
+        "volumeExchanged": 2769,
+        "monetaryValue": 5538000,
+        "unitPrice": 2000,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Collector Negociante",
-        "buyerActorName": "Exporter Cacao"
+        "buyerActorName": "Exporter Cacao",
+        "volumeExchanged": 37090.75,
+        "monetaryValue": 77890575,
+        "unitPrice": 2100,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Collector Negociante",
-        "buyerActorName": "Processing intermediate chocolate"
+        "buyerActorName": "Processing intermediate chocolate",
+        "volumeExchanged": 37090.75,
+        "monetaryValue": 77890575,
+        "unitPrice": 2100,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Collection point drying",
-        "buyerActorName": "Exporter Cacao"
+        "buyerActorName": "Exporter Cacao",
+        "volumeExchanged": 96204.92,
+        "monetaryValue": 215499020.8,
+        "unitPrice": 2240,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Collection point drying",
-        "buyerActorName": "Exporter processed cacao"
+        "buyerActorName": "Exporter processed cacao",
+        "volumeExchanged": 41230.68,
+        "monetaryValue": 92356723.2,
+        "unitPrice": 2240,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Collection point drying ferment",
-        "buyerActorName": "Processing intermediate chocolate"
+        "buyerActorName": "Processing intermediate chocolate",
+        "volumeExchanged": 3067.89004571512,
+        "monetaryValue": 6442569.09600175,
+        "unitPrice": 2100,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Collection point drying ferment",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 16873.395365721,
+        "monetaryValue": 71036994.4896854,
+        "unitPrice": 4210,
+        "product": "Cacao fermentado"
       },
       {
         "sellerActorName": "Collection point drying ferment",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 10737.6148171395,
+        "monetaryValue": 25770275.5611348,
+        "unitPrice": 2400,
+        "product": "Cacao fermentado_2"
       },
       {
         "sellerActorName": "Exporter Cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 21485.0996341109,
+        "monetaryValue": 52208792.1108895,
+        "unitPrice": 2430,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Exporter Cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 9207.90036588907,
+        "monetaryValue": 30570229.2147517,
+        "unitPrice": 3320,
+        "product": "Cacao seco2"
       },
       {
         "sellerActorName": "Exporter Cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 37090.75,
+        "monetaryValue": 90130522.5,
+        "unitPrice": 2430,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Exporter Cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 4121.1946150294,
+        "monetaryValue": 13682366.1218976,
+        "unitPrice": 3320,
+        "product": "Cacao seco2"
       },
       {
         "sellerActorName": "Exporter Cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 96204.92,
+        "monetaryValue": 233777955.6,
+        "unitPrice": 2430,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Exporter Cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 10689.4359980139,
+        "monetaryValue": 35488927.5134061,
+        "unitPrice": 3320,
+        "product": "Cacao seco2"
       },
       {
         "sellerActorName": "Exporter processed cacao",
-        "buyerActorName": "National market"
+        "buyerActorName": "National market",
+        "volumeExchanged": 27.69,
+        "monetaryValue": 249210,
+        "unitPrice": 9000,
+        "product": "Chocolate"
       },
       {
         "sellerActorName": "Exporter processed cacao",
-        "buyerActorName": "National market"
+        "buyerActorName": "National market",
+        "volumeExchanged": 234.257395774841,
+        "monetaryValue": 887835.529986647,
+        "unitPrice": 3790,
+        "product": "Cacao semi elaborado"
       },
       {
         "sellerActorName": "Exporter processed cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 1085.44802112579,
+        "monetaryValue": 2637638.69133567,
+        "unitPrice": 2430,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Exporter processed cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 470.73,
+        "monetaryValue": 1981773.3,
+        "unitPrice": 4210,
+        "product": "Cacao seco3"
       },
       {
         "sellerActorName": "Exporter processed cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 937.029583099365,
+        "monetaryValue": 3551342.11994659,
+        "unitPrice": 3790,
+        "product": "Cacao semi elaborado"
       },
       {
         "sellerActorName": "Exporter processed cacao",
-        "buyerActorName": "National market"
+        "buyerActorName": "National market",
+        "volumeExchanged": 412.3068,
+        "monetaryValue": 3710761.2,
+        "unitPrice": 9000,
+        "product": "Chocolate"
       },
       {
         "sellerActorName": "Exporter processed cacao",
-        "buyerActorName": "National market"
+        "buyerActorName": "National market",
+        "volumeExchanged": 3488.11546508698,
+        "monetaryValue": 13219957.6126797,
+        "unitPrice": 3790,
+        "product": "Cacao semi elaborado"
       },
       {
         "sellerActorName": "Exporter processed cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 16162.4268745651,
+        "monetaryValue": 39274697.3051932,
+        "unitPrice": 2430,
+        "product": "Cacao seco"
       },
       {
         "sellerActorName": "Exporter processed cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 7009.2156,
+        "monetaryValue": 29508797.676,
+        "unitPrice": 4210,
+        "product": "Cacao seco3"
       },
       {
         "sellerActorName": "Exporter processed cacao",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 13952.4618603479,
+        "monetaryValue": 52879830.4507185,
+        "unitPrice": 3790,
+        "product": "Cacao semi elaborado"
       },
       {
         "sellerActorName": "Processing intermediate chocolate",
-        "buyerActorName": "National market"
+        "buyerActorName": "National market",
+        "volumeExchanged": 5268.08855878412,
+        "monetaryValue": 47412797.0290571,
+        "unitPrice": 9000,
+        "product": "Chocolate"
       },
       {
         "sellerActorName": "Processing intermediate chocolate",
-        "buyerActorName": "Processing final chocolate"
+        "buyerActorName": "Processing final chocolate",
+        "volumeExchanged": 3318.89576691379,
+        "monetaryValue": 12578614.9566033,
+        "unitPrice": 3790,
+        "product": "Cacao semi elaborado"
       },
       {
         "sellerActorName": "Processing intermediate chocolate",
-        "buyerActorName": "National market"
+        "buyerActorName": "National market",
+        "volumeExchanged": 3318.89576691379,
+        "monetaryValue": 12578614.9566033,
+        "unitPrice": 3790,
+        "product": "Cacao semi elaborado"
       },
       {
         "sellerActorName": "Processing intermediate chocolate",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 23232.2703683965,
+        "monetaryValue": 88050304.6962227,
+        "unitPrice": 3790,
+        "product": "Cacao semi elaborado"
       },
       {
         "sellerActorName": "Processing final chocolate",
-        "buyerActorName": "National market"
+        "buyerActorName": "National market",
+        "volumeExchanged": 1580.42663043574,
+        "monetaryValue": 14223839.6739217,
+        "unitPrice": 9000,
+        "product": "Chocolate"
       },
       {
         "sellerActorName": "Processing final chocolate",
-        "buyerActorName": "International market"
+        "buyerActorName": "International market",
+        "volumeExchanged": 3687.66192834837,
+        "monetaryValue": 53507974.5803349,
+        "unitPrice": 14510,
+        "product": "Chocolate_ex"
       }
     ],
     "addedValue": {

@@ -11,15 +11,30 @@ export const parseEconomicsJson = (json) => {
 
   let actors = parseActorTypes(json)
   
-    const flows = json["Flow by actor type"].map(flow => ({
-      sellerActorName: flow['Seller Name'],
-      buyerActorName: flow['Buyer Name'],
-      volumeExchanged: flow['Volume exchanged (kg Of product)'],
-      monetaryValue: flow['Monetary value'],
-      unitPrice: flow['Unitary price (local curency)'],
-      volumeUnit: flow['Volume Unit'],
-      product: flow['Products']
-    }))
+  var sheetname = "Flow by actor type"
+  var expectedColumns = {
+    sellerActorName: 'Seller Name',
+    buyerActorName: 'Buyer Name',
+    volumeExchanged: 'Volume exchanged (kg Of product)',
+    monetaryValue: 'Monetary value',
+    unitPrice: 'Unitary price (local curency)',
+    volumeUnit: 'Volume Unit',
+    product: 'Products'
+  }
+  const flows = json[sheetname].map(flow => {
+    var result = {}
+    for (var key in expectedColumns) {
+      result[key] = flow[expectedColumns[key]]
+    }
+    return result
+  })
+
+  for (var key in expectedColumns) {
+    if (flows.filter(flow => flow[key] != undefined).length == 0) {
+      setImportErrors(`In spreadsheet '${sheetname}', column '${expectedColumns[key]}' is missing or empty`)
+    }
+  }
+
     const indicators = json["Indicator by actor type"].map(indicator => ({
       actorName: indicator['Actor type Name'],
       data: {
