@@ -228,10 +228,34 @@ const studyProperties = computed(() => {
     }
 
     if (typeOfFile.value === TypesOfFile.Economics) {
-        const year = getValueChainProperty(excelData.value, "Reference Year")
-        const localCurrency = getValueChainProperty(excelData.value, "Study's local currency");
-        const targetCurrency = getValueChainProperty(excelData.value, "Standard currency code") || localCurrency;
-        const currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency") || 1.0;
+        const year = getValueChainProperty(excelData.value, "Reference Year");
+        var targetCurrency = null
+        var currencyRatio = null
+        const localCurrencySpreadsheetLabel = "Study's local currency"
+        const targetCurrencySpreadsheetLabel = "Standard currency code"
+        const localCurrency = getValueChainProperty(excelData.value, localCurrencySpreadsheetLabel);
+        // Si localCurrency est standard, pas besoin de targetCurrency ou currencyRatio
+        try {
+            var formatter_with_valid_currency = new Intl.NumberFormat(undefined, {
+                style: "currency",
+                currency: localCurrency
+            })
+            targetCurrency = localCurrency
+            currencyRatio = 1.0
+        } catch (local_currency_not_standard_error) {
+            console.log(`Exception raised while constructing an NumberFormat with local currency ${localCurrency}`, local_currency_not_standard_error)
+            targetCurrency = getValueChainProperty(excelData.value, targetCurrencySpreadsheetLabel);
+            try {
+                formatter_with_valid_currency = new Intl.NumberFormat(undefined, {
+                    style: "currency",
+                    currency: targetCurrency
+                })
+                currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency");
+            } catch (target_currency_not_standard_error) {
+                console.log(`Exception raised while constructing an NumberFormat with target currency ${targetCurrency}`, target_currency_not_standard_error)
+                setImportErrors(`Either currencies defined by '${localCurrencySpreadsheetLabel}' or '${targetCurrencySpreadsheetLabel}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`)
+            }
+        }
         const giniIndex = getValueChainProperty(excelData.value, "Gini index") || undefined;
         const rateOfIntegration = readPercentValue("Rate of integration into domestic economy")
         const publicFundsBalance = readPercentValue("Public funds balance / Public budget")

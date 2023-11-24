@@ -27,7 +27,7 @@ const CHANGE_RATES = {
   }
 }
 
-export const KNOWN_CURRENCIES = ["USD", "EUR", ...Object.keys(CHANGE_RATES)]
+export const KNOWN_CURRENCIES = ["USD", ...Object.keys(CHANGE_RATES)]
 
 let CurrencyFormatters = {}
 const getCurrencyFormatter = (currency) => {

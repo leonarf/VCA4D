@@ -106,6 +106,7 @@ export const parseEconomicsJson = (json) => {
         }
         else {
           missingColumns.add(colonne)
+          result.data[item] = null
         }
       }
       result.data = {

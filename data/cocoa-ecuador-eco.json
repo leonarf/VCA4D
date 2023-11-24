@@ -71,16 +71,16 @@
         "employment": {
           "tempMale": 16937.7425,
           "tempFemale": 4234.435625,
-          "unskilledMale": "Permanent Unskilled Male",
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "16937.7425Permanent Unskilled MalePermanent Skilled Male",
-          "totalFemale": "4234.435625Permanent Unskilled FemalePermanent Skilled Female",
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 16937.7425,
+          "totalFemale": 4234.435625,
           "totalTemp": 21172.178125,
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled FemalePermanent Unskilled Male",
-          "total": "21172.178125Permanent Skilled FemalePermanent Skilled MalePermanent Unskilled FemalePermanent Unskilled Male"
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 21172.178125
         }
       },
       {
@@ -96,16 +96,16 @@
         "employment": {
           "tempMale": 12429.5390625,
           "tempFemale": 3551.296875,
-          "unskilledMale": "Permanent Unskilled Male",
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "12429.5390625Permanent Unskilled MalePermanent Skilled Male",
-          "totalFemale": "3551.296875Permanent Unskilled FemalePermanent Skilled Female",
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 12429.5390625,
+          "totalFemale": 3551.296875,
           "totalTemp": 15980.8359375,
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled FemalePermanent Unskilled Male",
-          "total": "15980.8359375Permanent Skilled FemalePermanent Skilled MalePermanent Unskilled FemalePermanent Unskilled Male"
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 15980.8359375
         }
       },
       {
@@ -121,16 +121,16 @@
         "employment": {
           "tempMale": 1264.87083333333,
           "tempFemale": 632.435416666666,
-          "unskilledMale": "Permanent Unskilled Male",
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "1264.87083333333Permanent Unskilled MalePermanent Skilled Male",
-          "totalFemale": "632.435416666666Permanent Unskilled FemalePermanent Skilled Female",
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 1264.87083333333,
+          "totalFemale": 632.435416666666,
           "totalTemp": 1897.306249999996,
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled FemalePermanent Unskilled Male",
-          "total": "1897.306249999996Permanent Skilled FemalePermanent Skilled MalePermanent Unskilled FemalePermanent Unskilled Male"
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 1897.306249999996
         }
       },
       {
@@ -146,16 +146,16 @@
         "employment": {
           "tempMale": 1171.05625,
           "tempFemale": 585.528125,
-          "unskilledMale": "Permanent Unskilled Male",
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "1171.05625Permanent Unskilled MalePermanent Skilled Male",
-          "totalFemale": "585.528125Permanent Unskilled FemalePermanent Skilled Female",
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 1171.05625,
+          "totalFemale": 585.528125,
           "totalTemp": 1756.5843750000001,
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled FemalePermanent Unskilled Male",
-          "total": "1756.5843750000001Permanent Skilled FemalePermanent Skilled MalePermanent Unskilled FemalePermanent Unskilled Male"
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 1756.5843750000001
         }
       },
       {
@@ -171,16 +171,16 @@
         "employment": {
           "tempMale": 148.105425347222,
           "tempFemale": 0,
-          "unskilledMale": "Permanent Unskilled Male",
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "148.105425347222Permanent Unskilled MalePermanent Skilled Male",
-          "totalFemale": "0Permanent Unskilled FemalePermanent Skilled Female",
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 148.105425347222,
+          "totalFemale": 0,
           "totalTemp": 148.105425347222,
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled FemalePermanent Unskilled Male",
-          "total": "148.105425347222Permanent Skilled FemalePermanent Skilled MalePermanent Unskilled FemalePermanent Unskilled Male"
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 148.105425347222
         }
       },
       {
@@ -196,16 +196,16 @@
         "employment": {
           "tempMale": 548.787986111113,
           "tempFemale": 0,
-          "unskilledMale": "Permanent Unskilled Male",
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "548.787986111113Permanent Unskilled MalePermanent Skilled Male",
-          "totalFemale": "0Permanent Unskilled FemalePermanent Skilled Female",
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 548.787986111113,
+          "totalFemale": 0,
           "totalTemp": 548.787986111113,
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled FemalePermanent Unskilled Male",
-          "total": "548.787986111113Permanent Skilled FemalePermanent Skilled MalePermanent Unskilled FemalePermanent Unskilled Male"
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 548.787986111113
         }
       },
       {
@@ -221,16 +221,16 @@
         "employment": {
           "tempMale": 269.50562042471,
           "tempFemale": 0,
-          "unskilledMale": "Permanent Unskilled Male",
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "269.50562042471Permanent Unskilled MalePermanent Skilled Male",
-          "totalFemale": "0Permanent Unskilled FemalePermanent Skilled Female",
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 269.50562042471,
+          "totalFemale": 0,
           "totalTemp": 269.50562042471,
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled FemalePermanent Unskilled Male",
-          "total": "269.50562042471Permanent Skilled FemalePermanent Skilled MalePermanent Unskilled FemalePermanent Unskilled Male"
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 269.50562042471
         }
       },
       {
@@ -246,16 +246,16 @@
         "employment": {
           "tempMale": 165.846017534382,
           "tempFemale": 165.846017534382,
-          "unskilledMale": "Permanent Unskilled Male",
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "165.846017534382Permanent Unskilled MalePermanent Skilled Male",
-          "totalFemale": "165.846017534382Permanent Unskilled FemalePermanent Skilled Female",
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 165.846017534382,
+          "totalFemale": 165.846017534382,
           "totalTemp": 331.692035068764,
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled FemalePermanent Unskilled Male",
-          "total": "331.692035068764Permanent Skilled FemalePermanent Skilled MalePermanent Unskilled FemalePermanent Unskilled Male"
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 331.692035068764
         }
       },
       {
@@ -271,16 +271,16 @@
         "employment": {
           "tempMale": 75.7287760417125,
           "tempFemale": 75.7287760417125,
-          "unskilledMale": "Permanent Unskilled Male",
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "75.7287760417125Permanent Unskilled MalePermanent Skilled Male",
-          "totalFemale": "75.7287760417125Permanent Unskilled FemalePermanent Skilled Female",
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 75.7287760417125,
+          "totalFemale": 75.7287760417125,
           "totalTemp": 151.457552083425,
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled FemalePermanent Unskilled Male",
-          "total": "151.457552083425Permanent Skilled FemalePermanent Skilled MalePermanent Unskilled FemalePermanent Unskilled Male"
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 151.457552083425
         }
       },
       {
@@ -296,16 +296,16 @@
         "employment": {
           "tempMale": 713.955536107281,
           "tempFemale": 356.977768053641,
-          "unskilledMale": "Permanent Unskilled Male",
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "713.955536107281Permanent Unskilled MalePermanent Skilled Male",
-          "totalFemale": "356.977768053641Permanent Unskilled FemalePermanent Skilled Female",
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 713.955536107281,
+          "totalFemale": 356.977768053641,
           "totalTemp": 1070.933304160922,
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled FemalePermanent Unskilled Male",
-          "total": "1070.933304160922Permanent Skilled FemalePermanent Skilled MalePermanent Unskilled FemalePermanent Unskilled Male"
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 1070.933304160922
         }
       },
       {
@@ -321,16 +321,16 @@
         "employment": {
           "tempMale": 137.483725009143,
           "tempFemale": 41.2451175027428,
-          "unskilledMale": "Permanent Unskilled Male",
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "137.483725009143Permanent Unskilled MalePermanent Skilled Male",
-          "totalFemale": "41.2451175027428Permanent Unskilled FemalePermanent Skilled Female",
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 137.483725009143,
+          "totalFemale": 41.2451175027428,
           "totalTemp": 178.7288425118858,
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled FemalePermanent Unskilled Male",
-          "total": "178.7288425118858Permanent Skilled FemalePermanent Skilled MalePermanent Unskilled FemalePermanent Unskilled Male"
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 178.7288425118858
         }
       },
       {
@@ -737,6 +737,37 @@
         }
       ]
     },
-    "farmToFinalPricesRatio": []
+    "farmToFinalPricesRatio": [
+      {
+        "label": "Cacao seco",
+        "farmPrice": 2000,
+        "finalPrice": 2430
+      },
+      {
+        "label": "Cacao seco2",
+        "farmPrice": 2000,
+        "finalPrice": 3220
+      },
+      {
+        "label": "Cacao seco3",
+        "farmPrice": 2000,
+        "finalPrice": 4210
+      },
+      {
+        "label": "Cacao seco to Semi-Elaborate",
+        "farmPrice": 2000,
+        "finalPrice": 3145.7
+      },
+      {
+        "label": "Cacao seco to Chocolate",
+        "farmPrice": 2000,
+        "finalPrice": 19148.847
+      },
+      {
+        "label": "Cacao seco to Chocolate for National Market",
+        "farmPrice": 2000,
+        "finalPrice": 11877.3
+      }
+    ]
   }
 }
