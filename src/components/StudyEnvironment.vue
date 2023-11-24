@@ -61,7 +61,7 @@ const allBarChartsData = computed(() => {
 
 const units = [
   { label: 'Pt', value: 'PT' },
-  { label: 'Autre unités', value: 'OTHER' },
+  { label: 'Other units', value: 'OTHER' },
 ];
 
 const selectedUnit = ref(units[0].value); 

@@ -9,7 +9,7 @@
                 >{{ route.label }}</RouterLink>
             </li>
             <li>
-                <a class="TODO">Study brief and full report</a>
+                <a>Study full report</a>
             </li>
         </ol>
         <div class="text-[#868686] mt-4 mb-2">Select currency</div>

@@ -3,7 +3,7 @@
 
       <h3>{{ impact.name }}</h3>
       <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
-      <div>
+      <div v-if="selectedValueChain">
         <MiniChartContainer :currentStage="selectedValueChain" :title="`${impact.name} (${impact.unit})`" :isEnvironment="true">
             <div class="flex flex-row w-full justify-evenly mt-6">
                 <div class="w-full flex flex-row justify-center">
@@ -27,8 +27,15 @@ const props = defineProps({
 })
 
 
-const selectedValueChain = ref(props.impact.values[0].valuechain_name)
-const handleDataChartSeriesClick = (event) => selectedValueChain.value = event.name
+const selectedValueChain = ref(null)
+const handleDataChartSeriesClick = (event) => {
+  if (selectedValueChain.value == event.name) {
+    selectedValueChain.value = null
+  }
+  else {
+    selectedValueChain.value = event.name
+  }
+}
 
 const populatedRingChartData = computed(() => {
   var tooltip = {}
