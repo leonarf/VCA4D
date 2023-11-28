@@ -5,15 +5,17 @@
         <div class="tag-number">{{ getNumberInTitle(group.title) }}
         </div>
         <div class="font-bold flex-grow">{{ removeNumberFromTitle(group.title) }}</div>
-        <Tag :scale="group.averageValue" :appreciation="group.averageText" />
+        <Tag :scale="parseFloat(group.averageValue)" :appreciation="group.averageText" />
     </div>
-    <div v-if="isOpen" v-for="question in group.questions" :key="question.text.split(' ')[0]"
-        class="flex flex-row items-start w-full my-3 pl-10 w-full md:w-4/5">
-        <div class="tag-number">{{ getNumberInTitle(question.text) }}
+    <template v-if="isOpen">
+        <div  v-for="question in group.questions" :key="question.text.split(' ')[0]"
+            class="flex flex-row items-start w-full my-3 pl-10 w-full md:w-4/5">
+            <div class="tag-number">{{ getNumberInTitle(question.text) }}
+            </div>
+            <div class="flex-grow">{{ removeNumberFromTitle(question.text) }}</div>
+            <Tag :scale="parseFloat(question.scoreValue)" :appreciation="question.scoreText" />
         </div>
-        <div class="flex-grow">{{ removeNumberFromTitle(question.text) }}</div>
-        <Tag :scale="question.scoreValue" :appreciation="question.scoreText" />
-    </div>
+    </template> 
 </template>
 
 <script setup>

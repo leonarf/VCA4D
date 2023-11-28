@@ -15,16 +15,21 @@
         <p>Employment data only relate to full time equivalent jobs for this specific value chain and do not include total
             employment of each actor. In addition, the informal family workforce at the agricultural production level is not
             accounted for.</p>
-        <EmploymentDistributionActors :studyData="studyData" class="mb-4 mt-8"/>
-        <EmploymentDistributionJobs :studyData="studyData" class="mt-8"/>
+        <div class="flex flex-col gap-y-4 mt-4">
+            <EmploymentDistributionActors :studyData="studyData"/>
+            <EmploymentDistributionJobs :studyData="studyData"/>
+        </div>
 
         <h3>How is <strong>income</strong> distributed across actors of the value chain?</h3>
         <p>Actors that are in small numbers but receive an important share of the value chain's net operating profit are in
             a stronger position of negociation in front of actore that are more divided.</p>
         <p>NB: The income data only relate to this specific value chain: the data do not include any other income from any
             other activity.</p>
-        <NetOperatingProfit :studyData="studyData" :currency="currency" class="mb-4 mt-8"/>
-        <NetOperatingProfitPerActor :studyData="studyData" :currency="currency" class="mb-4 mt-8" />
+        
+        <div class="flex flex-col gap-y-4 mt-4">
+            <NetOperatingProfit :studyData="studyData" :currency="currency"/>
+            <NetOperatingProfitPerActor :studyData="studyData" :currency="currency" />
+        </div>
         <br>
 
         <h3>What is the impact of the <strong>governance systems</strong> on income distribution?</h3>
