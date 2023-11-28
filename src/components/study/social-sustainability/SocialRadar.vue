@@ -52,11 +52,9 @@ const chartData = computed(() => {
             axisLabel: {
                 show: false,
             },
-            name: {
-                textStyle: {
-                    fontWeight: 'bold',
-                    fontSize: '18px'
-                },
+            axisName: {
+                fontWeight: 'bold',
+                fontSize: '18px'
         },
         },
         tooltip: {

@@ -131,12 +131,9 @@ const getStackedBarChart = (label, data, maxValue, prettyAmount, convertAmount) 
             data: [label],
             axisLabel: {
                 interval: 0,
-                textStyle: {
-                    fontSize: 20,
-                    textColor: '#8A8A8A',
-                    fontWeight: 'bold'
-
-                }
+                fontSize: 20,
+                textColor: '#8A8A8A',
+                fontWeight: 'bold'
             },
         },
         yAxis: {
@@ -191,11 +188,9 @@ export const getSelectableBarChart = (items, currentItem, tooltip, formatLabel, 
         const emphasisColor = color + "B3"
         values.push({
             value: item.value,
+            emphasisColor,
             itemStyle: {
                 color,
-                emphasis: {
-                    color: emphasisColor
-                },
                 ... (
                     currentItem === item.name
                         ? {
