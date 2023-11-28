@@ -76,47 +76,63 @@ export const parseEconomicsJson = (json) => {
       financialInstitutionsInterests: addedValueItems.filter(element => element.receiverName === 'Financial institutions (interests On loans)')[0].value,
       government: addedValueItems.filter(element => element.receiverName === 'Government (taxes - subsidies)')[0].value,
     }
+
+    const actorTypeColumn = "Actor type Name"
+    const EmploymentColumns = {
+      TEMP_MALE: "Temporary Male",
+      TEMP_FEMALE: "Temporary Female",
+      UNSKILLED_MALE: "Permanent Unskilled Male",
+      UNSKILLED_FEMALE: "Permanent Unskilled Female",
+      SKILLED_MALE: "Permanent Skilled Male",
+      SKILLED_FEMALE: "Permanent Skilled Female",
+    }
   
     var missingColumns = new Set()
     var foundColumns = new Set()
+    json["Employment"].forEach(employment => {
+      [actorTypeColumn, ...Object.values(EmploymentColumns)].forEach(columnName => {
+        if (columnName in employment) {
+          foundColumns.add(columnName)
+        } else {
+          missingColumns.add(columnName)
+        } 
+      })
+    })
+
+
     const employments = json["Employment"].map(employment => {
-      var result = {
-        actorName: 'Actor type Name',
-        data : {
-          tempMale : 'Temporary Male',
-          tempFemale : 'Temporary Female',
-          unskilledMale : 'Permanent Unskilled Male',
-          unskilledFemale : 'Permanent Unskilled Female',
-          skilledMale : 'Permanent Skilled Male',
-          skilledFemale : 'Permanent Skilled Female'
+
+      const actorName = employment[actorTypeColumn]
+      const tempMale = parseFloat(employment[EmploymentColumns.TEMP_MALE])
+      const tempFemale = parseFloat(employment[EmploymentColumns.TEMP_FEMALE])
+      const unskilledMale = parseFloat(employment[EmploymentColumns.UNSKILLED_MALE])
+      const unskilledFemale = parseFloat(employment[EmploymentColumns.UNSKILLED_FEMALE])
+      const skilledMale = parseFloat(employment[EmploymentColumns.SKILLED_MALE])
+      const skilledFemale = parseFloat(employment[EmploymentColumns.SKILLED_FEMALE])
+
+
+      const totalMale = tempMale || 0 + unskilledMale || 0 + skilledMale || 0
+      const totalFemale = tempFemale || 0 + unskilledFemale || 0 + skilledFemale || 0
+      const totalTemp = tempMale + tempFemale
+      const totalSkilled = skilledFemale + skilledMale
+      const totalUnskilled = unskilledFemale + unskilledMale
+      
+      const result = {
+        actorName,
+        data: {
+          tempMale,
+          tempFemale,
+          unskilledMale,
+          unskilledFemale,
+          skilledMale,
+          skilledFemale,
+          totalMale,
+          totalFemale,
+          totalTemp,
+          totalSkilled,
+          totalUnskilled,
+          total: totalMale + totalFemale
         }
-      }
-      if (result.actorName in employment) {
-        foundColumns.add(result.actorName)
-        result.actorName = employment[result.actorName]
-      }
-      else {
-        missingColumns.add(result.actorName)
-      }
-      for (var item in result.data) {
-        var colonne = result.data[item]
-        if (colonne in employment) {
-          result.data[item] = employment[colonne]
-          foundColumns.add(colonne)
-        }
-        else {
-          missingColumns.add(colonne)
-          result.data[item] = null
-        }
-      }
-      result.data = {
-        ...result.data,
-        totalMale: result.data.tempMale + result.data.unskilledMale + result.data.skilledMale,
-        totalFemale: result.data.tempFemale + result.data.unskilledFemale + result.data.skilledFemale,
-        totalTemp: result.data.tempMale + result.data.tempFemale,
-        totalSkilled: result.data.skilledFemale + result.data.skilledMale,
-        totalUnskilled: result.data.unskilledFemale + result.data.unskilledMale,
-        total: result.data.tempMale + result.data.tempFemale + result.data.skilledFemale + result.data.skilledMale + result.data.unskilledFemale + result.data.unskilledMale
       }
       return result
     })

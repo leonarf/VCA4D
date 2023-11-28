@@ -60,17 +60,17 @@
         "receivedAddedValue": 5841818.16543232,
         "employment": {
           "tempMale": 0,
-          "tempFemale": "Temporary Female",
+          "tempFemale": null,
           "unskilledMale": 0,
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "0Permanent Skilled Male",
-          "totalFemale": "Temporary FemalePermanent Unskilled FemalePermanent Skilled Female",
-          "totalTemp": "0Temporary Female",
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled Female0",
-          "total": "0Temporary FemalePermanent Skilled FemalePermanent Skilled MalePermanent Unskilled Female0"
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": 0,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
         }
       },
       {
@@ -91,17 +91,17 @@
         "receivedAddedValue": 2724539.08577526,
         "employment": {
           "tempMale": 0,
-          "tempFemale": "Temporary Female",
+          "tempFemale": null,
           "unskilledMale": 0,
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "0Permanent Skilled Male",
-          "totalFemale": "Temporary FemalePermanent Unskilled FemalePermanent Skilled Female",
-          "totalTemp": "0Temporary Female",
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled Female0",
-          "total": "0Temporary FemalePermanent Skilled FemalePermanent Skilled MalePermanent Unskilled Female0"
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": 0,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
         }
       },
       {
@@ -122,17 +122,17 @@
         "receivedAddedValue": 6101463.23162832,
         "employment": {
           "tempMale": 0,
-          "tempFemale": "Temporary Female",
+          "tempFemale": null,
           "unskilledMale": 0,
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "0Permanent Skilled Male",
-          "totalFemale": "Temporary FemalePermanent Unskilled FemalePermanent Skilled Female",
-          "totalTemp": "0Temporary Female",
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled Female0",
-          "total": "0Temporary FemalePermanent Skilled FemalePermanent Skilled MalePermanent Unskilled Female0"
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": 0,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
         }
       },
       {
@@ -159,17 +159,17 @@
         "receivedAddedValue": 729927.234903763,
         "employment": {
           "tempMale": 152.212275372031,
-          "tempFemale": "Temporary Female",
+          "tempFemale": null,
           "unskilledMale": 0,
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "152.212275372031Permanent Skilled Male",
-          "totalFemale": "Temporary FemalePermanent Unskilled FemalePermanent Skilled Female",
-          "totalTemp": "152.212275372031Temporary Female",
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled Female0",
-          "total": "152.212275372031Temporary FemalePermanent Skilled FemalePermanent Skilled MalePermanent Unskilled Female0"
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 152.212275372031,
+          "totalFemale": 0,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 152.212275372031
         }
       },
       {
@@ -184,17 +184,17 @@
         "receivedAddedValue": 136646.465550005,
         "employment": {
           "tempMale": 21.4084507042254,
-          "tempFemale": "Temporary Female",
+          "tempFemale": null,
           "unskilledMale": 0,
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "21.4084507042254Permanent Skilled Male",
-          "totalFemale": "Temporary FemalePermanent Unskilled FemalePermanent Skilled Female",
-          "totalTemp": "21.4084507042254Temporary Female",
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled Female0",
-          "total": "21.4084507042254Temporary FemalePermanent Skilled FemalePermanent Skilled MalePermanent Unskilled Female0"
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 21.4084507042254,
+          "totalFemale": 0,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 21.4084507042254
         }
       },
       {
@@ -209,17 +209,17 @@
         "receivedAddedValue": 621430.271428541,
         "employment": {
           "tempMale": 389.17165075149,
-          "tempFemale": "Temporary Female",
+          "tempFemale": null,
           "unskilledMale": 72.9696845159044,
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "462.1413352673944Permanent Skilled Male",
-          "totalFemale": "Temporary FemalePermanent Unskilled FemalePermanent Skilled Female",
-          "totalTemp": "389.17165075149Temporary Female",
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled Female72.9696845159044",
-          "total": "389.17165075149Temporary FemalePermanent Skilled FemalePermanent Skilled MalePermanent Unskilled Female72.9696845159044"
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 389.17165075149,
+          "totalFemale": 0,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 389.17165075149
         }
       },
       {
@@ -234,17 +234,17 @@
         "receivedAddedValue": 293502.198874323,
         "employment": {
           "tempMale": 12.2791423001949,
-          "tempFemale": "Temporary Female",
+          "tempFemale": null,
           "unskilledMale": 0,
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "12.2791423001949Permanent Skilled Male",
-          "totalFemale": "Temporary FemalePermanent Unskilled FemalePermanent Skilled Female",
-          "totalTemp": "12.2791423001949Temporary Female",
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled Female0",
-          "total": "12.2791423001949Temporary FemalePermanent Skilled FemalePermanent Skilled MalePermanent Unskilled Female0"
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 12.2791423001949,
+          "totalFemale": 0,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 12.2791423001949
         }
       },
       {
@@ -259,17 +259,17 @@
         "receivedAddedValue": 12271410.4190476,
         "employment": {
           "tempMale": 49.2784362898615,
-          "tempFemale": "Temporary Female",
+          "tempFemale": null,
           "unskilledMale": 9.23970680434903,
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "58.51814309421053Permanent Skilled Male",
-          "totalFemale": "Temporary FemalePermanent Unskilled FemalePermanent Skilled Female",
-          "totalTemp": "49.2784362898615Temporary Female",
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled Female9.23970680434903",
-          "total": "49.2784362898615Temporary FemalePermanent Skilled FemalePermanent Skilled MalePermanent Unskilled Female9.23970680434903"
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 49.2784362898615,
+          "totalFemale": 0,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 49.2784362898615
         }
       },
       {
@@ -284,17 +284,17 @@
         "receivedAddedValue": 25846547.4870402,
         "employment": {
           "tempMale": 1853.51708447574,
-          "tempFemale": "Temporary Female",
+          "tempFemale": null,
           "unskilledMale": 347.534453339202,
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "2201.051537814942Permanent Skilled Male",
-          "totalFemale": "Temporary FemalePermanent Unskilled FemalePermanent Skilled Female",
-          "totalTemp": "1853.51708447574Temporary Female",
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled Female347.534453339202",
-          "total": "1853.51708447574Temporary FemalePermanent Skilled FemalePermanent Skilled MalePermanent Unskilled Female347.534453339202"
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 1853.51708447574,
+          "totalFemale": 0,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 1853.51708447574
         }
       },
       {
@@ -315,17 +315,17 @@
         "receivedAddedValue": 830641.433828528,
         "employment": {
           "tempMale": 75.9277176823765,
-          "tempFemale": "Temporary Female",
+          "tempFemale": null,
           "unskilledMale": 14.2364470654456,
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "90.1641647478221Permanent Skilled Male",
-          "totalFemale": "Temporary FemalePermanent Unskilled FemalePermanent Skilled Female",
-          "totalTemp": "75.9277176823765Temporary Female",
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled Female14.2364470654456",
-          "total": "75.9277176823765Temporary FemalePermanent Skilled FemalePermanent Skilled MalePermanent Unskilled Female14.2364470654456"
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 75.9277176823765,
+          "totalFemale": 0,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 75.9277176823765
         }
       },
       {
@@ -340,172 +340,96 @@
         "receivedAddedValue": 679657.000221099,
         "employment": {
           "tempMale": 265.901360644419,
-          "tempFemale": "Temporary Female",
+          "tempFemale": null,
           "unskilledMale": 49.8565051208285,
-          "unskilledFemale": "Permanent Unskilled Female",
-          "skilledMale": "Permanent Skilled Male",
-          "skilledFemale": "Permanent Skilled Female",
-          "totalMale": "315.7578657652475Permanent Skilled Male",
-          "totalFemale": "Temporary FemalePermanent Unskilled FemalePermanent Skilled Female",
-          "totalTemp": "265.901360644419Temporary Female",
-          "totalSkilled": "Permanent Skilled FemalePermanent Skilled Male",
-          "totalUnskilled": "Permanent Unskilled Female49.8565051208285",
-          "total": "265.901360644419Temporary FemalePermanent Skilled FemalePermanent Skilled MalePermanent Unskilled Female49.8565051208285"
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 265.901360644419,
+          "totalFemale": 0,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 265.901360644419
         }
       }
     ],
     "flows": [
       {
         "sellerActorName": "Producer arabica bola",
-        "buyerActorName": "Collector arabica",
-        "volumeExchanged": 9450,
-        "monetaryValue": 9355500,
-        "unitPrice": 990,
-        "product": "Cafe bola"
+        "buyerActorName": "Collector arabica"
       },
       {
         "sellerActorName": "Collector arabica",
-        "buyerActorName": "Industry instant arabica",
-        "volumeExchanged": 2362.5,
-        "monetaryValue": 6237000,
-        "unitPrice": 2640,
-        "product": "Cafe oro"
+        "buyerActorName": "Industry instant arabica"
       },
       {
         "sellerActorName": "Collector arabica",
-        "buyerActorName": "Industry roasted arabica",
-        "volumeExchanged": 2362.5,
-        "monetaryValue": 6237000,
-        "unitPrice": 2640,
-        "product": "Cafe oro"
+        "buyerActorName": "Industry roasted arabica"
       },
       {
         "sellerActorName": "Collector arabica",
-        "buyerActorName": "Industry instant arabica",
-        "volumeExchanged": 787.4,
-        "monetaryValue": 2078736,
-        "unitPrice": 2640,
-        "product": "Cafe oro"
+        "buyerActorName": "Industry instant arabica"
       },
       {
         "sellerActorName": "Collector arabica",
-        "buyerActorName": "Industry roasted arabica",
-        "volumeExchanged": 787.4,
-        "monetaryValue": 2078736,
-        "unitPrice": 2640,
-        "product": "Cafe oro"
+        "buyerActorName": "Industry roasted arabica"
       },
       {
         "sellerActorName": "Industry instant arabica",
-        "buyerActorName": "Exportador instant arabica",
-        "volumeExchanged": 284.990952380952,
-        "monetaryValue": 3704882.38095238,
-        "unitPrice": 13000,
-        "product": "Cafe soluble exportacion"
+        "buyerActorName": "Exportador instant arabica"
       },
       {
         "sellerActorName": "Industry instant arabica",
-        "buyerActorName": "Local market instant arabica",
-        "volumeExchanged": 839.973333333333,
-        "monetaryValue": 11759626.6666667,
-        "unitPrice": 14000,
-        "product": "Cafe soluble mercado local"
+        "buyerActorName": "Local market instant arabica"
       },
       {
         "sellerActorName": "Trader arabica",
-        "buyerActorName": "Collector arabica",
-        "volumeExchanged": 7874,
-        "monetaryValue": 4724400,
-        "unitPrice": 600,
-        "product": "Cafe cereza"
+        "buyerActorName": "Collector arabica"
       },
       {
         "sellerActorName": "Producer arabica cherry",
-        "buyerActorName": "Trader arabica",
-        "volumeExchanged": 7874,
-        "monetaryValue": 4330700,
-        "unitPrice": 550,
-        "product": "Cafe cereza"
+        "buyerActorName": "Trader arabica"
       },
       {
         "sellerActorName": "Industry roasted arabica",
-        "buyerActorName": "Local market roasted arabica",
-        "volumeExchanged": 2519.92,
-        "monetaryValue": 21419320,
-        "unitPrice": 8500,
-        "product": "Cafe tostado y molido"
+        "buyerActorName": "Local market roasted arabica"
       },
       {
         "sellerActorName": "Producer robusta",
-        "buyerActorName": "Trader robusta",
-        "volumeExchanged": 28500,
-        "monetaryValue": 8464500,
-        "unitPrice": 297,
-        "product": "Robusta cereza"
+        "buyerActorName": "Trader robusta"
       },
       {
         "sellerActorName": "Trader robusta",
-        "buyerActorName": "Wholesaler Local robusta",
-        "volumeExchanged": 28500,
-        "monetaryValue": 8778000,
-        "unitPrice": 308,
-        "product": "Robusta cereza"
+        "buyerActorName": "Wholesaler Local robusta"
       },
       {
         "sellerActorName": "Wholesaler Local robusta",
-        "buyerActorName": "Wholesaler Nacional robusta",
-        "volumeExchanged": 5730.97826086957,
-        "monetaryValue": 10716929.3478261,
-        "unitPrice": 1870,
-        "product": "Robusta pilado"
+        "buyerActorName": "Wholesaler Nacional robusta"
       },
       {
         "sellerActorName": "Wholesaler Nacional robusta",
-        "buyerActorName": "Industry Instant robusta",
-        "volumeExchanged": 5730.97826086957,
-        "monetaryValue": 13754347.826087,
-        "unitPrice": 2400,
-        "product": "Robusta oro"
+        "buyerActorName": "Industry Instant robusta"
       },
       {
         "sellerActorName": "Industry Instant robusta",
-        "buyerActorName": "Industry Instant robusta",
-        "volumeExchanged": 17800,
-        "monetaryValue": 35244000,
-        "unitPrice": 1980,
-        "product": "Robusta importado"
+        "buyerActorName": "Industry Instant robusta"
       },
       {
         "sellerActorName": "Industry Instant robusta",
-        "buyerActorName": "International market robusta",
-        "volumeExchanged": 4628,
-        "monetaryValue": 46280000,
-        "unitPrice": 10000,
-        "product": "Robusta soluble ex"
+        "buyerActorName": "International market robusta"
       },
       {
         "sellerActorName": "Industry Instant robusta",
-        "buyerActorName": "Local market robusta",
-        "volumeExchanged": 1725.23076923077,
-        "monetaryValue": 18977538.4615385,
-        "unitPrice": 11000,
-        "product": "Robusta soluble"
+        "buyerActorName": "Local market robusta"
       },
       {
         "sellerActorName": "Industry Instant robusta",
-        "buyerActorName": "International market robusta",
-        "volumeExchanged": 511.379598662208,
-        "monetaryValue": 5113795.98662208,
-        "unitPrice": 10000,
-        "product": "Robusta soluble ex"
+        "buyerActorName": "International market robusta"
       },
       {
         "sellerActorName": "Industry Instant robusta",
-        "buyerActorName": "Local market robusta",
-        "volumeExchanged": 1534.13879598662,
-        "monetaryValue": 16875526.7558528,
-        "unitPrice": 11000,
-        "product": "Robusta soluble"
+        "buyerActorName": "Local market robusta"
       }
     ],
     "addedValue": {

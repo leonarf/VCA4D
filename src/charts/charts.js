@@ -312,7 +312,6 @@ export const getNumberOfJobsData = (stages, actors, currentStage) => {
     let tooltip = {}
     const items = stages.value.map(stage => {
         const stageActors = actors.value.filter(actor => actor.stage === stage.name && actor.employment)
-
         const subTotal = stageActors.map(actor => actor.employment.total)
             .reduce((res, curr) => res + curr, 0)
 
@@ -336,7 +335,8 @@ export const getNumberOfJobsData = (stages, actors, currentStage) => {
                 value: subTotal
             }
         }
-    }).filter(item => !!item)
+    })
+    .filter(item => !!item)
 
     return getSelectableBarChart(items, currentStage.value, tooltip)
 }
@@ -556,6 +556,9 @@ const getMiniPieChart = (data, title, valueFormatter) => {
 
 export const getEmploymentByTypeOfActorData = (actors) => {
 
+    if (actors.some(actor => !actor.employment?.total)) {
+        return null
+    }
     let data = actors.map(actor => {
         return {
             value: actor.employment.total,
@@ -578,32 +581,38 @@ export const getNetOperatingProfitByTypeOfActorData = (actors, convertAmount, pr
 export const getEmploymentByQualificationData = (actors) => {
     let data = [
         {
-            value: actors.map(actor => actor.employment?.totalSkilled || 0).reduce((res, curr) => res + curr, 0),
+            value: actors.map(actor => actor.employment?.totalSkilled).reduce((res, curr) => res + curr, 0),
             name: 'Permanent qualified'
         },
         {
-            value: actors.map(actor => actor.employment?.totalUnskilled || 0).reduce((res, curr) => res + curr, 0),
+            value: actors.map(actor => actor.employment?.totalUnskilled).reduce((res, curr) => res + curr, 0),
             name: 'Permanent unqualified'
         },
         {
-            value: actors.map(actor => actor.employment?.totalTemp || 0).reduce((res, curr) => res + curr, 0),
+            value: actors.map(actor => actor.employment?.totalTemp).reduce((res, curr) => res + curr, 0),
             name: 'Temporary'
         }
     ]
+    if (data.some(item => !item.value)) {
+        return null
+    }
     return getMiniPieChart(data, 'By qualification')
 }
 
 export const getEmploymentByGenderData = (actors) => {
     let data = [
         {
-            value: actors.map(actor => actor.employment?.totalMale || 0).reduce((res, curr) => res + curr, 0),
+            value: actors.map(actor => actor.employment?.totalMale).reduce((res, curr) => res + curr, 0),
             name: 'Male'
         },
         {
-            value: actors.map(actor => actor.employment?.totalFemale || 0).reduce((res, curr) => res + curr, 0),
+            value: actors.map(actor => actor.employment?.totalFemale).reduce((res, curr) => res + curr, 0),
             name: 'Female'
         }
     ]
+    if (data.some(item => !item.value)) {
+        return null
+    }
     return getMiniPieChart(data, 'By gender')
 }
 

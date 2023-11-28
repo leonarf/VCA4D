@@ -14,18 +14,27 @@
         <div>
             <MiniChartContainer :currentStage="currentStage" title="Employment">
                 <div class="flex flex-row w-full justify-evenly mt-6">
-                    <div class="w-1/3 aspect-w-1 aspect-h-1">
-                        <Ring v-if="studyData" :options="currentStageEmploymentByTypeOfActorData"
+                    <template v-if="studyData">
+                        <template v-if="currentStageEmploymentByTypeOfActorData">
+                            <div class="w-1/3 aspect-w-1 aspect-h-1">
+                            <Ring :options="currentStageEmploymentByTypeOfActorData"
                             style="height: 300px;"></Ring>
-                    </div>
-                    <div class="w-1/3 aspect-w-1 aspect-h-1">
-                        <Ring v-if="studyData" :options="currentStageEmploymentByQualificationData"
+                        </div>
+                    </template>
+                    <template v-if="currentStageEmploymentByQualificationData">
+                        <div class="w-1/3 aspect-w-1 aspect-h-1">
+                            <Ring v-if="studyData" :options="currentStageEmploymentByQualificationData"
                             style="height: 300px;"></Ring>
-                    </div>
-                    <div class="w-1/3 aspect-w-1 aspect-h-1">
-                        <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px;">
-                        </Ring>
-                    </div>
+                        </div>
+                    </template>
+                    <template v-if="currentStageEmploymentByGenderData">
+                        <div class="w-1/3 aspect-w-1 aspect-h-1">
+                            <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px;">
+                            </Ring>
+                        </div>
+                    </template>
+                </template>
+                    
                 </div>
             </MiniChartContainer>
         </div>
@@ -61,13 +70,15 @@ const numberOfJobsData = computed(() => getNumberOfJobsData(stages, actors, curr
 
 const availableStages = computed(() => numberOfJobsData.value.xAxis.data)
 
-
 const totalNumberOfJobs = computed(() => {
     return formatNumber(numberOfJobsData.value.series[0].data.map(itemData => itemData.value).reduce((res, item) => res + item, 0))
 })
 
 const percentFemaleEmployment = computed(() => {
-    const totalFemale = actors.value.reduce((res, actor) => res + (actor.employment?.totalFemale || 0), 0)
+    const totalFemale = actors.value.reduce((res, actor) => res + (actor.employment?.totalFemale), 0)
+    if (isNaN(totalFemale)) {
+        return "-"
+    }
     const total = actors.value.reduce((res, actor) => res + (actor.employment?.total || 0), 0)
     return formatPercent(totalFemale / total)
 })
