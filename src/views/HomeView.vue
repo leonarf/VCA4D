@@ -4,6 +4,7 @@ import Skeleton from '../components/Skeleton.vue'
 import { computed, onMounted, ref } from 'vue';
 import jsonData from '../../data/data.json'
 import ByCategories from '../components/home/ByCategories.vue';
+import ByContinents from '../components/home/ByContinents.vue';
 
 const studies = ref([])
 const countries = ref([])
@@ -79,6 +80,7 @@ const currency = computed(() => localStorage.getItem('currency') || 'LOCAL')
 
             <ByCategories :categories="categories" :studies="studies" :countries="countries" :currency="currency"/>
 
+            <ByContinents :studies="studies" :countries="countries" :currency="currency"/>
             <section>
                 <h3>Browse studies by <strong>country</strong></h3>
                 <div class="flex flex-row justify-evenly">
