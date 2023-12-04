@@ -357,79 +357,155 @@
     "flows": [
       {
         "sellerActorName": "Producer arabica bola",
-        "buyerActorName": "Collector arabica"
+        "buyerActorName": "Collector arabica",
+        "volumeExchanged": 9450,
+        "monetaryValue": 9355500,
+        "unitPrice": 990,
+        "product": "Cafe bola"
       },
       {
         "sellerActorName": "Collector arabica",
-        "buyerActorName": "Industry instant arabica"
+        "buyerActorName": "Industry instant arabica",
+        "volumeExchanged": 2362.5,
+        "monetaryValue": 6237000,
+        "unitPrice": 2640,
+        "product": "Cafe oro"
       },
       {
         "sellerActorName": "Collector arabica",
-        "buyerActorName": "Industry roasted arabica"
+        "buyerActorName": "Industry roasted arabica",
+        "volumeExchanged": 2362.5,
+        "monetaryValue": 6237000,
+        "unitPrice": 2640,
+        "product": "Cafe oro"
       },
       {
         "sellerActorName": "Collector arabica",
-        "buyerActorName": "Industry instant arabica"
+        "buyerActorName": "Industry instant arabica",
+        "volumeExchanged": 787.4,
+        "monetaryValue": 2078736,
+        "unitPrice": 2640,
+        "product": "Cafe oro"
       },
       {
         "sellerActorName": "Collector arabica",
-        "buyerActorName": "Industry roasted arabica"
+        "buyerActorName": "Industry roasted arabica",
+        "volumeExchanged": 787.4,
+        "monetaryValue": 2078736,
+        "unitPrice": 2640,
+        "product": "Cafe oro"
       },
       {
         "sellerActorName": "Industry instant arabica",
-        "buyerActorName": "Exportador instant arabica"
+        "buyerActorName": "Exportador instant arabica",
+        "volumeExchanged": 284.990952380952,
+        "monetaryValue": 3704882.38095238,
+        "unitPrice": 13000,
+        "product": "Cafe soluble exportacion"
       },
       {
         "sellerActorName": "Industry instant arabica",
-        "buyerActorName": "Local market instant arabica"
+        "buyerActorName": "Local market instant arabica",
+        "volumeExchanged": 839.973333333333,
+        "monetaryValue": 11759626.6666667,
+        "unitPrice": 14000,
+        "product": "Cafe soluble mercado local"
       },
       {
         "sellerActorName": "Trader arabica",
-        "buyerActorName": "Collector arabica"
+        "buyerActorName": "Collector arabica",
+        "volumeExchanged": 7874,
+        "monetaryValue": 4724400,
+        "unitPrice": 600,
+        "product": "Cafe cereza"
       },
       {
         "sellerActorName": "Producer arabica cherry",
-        "buyerActorName": "Trader arabica"
+        "buyerActorName": "Trader arabica",
+        "volumeExchanged": 7874,
+        "monetaryValue": 4330700,
+        "unitPrice": 550,
+        "product": "Cafe cereza"
       },
       {
         "sellerActorName": "Industry roasted arabica",
-        "buyerActorName": "Local market roasted arabica"
+        "buyerActorName": "Local market roasted arabica",
+        "volumeExchanged": 2519.92,
+        "monetaryValue": 21419320,
+        "unitPrice": 8500,
+        "product": "Cafe tostado y molido"
       },
       {
         "sellerActorName": "Producer robusta",
-        "buyerActorName": "Trader robusta"
+        "buyerActorName": "Trader robusta",
+        "volumeExchanged": 28500,
+        "monetaryValue": 8464500,
+        "unitPrice": 297,
+        "product": "Robusta cereza"
       },
       {
         "sellerActorName": "Trader robusta",
-        "buyerActorName": "Wholesaler Local robusta"
+        "buyerActorName": "Wholesaler Local robusta",
+        "volumeExchanged": 28500,
+        "monetaryValue": 8778000,
+        "unitPrice": 308,
+        "product": "Robusta cereza"
       },
       {
         "sellerActorName": "Wholesaler Local robusta",
-        "buyerActorName": "Wholesaler Nacional robusta"
+        "buyerActorName": "Wholesaler Nacional robusta",
+        "volumeExchanged": 5730.97826086957,
+        "monetaryValue": 10716929.3478261,
+        "unitPrice": 1870,
+        "product": "Robusta pilado"
       },
       {
         "sellerActorName": "Wholesaler Nacional robusta",
-        "buyerActorName": "Industry Instant robusta"
+        "buyerActorName": "Industry Instant robusta",
+        "volumeExchanged": 5730.97826086957,
+        "monetaryValue": 13754347.826087,
+        "unitPrice": 2400,
+        "product": "Robusta oro"
       },
       {
         "sellerActorName": "Industry Instant robusta",
-        "buyerActorName": "Industry Instant robusta"
+        "buyerActorName": "Industry Instant robusta",
+        "volumeExchanged": 17800,
+        "monetaryValue": 35244000,
+        "unitPrice": 1980,
+        "product": "Robusta importado"
       },
       {
         "sellerActorName": "Industry Instant robusta",
-        "buyerActorName": "International market robusta"
+        "buyerActorName": "International market robusta",
+        "volumeExchanged": 4628,
+        "monetaryValue": 46280000,
+        "unitPrice": 10000,
+        "product": "Robusta soluble ex"
       },
       {
         "sellerActorName": "Industry Instant robusta",
-        "buyerActorName": "Local market robusta"
+        "buyerActorName": "Local market robusta",
+        "volumeExchanged": 1725.23076923077,
+        "monetaryValue": 18977538.4615385,
+        "unitPrice": 11000,
+        "product": "Robusta soluble"
       },
       {
         "sellerActorName": "Industry Instant robusta",
-        "buyerActorName": "International market robusta"
+        "buyerActorName": "International market robusta",
+        "volumeExchanged": 511.379598662208,
+        "monetaryValue": 5113795.98662208,
+        "unitPrice": 10000,
+        "product": "Robusta soluble ex"
       },
       {
         "sellerActorName": "Industry Instant robusta",
-        "buyerActorName": "Local market robusta"
+        "buyerActorName": "Local market robusta",
+        "volumeExchanged": 1534.13879598662,
+        "monetaryValue": 16875526.7558528,
+        "unitPrice": 11000,
+        "product": "Robusta soluble"
       }
     ],
     "addedValue": {
