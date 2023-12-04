@@ -101,7 +101,7 @@ const getLink = (study) => `/study?id=${study.local ? 'localStorage' : study.id}
                 <template v-if="item.studies.length === 1">
                     <div class="card min-h-[180px]">
                         <RouterLink :to="getLink(item.studies[0])" class="w-[150px]">
-                            <div :class="`card-icon ${item.studies[0].local ? 'bg-[#868686]' : 'bg-[#DFDFDF]'}`">
+                            <div :class="`card-icon ${item.studies[0].local ? 'bg-[#868686]' : 'bg-[#DFDFDF] hover:bg-[#CFCFCF]'}`">
                                 <img 
                                 :src="getProductLogo(item.product)" 
                                 :alt="`Link to ${item.studies[0].title} study`"
@@ -118,8 +118,8 @@ const getLink = (study) => `/study?id=${study.local ? 'localStorage' : study.id}
                     </div>
                 </template>
                 <template v-else>
-                    <div class="card min-h-[180px] cursor-pointer relative" @click.stop="openedProduct = item.product">
-                        <div :class="`card-icon ${openedProduct === item.product ? 'bg-[#9B9B9B]' : 'bg-[#DFDFDF]'}`">
+                    <div class="card min-h-[180px] relative" @click.stop="openedProduct === item.product ? openedProduct = null : openedProduct = item.product">
+                        <div :class="`cursor-pointer card-icon ${openedProduct === item.product ? 'bg-[#9B9B9B]' : 'bg-[#DFDFDF] hover:bg-[#CFCFCF]'}`">
                             <img 
                             :src="getProductLogo(item.product)" 
                             style="height: 75px; width: 75px;"
