@@ -4,15 +4,17 @@ import { addColors } from '@/utils/colors.js'
 const SANKEY_TITLE = "The various actors and their share in the flows of the value chain"
 
 const getNodeGap = (studyData) => {
+    // First we look at number of flows we have. We force it in the range [10, 40]
     const nbFlows  = studyData.ecoData.flows.length
-    const MAX_NB_FLOWS = 40
     const MIN_NB_FLOWS = 10
+    const MAX_NB_FLOWS = 40
     const normalizedNbFlows = Math.max(Math.min(nbFlows, MAX_NB_FLOWS), MIN_NB_FLOWS)
-    const percent = (normalizedNbFlows - MIN_NB_FLOWS) / (MAX_NB_FLOWS - MIN_NB_FLOWS)
 
+    // Based on the number of flows, we set a "Node gap".
+    // Node gap will be between 50 and 200. The more flows, the smallest node gap
+    const percent = (normalizedNbFlows - MIN_NB_FLOWS) / (MAX_NB_FLOWS - MIN_NB_FLOWS)
     const MIN_NODE_GAP = 50
     const MAX_NODE_GAP = 200
-
     return Math.floor(MIN_NODE_GAP + (1.0 - percent) * (MAX_NODE_GAP - MIN_NODE_GAP))
 }
 
@@ -35,6 +37,7 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
         }
     };
 
+    // For each flow we identify the source Stage and the destination Stage
     const sankeyFlows = flows.map(flow => {
         const sourceActor = actors.find(a => a.name === flow.sellerActorName)
         if (!sourceActor) {
@@ -53,9 +56,11 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
         }
     })
 
+    // List of all stages in flows
     let sankeyStages = [...new Set(sankeyFlows.map(sFlow => [sFlow.sourceStage, sFlow.destStage])
         .reduce((arr, val) => arr.concat(val), []))]
 
+    // For each stage, identify the list of source stages and destination stages.
     sankeyStages = sankeyStages.map(stage => {
         const flowsToStage = sankeyFlows.filter(sFlow => sFlow.destStage === stage && sFlow.sourceStage !== stage).map(sFlow => sFlow.sourceStage)
         const flowsFromStage = sankeyFlows.filter(sFlow => sFlow.sourceStage === stage && sFlow.destStage !== stage).map(sFlow => sFlow.destStage)
@@ -65,6 +70,7 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
             inStages: [...new Set(flowsToStage)],
             outStages: [...new Set(flowsFromStage)],
         }
+        // Stages that have no sources have an index of 0. Flows only start from them
         if (flowsToStage.length === 0) {
             ret = {
                 ...ret,
@@ -76,14 +82,18 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
 
     sankeyStages = addColors(sankeyStages)
 
+    // Attribute an index to each stage. If a stage with index N give a flow to another stage it will have index N + 1
     for (let idx = 0; idx < 15; idx++) {
         const stages = sankeyStages.filter(sStage => sStage.index === idx)
-        const ouStages = [... new Set(stages.reduce((arr, stage) => arr.concat(stage.outStages), []))]
-        if (ouStages.length === 0) {
+        const outStages = [... new Set(stages.reduce((arr, stage) => arr.concat(stage.outStages), []))]
+        if (outStages.length === 0) {
             break
         }
-        for (const toStage of ouStages) {
-            sankeyStages.find(stage => stage.name === toStage).index = idx + 1
+        for (const toStage of outStages) {
+            let tmpStage = sankeyStages.find(stage => stage.name === toStage)
+            if (!tmpStage.index) {
+                tmpStage.index = idx + 1
+            }
         }
     }
 
@@ -95,8 +105,8 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
         }
     }))
 
-    const maxDepth = Math.max(sankeyStages.map(sStage => sStage.index))
-
+    const maxDepth = Math.max(...sankeyStages.map(sStage => sStage.index))
+    result.series.maxDepth = maxDepth + 1
     // It looks like in echarts, "nodes" key can also be named "data"
     result.series.nodes = actors.map((actor) => {
         const sankeyStage = sankeyStages.find(sStage => sStage.name === actor.stage)
