@@ -110,12 +110,11 @@ export const parseEconomicsJson = (json) => {
       const skilledMale = parseFloat(employment[EmploymentColumns.SKILLED_MALE])
       const skilledFemale = parseFloat(employment[EmploymentColumns.SKILLED_FEMALE])
 
-
-      const totalMale = tempMale || 0 + unskilledMale || 0 + skilledMale || 0
-      const totalFemale = tempFemale || 0 + unskilledFemale || 0 + skilledFemale || 0
-      const totalTemp = tempMale + tempFemale
-      const totalSkilled = skilledFemale + skilledMale
-      const totalUnskilled = unskilledFemale + unskilledMale
+      const totalMale = (tempMale || 0) + (unskilledMale || 0) + (skilledMale || 0)
+      const totalFemale = tempFemale + unskilledFemale + skilledFemale
+      const totalTemp = tempMale + (tempFemale || 0)
+      const totalSkilled = skilledMale + (skilledFemale || 0) 
+      const totalUnskilled = unskilledMale + (unskilledFemale || 0)
       
       const result = {
         actorName,
@@ -131,7 +130,7 @@ export const parseEconomicsJson = (json) => {
           totalTemp,
           totalSkilled,
           totalUnskilled,
-          total: totalMale + totalFemale
+          total: totalMale + (totalFemale || 0)
         }
       }
       return result
