@@ -81,22 +81,6 @@ const currency = computed(() => localStorage.getItem('currency') || 'LOCAL')
             <ByCategories :categories="categories" :studies="studies" :countries="countries" :currency="currency"/>
 
             <ByContinents :studies="studies" :countries="countries" :currency="currency"/>
-            <section>
-                <h3>Browse studies by <strong>country</strong></h3>
-                <div class="flex flex-row justify-evenly">
-                <div v-for="continent in continents" :key="continent">
-                    <div class="text-xl font-bold">{{ continent }}</div>
-                    <div v-for="country in countriesByContinent(continent)" :key="country.id">
-                        <h4 class="mt-4">{{ country.prettyName }}</h4>
-                        <ul>
-                            <li v-for="study in filterStudiesByCountry(country.id)" :key="study.id" class="text-blue-600 dark:text-blue-500 hover:underline">
-                                <RouterLink :to="`/study?id=${study.id}&currency=${currency}`">{{ study.title + " " + study.year }}</RouterLink>
-                            </li>
-                        </ul>
-                    </div>
-                </div> 
-            </div>
-            </section>
         </section>
     </Skeleton>
 </template>
