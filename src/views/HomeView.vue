@@ -2,37 +2,14 @@
 import { RouterLink } from 'vue-router'
 import Skeleton from '../components/Skeleton.vue'
 import { computed, onMounted, ref } from 'vue';
-import jsonData from '../../data/data.json'
 import ByCategories from '../components/home/ByCategories.vue';
 import ByContinents from '../components/home/ByContinents.vue';
+import { geAllJsonData } from '../utils/data';
 
 const studies = ref([])
 const countries = ref([])
 const continents = ref([])
 const categories = ref([])
-
-const geAllJsonData = () => {
-    const localStudy = JSON.parse(localStorage.getItem('localStudyProperties'))
-    if (!localStudy) {
-        return jsonData
-    }
-    const category = jsonData.categories.find(category => category.prettyName === localStudy.category)
-    return {
-        ...jsonData,
-        studies: [
-            ...jsonData.studies,
-            {
-                category: category ? category.id : 'unknown',
-                country: localStudy.country.toLowerCase(),
-                id: localStudy.id,
-                product: localStudy.commodity.toLowerCase(),
-                title: ["Local", localStudy.commodity, localStudy.year].join(' '),
-                year: localStudy.year,
-                local: true
-            }
-        ]
-    }
-}
 
 onMounted(async () => {
     const allJsonData = geAllJsonData()
@@ -41,12 +18,6 @@ onMounted(async () => {
     continents.value = [...new Set(countries.value.map(country => country.continent))] 
     categories.value = allJsonData.categories
 })
-
-const countriesByContinent = (continent) => countries.value.filter(country => country.continent === continent).sort((country1, country2) => country1.prettyName.localeCompare(country2.prettyName))
-
-const filterStudiesByCountry = (country) => {
-  return studies.value.filter(item => item.country === country);
-};
 
 const currency = computed(() => localStorage.getItem('currency') || 'LOCAL')
 

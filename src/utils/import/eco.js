@@ -1,8 +1,15 @@
 import { setImportErrors, getImportErrors, parseActorTypes } from '@/utils/import/generic.js'
 import { KNOWN_CURRENCIES } from '../currency'
 
+export const ECO_SHEET_NAMES = {
+  HOME: "Value Chain",
+  STAGES_DESCRIPTION: "Stages description",
+  FLOWS: "Flow by actor type",
+  ACTOR_TYPES: "Actor types"
+}
+
 export const parseEconomicsJson = (json) => {
-  const stages = json["Stages description"].map((stage, index) => ({
+  const stages = json[ECO_SHEET_NAMES.STAGES_DESCRIPTION].map((stage, index) => ({
     name: stage['Stages'],
     description: stage['Description'] || '',
     index
@@ -11,7 +18,6 @@ export const parseEconomicsJson = (json) => {
 
   let actors = parseActorTypes(json)
   
-  var sheetname = "Flow by actor type"
   var expectedColumns = {
     sellerActorName: 'Seller Name',
     buyerActorName: 'Buyer Name',
@@ -21,7 +27,7 @@ export const parseEconomicsJson = (json) => {
     volumeUnit: 'Volume Unit',
     product: 'Products'
   }
-  const flows = json[sheetname].map(flow => {
+  const flows = json[ECO_SHEET_NAMES.FLOWS].map(flow => {
     var result = {}
     for (var key in expectedColumns) {
       result[key] = flow[expectedColumns[key]]
@@ -31,7 +37,7 @@ export const parseEconomicsJson = (json) => {
 
   for (var key in expectedColumns) {
     if (flows.filter(flow => flow[key] != undefined).length == 0) {
-      setImportErrors(`In spreadsheet '${sheetname}', column '${expectedColumns[key]}' is missing or empty`)
+      setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.FLOWS}', column '${expectedColumns[key]}' is missing or empty`)
     }
   }
 
@@ -230,7 +236,7 @@ export const parseEconomicsJson = (json) => {
     if (!KNOWN_CURRENCIES.includes(study.targetCurrency)) {
       errors.push({
         level: "error",
-        message: `Unknown currency ${study.targetCurrency}`
+        message: `Unknown currency <b>${study.targetCurrency}</b>`
       })
     }
     for (const property of [
@@ -241,28 +247,24 @@ export const parseEconomicsJson = (json) => {
       if (!study[property]) {
         errors.push({
           level: "error",
-          message: `Missing property ${property}`
+          message: `Missing property <b>${property}</b> in sheet ${ECO_SHEET_NAMES.HOME}`
         })
       }
     }
     study.ecoData.stages.filter(stage => !stage.description).map(stage => {
       errors.push({
         level: 'info',
-        message: `Stage ${stage.name} has no description`
-      })
-    })
-    const stageNames = study.ecoData.stages.map(stage => stage.name)
-    study.ecoData.actors.filter(actor => !stageNames.includes(actor.stage)).map(actor => {
-      errors.push({
-        level: 'error',
-        message: `Actor ${actor.name} has a stage ${actor.stage} not defined in Stages`
+        message: `Add a description to stage <b>${stage.name}</b> in the sheet <b>${ECO_SHEET_NAMES.STAGES_DESCRIPTION}</b>`
       })
     })
     const actorNames = study.ecoData.actors.map(actor => actor.name)
-    study.ecoData.flows.filter(flow => !actorNames.includes(flow.buyerActorName) || !actorNames.includes(flow.sellerActorName)).map(flow => {
+    let unknownActorsInFlows = []
+    unknownActorsInFlows = unknownActorsInFlows.concat(study.ecoData.flows.filter(flow => !actorNames.includes(flow.buyerActorName)).reduce((arr, flow) => arr.concat(flow.buyerActorName), []))
+    unknownActorsInFlows = unknownActorsInFlows.concat(study.ecoData.flows.filter(flow => !actorNames.includes(flow.sellerActorName)).reduce((arr, flow) => arr.concat(flow.buyerActorName), []))
+    unknownActorsInFlows.map(actor => {
       errors.push({
         level: 'error',
-        message: `Unknown actor name in flow ${flow}`
+        message: `Actor named <b>${actor}</b> in sheet <b>${ECO_SHEET_NAMES.FLOWS}</b> is not defined in sheet <b>${ECO_SHEET_NAMES.ACTOR_TYPES}</b>`
       })
     })
   

@@ -2,24 +2,26 @@
     <Skeleton :skipFooter="true">
         <h1 class="mb-4">Import a study file</h1>
         <div v-if="isObjectNotEmpty(studyProperties)" class="flex flex-col items-center">
-            <div class="flex flex-row items-center">
-                <div>Imported study: <b>{{ studyProperties['id'] }}</b></div>
+            <div class="flex flex-col items-center">
+                <div>You have imported this study: <b>{{ studyProperties['id'] }}</b></div>
                 <div class="ml-4">
+                    Press 
                     <button @click="clearData"
                         class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-1 px-1.5 border border-red-500 hover:border-transparent rounded">Remove</button>
+                    to import another study
                 </div>
             </div>
             <div class="mt-4 flex flex-row gap-x-4">
                 <RouterLink to="/">
                     <button
                         class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                        Find your new study on the home page
+                        Find your study on the home page
                     </button>
                 </RouterLink>
                 <RouterLink :to="'/study?id=localStorage'">
                     <button
                         class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                        Browse your new study's pages
+                        Browse this study
                     </button>
                 </RouterLink>
 
@@ -32,27 +34,58 @@
                     type="file" @change="handleFileUpload" />
             </div>
 
-            <div v-if="excelData" class="flex flex-col text-left mt-2 text-lg">
+            <div v-if="excelData" class="flex flex-col gap-y-4 text-left mt-2 text-lg mx-auto max-w-5xl">
+                <h2>Summary</h2>
                 <div class="flex flex-row">
-                    <div class="w-1/2">
-
-                        <div class="flex flex-row">
-                            <div class="w-[350px]">Type of file: </div>
-                            <div class="font-semibold">{{ typeOfFile }}</div>
-                        </div>
-                        <div class="flex flex-row" v-for="[property, value] in Object.entries(studyProperties)"
-                            :key="property">
-                            <div class="w-[350px]">{{ property }}: </div>
-                            <div class="font-semibold">{{ value }}</div>
-                        </div>
+                    <div>
+                        <h3 class="w-[250px] table-cell">Type of file</h3>
                     </div>
-                    <div class="w-1/2" v-if="errors.length > 0">
-                        <div v-for="(error, index) in errors" :key="index">
-                            <div :class="`${error.level === 'error' ? 'bg-red-500' : ''}`">{{ error.message }}</div>
-                        </div>
+                    <div class="flex flex-row flex-grow">
+                        <div v-for="t in TypesOfFile" :key="t"
+                        class="bg-gray-200 rounded mr-8 px-4 py-2 border border-gray-400 "
+                        :class="{ 'bg-green-300 font-semibold border-2': typeOfFile === t}">{{ t }}</div>
                     </div>
                 </div>
+                <div class="flex flex-row">
+                    <div>
+                        <h3 class="w-[250px] table-cell">Country</h3>
+                    </div>
+                    <div class="text-2xl" v-if="knownCountry">
+                        {{ knownCountry.prettyName }}
+                    </div>
+                    <div v-else class="text-red-600 font-semibold">
+                        Unknown country: <b>{{ studyProperties['country'] }}</b>
+                    </div>
+                </div>
+                <div class="flex flex-row items-center">
+                    <div>
+                        <h3 class="w-[250px] table-cell">Product</h3>
+                    </div>
+                    <div class="text-2xl" v-if="isKnownProduct">
+                        {{ studyProperties['commodity'] }}
+                    </div>
+                    <div v-else class="text-red-600 font-semibold">
+                        Unknown commodity: <b>{{ studyProperties['commodity'] }}</b>
+                    </div>
+                </div>
+                <div v-if="typeOfFile === TypesOfFile.Economics" class="flex flex-row items-center">
+                    <div class="">
+                        <h3 class="w-[250px] table-cell">Currency</h3>
+                    </div>
+                    <div class="text-xl">This study is in {{ studyProperties.localCurrency }} and will be converted to {{  studyProperties.targetCurrency }} with a rate of {{ studyProperties.currencyRatio }}</div>
+                </div>
+                <h2 class="mt-8">Warnings</h2>
+                <div v-if="errors.length === 0">
+                    There are no warnings.
+                </div>
+                <ul v-else>
+                    <li v-for="(error, index) in errors" :key="index" class="list-disc">
+                        <div :class="`${error.level === 'error' ? 'text-red-500' : ''}`" :innerHTML="error.message"></div>
+                    </li>
+                </ul>
+
                 <div class="my-4">
+                <h2>Add study to repo</h2>
                     <h4 class="font-bold">{{ `Replace data file and add study file in /data/ ` }}</h4>
                     <div class="flex flex-row mb-2 gap-x-2">
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -80,8 +113,10 @@ import { parseSustainabilityWorksheet } from '@/utils/import/social.js'
 import { parseEconomicsJson, getErrors } from '@/utils/import/eco.js'
 import { parseEnvironmentJson } from '@/utils/import/environment.js'
 import { setImportErrors, clearImportErrors, getImportErrors } from '@/utils/import/generic.js'
+import { ECO_SHEET_NAMES } from '../utils/import/eco'
 
 import { RouterLink } from 'vue-router'
+import { geAllJsonData } from '../utils/data';
 
 const excelData = ref(undefined);
 const workbook = ref(undefined)
@@ -94,6 +129,18 @@ const clearData = () => {
     clearImportErrors()
     window.location.reload()
 }
+
+const knownCountries = ref([])
+const knownProducts = ref([])
+
+onMounted(async () => {
+    const allJsonData = geAllJsonData()
+    knownCountries.value = allJsonData.countries
+    knownProducts.value = allJsonData.categories.reduce((arr, item) => arr.concat(item.commodities) , [])
+})
+
+const knownCountry = computed(() => knownCountries.value.find(c => c.id === studyProperties.value['country']))
+const isKnownProduct = computed(() => knownProducts.value.includes(studyProperties.value['commodity'].toLowerCase()))
 
 const isObjectNotEmpty = (obj) => {
     if (!obj) {
@@ -153,11 +200,10 @@ const typeOfFile = computed(() => {
     return null
 })
 
-
 const getValueChainProperty = (json, propertyName) => {
-    var sheetName = "Study id"
+    let sheetName = "Study id"
     if (!Object.keys(json).includes(sheetName)) {
-        var sheetName = "Value Chain"
+        sheetName = ECO_SHEET_NAMES.HOME
         if (!Object.keys(json).includes(sheetName)) {
             setImportErrors(`The excel spreadsheet is missing a sheet named 'Study id'`)
             return null
@@ -216,9 +262,8 @@ const studyProperties = computed(() => {
     const country = slugify(getValueChainProperty(excelData.value, "Country"))
     const commodity = getValueChainProperty(excelData.value, "Commodity")
 
-    const existingCommodities = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
-    if (!existingCommodities.includes(slugify(commodity))) {
-        setImportErrors(`The commodity ${commodity} is not recognized. Known commidities are ${existingCommodities}`)
+    if (!knownProducts.value.includes(slugify(commodity))) {
+        setImportErrors(`The commodity ${commodity} is not recognized. Known commidities are ${knownProducts.value}`)
     }
 
     var result = {
@@ -243,7 +288,7 @@ const studyProperties = computed(() => {
             targetCurrency = localCurrency
             currencyRatio = 1.0
         } catch (local_currency_not_standard_error) {
-            console.log(`Exception raised while constructing an NumberFormat with local currency ${localCurrency}`, local_currency_not_standard_error)
+            console.error(`Exception raised while constructing an NumberFormat with local currency ${localCurrency}`, local_currency_not_standard_error)
             targetCurrency = getValueChainProperty(excelData.value, targetCurrencySpreadsheetLabel);
             try {
                 formatter_with_valid_currency = new Intl.NumberFormat(undefined, {
@@ -252,7 +297,7 @@ const studyProperties = computed(() => {
                 })
                 currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency");
             } catch (target_currency_not_standard_error) {
-                console.log(`Exception raised while constructing an NumberFormat with target currency ${targetCurrency}`, target_currency_not_standard_error)
+                console.error(`Exception raised while constructing an NumberFormat with target currency ${targetCurrency}`, target_currency_not_standard_error)
                 setImportErrors(`Either currencies defined by '${localCurrencySpreadsheetLabel}' or '${targetCurrencySpreadsheetLabel}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`)
             }
         }
