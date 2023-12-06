@@ -88,3 +88,20 @@ export const prettyFormatAmount = (amount, currency) => {
     maximumFractionDigits: numberDigits,
   }).format(amount / divisor)} ${textUnit}${getCurrencySymbol(currency)}`;
 }
+
+export const isValidCurrency = (ccy) => {
+  try {
+    new Intl.NumberFormat(undefined, {
+      style: "currency",
+      currency: ccy
+    })
+  } catch (err) {
+    console.error(`Invalid Currency error: ${ccy}`)
+    return false
+  } 
+  return true
+}
+
+export const isCurrencySupported = (ccy) => {
+  return KNOWN_CURRENCIES.includes(ccy)
+}

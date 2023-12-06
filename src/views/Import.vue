@@ -6,21 +6,21 @@
                 <div>You have imported this study: <b>{{ studyProperties['id'] }}</b></div>
                 <div class="ml-4">
                     Press 
-                    <button @click="clearData"
-                        class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-1 px-1.5 border border-red-500 hover:border-transparent rounded">Remove</button>
+                    <button class="delete" @click="clearData"
+                        >Remove</button>
                     to import another study
                 </div>
             </div>
             <div class="mt-4 flex flex-row gap-x-4">
                 <RouterLink to="/">
                     <button
-                        class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                        class="browse">
                         Find your study on the home page
                     </button>
                 </RouterLink>
                 <RouterLink :to="'/study?id=localStorage'">
                     <button
-                        class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                        class="browse">
                         Browse this study
                     </button>
                 </RouterLink>
@@ -37,42 +37,66 @@
             <div v-if="excelData" class="flex flex-col gap-y-4 text-left mt-2 text-lg mx-auto max-w-5xl">
                 <h2>Summary</h2>
                 <div class="flex flex-row">
-                    <div>
-                        <h3 class="w-[250px] table-cell">Type of file</h3>
+                    <div class="w-1/4">
+                        <h3 class="table-cell">Type of file</h3>
                     </div>
-                    <div class="flex flex-row flex-grow">
+                    <div class="flex flex-row w-3/4">
                         <div v-for="t in TypesOfFile" :key="t"
                         class="bg-gray-200 rounded mr-8 px-4 py-2 border border-gray-400 "
                         :class="{ 'bg-green-300 font-semibold border-2': typeOfFile === t}">{{ t }}</div>
                     </div>
                 </div>
                 <div class="flex flex-row">
-                    <div>
-                        <h3 class="w-[250px] table-cell">Country</h3>
+                    <div class="w-1/4">
+                        <h3 class="table-cell">Country</h3>
                     </div>
-                    <div class="text-2xl" v-if="knownCountry">
-                        {{ knownCountry.prettyName }}
-                    </div>
-                    <div v-else class="text-red-600 font-semibold">
-                        Unknown country: <b>{{ studyProperties['country'] }}</b>
+                    <div class="w-3/4">
+                        <div class="text-2xl" v-if="knownCountry">
+                            {{ knownCountry.prettyName }}
+                        </div>
+                        <div v-else class="text-red-600">
+                            Unknown country: <b>{{ studyProperties['country'] }}</b>
+                            <br />
+                            Known countries are: <b>{{knownCountries.sort((c1, c2) => c1.id.localeCompare(c2.id)).map(c => c.prettyName).join(', ')}}</b>
+                        </div>
                     </div>
                 </div>
                 <div class="flex flex-row items-center">
-                    <div>
-                        <h3 class="w-[250px] table-cell">Product</h3>
+                    <div class="w-1/4">
+                        <h3 class="table-cell">Product</h3>
                     </div>
-                    <div class="text-2xl" v-if="isKnownProduct">
-                        {{ studyProperties['commodity'] }}
-                    </div>
-                    <div v-else class="text-red-600 font-semibold">
-                        Unknown commodity: <b>{{ studyProperties['commodity'] }}</b>
+                    <div class="w-3/4">
+                        <div class="text-2xl" v-if="isKnownProduct">
+                            {{ studyProperties['commodity'] }}
+                        </div>
+                        <div v-else class="text-red-600">
+                            Unknown commodity: <b>{{ slugify(studyProperties['commodity']) }}</b>
+                            <br />
+                            Known commodities are: <b>{{knownProducts.sort((a, b) => a.localeCompare(b)).join(', ')}}</b>
+                        </div>
                     </div>
                 </div>
                 <div v-if="typeOfFile === TypesOfFile.Economics" class="flex flex-row items-center">
-                    <div class="">
-                        <h3 class="w-[250px] table-cell">Currency</h3>
+                    <div class="w-1/4">
+                        <h3 class="table-cell">Currency</h3>
                     </div>
-                    <div class="text-xl">This study is in {{ studyProperties.localCurrency }} and will be converted to {{  studyProperties.targetCurrency }} with a rate of {{ studyProperties.currencyRatio }}</div>
+                    <div class="w-3/4 text-xl">
+                        <div v-if="!isValidCurrency(studyProperties.targetCurrency)">
+                            <span class="text-red-600">
+                                Currency <b>{{ studyProperties.targetCurrency}}</b> defined in cell <b>{{ HOME_LABELS.LocalCcy}}</b> or <b>{{ HOME_LABELS.TargetCcy }}</b> is not valid.
+                            </span>
+                            <br/>
+                            Find all valid currencies code by visiting <a class="font-semibold underline" href="https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes" target="_blank">this wiki page.</a>
+                        </div>
+                        <div v-else>
+                            <div v-if="!isCurrencySupported(studyProperties.targetCurrency)">
+                                Currency <b>{{ studyProperties.targetCurrency}}</b> is valid but is not yet supported, please contact a project admin.
+                            </div>
+                            <div v-else>
+                                This study is in {{ studyProperties.localCurrency }} and will be converted to {{  studyProperties.targetCurrency }} with a rate of {{ studyProperties.currencyRatio }}
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <h2 class="mt-8">Warnings</h2>
                 <div v-if="errors.length === 0">
@@ -88,9 +112,9 @@
                 <h2>Add study to repo</h2>
                     <h4 class="font-bold">{{ `Replace data file and add study file in /data/ ` }}</h4>
                     <div class="flex flex-row mb-2 gap-x-2">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        <button class="download"
                             @click="downloadDataJson">Download data file</button>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        <button class="download"
                             @click="downloadStudy">Download study file</button>
                     </div>
                 </div>
@@ -113,7 +137,9 @@ import { parseSustainabilityWorksheet } from '@/utils/import/social.js'
 import { parseEconomicsJson, getErrors } from '@/utils/import/eco.js'
 import { parseEnvironmentJson } from '@/utils/import/environment.js'
 import { setImportErrors, clearImportErrors, getImportErrors } from '@/utils/import/generic.js'
-import { ECO_SHEET_NAMES } from '../utils/import/eco'
+import { ECO_SHEET_NAMES, HOME_LABELS } from '../utils/import/eco'
+import { isValidCurrency, isCurrencySupported } from '../utils/currency'
+
 
 import { RouterLink } from 'vue-router'
 import { geAllJsonData } from '../utils/data';
@@ -203,7 +229,7 @@ const typeOfFile = computed(() => {
 const getValueChainProperty = (json, propertyName) => {
     let sheetName = "Study id"
     if (!Object.keys(json).includes(sheetName)) {
-        sheetName = ECO_SHEET_NAMES.HOME
+        sheetName = ECO_SHEET_NAMES.Home
         if (!Object.keys(json).includes(sheetName)) {
             setImportErrors(`The excel spreadsheet is missing a sheet named 'Study id'`)
             return null
@@ -259,11 +285,11 @@ const studyProperties = computed(() => {
         return {}
     }
 
-    const country = slugify(getValueChainProperty(excelData.value, "Country"))
-    const commodity = getValueChainProperty(excelData.value, "Commodity")
+    const country = slugify(getValueChainProperty(excelData.value, HOME_LABELS.Country))
+    const commodity = getValueChainProperty(excelData.value, HOME_LABELS.Commodity)
 
     if (!knownProducts.value.includes(slugify(commodity))) {
-        setImportErrors(`The commodity ${commodity} is not recognized. Known commidities are ${knownProducts.value}`)
+        setImportErrors(`Commodity <b>${slugify(commodity)}</b> is not recognized.`)
     }
 
     var result = {
@@ -274,40 +300,17 @@ const studyProperties = computed(() => {
 
     if (typeOfFile.value === TypesOfFile.Economics) {
         const year = getValueChainProperty(excelData.value, "Reference Year");
-        var targetCurrency = null
-        var currencyRatio = null
-        const localCurrencySpreadsheetLabel = "Study's local currency"
-        const targetCurrencySpreadsheetLabel = "Standard currency code"
-        const localCurrency = getValueChainProperty(excelData.value, localCurrencySpreadsheetLabel);
-        // Si localCurrency est standard, pas besoin de targetCurrency ou currencyRatio
-        try {
-            var formatter_with_valid_currency = new Intl.NumberFormat(undefined, {
-                style: "currency",
-                currency: localCurrency
-            })
-            targetCurrency = localCurrency
-            currencyRatio = 1.0
-        } catch (local_currency_not_standard_error) {
-            console.error(`Exception raised while constructing an NumberFormat with local currency ${localCurrency}`, local_currency_not_standard_error)
-            targetCurrency = getValueChainProperty(excelData.value, targetCurrencySpreadsheetLabel);
-            try {
-                formatter_with_valid_currency = new Intl.NumberFormat(undefined, {
-                    style: "currency",
-                    currency: targetCurrency
-                })
-                currencyRatio = getValueChainProperty(excelData.value, "change rate from study's to standard currency");
-            } catch (target_currency_not_standard_error) {
-                console.error(`Exception raised while constructing an NumberFormat with target currency ${targetCurrency}`, target_currency_not_standard_error)
-                setImportErrors(`Either currencies defined by '${localCurrencySpreadsheetLabel}' or '${targetCurrencySpreadsheetLabel}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`)
-            }
-        }
-        const giniIndex = getValueChainProperty(excelData.value, "Gini index") || undefined;
-        const rateOfIntegration = readPercentValue("Rate of integration into domestic economy")
-        const publicFundsBalance = readPercentValue("Public funds balance / Public budget")
-        const valueAddedShareNationalGdp = readPercentValue("Value added share of national GDP")
-        const valueAddedShareAgriculturalGdp = readPercentValue("Value added share of the agricultural sector GDP")
-        const domesticResourceCostRatio = getValueChainProperty(excelData.value, "Domestic resource cost ratio") || undefined;
-        const nominalProtectionCoefficient = getValueChainProperty(excelData.value, "Nominal protection coefficient") || undefined;
+        const localCurrency = getValueChainProperty(excelData.value, HOME_LABELS.LocalCcy)
+        let targetCurrency = getValueChainProperty(excelData.value, HOME_LABELS.TargetCcy) || localCurrency
+        let currencyRatio = getValueChainProperty(excelData.value, HOME_LABELS.RatioCcy) || 1.0
+
+        const giniIndex = getValueChainProperty(excelData.value, HOME_LABELS.GiniIndex) || undefined;
+        const rateOfIntegration = readPercentValue(HOME_LABELS.RateOfIntegrationIntoDomesticEconomy)
+        const publicFundsBalance = readPercentValue(HOME_LABELS.PublicFundsBalanceRatio)
+        const valueAddedShareNationalGdp = readPercentValue(HOME_LABELS.ValueAddedShareNationalGdp)
+        const valueAddedShareAgriculturalGdp = readPercentValue(HOME_LABELS.ValueAddedShareAgriculturalGdp)
+        const domesticResourceCostRatio = getValueChainProperty(excelData.value, HOME_LABELS.DomesticResourceCostRatio) || undefined;
+        const nominalProtectionCoefficient = getValueChainProperty(excelData.value, HOME_LABELS.NominalProtectionCoefficient) || undefined;
 
         result = {...result,
             year,
@@ -369,6 +372,7 @@ const studyData = computed(() => {
             acvData: parseEnvironmentJson(excelData.value)
         }
     }
+    return null
 })
 
 watch(studyData, (newValue) => {
@@ -460,4 +464,19 @@ onMounted(() => {
 </script>
   
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+button {
+    @apply rounded py-2 px-4 border hover:border-transparent font-semibold
+}
+button.delete {
+    @apply bg-transparent hover:bg-red-500 text-red-700  hover:text-white py-1 px-1.5 border-red-500 
+}
+
+button.browse {
+    @apply bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white  border-blue-500
+}
+
+button.download {
+    @apply bg-blue-500 hover:bg-blue-700 text-white
+}
+</style>

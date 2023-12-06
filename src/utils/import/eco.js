@@ -1,15 +1,87 @@
 import { setImportErrors, getImportErrors, parseActorTypes } from '@/utils/import/generic.js'
-import { KNOWN_CURRENCIES } from '../currency'
 
 export const ECO_SHEET_NAMES = {
-  HOME: "Value Chain",
-  STAGES_DESCRIPTION: "Stages description",
-  FLOWS: "Flow by actor type",
-  ACTOR_TYPES: "Actor types"
+  Home: "Value Chain",
+  StagesDescription: "Stages description",
+  Flows: "Flow by actor type",
+  ActorTypes: "Actor types",
+  FarmGate: "Farm gate price In final price",
+  Indicators: "Indicator by actor type",
+  ValueAddedReceivers: "Direct value added receivers",
+  Employment: "Employment",
+  AccountByActor: "Account by actor type"
+}
+
+export const HOME_LABELS = {
+  Country : "Country",
+  Commodity : "Commodity",
+  LocalCcy: "Study's local currency",
+  TargetCcy: "Standard currency code",
+  RatioCcy: "change rate from study's to standard currency",
+  NominalProtectionCoefficient: "Nominal protection coefficient",
+  DomesticResourceCostRatio: "Domestic resource cost ratio",
+  RateOfIntegrationIntoDomesticEconomy: "Rate of integration into domestic economy",
+  PublicFundsBalanceRatio: "Public funds balance / Public budget",
+  ValueAddedShareNationalGdp: "Value added share of national GDP",
+  ValueAddedShareAgriculturalGdp: "Value added share of the agricultural sector GDP",
+  GiniIndex: "Gini index"
+}
+
+const FARM_GATE_COLUMNS = {
+  Case: "Case Of start And End price",
+  FarmPrice: "Farm gate price (local currency)",
+  EndPrice: "End price",
+}
+
+const FLOWS_COLUMNS = {
+  sellerActorName: 'Seller Name',
+  buyerActorName: 'Buyer Name',
+  volumeExchanged: 'Volume exchanged (kg Of product)',
+  monetaryValue: 'Monetary value',
+  unitPrice: 'Unitary price (local curency)',
+  volumeUnit: 'Volume Unit',
+  product: 'Products'
+}
+
+const INDICATORS_COLUMNS = {
+  ActorName: "Actor type Name",
+  NumberActors: "Number Of actors In the value chain",
+  DirectAddedValue: "Direct added value (local currency)",
+  PublicFundsBalance: "Public funds balance (local currency)",
+  NetOperatingProfit: "Net operating profit (local currency)",
+  TotalCosts: "Total costs (local currency)",
+  ImportExport: "Imported And exported goods"
+}
+
+const VALUE_ADDED_COLUMNS = {
+  ReceiverName: "Receiver Name",
+  Value: "value (local currency)",
+}
+
+const EmploymentColumns = {
+  TempMale: "Temporary Male",
+  TempFemale: "Temporary Female",
+  UnskilledMale: "Permanent Unskilled Male",
+  UnskilledFemale: "Permanent Unskilled Female",
+  SkilledMale: "Permanent Skilled Male",
+  SkilledFemale: "Permanent Skilled Female",
+}
+
+const ACCOUNT_COLUMNS = {
+  ActorName: "Actor type name",
+  CostOrRevenue: "Cost Or revenue",
+  Item: "Item",
+  Value: "Value",
+}
+
+const IMPORT_EXPORT_COLUMNS = {
+  Goods: "Goods",
+  ImportOrExport: "Imported Or Exported",
+  Value: "Value (local currency)",
 }
 
 export const parseEconomicsJson = (json) => {
-  const stages = json[ECO_SHEET_NAMES.STAGES_DESCRIPTION].map((stage, index) => ({
+  const stages = json[ECO_SHEET_NAMES.StagesDescription].map((stage, index) => ({
     name: stage['Stages'],
     description: stage['Description'] || '',
     index
@@ -17,38 +89,28 @@ export const parseEconomicsJson = (json) => {
   )
 
   let actors = parseActorTypes(json)
-  
-  var expectedColumns = {
-    sellerActorName: 'Seller Name',
-    buyerActorName: 'Buyer Name',
-    volumeExchanged: 'Volume exchanged (kg Of product)',
-    monetaryValue: 'Monetary value',
-    unitPrice: 'Unitary price (local curency)',
-    volumeUnit: 'Volume Unit',
-    product: 'Products'
-  }
-  const flows = json[ECO_SHEET_NAMES.FLOWS].map(flow => {
+  const flows = json[ECO_SHEET_NAMES.Flows].map(flow => {
     var result = {}
-    for (var key in expectedColumns) {
-      result[key] = flow[expectedColumns[key]]
+    for (var key in FLOWS_COLUMNS) {
+      result[key] = flow[FLOWS_COLUMNS[key]]
     }
     return result
   })
 
-  for (var key in expectedColumns) {
+  for (var key in FLOWS_COLUMNS) {
     if (flows.filter(flow => flow[key] != undefined).length == 0) {
-      setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.FLOWS}', column '${expectedColumns[key]}' is missing or empty`)
+      setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Flows}', column '${FLOWS_COLUMNS[key]}' is missing or empty`)
     }
   }
 
-    const indicators = json["Indicator by actor type"].map(indicator => ({
-      actorName: indicator['Actor type Name'],
+    const indicators = json[ECO_SHEET_NAMES.Indicators].map(indicator => ({
+      actorName: indicator[INDICATORS_COLUMNS.ActorName],
       data: {
-        numberOfActors: indicator['Number Of actors In the value chain'] || 0,
-        directAddedValue: indicator['Direct added value (local currency)'] || 0,
-        publicFundsBalance: indicator['Public funds balance (local currency)'] || 0,
-        netOperatingProfit: indicator['Net operating profit (local currency)'] || 0,
-        totalCosts: indicator['Total costs (local currency)'] || 0
+        numberOfActors: indicator[INDICATORS_COLUMNS.NumberActors] || 0,
+        directAddedValue: indicator[INDICATORS_COLUMNS.DirectAddedValue] || 0,
+        publicFundsBalance: indicator[INDICATORS_COLUMNS.PublicFundsBalance] || 0,
+        netOperatingProfit: indicator[INDICATORS_COLUMNS.NetOperatingProfit] || 0,
+        totalCosts: indicator[INDICATORS_COLUMNS.TotalCosts] || 0
       }
     }))
     actors = actors.map(actor => {
@@ -62,9 +124,9 @@ export const parseEconomicsJson = (json) => {
       }
       return actor
     })
-    const addedValueItems = json["Direct value added receivers"].map(addedValue => ({
-      receiverName: addedValue['Receiver Name'],
-      value: addedValue['value (local currency)'] || 0
+    const addedValueItems = json[ECO_SHEET_NAMES.ValueAddedReceivers].map(addedValue => ({
+      receiverName: addedValue[VALUE_ADDED_COLUMNS.ReceiverName],
+      value: addedValue[VALUE_ADDED_COLUMNS.Value] || 0
     })
     )
     actors = actors.map(actor => {
@@ -84,18 +146,11 @@ export const parseEconomicsJson = (json) => {
     }
 
     const actorTypeColumn = "Actor type Name"
-    const EmploymentColumns = {
-      TEMP_MALE: "Temporary Male",
-      TEMP_FEMALE: "Temporary Female",
-      UNSKILLED_MALE: "Permanent Unskilled Male",
-      UNSKILLED_FEMALE: "Permanent Unskilled Female",
-      SKILLED_MALE: "Permanent Skilled Male",
-      SKILLED_FEMALE: "Permanent Skilled Female",
-    }
+
   
     var missingColumns = new Set()
     var foundColumns = new Set()
-    json["Employment"].forEach(employment => {
+    json[ECO_SHEET_NAMES.Employment].forEach(employment => {
       [actorTypeColumn, ...Object.values(EmploymentColumns)].forEach(columnName => {
         if (columnName in employment) {
           foundColumns.add(columnName)
@@ -106,15 +161,15 @@ export const parseEconomicsJson = (json) => {
     })
 
 
-    const employments = json["Employment"].map(employment => {
+    const employments = json[ECO_SHEET_NAMES.Employment].map(employment => {
 
       const actorName = employment[actorTypeColumn]
-      const tempMale = parseFloat(employment[EmploymentColumns.TEMP_MALE])
-      const tempFemale = parseFloat(employment[EmploymentColumns.TEMP_FEMALE])
-      const unskilledMale = parseFloat(employment[EmploymentColumns.UNSKILLED_MALE])
-      const unskilledFemale = parseFloat(employment[EmploymentColumns.UNSKILLED_FEMALE])
-      const skilledMale = parseFloat(employment[EmploymentColumns.SKILLED_MALE])
-      const skilledFemale = parseFloat(employment[EmploymentColumns.SKILLED_FEMALE])
+      const tempMale = parseFloat(employment[EmploymentColumns.TempMale])
+      const tempFemale = parseFloat(employment[EmploymentColumns.TempFemale])
+      const unskilledMale = parseFloat(employment[EmploymentColumns.UnskilledMale])
+      const unskilledFemale = parseFloat(employment[EmploymentColumns.UnskilledFemale])
+      const skilledMale = parseFloat(employment[EmploymentColumns.SkilledMale])
+      const skilledFemale = parseFloat(employment[EmploymentColumns.SkilledFemale])
 
       const totalMale = (tempMale || 0) + (unskilledMale || 0) + (skilledMale || 0)
       const totalFemale = tempFemale + unskilledFemale + skilledFemale
@@ -160,12 +215,12 @@ export const parseEconomicsJson = (json) => {
       return actor
     })
   
-    const accountItems = json["Account by actor type"].map(accountItem => ({
-      actorName: accountItem['Actor type name'],
+    const accountItems = json[ECO_SHEET_NAMES.AccountByActor].map(accountItem => ({
+      actorName: accountItem[ACCOUNT_COLUMNS.ActorName],
       data: {
-        costOrRevenue: accountItem['Cost Or revenue'],
-        item: accountItem['Item'],
-        value: accountItem['Value']
+        costOrRevenue: accountItem[ACCOUNT_COLUMNS.CostOrRevenue],
+        item: accountItem[ACCOUNT_COLUMNS.Item],
+        value: accountItem[ACCOUNT_COLUMNS.Value]
       }
     })
     )
@@ -188,11 +243,10 @@ export const parseEconomicsJson = (json) => {
       return (stage1?.index || 0) - (stage2?.index || 0)
     })
   
-    var sheetname = "Imported And exported goods"
-    const importExportItems = json[sheetname].map(importExportItem => ({
-          label: importExportItem['Goods'],
-          importExport: importExportItem['Imported Or Exported'],
-          amount: importExportItem['Value (local currency)'],
+    const importExportItems = json[INDICATORS_COLUMNS.ImportExport].map(importExportItem => ({
+          label: importExportItem[IMPORT_EXPORT_COLUMNS.Goods],
+          importExport: importExportItem[IMPORT_EXPORT_COLUMNS.ImportOrExport],
+          amount: importExportItem[IMPORT_EXPORT_COLUMNS.Value],
       })
     )
 
@@ -211,13 +265,13 @@ export const parseEconomicsJson = (json) => {
     }
   
     if (importExportItems.length > 0 && importExport.import.length == 0 && importExport.import.length == 0) {
-      setImportErrors(`Column 'Imported Or Exported' of excel spreadsheet '${sheetname}' seems to be wrongly filled. It should contains one of '${acceptableImportKeyWord}' for import or one of '${acceptableExportKeyWord}' for export`)
+      setImportErrors(`Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' of excel worksheet '${ECO_SHEET_NAMES.ImportExport}' seems to be wrongly filled. It should contains one of '${acceptableImportKeyWord}' for import or one of '${acceptableExportKeyWord}' for export`)
     }
   
-    const farmToFinalPricesRatio = json["Farm gate price In final price"].map(priceItem => ({
-      label: priceItem["Case Of start And End price"],
-      farmPrice: priceItem["Farm gate price (local currency)"],
-      finalPrice: priceItem["End price"]
+    const farmToFinalPricesRatio = json[ECO_SHEET_NAMES.FarmGate].map(priceItem => ({
+      label: priceItem[FARM_GATE_COLUMNS.Case],
+      farmPrice: priceItem[FARM_GATE_COLUMNS.FarmPrice],
+      finalPrice: priceItem[FARM_GATE_COLUMNS.EndPrice]
     }))
     
     return {
@@ -233,12 +287,6 @@ export const parseEconomicsJson = (json) => {
   export const getErrors = (study) => {
     let errors = getImportErrors()
   
-    if (!KNOWN_CURRENCIES.includes(study.targetCurrency)) {
-      errors.push({
-        level: "error",
-        message: `Unknown currency <b>${study.targetCurrency}</b>`
-      })
-    }
     for (const property of [
       'commodity',
       'country',
@@ -247,14 +295,14 @@ export const parseEconomicsJson = (json) => {
       if (!study[property]) {
         errors.push({
           level: "error",
-          message: `Missing property <b>${property}</b> in sheet ${ECO_SHEET_NAMES.HOME}`
+          message: `Missing property <b>${property}</b> in sheet ${ECO_SHEET_NAMES.Home}`
         })
       }
     }
     study.ecoData.stages.filter(stage => !stage.description).map(stage => {
       errors.push({
         level: 'info',
-        message: `Add a description to stage <b>${stage.name}</b> in the sheet <b>${ECO_SHEET_NAMES.STAGES_DESCRIPTION}</b>`
+        message: `Add a description to stage <b>${stage.name}</b> in the sheet <b>${ECO_SHEET_NAMES.StagesDescription}</b>`
       })
     })
     const actorNames = study.ecoData.actors.map(actor => actor.name)
@@ -264,7 +312,7 @@ export const parseEconomicsJson = (json) => {
     unknownActorsInFlows.map(actor => {
       errors.push({
         level: 'error',
-        message: `Actor named <b>${actor}</b> in sheet <b>${ECO_SHEET_NAMES.FLOWS}</b> is not defined in sheet <b>${ECO_SHEET_NAMES.ACTOR_TYPES}</b>`
+        message: `Actor named <b>${actor}</b> in sheet <b>${ECO_SHEET_NAMES.Flows}</b> is not defined in sheet <b>${ECO_SHEET_NAMES.ActorTypes}</b>`
       })
     })
   

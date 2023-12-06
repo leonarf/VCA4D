@@ -20,7 +20,7 @@ export const getImportErrors = () => {
 
 
 export const parseActorTypes = (json) => {
-  var sheetAsJson = json[ECO_SHEET_NAMES.ACTOR_TYPES]
+  var sheetAsJson = json[ECO_SHEET_NAMES.ActorTypes]
   return sheetAsJson.map(actor => ({
     name: actor['Actor type name'],
     stage: actor['Stage'] || '',
