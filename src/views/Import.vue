@@ -82,8 +82,11 @@
                     </div>
                     <div class="w-3/4 text-xl">
                         <div v-if="!isValidCurrency(studyProperties.targetCurrency)">
-                            <span class="text-red-600">
-                                Currency <b>{{ studyProperties.targetCurrency}}</b> defined in cell <b>{{ HOME_LABELS.LocalCcy}}</b> or <b>{{ HOME_LABELS.TargetCcy }}</b> is not valid.
+                            <span v-if="studyProperties.localCurrency != null" class="text-red-600">
+                                Currency <b>{{ studyProperties.localCurrency == null }}</b> defined in cell <b>{{ HOME_LABELS.LocalCcy}}</b> or <b>{{ HOME_LABELS.TargetCcy }}</b> is not valid.
+                            </span>
+                            <span v-else class="text-red-600">
+                                <b>{{ HOME_LABELS.LocalCcy}}</b> not found in uploaded file.
                             </span>
                             <br/>
                             Find all valid currencies code by visiting <a class="font-semibold underline" href="https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes" target="_blank">this wiki page.</a>
@@ -301,8 +304,24 @@ const studyProperties = computed(() => {
     if (typeOfFile.value === TypesOfFile.Economics) {
         const year = getValueChainProperty(excelData.value, "Reference Year");
         const localCurrency = getValueChainProperty(excelData.value, HOME_LABELS.LocalCcy)
-        let targetCurrency = getValueChainProperty(excelData.value, HOME_LABELS.TargetCcy) || localCurrency
-        let currencyRatio = getValueChainProperty(excelData.value, HOME_LABELS.RatioCcy) || 1.0
+        var targetCurrency = null
+        var currencyRatio = null
+        // Si localCurrency est standard, pas besoin de targetCurrency ou currencyRatio
+        if (isValidCurrency(localCurrency))
+        {
+            targetCurrency = localCurrency
+            currencyRatio = 1.0
+        }
+        else {
+            targetCurrency = getValueChainProperty(excelData.value, HOME_LABELS.TargetCcy)
+            if (isValidCurrency(targetCurrency))
+            {
+                currencyRatio = getValueChainProperty(excelData.value, HOME_LABELS.RatioCcy)
+            }
+            else {
+                setImportErrors(`Either currencies defined by '${HOME_LABELS.LocalCcy}' or '${HOME_LABELS.TargetCcy}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`)
+            }
+        }
 
         const giniIndex = getValueChainProperty(excelData.value, HOME_LABELS.GiniIndex) || undefined;
         const rateOfIntegration = readPercentValue(HOME_LABELS.RateOfIntegrationIntoDomesticEconomy)

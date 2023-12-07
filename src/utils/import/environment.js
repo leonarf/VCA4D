@@ -42,7 +42,7 @@ const parseImpactsFirstRow = (row, valueChains, sheetname) => {
       delete row[impactsColumnNamesMapping[key]]
     }
     else {
-      setImportErrors(`The column ${impactsColumnNamesMapping[key]} is missing in sheet ${sheetname}`)
+      setImportErrors(`The column ${impactsColumnNamesMapping[key]} is missing in sheet ${sheetname}. First cell of this column must contains '${impactsColumnNamesMapping[key]}' only`)
     }
   }
   // Checking given valuechain and actors name are known, and building the dictionnary
@@ -68,7 +68,13 @@ const parseImpactsFirstRow = (row, valueChains, sheetname) => {
 const parseImpacts = (json, valueChains) => {
   var impacts = []
   var sheetname = "Impacts"
-  var sheetAsJson = json[sheetname]
+  if (sheetname in json) {
+    var sheetAsJson = json[sheetname]
+  }
+  else {
+    setImportErrors(`A spreadsheet named '${sheetname}' is missing from the uploaded file.`)
+    return null
+  }
   console.log("plan de travail pour les impacts", sheetAsJson)
   var rowCount = 0
   var dictionnaire_chain_actors_props = {}
