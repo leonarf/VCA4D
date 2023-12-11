@@ -11,8 +11,11 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '@typography': fileURLToPath(new URL('./src/components/typography', import.meta.url)),
+      '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
       '@charts': fileURLToPath(new URL('./src/components/charts', import.meta.url)),
       '@images': fileURLToPath(new URL('./src/images', import.meta.url)),
+      '@data': fileURLToPath(new URL('./data', import.meta.url)),
+      '@utils': fileURLToPath(new URL('./src/utils', import.meta.url))
     }
   },
   build: {

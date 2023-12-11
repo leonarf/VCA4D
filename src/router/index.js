@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import StudyView from '../views/StudyView.vue'
 import Import from '../views/Import.vue'
+import Comparison from '../views/Comparison.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +21,11 @@ const router = createRouter({
             path: '/admin-import',
             name: 'import',
             component: Import
+        },
+        {
+            path: '/comparison',
+            name: 'comparison',
+            component: Comparison
         },
         {
             path: '/:catchAll(.*)',

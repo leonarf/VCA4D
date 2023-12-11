@@ -30,7 +30,7 @@
 
 <script setup>
     import { ref} from 'vue'
-    import { getCurrencySymbol } from '@/utils/currency.js'
+    import { getCurrencySymbol } from '@utils/currency.js'
     const props = defineProps({
         studyId: String,
         localCurrency : String,

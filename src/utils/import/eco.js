@@ -1,4 +1,4 @@
-import { setImportErrors, getImportErrors, parseActorTypes } from '@/utils/import/generic.js'
+import { setImportErrors, getImportErrors, parseActorTypes } from '@utils/import/generic.js'
 
 export const ECO_SHEET_NAMES = {
   Home: "Value Chain",

@@ -28,8 +28,8 @@ import InfoTitle from '@typography/InfoTitle.vue'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
-import { useCurrencyUtils } from '@/utils/format.js'
-import { useActorsAndStages } from '@/utils/misc.js'
+import { useCurrencyUtils } from '@utils/format.js'
+import { useActorsAndStages } from '@utils/misc.js'
 
 const props = defineProps({
     studyData: Object,

@@ -1,5 +1,5 @@
-import { formatNumber, formatPercent } from '@/utils/format.js'
-import { getStageColor, getRingColor, COLORS_IMPORTED_PRODUCTS, COLORS_EXPORTED_PRODUCTS } from '@/utils/colors.js'
+import { formatNumber, formatPercent } from '@utils/format.js'
+import { getStageColor, getRingColor, COLORS_IMPORTED_PRODUCTS, COLORS_EXPORTED_PRODUCTS } from '@utils/colors.js'
 const RADIUSES_MINI_PIE = ['20%', '40%']
 const RIADUSES_PIE = ['50%', '75%']
 const SELECTED_COLOR = "#F7E9EB"

@@ -26,7 +26,7 @@
 import BarChart from '@charts/BarChart.vue'
 import { getImportedProductsData, getExportedProductsData } from '@/charts/charts'
 import { computed } from 'vue';
-import { useCurrencyUtils } from '@/utils/format'
+import { useCurrencyUtils } from '@utils/format'
 const props = defineProps({
   studyData: Object,
   currency: String

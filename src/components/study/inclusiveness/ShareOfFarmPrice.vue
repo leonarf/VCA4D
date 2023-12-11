@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { formatPercent } from '@/utils/format.js'
+import { formatPercent } from '@utils/format.js'
 const props = defineProps({
     data: Array,
 })

@@ -36,15 +36,15 @@
 <script setup>
 import { ref, onMounted, watch, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import Skeleton from '../components/Skeleton.vue'
-import StudyOverview from '../components/StudyOverview.vue'
-import StudyEnvironment from '../components/StudyEnvironment.vue'
-import StudyEconomicGrowth from '../components/StudyEconomicGrowth.vue'
-import StudyInclusiveness from '../components/StudyInclusiveness.vue'
-import StudySocialSustainability from '../components/StudySocialSustainability.vue'
-import StudyHeader from '../components/study/StudyHeader.vue'
-import StudyMenu from '../components/study/StudyMenu.vue'
-import getStudyData from '../studyData.js'
+import Skeleton from '@components/Skeleton.vue'
+import StudyOverview from '@components/StudyOverview.vue'
+import StudyEnvironment from '@components/StudyEnvironment.vue'
+import StudyEconomicGrowth from '@components/StudyEconomicGrowth.vue'
+import StudyInclusiveness from '@components/StudyInclusiveness.vue'
+import StudySocialSustainability from '@components/StudySocialSustainability.vue'
+import StudyHeader from '@components/study/StudyHeader.vue'
+import StudyMenu from '@components/study/StudyMenu.vue'
+import { getStudyData, LOCAL_STORAGE_ID } from '@utils/data.js'
 
 const route = useRoute();
 const router = useRouter()
@@ -90,41 +90,10 @@ onMounted(async () => {
     currency.value = localStorage.getItem('currency')
   }
 
-  const isLocalStudy = studyId === 'localStorage'
+  const isLocalStudy = studyId === LOCAL_STORAGE_ID
   isLocal.value =  isLocalStudy
   try {
-    if (isLocalStudy) {
-        studyData.value = JSON.parse(localStorage.getItem('localStudyData'))
-    } else {
-        let ecoData = undefined
-        try {
-            ecoData = await getStudyData(`${studyId}-eco`)
-        } catch {
-            console.log(`did not found eco data for ${studyId}`)
-        }
-
-        let socialData = undefined
-        try {
-            socialData = await(getStudyData(`${studyId}-social`))
-        } catch {
-            console.log(`did not found social data for ${studyId}`)
-        }
-
-        let acvData = undefined
-        try {
-            acvData = await(getStudyData(`${studyId}-acv`))
-        } catch {
-            console.log(`did not found environmental data for ${studyId}`)
-        }
-        const metaInfo = ecoData ? ecoData : socialData ? socialData : acvData
-
-        studyData.value = {
-            ...metaInfo,
-            ecoData: ecoData?.ecoData,
-            socialData: socialData?.socialData,
-            acvData: acvData?.acvData
-        }
-    }
+    studyData.value = await getStudyData(studyId)
     
     if (!currency.value) {
         currency.value = "LOCAL"

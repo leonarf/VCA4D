@@ -1,4 +1,4 @@
-import { setImportErrors, parseActorTypes } from '@/utils/import/generic.js'
+import { setImportErrors, parseActorTypes } from '@utils/import/generic.js'
 
 const parseValueChainsDescriptions = (json) => {
   var sheetAsJson = json["Value chains description"]
