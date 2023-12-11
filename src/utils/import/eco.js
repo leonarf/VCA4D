@@ -1,4 +1,4 @@
-import { setImportErrors, getImportErrors, parseActorTypes } from '@/utils/import/generic.js'
+import { setImportErrors, getImportErrors, parseActorTypes, doColumnExist } from '@/utils/import/generic.js'
 
 export const ECO_SHEET_NAMES = {
   Home: "Value Chain",
@@ -55,7 +55,7 @@ const INDICATORS_COLUMNS = {
 
 const VALUE_ADDED_COLUMNS = {
   ReceiverName: "Receiver Name",
-  Value: "value (local currency)",
+  Value: "Value (local currency)",
 }
 
 const EmploymentColumns = {
@@ -124,11 +124,19 @@ export const parseEconomicsJson = (json) => {
       }
       return actor
     })
-    const addedValueItems = json[ECO_SHEET_NAMES.ValueAddedReceivers].map(addedValue => ({
+
+    var sheetname = ECO_SHEET_NAMES.ValueAddedReceivers
+
+    for (var key in VALUE_ADDED_COLUMNS) {
+      var columnName = VALUE_ADDED_COLUMNS[key]
+      if (!doColumnExist(json[sheetname], columnName)) {
+        setImportErrors(`In spreadsheet '${sheetname}', missing following column => ${columnName}`)
+      }
+    }
+    const addedValueItems = json[sheetname].map(addedValue => ({
       receiverName: addedValue[VALUE_ADDED_COLUMNS.ReceiverName],
       value: addedValue[VALUE_ADDED_COLUMNS.Value] || 0
-    })
-    )
+    }))
     actors = actors.map(actor => {
       const addedValue = addedValueItems.filter(addedValue => addedValue.receiverName === actor.name)[0]
       return {
@@ -136,13 +144,24 @@ export const parseEconomicsJson = (json) => {
         receivedAddedValue: addedValue?.value || 0
       }
     })
-  
-    const addedValue = {
-      landOwnersFees: addedValueItems.filter(element => element.receiverName === 'Land owners (land fees)')[0].value,
-      depreciation: addedValueItems.filter(element => element.receiverName === 'Depreciation')[0].value,
-      employeeWages: addedValueItems.filter(element => element.receiverName === 'Employees (wages)')[0].value,
-      financialInstitutionsInterests: addedValueItems.filter(element => element.receiverName === 'Financial institutions (interests On loans)')[0].value,
-      government: addedValueItems.filter(element => element.receiverName === 'Government (taxes - subsidies)')[0].value,
+
+    const specialsAddedValueKeys = {
+      landOwnersFees: 'Land owners (land fees)',
+      depreciation: 'Depreciation',
+      employeeWages: 'Employees (wages)',
+      financialInstitutionsInterests: 'Financial institutions (interests on loans)',
+      government: 'Government (taxes - subsidies)',
+    }
+
+    var addedValue = {}
+    for (var key in specialsAddedValueKeys) {
+      var filteredItems = addedValueItems.filter(element => element.receiverName === specialsAddedValueKeys[key])
+      if (filteredItems.length == 1) {
+        addedValue[key] = filteredItems[0].value
+      }
+      else {
+        setImportErrors(`In spreadsheet '${sheetname}', couldn't find the following '${VALUE_ADDED_COLUMNS.ReceiverName}' => ${specialsAddedValueKeys[key]}`)
+      }
     }
 
     const actorTypeColumn = "Actor type Name"
@@ -325,7 +344,7 @@ export const parseEconomicsJson = (json) => {
     if (diff > 0) {
       errors.push({
         level: 'error',
-        message: `Total added value created and received should match, diff = ${diff}`
+        message: `Total added value created found in spreadsheet '${ECO_SHEET_NAMES.Indicators}' is ${totalCreatedAddedValue}. And total added value received found in spreadsheet '${ECO_SHEET_NAMES.ValueAddedReceivers}' is ${totalReceivedAddedValue}. But both should be equal`
       })
     }
     return errors

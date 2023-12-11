@@ -27,3 +27,8 @@ export const parseActorTypes = (json) => {
     id: actor['Actor type code']
   }))
 }
+
+export const doColumnExist = (excelDataAsJson, columnName) => {
+  var filteredItems = excelDataAsJson.find(row => !!row[columnName])
+  return !!filteredItems
+}
