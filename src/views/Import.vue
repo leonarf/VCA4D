@@ -83,7 +83,7 @@
                     <div class="w-3/4 text-xl">
                         <div v-if="!isValidCurrency(studyProperties.targetCurrency)">
                             <span v-if="studyProperties.localCurrency != null" class="text-red-600">
-                                Currency <b>{{ studyProperties.localCurrency == null }}</b> defined in cell <b>{{ HOME_LABELS.LocalCcy}}</b> or <b>{{ HOME_LABELS.TargetCcy }}</b> is not valid.
+                                Currency <b>{{ studyProperties.localCurrency }}</b> defined in cell <b>{{ HOME_LABELS.LocalCcy}}</b> or <b>{{ HOME_LABELS.TargetCcy }}</b> is not valid.
                             </span>
                             <span v-else class="text-red-600">
                                 <b>{{ HOME_LABELS.LocalCcy}}</b> not found in uploaded file.
