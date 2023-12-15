@@ -10,28 +10,49 @@
       specific policies or project may be developped in order to improve the sustainability of a
       step or of some actors to improve the overall sustainability of the value chain.
     </p>
-    <div class="flex flex-row justify-center gap-x-4">
-        <label v-for="unit in units" :key="unit.value"
-        :class="{
-          'inline-block w-40 h-10 text-center py-2 border-2 rounded cursor-pointer text-black text-md': true,
-          'border-blue-200 bg-blue-100': selectedUnit === unit.value,
-          'border-gray-200 bg-gray-100': selectedUnit !== unit.value 
-        }" 
-          >
-          <input
-          type="radio"
-          :id="unit.value"
-          :value="unit.value"
-          v-model="selectedUnit"
-          name="radioGroup"
-          class="hidden"
-          />
-          {{ unit.label }}
-        </label>
+    <div class="flex flex-row justify-center gap-x-20">
+      <div class="flex flex-row justify-center gap-x-4">
+          <label v-for="unit in units" :key="unit.value"
+          :class="{
+            'inline-block w-40 h-10 text-center py-2 border-2 rounded cursor-pointer text-black text-md': true,
+            'border-blue-200 bg-blue-100': selectedUnit === unit.value,
+            'border-gray-200 bg-gray-100': selectedUnit !== unit.value 
+          }" 
+            >
+            <input
+            type="radio"
+            :id="unit.value"
+            :value="unit.value"
+            v-model="selectedUnit"
+            name="radioGroup"
+            class="hidden"
+            />
+            {{ unit.label }}
+          </label>
+      </div>
+      <div class="flex flex-row justify-center gap-x-4">
+          <label v-for="perUnit in perUnits" :key="perUnit.value"
+          :class="{
+            'inline-block w-40 h-10 text-center py-2 border-2 rounded cursor-pointer text-black text-md': true,
+            'border-blue-200 bg-blue-100': selectedPerUnit === perUnit.value,
+            'border-gray-200 bg-gray-100': selectedPerUnit !== perUnit.value 
+          }" 
+            >
+            <input
+            type="radio"
+            :id="perUnit.value"
+            :value="perUnit.value"
+            v-model="selectedPerUnit"
+            name="radioGroup"
+            class="hidden"
+            />
+            {{ perUnit.label }}
+          </label>
+      </div>
     </div>
     <template v-if="studyData">
       <div v-for="impact in allBarChartsData" :key="impact.name">
-        <ImpactDataviz :impact="impact" />
+        <ImpactDataviz :impact="impact" :per-unit="selectedPerUnit" :volumes="yearlyVolumes"/>
       </div>
     </template>
   </article>
@@ -59,12 +80,24 @@ const allBarChartsData = computed(() => {
   return impactsToDrawOnGraph
 })
 
+const yearlyVolumes = computed(() => props.studyData.acvData.valuechains.map(item => ({
+  name: item.name,
+  yearlyVolume: item.volume
+})))
+
 const units = [
   { label: 'Pt', value: 'PT' },
   { label: 'Other units', value: 'OTHER' },
 ];
 
+const perUnits = [
+  {
+    label: "Per year", value: "year"},
+    {label: "Per ton", value: "ton"}
+]
+
 const selectedUnit = ref(units[0].value); 
+const selectedPerUnit = ref(perUnits[0].value); 
 
 </script>
 
