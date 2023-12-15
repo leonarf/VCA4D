@@ -145,7 +145,7 @@ import { isValidCurrency, isCurrencySupported } from '@utils/currency'
 
 
 import { RouterLink } from 'vue-router'
-import { geAllJsonData } from '@utils/data';
+import { getAllJsonData } from '@utils/data';
 
 const excelData = ref(undefined);
 const workbook = ref(undefined)
@@ -163,7 +163,7 @@ const knownCountries = ref([])
 const knownProducts = ref([])
 
 onMounted(async () => {
-    const allJsonData = geAllJsonData()
+    const allJsonData = getAllJsonData()
     knownCountries.value = allJsonData.countries
     knownProducts.value = allJsonData.categories.reduce((arr, item) => arr.concat(item.commodities) , [])
 })

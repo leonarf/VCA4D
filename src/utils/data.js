@@ -38,7 +38,7 @@ export const getStudyData = async (studyId) => {
     }
 }
 
-export const geAllJsonData = () => {
+export const getAllJsonData = () => {
     const localStudyProperties = localStorage.getItem('localStudyProperties')
     const localStudy = localStudyProperties ?  JSON.parse(localStudyProperties) : null
     if (!localStudy) {
@@ -61,4 +61,8 @@ export const geAllJsonData = () => {
             }
         ]
     }
+}
+
+export const getCountries = () => {
+    return jsonData.countries
 }
