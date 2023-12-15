@@ -40,15 +40,20 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
     // For each flow we identify the source Stage and the destination Stage
     const sankeyFlows = flows.map(flow => {
         const sourceActor = actors.find(a => a.name === flow.sellerActorName)
+        var sourceStage = "Unknown"
         if (!sourceActor) {
             console.log(`did not found actor ${flow.sellerActorName} in actors`)
+        } else {
+            sourceStage = sourceActor.stage
         }
         const destActor = actors.find(a => a.name === flow.buyerActorName)
+        var destStage = "Unknown"
         if (!destActor) {
             console.log(`did not found actor ${flow.buyerActorName} in actors`)
+        } else {
+            destStage = destActor.stage
         }
-        const sourceStage = sourceActor.stage
-        const destStage = destActor.stage
+
         return {
             ...flow,
             sourceStage,
@@ -131,7 +136,7 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
         }
         return {
             "source": sourceActor.name,
-            "target": targetActor.name,
+            "target": targetActor? targetActor.name : buyerActorName,
             "value": Math.log(flow[sankeyDisplayMode]),
             "edgeLabel": {
                 show: true,

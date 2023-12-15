@@ -24,6 +24,8 @@ import Ring from '@charts/Ring.vue'
 
 const props = defineProps({
     impact: Object,
+    perUnit: String,
+    volumes: Array
 })
 
 
@@ -76,7 +78,7 @@ const populatedBarChartData = computed(() => {
   const items = Object.keys(valuesByChain).map((chainName) => {
     return {
       name: chainName,
-      value: valuesByChain[chainName]
+      value: valuesByChain[chainName] * (props.perUnit === 'year' ? props.volumes.find(item => item.name === chainName).yearlyVolume : 1.0)
     }
   })
 
@@ -85,7 +87,7 @@ const populatedBarChartData = computed(() => {
     ...ret,
     yAxis: {
       type: 'value',
-      name: `${props.impact.unit}`,
+      name: `${props.impact.unit} / ${props.perUnit}`,
       axisLine: {
         show: true
       }
