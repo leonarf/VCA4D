@@ -27,7 +27,7 @@
                 <td v-for="study in studies" :key="study.id">
                 </td>   
             </tr>
-            <tr>
+            <tr class="rounded">
                 <td>
                     <div class="subtitle">Value added</div>
                     <div class="definition">Definition of total value added</div>
@@ -38,7 +38,7 @@
                     </div>
                 </td>
             </tr>
-            <tr>
+            <tr class="rounded">
                 <td>
                     <div class="subtitle">Share of agricultural GDP</div>
                     <div class="definition">Value chain GDP divided by national agricultural GDP</div>
@@ -61,12 +61,14 @@
                 <td v-for="study in studies" :key="`${study.id}`">
                 </td>
             </tr>
-            <tr>
+            <tr v-for="(part, index) in SOCIAL_PARTS" :key="`part_${index}`">
                 <td>
-                    <div class="subtitle">Working Conditions</div>
+                    <div class="subtitle">{{ part }}</div>
                 </td>
                 <td v-for="study in studies" :key="`${study.id}`">
-                    -
+                    <div class="w-3/4 mx-auto my-2">
+                        <Tag :scale="getSocialAverageGroup(study.socialData, index)" :appreciation="getAppreciation(getSocialAverageGroup(study.socialData, index))" />
+                    </div>
                 </td>
             </tr>
             <tr class="h-12">
@@ -81,7 +83,7 @@
                     
                 </td>
             </tr>
-            <tr>
+            <tr class="rounded">
                 <td>
                     <div class="subtitle">Global warming</div>
                     <div class="definition">in kg CO2 eq</div>
@@ -99,13 +101,24 @@
 <script setup>
 
 import { formatPercent, formatNumber, slugify } from '@utils/format.js'
+import { getSocialAverageGroup } from '@utils/misc.js'
 import LogoCountrySmall from '@components/home/LogoCountrySmall.vue';
 import LogoProductLarge from '@components/home/LogoProductLarge.vue';
 import Card from './home/Card.vue';
+import Tag from './study/social-sustainability/Tag.vue';
 const props = defineProps({
     studies: Array,
     countries: Array
 })
+
+const SOCIAL_PARTS = [
+    "Working conditions",
+    "Land and water rights",
+    "Gender equality",
+    "Food and nutrition security",
+    "Social capital",
+    "Living conditions",
+]
 
 const getProduct = (study) => {
     console.log('study', study)
@@ -136,6 +149,21 @@ const getAddedValueClass = (value) => {
         return "light-red"
     }
     return "light-green"
+}
+
+const getAppreciation = (scale) => {
+    if (scale === 1) {
+        return 'Poor'
+    }
+    if (scale === 2) {
+        return 'Rather Poor'
+    }
+    if (scale === 3) {
+        return 'Rather Good'
+    }
+    if (scale === 4) {
+        return 'Good'
+    }
 }
 
 </script>
@@ -187,13 +215,13 @@ tr {
 tr td:not(:first-child):not(:last-child) {
   @apply border-r-2
 }
-tr td:not(:first-child) div {
+tr.rounded td:not(:first-child) div {
   @apply text-center text-sm py-1.5
 }
-tr td:nth-child(2) div{
+tr.rounded td:nth-child(2) div{
     @apply rounded-l-full
 }
-tr td:last-child div {
+tr.rounded td:last-child div {
     @apply rounded-r-full
 }
 </style>
