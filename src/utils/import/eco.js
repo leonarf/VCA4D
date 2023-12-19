@@ -89,6 +89,11 @@ export const parseEconomicsJson = (json) => {
   )
 
   let actors = parseActorTypes(json)
+  for (const actor of actors) {
+    if (!actor.stage) {
+      setImportErrors(`Actor <b>${actor.name}</b> should have a stage defined in worksheet ${ECO_SHEET_NAMES.ActorTypes}`)
+    }
+  }
   const flows = json[ECO_SHEET_NAMES.Flows].map(flow => {
     var result = {}
     for (var key in FLOWS_COLUMNS) {
