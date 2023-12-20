@@ -1,7 +1,6 @@
 <template>
   <div>
-
-      <h3>{{ impact.name }}</h3>
+      <InfoTitle :title="impact.name" :information="impact.method" class="my-4"/>
       <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
       <div v-if="selectedValueChain">
         <MiniChartContainer :currentStage="selectedValueChain" :title="`${impact.name} (${impact.unit})`" :isEnvironment="true">
@@ -21,6 +20,7 @@ import { getSelectableBarChart, getRingChart } from '@/charts/charts'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
+import InfoTitle from '@typography/InfoTitle.vue'
 
 const props = defineProps({
     impact: Object,
