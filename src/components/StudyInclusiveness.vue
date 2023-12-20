@@ -51,7 +51,7 @@ import InfoTitle from '@typography/InfoTitle.vue'
 import GiniIndex from './study/inclusiveness/GiniIndex.vue'
 import ShareOfFarmPrice from './study/inclusiveness/ShareOfFarmPrice.vue'
 import { computed } from 'vue'
-import { useCurrencyUtils } from '@/utils/format'
+import { useCurrencyUtils } from '@utils/format'
 
 const props = defineProps({
     studyData: Object,

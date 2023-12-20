@@ -1,5 +1,5 @@
-import { prettyFormatAmount } from '@/utils/currency.js'
-import { addColors } from '@/utils/colors.js'
+import { prettyFormatAmount } from '@utils/currency.js'
+import { addColors } from '@utils/colors.js'
 
 const SANKEY_TITLE = "The various actors and their share in the flows of the value chain"
 

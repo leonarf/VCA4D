@@ -133,19 +133,19 @@
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue';
 import * as XLSX from 'xlsx'
-import Skeleton from '../components/Skeleton.vue'
-import { slugify } from '@/utils/format.js'
-import jsonData from '../../data/data.json'
-import { parseSustainabilityWorksheet } from '@/utils/import/social.js'
-import { parseEconomicsJson, getErrors } from '@/utils/import/eco.js'
-import { parseEnvironmentJson } from '@/utils/import/environment.js'
-import { setImportErrors, clearImportErrors, getImportErrors } from '@/utils/import/generic.js'
-import { ECO_SHEET_NAMES, HOME_LABELS } from '../utils/import/eco'
-import { isValidCurrency, isCurrencySupported } from '../utils/currency'
+import Skeleton from '@components/Skeleton.vue'
+import { slugify } from '@utils/format.js'
+import jsonData from '@data/data.json'
+import { parseSustainabilityWorksheet } from '@utils/import/social.js'
+import { parseEconomicsJson, getErrors } from '@utils/import/eco.js'
+import { parseEnvironmentJson } from '@utils/import/environment.js'
+import { setImportErrors, clearImportErrors, getImportErrors } from '@utils/import/generic.js'
+import { ECO_SHEET_NAMES, HOME_LABELS } from '@utils/import/eco'
+import { isValidCurrency, isCurrencySupported } from '@utils/currency'
 
 
 import { RouterLink } from 'vue-router'
-import { geAllJsonData } from '../utils/data';
+import { getAllJsonData } from '@utils/data';
 
 const excelData = ref(undefined);
 const workbook = ref(undefined)
@@ -163,7 +163,7 @@ const knownCountries = ref([])
 const knownProducts = ref([])
 
 onMounted(async () => {
-    const allJsonData = geAllJsonData()
+    const allJsonData = getAllJsonData()
     knownCountries.value = allJsonData.countries
     knownProducts.value = allJsonData.categories.reduce((arr, item) => arr.concat(item.commodities) , [])
 })

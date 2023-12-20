@@ -1,5 +1,5 @@
 <script setup>
-import { getProductLogo } from '../../utils/logos';
+import { getProductLogo } from '@utils/logos';
 const props = defineProps({
     productName: String,
     alt: {

@@ -24,8 +24,8 @@ import {
     getNetOperatingProfitPerActorOfStage
 } from '@/charts/charts'
 import InfoTitle from '@typography/InfoTitle.vue'
-import { useCurrencyUtils } from '@/utils/format.js'
-import { useActorsAndStages } from '@/utils/misc.js'
+import { useCurrencyUtils } from '@utils/format.js'
+import { useActorsAndStages } from '@utils/misc.js'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 
 const props = defineProps({

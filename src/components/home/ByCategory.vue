@@ -1,6 +1,6 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
-import { getLink } from '../../utils/router'
+import { getLink } from '@utils/router'
 import LogoCountrySmall from './LogoCountrySmall.vue';
 import LogoCountryLarge from './LogoCountryLarge.vue';
 import LogoProductLarge from './LogoProductLarge.vue';

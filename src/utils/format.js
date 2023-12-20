@@ -1,5 +1,5 @@
 import { computed } from 'vue';
-import { prettyFormatAmount, getValueInCurrency } from '@/utils/currency.js'
+import { prettyFormatAmount, getValueInCurrency } from '@utils/currency.js'
 
 export const formatNumber = (value) => {
   if (!value) {

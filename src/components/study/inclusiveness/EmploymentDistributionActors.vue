@@ -29,8 +29,8 @@ import {
     getNumberOfActorsData,
     getNumberOfActorsByTypeOfActorData,
 } from '@/charts/charts'
-import { formatNumber } from '@/utils/format.js'
-import { useActorsAndStages } from '@/utils/misc.js'
+import { formatNumber } from '@utils/format.js'
+import { useActorsAndStages } from '@utils/misc.js'
 import Ring from '@charts/Ring.vue'
 import NiceMetric from '@typography/NiceMetric.vue'
 import InfoTitle from '@typography/InfoTitle.vue'

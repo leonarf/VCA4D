@@ -61,8 +61,8 @@
 <script setup>
 import { computed, ref } from 'vue'
 import SectionTitle from '@typography/SectionTitle.vue'
-import ImpactDataviz from '@/components/study/environment/ImpactDataviz.vue'
-import { ACVImpacts } from '@/utils/misc.js'
+import ImpactDataviz from '@components/study/environment/ImpactDataviz.vue'
+import { ACVImpacts } from '@utils/misc.js'
 
 const props = defineProps({
   studyData: Object

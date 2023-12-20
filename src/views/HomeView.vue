@@ -1,10 +1,10 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import Skeleton from '../components/Skeleton.vue'
+import Skeleton from '@components/Skeleton.vue'
 import { computed, onMounted, ref } from 'vue';
-import ByCategories from '../components/home/ByCategories.vue';
-import ByContinents from '../components/home/ByContinents.vue';
-import { geAllJsonData } from '../utils/data';
+import ByCategories from '@components/home/ByCategories.vue';
+import ByContinents from '@components/home/ByContinents.vue';
+import { getAllJsonData } from '@utils/data';
 
 const studies = ref([])
 const countries = ref([])
@@ -12,7 +12,7 @@ const continents = ref([])
 const categories = ref([])
 
 onMounted(async () => {
-    const allJsonData = geAllJsonData()
+    const allJsonData = getAllJsonData()
     studies.value = allJsonData.studies
     countries.value = allJsonData.countries
     continents.value = [...new Set(countries.value.map(country => country.continent))] 

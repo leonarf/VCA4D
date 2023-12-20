@@ -50,8 +50,8 @@ import {
     getEmploymentByQualificationData, 
     getEmploymentByGenderData,
 } from '@/charts/charts'
-import { formatNumber, formatPercent } from '@/utils/format.js'
-import { useActorsAndStages } from '@/utils/misc.js'
+import { formatNumber, formatPercent } from '@utils/format.js'
+import { useActorsAndStages } from '@utils/misc.js'
 import Ring from '@charts/Ring.vue'
 import NiceMetric from '@typography/NiceMetric.vue'
 import InfoTitle from '@typography/InfoTitle.vue'

@@ -36,8 +36,8 @@ import {
   getPublicFinancesData,
   getPublicFinancesPerStage
 } from '@/charts/charts'
-import { useCurrencyUtils, formatPercent } from '@/utils/format.js'
-import { useActorsAndStages } from '@/utils/misc.js'
+import { useCurrencyUtils, formatPercent } from '@utils/format.js'
+import { useActorsAndStages } from '@utils/misc.js'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 
 const props = defineProps({

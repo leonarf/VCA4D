@@ -49,11 +49,11 @@ import {
   getAddedValueReceiversData
 } from '@/charts/charts'
 import NiceMetric from '@typography/NiceMetric.vue'
-import { useCurrencyUtils } from '@/utils/format.js'
-import { useActorsAndStages } from '@/utils/misc.js'
+import { useCurrencyUtils } from '@utils/format.js'
+import { useActorsAndStages } from '@utils/misc.js'
 import InfoTitle from '@typography/InfoTitle.vue'
-import HorizontalSlider from '../../charts/HorizontalSlider.vue'
-import { formatPercent } from '@/utils/format.js'
+import HorizontalSlider from '@components/charts/HorizontalSlider.vue'
+import { formatPercent } from '@utils/format.js'
 
 
 const props = defineProps({

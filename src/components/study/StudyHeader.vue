@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import { getCurrencySymbol } from '@/utils/currency.js'
+import { getCurrencySymbol } from '@utils/currency.js'
 const props = defineProps({
     studyData: {
       type: Object,
