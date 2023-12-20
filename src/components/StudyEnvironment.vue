@@ -93,7 +93,7 @@ const units = [
 const perUnits = [
   {
     label: "Per year", value: "year"},
-    {label: "Per ton", value: "ton"}
+    {label: "Per functional unit", value: "functional unit"}
 ]
 
 const selectedUnit = ref(units[0].value); 
