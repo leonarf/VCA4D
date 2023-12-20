@@ -23,7 +23,7 @@ const router = createRouter({
             component: Import
         },
         {
-            path: '/comparison',
+            path: '/comparison/:params?',
             name: 'comparison',
             component: Comparison
         },

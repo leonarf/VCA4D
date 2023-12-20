@@ -10,21 +10,25 @@
 <script setup>
 import Skeleton from '@components/Skeleton.vue';
 import { onMounted, ref } from 'vue';
-import { getStudyData, getCountries } from '@utils/data';
+import { useRoute } from 'vue-router'
+import { getStudiesByProduct, getCountries, getStudiesByCountry } from '@utils/data';
 import StudiesComparison from '../components/StudiesComparison.vue';
+
+const route = useRoute();
 
 const studies = ref([])
 onMounted(async () => {
-    const study1 = await getStudyData('cocoa-ecuador')
-    const study2 = await getStudyData('cocoa-sao-tome-e-principe')
-    const study3 = await getStudyData('cashew-mali')
-    const study4 = await getStudyData('coffee-ecuador')
-    studies.value = [
-        study1, study2, study3
-        , study4
-    ]
+    const routeObjectParams = JSON.parse(route.params.params || JSON.stringify({country: "ecuador"}))
+    const { country, product } = routeObjectParams
+    if (country) {
+        studies.value = await getStudiesByCountry(country)
+        return
+    }
+    if (product) {
+        studies.value = await getStudiesByProduct(product)
+        return
+    }
 })
-
 
 </script>
 
