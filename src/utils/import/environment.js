@@ -2,13 +2,18 @@ import { setImportErrors, parseActorTypes } from '@utils/import/generic.js'
 
 const parseValueChainsDescriptions = (json) => {
   var sheetAsJson = json["Value chains description"]
-  return sheetAsJson.map((valuechain) => ({
+  const res = sheetAsJson.map((valuechain) => ({
     name: valuechain['Value chain name'],
     volume: valuechain['annual volume'],
     volumeYear: valuechain['year of volume'],
     volumeUnit: valuechain['unit']
-  })
-  )
+  }))
+  for (const r of res) {
+    if (!r.volume) {
+      setImportErrors(`Volume missing for value chain <b>${r.name}</b> in sheet <b>Value chains description</b>`)
+    }
+  }
+  return res
 }
 
 const parseActorsAndChainsMatrix = (json, valueChains) => {
