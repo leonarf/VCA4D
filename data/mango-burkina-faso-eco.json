@@ -1,13 +1,14 @@
 {
   "id": "mango-burkina-faso",
-  "country": "Burkina Faso",
+  "country": "burkina-faso",
   "commodity": "Mango",
-  "product": "Orchards",
   "year": 2016,
   "localCurrency": "CFA",
-  "targetCurrency": "XOF",
+  "targetCurrency": "CFA",
   "currencyRatio": 1,
+  "type": "eco",
   "ecoData": {
+    "macroData": {},
     "stages": [
       {
         "name": "Producers",
@@ -575,6 +576,11 @@
       "employeeWages": 1184635940.50399,
       "financialInstitutionsInterests": 47539566.9692307,
       "government": 1188948859.88971
-    }
+    },
+    "importExport": {
+      "import": [],
+      "export": []
+    },
+    "farmToFinalPricesRatio": []
   }
 }

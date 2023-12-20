@@ -246,14 +246,6 @@ const getValueChainProperty = (json, propertyName) => {
     return null
 }
 
-const readPercentValue = (identifier) => {
-    const valueInExcel = getValueChainProperty(excelData.value, identifier)
-    if (!valueInExcel) {
-        return undefined
-    }
-    return (valueInExcel / 100.0)
-}
-
 const studyProperties = computed(() => {
     if (typeOfFile.value == null) {
         return null
@@ -323,26 +315,11 @@ const studyProperties = computed(() => {
             }
         }
 
-        const giniIndex = getValueChainProperty(excelData.value, HOME_LABELS.GiniIndex) || undefined;
-        const rateOfIntegration = readPercentValue(HOME_LABELS.RateOfIntegrationIntoDomesticEconomy)
-        const publicFundsBalance = readPercentValue(HOME_LABELS.PublicFundsBalanceRatio)
-        const valueAddedShareNationalGdp = readPercentValue(HOME_LABELS.ValueAddedShareNationalGdp)
-        const valueAddedShareAgriculturalGdp = readPercentValue(HOME_LABELS.ValueAddedShareAgriculturalGdp)
-        const domesticResourceCostRatio = getValueChainProperty(excelData.value, HOME_LABELS.DomesticResourceCostRatio) || undefined;
-        const nominalProtectionCoefficient = getValueChainProperty(excelData.value, HOME_LABELS.NominalProtectionCoefficient) || undefined;
-
         result = {...result,
             year,
             localCurrency,
             targetCurrency,
             currencyRatio,
-            giniIndex,
-            rateOfIntegration,
-            publicFundsBalance,
-            valueAddedShareNationalGdp,
-            valueAddedShareAgriculturalGdp,
-            domesticResourceCostRatio,
-            nominalProtectionCoefficient,
             type: 'eco'
         }
     }

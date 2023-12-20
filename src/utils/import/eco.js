@@ -80,6 +80,14 @@ const IMPORT_EXPORT_COLUMNS = {
   Value: "Value (local currency)",
 }
 
+const readValue = (sheet, cellName) => {
+  const entry = sheet.find(e => e.Property === cellName)
+  if (!entry) {
+    setImportErrors(`<b>${cellName}</b> not found in sheet ${ECO_SHEET_NAMES.Home}`)
+  }
+  return entry.Value
+}
+
 export const parseEconomicsJson = (json) => {
   const stages = json[ECO_SHEET_NAMES.StagesDescription].map((stage, index) => ({
     name: stage['Stages'],
@@ -297,8 +305,29 @@ export const parseEconomicsJson = (json) => {
       farmPrice: priceItem[FARM_GATE_COLUMNS.FarmPrice],
       finalPrice: priceItem[FARM_GATE_COLUMNS.EndPrice]
     }))
+
+    // Macro economic indicators
+    const homeSheet = json[ECO_SHEET_NAMES.Home]
+    const giniIndex = readValue(homeSheet, HOME_LABELS.GiniIndex)
+    const rateOfIntegration = (readValue(homeSheet, HOME_LABELS.RateOfIntegrationIntoDomesticEconomy) / 100.0) || undefined
+    const publicFundsBalance = (readValue(homeSheet, HOME_LABELS.PublicFundsBalanceRatio) / 100.0) || undefined
+    const valueAddedShareNationalGdp = (readValue(homeSheet, HOME_LABELS.ValueAddedShareNationalGdp) / 100.0) || undefined
+    const valueAddedShareAgriculturalGdp = (readValue(homeSheet, HOME_LABELS.ValueAddedShareAgriculturalGdp) / 100.0) || undefined
+    const domesticResourceCostRatio = readValue(homeSheet, HOME_LABELS.DomesticResourceCostRatio)
+    const nominalProtectionCoefficient = readValue(homeSheet, HOME_LABELS.NominalProtectionCoefficient)
+    
+    const macroData = {
+      giniIndex,
+      rateOfIntegration,
+      publicFundsBalance,
+      valueAddedShareNationalGdp,
+      valueAddedShareAgriculturalGdp,
+      domesticResourceCostRatio,
+      nominalProtectionCoefficient
+    }
     
     return {
+      macroData,
       stages,
       actors,
       flows,
@@ -350,6 +379,48 @@ export const parseEconomicsJson = (json) => {
       errors.push({
         level: 'error',
         message: `Total added value created found in spreadsheet '${ECO_SHEET_NAMES.Indicators}' is ${totalCreatedAddedValue}. And total added value received found in spreadsheet '${ECO_SHEET_NAMES.ValueAddedReceivers}' is ${totalReceivedAddedValue}. But both should be equal`
+      })
+    }
+    if (!study.ecoData.macroData.giniIndex) {
+      errors.push({
+        level: 'info',
+        message: `<b>Gini Index</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.GiniIndex}</b>`
+      })
+    }
+    if (!study.ecoData.macroData.rateOfIntegration) {
+      errors.push({
+        level: 'info',
+        message: `<b>Rate Of Integration</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.RateOfIntegrationIntoDomesticEconomy}</b>`
+      })
+    }
+    if (!study.ecoData.macroData.publicFundsBalance) {
+      errors.push({
+        level: 'info',
+        message: `<b>Public Funds Balance</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.PublicFundsBalanceRatio}</b>`
+      })
+    }
+    if (!study.ecoData.macroData.valueAddedShareNationalGdp) {
+      errors.push({
+        level: 'info',
+        message: `<b>Value Added Share of National GDP</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.ValueAddedShareNationalGdp}</b>`
+      })
+    }
+    if (!study.ecoData.macroData.valueAddedShareAgriculturalGdp) {
+      errors.push({
+        level: 'info',
+        message: `<b>Value Added Share of Agricultural GDP</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.ValueAddedShareAgriculturalGdp}</b>`
+      })
+    }
+    if (!study.ecoData.macroData.domesticResourceCostRatio) {
+      errors.push({
+        level: 'info',
+        message: `<b>Domestic Resource Cost Ratio</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.DomesticResourceCostRatio}</b>`
+      })
+    }
+    if (!study.ecoData.macroData.nominalProtectionCoefficient) {
+      errors.push({
+        level: 'info',
+        message: `<b>Nominal Protection Coefficient</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.NominalProtectionCoefficient}</b>`
       })
     }
     return errors

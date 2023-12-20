@@ -44,9 +44,9 @@
                     <div class="definition">Value chain GDP divided by national agricultural GDP</div>
                 </td>
                 <td v-for="study in studies" :key="`${study.id}`">
-                    <div :class="`${getGdpClass(study.valueAddedShareAgriculturalGdp)}`"
+                    <div :class="`${getGdpClass(study.ecoData.macroData.valueAddedShareAgriculturalGdp)}`"
                     >
-                        {{ formatPercent(+study.valueAddedShareAgriculturalGdp) }}
+                        {{ formatPercent(+study.ecoData.macroData.valueAddedShareAgriculturalGdp) }}
                     </div>
                 </td>
             </tr>

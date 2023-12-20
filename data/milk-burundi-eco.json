@@ -1,13 +1,14 @@
 {
   "id": "milk-burundi",
-  "country": "Burundi",
+  "country": "burundi",
   "commodity": "Milk",
-  "product": "Animal products",
   "year": 2020,
   "localCurrency": "MBIF",
   "targetCurrency": "BIF",
   "currencyRatio": 1000000,
+  "type": "eco",
   "ecoData": {
+    "macroData": {},
     "stages": [
       {
         "name": "Producers",
@@ -262,7 +263,7 @@
           "totalTemp": 0,
           "totalSkilled": 3673.87384434774,
           "totalUnskilled": 46909.9259387001,
-          "total": 50583.79978304784
+          "total": 50583.799783047834
         }
       },
       {
@@ -743,6 +744,11 @@
       "employeeWages": 13328.4113960832,
       "financialInstitutionsInterests": 58.4479914299166,
       "government": -1724.34876438959
-    }
+    },
+    "importExport": {
+      "import": [],
+      "export": []
+    },
+    "farmToFinalPricesRatio": []
   }
 }

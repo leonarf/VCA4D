@@ -6,21 +6,21 @@
       />
       <NiceMetric
         label="Value added share of the agricultural sector GDP"
-        :value="formatPercent(+studyData.valueAddedShareAgriculturalGdp)"
+        :value="formatPercent(+studyData.ecoData.macroData.valueAddedShareAgriculturalGdp)"
       />
       <NiceMetric
         label="Value added share of national GDP"
-        :value="formatPercent(+studyData.valueAddedShareNationalGdp)"
+        :value="formatPercent(+studyData.ecoData.macroData.valueAddedShareNationalGdp)"
       />
     </div>
 
     <h2>Is the value chain independent from foreign imports?</h2>
 
     <InfoTitle title="Rate of integration into domestic economy" information="Total value added / value of production"
-      class="mb-4" :class="{'TODO': !studyData.rateOfIntegration}" />
+      class="mb-4" :class="{'TODO': !studyData.ecoData.macroData.rateOfIntegration}" />
     <HorizontalSlider
-        v-if="!!studyData.rateOfIntegration"
-        :value="studyData.rateOfIntegration" 
+        v-if="!!studyData.ecoData.macroData.rateOfIntegration"
+        :value="studyData.ecoData.macroData.rateOfIntegration" 
         :min="0.0" 
         :max="1.0" 
         :labels="['0%', '100%']"

@@ -1,13 +1,14 @@
 {
   "id": "cashew-mali",
-  "country": "Mali",
+  "country": "mali",
   "commodity": "Cashew",
-  "product": "Orchards",
   "year": 2014,
   "localCurrency": "CFA",
-  "targetCurrency": "XOF",
+  "targetCurrency": "CFA",
   "currencyRatio": 1,
+  "type": "eco",
   "ecoData": {
+    "macroData": {},
     "stages": [
       {
         "name": "Producers",
@@ -305,6 +306,11 @@
       "employeeWages": 3361613348.12139,
       "financialInstitutionsInterests": 0,
       "government": 62899200
-    }
+    },
+    "importExport": {
+      "import": [],
+      "export": []
+    },
+    "farmToFinalPricesRatio": []
   }
 }
