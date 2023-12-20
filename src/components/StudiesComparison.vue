@@ -67,7 +67,7 @@
                 </td>
                 <td v-for="study in studies" :key="`${study.id}`">
                     <div class="w-3/4 mx-auto my-2">
-                        <Tag :scale="getSocialAverageGroup(study.socialData, index)" :appreciation="getAppreciation(getSocialAverageGroup(study.socialData, index))" />
+                        <Tag v-if="study.socialData" :scale="getSocialAverageGroup(study.socialData, index)" :appreciation="getAppreciation(getSocialAverageGroup(study.socialData, index))" />
                     </div>
                 </td>
             </tr>
@@ -124,11 +124,11 @@ const SOCIAL_PARTS = [
 ]
 
 const getProduct = (study) => {
-    return study.commodity.toLowerCase()
+    return study?.commodity?.toLowerCase()
 }
 
 const getCountry = (countryId) => {
-    return props.countries.find(country => country.id === slugify(countryId))
+    return countryId ? props.countries.find(country => country.id === slugify(countryId)) : undefined
 }
 
 const getTotalAddedValue = (study) => study.ecoData?.actors.map(actor => actor.directAddedValue || 0).reduce((res, curr) => res + curr, 0)

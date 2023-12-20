@@ -77,16 +77,18 @@ const getCountry = countryId => props.countries.find(country => country.id === c
                                 <LogoProductLarge :product-name="item.product" />
                             </template>
                             <template v-slot:footer>
-                                <SubCardsList v-if="openedProduct === item.product">
-                                <Card v-for="study in item.studies" :key="study.id"
-                                        :link="getLink(study, currency)"
-                                        :is-local="study.local"
-                                        :title="getCountry(study.country)?.prettyName">
+                                <SubCardsList v-if="openedProduct === item.product" 
+                                :link="`/comparison/${encodeURIComponent(JSON.stringify({product: item.product}))}`"
+                                :linkTitle="`Compare all ${item.product} studies`">
+                                    <Card v-for="study in item.studies" :key="study.id"
+                                            :link="getLink(study, currency)"
+                                            :is-local="study.local"
+                                            :title="getCountry(study.country)?.prettyName">
                                         <template v-slot:logo>
                                             <LogoCountryLarge :iso-code="getCountry(study.country)?.iso || 'gr'" />
                                         </template>
                                     </Card>
-                            </SubCardsList>
+                                </SubCardsList>
                             <CardFooter v-else text="countries">
                                 <template v-slot:logo>
                                     <NumberBadge :value="item.studies.length" />

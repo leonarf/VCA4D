@@ -90,7 +90,9 @@ const getCountry = (countryId) => {
                             <LogoCountryLarge :iso-code="getCountry(item.country).iso || 'gr'" />
                         </template>
                         <template v-slot:footer>
-                            <SubCardsList v-if="openedCountry === item.country">
+                            <SubCardsList v-if="openedCountry === item.country"
+                                :link="`/comparison/${encodeURIComponent(JSON.stringify({country: item.country}))}`"
+                                :linkTitle="`Compare all ${item.country} studies`">
                             <Card v-for="study in item.studies" :key="study.id"
                                 :link="getLink(study, currency)"
                                 :is-local="study.local"
