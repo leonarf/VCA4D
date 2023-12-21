@@ -8,7 +8,7 @@
           Taxes - Subventions<br>
           Positive if the sector contributes to the government income more than it receives in subsidies and tax break
         </div>
-        <div class="uppercase font-semibold text-[#C1C1C1] text-2xl mt-4 ">{{ formatPercent(parseFloat(studyData.ecoData.macroData.publicFundsBalance)) }}</div>
+        <div class="uppercase font-semibold text-[#C1C1C1] text-2xl mt-4 ">{{ formatPercent(parseFloat(studyData.ecoData.macroData?.publicFundsBalance)) }}</div>
         <div class="uppercase font-semibold text-[#656565] text-base">Public Funds Balance / Public Budget</div>
         <div class="mt-2">
           Net share of the public funds balance in government budget

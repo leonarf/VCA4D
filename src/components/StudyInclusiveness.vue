@@ -36,8 +36,8 @@
         <InfoTitle title="Share of farm gate price in final price" class="mb-4 mt-8" :class="{'TODO': !hasPricesData}" />
         <ShareOfFarmPrice v-if="hasPricesData" :data="pricesData"/>
         <br />
-        <InfoTitle title="Gini index" class="mb-4 mt-8" :class="{ 'TODO': !studyData.ecoData.macroData.giniIndex}" />
-        <GiniIndex v-if="studyData.ecoData.macroData.giniIndex" :value="studyData.ecoData.macroData.giniIndex"/>
+        <InfoTitle title="Gini index" class="mb-4 mt-8" :class="{ 'TODO': !studyData.ecoData.macroData?.giniIndex}" />
+        <GiniIndex v-if="studyData.ecoData.macroData?.giniIndex" :value="studyData.ecoData.macroData?.giniIndex"/>
     </article>
 </template>
 

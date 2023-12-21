@@ -25,12 +25,12 @@
     <br>
     <h2>Is it financially attractive to sell abroad ?</h2>
 
-    <InfoTitle title="Domestic resource cost ratio" class="mb-4" :class="{'TODO': !studyData.ecoData.macroData.domesticResourceCostRatio}" />
-    <DomesticResourceCostRatio v-if="studyData.ecoData.macroData.domesticResourceCostRatio" :value="studyData.ecoData.macroData.domesticResourceCostRatio" />
+    <InfoTitle title="Domestic resource cost ratio" class="mb-4" :class="{'TODO': !studyData.ecoData.macroData?.domesticResourceCostRatio}" />
+    <DomesticResourceCostRatio v-if="studyData.ecoData.macroData?.domesticResourceCostRatio" :value="studyData.ecoData.macroData?.domesticResourceCostRatio" />
     <br>
     <InfoTitle title="Nominal protection Coefficient" information="Domestic price / Internation parity price"
       class="mb-4" />
-    <NominalProtectionCoefficient :value="studyData.ecoData.macroData.nominalProtectionCoefficient" />
+    <NominalProtectionCoefficient :value="studyData.ecoData.macroData?.nominalProtectionCoefficient" />
   </article>
 </template>
 

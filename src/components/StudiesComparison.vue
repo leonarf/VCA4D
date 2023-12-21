@@ -1,25 +1,7 @@
 <template>
     <table class="w-full">
         <tbody>
-            <tr>
-                <td>-</td>
-                <td v-for="(study) in studies" :key="`${study.id}`">
-                    <div class="flex flex-col items-center gap-y-2"
-                    >
-                        <div class="flex flex-row items-center justify-center">
-                            <LogoCountrySmall :iso-code="getCountry(study.country)?.iso || 'gr'" />
-                            <div>
-                                {{ getCountry(study.country)?.prettyName }}
-                            </div>
-                        </div>
-                        <Card :is-local="false" :is-open="false" :title="getProduct(study)">
-                            <template v-slot:logo>
-                                <LogoProductLarge :product-name="getProduct(study)"/>
-                            </template>
-                        </Card>
-                    </div>
-                </td>
-            </tr>
+            <ComparisonHeader :studies="studies" />
             <tr>
                 <td class="title">
                     Macro-Economic Indicators
@@ -50,31 +32,13 @@
                     </div>
                 </td>
             </tr>
-            <tr class="h-12">
-                <td></td>
-                <td v-for="study in studies" :key="`${study.id}`"></td>
-            </tr>
-            <tr>
-                <td class="title">
-                    Social Sustainability
-                </td>
-                <td v-for="study in studies" :key="`${study.id}`">
-                </td>
-            </tr>
-            <tr v-for="(part, index) in SOCIAL_PARTS" :key="`part_${index}`">
-                <td>
-                    <div class="subtitle">{{ part }}</div>
-                </td>
-                <td v-for="study in studies" :key="`${study.id}`">
-                    <div class="w-3/4 mx-auto my-2">
-                        <Tag v-if="study.socialData" :scale="getSocialAverageGroup(study.socialData, index)" :appreciation="getAppreciation(getSocialAverageGroup(study.socialData, index))" />
-                    </div>
-                </td>
-            </tr>
-            <tr class="h-12">
-                <td></td>
-                <td v-for="study in studies" :key="`${study.id}`"></td>
-            </tr>
+            
+            <ComparisonSeparator :studies="studies" />
+
+            <ComparisonSocial :studies="studies" />
+            
+            <ComparisonSeparator :studies="studies" />
+            
             <tr>
                 <td class="title">
                     Environmental Indicators
@@ -102,34 +66,15 @@
 
 <script setup>
 
-import { formatPercent, formatNumber, slugify } from '@utils/format.js'
-import { getSocialAverageGroup, ACVImpacts } from '@utils/misc.js'
-import LogoCountrySmall from '@components/home/LogoCountrySmall.vue';
-import LogoProductLarge from '@components/home/LogoProductLarge.vue';
-import Card from './home/Card.vue';
-import Tag from './study/social-sustainability/Tag.vue';
+import { formatPercent, formatNumber } from '@utils/format.js'
+import { ACVImpacts } from '@utils/misc.js'
+import ComparisonHeader from '@components/comparison/ComparisonHeader.vue'
+import ComparisonSocial from '@components/comparison/ComparisonSocial.vue'
+import ComparisonSeparator from '@components/comparison/ComparisonSeparator.vue'
 import { computed } from 'vue';
 const props = defineProps({
     studies: Array,
-    countries: Array
 })
-
-const SOCIAL_PARTS = [
-    "Working conditions",
-    "Land and water rights",
-    "Gender equality",
-    "Food and nutrition security",
-    "Social capital",
-    "Living conditions",
-]
-
-const getProduct = (study) => {
-    return study?.commodity?.toLowerCase()
-}
-
-const getCountry = (countryId) => {
-    return countryId ? props.countries.find(country => country.id === slugify(countryId)) : undefined
-}
 
 const getTotalAddedValue = (study) => study.ecoData?.actors.map(actor => actor.directAddedValue || 0).reduce((res, curr) => res + curr, 0)
 
@@ -151,21 +96,6 @@ const getAddedValueClass = (value) => {
         return "light-red"
     }
     return "light-green"
-}
-
-const getAppreciation = (scale) => {
-    if (scale === 1) {
-        return 'Poor'
-    }
-    if (scale === 2) {
-        return 'Rather Poor'
-    }
-    if (scale === 3) {
-        return 'Rather Good'
-    }
-    if (scale === 4) {
-        return 'Good'
-    }
 }
 
 const availableImpacts = computed(() => props.studies.reduce((arr, study) => arr.concat(study.acvData?.impacts), [])
@@ -197,7 +127,7 @@ const getImpactValue = (impact, study) => {
 
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 td {
     box-sizing: border-box;
 }

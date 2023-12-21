@@ -86,3 +86,5 @@ export const getAllJsonData = () => {
 export const getCountries = () => {
     return jsonData.countries
 }
+
+export const getCountry = (countryId) => getCountries().find(country => country.id === countryId)

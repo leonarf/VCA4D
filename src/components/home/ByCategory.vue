@@ -1,6 +1,6 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
-import { getLink } from '@utils/router'
+import { getLink, getCompareProductLink } from '@utils/router'
 import LogoCountrySmall from './LogoCountrySmall.vue';
 import LogoCountryLarge from './LogoCountryLarge.vue';
 import LogoProductLarge from './LogoProductLarge.vue';
@@ -78,7 +78,7 @@ const getCountry = countryId => props.countries.find(country => country.id === c
                             </template>
                             <template v-slot:footer>
                                 <SubCardsList v-if="openedProduct === item.product" 
-                                :link="`/comparison/${encodeURIComponent(JSON.stringify({product: item.product}))}`"
+                                :link="`/comparison/${getCompareProductLink(item.product)}`"
                                 :linkTitle="`Compare all ${item.product} studies`">
                                     <Card v-for="study in item.studies" :key="study.id"
                                             :link="getLink(study, currency)"
