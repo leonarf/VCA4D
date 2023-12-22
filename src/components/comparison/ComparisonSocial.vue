@@ -1,11 +1,5 @@
 <template>
-    <tr>
-        <td class="title">
-            Social Sustainability
-        </td>
-        <td v-for="study in studies" :key="`${study.id}`">
-        </td>
-    </tr>
+    <ComparisonTitle title="Social Sustainability" :studies="studies" />
     <tr v-for="(part, index) in SOCIAL_PARTS" :key="`part_${index}`">
         <td>
             <div class="subtitle">{{ part }}</div>
@@ -22,6 +16,7 @@
 
 import { getSocialAverageGroup } from '@utils/misc.js'
 import Tag from '@components/study/social-sustainability/Tag.vue';
+import ComparisonTitle from './ComparisonTitle.vue';
 const props = defineProps({
     studies: Array,
 })

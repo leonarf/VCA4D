@@ -1,4 +1,5 @@
 import { setImportErrors, getImportErrors, parseActorTypes, doColumnExist } from '@/utils/import/generic.js'
+import { getTotalAddedValue } from '../economics'
 
 export const ECO_SHEET_NAMES = {
   Home: "Value Chain",
@@ -369,7 +370,7 @@ export const parseEconomicsJson = (json) => {
       })
     })
   
-    const totalCreatedAddedValue = study.ecoData.actors.map(actor => actor.directAddedValue || 0).reduce((res, curr) => res + curr, 0)
+    const totalCreatedAddedValue = getTotalAddedValue(study)
     let totalReceivedAddedValue = study.ecoData.actors.map(actor => actor.receivedAddedValue).reduce((res, curr) => res + curr, 0)
     for (const key in study.ecoData.addedValue) {
       totalReceivedAddedValue += study.ecoData.addedValue[key]
