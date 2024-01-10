@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-y-24">
+    <div class="flex flex-col gap-y-24" v-if="studyData.socialData">
         <SocialSummary :studyData="studyData"/>
         <SocialDetails :studyData="studyData"/>
     </div>
