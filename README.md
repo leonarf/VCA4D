@@ -75,4 +75,5 @@ const getProductLogo = (product) => {
 }
 ```
 ### Unknown Currency
-For now currency rates are hardcoded in `const CHANGE_RATES` in `src/utils/currencyUtils.js`. You can add values to cover new currencies. A future version should use an API to automatically retrieve currency rates.
+For now currency rates are hardcoded in `const CHANGE_RATES` in `src/utils/currency.js`. You can add values to cover new currencies. A future version should use an API to automatically retrieve currency rates.
+
