@@ -3,7 +3,7 @@ import jsonData from '@data/data.json'
 
 export const LOCAL_STORAGE_ID = 'localStorage'
 
-const getStudyDataFromFileName = (fileName) => json(`../../data/${fileName}.json`).then(json => json)
+const getStudyDataFromFileName = (fileName) => json(`${import.meta.env.DEV ? '../../' : '../'}data/${fileName}.json`).then(json => json)
 
 export const getStudiesByCountry = async (countryId) => {
     const studyIds = jsonData.studies.filter(study => study.country === countryId).map(study => study.id)
