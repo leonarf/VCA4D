@@ -11,7 +11,7 @@ export function useActorsAndStages(props) {
 }
 
 const average = (array) => array.reduce((a, b) => a + b) / array.length
-export const getSocialAverageGroup = (socialData, index) => Math.round(average(socialData[index].groups.map(group => Number(group.averageValue) || 0)), 2)
+export const getSocialAverageGroup = (socialData, index) => Math.round(socialData ? average(socialData[index].groups.map(group => Number(group.averageValue) || 0)) : 0, 2)
 
 export const ACVImpacts = [
     {
