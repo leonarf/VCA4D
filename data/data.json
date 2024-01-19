@@ -35,7 +35,7 @@
         "cocoa",
         "oil palm",
         "cotton",
-        "corn",
+        "maize",
         "cassava",
         "french beans"
       ]
@@ -387,18 +387,18 @@
       "product": "beef"
     },
     {
-      "id": "corn-nigeria",
-      "title": "Corn",
+      "id": "maize-nigeria",
+      "title": "Maize",
       "year": 2020,
       "country": "nigeria",
-      "product": "corn"
+      "product": "maize"
     },
     {
-      "id": "corn-zambia",
-      "title": "Corn",
+      "id": "maize-zambia",
+      "title": "Maize",
       "year": 2020,
       "country": "zambia",
-      "product": "corn"
+      "product": "maize"
     },
     {
       "id": "cassava-ivory-coast",

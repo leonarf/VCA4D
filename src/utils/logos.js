@@ -6,7 +6,7 @@ import MangoLogo from '@images/icons/products/mango.svg'
 import CashewLogo from '@images/icons/products/cashew.svg'
 import CocoaLogo from '@images/icons/products/cocoa.svg'
 import BeefLogo from '@images/icons/products/beef.svg'
-import CornLogo from '@images/icons/products/corn.svg'
+import MaizeLogo from '@images/icons/products/maize.svg'
 import VanillaLogo from '@images/icons/products/vanilla.svg'
 import EggLogo from '@images/icons/products/egg.svg'
 import CottonLogo from '@images/icons/products/cotton.svg'
@@ -32,8 +32,8 @@ export const getProductLogo = (product) => {
             return CocoaLogo
         case 'beef':
             return BeefLogo
-        case 'corn':
-            return CornLogo
+        case 'maize':
+            return MaizeLogo
         case 'vanilla':
             return VanillaLogo
         case 'egg':
