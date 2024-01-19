@@ -4,10 +4,10 @@
         <td v-for="(study) in studies" :key="`${study.id}`">
             <div class="flex flex-col items-center gap-y-2"
             >
-                <div class="flex flex-row items-center justify-center">
-                    <LogoCountrySmall :iso-code="getCountry(slugify(study.country))?.iso || 'gr'" />
+                <div v-if="study.id" class="flex flex-row items-center justify-center">
+                    <LogoCountrySmall :iso-code="getStudyDetails(study).country_iso_code || 'gr'" />
                     <div>
-                        {{ getCountry(slugify(study.country))?.prettyName }}
+                        {{ getStudyDetails(study).country_name }}
                     </div>
                 </div>
                 <Card :is-local="false" :is-open="false" :title="getProduct(study)">
@@ -33,6 +33,13 @@ const props = defineProps({
 
 const getProduct = (study) => {
     return study?.commodity?.toLowerCase()
+}
+
+const getStudyDetails = (study) => {
+    return {
+        country_name : getCountry(slugify(study?.country))?.prettyName,
+        country_iso_code : getCountry(slugify(study?.country))?.iso,
+    }
 }
 
 </script>
