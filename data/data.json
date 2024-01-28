@@ -6,12 +6,12 @@
       "color": "#5F8A64",
       "textColor": "#5F8A64",
       "commodities": [
-        "cashew",
-        "mango",
         "banana",
-        "vanilla",
+        "cashew",
         "groundnut",
-        "pineapple"
+        "mango",
+        "pineapple",
+        "vanilla"
       ]
     },
     {
@@ -20,9 +20,9 @@
       "color": "#C46D4D",
       "textColor": "#C46D4D",
       "commodities": [
-        "milk",
         "beef",
-        "egg"
+        "egg",
+        "milk"
       ]
     },
     {
@@ -31,13 +31,15 @@
       "color": "#F6E065",
       "textColor": "#806C00",
       "commodities": [
-        "coffee",
-        "cocoa",
-        "oil palm",
-        "cotton",
-        "maize",
         "cassava",
-        "french beans"
+        "cocoa",
+        "coffee",
+        "cotton",
+        "cowpea",
+        "french beans",
+        "maize",
+        "oil palm",
+        "sorghum"
       ]
     },
     {
@@ -47,7 +49,10 @@
       "textColor": "#0073CF",
       "commodities": [
         "aquaculture tilapia",
-        "aquaculture"
+        "aquaculture",
+        "coastal fisheries",
+        "inland fisheries",
+        "fisheries"
       ]
     },
     {
@@ -55,10 +60,29 @@
       "prettyName": "Unknown",
       "color": "#808080",
       "textColor": "#808080",
-      "commodities": []
+      "commodities": [
+      ]
     }
   ],
   "countries": [
+    {
+      "id": "ethiopia",
+      "prettyName": "Ethiopia",
+      "continent": "Africa",
+      "iso": "et"
+    },
+    {
+      "id": "comoros",
+      "prettyName": "Comoros",
+      "continent": "Africa",
+      "iso": "km"
+    },
+    {
+      "id": "colombia",
+      "prettyName": "Colombia",
+      "continent": "America",
+      "iso": "co"
+    },
     {
       "id": "mali",
       "prettyName": "Mali",
@@ -82,6 +106,12 @@
       "prettyName": "Honduras",
       "continent": "America",
       "iso": "hn"
+    },
+    {
+      "id": "gambia",
+      "prettyName": "Gambia",
+      "continent": "Africa",
+      "iso": "gm"
     },
     {
       "id": "nicaragua",
@@ -172,6 +202,12 @@
       "prettyName": "Zimbabwe",
       "continent": "Africa",
       "iso": "zw"
+    },
+    {
+      "id": "niger",
+      "prettyName": "Niger",
+      "continent": "Africa",
+      "iso": "ne"
     },
     {
       "id": "nigeria",
@@ -434,6 +470,76 @@
       "year": 2020,
       "country": "kenya",
       "product": "french beans"
+    },
+    {
+      "id": "cashew-ivory-coast",
+      "title": "Cashew",
+      "year": 2020,
+      "country": "ivory-coast",
+      "product": "cashew"
+    },
+    {
+      "id": "cocoa-colombia",
+      "title": "Cocoa",
+      "year": 2020,
+      "country": "colombia",
+      "product": "cocoa"
+    },
+    {
+      "id": "groundnut-niger",
+      "title": "Groundnut",
+      "year": 2020,
+      "country": "niger",
+      "product": "groundnut"
+    },
+    {
+      "id": "cotton-ethiopia",
+      "title": "ethiopia Cotton",
+      "year": 2020,
+      "country": "ethiopia",
+      "product": "cotton"
+    },
+    {
+      "id": "inland-fisheries-mali",
+      "title": "mali inland fisheries",
+      "year": 2020,
+      "country": "mali",
+      "product": "inland fisheries"
+    },
+    {
+      "id": "coastal-fisheries-tanzania",
+      "title": "tanzania Coastal Fisheries",
+      "year": 2020,
+      "country": "tanzania",
+      "product": "coastal fisheries"
+    },
+    {
+      "id": "cowpea-niger",
+      "title": "niger cowpea",
+      "year": 2020,
+      "country": "niger",
+      "product": "cowpea"
+    },
+    {
+      "id": "fisheries-comoros",
+      "title": "comoros fisheries",
+      "year": 2020,
+      "country": "comoros",
+      "product": "fisheries"
+    },
+    {
+      "id": "sorghum-ghana",
+      "title": "ghana Sorghum",
+      "year": 2020,
+      "country": "ghana",
+      "product": "sorghum"
+    },
+    {
+      "id": "fisheries-gambia",
+      "title": "gambia Fisheries",
+      "year": 2020,
+      "country": "gambia",
+      "product": "fisheries"
     }
   ]
 }

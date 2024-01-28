@@ -50,6 +50,9 @@ export const getProductLogo = (product) => {
             return CassavaLogo
         case 'aquaculture tilapia':
         case 'aquaculture':
+        case "coastal fisheries":
+        case "inland fisheries":
+        case "fisheries":
             return FishLogo
         default:
             return DefaultLogo

@@ -1,0 +1,571 @@
+{
+  "id": "fisheries-gambia",
+  "country": "gambia",
+  "commodity": "Fisheries",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "The Gambia is a signatory to the various conventions of the International Organization, the latest of which is the Convention on the employment of seafarers, which it ratified in November 2018 and which will enter into force on 19 November 2019 ((GLMIS/ILO) and the Gambia's Labour Code incorporates the various provisions of the ILO conventions (Labour act, 2018). However, in practice, these international regulatory provisions are not well applied in employment contracts. Indeed, the ILO requires that all fishermen must have a written contract of employment. In view of the dangerous nature of fishing operations, Convention No. 138 provides protection against dangerous employment for persons under 18 years of age. A medical examination is also required for all workers. Not all these provisions are applie"
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The labor code in The Gambia guarantees the right of association to employees and employers, and the value chain actors are for the most part affiliated with organizations in which they defend their interests. However, it was reported that throughout the reign of the former regime, workers 'organizations were not very dynamic and workers' freedoms were very limited. Strikes and demonstrations of workers were prohibited. Some of the processing plants we met pointed out that Gambian workers are learning about union action because under the old regime there were no union protests. Workers now feel liberated and want to assert themselves; which makes them ask any kind of claim. Nevertheless, there is still no strong labor union in fishing enterprises as the law requires a minimum of 50 workers to register a trade union, a threshold that very few fishing enterprises can achieve because most workers are day laborers.Please add justification."
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In the Gambian Labor Code, “contract of employment” means an agreement of service or apprenticeship whether oral or in writing, express or implied, between an employer and a person by which that person undertakes to make his or her services personally available to the employer in return for remuneration and in a manner that gives the employer control over the person’s work and working condition”. It appears that most workers have only verbal contracts even in processing industries where the majority of workers are day laborers. Factory bosses argue that the activity of their company is highly dependent on the fishing activity in The Gambia and this is very seasonal and periodic. This, because almost all the fishermen on which they depend are Senegalese and at each holiday period, fishing is slow. As a result, it is difficult for them to fill permanent staff that they would have to pay even if the company is not activePlease add justification."
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The Constitution and law in the Gambia prohibit all forms of forced or compulsory labor, including that of children. Admittedly, no case of forced labor has been reported, but according to some workers, the demands of fishing enterprises on workers, particularly vis-à-vis contract workers, amount to forced labor. Contractuals are obliged to work sometimes beyond normal working hours when there is product and sometimes unpaid on these overtime hours. Also, in the artisanal sector where labor is almost family-friendly, some family members, especially young people and women, are sometimes forced to do some work. Generally, women and children are the victimsPlease add justification."
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The law sets out the criteria that prohibit discrimination in employment and occupation, and the government often ensures enforcement in formal jobs. However, in the fishing sector it has been found that processing companies employ more female workers. This predominance of women in fishing enterprises is perceived by some as a social discrimination that allows the company to employ this category of workers, who generally have a low salary level. Please add justification."
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "It is noted a strong presence of children in landing sites and processing,In the fishing units, most children have not been to school, while in the processing workshops, it is mainly the children who are in primary school who are most in demand in the afternoon during the school year. Those in secondary school are requested on public holidays. When the VCA4D team visited the sites, some fishermen said that they had taken their boy out of school in Senegal to take them to Gambia and take them in canoes because they did not have any labour. The same is true in the transformation where parents took their daughters out of school and enrolled them in the trade when they felt their low level at school.\n\n"
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The level of involvement of children in hazardous activities is higher or lower. Going sea is often a danger especially for young people who are often engaged in diving to train the fish in the nets or clear the nets hung on the rocks. In artisanal processing, children are involved in the search for wood, water, eviscerate and fish cleaning that sometimes expose them to injury. "
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 1,
+          "averageText": "Not at all",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Fishing professionals are considered to be among the most exposed to accidents, both operators and processors. With hundreds of deaths a year, fishing is considered the most dangerous job in the world. Going fishing has always been considered a risky jobPlease add justification.fishermen are exposed to sudden changes in weather, temperature changes, rain, strong winds and very strong waves, Women who are busy picking oysters or gathering molluscs, claim to have very often wounds with objects of work or with shells,It is the same for women who transform the catfish,Smoker are thus exposed to the heat and smoke that invades the buildings in which the furnaces are located,"
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "the levels of reviews or wages in the fishing sector are considered more or less attractive according to the links. The income level of fishermen and processors in the craft subsector is perceived as very averagePlease add justification, Work in processing plants seems to be more attractive than in the craft industry. Workers interviewed by the VCA4D team reported having acceptable wages compared to workers in other sectors, including the public, The fishmonger's link seems the most attractive. It is perceived by almost all actors as being the most rewarding. Only this link requires significant financial resources and a good network of customers both nationally and internationally,"
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Work in the sector does not look promising for young people and most young Gambians do not have the culture of work in this sector especially for fishing. The job of fisherman requires a technicality that requires a long learning from the bottom. Young Gambians whose parents are not fishermen for the vast majority are interested in fishing only at an advanced age, especially after having failed at school. The lack of training and their lack of knowledge of the sector make fishing not very attractive to them. In addition to this handicap, work at sea is considered difficult for most young people,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In the field, the various actors involved in the value chain, both investors and agents of the institutions, did not mention these guidelines. Nevertheless, in the country's fisheries policy documents, the objectives are consistent with the VGGT.\nThe regulations impose a title of access to fisheries for both artisanal and industrial players. However, in the field, there is no requirement for title or access to the resource for artisanal fisheries. Fishing licenses required for canoes in the law are not enforced. \n"
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "in The Gambia, in social terms, the results of investments in the value chain have yielded mixed results. Some investments have often hurt local populations by denying them access to resources that negatively impact food security and rural livelihoods. As far as the processing industries are concerned, The Gambia does not seem to benefit greatly in terms of taxes because of the many advantages granted to investors to attract them to the country. As it happens, in seeking to promote investment in the fisheries sector, the Government of the Gambia offers a set of incentives to potential high-value investors.,\n"
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The Gambia, like other countries in the West African sub-region, is committed to good governance of fisheries. The Gambia adheres to the Fisheries Transparency Initiative (FITI), demonstrating its commitment to promoting transparent and inclusive fisheries management as key conditions for the sustainability of the sector. However, most of the professionals interviewed denounced the lack of transparency in fisheries management, especially with regard to the prior disclosure of information relating to investments made in the country and especially in certain localities. It deplored the licensing conditions for foreign fishing vessels and the establishment of processing plants for fish products, particularly for fishmeal factories. It was also denounced the fact that with the complicity of some Gambians, strategies are developed to circumvent the constraints of agreements with the presence of mixed companies, the loan of flags to foreign vessels."
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "The access of actors, especially professional craftsmen, to administrative documents is a real problem, according to most people we met. The sharing of sensitive data by the Fisheries Department has been highlighted as a problem of transparency in fisheries management. It was pointed out that there is a serious lack of information and dissemination of laws and regulations, fisheries agreements between The Gambia and other countries, as well as documents concerning factories in The Gambia. For example, professionals have no knowledge of the activities of fishmeal factories. Fishery department officials have lamented the opacity surrounding these factories that work without the knowledge of departmental officers. It was also regretted the lack of access to the results of the scientific researches that help professionals to orient their activities and especially to respect the management measures imposed on them without any scientific advice."
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Most of the leaders of these organizations say that they are often consulted and participate in meetings but are not yet well involved in major decisions such as the granting of operating titles and investment priorities in the sector especially., Their non-participation in decision-making is mainly related, according to them, to the advisory nature of professional organizations. Their opinions are only considered as advisory in the various decision-making frameworks. They are not well represented in these frameworks and often only have observer status. \n"
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Most of the decisions have a direct impact on fishermen, processors and local populations, but their prior consent is not very often sought. The facilities of the fish factories, the massive presence of foreigners on sites without access rights sometimes."
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The exploitation of fisheries resources and their exploitation on land are governed by the fishing legislation and access rules seem fair some even think that the rules are more profitable to foreigners including investors who enjoy a lot of benefits."
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "It is noted that some management measures have disrupted the livelihoods of actors, but no alternative government measures have been taken. The alternative strategies that are often taken emanate from the impacted actors themselves. This is the case of the closure of oyster picking from June to February. During this period, a project had set up a fund to grant credits to women of TRY so that they could engage in other activities. Thus some of the women of the association were active in the manufacture and sale of soap, others in the fish trade particularly from  catfishes. These credits were repaid during the harvest season at a rate of 10%. This funding according to some has stopped for some time"
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Generally, the expropriation concerns the displacement of the actors occupying places on the landing sites, of transformation or in the markets in case of need of public utility. In the cases reported, no compensation system has been put in place. The most striking example is the expropriation of the Gunju Women's Processing Site. The women were displaced for the purpose of setting up the fishmeal plant on the same site while they had been occupying the premises for more than 40 years. They were displaced without any form of compensation even though most of them, a good part of their facilities was lost as a result of this eviction"
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Des dispositions réglementaires existent dans le pays pour recevoir les plaintes des plaignants et régler les différends dans les chaînes de valeur. Néanmoins, selon la plupart des acteurs interrogés, les plaintes contre les investisseurs, notamment en ce qui concerne les investisseurs, ne sont pas traitées ou, même lorsqu'elles sont traitées, elles sont toujours favorables aux investisseurs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 3.5,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Women are important pillars at every link in the value chain, directly or indirectly, Although women do not participate directly in sea fishing trips, some have their own fishing equipment (canoe, motor and gear) that are managed by their families, especially those married to Senegalese. They also finance and equip fishing units through advances they make to owners. They are also responsible for landing and selling the products of certain units.\n"
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Apart from fishing for fish where they are physically absent, the presence of women in the sector is dominant in the artisanal processing where they represent the overwhelming majority of the actors and also in the marketing of the fresh products as fishmongers but especially retailers. . Already in 2009, it was estimated that 80% of processors and 50% of small fish traders are women in The Gambia (ADB, 2009). Sixty-five percent of the workforce in the processing plants is women between the ages of 25 and 40. The only industrial processing plant in the country is owned by an expatriate woman who bought a factory that had ceased his activities. Even though she is not in the middle and is based outside, she encourages other women in the sector including women's organizations to have their own business like TRY."
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 3.25,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Women in the value chain are economic operators and are therefore involved in various income-generating activities and the acquisition of tangible assets. Thus, apart from their production equipment and / or recovery of fish products, they invest in the acquisition of land, house, vehicle, etc."
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "In principle, all actors, both men and women, have the same rights to access production and valorisation. Only one of the main constraints that limit women's access to the means of production is the weakness of their financial means. This situation is a serious handicap in a context where fish is scarce, very often creating a strong competition between men and women for the purchase of products. In this competition, women generally have a weak bargaining power, compared to other actors in the sector, especially the big fishmongers who are more affluent and more particularly the Senegalese who dominate this link in the chain. This bargaining power is an important element for setting prices and margins; it is a key determinant of net income from the business"
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "It appears that very few women have access to credit from banks because of complex procedures, lack of collateral, and the lack of flexibility of banking organizations. The vast majority of people are therefore moving towards informal credit systems that do not require any contribution or guarantee, but which are often at usurious interest rates of 10% to 20% sometimes, It is especially through their collective tontine savings scheme, called \"Kafos\" that women find funds to strengthen their financial means, but the amounts are low.."
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Many of the women processors interviewed reported having received training. Some even said they participated in exchange visits to other countries in the subregion, particularly in Senegal, with support from partners. The TRY women have been trained in new, more environmentally friendly oyster harvesting methods that do not involve the destruction of mangroves. They also benefited from training in management and organization."
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 2.4,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The perception of a highly gendered division of labor (male fishing /women'sprocessor) has shaped the generalized approach to production decision-making in the sector in The Gambia (Siles et al., 2019). Women are generally not represented in associations of fishermen and they are usually absent from decision making on this important link in the value chain.\nHowever, through some organizations, Gambian women are able to participate actively in decision-making about production. This is the case of the Association of Women Oyster Farmers, which is very influential in the decision-making process"
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "In the different links of the value chain, women organize themselves as part of their work, individually or collectively. However, as we said earlier, their full autonomy is hampered by their dependence on other links in the chain, particularly production. Nevertheless, some, such as those of TRY, have more autonomy because they collect, process and market oysters and shellfish themselves."
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In Gambian society, it is the woman's duty to provide for the family, including food, clothing, training and education, medical expenses without the contribution of men. In this situation, women are the main providers of property in households and have a duty, not a right, to earn their own income to support their households. As long as women's contribution to the household is considered a duty, women have little autonomy over control over their own income. It is often their husbands who set investment priorities and direct spending, and often against the will of their wives. This is why some women have indicated that they do not always declare all their income to their husbands, so that they can sometimes manage it independently. Women are less able to do without their husbands' consent and to decide a number of expenses on their own. The vast majority of women met and living with their husbands are in this situation."
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "women certainly have an income independent of that of the other members of their household and more particularly of their husbands, but they are not independent with regard to the monetary management of their income. In a context where women in households aspire to more freedom, financial autonomy is seen as a prerequisite for the freedom to choose one's path. Investing in the economic empowerment of women is the surest way to achieve gender equality, poverty eradication and inclusive economic growth."
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women actively participate in all types of transactions at the various links in the value chain, both at the industrial and artisanal level, although their role is better known in processing and marketing"
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2.75,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "At all levels of the value chain, women are affiliated with organizations at landing and processing sites, retail fish markets, in their neighbourhoods. Gambian women are more active in the fishing sector than Gambian men because they are involved in processing, including smoking, shellfish and retailing fish. Most fishermen are foreigners and very few are affiliated to organisations in the host country. As a result, organizations other than those bringing together fishermen are essentially dominated by the presence of women."
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Because of their high representativeness in the organizations they generally dominate, women hold important positions of responsibility. They are the only ones responsible in their own organizations. In mixed organizations, the distribution of positions of responsibility follows the gender balance. Most often, a woman is president or vice-president, general secretary or assistant to the general secretary, etc. Nevertheless, even if women remain in the majority as in organizations, there is still the predominance of men in the bodies because of their authority. This predominance of men is nothing other than an extension of the societal configuration based on a sexual division of labour that assigns women the reproductive role."
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women's participation in local governance structures and decision-making at the territorial level is considered low. The still high illiteracy rate among women and other socio-cultural factors contribute to the low participation of women in decision-making. Some women do not have the confidence to try to govern or make decisions about their communities. In addition, patriarchy continues to hinder the full acceptance of women and their participation in decision-making positions. "
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "As leaders in organizations, they participate in all debates and express their opinions. However, the vast majority of grassroots women who are not office members do not often speak out. On the one hand, the socio-cultural constraints mentioned above apply in mixed bodies, women do not have the right to raise their voices and in the presence of men and in some bodies they do not have the right to speak. Despite the progress made, this situation remains very serious because women's voices have not been heard in decision-making bodies so far. On the other hand, some women do not want to contradict their leaders. The latter do not often wish for contradictory debates, especially when it comes to renewing their mandate."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 1,
+          "averageText": "Low",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Women, as housewives first, are engaged in various income-generating activities related to fishing. They divide their time between household chores and daily income-generating activities, sometimes spending up to 16 hours between the two types of activities. Due to their many household and family tasks and security problems, they cannot go inland to access more lucrative markets for processed fish and fresh produce as men do."
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "In all parts of the value chain, the risks of women taking on hard and tiring work are still high.For a long time, women were the specialists in landing catches in Gambia. From the pirogue to the place of handling or processing, they take care of the transport with containers of a capacity of 40 to 50 kg, Women working in the processing industries spend long hours with their hands in cold water, without gloves, In artisanal processing, women are very often forced to handle the transport, weighing and stacking of products themselves to reduce handling costs. And it is often their female colleagues who provide services on the sites who carry out this work,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\n",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Due to shocks such as floods, drought and economic stagnation, food production in The Gambia has declined in recent years. The 2018 drought drastically reduced the country's food production. Rainfall in 2018 began during the first dekad of June, followed by periods of drought and low rainfall in August. This situation has finally put an end to the continuous sowing of field crops while threatening the good germination of seeds already sown according to the National Food Security Council of the Republic of The Gambia. This alarming rainfall situation had led the Council to meet urgently with development partners to discuss the effects on crops, livestock and food security and appropriate policy responses"
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Despite the deficit in national food production, the evolution of food supply on the market in The Gambia is relatively stable. Indeed, the Government had measured food needs on the basis that approximately 1,711,318 people will be under pressure throughout 2019. Thus, the Government, through the various food and nutrition programmes and with the support of its development partners, estimated that 200,224 million tons of rice and 99,256 million tons of coarse grains would be needed in 2019 to help alleviate the pressure of severe food insecurity in the 6 typical agricultural regions "
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 1,
+          "averageText": "Low",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": " Most actors in the fish value chain report a decline in income. As a result, they have less income to allocate to daily expenses. Nevertheless, food is considered one of the main priorities of households and is the first item of expenditure. Many of the actors interviewed, particularly fishermen, processors and retailers, say they are finding it increasingly difficult to meet their food needs. Mothers seem to be the least affected by food security issues. The vast majority of them declare that they cover their food needs with the income derived from their activity. These are the actors in the chain, most of whom have reported an increase in expenditure allocated to food in terms of qualitative changes due to increased consumption of meat, fruit and other types of food."
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "The prices of most food products are now considered higher by the stakeholders met. This increase in food prices combined with lower reviews increases the level of poverty among the population and makes them more vulnerable. Women who provide food supplies to households make tontines of food products. At the various processing sites visited, they work in small groups of 10 to 15 people and pay a daily fee. After a certain period of time, usually a week, they buy a foodstuff (oil, tomato, soap, or other foodstuff) with the amount collected to distribute to the members of the tontine. With this system, they have the opportunity to have a good part of their supply more easily without having to pay a large sum of money at once to buy food or to make the more expensive retail purchase,"
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Most stakeholders perceive food products as being of lower quality nowadays, especially dairy products, tomatoes and broths. The poorer quality of the products is, in their opinion, the source of diseases such as hypertension and diabetes, which are very common in many people today. Some stakeholders stated that they no longer have access to the good fish that has become very expensive because most species are now destined for export. Women processors report that they can only access the less fresh bonga because of competition from fishmeal factories. As a result, the quality of their product is lower and their profit margin decreases"
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Stakeholders do not seem to see any changes in their nutritional practices and the WFP notes that the nutritional status of the population has not improved significantly, especially among the most vulnerable categories of women, adolescent girls and children under 5 years of age. It is this worrying nutritional situation that led the EU and FAO to set up a four-year project in September 2017 entitled \"Improving Food Security and Nutrition in the Gambia through Food Fortification\" ."
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Most stakeholders did not notice any change in eating habits and did not notice any change in its diversity either. However, the World Food Programme noted that nearly two out of three households (64.2%) in The Gambia have a high food diversity (WFP, 2016). It should be noted, however, that it is more a diversification of dishes than a diversification of foodstuffs. Cereals, and particularly rice, are the most frequently consumed food and 99% of households consumed them seven days a week (WFP, 2016). Only 15% of households eat vegetables every day during the week. The poorest households are less likely to eat meat, fruit and dairy products. Urban households have a more diversified diet than rural households"
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les risques de pénurie de nourriture sont toujours présents chez certains ménages d’acteurs de la chaîne de valeurs dont les revenus sont précaires et hypothétiques. En dehors des transferts d’argent des parents émigrés, la plupart des ménages ne comptent que sur leurs revenus propres pour acheter leurs denrées alimentaires"
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "As Gambia is highly dependent on food imports whose prices fluctuate on world dollar exchange rates, food prices continue to fluctuate and, above all, to rise. However, stakeholders have noted greater price stability for imported commodities in recent years. On the other hand, the prices of local products such as cereals and fish, which are seasonal, can be double or even triple.  The price of fish is very dependent on the seasons and the presence of Senegalese fishermen in Gambia. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2.25,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Although there are different types of professional organisations, member actors consider the level of participation of organisations as a general means. Nevertheless, some apex organizations are often cited as being best involved in the value chain. These are the Association of Gambian Fishing Enterprises (TAGFC), the Gambian Association for the Development of Artisanal Fisheries (GAMFIDA), the National Association of Artisanal Fisheries Operators (NAAFO), the National Sole Co-Management Committee (NASCOM), the TRY Association."
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "It was noted that the types of associations are not always inclusive of a certain category of actors, particularly foreigners. Many Senegalese processors declare that they are not involved in associations in their workplace. They denounce a kind of ostracism of nationals towards them. The same is true for fishermen, most of whom do not identify with local associations because they have not been involved. A Gambian fish farmer who collects oysters says he has applied to join the women's oyster farmers' association but has never received a response. Nevertheless, the umbrella organizations (NAAFO, GAMFIDA, TAGFC) seem more inclusive since they bring together different types of actors in the value chain."
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Often, the leaders of organizations are generally elected by a vote of the grassroots members following a general meeting. However, the duration of mandates is often not respected according to most of the actors interviewed. General renewal meetings are not held on the due date and most office members are illegal. Leaders do not wish to be replaced and have no interest in renewing proceedings. This situation raises the problem of the representativeness and legitimacy of most leaders towards grassroots members"
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The negotiating capacities of market organisations seem very weak, with the exception of TRY and TAGFC. By centralizing the sale of products and adding value, TRy seeks to market them throughout the sub-region and abroad. The TAGFC can be confronted with economic operators such as Senegalese fishermen and industrialists as well as the main dominant actors in the sector. Negotiation skills, which are an important element in price and margin setting, are a key factor for professionals who expect to see their revenues increase from their activities."
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Access to information by chain actors is generally perceived as low. Apart from the sole for which some well-informed actors claim to have detailed information on customs duties and fishing profitability, information on flows, prices, contracts, fees, taxes, exploitation authorisations is not accessible, in particular to artisanal actors."
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The degree of trust in the relationships between the actors in the value chain is average. The sometimes divergent interests between the different actors and the competition between them sometimes pollute trust relationships. In production, for example, fishermen targeting small pelagics argue in favour of fishmeal plants, which are a cheap market for them, while processors and consumers accuse these plants of being at the root of the rise in fish prices and the decrease in availability on the market."
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 2.33333333333333,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "The heads of the organisations met deplored the fact that professionals are not involved in fisheries agreements, which have a major impact on their activities. The government is the only representative to negotiate the agreement with the EU when it should be a commitment of all stakeholders, they say. Nevertheless, Gambian fisheries stakeholders now report feeling more free to express their concerns about decisions that impact their livelihoods, which was impossible under the old regime."
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The participatory approach known as co-management that is recommended in fisheries management is above all to take into account the knowledge and know-how of local populations on the resources they use. Thus, most of the new knowledge on sole has been provided by fishermen and industry using methods of aggregating data from local knowledge and confirmed by participatory research involving local populations. Similarly, the measurement of the closure of the oyster harvest was taken taking into account women's knowledge of oyster breeding periods and their knowledge of mangroves."
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Different forms of voluntary participation of value chain actors towards communities were reported. A manager of a fishmeal factory in Goudiour says he has employed 80 local workers, provided assistance to the Gunjur community with about 3.2 million Dalasi ($63,000), helped the school and repaired the main road to the village every year. A fresh processing plant in Banjul claims to provide scholarships to students and actively participates in the monthly cleaning days held in the city. In Tanjié, the fishermen's association is involved in the construction of mosques and classrooms and supports health services. In other localities, the organizations present support local authorities in the various activities."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 2.33333333333333,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The vast majority of stakeholders interviewed reported having access to health facilities, but at very different levels. The health system in The Gambia consists of three levels: primary, secondary and tertiary. The primary level service called Village Health Services (VHS) is about access to community health facilities. Secondary level refers to the provision of basic health services. As for the tertiary level, it concerns general hospitals. Most fishers, processors, processing industry workers and other service providers report having access to only the first two levels of health services. The latter are the closest to the communities and the cheapest in terms of access fees. Tertiary level institutions are mainly concentrated in Banjul. The actors who declare that they frequent them, especially private establishments, are most often employees of industries that have medical coverage, fish merchants and canoe owners whose incomes are more substantial.\n"
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Access to health services is correlated with opportunities for access to different types of health facilities. They depend on the level of household income and the proximity of institutions. Generally, it is women who pay for medical expenses in households. Due to the low incomes of most of them, households' access to quality institutions and care is not always easy.  "
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The affordability of health services for households is very relative according to the actors, but in general health structures are considered expensive. For example, the price of consultation in Birkama's health facilities is D 25 for nationals and 50 for foreigners. This price, considered affordable by some, is perceived as expensive by others. Some generic drugs are given free of charge to patients in health centres, but the vast majority of prescription drugs are only available in private pharmacies and their prices are considered very expensive by most. Others refer to periods when access to health care was free throughout the country and currently consider household access to health services to be very expensive."
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The dominant type of housing for most people is the building with a sheet metal roof. However, a large part of the actors still occupy summary habitats, particularly Senegalese fishermen who are tenants in fishing centres. It still appears that it is the fishermen who declare to live most in buildings with cement slabs as well as the owners of fishing units, particularly the owners of purse seines or long tidal line pirogues. Those who work in the processing industry, especially bosses and managers, live in luxury homes. They are for almost all foreigners. "
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Access to drinking water and sanitation for households of value chain actors seems to be a problem. Nevertheless, depending on the different types of professionals and localities, the situation seems to vary. The households of Sanyang, Tanjié, Bakao and Burfut mostly have individual standpipes. The infrastructure in these localities has developed in recent years both in terms of road infrastructure and access to drinking water. These villages benefit from their proximity to the capital Banjul.  In Goujour, on the other hand, most households obtain their supplies from wells"
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 2.33333333333333,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Most of the actors interviewed stated that their children have access to primary school either in the public or private sector. In general, the school enrolment rate in The Gambia is high. Gambian law makes the first six years of primary school free and compulsory, and the primary completion rate is over 70%. Gambian women value their children's schooling and most of those interviewed say that their school-age children are in school.,However, even if education is compulsory in The Gambia, the education system does not reach everyone. According to UNESCO, in 2018, 72,096 children in The Gambia were not in school. Adult literacy rates are considered as low as in 2015, only 55.5% of men and 47.6% of women were literate."
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Households' access to secondary education appears to be more difficult. Most of the actors interviewed state that many of their children have not reached secondary level because of their low level or lack of means to pay for their schooling. The document in the Education Sector Strategic Plan 2016-2030 recognizes that it is at the secondary level that the greatest challenge remains where the current GER of 44% remains,Concerning vocational education, the actors deplored the lack of a training school, particularly in the fisheries and aquaculture sector where there is no training structure. Most of the technicians and managers in the processing industries are Senegalese and Mauritanian"
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Continuous training of value chain actors by investors has been reported in the processing industries. It is often the quality managers who train other workers without qualifications in hygiene and quality standards. Some managers of these factories often benefit from capacity building abroad, particularly in sub-regional countries such as Senegal. The continuous training of other actors such as fishermen and processors is provided by NGOs or bodies such as the FAO or the EU and concerns training modules on safety at sea for fishermen or marketing, financial management, hygiene and quality for processors and fresh retailers.  "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
