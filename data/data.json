@@ -132,6 +132,12 @@
       "iso": "ec"
     },
     {
+      "id": "guinea-bissau",
+      "prettyName": "Guinea-Bissau",
+      "continent": "Africa",
+      "iso": "gw"
+    },
+    {
       "id": "papua-new-guinea",
       "prettyName": "Papua New Guinea",
       "continent": "Asia - Pacific",
