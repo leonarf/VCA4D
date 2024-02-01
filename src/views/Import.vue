@@ -58,6 +58,7 @@
                             Unknown country: <b>{{ studyProperties['country'] }}</b>
                             <br />
                             Known countries are: <b>{{knownCountries.sort((c1, c2) => c1.id.localeCompare(c2.id)).map(c => c.prettyName).join(', ')}}</b>
+                            Please respect name and isocode from https://en.wikipedia.org/wiki/ISO_3166-1 to add new countries
                         </div>
                     </div>
                 </div>

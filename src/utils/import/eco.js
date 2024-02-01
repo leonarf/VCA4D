@@ -339,6 +339,7 @@ export const parseEconomicsJson = (json) => {
   }
 
   export const getErrors = (study) => {
+    console.log("study", study)
     let errors = getImportErrors()
   
     for (const property of [
@@ -382,43 +383,43 @@ export const parseEconomicsJson = (json) => {
         message: `Total added value created found in spreadsheet '${ECO_SHEET_NAMES.Indicators}' is ${totalCreatedAddedValue}. And total added value received found in spreadsheet '${ECO_SHEET_NAMES.ValueAddedReceivers}' is ${totalReceivedAddedValue}. But both should be equal`
       })
     }
-    if (!study.ecoData.macroData.giniIndex) {
+    if (!study.ecoData.macroData?.giniIndex) {
       errors.push({
         level: 'info',
         message: `<b>Gini Index</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.GiniIndex}</b>`
       })
     }
-    if (!study.ecoData.macroData.rateOfIntegration) {
+    if (!study.ecoData.macroData?.rateOfIntegration) {
       errors.push({
         level: 'info',
         message: `<b>Rate Of Integration</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.RateOfIntegrationIntoDomesticEconomy}</b>`
       })
     }
-    if (!study.ecoData.macroData.publicFundsBalance) {
+    if (!study.ecoData.macroData?.publicFundsBalance) {
       errors.push({
         level: 'info',
         message: `<b>Public Funds Balance</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.PublicFundsBalanceRatio}</b>`
       })
     }
-    if (!study.ecoData.macroData.valueAddedShareNationalGdp) {
+    if (!study.ecoData.macroData?.valueAddedShareNationalGdp) {
       errors.push({
         level: 'info',
         message: `<b>Value Added Share of National GDP</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.ValueAddedShareNationalGdp}</b>`
       })
     }
-    if (!study.ecoData.macroData.valueAddedShareAgriculturalGdp) {
+    if (!study.ecoData.macroData?.valueAddedShareAgriculturalGdp) {
       errors.push({
         level: 'info',
         message: `<b>Value Added Share of Agricultural GDP</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.ValueAddedShareAgriculturalGdp}</b>`
       })
     }
-    if (!study.ecoData.macroData.domesticResourceCostRatio) {
+    if (!study.ecoData.macroData?.domesticResourceCostRatio) {
       errors.push({
         level: 'info',
         message: `<b>Domestic Resource Cost Ratio</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.DomesticResourceCostRatio}</b>`
       })
     }
-    if (!study.ecoData.macroData.nominalProtectionCoefficient) {
+    if (!study.ecoData.macroData?.nominalProtectionCoefficient) {
       errors.push({
         level: 'info',
         message: `<b>Nominal Protection Coefficient</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.NominalProtectionCoefficient}</b>`
