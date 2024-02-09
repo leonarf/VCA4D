@@ -72,9 +72,9 @@ export const getAllJsonData = () => {
             ...jsonData.studies,
             {
                 category: category ? category.id : 'unknown',
-                country: localStudy.country.toLowerCase(),
+                country: localStudy.country?.toLowerCase(),
                 id: localStudy.id,
-                product: localStudy.commodity.toLowerCase(),
+                product: localStudy.commodity?.toLowerCase(),
                 title: ["Local", localStudy.commodity].join(' '),
                 year: localStudy.year,
                 local: true

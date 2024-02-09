@@ -138,7 +138,7 @@ import Skeleton from '@components/Skeleton.vue'
 import { slugify } from '@utils/format.js'
 import jsonData from '@data/data.json'
 import { parseSustainabilityWorksheet } from '@utils/import/social.js'
-import { parseEconomicsJson, getErrors } from '@utils/import/eco.js'
+import { parseEconomicsJson, getErrors, getValueChainProperty } from '@utils/import/eco.js'
 import { parseEnvironmentJson } from '@utils/import/environment.js'
 import { setImportErrors, clearImportErrors, getImportErrors } from '@utils/import/generic.js'
 import { ECO_SHEET_NAMES, HOME_LABELS } from '@utils/import/eco'
@@ -170,7 +170,7 @@ onMounted(async () => {
 })
 
 const knownCountry = computed(() => knownCountries.value.find(c => c.id === studyProperties.value['country']))
-const isKnownProduct = computed(() => knownProducts.value.includes(studyProperties.value['commodity'].toLowerCase()))
+const isKnownProduct = computed(() => knownProducts.value.includes(studyProperties.value['commodity']?.toLowerCase()))
 
 const isObjectNotEmpty = (obj) => {
     if (!obj) {
@@ -229,23 +229,6 @@ const typeOfFile = computed(() => {
     setImportErrors(`The excel spreadsheet is missing a sheet named '${sheetNameForSustainabilityData}', '${sheetsNameForEnvironmentalData[0]}' or '${sheetsNameForEconomicData[0]}' depending of the excel type, ${Object.keys(TypesOfFile)}`)
     return null
 })
-
-const getValueChainProperty = (json, propertyName) => {
-    let sheetName = "Study id"
-    if (!Object.keys(json).includes(sheetName)) {
-        sheetName = ECO_SHEET_NAMES.Home
-        if (!Object.keys(json).includes(sheetName)) {
-            setImportErrors(`The excel spreadsheet is missing a sheet named 'Study id'`)
-            return null
-        }
-    }
-    var elementFound = json[sheetName].find(element => element["Property"] === propertyName)
-    if (elementFound) {
-        return elementFound["Value"]
-    }
-    setImportErrors(`Couldn't find '${propertyName}' in excel's sheet '${sheetName}'`)
-    return null
-}
 
 const studyProperties = computed(() => {
     if (typeOfFile.value == null) {

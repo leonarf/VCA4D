@@ -55,8 +55,7 @@ export function useCurrencyUtils(props) {
     convertAmount,
   };
 }
-export const slugify = (str) => str
-  .toLowerCase()
+export const slugify = (str) => str?.toLowerCase()
   .trim()
   .replace(/[^\w\s-]/g, '')
   .replace(/[\s_-]+/g, '-')

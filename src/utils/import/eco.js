@@ -10,15 +10,16 @@ export const ECO_SHEET_NAMES = {
   Indicators: "Indicator by actor type",
   ValueAddedReceivers: "Direct value added receivers",
   Employment: "Employment",
-  AccountByActor: "Account by actor type"
+  AccountByActor: "Account by actor type",
+  ImportExport: "Imported And exported goods"
 }
 
 export const HOME_LABELS = {
   Country : "Country",
   Commodity : "Commodity",
-  LocalCcy: "Study's local currency",
-  TargetCcy: "Standard currency code",
-  RatioCcy: "change rate from study's to standard currency",
+  LocalCcy: "Currency unit AFA",
+  TargetCcy: "Currency (ISO)",
+  RatioCcy: "Conversion rate Currency unit AFA to Currency (ISO)",
   NominalProtectionCoefficient: "Nominal protection coefficient",
   DomesticResourceCostRatio: "Domestic resource cost ratio",
   RateOfIntegrationIntoDomesticEconomy: "Rate of integration into domestic economy",
@@ -51,7 +52,6 @@ const INDICATORS_COLUMNS = {
   PublicFundsBalance: "Public funds balance (local currency)",
   NetOperatingProfit: "Net operating profit (local currency)",
   TotalCosts: "Total costs (local currency)",
-  ImportExport: "Imported And exported goods"
 }
 
 const VALUE_ADDED_COLUMNS = {
@@ -77,16 +77,25 @@ const ACCOUNT_COLUMNS = {
 
 const IMPORT_EXPORT_COLUMNS = {
   Goods: "Goods",
-  ImportOrExport: "Imported Or Exported",
+  ImportOrExport: "Imported or Exported",
   Value: "Value (local currency)",
 }
 
-const readValue = (sheet, cellName) => {
-  const entry = sheet.find(e => e.Property === cellName)
-  if (!entry) {
-    setImportErrors(`<b>${cellName}</b> not found in sheet ${ECO_SHEET_NAMES.Home}`)
+export const getValueChainProperty = (json, propertyName) => {
+  let sheetName = "Study id"
+  if (!Object.keys(json).includes(sheetName)) {
+      sheetName = ECO_SHEET_NAMES.Home
+      if (!Object.keys(json).includes(sheetName)) {
+          setImportErrors(`The excel spreadsheet is missing a sheet named 'Study id' defining things such as country, commodity, currency.`)
+          return null
+      }
   }
-  return entry.Value
+  var elementFound = json[sheetName].find(element => element["Property"] === propertyName)
+  if (elementFound) {
+      return elementFound["Value"]
+  }
+  setImportErrors(`Couldn't find '${propertyName}' in excel's sheet '${sheetName}'`)
+  return null
 }
 
 export const parseEconomicsJson = (json) => {
@@ -276,12 +285,21 @@ export const parseEconomicsJson = (json) => {
       return (stage1?.index || 0) - (stage2?.index || 0)
     })
   
-    const importExportItems = json[INDICATORS_COLUMNS.ImportExport].map(importExportItem => ({
+    const importExportItems = json[ECO_SHEET_NAMES.ImportExport].map(importExportItem => ({
           label: importExportItem[IMPORT_EXPORT_COLUMNS.Goods],
           importExport: importExportItem[IMPORT_EXPORT_COLUMNS.ImportOrExport],
           amount: importExportItem[IMPORT_EXPORT_COLUMNS.Value],
       })
     )
+    if (importExportItems.every(item => {return item.label == undefined})) {
+      setImportErrors(`Column '${IMPORT_EXPORT_COLUMNS.Goods}' seems to be missing from excel worksheet '${ECO_SHEET_NAMES.ImportExport}'`)
+    }
+    if (importExportItems.every(item => {return item.importExport == undefined})) {
+      setImportErrors(`Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' seems to be missing from excel worksheet '${ECO_SHEET_NAMES.ImportExport}'`)
+    }
+    if (importExportItems.every(item => {return item.amount == undefined})) {
+      setImportErrors(`Column '${IMPORT_EXPORT_COLUMNS.Value}' seems to be missing from excel worksheet '${ECO_SHEET_NAMES.ImportExport}'`)
+    }
 
     var importExport = {
       import: [],
@@ -290,11 +308,11 @@ export const parseEconomicsJson = (json) => {
 
     var acceptableImportKeyWord = ["IMPORT", "Imported"]
     for (var keyword of acceptableImportKeyWord) {
-      importExport.import.push(...importExportItems.filter(item => item.importExport.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
+      importExport.import.push(...importExportItems.filter(item => item.importExport?.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
     }
     var acceptableExportKeyWord = ["EXPORT", "Exported"]
     for (var keyword of acceptableExportKeyWord) {
-      importExport.export.push(...importExportItems.filter(item => item.importExport.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
+      importExport.export.push(...importExportItems.filter(item => item.importExport?.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
     }
   
     if (importExportItems.length > 0 && importExport.import.length == 0 && importExport.import.length == 0) {
@@ -308,24 +326,15 @@ export const parseEconomicsJson = (json) => {
     }))
 
     // Macro economic indicators
-    const homeSheet = json[ECO_SHEET_NAMES.Home]
-    const giniIndex = readValue(homeSheet, HOME_LABELS.GiniIndex)
-    const rateOfIntegration = (readValue(homeSheet, HOME_LABELS.RateOfIntegrationIntoDomesticEconomy) / 100.0) || undefined
-    const publicFundsBalance = (readValue(homeSheet, HOME_LABELS.PublicFundsBalanceRatio) / 100.0) || undefined
-    const valueAddedShareNationalGdp = (readValue(homeSheet, HOME_LABELS.ValueAddedShareNationalGdp) / 100.0) || undefined
-    const valueAddedShareAgriculturalGdp = (readValue(homeSheet, HOME_LABELS.ValueAddedShareAgriculturalGdp) / 100.0) || undefined
-    const domesticResourceCostRatio = readValue(homeSheet, HOME_LABELS.DomesticResourceCostRatio)
-    const nominalProtectionCoefficient = readValue(homeSheet, HOME_LABELS.NominalProtectionCoefficient)
-    
-    const macroData = {
-      giniIndex,
-      rateOfIntegration,
-      publicFundsBalance,
-      valueAddedShareNationalGdp,
-      valueAddedShareAgriculturalGdp,
-      domesticResourceCostRatio,
-      nominalProtectionCoefficient
-    }
+    var macroData = {}
+    macroData["homeSheet"] = json[ECO_SHEET_NAMES.Home]
+    macroData["giniIndex"] = getValueChainProperty(json, HOME_LABELS.GiniIndex)
+    macroData["rateOfIntegration"] = (getValueChainProperty(json, HOME_LABELS.RateOfIntegrationIntoDomesticEconomy) / 100.0) || undefined
+    macroData["publicFundsBalance"] = (getValueChainProperty(json, HOME_LABELS.PublicFundsBalanceRatio) / 100.0) || undefined
+    macroData["valueAddedShareNationalGdp"] = (getValueChainProperty(json, HOME_LABELS.ValueAddedShareNationalGdp) / 100.0) || undefined
+    macroData["valueAddedShareAgriculturalGdp"] = (getValueChainProperty(json, HOME_LABELS.ValueAddedShareAgriculturalGdp) / 100.0) || undefined
+    macroData["domesticResourceCostRatio"] = getValueChainProperty(json, HOME_LABELS.DomesticResourceCostRatio)
+    macroData["nominalProtectionCoefficient"] = getValueChainProperty(json, HOME_LABELS.NominalProtectionCoefficient)
     
     return {
       macroData,
