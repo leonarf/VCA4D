@@ -138,7 +138,13 @@ export const parseEconomicsJson = (json) => {
     }))
     actors = actors.map(actor => {
       let indicator = indicators.filter(indicator => indicator.actorName === actor.name)
-      if (indicator && indicator.length === 1) {
+      if (indicator.length == 0) {
+        setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Indicators}', data for actor '${actor.name}' were not found`, 'info')
+      }
+      else if (indicator.length > 1) {
+        setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Indicators}', actor '${actor.name}' appears more than once`)
+      }
+      else if (indicator.length === 1) {
         indicator = indicator[0]
         return {
           ...actor,
