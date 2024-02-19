@@ -1,0 +1,801 @@
+{
+  "id": "banana-burundi",
+  "country": "burundi",
+  "commodity": "Banana",
+  "year": 2017,
+  "localCurrency": "MFB",
+  "targetCurrency": "MFB",
+  "currencyRatio": 1,
+  "type": "eco",
+  "ecoData": {
+    "macroData": {
+      "giniIndex": 0.519,
+      "rateOfIntegration": 0.982,
+      "publicFundsBalance": 0.022000000000000002,
+      "valueAddedShareNationalGdp": 0.14400000000000002,
+      "valueAddedShareAgriculturalGdp": 0.37799999999999995,
+      "domesticResourceCostRatio": 0.06,
+      "nominalProtectionCoefficient": 0.994
+    },
+    "stages": [
+      {
+        "name": "Producers",
+        "description": "Banana plantain is produced by most of the Brundies farmers, while a few farm are more specailized in fruit production and use improved variety",
+        "index": 0
+      },
+      {
+        "name": "Collectors",
+        "description": "Banan is mainly consumed locally and collector trade them on short distance",
+        "index": 1
+      },
+      {
+        "name": "Processors",
+        "description": "Banana is processed into beer, mainly as  a side activities in rural farm",
+        "index": 2
+      },
+      {
+        "name": "Wholesalers",
+        "description": "Banana is traded to major urban centre in both plantain and beer form. A minor share of banana fruit is experted to Tanzania",
+        "index": 3
+      },
+      {
+        "name": "Retailers",
+        "description": "Banana is retailed in urban area",
+        "index": 4
+      },
+      {
+        "name": "End use",
+        "description": "Banan is a basic staple for both rural and urban consumers in the domestic market",
+        "index": 5
+      }
+    ],
+    "actors": [
+      {
+        "name": "Small Producer North East",
+        "stage": "Producers",
+        "id": 15,
+        "numberOfActors": 0,
+        "directAddedValue": 133312.35623282846,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 131877.57531777397,
+        "totalCosts": 68997.9075827942,
+        "receivedAddedValue": 131877.57531777397,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Average Porducer North East",
+        "stage": "Producers",
+        "id": 16,
+        "numberOfActors": 0,
+        "directAddedValue": 246336.88941794637,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 240043.94394213273,
+        "totalCosts": 141825.59770202296,
+        "receivedAddedValue": 240043.94394213273,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Small Producer West",
+        "stage": "Producers",
+        "id": 20,
+        "numberOfActors": 0,
+        "directAddedValue": 20886.81083472471,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 20886.81083472471,
+        "totalCosts": 16728.9996796541,
+        "receivedAddedValue": 20886.81083472471,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Average Producer West",
+        "stage": "Producers",
+        "id": 21,
+        "numberOfActors": 0,
+        "directAddedValue": 38822.279802162135,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 37130.745481600825,
+        "totalCosts": 35857.63170904854,
+        "receivedAddedValue": 37130.745481600825,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Small Producer Periurban",
+        "stage": "Producers",
+        "id": 37,
+        "numberOfActors": 0,
+        "directAddedValue": 29062.9993503913,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 29062.9993503913,
+        "totalCosts": 0,
+        "receivedAddedValue": 29062.9993503913,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Average Producer Periurban",
+        "stage": "Producers",
+        "id": 38,
+        "numberOfActors": 0,
+        "directAddedValue": 58333.99748884967,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 58333.99748884967,
+        "totalCosts": 0,
+        "receivedAddedValue": 58333.99748884967,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Collector-retailer",
+        "stage": "Collectors",
+        "id": 17,
+        "numberOfActors": 0,
+        "directAddedValue": 7195.929378013399,
+        "publicFundsBalance": 55.3226866227305,
+        "netOperatingProfit": 6978.686637396329,
+        "totalCosts": 17196.98990289687,
+        "receivedAddedValue": 6978.686637396329,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Collector North East",
+        "stage": "Collectors",
+        "id": 30,
+        "numberOfActors": 0,
+        "directAddedValue": 17078.532569669038,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 17078.532569669038,
+        "totalCosts": 21958.11111224486,
+        "receivedAddedValue": 17078.532569669038,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Collector West",
+        "stage": "Collectors",
+        "id": 31,
+        "numberOfActors": 0,
+        "directAddedValue": 2318.7153488784024,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 2318.7153488784024,
+        "totalCosts": 2981.205151007068,
+        "receivedAddedValue": 2318.7153488784024,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Collector Periurban",
+        "stage": "Collectors",
+        "id": 39,
+        "numberOfActors": 0,
+        "directAddedValue": 29761.33382017832,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 29761.33382017832,
+        "totalCosts": 88128.761855639,
+        "receivedAddedValue": 29761.33382017832,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Wholesaler",
+        "stage": "Wholesalers",
+        "id": 18,
+        "numberOfActors": 0,
+        "directAddedValue": 8496.446959164925,
+        "publicFundsBalance": 4394.78352929187,
+        "netOperatingProfit": 2815.949374298195,
+        "totalCosts": 43891.25575859591,
+        "receivedAddedValue": 2815.949374298195,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Retailer North East",
+        "stage": "Retailers",
+        "id": 19,
+        "numberOfActors": 0,
+        "directAddedValue": 81994.0316556429,
+        "publicFundsBalance": 15591.26461492343,
+        "netOperatingProfit": 63712.24902033159,
+        "totalCosts": 326066.3611224771,
+        "receivedAddedValue": 63712.24902033159,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Retailer West",
+        "stage": "Retailers",
+        "id": 22,
+        "numberOfActors": 0,
+        "directAddedValue": 8133.2480819615885,
+        "publicFundsBalance": 1547.3961353893872,
+        "netOperatingProfit": 5796.682624543791,
+        "totalCosts": 36450.99200345484,
+        "receivedAddedValue": 5796.682624543791,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Retailer Periurban",
+        "stage": "Retailers",
+        "id": 23,
+        "numberOfActors": 0,
+        "directAddedValue": 40814.99142767268,
+        "publicFundsBalance": 4113.9394269384065,
+        "netOperatingProfit": 33283.96533104545,
+        "totalCosts": 165446.34107398323,
+        "receivedAddedValue": 33283.96533104545,
+        "employment": {
+          "tempMale": null,
+          "tempFemale": null,
+          "unskilledMale": null,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": null,
+          "totalSkilled": null,
+          "totalUnskilled": null,
+          "total": 0
+        }
+      },
+      {
+        "name": "Consummer North East",
+        "stage": "End use",
+        "id": 24,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Consumer West",
+        "stage": "End use",
+        "id": 25,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Consummer Periurban",
+        "stage": "End use",
+        "id": 36,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Export Tanzania",
+        "stage": "End use",
+        "id": 50,
+        "receivedAddedValue": 0
+      }
+    ],
+    "flows": [
+      {
+        "sellerActorName": "Small Producer North East",
+        "buyerActorName": "Collector North East",
+        "volumeExchanged": 28481.6,
+        "monetaryValue": 4984280000,
+        "unitPrice": 175000,
+        "volumeUnit": "Ton",
+        "product": "Banane c"
+      },
+      {
+        "sellerActorName": "Small Producer North East",
+        "buyerActorName": "Wholesaler",
+        "volumeExchanged": 21600,
+        "monetaryValue": 2160000000,
+        "unitPrice": 100000,
+        "volumeUnit": "Ton",
+        "product": "Banane f"
+      },
+      {
+        "sellerActorName": "Small Producer North East",
+        "buyerActorName": "Consummer North East",
+        "volumeExchanged": 50400,
+        "monetaryValue": 5040000000,
+        "unitPrice": 100000,
+        "volumeUnit": "Ton",
+        "product": "Banane f"
+      },
+      {
+        "sellerActorName": "Small Producer North East",
+        "buyerActorName": "Small Producer North East",
+        "volumeExchanged": 23385.1144078181,
+        "monetaryValue": 11365165602.199596,
+        "unitPrice": 486000,
+        "volumeUnit": "M.cub",
+        "product": "Bière"
+      },
+      {
+        "sellerActorName": "Small Producer North East",
+        "buyerActorName": "Collector-retailer",
+        "volumeExchanged": 11692.557203909,
+        "monetaryValue": 5682582801.099774,
+        "unitPrice": 486000,
+        "volumeUnit": "M.cub",
+        "product": "Bière"
+      },
+      {
+        "sellerActorName": "Small Producer North East",
+        "buyerActorName": "Retailer North East",
+        "volumeExchanged": 198773.472466453,
+        "monetaryValue": 96603907618.69617,
+        "unitPrice": 486000,
+        "volumeUnit": "M.cub",
+        "product": "Bière"
+      },
+      {
+        "sellerActorName": "Average Porducer North East",
+        "buyerActorName": "Collector North East",
+        "volumeExchanged": 69110,
+        "monetaryValue": 12094250000,
+        "unitPrice": 175000,
+        "volumeUnit": "Ton",
+        "product": "Banane c"
+      },
+      {
+        "sellerActorName": "Average Porducer North East",
+        "buyerActorName": "Wholesaler",
+        "volumeExchanged": 5400,
+        "monetaryValue": 540000000,
+        "unitPrice": 100000,
+        "volumeUnit": "Ton",
+        "product": "Banane f"
+      },
+      {
+        "sellerActorName": "Average Porducer North East",
+        "buyerActorName": "Consummer North East",
+        "volumeExchanged": 12600,
+        "monetaryValue": 1260000000,
+        "unitPrice": 100000,
+        "volumeUnit": "Ton",
+        "product": "Banane f"
+      },
+      {
+        "sellerActorName": "Average Porducer North East",
+        "buyerActorName": "Average Porducer North East",
+        "volumeExchanged": 92481.0169699431,
+        "monetaryValue": 44945774247.39235,
+        "unitPrice": 486000,
+        "volumeUnit": "M.cub",
+        "product": "Bière"
+      },
+      {
+        "sellerActorName": "Average Porducer North East",
+        "buyerActorName": "Collector-retailer",
+        "volumeExchanged": 23120.2542424858,
+        "monetaryValue": 11236443561.848099,
+        "unitPrice": 486000,
+        "volumeUnit": "M.cub",
+        "product": "Bière"
+      },
+      {
+        "sellerActorName": "Average Porducer North East",
+        "buyerActorName": "Retailer North East",
+        "volumeExchanged": 346803.813637286,
+        "monetaryValue": 168546653427.721,
+        "unitPrice": 486000,
+        "volumeUnit": "M.cub",
+        "product": "Bière"
+      },
+      {
+        "sellerActorName": "Collector-retailer",
+        "buyerActorName": "Consummer North East",
+        "volumeExchanged": 48351.3532041215,
+        "monetaryValue": 24175676602.06075,
+        "unitPrice": 500000,
+        "volumeUnit": "1000b",
+        "product": "Bouteille"
+      },
+      {
+        "sellerActorName": "Wholesaler",
+        "buyerActorName": "Retailer Periurban",
+        "volumeExchanged": 51296.0087662497,
+        "monetaryValue": 35907206136.374794,
+        "unitPrice": 700000,
+        "volumeUnit": "M.cub",
+        "product": "Bière"
+      },
+      {
+        "sellerActorName": "Wholesaler",
+        "buyerActorName": "Export Tanzania",
+        "volumeExchanged": 27000,
+        "monetaryValue": 10800000000,
+        "unitPrice": 400000,
+        "volumeUnit": "Ton",
+        "product": "Banane f"
+      },
+      {
+        "sellerActorName": "Retailer North East",
+        "buyerActorName": "Consummer North East",
+        "volumeExchanged": 757739.591094261,
+        "monetaryValue": 340982815992.4175,
+        "unitPrice": 450000,
+        "volumeUnit": "1000b",
+        "product": "Bouteille"
+      },
+      {
+        "sellerActorName": "Retailer North East",
+        "buyerActorName": "Consummer North East",
+        "volumeExchanged": 97591.6,
+        "monetaryValue": 48795800000,
+        "unitPrice": 500000,
+        "volumeUnit": "Ton",
+        "product": "Banane c"
+      },
+      {
+        "sellerActorName": "Small Producer West",
+        "buyerActorName": "Collector West",
+        "volumeExchanged": 3866.8,
+        "monetaryValue": 676690000,
+        "unitPrice": 175000,
+        "volumeUnit": "Ton",
+        "product": "Banane c"
+      },
+      {
+        "sellerActorName": "Small Producer West",
+        "buyerActorName": "Wholesaler",
+        "volumeExchanged": 17450.077754173,
+        "monetaryValue": 9597542764.795149,
+        "unitPrice": 550000,
+        "volumeUnit": "M.cub",
+        "product": "Bière"
+      },
+      {
+        "sellerActorName": "Small Producer West",
+        "buyerActorName": "Retailer West",
+        "volumeExchanged": 17450.077754173,
+        "monetaryValue": 9597542764.795149,
+        "unitPrice": 550000,
+        "volumeUnit": "M.cub",
+        "product": "Bière"
+      },
+      {
+        "sellerActorName": "Average Producer West",
+        "buyerActorName": "Collector West",
+        "volumeExchanged": 9383,
+        "monetaryValue": 1642025000,
+        "unitPrice": 175000,
+        "volumeUnit": "Ton",
+        "product": "Banane c"
+      },
+      {
+        "sellerActorName": "Average Producer West",
+        "buyerActorName": "Wholesaler",
+        "volumeExchanged": 33845.9310120767,
+        "monetaryValue": 18615262056.64218,
+        "unitPrice": 550000,
+        "volumeUnit": "M.cub",
+        "product": "Bière"
+      },
+      {
+        "sellerActorName": "Average Producer West",
+        "buyerActorName": "Retailer West",
+        "volumeExchanged": 33845.9310120767,
+        "monetaryValue": 18615262056.64218,
+        "unitPrice": 550000,
+        "volumeUnit": "M.cub",
+        "product": "Bière"
+      },
+      {
+        "sellerActorName": "Retailer West",
+        "buyerActorName": "Consumer West",
+        "volumeExchanged": 71245.5503440854,
+        "monetaryValue": 35622775172.042694,
+        "unitPrice": 500000,
+        "volumeUnit": "1000b",
+        "product": "Bouteille"
+      },
+      {
+        "sellerActorName": "Retailer West",
+        "buyerActorName": "Consumer West",
+        "volumeExchanged": 13249.8,
+        "monetaryValue": 6624900000,
+        "unitPrice": 500000,
+        "volumeUnit": "Ton",
+        "product": "Banane c"
+      },
+      {
+        "sellerActorName": "Retailer Periurban",
+        "buyerActorName": "Consumer West",
+        "volumeExchanged": 71242.2682999922,
+        "monetaryValue": 56993814639.99376,
+        "unitPrice": 800000,
+        "volumeUnit": "1000b",
+        "product": "Bouteille"
+      },
+      {
+        "sellerActorName": "Retailer Periurban",
+        "buyerActorName": "Consummer Periurban",
+        "volumeExchanged": 3834,
+        "monetaryValue": 3258900000,
+        "unitPrice": 850000,
+        "volumeUnit": "Ton",
+        "product": "Banane c"
+      },
+      {
+        "sellerActorName": "Retailer Periurban",
+        "buyerActorName": "Consummer Periurban",
+        "volumeExchanged": 76932,
+        "monetaryValue": 138477600000,
+        "unitPrice": 1800000,
+        "volumeUnit": "Ton",
+        "product": "Banane d"
+      },
+      {
+        "sellerActorName": "Collector North East",
+        "buyerActorName": "Retailer North East",
+        "volumeExchanged": 97591.6,
+        "monetaryValue": 39036640000,
+        "unitPrice": 400000,
+        "volumeUnit": "Ton",
+        "product": "Banane c"
+      },
+      {
+        "sellerActorName": "Collector West",
+        "buyerActorName": "Retailer West",
+        "volumeExchanged": 13249.8,
+        "monetaryValue": 5299920000,
+        "unitPrice": 400000,
+        "volumeUnit": "Ton",
+        "product": "Banane c"
+      },
+      {
+        "sellerActorName": "Small Producer Periurban",
+        "buyerActorName": "Collector Periurban",
+        "volumeExchanged": 26156.7,
+        "monetaryValue": 26156700000,
+        "unitPrice": 1000000,
+        "volumeUnit": "Ton",
+        "product": "Banane d"
+      },
+      {
+        "sellerActorName": "Average Producer Periurban",
+        "buyerActorName": "Collector Periurban",
+        "volumeExchanged": 3834,
+        "monetaryValue": 1917000000,
+        "unitPrice": 500000,
+        "volumeUnit": "Ton",
+        "product": "Banane c"
+      },
+      {
+        "sellerActorName": "Average Producer Periurban",
+        "buyerActorName": "Collector Periurban",
+        "volumeExchanged": 50775.3,
+        "monetaryValue": 50775300000,
+        "unitPrice": 1000000,
+        "volumeUnit": "Ton",
+        "product": "Banane d"
+      },
+      {
+        "sellerActorName": "Collector Periurban",
+        "buyerActorName": "Retailer Periurban",
+        "volumeExchanged": 3834,
+        "monetaryValue": 2492100000,
+        "unitPrice": 650000,
+        "volumeUnit": "Ton",
+        "product": "Banane c"
+      },
+      {
+        "sellerActorName": "Collector Periurban",
+        "buyerActorName": "Retailer Periurban",
+        "volumeExchanged": 76932,
+        "monetaryValue": 115398000000,
+        "unitPrice": 1500000,
+        "volumeUnit": "Ton",
+        "product": "Banane d"
+      }
+    ],
+    "addedValue": {
+      "landOwnersFees": 0,
+      "depreciation": 0,
+      "employeeWages": 17763.668833103744,
+      "financialInstitutionsInterests": 0,
+      "government": 25702.706393165823
+    },
+    "importExport": {
+      "import": [
+        {
+          "label": "Packaging material",
+          "importExport": "Import",
+          "amount": 1179
+        },
+        {
+          "label": "Building maintenance",
+          "importExport": "Import",
+          "amount": 58
+        },
+        {
+          "label": "Energy for transport",
+          "importExport": "Import",
+          "amount": 6549
+        }
+      ],
+      "export": [
+        {
+          "label": "Banana fruit (improved)",
+          "importExport": "Export",
+          "amount": 10800
+        }
+      ]
+    },
+    "farmToFinalPricesRatio": [
+      {
+        "farmPrice": 175,
+        "finalPrice": 400
+      },
+      {
+        "farmPrice": 500,
+        "finalPrice": 850
+      },
+      {
+        "farmPrice": 500,
+        "finalPrice": 800
+      },
+      {
+        "farmPrice": 200,
+        "finalPrice": 800
+      },
+      {
+        "farmPrice": 100,
+        "finalPrice": 400
+      }
+    ]
+  }
+}

@@ -60,8 +60,7 @@
       "prettyName": "Unknown",
       "color": "#808080",
       "textColor": "#808080",
-      "commodities": [
-      ]
+      "commodities": []
     }
   ],
   "countries": [
@@ -546,6 +545,13 @@
       "year": 2020,
       "country": "gambia",
       "product": "fisheries"
+    },
+    {
+      "id": "banana-burundi",
+      "title": "burundi Banana",
+      "year": 2017,
+      "country": "burundi",
+      "product": "banana"
     }
   ]
 }
