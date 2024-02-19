@@ -65,106 +65,10 @@
   ],
   "countries": [
     {
-      "id": "ethiopia",
-      "prettyName": "Ethiopia",
-      "continent": "Africa",
-      "iso": "et"
-    },
-    {
-      "id": "comoros",
-      "prettyName": "Comoros",
-      "continent": "Africa",
-      "iso": "km"
-    },
-    {
-      "id": "colombia",
-      "prettyName": "Colombia",
-      "continent": "America",
-      "iso": "co"
-    },
-    {
-      "id": "mali",
-      "prettyName": "Mali",
-      "continent": "Africa",
-      "iso": "ml"
-    },
-    {
-      "id": "burundi",
-      "prettyName": "Burundi",
-      "continent": "Africa",
-      "iso": "bi"
-    },
-    {
-      "id": "burkina-faso",
-      "prettyName": "Burkina Faso",
-      "continent": "Africa",
-      "iso": "bf"
-    },
-    {
-      "id": "honduras",
-      "prettyName": "Honduras",
-      "continent": "America",
-      "iso": "hn"
-    },
-    {
-      "id": "gambia",
-      "prettyName": "Gambia",
-      "continent": "Africa",
-      "iso": "gm"
-    },
-    {
-      "id": "nicaragua",
-      "prettyName": "Nicaragua",
-      "continent": "America",
-      "iso": "ni"
-    },
-    {
-      "id": "tanzania",
-      "prettyName": "Tanzania",
-      "continent": "Africa",
-      "iso": "tz"
-    },
-    {
-      "id": "ecuador",
-      "prettyName": "Ecuador",
-      "continent": "America",
-      "iso": "ec"
-    },
-    {
-      "id": "guinea-bissau",
-      "prettyName": "Guinea-Bissau",
-      "continent": "Africa",
-      "iso": "gw"
-    },
-    {
-      "id": "papua-new-guinea",
-      "prettyName": "Papua New Guinea",
-      "continent": "Asia - Pacific",
-      "iso": "pg"
-    },
-    {
-      "id": "sierra-leone",
-      "prettyName": "Sierra Leone",
-      "continent": "Africa",
-      "iso": "sl"
-    },
-    {
-      "id": "ghana",
-      "prettyName": "Ghana",
-      "continent": "Africa",
-      "iso": "gh"
-    },
-    {
       "id": "angola",
       "prettyName": "Angola",
       "continent": "Africa",
       "iso": "ao"
-    },
-    {
-      "id": "zambia",
-      "prettyName": "Zambia",
-      "continent": "Africa",
-      "iso": "zm"
     },
     {
       "id": "benin",
@@ -173,10 +77,28 @@
       "iso": "bj"
     },
     {
-      "id": "dominican-republic",
-      "prettyName": "Dominican Republic",
-      "continent": "America",
-      "iso": "do"
+      "id": "bostwana",
+      "prettyName": "Bostwana",
+      "continent": "Africa",
+      "iso": "bw"
+    },
+    {
+      "id": "burkina-faso",
+      "prettyName": "Burkina Faso",
+      "continent": "Africa",
+      "iso": "bf"
+    },
+    {
+      "id": "burundi",
+      "prettyName": "Burundi",
+      "continent": "Africa",
+      "iso": "bi"
+    },
+    {
+      "id": "cambodia",
+      "prettyName": "Cambodia",
+      "continent": "Asia - Pacific",
+      "iso": "kh"
     },
     {
       "id": "cameroon",
@@ -185,28 +107,88 @@
       "iso": "cm"
     },
     {
-      "id": "togo",
-      "prettyName": "Togo",
-      "continent": "Africa",
-      "iso": "tg"
+      "id": "colombia",
+      "prettyName": "Colombia",
+      "continent": "America",
+      "iso": "co"
     },
     {
-      "id": "sao-tome-e-principe",
-      "prettyName": "Sao Tome e Principe",
+      "id": "comoros",
+      "prettyName": "Comoros",
       "continent": "Africa",
-      "iso": "st"
+      "iso": "km"
     },
     {
-      "id": "swaziland",
-      "prettyName": "Swaziland",
-      "continent": "Africa",
-      "iso": "sz"
+      "id": "dominican-republic",
+      "prettyName": "Dominican Republic",
+      "continent": "America",
+      "iso": "do"
     },
     {
-      "id": "zimbabwe",
-      "prettyName": "Zimbabwe",
+      "id": "ecuador",
+      "prettyName": "Ecuador",
+      "continent": "America",
+      "iso": "ec"
+    },
+    {
+      "id": "ethiopia",
+      "prettyName": "Ethiopia",
       "continent": "Africa",
-      "iso": "zw"
+      "iso": "et"
+    },
+    {
+      "id": "gambia",
+      "prettyName": "Gambia",
+      "continent": "Africa",
+      "iso": "gm"
+    },
+    {
+      "id": "georgia",
+      "prettyName": "Georgia",
+      "continent": "Europe",
+      "iso": "ge"
+    },
+    {
+      "id": "ghana",
+      "prettyName": "Ghana",
+      "continent": "Africa",
+      "iso": "gh"
+    },
+    {
+      "id": "guinea-bissau",
+      "prettyName": "Guinea-Bissau",
+      "continent": "Africa",
+      "iso": "gw"
+    },
+    {
+      "id": "honduras",
+      "prettyName": "Honduras",
+      "continent": "America",
+      "iso": "hn"
+    },
+    {
+      "id": "ivory-coast",
+      "prettyName": "Ivory Coast",
+      "continent": "Africa",
+      "iso": "ci"
+    },
+    {
+      "id": "kenya",
+      "prettyName": "Kenya",
+      "continent": "Africa",
+      "iso": "ke"
+    },
+    {
+      "id": "mali",
+      "prettyName": "Mali",
+      "continent": "Africa",
+      "iso": "ml"
+    },
+    {
+      "id": "nicaragua",
+      "prettyName": "Nicaragua",
+      "continent": "America",
+      "iso": "ni"
     },
     {
       "id": "niger",
@@ -221,71 +203,68 @@
       "iso": "ng"
     },
     {
-      "id": "ivory-coast",
-      "prettyName": "Ivory Coast",
-      "continent": "Africa",
-      "iso": "ci"
-    },
-    {
-      "id": "georgia",
-      "prettyName": "Georgia",
-      "continent": "Europe",
-      "iso": "ge"
-    },
-    {
-      "id": "cambodia",
-      "prettyName": "Cambodia",
+      "id": "papua-new-guinea",
+      "prettyName": "Papua New Guinea",
       "continent": "Asia - Pacific",
-      "iso": "kh"
+      "iso": "pg"
     },
     {
-      "id": "kenya",
-      "prettyName": "Kenya",
+      "id": "sao-tome-e-principe",
+      "prettyName": "Sao Tome e Principe",
       "continent": "Africa",
-      "iso": "ke"
+      "iso": "st"
     },
     {
-      "id": "bostwana",
-      "prettyName": "Bostwana",
+      "id": "sierra-leone",
+      "prettyName": "Sierra Leone",
       "continent": "Africa",
-      "iso": "bw"
+      "iso": "sl"
+    },
+    {
+      "id": "swaziland",
+      "prettyName": "Swaziland",
+      "continent": "Africa",
+      "iso": "sz"
+    },
+    {
+      "id": "tanzania",
+      "prettyName": "Tanzania",
+      "continent": "Africa",
+      "iso": "tz"
+    },
+    {
+      "id": "togo",
+      "prettyName": "Togo",
+      "continent": "Africa",
+      "iso": "tg"
+    },
+    {
+      "id": "zambia",
+      "prettyName": "Zambia",
+      "continent": "Africa",
+      "iso": "zm"
+    },
+    {
+      "id": "zimbabwe",
+      "prettyName": "Zimbabwe",
+      "continent": "Africa",
+      "iso": "zw"
     }
   ],
   "studies": [
     {
-      "id": "cashew-mali",
-      "title": "Cashew",
-      "year": 2014,
-      "country": "mali",
-      "product": "cashew"
-    },
-    {
-      "id": "mango-burkina-faso",
-      "title": "Mango",
-      "year": 2016,
-      "country": "burkina-faso",
-      "product": "mango"
-    },
-    {
-      "id": "milk-burundi",
-      "title": "Milk",
-      "year": 2020,
-      "country": "burundi",
-      "product": "milk"
-    },
-    {
-      "id": "coffee-honduras",
+      "id": "coffee-angola",
       "title": "Coffee",
       "year": 2020,
-      "country": "honduras",
+      "country": "angola",
       "product": "coffee"
     },
     {
-      "id": "banana-burundi",
-      "title": "Banana",
+      "id": "pineapple-benin",
+      "title": "Pineapple",
       "year": 2020,
-      "country": "burundi",
-      "product": "banana"
+      "country": "benin",
+      "product": "pineapple"
     },
     {
       "id": "banana-bostwana",
@@ -295,25 +274,67 @@
       "product": "banana"
     },
     {
-      "id": "cocoa-nicaragua",
+      "id": "mango-burkina-faso",
+      "title": "Mango",
+      "year": 2016,
+      "country": "burkina-faso",
+      "product": "mango"
+    },
+    {
+      "id": "banana-burundi",
+      "title": "burundi Banana",
+      "year": 2017,
+      "country": "burundi",
+      "product": "banana"
+    },
+    {
+      "id": "milk-burundi",
+      "title": "Milk",
+      "year": 2020,
+      "country": "burundi",
+      "product": "milk"
+    },
+    {
+      "id": "aquaculture-cambodia",
+      "title": "Aquaculture",
+      "year": 2020,
+      "country": "cambodia",
+      "product": "aquaculture"
+    },
+    {
+      "id": "cocoa-cameroon",
       "title": "Cocoa",
       "year": 2020,
-      "country": "nicaragua",
+      "country": "cameroon",
       "product": "cocoa"
     },
     {
-      "id": "coffee-tanzania",
-      "title": "Coffee",
+      "id": "cotton-cameroon",
+      "title": "Cotton",
       "year": 2020,
-      "country": "tanzania",
-      "product": "coffee"
+      "country": "cameroon",
+      "product": "cotton"
     },
     {
-      "id": "beef-swaziland",
-      "title": "Beef",
+      "id": "cocoa-colombia",
+      "title": "Cocoa",
       "year": 2020,
-      "country": "swaziland",
-      "product": "beef"
+      "country": "colombia",
+      "product": "cocoa"
+    },
+    {
+      "id": "fisheries-comoros",
+      "title": "comoros fisheries",
+      "year": 2020,
+      "country": "comoros",
+      "product": "fisheries"
+    },
+    {
+      "id": "banana-dominican-republic",
+      "title": "Banana",
+      "year": 2020,
+      "country": "dominican-republic",
+      "product": "banana"
     },
     {
       "id": "cocoa-ecuador",
@@ -330,10 +351,129 @@
       "product": "coffee"
     },
     {
+      "id": "cotton-ethiopia",
+      "title": "ethiopia Cotton",
+      "year": 2020,
+      "country": "ethiopia",
+      "product": "cotton"
+    },
+    {
+      "id": "fisheries-gambia",
+      "title": "gambia Fisheries",
+      "year": 2020,
+      "country": "gambia",
+      "product": "fisheries"
+    },
+    {
+      "id": "aquaculture-georgia",
+      "title": "Aquaculture",
+      "year": 2020,
+      "country": "georgia",
+      "product": "aquaculture"
+    },
+    {
+      "id": "groundnut-ghana",
+      "title": "Groundnut",
+      "year": 2020,
+      "country": "ghana",
+      "product": "groundnut"
+    },
+    {
+      "id": "sorghum-ghana",
+      "title": "ghana Sorghum",
+      "year": 2020,
+      "country": "ghana",
+      "product": "sorghum"
+    },
+    {
+      "id": "coffee-honduras",
+      "title": "Coffee",
+      "year": 2020,
+      "country": "honduras",
+      "product": "coffee"
+    },
+    {
+      "id": "cashew-ivory-coast",
+      "title": "Cashew",
+      "year": 2020,
+      "country": "ivory-coast",
+      "product": "cashew"
+    },
+    {
+      "id": "cassava-ivory-coast",
+      "title": "Cassava",
+      "year": 2020,
+      "country": "ivory-coast",
+      "product": "cassava"
+    },
+    {
+      "id": "french-beans-kenya",
+      "title": "French Beans",
+      "year": 2020,
+      "country": "kenya",
+      "product": "french beans"
+    },
+    {
+      "id": "cashew-mali",
+      "title": "Cashew",
+      "year": 2014,
+      "country": "mali",
+      "product": "cashew"
+    },
+    {
+      "id": "inland-fisheries-mali",
+      "title": "mali inland fisheries",
+      "year": 2020,
+      "country": "mali",
+      "product": "inland fisheries"
+    },
+    {
+      "id": "cocoa-nicaragua",
+      "title": "Cocoa",
+      "year": 2020,
+      "country": "nicaragua",
+      "product": "cocoa"
+    },
+    {
+      "id": "cowpea-niger",
+      "title": "niger cowpea",
+      "year": 2020,
+      "country": "niger",
+      "product": "cowpea"
+    },
+    {
+      "id": "groundnut-niger",
+      "title": "Groundnut",
+      "year": 2020,
+      "country": "niger",
+      "product": "groundnut"
+    },
+    {
+      "id": "maize-nigeria",
+      "title": "Maize",
+      "year": 2020,
+      "country": "nigeria",
+      "product": "maize"
+    },
+    {
       "id": "cocoa-papua-new-guinea",
       "title": "Cocoa",
       "year": 2020,
       "country": "papua-new-guinea",
+      "product": "cocoa"
+    },
+    {
+      "id": "vanilla-papua-new-guinea",
+      "title": "Vanilla",
+      "year": 2020,
+      "country": "papua-new-guinea",
+      "product": "vanilla"
+    },
+    {
+      "id": "cocoa-sao-tome-e-principe",
+      "title": "Cocoa",
+      "year": 2020,
+      "country": "sao-tome-e-principe",
       "product": "cocoa"
     },
     {
@@ -344,20 +484,6 @@
       "product": "cashew"
     },
     {
-      "id": "vanilla-papua-new-guinea",
-      "title": "Vanilla",
-      "year": 2020,
-      "country": "papua-new-guinea",
-      "product": "vanilla"
-    },
-    {
-      "id": "groundnut-ghana",
-      "title": "Groundnut",
-      "year": 2020,
-      "country": "ghana",
-      "product": "groundnut"
-    },
-    {
       "id": "oil-palm-sierra-leone",
       "title": "Oil Palm",
       "year": 2020,
@@ -365,151 +491,11 @@
       "product": "oil palm"
     },
     {
-      "id": "coffee-angola",
-      "title": "Coffee",
-      "year": 2020,
-      "country": "angola",
-      "product": "coffee"
-    },
-    {
-      "id": "egg-zambia",
-      "title": "Egg",
-      "year": 2020,
-      "country": "zambia",
-      "product": "egg"
-    },
-    {
-      "id": "pineapple-benin",
-      "title": "Pineapple",
-      "year": 2020,
-      "country": "benin",
-      "product": "pineapple"
-    },
-    {
-      "id": "banana-dominican-republic",
-      "title": "Banana",
-      "year": 2020,
-      "country": "dominican-republic",
-      "product": "banana"
-    },
-    {
-      "id": "cocoa-cameroon",
-      "title": "Cocoa",
-      "year": 2020,
-      "country": "cameroon",
-      "product": "cocoa"
-    },
-    {
-      "id": "pineapple-togo",
-      "title": "Pineapple",
-      "year": 2020,
-      "country": "togo",
-      "product": "pineapple"
-    },
-    {
-      "id": "cocoa-sao-tome-e-principe",
-      "title": "Cocoa",
-      "year": 2020,
-      "country": "sao-tome-e-principe",
-      "product": "cocoa"
-    },
-    {
-      "id": "cotton-cameroon",
-      "title": "Cotton",
-      "year": 2020,
-      "country": "cameroon",
-      "product": "cotton"
-    },
-    {
-      "id": "beef-zimbabwe",
+      "id": "beef-swaziland",
       "title": "Beef",
       "year": 2020,
-      "country": "zimbabwe",
+      "country": "swaziland",
       "product": "beef"
-    },
-    {
-      "id": "maize-nigeria",
-      "title": "Maize",
-      "year": 2020,
-      "country": "nigeria",
-      "product": "maize"
-    },
-    {
-      "id": "maize-zambia",
-      "title": "Maize",
-      "year": 2020,
-      "country": "zambia",
-      "product": "maize"
-    },
-    {
-      "id": "cassava-ivory-coast",
-      "title": "Cassava",
-      "year": 2020,
-      "country": "ivory-coast",
-      "product": "cassava"
-    },
-    {
-      "id": "aquaculture-tilapia-zambia",
-      "title": "Aquaculture (tilapia)",
-      "year": 2020,
-      "country": "zambia",
-      "product": "aquaculture tilapia"
-    },
-    {
-      "id": "aquaculture-georgia",
-      "title": "Aquaculture",
-      "year": 2020,
-      "country": "georgia",
-      "product": "aquaculture"
-    },
-    {
-      "id": "aquaculture-cambodia",
-      "title": "Aquaculture",
-      "year": 2020,
-      "country": "cambodia",
-      "product": "aquaculture"
-    },
-    {
-      "id": "french-beans-kenya",
-      "title": "French Beans",
-      "year": 2020,
-      "country": "kenya",
-      "product": "french beans"
-    },
-    {
-      "id": "cashew-ivory-coast",
-      "title": "Cashew",
-      "year": 2020,
-      "country": "ivory-coast",
-      "product": "cashew"
-    },
-    {
-      "id": "cocoa-colombia",
-      "title": "Cocoa",
-      "year": 2020,
-      "country": "colombia",
-      "product": "cocoa"
-    },
-    {
-      "id": "groundnut-niger",
-      "title": "Groundnut",
-      "year": 2020,
-      "country": "niger",
-      "product": "groundnut"
-    },
-    {
-      "id": "cotton-ethiopia",
-      "title": "ethiopia Cotton",
-      "year": 2020,
-      "country": "ethiopia",
-      "product": "cotton"
-    },
-    {
-      "id": "inland-fisheries-mali",
-      "title": "mali inland fisheries",
-      "year": 2020,
-      "country": "mali",
-      "product": "inland fisheries"
     },
     {
       "id": "coastal-fisheries-tanzania",
@@ -519,39 +505,46 @@
       "product": "coastal fisheries"
     },
     {
-      "id": "cowpea-niger",
-      "title": "niger cowpea",
+      "id": "coffee-tanzania",
+      "title": "Coffee",
       "year": 2020,
-      "country": "niger",
-      "product": "cowpea"
+      "country": "tanzania",
+      "product": "coffee"
     },
     {
-      "id": "fisheries-comoros",
-      "title": "comoros fisheries",
+      "id": "pineapple-togo",
+      "title": "Pineapple",
       "year": 2020,
-      "country": "comoros",
-      "product": "fisheries"
+      "country": "togo",
+      "product": "pineapple"
     },
     {
-      "id": "sorghum-ghana",
-      "title": "ghana Sorghum",
+      "id": "aquaculture-tilapia-zambia",
+      "title": "Aquaculture (tilapia)",
       "year": 2020,
-      "country": "ghana",
-      "product": "sorghum"
+      "country": "zambia",
+      "product": "aquaculture tilapia"
     },
     {
-      "id": "fisheries-gambia",
-      "title": "gambia Fisheries",
+      "id": "egg-zambia",
+      "title": "Egg",
       "year": 2020,
-      "country": "gambia",
-      "product": "fisheries"
+      "country": "zambia",
+      "product": "egg"
     },
     {
-      "id": "banana-burundi",
-      "title": "burundi Banana",
-      "year": 2017,
-      "country": "burundi",
-      "product": "banana"
+      "id": "maize-zambia",
+      "title": "Maize",
+      "year": 2020,
+      "country": "zambia",
+      "product": "maize"
+    },
+    {
+      "id": "beef-zimbabwe",
+      "title": "Beef",
+      "year": 2020,
+      "country": "zimbabwe",
+      "product": "beef"
     }
   ]
 }

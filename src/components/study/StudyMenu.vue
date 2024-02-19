@@ -21,8 +21,8 @@
                 @change="$emit('update:currency', $event.target.value)"
             >
                 <option value="LOCAL">{{ localCurrency }} ({{  getCurrencySymbol(localCurrency) }})</option>
-                <option v-if="localCurrency !== 'USD'" value="USD">Us Dollar (&dollar;)</option>
-                <option v-if="localCurrency !== 'EUR'" value="EUR">Euro (&euro;)</option>
+                <option v-if="localCurrency !== 'USD' && isCurrencySupported(localCurrency)" value="USD">Us Dollar (&dollar;)</option>
+                <option v-if="localCurrency !== 'EUR' && isCurrencySupported(localCurrency)" value="EUR">Euro (&euro;)</option>
             </select>
         </div>
     </nav>
@@ -30,7 +30,7 @@
 
 <script setup>
     import { ref} from 'vue'
-    import { getCurrencySymbol } from '@utils/currency.js'
+    import { getCurrencySymbol, getRate } from '@utils/currency.js'
     const props = defineProps({
         studyId: String,
         localCurrency : String,

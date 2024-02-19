@@ -1,3 +1,4 @@
+// Récupérer les taux de change sur https://lebasic.nohost.me/api/taux_de_change/
 const CHANGE_RATES = {
   "BIF": {
     2018: 1782.876875,
@@ -58,12 +59,12 @@ const getRate = (currency, year) => {
   const usdRate = CHANGE_RATES[currency]
   if (!usdRate) {
     console.warn(`${currency}/USD rate missing`)
-    return 1.0
+    return 0
   }
   const usdRateYear = usdRate[year]
   if (!usdRateYear) {
     console.warn(`${currency}/USD rate missing year ${year}`)
-    return 1.0
+    return 0
   }
   return usdRateYear
 }
