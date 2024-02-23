@@ -1,7 +1,8 @@
-import { setImportErrors, parseActorTypes } from '@utils/import/generic.js'
+import { ErrorLevels, setImportErrors, parseActorTypes, getSheetNameContent } from '@utils/import/generic.js'
 
 const parseValueChainsDescriptions = (json) => {
-  var sheetAsJson = json["Value chains description"]
+  var sheetname = "Value chains description"
+  var sheetAsJson = json[sheetname]
   const res = sheetAsJson.map((valuechain) => ({
     name: valuechain['Value chain name'],
     volume: valuechain['annual volume'],
@@ -10,7 +11,10 @@ const parseValueChainsDescriptions = (json) => {
   }))
   for (const r of res) {
     if (!r.volume) {
-      setImportErrors(`Volume missing for value chain <b>${r.name}</b> in sheet <b>Value chains description</b>`)
+      setImportErrors(
+        sheetname,
+        ErrorLevels.BreaksALot,
+        `Volume missing for value chain <b>${r.name}</b> in sheet <b>${sheetname}</b>`)
     }
   }
   return res
@@ -18,12 +22,18 @@ const parseValueChainsDescriptions = (json) => {
 
 const parseActorsAndChainsMatrix = (json, valueChains) => {
   var sheetname = "Actors and Chains matrix"
-  var sheetAsJson = json[sheetname]
+  var sheetAsJson = getSheetNameContent(json,sheetname)
+  if (sheetAsJson == null) {
+    return
+  }
   for (var item of sheetAsJson) {
     var valueChainName = item["Sub-chain"]
     var valueChain = valueChains.find(e => e.name == valueChainName)
     if (!valueChain) {
-      setImportErrors(`Found an unknown chain value named ${valueChainName} in sheet ${sheetname}`)
+      setImportErrors(
+        sheetname,
+        ErrorLevels.MayBreakNothing,
+        `Found an unknown chain value named ${valueChainName} in sheet ${sheetname}`)
     }
     valueChain["actors"] = {...item}
     delete valueChain["actors"]["Sub-chain"]
@@ -47,7 +57,11 @@ const parseImpactsFirstRow = (row, valueChains, sheetname) => {
       delete row[impactsColumnNamesMapping[key]]
     }
     else {
-      setImportErrors(`The column ${impactsColumnNamesMapping[key]} is missing in sheet ${sheetname}. First cell of this column must contains '${impactsColumnNamesMapping[key]}' only`)
+      setImportErrors(
+        sheetname,
+        ErrorLevels.BreaksALot,
+        `The column ${impactsColumnNamesMapping[key]} is missing in sheet ${sheetname}.
+        First cell of this column must contains '${impactsColumnNamesMapping[key]}' only`)
     }
   }
   // Checking given valuechain and actors name are known, and building the dictionnary
@@ -56,14 +70,20 @@ const parseImpactsFirstRow = (row, valueChains, sheetname) => {
     var regex_result = regex.exec(props);
     var matchingValuechains = valueChains.filter(valuechain => valuechain.name == regex_result[1])
     if (matchingValuechains.length != 1) {
-      setImportErrors(`The chain value defined on first line of sheet ${sheetname}, named |${regex_result[1]}| doesn't match with previous value chain name ${valueChains.map(valuechain => valuechain.name)}`)
+      setImportErrors(
+        sheetname,
+        ErrorLevels.BreaksALot,
+        `The chain value defined on first line of sheet ${sheetname}, named |${regex_result[1]}| doesn't match with previous value chain name ${valueChains.map(valuechain => valuechain.name)}`)
       continue
     }
     if (row[props] in matchingValuechains[0].actors) {
       valuechain_and_actors_mapping[props] = { valuechain_name: matchingValuechains[0].name, actor_name: row[props]}
     }
     else if (row[props] != totalValueLabel) {
-      setImportErrors(`The actor named |${row[props]}| on second line of sheet ${sheetname}, doesn't match with previous actors name for the value chain ${matchingValuechains[0].name}`)
+      setImportErrors(
+        sheetname,
+        ErrorLevels.BreaksALot,
+        `The actor named |${row[props]}| on second line of sheet ${sheetname}, doesn't match with previous actors name for the value chain ${matchingValuechains[0].name}`)
     }
   }
   return valuechain_and_actors_mapping
@@ -73,11 +93,8 @@ const parseImpactsFirstRow = (row, valueChains, sheetname) => {
 const parseImpacts = (json, valueChains) => {
   var impacts = []
   var sheetname = "Impacts"
-  if (sheetname in json) {
-    var sheetAsJson = json[sheetname]
-  }
-  else {
-    setImportErrors(`A spreadsheet named '${sheetname}' is missing from the uploaded file.`)
+  var sheetAsJson = getSheetNameContent(json, sheetname)
+  if (sheetAsJson == null) {
     return null
   }
   console.log("plan de travail pour les impacts", sheetAsJson)
@@ -100,7 +117,10 @@ const parseImpacts = (json, valueChains) => {
         delete row[impactsColumnNamesMapping[key]]
       }
       else {
-        setImportErrors(`The column ${impactsColumnNamesMapping[key]} in sheet ${sheetname} is not filled at line ${rowCount}`)
+        setImportErrors(
+          sheetname,
+          ErrorLevels.BreaksDataviz,
+          `The column ${impactsColumnNamesMapping[key]} in sheet ${sheetname} is not filled at line ${rowCount}`)
       }
     }
     newImpact["values"] = []

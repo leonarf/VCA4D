@@ -1,4 +1,4 @@
-import { setImportErrors, getImportErrors, parseActorTypes, doColumnExist } from '@/utils/import/generic.js'
+import { ErrorLevels, setImportErrors, getImportErrors, parseActorTypes, doColumnExist } from '@/utils/import/generic.js'
 import { getTotalAddedValue } from '../economics'
 
 export const ECO_SHEET_NAMES = {
@@ -86,7 +86,11 @@ export const getValueChainProperty = (json, propertyName) => {
   if (!Object.keys(json).includes(sheetName)) {
       sheetName = ECO_SHEET_NAMES.Home
       if (!Object.keys(json).includes(sheetName)) {
-          setImportErrors(`The excel spreadsheet is missing a sheet named 'Study id' defining things such as country, commodity, currency.`)
+          setImportErrors(
+            'Study id',
+            ErrorLevels.BreaksALot,
+            `Spreadcheet is missing. It should define things such as country, commodity, currency.`,
+          )
           return null
       }
   }
@@ -94,7 +98,10 @@ export const getValueChainProperty = (json, propertyName) => {
   if (elementFound) {
       return elementFound["Value"]
   }
-  setImportErrors(`Couldn't find '${propertyName}' in excel's sheet '${sheetName}'`)
+  setImportErrors(
+    sheetName,
+    ErrorLevels.BreaksFunctionalities,
+    `Couldn't find '${propertyName}' in excel's sheet '${sheetName}'`)
   return null
 }
 
@@ -109,7 +116,10 @@ export const parseEconomicsJson = (json) => {
   let actors = parseActorTypes(json)
   for (const actor of actors) {
     if (!actor.stage) {
-      setImportErrors(`Actor <b>${actor.name}</b> should have a stage defined in worksheet ${ECO_SHEET_NAMES.ActorTypes}`)
+      setImportErrors(
+        ECO_SHEET_NAMES.ActorTypes,
+        ErrorLevels.BreaksALot,
+        `Actor <b>${actor.name}</b> should have a stage defined in worksheet ${ECO_SHEET_NAMES.ActorTypes}`)
     }
   }
   const flows = json[ECO_SHEET_NAMES.Flows].map(flow => {
@@ -122,7 +132,10 @@ export const parseEconomicsJson = (json) => {
 
   for (var key in FLOWS_COLUMNS) {
     if (flows.filter(flow => flow[key] != undefined).length == 0) {
-      setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Flows}', column '${FLOWS_COLUMNS[key]}' is missing or empty`)
+      setImportErrors(
+        ECO_SHEET_NAMES.Flows,
+        ErrorLevels.BreaksDataviz,
+        `In spreadsheet '${ECO_SHEET_NAMES.Flows}', column '${FLOWS_COLUMNS[key]}' is missing or empty`)
     }
   }
 
@@ -167,7 +180,10 @@ export const parseEconomicsJson = (json) => {
     for (var key in VALUE_ADDED_COLUMNS) {
       var columnName = VALUE_ADDED_COLUMNS[key]
       if (!doColumnExist(json[sheetname], columnName)) {
-        setImportErrors(`In spreadsheet '${sheetname}', missing following column => ${columnName}`)
+        setImportErrors(
+          sheetname,
+          ErrorLevels.BreaksDataviz,
+          `In spreadsheet '${sheetname}', missing following column => ${columnName}`)
       }
     }
     const addedValueItems = json[sheetname].map(addedValue => ({
@@ -197,7 +213,10 @@ export const parseEconomicsJson = (json) => {
         addedValue[key] = filteredItems[0].value
       }
       else {
-        setImportErrors(`In spreadsheet '${sheetname}', couldn't find the following '${VALUE_ADDED_COLUMNS.ReceiverName}' => ${specialsAddedValueKeys[key]}`)
+        setImportErrors(
+          sheetname,
+          ErrorLevels.BreaksDataviz,
+          `In spreadsheet '${sheetname}', couldn't find the following '${VALUE_ADDED_COLUMNS.ReceiverName}' => ${specialsAddedValueKeys[key]}`)
       }
     }
 
@@ -206,7 +225,8 @@ export const parseEconomicsJson = (json) => {
   
     var missingColumns = new Set()
     var foundColumns = new Set()
-    json[ECO_SHEET_NAMES.Employment].forEach(employment => {
+    sheetname = ECO_SHEET_NAMES.Employment
+    json[sheetname].forEach(employment => {
       [actorTypeColumn, ...Object.values(EmploymentColumns)].forEach(columnName => {
         if (columnName in employment) {
           foundColumns.add(columnName)
@@ -217,7 +237,7 @@ export const parseEconomicsJson = (json) => {
     })
 
 
-    const employments = json[ECO_SHEET_NAMES.Employment].map(employment => {
+    const employments = json[sheetname].map(employment => {
 
       const actorName = employment[actorTypeColumn]
       const tempMale = parseFloat(employment[EmploymentColumns.TempMale])
@@ -254,7 +274,10 @@ export const parseEconomicsJson = (json) => {
     })
     const headerColumnMissing = [...missingColumns].filter(x => !foundColumns.has(x));
     if (headerColumnMissing.length > 0) {
-      setImportErrors(`Missing columns headers [${headerColumnMissing.join(', ')}] on first row of excel spreadsheet named 'Employment', or these columns are empty`)
+      setImportErrors(
+        sheetname,
+        ErrorLevels.BreaksDataviz,
+        `Missing columns headers [${headerColumnMissing.join(', ')}] on first row of excel spreadsheet named '${sheetname}', or these columns are empty`)
     }
   
     actors = actors.map(actor => {
@@ -299,20 +322,30 @@ export const parseEconomicsJson = (json) => {
       return (stage1?.index || 0) - (stage2?.index || 0)
     })
   
-    const importExportItems = json[ECO_SHEET_NAMES.ImportExport].map(importExportItem => ({
+    sheetname = ECO_SHEET_NAMES.ImportExport
+    const importExportItems = json[sheetname].map(importExportItem => ({
           label: importExportItem[IMPORT_EXPORT_COLUMNS.Goods],
           importExport: importExportItem[IMPORT_EXPORT_COLUMNS.ImportOrExport],
           amount: importExportItem[IMPORT_EXPORT_COLUMNS.Value],
       })
     )
     if (importExportItems.every(item => {return item.label == undefined})) {
-      setImportErrors(`Column '${IMPORT_EXPORT_COLUMNS.Goods}' seems to be missing from excel worksheet '${ECO_SHEET_NAMES.ImportExport}'`)
+      setImportErrors(
+        sheetname,
+        ErrorLevels.BreaksDataviz,
+        `Column '${IMPORT_EXPORT_COLUMNS.Goods}' seems to be missing from excel worksheet '${sheetname}'`)
     }
     if (importExportItems.every(item => {return item.importExport == undefined})) {
-      setImportErrors(`Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' seems to be missing from excel worksheet '${ECO_SHEET_NAMES.ImportExport}'`)
+      setImportErrors(
+        sheetname,
+        ErrorLevels.BreaksDataviz,
+        `Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' seems to be missing from excel worksheet '${sheetname}'`)
     }
     if (importExportItems.every(item => {return item.amount == undefined})) {
-      setImportErrors(`Column '${IMPORT_EXPORT_COLUMNS.Value}' seems to be missing from excel worksheet '${ECO_SHEET_NAMES.ImportExport}'`)
+      setImportErrors(
+        sheetname,
+        ErrorLevels.BreaksDataviz,
+        `Column '${IMPORT_EXPORT_COLUMNS.Value}' seems to be missing from excel worksheet '${sheetname}'`)
     }
 
     var importExport = {
@@ -330,7 +363,11 @@ export const parseEconomicsJson = (json) => {
     }
   
     if (importExportItems.length > 0 && importExport.import.length == 0 && importExport.import.length == 0) {
-      setImportErrors(`Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' of excel worksheet '${ECO_SHEET_NAMES.ImportExport}' seems to be wrongly filled. It should contains one of '${acceptableImportKeyWord}' for import or one of '${acceptableExportKeyWord}' for export`)
+      setImportErrors(
+        sheetname,
+        ErrorLevels.BreaksDataviz,
+        `Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' of excel worksheet '${sheetname}' seems to be wrongly filled.
+        It should contains one of '${acceptableImportKeyWord}' for import or one of '${acceptableExportKeyWord}' for export`)
     }
   
     const farmToFinalPricesRatio = json[ECO_SHEET_NAMES.FarmGate].map(priceItem => ({
@@ -362,7 +399,6 @@ export const parseEconomicsJson = (json) => {
   }
 
   export const getErrors = (study) => {
-    console.log("study", study)
     let errors = getImportErrors()
   
     for (const property of [

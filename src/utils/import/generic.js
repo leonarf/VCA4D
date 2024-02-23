@@ -6,16 +6,37 @@ export const clearImportErrors = () => {
   ImportErrors = []
 }
 
-export const setImportErrors = (message, level = "error") => {
+export const ErrorLevels = Object.freeze({
+  BreaksALot: 'BreaksALot',
+  BreaksDataviz: 'BreaksDataviz',
+  BreaksFunctionalities: 'BreaksFunctionalities',
+  BreaksInformations: 'BreaksInformations',
+  MayBreakNothing: 'MayBreakNothing'
+})
+
+export const setImportErrors = (spreadsheet, level, message) => {
   console.log("Following error during import :", message)
   ImportErrors.push({
     level: level,
+    spreadsheet: spreadsheet,
     message: message
   })
 }
 
 export const getImportErrors = () => {
   return ImportErrors
+}
+
+export const getSheetNameContent = (json, sheetname) => {
+  if (!Object.keys(json).includes(sheetname)) {
+    setImportErrors(
+      sheetname,
+      ErrorLevels.BreaksALot,
+      `Sheet '${sheetname}' is missing.`
+    )
+    return null
+  }
+  return json[sheetname]
 }
 
 

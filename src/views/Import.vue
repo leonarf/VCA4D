@@ -113,7 +113,7 @@
                 </ul>
 
                 <div class="my-4">
-                <h2>Add study to repo</h2>
+                    <h2>Add study to repo</h2>
                     <p>Step 1 : download both following files</p>
                     <h4 class="font-bold">{{ `Replace data file and add study file in /data/ ` }}</h4>
                     <div class="flex flex-row mb-2 gap-x-2">
@@ -128,6 +128,7 @@
                     <img :src="upload_files_screenshot" alt="github screenshot">
                     <p>Step 5 : Upload both previously downloaded files, and click on "Commit changes"</p>
                     <img :src="commit_creation_screenshot" alt="github screenshot">
+                    <p>Step optional : rename your Excel file to {{ `${studyFileName}.ods` }} before saving it into github</p>
                 </div>
             </div>
         </div>
@@ -143,7 +144,7 @@ import jsonData from '@data/data.json'
 import { parseSustainabilityWorksheet } from '@utils/import/social.js'
 import { parseEconomicsJson, getErrors, getValueChainProperty } from '@utils/import/eco.js'
 import { parseEnvironmentJson } from '@utils/import/environment.js'
-import { setImportErrors, clearImportErrors, getImportErrors } from '@utils/import/generic.js'
+import { ErrorLevels, setImportErrors, clearImportErrors, getImportErrors } from '@utils/import/generic.js'
 import { HOME_LABELS } from '@utils/import/eco'
 import { isValidCurrency, isCurrencySupported } from '@utils/currency'
 import upload_files_screenshot from '@images/tuto_upload/upload_files_on_github.png'
@@ -232,7 +233,10 @@ const typeOfFile = computed(() => {
     if (excelData.value[sheetsNameForEconomicData[0]]) {
         return TypesOfFile.Economics
     }
-    setImportErrors(`The excel spreadsheet is missing a sheet named '${sheetNameForSustainabilityData}', '${sheetsNameForEnvironmentalData[0]}' or '${sheetsNameForEconomicData[0]}' depending of the excel type, ${Object.keys(TypesOfFile)}`)
+    setImportErrors(
+        sheetNameForSustainabilityData,
+        ErrorLevels.BreaksALot,
+        `Missing sheet. At least one of the following should be in the file: '${sheetNameForSustainabilityData}', '${sheetsNameForEnvironmentalData[0]}' or '${sheetsNameForEconomicData[0]}' depending of the excel type, ${Object.keys(TypesOfFile)}`)
     return null
 })
 
@@ -274,7 +278,10 @@ const studyProperties = computed(() => {
     const commodity = getValueChainProperty(excelData.value, HOME_LABELS.Commodity)
 
     if (!knownProducts.value.includes(slugify(commodity))) {
-        setImportErrors(`Commodity <b>${slugify(commodity)}</b> is not recognized.`)
+        setImportErrors(
+            sheetNameForSustainabilityData,
+            ErrorLevels.BreaksALot,
+            `Commodity <b>${slugify(commodity)}</b> is not recognized.`)
     }
 
     var result = {
@@ -301,7 +308,10 @@ const studyProperties = computed(() => {
                 currencyRatio = getValueChainProperty(excelData.value, HOME_LABELS.RatioCcy)
             }
             else {
-                setImportErrors(`Either currencies defined by '${HOME_LABELS.LocalCcy}' or '${HOME_LABELS.TargetCcy}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`)
+                setImportErrors(
+                    sheetNameForSustainabilityData,
+                    ErrorLevels.BreaksFunctionalities,
+                    `Either currencies defined by '${HOME_LABELS.LocalCcy}' or '${HOME_LABELS.TargetCcy}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`)
             }
         }
 
@@ -434,7 +444,7 @@ const studyFileName = computed(() => {
     else if (typeOfFile.value == TypesOfFile.Sustainability) {
         suffix = "social"
     }
-    return `${studyProperties.value.id}-${suffix}.json`
+    return `${studyProperties.value.id}-${suffix}`
 })
 
 const downloadFile = (data, fileName) => {
@@ -450,7 +460,7 @@ const downloadFile = (data, fileName) => {
 
 }
 const downloadStudy = () => {
-    downloadFile(jsonFile.value, studyFileName.value)
+    downloadFile(jsonFile.value, `${studyFileName.value}.json`)
 }
 
 const downloadDataJson = () => {
