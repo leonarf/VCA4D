@@ -1,31 +1,30 @@
 <template >
-    <table class="w-full md:w-1/3 text-center text-sm font-light ml-4 lg:ml-36">
-          <thead
-            class="border-b bg-[#E4E4E4] font-medium text-[#303030] ">
-            <tr>
-              <th scope="col" class=" px-3 py-2">Case</th>
-              <th scope="col" class=" px-3 py-2">Farm gate price</th>
-              <th scope="col" class=" px-3 py-2">Final price</th>
-              <th scope="col" class=" px-3 py-2">Ratio</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b bg-[#F2F2F2]" v-for="item in data" :key="item.label">
-              <td class="whitespace-nowrap  px-3 py-2 font-medium">{{ item.label}}</td>
-              <td class="whitespace-nowrap  px-3 py-2">{{ item.farm}} per kg</td>
-              <td class="whitespace-nowrap  px-3 py-2">{{ item.final}} per kg</td>
-              <td class="whitespace-nowrap  px-3 py-2">{{ formatPercent(item.ratio) }}</td>
-            </tr>
-          </tbody>
-        </table>
+  <div>
+    <TableauDeDonnées
+            :données="donnéesPourLeTableau"
+          />
+  </div>
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
+import TableauDeDonnées from "@components/charts/TableauDeDonnées.vue";
 import { formatPercent } from '@utils/format.js'
 const props = defineProps({
     data: Array,
 })
 
+const donnéesPourLeTableau = computed(() => {
+  return props.data.map(item => {
+    return {
+      "Case": item.label,
+      "Farm gate price": `${item.farm} per kg`,
+      "Final price": `${item.final} per kg`,
+      "Ratio": formatPercent(item.ratio),
+    }
+  })
+})
 </script>
 
 <style>
