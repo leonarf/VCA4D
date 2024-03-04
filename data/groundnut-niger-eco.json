@@ -1,0 +1,840 @@
+{
+  "id": "groundnut-niger",
+  "country": "niger",
+  "commodity": "groundnut",
+  "year": 2022,
+  "localCurrency": "MCFA",
+  "targetCurrency": "XOF",
+  "currencyRatio": 1000000,
+  "type": "eco",
+  "ecoData": {
+    "macroData": {
+      "giniIndex": 0.46,
+      "rateOfIntegration": 0.774,
+      "publicFundsBalance": 0.003,
+      "valueAddedShareNationalGdp": 0.031,
+      "valueAddedShareAgriculturalGdp": 0.08900000000000001,
+      "domesticResourceCostRatio": 0.45,
+      "nominalProtectionCoefficient": 1.04
+    },
+    "stages": [
+      {
+        "name": "Producers",
+        "description": "Groundnit is mainly produced by small and medium size farme while large producers remain marginal.",
+        "index": 0
+      },
+      {
+        "name": "Collectors",
+        "description": "Groundnut is collected small collectors",
+        "index": 1
+      },
+      {
+        "name": "Processors",
+        "description": "Goundnut is mainly processed in oil, food and feed by small scale independant processors or processors grouped in cooperatives. Agro-processors based in peri-urban and rural areas process both their own production and additional voumes purchased",
+        "index": 2
+      },
+      {
+        "name": "Wholesalers",
+        "description": "Large wholesaler play a critical role in groundnut storage, export and import groudnut in the region according to the seasonality. Half-wholesaler are in charge of supplying urban market",
+        "index": 3
+      },
+      {
+        "name": "Retailers",
+        "description": "Groudnut and processed products are retailed in urban market to consumers",
+        "index": 4
+      },
+      {
+        "name": "End use",
+        "description": "Groundnut is self cnsusummed, suply on the local and urban market, and exported on the regional market",
+        "index": 5
+      }
+    ],
+    "actors": [
+      {
+        "name": "Small farm",
+        "stage": "Producers",
+        "id": 105,
+        "numberOfActors": 471428.5861472699,
+        "directAddedValue": 57495.32361074636,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 31066.62850720811,
+        "totalCosts": 80620.4315407275,
+        "receivedAddedValue": 31066.62850720811,
+        "employment": {
+          "tempMale": 12913043.18963185,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 12913043.18963185,
+          "totalFemale": 0,
+          "totalTemp": 12913043.18963185,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 12913043.18963185
+        }
+      },
+      {
+        "name": "Medium farm",
+        "stage": "Producers",
+        "id": 107,
+        "numberOfActors": 347826.0838660298,
+        "directAddedValue": 64542.27875552591,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 15252.442092448564,
+        "totalCosts": 142965.11601810175,
+        "receivedAddedValue": 15252.442092448564,
+        "employment": {
+          "tempMale": 23186950.94085845,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 23186950.94085845,
+          "totalFemale": 0,
+          "totalTemp": 23186950.94085845,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 23186950.94085845
+        }
+      },
+      {
+        "name": "Large farm",
+        "stage": "Producers",
+        "id": 108,
+        "numberOfActors": 65296.000245161886,
+        "directAddedValue": 19045.102543439556,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 10799.105084304136,
+        "totalCosts": 60739.73942182396,
+        "receivedAddedValue": 10799.105084304136,
+        "employment": {
+          "tempMale": 3474891.12830101,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 3474891.12830101,
+          "totalFemale": 0,
+          "totalTemp": 3474891.12830101,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 3474891.12830101
+        }
+      },
+      {
+        "name": "Collector",
+        "stage": "Collectors",
+        "id": 109,
+        "numberOfActors": 3176.25,
+        "directAddedValue": 3430.3451430145724,
+        "publicFundsBalance": 285.862493610475,
+        "netOperatingProfit": 1835.8676301408589,
+        "totalCosts": 64230.12994657275,
+        "receivedAddedValue": 1835.8676301408589,
+        "employment": {
+          "tempMale": 635250.009465965,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 635250.009465965,
+          "totalFemale": 0,
+          "totalTemp": 635250.009465965,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 635250.009465965
+        }
+      },
+      {
+        "name": "Agri-transformator",
+        "stage": "Processors",
+        "id": 106,
+        "numberOfActors": 201666.65865315363,
+        "directAddedValue": 31801.327174710823,
+        "publicFundsBalance": 973.7436422151229,
+        "netOperatingProfit": 20256.025880297282,
+        "totalCosts": 70776.35472882862,
+        "receivedAddedValue": 20256.025880297282,
+        "employment": {
+          "tempMale": 4381846.299281109,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 4381846.299281109,
+          "totalFemale": 0,
+          "totalTemp": 4381846.299281109,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 4381846.299281109
+        }
+      },
+      {
+        "name": "COOP processing",
+        "stage": "Processors",
+        "id": 114,
+        "numberOfActors": 390.9230769230769,
+        "directAddedValue": 5127.16188583431,
+        "publicFundsBalance": 1.95461542286332,
+        "netOperatingProfit": 4397.073935336391,
+        "totalCosts": 16372.42038857071,
+        "receivedAddedValue": 4397.073935336391,
+        "employment": {
+          "tempMale": 351830.77465909504,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 351830.77465909504,
+          "totalFemale": 0,
+          "totalTemp": 351830.77465909504,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 351830.77465909504
+        }
+      },
+      {
+        "name": "Individual processing",
+        "stage": "Processors",
+        "id": 118,
+        "numberOfActors": 5122.666666666667,
+        "directAddedValue": 11649.157133267589,
+        "publicFundsBalance": 25.6132237489811,
+        "netOperatingProfit": 10137.97692969229,
+        "totalCosts": 43547.60461958691,
+        "receivedAddedValue": 10137.97692969229,
+        "employment": {
+          "tempMale": 614717.369975545,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 614717.369975545,
+          "totalFemale": 0,
+          "totalTemp": 614717.369975545,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 614717.369975545
+        }
+      },
+      {
+        "name": "Wholesaller",
+        "stage": "Wholesalers",
+        "id": 112,
+        "numberOfActors": 119.109375,
+        "directAddedValue": 8728.807558154353,
+        "publicFundsBalance": 240.6009325658669,
+        "netOperatingProfit": 6209.763414541461,
+        "totalCosts": 62397.23416217204,
+        "receivedAddedValue": 6209.763414541461,
+        "employment": {
+          "tempMale": 503832.6514223595,
+          "tempFemale": 0,
+          "unskilledMale": 201533.0605689438,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 705365.7119913034,
+          "totalFemale": 0,
+          "totalTemp": 503832.6514223595,
+          "totalSkilled": 0,
+          "totalUnskilled": 201533.0605689438,
+          "total": 705365.7119913034
+        }
+      },
+      {
+        "name": "Semi-Wholesaler Domestic",
+        "stage": "Wholesalers",
+        "id": 116,
+        "numberOfActors": 793.8203125,
+        "directAddedValue": 3407.9457488957123,
+        "publicFundsBalance": 308.7961041234452,
+        "netOperatingProfit": 1059.8249790724099,
+        "totalCosts": 87085.9052429143,
+        "receivedAddedValue": 1059.8249790724099,
+        "employment": {
+          "tempMale": 873202.3271896176,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 873202.3271896176,
+          "totalFemale": 0,
+          "totalTemp": 873202.3271896176,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 873202.3271896176
+        }
+      },
+      {
+        "name": "Retailer Urban",
+        "stage": "Retailers",
+        "id": 117,
+        "numberOfActors": 27941.7,
+        "directAddedValue": 9611.9405984732,
+        "publicFundsBalance": 167.650207962957,
+        "netOperatingProfit": 6486.940848985838,
+        "totalCosts": 99691.51781865017,
+        "receivedAddedValue": 6486.940848985838,
+        "employment": {
+          "tempMale": 1341201.6116581848,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 1341201.6116581848,
+          "totalFemale": 0,
+          "totalTemp": 1341201.6116581848,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 1341201.6116581848
+        }
+      },
+      {
+        "name": "Retailer rural",
+        "stage": "Retailers",
+        "id": 119,
+        "numberOfActors": 7089,
+        "directAddedValue": 3548.9149595070194,
+        "publicFundsBalance": 42.5340020202566,
+        "netOperatingProfit": 2756.081194055528,
+        "totalCosts": 22764.318129884734,
+        "receivedAddedValue": 2756.081194055528,
+        "employment": {
+          "tempMale": 340272.0029577615,
+          "tempFemale": 0,
+          "unskilledMale": 0,
+          "unskilledFemale": 0,
+          "skilledMale": 0,
+          "skilledFemale": 0,
+          "totalMale": 340272.0029577615,
+          "totalFemale": 0,
+          "totalTemp": 340272.0029577615,
+          "totalSkilled": 0,
+          "totalUnskilled": 0,
+          "total": 340272.0029577615
+        }
+      },
+      {
+        "name": "Consumption Rural",
+        "stage": "End use",
+        "id": 110,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Livestock raiser",
+        "stage": "End use",
+        "id": 111,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Reg.market",
+        "stage": "End use",
+        "id": 113,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Consump. Urban",
+        "stage": "End use",
+        "id": 115,
+        "receivedAddedValue": 0
+      }
+    ],
+    "flows": [
+      {
+        "sellerActorName": "Small farm",
+        "buyerActorName": "Small farm",
+        "volumeExchanged": 8242.82564494978,
+        "monetaryValue": 1030353205.6187226,
+        "unitPrice": 125000,
+        "volumeUnit": "Ton",
+        "product": "Greentops"
+      },
+      {
+        "sellerActorName": "Small farm",
+        "buyerActorName": "Small farm",
+        "volumeExchanged": 69300,
+        "monetaryValue": 16632000000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Small farm",
+        "buyerActorName": "Collector",
+        "volumeExchanged": 83160,
+        "monetaryValue": 19958400000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Small farm",
+        "buyerActorName": "Livestock raiser",
+        "volumeExchanged": 156613.687254046,
+        "monetaryValue": 19576710906.75575,
+        "unitPrice": 125000,
+        "volumeUnit": "Ton",
+        "product": "Greentops"
+      },
+      {
+        "sellerActorName": "Small farm",
+        "buyerActorName": "Semi-Wholesaler Domestic",
+        "volumeExchanged": 33660,
+        "monetaryValue": 8078400000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Small farm",
+        "buyerActorName": "Retailer rural",
+        "volumeExchanged": 11880,
+        "monetaryValue": 2851200000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Agri-transformator",
+        "buyerActorName": "Agri-transformator",
+        "volumeExchanged": 2520.83323316442,
+        "monetaryValue": 315104154.1455525,
+        "unitPrice": 125000,
+        "volumeUnit": "Ton",
+        "product": "Greentops"
+      },
+      {
+        "sellerActorName": "Agri-transformator",
+        "buyerActorName": "Agri-transformator",
+        "volumeExchanged": 15125,
+        "monetaryValue": 3630000000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Agri-transformator",
+        "buyerActorName": "Agri-transformator",
+        "volumeExchanged": 45375,
+        "monetaryValue": 10890000000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Agri-transformator",
+        "buyerActorName": "Livestock raiser",
+        "volumeExchanged": 47895.831430124,
+        "monetaryValue": 5986978928.7655,
+        "unitPrice": 125000,
+        "volumeUnit": "Ton",
+        "product": "Greentops"
+      },
+      {
+        "sellerActorName": "Agri-transformator",
+        "buyerActorName": "Consumption Rural",
+        "volumeExchanged": 19077.2602365735,
+        "monetaryValue": 9920175323.01822,
+        "unitPrice": 520000,
+        "volumeUnit": "Ton",
+        "product": "Cake human"
+      },
+      {
+        "sellerActorName": "Agri-transformator",
+        "buyerActorName": "Consumption Rural",
+        "volumeExchanged": 8892.58779741669,
+        "monetaryValue": 12082359040.350058,
+        "unitPrice": 1358700,
+        "volumeUnit": "Ton",
+        "product": "Oil"
+      },
+      {
+        "sellerActorName": "Agri-transformator",
+        "buyerActorName": "Consumption Rural",
+        "volumeExchanged": 13604.8998218899,
+        "monetaryValue": 204073497.3283485,
+        "unitPrice": 15000,
+        "volumeUnit": "Ton",
+        "product": "Shell"
+      },
+      {
+        "sellerActorName": "Agri-transformator",
+        "buyerActorName": "Consumption Rural",
+        "volumeExchanged": 29804.671695222,
+        "monetaryValue": 15498429281.51544,
+        "unitPrice": 520000,
+        "volumeUnit": "Ton",
+        "product": "Cake human"
+      },
+      {
+        "sellerActorName": "Agri-transformator",
+        "buyerActorName": "Consumption Rural",
+        "volumeExchanged": 13893.014853088,
+        "monetaryValue": 18876439280.890667,
+        "unitPrice": 1358700,
+        "volumeUnit": "Ton",
+        "product": "Oil"
+      },
+      {
+        "sellerActorName": "Agri-transformator",
+        "buyerActorName": "Consumption Rural",
+        "volumeExchanged": 21255.1261349593,
+        "monetaryValue": 318826892.0243895,
+        "unitPrice": 15000,
+        "volumeUnit": "Ton",
+        "product": "Shell"
+      },
+      {
+        "sellerActorName": "Medium farm",
+        "buyerActorName": "Medium farm",
+        "volumeExchanged": 95200,
+        "monetaryValue": 22848000000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Medium farm",
+        "buyerActorName": "Collector",
+        "volumeExchanged": 117600,
+        "monetaryValue": 28224000000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Medium farm",
+        "buyerActorName": "Livestock raiser",
+        "volumeExchanged": 235340.520142893,
+        "monetaryValue": 29417565017.86162,
+        "unitPrice": 125000,
+        "volumeUnit": "Ton",
+        "product": "Greentops"
+      },
+      {
+        "sellerActorName": "Medium farm",
+        "buyerActorName": "Semi-Wholesaler Domestic",
+        "volumeExchanged": 33600,
+        "monetaryValue": 8064000000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Medium farm",
+        "buyerActorName": "Retailer rural",
+        "volumeExchanged": 33600,
+        "monetaryValue": 8064000000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Large farm",
+        "buyerActorName": "Large farm",
+        "volumeExchanged": 31750,
+        "monetaryValue": 7620000000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Large farm",
+        "buyerActorName": "Collector",
+        "volumeExchanged": 53340,
+        "monetaryValue": 12801600000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Large farm",
+        "buyerActorName": "Livestock raiser",
+        "volumeExchanged": 104950.762124476,
+        "monetaryValue": 13118845265.5595,
+        "unitPrice": 125000,
+        "volumeUnit": "Ton",
+        "product": "Greentops"
+      },
+      {
+        "sellerActorName": "Large farm",
+        "buyerActorName": "Semi-Wholesaler Domestic",
+        "volumeExchanged": 41910,
+        "monetaryValue": 10058400000,
+        "unitPrice": 240000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Collector",
+        "buyerActorName": "Wholesaller",
+        "volumeExchanged": 170247,
+        "monetaryValue": 44264220000,
+        "unitPrice": 260000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Collector",
+        "buyerActorName": "Wholesaller",
+        "volumeExchanged": 40656,
+        "monetaryValue": 10570560000,
+        "unitPrice": 260000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Collector",
+        "buyerActorName": "Wholesaller",
+        "volumeExchanged": 17787,
+        "monetaryValue": 4624620000,
+        "unitPrice": 260000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Collector",
+        "buyerActorName": "Semi-Wholesaler Domestic",
+        "volumeExchanged": 25410,
+        "monetaryValue": 6606600000,
+        "unitPrice": 260000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Wholesaller",
+        "buyerActorName": "Semi-Wholesaler Domestic",
+        "volumeExchanged": 170247,
+        "monetaryValue": 47669160000,
+        "unitPrice": 280000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Wholesaller",
+        "buyerActorName": "COOP processing",
+        "volumeExchanged": 40656,
+        "monetaryValue": 13823040000,
+        "unitPrice": 340000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Wholesaller",
+        "buyerActorName": "Reg.market",
+        "volumeExchanged": 17787,
+        "monetaryValue": 7114800000,
+        "unitPrice": 400000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "COOP processing",
+        "buyerActorName": "Livestock raiser",
+        "volumeExchanged": 14229.6005965013,
+        "monetaryValue": 3913140164.037857,
+        "unitPrice": 275000,
+        "volumeUnit": "Ton",
+        "product": "Cake animal"
+      },
+      {
+        "sellerActorName": "COOP processing",
+        "buyerActorName": "Livestock raiser",
+        "volumeExchanged": 4065.59985087468,
+        "monetaryValue": 101639996.271867,
+        "unitPrice": 25000,
+        "volumeUnit": "Ton",
+        "product": "Skin"
+      },
+      {
+        "sellerActorName": "COOP processing",
+        "buyerActorName": "Consump. Urban",
+        "volumeExchanged": 10164,
+        "monetaryValue": 16571761668,
+        "unitPrice": 1630437,
+        "volumeUnit": "Ton",
+        "product": "Oil"
+      },
+      {
+        "sellerActorName": "COOP processing",
+        "buyerActorName": "Consump. Urban",
+        "volumeExchanged": 12196.8002982506,
+        "monetaryValue": 182952004.473759,
+        "unitPrice": 15000,
+        "volumeUnit": "Ton",
+        "product": "Shell"
+      },
+      {
+        "sellerActorName": "Semi-Wholesaler Domestic",
+        "buyerActorName": "Retailer Urban",
+        "volumeExchanged": 109170,
+        "monetaryValue": 31659300000,
+        "unitPrice": 290000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Semi-Wholesaler Domestic",
+        "buyerActorName": "Retailer rural",
+        "volumeExchanged": 25410,
+        "monetaryValue": 7114800000,
+        "unitPrice": 280000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Semi-Wholesaler Domestic",
+        "buyerActorName": "Retailer Urban",
+        "volumeExchanged": 170247,
+        "monetaryValue": 49371630000,
+        "unitPrice": 290000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Retailer Urban",
+        "buyerActorName": "Consump. Urban",
+        "volumeExchanged": 187209.39,
+        "monetaryValue": 71139568200,
+        "unitPrice": 380000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Retailer Urban",
+        "buyerActorName": "Individual processing",
+        "volumeExchanged": 92207.61,
+        "monetaryValue": 35038891800,
+        "unitPrice": 380000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Individual processing",
+        "buyerActorName": "Consump. Urban",
+        "volumeExchanged": 36883.043022933,
+        "monetaryValue": 23051901889.333126,
+        "unitPrice": 625000,
+        "volumeUnit": "Ton",
+        "product": "Cake Human"
+      },
+      {
+        "sellerActorName": "Individual processing",
+        "buyerActorName": "Consump. Urban",
+        "volumeExchanged": 18421.0311952746,
+        "monetaryValue": 30034330838.929935,
+        "unitPrice": 1630437,
+        "volumeUnit": "Ton",
+        "product": "Oil"
+      },
+      {
+        "sellerActorName": "Individual processing",
+        "buyerActorName": "Consump. Urban",
+        "volumeExchanged": 27662.2834885335,
+        "monetaryValue": 414934252.3280025,
+        "unitPrice": 15000,
+        "volumeUnit": "Liter",
+        "product": "Shell"
+      },
+      {
+        "sellerActorName": "Retailer rural",
+        "buyerActorName": "Agri-transformator",
+        "volumeExchanged": 45480,
+        "monetaryValue": 16372800000,
+        "unitPrice": 360000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      },
+      {
+        "sellerActorName": "Retailer rural",
+        "buyerActorName": "Agri-transformator",
+        "volumeExchanged": 25410,
+        "monetaryValue": 9147600000,
+        "unitPrice": 360000,
+        "volumeUnit": "Ton",
+        "product": "Groundnuts"
+      }
+    ],
+    "addedValue": {
+      "landOwnersFees": 0,
+      "depreciation": 7336.262514295581,
+      "employeeWages": 98241.7419136466,
+      "financialInstitutionsInterests": 505.81496587437584,
+      "government": 2046.755221669968
+    },
+    "importExport": {
+      "import": [
+        {
+          "label": "CHEMICAL INPUTS",
+          "importExport": "Import",
+          "amount": 24699
+        },
+        {
+          "label": "PACKAGING",
+          "importExport": "Import",
+          "amount": 15068
+        },
+        {
+          "label": "Electricity",
+          "importExport": "Import",
+          "amount": 41
+        },
+        {
+          "label": "Fuel for Tractor service",
+          "importExport": "Import",
+          "amount": 632
+        },
+        {
+          "label": "Fuel for Transport",
+          "importExport": "Import",
+          "amount": 2113
+        },
+        {
+          "label": "Energy for Water distribution",
+          "importExport": "Import",
+          "amount": 15
+        },
+        {
+          "label": "Others",
+          "importExport": "Import",
+          "amount": 4249
+        },
+        {
+          "label": "Groundnut",
+          "importExport": "Import",
+          "amount": 7115
+        }
+      ],
+      "export": []
+    },
+    "farmToFinalPricesRatio": [
+      {
+        "farmPrice": 240,
+        "finalPrice": 380
+      },
+      {
+        "farmPrice": 240,
+        "finalPrice": 400
+      },
+      {
+        "farmPrice": 240,
+        "finalPrice": 588.5874
+      },
+      {
+        "farmPrice": 240,
+        "finalPrice": 441.5874
+      }
+    ]
+  }
+}

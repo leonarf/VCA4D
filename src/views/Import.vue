@@ -93,8 +93,8 @@
                             Find all valid currencies code by visiting <a class="font-semibold underline" href="https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes" target="_blank">this wiki page.</a>
                         </div>
                         <div v-else>
-                            <div v-if="!isCurrencySupported(studyProperties.targetCurrency)">
-                                Currency <b>{{ studyProperties.targetCurrency}}</b> is valid but we do not have it's rate change to USD for the year's study.
+                            <div v-if="!isCurrencySupported(studyProperties.targetCurrency, studyProperties.year)">
+                                Currency <b>{{ studyProperties.targetCurrency}}</b> is valid but we do not have it's rate change to USD for the year's study ({{ studyProperties.year }}).
                             </div>
                             <div v-else>
                                 This study is in {{ studyProperties.localCurrency }} and will be converted to {{  studyProperties.targetCurrency }} with a rate of {{ studyProperties.currencyRatio }}

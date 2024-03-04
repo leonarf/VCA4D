@@ -7,13 +7,15 @@ const CHANGE_RATES = {
     2021: 1975.95088138768
   },
   "XOF": {
-    2014: 500.00,
-    2015: 588.24,
-    2016: 588.24,
-    2017: 588.24,
-    2018: 555.55,
-    2019: 588.24,
-    2020: 625.00
+    2014: 493.757329875312,
+    2015: 591.21169798261,
+    2016: 592.605615063022,
+    2017: 580.656749587858,
+    2018: 555.446458398226,
+    2019: 585.911013180369,
+    2020: 575.586004510945,
+    2021: 554.530675033104,
+    2022: 623.759700911182
   },
   "EUR": {
     2014: 0.7541,
@@ -125,6 +127,15 @@ export const isValidCurrency = (ccy) => {
   return true
 }
 
-export const isCurrencySupported = (ccy) => {
-  return KNOWN_CURRENCIES.includes(ccy)
+export const isCurrencySupported = (ccy, year = null) => {
+  if (!KNOWN_CURRENCIES.includes(ccy)) {
+    return false
+  }
+  if(year == null) {
+    return true
+  } 
+  if (CHANGE_RATES[ccy][year] != undefined){
+    return true
+  }
+  return false
 }

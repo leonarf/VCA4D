@@ -47,11 +47,11 @@ const FLOWS_COLUMNS = {
 
 const INDICATORS_COLUMNS = {
   ActorName: "Actor type Name",
-  NumberActors: "Number Of actors In the value chain",
-  DirectAddedValue: "Direct added value (local currency)",
-  PublicFundsBalance: "Public funds balance (local currency)",
-  NetOperatingProfit: "Net operating profit (local currency)",
-  TotalCosts: "Total costs (local currency)",
+  numberOfActors: "Number of actors in the value chain",
+  directAddedValue: "Direct added value (local currency)",
+  publicFundsBalance: "Public funds balance (local currency)",
+  netOperatingProfit: "Net operating profit (local currency)",
+  totalCosts: "Total costs (local currency)",
 }
 
 const VALUE_ADDED_COLUMNS = {
@@ -126,33 +126,41 @@ export const parseEconomicsJson = (json) => {
     }
   }
 
-    const indicators = json[ECO_SHEET_NAMES.Indicators].map(indicator => ({
-      actorName: indicator[INDICATORS_COLUMNS.ActorName],
-      data: {
-        numberOfActors: indicator[INDICATORS_COLUMNS.NumberActors] || 0,
-        directAddedValue: indicator[INDICATORS_COLUMNS.DirectAddedValue] || 0,
-        publicFundsBalance: indicator[INDICATORS_COLUMNS.PublicFundsBalance] || 0,
-        netOperatingProfit: indicator[INDICATORS_COLUMNS.NetOperatingProfit] || 0,
-        totalCosts: indicator[INDICATORS_COLUMNS.TotalCosts] || 0
+  const indicators = json[ECO_SHEET_NAMES.Indicators].map(indicator => ({
+    actorName: indicator[INDICATORS_COLUMNS.ActorName],
+    data: {
+      numberOfActors: indicator[INDICATORS_COLUMNS.numberOfActors] || 0,
+      directAddedValue: indicator[INDICATORS_COLUMNS.directAddedValue] || 0,
+      publicFundsBalance: indicator[INDICATORS_COLUMNS.publicFundsBalance] || 0,
+      netOperatingProfit: indicator[INDICATORS_COLUMNS.netOperatingProfit] || 0,
+      totalCosts: indicator[INDICATORS_COLUMNS.totalCosts] || 0
+    }
+  }))
+
+  for (var key in INDICATORS_COLUMNS) {
+    if (key != "ActorName" &&
+        indicators.filter(indicator => indicator.data[key] != undefined).length == 0) {
+      setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Indicators}', column '${INDICATORS_COLUMNS[key]}' is missing or empty`)
+    }
+  }
+
+  actors = actors.map(actor => {
+    let indicator = indicators.filter(indicator => indicator.actorName === actor.name)
+    if (indicator.length == 0) {
+      setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Indicators}', data for actor '${actor.name}' were not found`, 'info')
+    }
+    else if (indicator.length > 1) {
+      setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Indicators}', actor '${actor.name}' appears more than once`)
+    }
+    else if (indicator.length === 1) {
+      indicator = indicator[0]
+      return {
+        ...actor,
+        ...indicator.data
       }
-    }))
-    actors = actors.map(actor => {
-      let indicator = indicators.filter(indicator => indicator.actorName === actor.name)
-      if (indicator.length == 0) {
-        setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Indicators}', data for actor '${actor.name}' were not found`, 'info')
-      }
-      else if (indicator.length > 1) {
-        setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Indicators}', actor '${actor.name}' appears more than once`)
-      }
-      else if (indicator.length === 1) {
-        indicator = indicator[0]
-        return {
-          ...actor,
-          ...indicator.data
-        }
-      }
-      return actor
-    })
+    }
+    return actor
+  })
 
     var sheetname = ECO_SHEET_NAMES.ValueAddedReceivers
 
