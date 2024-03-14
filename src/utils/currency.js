@@ -107,6 +107,10 @@ export const prettyFormatAmount = (amount, currency) => {
     numberDigits = 1
     divisor = 1e6
     textUnit = 'Millions '
+  } else if (Math.abs(amount) < 100) {
+    numberDigits = 2
+    divisor = 1
+    textUnit = ''
   }
   return `${new Intl.NumberFormat('en', {
     style: "decimal",
