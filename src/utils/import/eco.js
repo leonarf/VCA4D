@@ -1,4 +1,4 @@
-import { ErrorLevels, setImportErrors, getImportErrors, parseActorTypes, doColumnExist } from '@/utils/import/generic.js'
+import { ErrorLevels, setImportErrors, getImportErrors, parseActorTypes, doColumnExist, checkColumnsExistence} from '@/utils/import/generic.js'
 import { getTotalAddedValue } from '../economics'
 
 export const ECO_SHEET_NAMES = {
@@ -30,7 +30,7 @@ export const HOME_LABELS = {
 }
 
 const FARM_GATE_COLUMNS = {
-  Case: "Case Of start And End price",
+  Case: "Case of start and end price",
   FarmPrice: "Farm gate price (local currency)",
   EndPrice: "End price",
 }
@@ -59,7 +59,8 @@ const VALUE_ADDED_COLUMNS = {
   Value: "Value (local currency)",
 }
 
-const EmploymentColumns = {
+const EMPLOYMENT_COLUMNS = {
+  ActorType: "Actor type Name",
   TempMale: "Temporary Male",
   TempFemale: "Temporary Female",
   UnskilledMale: "Permanent Unskilled Male",
@@ -70,7 +71,7 @@ const EmploymentColumns = {
 
 const ACCOUNT_COLUMNS = {
   ActorName: "Actor type name",
-  CostOrRevenue: "Cost Or revenue",
+  CostOrRevenue: "Cost or Revenue",
   Item: "Item",
   Value: "Value",
 }
@@ -84,62 +85,64 @@ const IMPORT_EXPORT_COLUMNS = {
 export const getValueChainProperty = (json, propertyName) => {
   let sheetName = "Study id"
   if (!Object.keys(json).includes(sheetName)) {
-      sheetName = ECO_SHEET_NAMES.Home
-      if (!Object.keys(json).includes(sheetName)) {
-          setImportErrors(
-            'Study id',
-            ErrorLevels.BreaksALot,
-            `Spreadcheet is missing. It should define things such as country, commodity, currency.`,
-          )
-          return null
+    sheetName = ECO_SHEET_NAMES.Home
+    if (!Object.keys(json).includes(sheetName)) {
+      setImportErrors(
+        'Study id',
+        ErrorLevels.BreaksALot,
+        `Spreadcheet is missing. It should define things such as country, commodity, currency.`,
+        )
+        return null
       }
-  }
-  var elementFound = json[sheetName].find(element => element["Property"] === propertyName)
-  if (elementFound) {
+    }
+    var elementFound = json[sheetName].find(element => element["Property"] === propertyName)
+    if (elementFound) {
       return elementFound["Value"]
-  }
-  setImportErrors(
-    sheetName,
-    ErrorLevels.BreaksFunctionalities,
-    `Couldn't find '${propertyName}' in excel's sheet '${sheetName}'`)
-  return null
-}
+    }
+    setImportErrors(
+      sheetName,
+      ErrorLevels.BreaksFunctionalities,
+      `Couldn't find '${propertyName}' in excel's sheet '${sheetName}'`)
+      return null
+    }
 
-export const parseEconomicsJson = (json) => {
-  const stages = json[ECO_SHEET_NAMES.StagesDescription].map((stage, index) => ({
-    name: stage['Stages'],
-    description: stage['Description'] || '',
+const parseStageSheet = (json) => {
+  const STAGE_SHEET_COLUMNS = {
+    Stages: "Stages",
+    Description: "Description",
+  }
+  var sheetname = ECO_SHEET_NAMES.StagesDescription
+  var sheetAsJson = json[sheetname]
+  checkColumnsExistence(sheetAsJson, STAGE_SHEET_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
+
+  return json[sheetname].map((stage, index) => ({
+    name: stage[STAGE_SHEET_COLUMNS.Stages],
+    description: stage[STAGE_SHEET_COLUMNS.Description] || '',
     index
   })
   )
+}
 
-  let actors = parseActorTypes(json)
-  for (const actor of actors) {
-    if (!actor.stage) {
-      setImportErrors(
-        ECO_SHEET_NAMES.ActorTypes,
-        ErrorLevels.BreaksALot,
-        `Actor <b>${actor.name}</b> should have a stage defined in worksheet ${ECO_SHEET_NAMES.ActorTypes}`)
-    }
-  }
-  const flows = json[ECO_SHEET_NAMES.Flows].map(flow => {
+const parseFlowsSheet = (json) => {
+  var sheetname = ECO_SHEET_NAMES.Flows
+  var sheetAsJson = json[sheetname]
+  checkColumnsExistence(sheetAsJson, FLOWS_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
+
+  return sheetAsJson.map(flow => {
     var result = {}
     for (var key in FLOWS_COLUMNS) {
       result[key] = flow[FLOWS_COLUMNS[key]]
     }
     return result
   })
+}
 
-  for (var key in FLOWS_COLUMNS) {
-    if (flows.filter(flow => flow[key] != undefined).length == 0) {
-      setImportErrors(
-        ECO_SHEET_NAMES.Flows,
-        ErrorLevels.BreaksDataviz,
-        `In spreadsheet '${ECO_SHEET_NAMES.Flows}', column '${FLOWS_COLUMNS[key]}' is missing or empty`)
-    }
-  }
+const parseIndicatorsSheet = (json, actors) => {
+  var sheetname = ECO_SHEET_NAMES.Indicators
+  var sheetAsJson = json[sheetname]
+  checkColumnsExistence(sheetAsJson, INDICATORS_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const indicators = json[ECO_SHEET_NAMES.Indicators].map(indicator => ({
+  const indicators = sheetAsJson.map(indicator => ({
     actorName: indicator[INDICATORS_COLUMNS.ActorName],
     data: {
       numberOfActors: indicator[INDICATORS_COLUMNS.numberOfActors] || 0,
@@ -150,20 +153,19 @@ export const parseEconomicsJson = (json) => {
     }
   }))
 
-  for (var key in INDICATORS_COLUMNS) {
-    if (key != "ActorName" &&
-        indicators.filter(indicator => indicator.data[key] != undefined).length == 0) {
-      setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Indicators}', column '${INDICATORS_COLUMNS[key]}' is missing or empty`)
-    }
-  }
-
   actors = actors.map(actor => {
     let indicator = indicators.filter(indicator => indicator.actorName === actor.name)
     if (indicator.length == 0) {
-      setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Indicators}', data for actor '${actor.name}' were not found`, 'info')
+      setImportErrors(
+        ECO_SHEET_NAMES.ActorTypes,
+        ErrorLevels.MayBreakNothing,
+        `In spreadsheet '${ECO_SHEET_NAMES.Indicators}', data for actor '${actor.name}' were not found`, 'info')
     }
     else if (indicator.length > 1) {
-      setImportErrors(`In spreadsheet '${ECO_SHEET_NAMES.Indicators}', actor '${actor.name}' appears more than once`)
+      setImportErrors(
+        ECO_SHEET_NAMES.ActorTypes,
+        ErrorLevels.BreaksDataviz,
+        `In spreadsheet '${ECO_SHEET_NAMES.Indicators}', actor '${actor.name}' appears more than once`)
     }
     else if (indicator.length === 1) {
       indicator = indicator[0]
@@ -174,229 +176,264 @@ export const parseEconomicsJson = (json) => {
     }
     return actor
   })
+  return actors
+}
 
-    var sheetname = ECO_SHEET_NAMES.ValueAddedReceivers
+const parseValueAddedReceiverSheet = (json, actors) => {
+  var sheetname = ECO_SHEET_NAMES.ValueAddedReceivers
+  var sheetAsJson = json[sheetname]
+  checkColumnsExistence(sheetAsJson, VALUE_ADDED_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-    for (var key in VALUE_ADDED_COLUMNS) {
-      var columnName = VALUE_ADDED_COLUMNS[key]
-      if (!doColumnExist(json[sheetname], columnName)) {
-        setImportErrors(
-          sheetname,
-          ErrorLevels.BreaksDataviz,
-          `In spreadsheet '${sheetname}', missing following column => ${columnName}`)
-      }
-    }
-    const addedValueItems = json[sheetname].map(addedValue => ({
-      receiverName: addedValue[VALUE_ADDED_COLUMNS.ReceiverName],
-      value: addedValue[VALUE_ADDED_COLUMNS.Value] || 0
-    }))
-    actors = actors.map(actor => {
-      const addedValue = addedValueItems.filter(addedValue => addedValue.receiverName === actor.name)[0]
-      return {
-        ...actor,
-        receivedAddedValue: addedValue?.value || 0
-      }
-    })
-
-    const specialsAddedValueKeys = {
-      landOwnersFees: 'Land owners (land fees)',
-      depreciation: 'Depreciation',
-      employeeWages: 'Employees (wages)',
-      financialInstitutionsInterests: 'Financial institutions (interests on loans)',
-      government: 'Government (taxes - subsidies)',
-    }
-
-    var addedValue = {}
-    for (var key in specialsAddedValueKeys) {
-      var filteredItems = addedValueItems.filter(element => element.receiverName === specialsAddedValueKeys[key])
-      if (filteredItems.length == 1) {
-        addedValue[key] = filteredItems[0].value
-      }
-      else {
-        setImportErrors(
-          sheetname,
-          ErrorLevels.BreaksDataviz,
-          `In spreadsheet '${sheetname}', couldn't find the following '${VALUE_ADDED_COLUMNS.ReceiverName}' => ${specialsAddedValueKeys[key]}`)
-      }
-    }
-
-    const actorTypeColumn = "Actor type Name"
-
-  
-    var missingColumns = new Set()
-    var foundColumns = new Set()
-    sheetname = ECO_SHEET_NAMES.Employment
-    json[sheetname].forEach(employment => {
-      [actorTypeColumn, ...Object.values(EmploymentColumns)].forEach(columnName => {
-        if (columnName in employment) {
-          foundColumns.add(columnName)
-        } else {
-          missingColumns.add(columnName)
-        } 
-      })
-    })
-
-
-    const employments = json[sheetname].map(employment => {
-
-      const actorName = employment[actorTypeColumn]
-      const tempMale = parseFloat(employment[EmploymentColumns.TempMale])
-      const tempFemale = parseFloat(employment[EmploymentColumns.TempFemale])
-      const unskilledMale = parseFloat(employment[EmploymentColumns.UnskilledMale])
-      const unskilledFemale = parseFloat(employment[EmploymentColumns.UnskilledFemale])
-      const skilledMale = parseFloat(employment[EmploymentColumns.SkilledMale])
-      const skilledFemale = parseFloat(employment[EmploymentColumns.SkilledFemale])
-
-      const totalMale = (tempMale || 0) + (unskilledMale || 0) + (skilledMale || 0)
-      const totalFemale = tempFemale + unskilledFemale + skilledFemale
-      const totalTemp = tempMale + (tempFemale || 0)
-      const totalSkilled = skilledMale + (skilledFemale || 0) 
-      const totalUnskilled = unskilledMale + (unskilledFemale || 0)
-      
-      const result = {
-        actorName,
-        data: {
-          tempMale,
-          tempFemale,
-          unskilledMale,
-          unskilledFemale,
-          skilledMale,
-          skilledFemale,
-          totalMale,
-          totalFemale,
-          totalTemp,
-          totalSkilled,
-          totalUnskilled,
-          total: totalMale + (totalFemale || 0)
-        }
-      }
-      return result
-    })
-    const headerColumnMissing = [...missingColumns].filter(x => !foundColumns.has(x));
-    if (headerColumnMissing.length > 0) {
-      setImportErrors(
-        sheetname,
-        ErrorLevels.BreaksDataviz,
-        `Missing columns headers [${headerColumnMissing.join(', ')}] on first row of excel spreadsheet named '${sheetname}', or these columns are empty`)
-    }
-  
-    actors = actors.map(actor => {
-      let employment = employments.filter(employment => employment.actorName === actor.name)
-      if (employment && employment.length === 1) {
-        employment = employment[0]
-        return {
-          ...actor,
-          employment: {
-            ...employment.data
-          }
-        }
-      }
-      return actor
-    })
-  
-    const accountItems = json[ECO_SHEET_NAMES.AccountByActor].map(accountItem => ({
-      actorName: accountItem[ACCOUNT_COLUMNS.ActorName],
-      data: {
-        costOrRevenue: accountItem[ACCOUNT_COLUMNS.CostOrRevenue],
-        item: accountItem[ACCOUNT_COLUMNS.Item],
-        value: accountItem[ACCOUNT_COLUMNS.Value]
-      }
-    })
-    )
-    actors = actors.map(actor => {
-      let accountItem = accountItems.filter(element => element.actorName === actor.name)
-      if (accountItem && accountItem.length === 1) {
-        accountItem = accountItem[0]
-        return {
-          ...actor,
-          accountItems: {
-            ...accountItem.data
-          }
-        }
-      }
-      return actor
-    })
-    actors.sort((actor1, actor2) => {
-      const stage1 = stages.find(stage => stage.name === actor1.stage)
-      const stage2 = stages.find(stage => stage.name === actor2.stage)
-      return (stage1?.index || 0) - (stage2?.index || 0)
-    })
-  
-    sheetname = ECO_SHEET_NAMES.ImportExport
-    const importExportItems = json[sheetname].map(importExportItem => ({
-          label: importExportItem[IMPORT_EXPORT_COLUMNS.Goods],
-          importExport: importExportItem[IMPORT_EXPORT_COLUMNS.ImportOrExport],
-          amount: importExportItem[IMPORT_EXPORT_COLUMNS.Value],
-      })
-    )
-    if (importExportItems.every(item => {return item.label == undefined})) {
-      setImportErrors(
-        sheetname,
-        ErrorLevels.BreaksDataviz,
-        `Column '${IMPORT_EXPORT_COLUMNS.Goods}' seems to be missing from excel worksheet '${sheetname}'`)
-    }
-    if (importExportItems.every(item => {return item.importExport == undefined})) {
-      setImportErrors(
-        sheetname,
-        ErrorLevels.BreaksDataviz,
-        `Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' seems to be missing from excel worksheet '${sheetname}'`)
-    }
-    if (importExportItems.every(item => {return item.amount == undefined})) {
-      setImportErrors(
-        sheetname,
-        ErrorLevels.BreaksDataviz,
-        `Column '${IMPORT_EXPORT_COLUMNS.Value}' seems to be missing from excel worksheet '${sheetname}'`)
-    }
-
-    var importExport = {
-      import: [],
-      export: []
-    }
-
-    var acceptableImportKeyWord = ["IMPORT", "Imported"]
-    for (var keyword of acceptableImportKeyWord) {
-      importExport.import.push(...importExportItems.filter(item => item.importExport?.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
-    }
-    var acceptableExportKeyWord = ["EXPORT", "Exported"]
-    for (var keyword of acceptableExportKeyWord) {
-      importExport.export.push(...importExportItems.filter(item => item.importExport?.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
-    }
-  
-    if (importExportItems.length > 0 && importExport.import.length == 0 && importExport.import.length == 0) {
-      setImportErrors(
-        sheetname,
-        ErrorLevels.BreaksDataviz,
-        `Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' of excel worksheet '${sheetname}' seems to be wrongly filled.
-        It should contains one of '${acceptableImportKeyWord}' for import or one of '${acceptableExportKeyWord}' for export`)
-    }
-  
-    const farmToFinalPricesRatio = json[ECO_SHEET_NAMES.FarmGate].map(priceItem => ({
-      label: priceItem[FARM_GATE_COLUMNS.Case],
-      farmPrice: priceItem[FARM_GATE_COLUMNS.FarmPrice],
-      finalPrice: priceItem[FARM_GATE_COLUMNS.EndPrice]
-    }))
-
-    // Macro economic indicators
-    var macroData = {}
-    macroData["homeSheet"] = json[ECO_SHEET_NAMES.Home]
-    macroData["giniIndex"] = getValueChainProperty(json, HOME_LABELS.GiniIndex)
-    macroData["rateOfIntegration"] = (getValueChainProperty(json, HOME_LABELS.RateOfIntegrationIntoDomesticEconomy) / 100.0) || undefined
-    macroData["publicFundsBalance"] = (getValueChainProperty(json, HOME_LABELS.PublicFundsBalanceRatio) / 100.0) || undefined
-    macroData["valueAddedShareNationalGdp"] = (getValueChainProperty(json, HOME_LABELS.ValueAddedShareNationalGdp) / 100.0) || undefined
-    macroData["valueAddedShareAgriculturalGdp"] = (getValueChainProperty(json, HOME_LABELS.ValueAddedShareAgriculturalGdp) / 100.0) || undefined
-    macroData["domesticResourceCostRatio"] = getValueChainProperty(json, HOME_LABELS.DomesticResourceCostRatio)
-    macroData["nominalProtectionCoefficient"] = getValueChainProperty(json, HOME_LABELS.NominalProtectionCoefficient)
-    
+  const addedValueItems = json[sheetname].map(addedValue => ({
+    receiverName: addedValue[VALUE_ADDED_COLUMNS.ReceiverName],
+    value: addedValue[VALUE_ADDED_COLUMNS.Value] || 0
+  }))
+  actors = actors.map(actor => {
+    const addedValue = addedValueItems.filter(addedValue => addedValue.receiverName === actor.name)[0]
     return {
-      macroData,
-      stages,
-      actors,
-      flows,
-      addedValue,
-      importExport,
-      farmToFinalPricesRatio
+      ...actor,
+      receivedAddedValue: addedValue?.value || 0
+    }
+  })
+
+  const specialsAddedValueKeys = {
+    landOwnersFees: 'Land owners (land fees)',
+    depreciation: 'Depreciation',
+    employeeWages: 'Employees (wages)',
+    financialInstitutionsInterests: 'Financial institutions (interests on loans)',
+    government: 'Government (taxes - subsidies)',
+  }
+
+  var addedValue = {}
+  for (var key in specialsAddedValueKeys) {
+    var filteredItems = addedValueItems.filter(element => element.receiverName === specialsAddedValueKeys[key])
+    if (filteredItems.length == 1) {
+      addedValue[key] = filteredItems[0].value
+    }
+    else {
+      setImportErrors(
+        sheetname,
+        ErrorLevels.BreaksDataviz,
+        `In spreadsheet '${sheetname}', couldn't find the following '${VALUE_ADDED_COLUMNS.ReceiverName}' => ${specialsAddedValueKeys[key]}`)
     }
   }
+  return {
+    actors,
+    addedValue
+  }
+}
+
+const parseEmploymentSheet = (json, actors) => {
+  var sheetname = ECO_SHEET_NAMES.Employment
+  var sheetAsJson = json[sheetname]
+  checkColumnsExistence(sheetAsJson, EMPLOYMENT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
+
+  const employments = json[sheetname].map(employment => {
+    const actorName = employment[EMPLOYMENT_COLUMNS.ActorType]
+    const tempMale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempMale])
+    const tempFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempFemale])
+    const unskilledMale = parseFloat(employment[EMPLOYMENT_COLUMNS.UnskilledMale])
+    const unskilledFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.UnskilledFemale])
+    const skilledMale = parseFloat(employment[EMPLOYMENT_COLUMNS.SkilledMale])
+    const skilledFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.SkilledFemale])
+
+    const totalMale = (tempMale || 0) + (unskilledMale || 0) + (skilledMale || 0)
+    const totalFemale = tempFemale + unskilledFemale + skilledFemale
+    const totalTemp = tempMale + (tempFemale || 0)
+    const totalSkilled = skilledMale + (skilledFemale || 0) 
+    const totalUnskilled = unskilledMale + (unskilledFemale || 0)
+    
+    const result = {
+      actorName,
+      data: {
+        tempMale,
+        tempFemale,
+        unskilledMale,
+        unskilledFemale,
+        skilledMale,
+        skilledFemale,
+        totalMale,
+        totalFemale,
+        totalTemp,
+        totalSkilled,
+        totalUnskilled,
+        total: totalMale + (totalFemale || 0)
+      }
+    }
+    return result
+  })
+
+  console.log("voici les données d'emplois", employments)
+
+  actors = actors.map(actor => {
+    let employment = employments.filter(employment => employment.actorName === actor.name)
+    if (employment && employment.length === 1) {
+      employment = employment[0]
+      return {
+        ...actor,
+        employment: {
+          ...employment.data
+        }
+      }
+    }
+    return actor
+  })
+
+  return actors
+}
+
+const parseAccountByActorSheet = (json, actors, stages) => {
+  var sheetname = ECO_SHEET_NAMES.AccountByActor
+  var sheetAsJson = json[sheetname]
+  checkColumnsExistence(sheetAsJson, ACCOUNT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
+
+  const accountItems = json[ECO_SHEET_NAMES.AccountByActor].map(accountItem => ({
+    actorName: accountItem[ACCOUNT_COLUMNS.ActorName],
+    data: {
+      costOrRevenue: accountItem[ACCOUNT_COLUMNS.CostOrRevenue],
+      item: accountItem[ACCOUNT_COLUMNS.Item],
+      value: accountItem[ACCOUNT_COLUMNS.Value]
+    }
+  })
+  )
+  actors = actors.map(actor => {
+    let accountItem = accountItems.filter(element => element.actorName === actor.name)
+    if (accountItem && accountItem.length === 1) {
+      accountItem = accountItem[0]
+      return {
+        ...actor,
+        accountItems: {
+          ...accountItem.data
+        }
+      }
+    }
+    return actor
+  })
+  actors.sort((actor1, actor2) => {
+    const stage1 = stages.find(stage => stage.name === actor1.stage)
+    const stage2 = stages.find(stage => stage.name === actor2.stage)
+    return (stage1?.index || 0) - (stage2?.index || 0)
+  })
+
+  return actors
+}
+
+const parseImportExportSheet = (json) => {
+  var sheetname = ECO_SHEET_NAMES.ImportExport
+  var sheetAsJson = json[sheetname]
+  checkColumnsExistence(sheetAsJson, IMPORT_EXPORT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
+
+  const importExportItems = json[sheetname].map(importExportItem => ({
+        label: importExportItem[IMPORT_EXPORT_COLUMNS.Goods],
+        importExport: importExportItem[IMPORT_EXPORT_COLUMNS.ImportOrExport],
+        amount: importExportItem[IMPORT_EXPORT_COLUMNS.Value],
+    })
+  )
+  if (importExportItems.every(item => {return item.label == undefined})) {
+    setImportErrors(
+      sheetname,
+      ErrorLevels.BreaksDataviz,
+      `Column '${IMPORT_EXPORT_COLUMNS.Goods}' seems to be missing from excel worksheet '${sheetname}'`)
+  }
+  if (importExportItems.every(item => {return item.importExport == undefined})) {
+    setImportErrors(
+      sheetname,
+      ErrorLevels.BreaksDataviz,
+      `Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' seems to be missing from excel worksheet '${sheetname}'`)
+  }
+  if (importExportItems.every(item => {return item.amount == undefined})) {
+    setImportErrors(
+      sheetname,
+      ErrorLevels.BreaksDataviz,
+      `Column '${IMPORT_EXPORT_COLUMNS.Value}' seems to be missing from excel worksheet '${sheetname}'`)
+  }
+
+  var importExport = {
+    import: [],
+    export: []
+  }
+
+  var acceptableImportKeyWord = ["IMPORT", "Imported"]
+  for (var keyword of acceptableImportKeyWord) {
+    importExport.import.push(...importExportItems.filter(item => item.importExport?.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
+  }
+  var acceptableExportKeyWord = ["EXPORT", "Exported"]
+  for (var keyword of acceptableExportKeyWord) {
+    importExport.export.push(...importExportItems.filter(item => item.importExport?.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
+  }
+
+  if (importExportItems.length > 0 && importExport.import.length == 0 && importExport.import.length == 0) {
+    setImportErrors(
+      sheetname,
+      ErrorLevels.BreaksDataviz,
+      `Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' of excel worksheet '${sheetname}' seems to be wrongly filled.
+      It should contains one of '${acceptableImportKeyWord}' for import or one of '${acceptableExportKeyWord}' for export`)
+  }
+
+  return importExport
+}
+
+const parseFarmGatePriceSheet = (json) => {
+  var sheetname = ECO_SHEET_NAMES.FarmGate
+  var sheetAsJson = json[sheetname]
+  checkColumnsExistence(sheetAsJson, FARM_GATE_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
+
+  return json[ECO_SHEET_NAMES.FarmGate].map(priceItem => ({
+    label: priceItem[FARM_GATE_COLUMNS.Case],
+    farmPrice: priceItem[FARM_GATE_COLUMNS.FarmPrice],
+    finalPrice: priceItem[FARM_GATE_COLUMNS.EndPrice]
+  }))  
+}
+
+export const parseEconomicsJson = (json) => {
+  const stages = parseStageSheet(json)
+  
+  let actors = parseActorTypes(json)
+  for (const actor of actors) {
+    if (!actor.stage) {
+      setImportErrors(
+        ECO_SHEET_NAMES.ActorTypes,
+        ErrorLevels.BreaksALot,
+        `Actor <b>${actor.name}</b> should have a stage defined in worksheet ${ECO_SHEET_NAMES.ActorTypes}`)
+    }
+  }
+  const flows = parseFlowsSheet(json)
+
+  actors = parseIndicatorsSheet(json, actors)
+
+  var result = parseValueAddedReceiverSheet(json, actors)
+  actors = result.actors
+  var addedValue = result.addedValue
+
+  actors = parseEmploymentSheet(json, actors)
+
+  actors = parseAccountByActorSheet(json, actors, stages)
+
+  var importExport = parseImportExportSheet(json)
+  
+  const farmToFinalPricesRatio = parseFarmGatePriceSheet(json)
+
+  // Macro economic indicators
+  var macroData = {}
+  macroData["homeSheet"] = json[ECO_SHEET_NAMES.Home]
+  macroData["giniIndex"] = getValueChainProperty(json, HOME_LABELS.GiniIndex)
+  macroData["rateOfIntegration"] = (getValueChainProperty(json, HOME_LABELS.RateOfIntegrationIntoDomesticEconomy) / 100.0) || undefined
+  macroData["publicFundsBalance"] = (getValueChainProperty(json, HOME_LABELS.PublicFundsBalanceRatio) / 100.0) || undefined
+  macroData["valueAddedShareNationalGdp"] = (getValueChainProperty(json, HOME_LABELS.ValueAddedShareNationalGdp) / 100.0) || undefined
+  macroData["valueAddedShareAgriculturalGdp"] = (getValueChainProperty(json, HOME_LABELS.ValueAddedShareAgriculturalGdp) / 100.0) || undefined
+  macroData["domesticResourceCostRatio"] = getValueChainProperty(json, HOME_LABELS.DomesticResourceCostRatio)
+  macroData["nominalProtectionCoefficient"] = getValueChainProperty(json, HOME_LABELS.NominalProtectionCoefficient)
+  
+  return {
+    macroData,
+    stages,
+    actors,
+    flows,
+    addedValue,
+    importExport,
+    farmToFinalPricesRatio
+  }
+}
 
   export const getErrors = (study) => {
     let errors = getImportErrors()

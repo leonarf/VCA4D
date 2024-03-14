@@ -54,7 +54,7 @@
         "name": "Peq org FT",
         "stage": "Producers",
         "id": 78,
-        "numberOfActors": 0,
+        "numberOfActors": 1113.9865624503905,
         "directAddedValue": 1041668708.5323479,
         "publicFundsBalance": 10027378.8150808,
         "netOperatingProfit": 416562448.51600736,
@@ -79,7 +79,7 @@
         "name": "Med org",
         "stage": "Producers",
         "id": 79,
-        "numberOfActors": 0,
+        "numberOfActors": 186.5270935960591,
         "directAddedValue": 951411023.4567776,
         "publicFundsBalance": 9565437.849544287,
         "netOperatingProfit": 378382682.6001573,
@@ -104,7 +104,7 @@
         "name": "Grande org",
         "stage": "Producers",
         "id": 80,
-        "numberOfActors": 0,
+        "numberOfActors": 80.97377501725327,
         "directAddedValue": 4144632194.1073318,
         "publicFundsBalance": 56611394.1288532,
         "netOperatingProfit": 2172345092.124947,
@@ -129,7 +129,7 @@
         "name": "Peq conv",
         "stage": "Producers",
         "id": 81,
-        "numberOfActors": 0,
+        "numberOfActors": 360.0168844202995,
         "directAddedValue": 343653958.540848,
         "publicFundsBalance": 3379823.79746835,
         "netOperatingProfit": 121830331.19907597,
@@ -154,7 +154,7 @@
         "name": "Med conv",
         "stage": "Producers",
         "id": 82,
-        "numberOfActors": 0,
+        "numberOfActors": 56.965770171149146,
         "directAddedValue": 217093712.33360124,
         "publicFundsBalance": 1311227.2812925493,
         "netOperatingProfit": 50482715.410500586,
@@ -179,7 +179,7 @@
         "name": "Grande conv",
         "stage": "Producers",
         "id": 83,
-        "numberOfActors": 0,
+        "numberOfActors": 17.001316366827556,
         "directAddedValue": 452252574.2610606,
         "publicFundsBalance": 1903527.6421128418,
         "netOperatingProfit": 81242296.94010206,
@@ -204,7 +204,7 @@
         "name": "Camionero",
         "stage": "Collectors",
         "id": 85,
-        "numberOfActors": 0,
+        "numberOfActors": 3.9276960784313726,
         "directAddedValue": 17873624.801562995,
         "publicFundsBalance": -7816706.274163872,
         "netOperatingProfit": 22036766.027532186,
@@ -229,7 +229,7 @@
         "name": "Maduradora",
         "stage": "Processors",
         "id": 84,
-        "numberOfActors": 0,
+        "numberOfActors": 25.985585585585586,
         "directAddedValue": 506557179.287328,
         "publicFundsBalance": 1201061.44627246,
         "netOperatingProfit": 457677093.96211505,
@@ -254,7 +254,7 @@
         "name": "Exportadora",
         "stage": "Wholesalers",
         "id": 86,
-        "numberOfActors": 0,
+        "numberOfActors": 24.09276743178865,
         "directAddedValue": 637543814.9269142,
         "publicFundsBalance": -179047651.2234299,
         "netOperatingProfit": 477044440.4687035,
@@ -654,26 +654,32 @@
     },
     "farmToFinalPricesRatio": [
       {
+        "label": "Organic Fair Trade banana from producer to export",
         "farmPrice": 27000,
         "finalPrice": 39400
       },
       {
+        "label": "Organic  banana from producer to export",
         "farmPrice": 22500,
         "finalPrice": 32900
       },
       {
+        "label": "Conventional Fair Trade banana from producer to export",
         "farmPrice": 20300,
         "finalPrice": 32000
       },
       {
+        "label": "Conventional banana from producer to export",
         "farmPrice": 18300,
         "finalPrice": 27300
       },
       {
+        "label": "Rejected banana from producer to local market",
         "farmPrice": 11000,
         "finalPrice": 13000
       },
       {
+        "label": "Rejected matured banana from producer to local market",
         "farmPrice": 11000,
         "finalPrice": 20000
       }

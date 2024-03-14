@@ -39,9 +39,15 @@ export const getSheetNameContent = (json, sheetname) => {
   return json[sheetname]
 }
 
-
 export const parseActorTypes = (json) => {
+  const ACTORS_SHEET_COLUMNS = {
+    name : 'Actor type name',
+    stage : 'Stage'
+  }
+  var sheetname = ECO_SHEET_NAMES.ActorTypes
   var sheetAsJson = json[ECO_SHEET_NAMES.ActorTypes]
+  checkColumnsExistence(sheetAsJson, ACTORS_SHEET_COLUMNS, sheetname, ErrorLevels.BreaksALot)
+
   return sheetAsJson.map(actor => ({
     name: actor['Actor type name'],
     stage: actor['Stage'] || '',
@@ -52,4 +58,15 @@ export const parseActorTypes = (json) => {
 export const doColumnExist = (excelDataAsJson, columnName) => {
   var filteredItems = excelDataAsJson.find(row => !!row[columnName])
   return !!filteredItems
+}
+
+export const checkColumnsExistence = (excelSheetAsJson, columnsDescription, sheetname, errorLevel) => {
+  for (var column in columnsDescription) {
+    if (!doColumnExist(excelSheetAsJson, columnsDescription[column])){
+      setImportErrors(
+        sheetname,
+        errorLevel,
+        `In spreadsheet '${sheetname}', column '${columnsDescription[column]}' is missing or empty`)
+    }
+  }
 }

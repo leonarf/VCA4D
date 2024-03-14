@@ -820,18 +820,22 @@
     },
     "farmToFinalPricesRatio": [
       {
+        "label": "Producers to urban market",
         "farmPrice": 240,
         "finalPrice": 380
       },
       {
+        "label": "Producers to export market",
         "farmPrice": 240,
         "finalPrice": 400
       },
       {
+        "label": "Producers to processed groundnut oil and human food",
         "farmPrice": 240,
         "finalPrice": 588.5874
       },
       {
+        "label": "Producers to processed groundnut oil and animal feed",
         "farmPrice": 240,
         "finalPrice": 441.5874
       }
