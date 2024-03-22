@@ -8,11 +8,11 @@
             </div>
             <div class="w-full md:w-4/5">
                 <BarChart v-if="studyData" :options="numberOfJobsData"
-                    @chartSeriesClick="handleNumberOfJobsDataChartSeriesClick"></BarChart>
+                    @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
             </div>
         </div>
-        <div>
-            <MiniChartContainer :currentStage="currentStage" title="Employment">
+        <div v-if="selectedStage">
+            <MiniChartContainer :currentStage="selectedStage" title="Employment">
                 <div class="flex flex-row w-full justify-evenly mt-6">
                     <template v-if="studyData">
                         <template v-if="currentStageEmploymentByTypeOfActorData">
@@ -62,11 +62,19 @@ const props = defineProps({
     currency: String
 })
 
-const currentStage = ref('')
+const selectedStage = ref(null)
+const handleDataChartSeriesClick = (event) => {
+  if (selectedStage.value == event.name) {
+    selectedStage.value = null
+  }
+  else {
+    selectedStage.value = event.name
+  }
+}
 
 const { stages, actors } = useActorsAndStages(props);
 
-const numberOfJobsData = computed(() => getNumberOfJobsData(stages, actors, currentStage))
+const numberOfJobsData = computed(() => getNumberOfJobsData(stages, actors, selectedStage))
 
 const availableStages = computed(() => numberOfJobsData.value.xAxis.data)
 
@@ -84,26 +92,20 @@ const percentFemaleEmployment = computed(() => {
 })
 
 const currentStageEmploymentByTypeOfActorData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
+    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
     return getEmploymentByTypeOfActorData(currentStageActors) 
 })
 
 
 const currentStageEmploymentByQualificationData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
+    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
     return getEmploymentByQualificationData(currentStageActors)
 })
 
 
 const currentStageEmploymentByGenderData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
+    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
     return getEmploymentByGenderData(currentStageActors)
-})
-
-const handleNumberOfJobsDataChartSeriesClick = (event) => currentStage.value = event.name
-
-onMounted(() => {
-    currentStage.value = availableStages.value[0]
 })
 </script>
 

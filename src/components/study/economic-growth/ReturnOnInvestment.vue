@@ -5,8 +5,8 @@
       <template v-if="studyData">
         <BarChart :options="populatedBarChartData" 
           @chartSeriesClick="handleDataChartSeriesClick" />
-        <div>
-          <MiniChartContainer :currentStage="currentStage" title="Return On Investment">
+        <div v-if="selectedStage">
+          <MiniChartContainer :currentStage="selectedStage" title="Return On Investment">
               <div class="flex flex-row w-full justify-evenly mt-6">
                   <div class="w-full flex flex-row justify-center">
                     <Ring :options="currentStageReturnOnInvestmentData"></Ring>
@@ -35,24 +35,28 @@ const props = defineProps({
     studyData: Object,
     currency: String
 })
-const currentStage = ref('')
+
+const selectedStage = ref(null)
+const handleDataChartSeriesClick = (event) => {
+  if (selectedStage.value == event.name) {
+    selectedStage.value = null
+  }
+  else {
+    selectedStage.value = event.name
+  }
+}
 
 const { prettyAmount, convertAmount } = useCurrencyUtils(props);
 const { stages, actors } = useActorsAndStages(props);
 
 
 const populatedBarChartData = computed(() => {
-  return getReturnOnInvestmentData(stages, actors, currentStage, convertAmount, prettyAmount)
-})
-const handleDataChartSeriesClick = (event) => currentStage.value = event.name
-
-onMounted(() => {
-    currentStage.value = stages.value[0].name
+  return getReturnOnInvestmentData(stages, actors, selectedStage, convertAmount, prettyAmount)
 })
 
 const currentStageReturnOnInvestmentData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
-    return getReturnOnInvestmentByActorsData(currentStageActors, convertAmount, prettyAmount, currentStage.value === 'Producers')
+    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
+    return getReturnOnInvestmentByActorsData(currentStageActors, convertAmount, prettyAmount, selectedStage.value === 'Producers')
 })
 </script>
 

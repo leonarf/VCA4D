@@ -778,23 +778,23 @@
     "farmToFinalPricesRatio": [
       {
         "farmPrice": 175,
-        "finalPrice": 400
+        "endPrice": 400
       },
       {
         "farmPrice": 500,
-        "finalPrice": 850
+        "endPrice": 850
       },
       {
         "farmPrice": 500,
-        "finalPrice": 800
+        "endPrice": 800
       },
       {
         "farmPrice": 200,
-        "finalPrice": 800
+        "endPrice": 800
       },
       {
         "farmPrice": 100,
-        "finalPrice": 400
+        "endPrice": 400
       }
     ]
   }

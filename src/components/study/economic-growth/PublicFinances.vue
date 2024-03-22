@@ -16,16 +16,18 @@
       </div>
       <div class="w-full lg:w-3/4">
         <BarChart v-if="studyData" :options="publicFinancesBarData" 
-        @chartSeriesClick="handleChartSeriesClick" />
+        @chartSeriesClick="handleDataChartSeriesClick" />
       </div>
     </div>
-    <MiniChartContainer :currentStage="currentStage" title="Contribution to the public finances">
-        <div class="flex flex-row w-full justify-evenly mt-6">
-            <div class="w-full flex flex-row justify-center">
-                <Ring :options="currentStagePublicFinancesData"></Ring>
-            </div>
-        </div>
-    </MiniChartContainer>
+    <div v-if="selectedStage">
+      <MiniChartContainer :currentStage="selectedStage" title="Contribution to the public finances">
+          <div class="flex flex-row w-full justify-evenly mt-6">
+              <div class="w-full flex flex-row justify-center">
+                  <Ring :options="currentStagePublicFinancesData"></Ring>
+              </div>
+          </div>
+      </MiniChartContainer>
+    </div>
 </template>
 
 <script setup>
@@ -44,7 +46,16 @@ const props = defineProps({
     studyData: Object,
     currency: String
 })
-const currentStage = ref('')
+
+const selectedStage = ref(null)
+const handleDataChartSeriesClick = (event) => {
+  if (selectedStage.value == event.name) {
+    selectedStage.value = null
+  }
+  else {
+    selectedStage.value = event.name
+  }
+}
 
 const { prettyAmount, convertAmount } = useCurrencyUtils(props);
 const { stages, actors } = useActorsAndStages(props);
@@ -55,17 +66,14 @@ const publicFundsBalance = computed(() => {
 })
 
 const publicFinancesBarData = computed(() => {
-  return getPublicFinancesData(stages, actors, convertAmount, prettyAmount, currentStage)
+  return getPublicFinancesData(stages, actors, convertAmount, prettyAmount, selectedStage)
 })
 
 const availableStages = computed(() => publicFinancesBarData.value.xAxis.data)
-const handleChartSeriesClick = (event) => currentStage.value = event.name
-onMounted(() => {
-    currentStage.value = availableStages.value[0]
-})
+const handleChartSeriesClick = (event) => selectedStage.value = event.name
 
 const currentStagePublicFinancesData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
+    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
     return getPublicFinancesPerStage(currentStageActors, convertAmount.value, prettyAmount.value)
 })
 </script>

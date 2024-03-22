@@ -656,32 +656,32 @@
       {
         "label": "Organic Fair Trade banana from producer to export",
         "farmPrice": 27000,
-        "finalPrice": 39400
+        "endPrice": 39400
       },
       {
         "label": "Organic  banana from producer to export",
         "farmPrice": 22500,
-        "finalPrice": 32900
+        "endPrice": 32900
       },
       {
         "label": "Conventional Fair Trade banana from producer to export",
         "farmPrice": 20300,
-        "finalPrice": 32000
+        "endPrice": 32000
       },
       {
         "label": "Conventional banana from producer to export",
         "farmPrice": 18300,
-        "finalPrice": 27300
+        "endPrice": 27300
       },
       {
         "label": "Rejected banana from producer to local market",
         "farmPrice": 11000,
-        "finalPrice": 13000
+        "endPrice": 13000
       },
       {
         "label": "Rejected matured banana from producer to local market",
         "farmPrice": 11000,
-        "finalPrice": 20000
+        "endPrice": 20000
       }
     ]
   }

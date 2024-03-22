@@ -357,9 +357,10 @@ const studyData = computed(() => {
         return {}
     }
     if (typeOfFile.value === TypesOfFile.Economics) {
+        const currencyRatio = studyProperties.value.currencyRatio
         return {
             ...studyProperties.value,
-            ecoData: parseEconomicsJson(excelData.value)
+            ecoData: parseEconomicsJson(excelData.value, currencyRatio)
         }
     }
     if (typeOfFile.value === TypesOfFile.Environment) {

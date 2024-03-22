@@ -26,13 +26,16 @@ export const HOME_LABELS = {
   PublicFundsBalanceRatio: "Public funds balance / Public budget",
   ValueAddedShareNationalGdp: "Value added share of national GDP",
   ValueAddedShareAgriculturalGdp: "Value added share of the agricultural sector GDP",
-  GiniIndex: "Gini index"
+  GiniIndex: "Gini index",
+  FTE_Definition: "Full-time equivalent (FTE) definition",
 }
 
 const FARM_GATE_COLUMNS = {
   Case: "Case of start and end price",
   FarmPrice: "Farm gate price (local currency)",
-  EndPrice: "End price",
+  FarmProduct: "Farm product",
+  EndPrice: "End products unit value",
+  EndProducts: "End products"
 }
 
 const FLOWS_COLUMNS = {
@@ -373,19 +376,30 @@ const parseImportExportSheet = (json) => {
   return importExport
 }
 
-const parseFarmGatePriceSheet = (json) => {
+const parseFarmGatePriceSheet = (json, currencyRatio) => {
   var sheetname = ECO_SHEET_NAMES.FarmGate
   var sheetAsJson = json[sheetname]
   checkColumnsExistence(sheetAsJson, FARM_GATE_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  return json[ECO_SHEET_NAMES.FarmGate].map(priceItem => ({
+  var result = json[ECO_SHEET_NAMES.FarmGate].map(priceItem => ({
     label: priceItem[FARM_GATE_COLUMNS.Case],
     farmPrice: priceItem[FARM_GATE_COLUMNS.FarmPrice],
-    finalPrice: priceItem[FARM_GATE_COLUMNS.EndPrice]
-  }))  
+    farmProduct: priceItem[FARM_GATE_COLUMNS.FarmProduct],
+    endPrice: priceItem[FARM_GATE_COLUMNS.EndPrice],
+    endProducts: priceItem[FARM_GATE_COLUMNS.EndProducts]
+  }))
+  if (currencyRatio && currencyRatio != 1) {
+    result = result.map(item => {
+      var newItem = {...item}
+      newItem.farmPrice = item.farmPrice / currencyRatio,
+      newItem.endPrice = item.endPrice / currencyRatio
+      return newItem
+    })
+  }
+  return result
 }
 
-export const parseEconomicsJson = (json) => {
+export const parseEconomicsJson = (json, currencyRatio) => {
   const stages = parseStageSheet(json)
   
   let actors = parseActorTypes(json)
@@ -411,12 +425,13 @@ export const parseEconomicsJson = (json) => {
 
   var importExport = parseImportExportSheet(json)
   
-  const farmToFinalPricesRatio = parseFarmGatePriceSheet(json)
+  const farmToFinalPricesRatio = parseFarmGatePriceSheet(json, currencyRatio)
 
   // Macro economic indicators
   var macroData = {}
   macroData["homeSheet"] = json[ECO_SHEET_NAMES.Home]
   macroData["giniIndex"] = getValueChainProperty(json, HOME_LABELS.GiniIndex)
+  macroData["FTE_Definition"] = getValueChainProperty(json, HOME_LABELS.FTE_Definition)
   macroData["rateOfIntegration"] = (getValueChainProperty(json, HOME_LABELS.RateOfIntegrationIntoDomesticEconomy) / 100.0) || undefined
   macroData["publicFundsBalance"] = (getValueChainProperty(json, HOME_LABELS.PublicFundsBalanceRatio) / 100.0) || undefined
   macroData["valueAddedShareNationalGdp"] = (getValueChainProperty(json, HOME_LABELS.ValueAddedShareNationalGdp) / 100.0) || undefined

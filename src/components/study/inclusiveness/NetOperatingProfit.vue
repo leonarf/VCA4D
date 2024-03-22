@@ -3,8 +3,8 @@
     <div class="flex flex-row items-center mt-4 mb-4">
         <div class="w-full">
             <BarChart v-if="studyData" :options="netOperatingProfitData"
-            @chartSeriesClick="handleNetOperatingProfitDataChartSeriesClick"></BarChart>
-            <MiniChartContainer :currentStage="currentStage" title="Net Operating Profit">
+            @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
+            <MiniChartContainer v-if="selectedStage" :currentStage="selectedStage" title="Net Operating Profit">
                 <div class="flex flex-row w-full justify-evenly mt-6">
                     <div class="w-full flex flex-row justify-center">
                         <Ring :options="currentStageNetOperatingProfitByTypeOfActorData"
@@ -34,24 +34,26 @@ const props = defineProps({
     currency: String
 })
 
-const currentStage = ref('')
+const selectedStage = ref(null)
+const handleDataChartSeriesClick = (event) => {
+  if (selectedStage.value == event.name) {
+    selectedStage.value = null
+  }
+  else {
+    selectedStage.value = event.name
+  }
+}
 
 const { prettyAmount, convertAmount } = useCurrencyUtils(props);
 const { stages, actors } = useActorsAndStages(props);
 
-const netOperatingProfitData = computed(() => getNetOperatingProfitData(stages, actors, convertAmount, prettyAmount, currentStage))
-
-const handleNetOperatingProfitDataChartSeriesClick = (event) => currentStage.value = event.name
+const netOperatingProfitData = computed(() => getNetOperatingProfitData(stages, actors, convertAmount, prettyAmount, selectedStage))
 
 const availableStages = computed(() => netOperatingProfitData.value.xAxis.data)
 
 const currentStageNetOperatingProfitByTypeOfActorData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
+    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
     return getNetOperatingProfitByTypeOfActorData(currentStageActors, convertAmount.value, prettyAmount.value)
-})
-
-onMounted(() => {
-    currentStage.value = availableStages.value[0]
 })
 </script>
 

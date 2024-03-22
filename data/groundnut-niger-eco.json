@@ -10,6 +10,7 @@
   "ecoData": {
     "macroData": {
       "giniIndex": 0.46,
+      "FTE_Definition": null,
       "rateOfIntegration": 0.774,
       "publicFundsBalance": 0.003,
       "valueAddedShareNationalGdp": 0.031,
@@ -54,62 +55,62 @@
         "name": "Small farm",
         "stage": "Producers",
         "id": 105,
-        "numberOfActors": 471428.5861472699,
-        "directAddedValue": 57495.32361074636,
+        "numberOfActors": 471428.58614727,
+        "directAddedValue": 57495.3236107464,
         "publicFundsBalance": 0,
-        "netOperatingProfit": 31066.62850720811,
+        "netOperatingProfit": 31066.6285072081,
         "totalCosts": 80620.4315407275,
-        "receivedAddedValue": 31066.62850720811,
+        "receivedAddedValue": 31066.6285072081,
         "employment": {
-          "tempMale": 12913043.18963185,
+          "tempMale": 12913043.1896319,
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
           "skilledFemale": 0,
-          "totalMale": 12913043.18963185,
+          "totalMale": 12913043.1896319,
           "totalFemale": 0,
-          "totalTemp": 12913043.18963185,
+          "totalTemp": 12913043.1896319,
           "totalSkilled": 0,
           "totalUnskilled": 0,
-          "total": 12913043.18963185
+          "total": 12913043.1896319
         }
       },
       {
         "name": "Medium farm",
         "stage": "Producers",
         "id": 107,
-        "numberOfActors": 347826.0838660298,
-        "directAddedValue": 64542.27875552591,
+        "numberOfActors": 347826.08386603,
+        "directAddedValue": 64542.2787555259,
         "publicFundsBalance": 0,
-        "netOperatingProfit": 15252.442092448564,
-        "totalCosts": 142965.11601810175,
-        "receivedAddedValue": 15252.442092448564,
+        "netOperatingProfit": 15252.4420924486,
+        "totalCosts": 142965.116018102,
+        "receivedAddedValue": 15252.4420924486,
         "employment": {
-          "tempMale": 23186950.94085845,
+          "tempMale": 23186950.9408584,
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
           "skilledFemale": 0,
-          "totalMale": 23186950.94085845,
+          "totalMale": 23186950.9408584,
           "totalFemale": 0,
-          "totalTemp": 23186950.94085845,
+          "totalTemp": 23186950.9408584,
           "totalSkilled": 0,
           "totalUnskilled": 0,
-          "total": 23186950.94085845
+          "total": 23186950.9408584
         }
       },
       {
         "name": "Large farm",
         "stage": "Producers",
         "id": 108,
-        "numberOfActors": 65296.000245161886,
-        "directAddedValue": 19045.102543439556,
+        "numberOfActors": 65296.0002451619,
+        "directAddedValue": 19045.1025434396,
         "publicFundsBalance": 0,
-        "netOperatingProfit": 10799.105084304136,
-        "totalCosts": 60739.73942182396,
-        "receivedAddedValue": 10799.105084304136,
+        "netOperatingProfit": 10799.1050843041,
+        "totalCosts": 60739.739421824,
+        "receivedAddedValue": 10799.1050843041,
         "employment": {
           "tempMale": 3474891.12830101,
           "tempFemale": 0,
@@ -130,11 +131,11 @@
         "stage": "Collectors",
         "id": 109,
         "numberOfActors": 3176.25,
-        "directAddedValue": 3430.3451430145724,
+        "directAddedValue": 3430.34514301457,
         "publicFundsBalance": 285.862493610475,
-        "netOperatingProfit": 1835.8676301408589,
-        "totalCosts": 64230.12994657275,
-        "receivedAddedValue": 1835.8676301408589,
+        "netOperatingProfit": 1835.86763014086,
+        "totalCosts": 64230.1299465728,
+        "receivedAddedValue": 1835.86763014086,
         "employment": {
           "tempMale": 635250.009465965,
           "tempFemale": 0,
@@ -154,62 +155,62 @@
         "name": "Agri-transformator",
         "stage": "Processors",
         "id": 106,
-        "numberOfActors": 201666.65865315363,
-        "directAddedValue": 31801.327174710823,
-        "publicFundsBalance": 973.7436422151229,
-        "netOperatingProfit": 20256.025880297282,
-        "totalCosts": 70776.35472882862,
-        "receivedAddedValue": 20256.025880297282,
+        "numberOfActors": 201666.658653154,
+        "directAddedValue": 31801.3271747108,
+        "publicFundsBalance": 973.743642215123,
+        "netOperatingProfit": 20256.0258802973,
+        "totalCosts": 70776.3547288286,
+        "receivedAddedValue": 20256.0258802973,
         "employment": {
-          "tempMale": 4381846.299281109,
+          "tempMale": 4381846.29928111,
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
           "skilledFemale": 0,
-          "totalMale": 4381846.299281109,
+          "totalMale": 4381846.29928111,
           "totalFemale": 0,
-          "totalTemp": 4381846.299281109,
+          "totalTemp": 4381846.29928111,
           "totalSkilled": 0,
           "totalUnskilled": 0,
-          "total": 4381846.299281109
+          "total": 4381846.29928111
         }
       },
       {
         "name": "COOP processing",
         "stage": "Processors",
         "id": 114,
-        "numberOfActors": 390.9230769230769,
+        "numberOfActors": 390.923076923077,
         "directAddedValue": 5127.16188583431,
         "publicFundsBalance": 1.95461542286332,
-        "netOperatingProfit": 4397.073935336391,
-        "totalCosts": 16372.42038857071,
-        "receivedAddedValue": 4397.073935336391,
+        "netOperatingProfit": 4397.07393533639,
+        "totalCosts": 16372.4203885707,
+        "receivedAddedValue": 4397.07393533639,
         "employment": {
-          "tempMale": 351830.77465909504,
+          "tempMale": 351830.774659095,
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
           "skilledFemale": 0,
-          "totalMale": 351830.77465909504,
+          "totalMale": 351830.774659095,
           "totalFemale": 0,
-          "totalTemp": 351830.77465909504,
+          "totalTemp": 351830.774659095,
           "totalSkilled": 0,
           "totalUnskilled": 0,
-          "total": 351830.77465909504
+          "total": 351830.774659095
         }
       },
       {
         "name": "Individual processing",
         "stage": "Processors",
         "id": 118,
-        "numberOfActors": 5122.666666666667,
-        "directAddedValue": 11649.157133267589,
+        "numberOfActors": 5122.66666666667,
+        "directAddedValue": 11649.1571332676,
         "publicFundsBalance": 25.6132237489811,
-        "netOperatingProfit": 10137.97692969229,
-        "totalCosts": 43547.60461958691,
-        "receivedAddedValue": 10137.97692969229,
+        "netOperatingProfit": 10137.9769296923,
+        "totalCosts": 43547.6046195869,
+        "receivedAddedValue": 10137.9769296923,
         "employment": {
           "tempMale": 614717.369975545,
           "tempFemale": 0,
@@ -230,24 +231,24 @@
         "stage": "Wholesalers",
         "id": 112,
         "numberOfActors": 119.109375,
-        "directAddedValue": 8728.807558154353,
-        "publicFundsBalance": 240.6009325658669,
-        "netOperatingProfit": 6209.763414541461,
-        "totalCosts": 62397.23416217204,
-        "receivedAddedValue": 6209.763414541461,
+        "directAddedValue": 8728.80755815435,
+        "publicFundsBalance": 240.600932565867,
+        "netOperatingProfit": 6209.76341454146,
+        "totalCosts": 62397.234162172,
+        "receivedAddedValue": 6209.76341454146,
         "employment": {
-          "tempMale": 503832.6514223595,
+          "tempMale": 503832.65142236,
           "tempFemale": 0,
-          "unskilledMale": 201533.0605689438,
+          "unskilledMale": 201533.060568944,
           "unskilledFemale": 0,
           "skilledMale": 0,
           "skilledFemale": 0,
-          "totalMale": 705365.7119913034,
+          "totalMale": 705365.711991304,
           "totalFemale": 0,
-          "totalTemp": 503832.6514223595,
+          "totalTemp": 503832.65142236,
           "totalSkilled": 0,
-          "totalUnskilled": 201533.0605689438,
-          "total": 705365.7119913034
+          "totalUnskilled": 201533.060568944,
+          "total": 705365.711991304
         }
       },
       {
@@ -255,24 +256,24 @@
         "stage": "Wholesalers",
         "id": 116,
         "numberOfActors": 793.8203125,
-        "directAddedValue": 3407.9457488957123,
-        "publicFundsBalance": 308.7961041234452,
-        "netOperatingProfit": 1059.8249790724099,
+        "directAddedValue": 3407.94574889571,
+        "publicFundsBalance": 308.796104123445,
+        "netOperatingProfit": 1059.82497907241,
         "totalCosts": 87085.9052429143,
-        "receivedAddedValue": 1059.8249790724099,
+        "receivedAddedValue": 1059.82497907241,
         "employment": {
-          "tempMale": 873202.3271896176,
+          "tempMale": 873202.327189618,
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
           "skilledFemale": 0,
-          "totalMale": 873202.3271896176,
+          "totalMale": 873202.327189618,
           "totalFemale": 0,
-          "totalTemp": 873202.3271896176,
+          "totalTemp": 873202.327189618,
           "totalSkilled": 0,
           "totalUnskilled": 0,
-          "total": 873202.3271896176
+          "total": 873202.327189618
         }
       },
       {
@@ -282,22 +283,22 @@
         "numberOfActors": 27941.7,
         "directAddedValue": 9611.9405984732,
         "publicFundsBalance": 167.650207962957,
-        "netOperatingProfit": 6486.940848985838,
-        "totalCosts": 99691.51781865017,
-        "receivedAddedValue": 6486.940848985838,
+        "netOperatingProfit": 6486.94084898584,
+        "totalCosts": 99691.5178186502,
+        "receivedAddedValue": 6486.94084898584,
         "employment": {
-          "tempMale": 1341201.6116581848,
+          "tempMale": 1341201.61165818,
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
           "skilledFemale": 0,
-          "totalMale": 1341201.6116581848,
+          "totalMale": 1341201.61165818,
           "totalFemale": 0,
-          "totalTemp": 1341201.6116581848,
+          "totalTemp": 1341201.61165818,
           "totalSkilled": 0,
           "totalUnskilled": 0,
-          "total": 1341201.6116581848
+          "total": 1341201.61165818
         }
       },
       {
@@ -305,24 +306,24 @@
         "stage": "Retailers",
         "id": 119,
         "numberOfActors": 7089,
-        "directAddedValue": 3548.9149595070194,
+        "directAddedValue": 3548.91495950702,
         "publicFundsBalance": 42.5340020202566,
-        "netOperatingProfit": 2756.081194055528,
-        "totalCosts": 22764.318129884734,
-        "receivedAddedValue": 2756.081194055528,
+        "netOperatingProfit": 2756.08119405553,
+        "totalCosts": 22764.3181298847,
+        "receivedAddedValue": 2756.08119405553,
         "employment": {
-          "tempMale": 340272.0029577615,
+          "tempMale": 340272.002957761,
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
           "skilledFemale": 0,
-          "totalMale": 340272.0029577615,
+          "totalMale": 340272.002957761,
           "totalFemale": 0,
-          "totalTemp": 340272.0029577615,
+          "totalTemp": 340272.002957761,
           "totalSkilled": 0,
           "totalUnskilled": 0,
-          "total": 340272.0029577615
+          "total": 340272.002957761
         }
       },
       {
@@ -355,7 +356,7 @@
         "sellerActorName": "Small farm",
         "buyerActorName": "Small farm",
         "volumeExchanged": 8242.82564494978,
-        "monetaryValue": 1030353205.6187226,
+        "monetaryValue": 1030353205.61872,
         "unitPrice": 125000,
         "volumeUnit": "Ton",
         "product": "Greentops"
@@ -382,7 +383,7 @@
         "sellerActorName": "Small farm",
         "buyerActorName": "Livestock raiser",
         "volumeExchanged": 156613.687254046,
-        "monetaryValue": 19576710906.75575,
+        "monetaryValue": 19576710906.7557,
         "unitPrice": 125000,
         "volumeUnit": "Ton",
         "product": "Greentops"
@@ -409,7 +410,7 @@
         "sellerActorName": "Agri-transformator",
         "buyerActorName": "Agri-transformator",
         "volumeExchanged": 2520.83323316442,
-        "monetaryValue": 315104154.1455525,
+        "monetaryValue": 315104154.145552,
         "unitPrice": 125000,
         "volumeUnit": "Ton",
         "product": "Greentops"
@@ -454,7 +455,7 @@
         "sellerActorName": "Agri-transformator",
         "buyerActorName": "Consumption Rural",
         "volumeExchanged": 8892.58779741669,
-        "monetaryValue": 12082359040.350058,
+        "monetaryValue": 12082359040.3501,
         "unitPrice": 1358700,
         "volumeUnit": "Ton",
         "product": "Oil"
@@ -463,7 +464,7 @@
         "sellerActorName": "Agri-transformator",
         "buyerActorName": "Consumption Rural",
         "volumeExchanged": 13604.8998218899,
-        "monetaryValue": 204073497.3283485,
+        "monetaryValue": 204073497.328348,
         "unitPrice": 15000,
         "volumeUnit": "Ton",
         "product": "Shell"
@@ -472,7 +473,7 @@
         "sellerActorName": "Agri-transformator",
         "buyerActorName": "Consumption Rural",
         "volumeExchanged": 29804.671695222,
-        "monetaryValue": 15498429281.51544,
+        "monetaryValue": 15498429281.5154,
         "unitPrice": 520000,
         "volumeUnit": "Ton",
         "product": "Cake human"
@@ -481,7 +482,7 @@
         "sellerActorName": "Agri-transformator",
         "buyerActorName": "Consumption Rural",
         "volumeExchanged": 13893.014853088,
-        "monetaryValue": 18876439280.890667,
+        "monetaryValue": 18876439280.8907,
         "unitPrice": 1358700,
         "volumeUnit": "Ton",
         "product": "Oil"
@@ -490,7 +491,7 @@
         "sellerActorName": "Agri-transformator",
         "buyerActorName": "Consumption Rural",
         "volumeExchanged": 21255.1261349593,
-        "monetaryValue": 318826892.0243895,
+        "monetaryValue": 318826892.02439,
         "unitPrice": 15000,
         "volumeUnit": "Ton",
         "product": "Shell"
@@ -517,7 +518,7 @@
         "sellerActorName": "Medium farm",
         "buyerActorName": "Livestock raiser",
         "volumeExchanged": 235340.520142893,
-        "monetaryValue": 29417565017.86162,
+        "monetaryValue": 29417565017.8616,
         "unitPrice": 125000,
         "volumeUnit": "Ton",
         "product": "Greentops"
@@ -643,7 +644,7 @@
         "sellerActorName": "COOP processing",
         "buyerActorName": "Livestock raiser",
         "volumeExchanged": 14229.6005965013,
-        "monetaryValue": 3913140164.037857,
+        "monetaryValue": 3913140164.03786,
         "unitPrice": 275000,
         "volumeUnit": "Ton",
         "product": "Cake animal"
@@ -724,7 +725,7 @@
         "sellerActorName": "Individual processing",
         "buyerActorName": "Consump. Urban",
         "volumeExchanged": 36883.043022933,
-        "monetaryValue": 23051901889.333126,
+        "monetaryValue": 23051901889.3331,
         "unitPrice": 625000,
         "volumeUnit": "Ton",
         "product": "Cake Human"
@@ -733,7 +734,7 @@
         "sellerActorName": "Individual processing",
         "buyerActorName": "Consump. Urban",
         "volumeExchanged": 18421.0311952746,
-        "monetaryValue": 30034330838.929935,
+        "monetaryValue": 30034330838.9299,
         "unitPrice": 1630437,
         "volumeUnit": "Ton",
         "product": "Oil"
@@ -742,7 +743,7 @@
         "sellerActorName": "Individual processing",
         "buyerActorName": "Consump. Urban",
         "volumeExchanged": 27662.2834885335,
-        "monetaryValue": 414934252.3280025,
+        "monetaryValue": 414934252.328003,
         "unitPrice": 15000,
         "volumeUnit": "Liter",
         "product": "Shell"
@@ -768,10 +769,10 @@
     ],
     "addedValue": {
       "landOwnersFees": 0,
-      "depreciation": 7336.262514295581,
+      "depreciation": 7336.26251429558,
       "employeeWages": 98241.7419136466,
-      "financialInstitutionsInterests": 505.81496587437584,
-      "government": 2046.755221669968
+      "financialInstitutionsInterests": 505.814965874376,
+      "government": 2046.75522166997
     },
     "importExport": {
       "import": [
@@ -821,23 +822,31 @@
     "farmToFinalPricesRatio": [
       {
         "label": "Producers to urban market",
-        "farmPrice": 240,
-        "finalPrice": 380
+        "farmPrice": 0.00024,
+        "farmProduct": "Shelled groundnut",
+        "endPrice": 0.00038,
+        "endProducts": "Shelled groundnut"
       },
       {
         "label": "Producers to export market",
-        "farmPrice": 240,
-        "finalPrice": 400
+        "farmPrice": 0.00024,
+        "farmProduct": "Shelled groundnut",
+        "endPrice": 0.0004,
+        "endProducts": "Shelled groundnut"
       },
       {
         "label": "Producers to processed groundnut oil and human food",
-        "farmPrice": 240,
-        "finalPrice": 588.5874
+        "farmPrice": 0.00024,
+        "farmProduct": "Shelled groundnut",
+        "endPrice": 0.0005885874,
+        "endProducts": "Oil and human food"
       },
       {
         "label": "Producers to processed groundnut oil and animal feed",
-        "farmPrice": 240,
-        "finalPrice": 441.5874
+        "farmPrice": 0.00024,
+        "farmProduct": "Shelled groundnut",
+        "endPrice": 0.0004415874,
+        "endProducts": "Oil and animal feed"
       }
     ]
   }

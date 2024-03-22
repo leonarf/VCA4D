@@ -1,4 +1,4 @@
-import { prettyFormatAmount } from '@utils/currency.js'
+import { useCurrencyUtils } from '@utils/format.js'
 import { addColors } from '@utils/colors.js'
 
 const SANKEY_TITLE = "The various actors and their share in the flows of the value chain"
@@ -19,6 +19,7 @@ const getNodeGap = (studyData) => {
 }
 
 export const getSankeyData = (studyData, sankeyDisplayMode) => {
+    const { prettyAmount, convertAmount } = useCurrencyUtils({currency : studyData.targetCurrency});
     let monetaryCurrency = studyData.targetCurrency
     const { actors, flows } = studyData.ecoData
 
@@ -185,7 +186,7 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
                         },
                         {
                             label: "Monetary value",
-                            value: prettyFormatAmount(params.data["Monetary value"], monetaryCurrency)
+                            value: prettyAmount.value(params.data["Monetary value"], monetaryCurrency)
                         },
                         {
                             label: "Products",
@@ -193,7 +194,7 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
                         },
                         {
                             label: "Unitary price (local curency)",
-                            value: prettyFormatAmount(params.data['Unitary price (local curency)'], monetaryCurrency)
+                            value: prettyAmount.value(params.data['Unitary price (local curency)'], monetaryCurrency)
                         },
                         {
                             label: "Volume exchanged (kg Of product)",

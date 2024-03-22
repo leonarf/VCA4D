@@ -67,15 +67,18 @@ const hasPricesData = computed(() => {
     return props.studyData.ecoData.farmToFinalPricesRatio.length > 0
 })
 
+
 const pricesData = computed(() => {
     if (!hasPricesData.value) {
         return null
     }
     return props.studyData.ecoData.farmToFinalPricesRatio.map(item => ({
         label: item.label,
+        farmProduct: item.farmProduct,
+        endProducts: item.endProducts,
         farm: prettyAmount.value(convertAmount.value(item.farmPrice)),
-        final: prettyAmount.value(convertAmount.value(item.finalPrice)),
-        ratio: item.farmPrice / item.finalPrice
+        final: prettyAmount.value(convertAmount.value(item.endPrice)),
+        ratio: item.farmPrice / item.endPrice
     }))
 })
 

@@ -344,14 +344,17 @@ export const getNumberOfJobsData = (stages, actors, currentStage) => {
 export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyAmount, currentStage) => {
     let tooltip = {}
 
+    let total = 0
     const items = stages.value.map(stage => {
         const stageActors = actors.value.filter(actor => actor.stage === stage.name)
         const subTotal = convertAmount.value(stageActors
             .reduce((res, actor) => res + actor.netOperatingProfit || 0, 0))
         if (subTotal !== 0) {
+            total += subTotal
             let toolTipValue = `${stage.name}: ${prettyAmount.value(subTotal)}`
             for (const actor of stageActors) {
-                toolTipValue += `<br>${actor.name}: ${prettyAmount.value(convertAmount.value(actor.netOperatingProfit))}`
+                var convertedActorProfit = convertAmount.value(actor.netOperatingProfit)
+                toolTipValue += `<br>${actor.name}: ${prettyAmount.value(convertedActorProfit)} (${formatPercent(convertedActorProfit / subTotal)})`
             }
             tooltip[stage.name] = toolTipValue
             return {
@@ -360,7 +363,7 @@ export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyA
             }
         }
     }).filter(item => !!item)
-    return getSelectableBarChart(items, currentStage.value, tooltip, prettyAmount.value)
+    return getSelectableBarChart(items, currentStage.value, tooltip, (value) => `${prettyAmount.value(value)} (${formatPercent(value / total)})`)
 }
 
 export const getNetOperatingProfitByNumberActorsData = (stages, actors, convertAmount, prettyAmount, currentStage) => {

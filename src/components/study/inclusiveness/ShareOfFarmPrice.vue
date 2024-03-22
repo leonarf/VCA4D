@@ -19,9 +19,11 @@ const donnéesPourLeTableau = computed(() => {
   return props.data.map(item => {
     return {
       "Case": item.label,
+      "Farm product": item.farmProduct,
       "Farm gate price": `${item.farm} per kg`,
-      "Final price": `${item.final} per kg`,
-      "Ratio": formatPercent(item.ratio),
+      "End products": item.endProducts,
+      "End products unit value": `${item.final} per kg`,
+      "Farm value part": formatPercent(item.ratio),
     }
   })
 })

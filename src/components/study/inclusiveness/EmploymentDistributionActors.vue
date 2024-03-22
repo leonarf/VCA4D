@@ -10,8 +10,8 @@
                         @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
             </div>
         </div>
-        <div>
-            <MiniChartContainer :currentStage="currentStage" title="Number of actors">
+        <div v-if="selectedStage">
+            <MiniChartContainer :currentStage="selectedStage" title="Number of actors">
                 <div class="flex flex-row w-full justify-evenly mt-6">
                     <div class="w-full flex flex-row justify-center">
                         <Ring :options="currentStageNumberOfActorsByTypeOfActorData"></Ring>
@@ -40,12 +40,21 @@ const props = defineProps({
     studyData: Object,
 })
 
-const currentStage = ref('')
+const selectedStage = ref(null)
+
+const handleDataChartSeriesClick = (event) => {
+  if (selectedStage.value == event.name) {
+    selectedStage.value = null
+  }
+  else {
+    selectedStage.value = event.name
+  }
+}
 
 const { stages, actors } = useActorsAndStages(props);
 
 const numberOfActorsData = computed(() => {
-    return getNumberOfActorsData(stages, actors, currentStage)
+    return getNumberOfActorsData(stages, actors, selectedStage)
 })
 
 const availableStages = computed(() => numberOfActorsData.value.xAxis.data)
@@ -56,16 +65,9 @@ const totalNumberOfActors = computed(() => {
 })
 
 const currentStageNumberOfActorsByTypeOfActorData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
+    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
     return getNumberOfActorsByTypeOfActorData(currentStageActors)
 })
-
-const handleDataChartSeriesClick = (event) => currentStage.value = event.name
-
-onMounted(() => {
-    currentStage.value = availableStages.value[0]
-})
-
 </script>
 
 <style scoped lang="scss"></style>

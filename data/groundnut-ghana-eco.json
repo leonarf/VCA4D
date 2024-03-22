@@ -10,6 +10,7 @@
   "ecoData": {
     "macroData": {
       "giniIndex": 0.69,
+      "FTE_Definition": null,
       "rateOfIntegration": 0.871,
       "publicFundsBalance": 0.004,
       "valueAddedShareNationalGdp": 0.006999999999999999,
@@ -792,22 +793,30 @@
       {
         "label": "Small and medium farm to snack or paste local market",
         "farmPrice": 2,
-        "finalPrice": 4.4556
+        "farmProduct": "Unshelled groudnut",
+        "endPrice": 4.4556,
+        "endProducts": "Snack or paste"
       },
       {
         "label": "Small and medium farm to snack or paste local market",
         "farmPrice": 5.6,
-        "finalPrice": 9.6
+        "farmProduct": "Shelled groundnut",
+        "endPrice": 9.6,
+        "endProducts": "Snack or paste"
       },
       {
-        "label": "Small and medium farm to Kulikuli and oil  local market",
+        "label": "Small and medium farm to Kulikuli and oil local market",
         "farmPrice": 2,
-        "finalPrice": 7.71
+        "farmProduct": "Unshelled groudnnut",
+        "endPrice": 7.71,
+        "endProducts": "Kulikuli and oil"
       },
       {
-        "label": "Large intensive farm to snack and flour for  export market",
+        "label": "Large intensive farm to snack and flour for export market",
         "farmPrice": 3,
-        "finalPrice": 13.31
+        "farmProduct": "Unshelled groudnnut",
+        "endPrice": 13.31,
+        "endProducts": "Snack and flour"
       }
     ]
   }

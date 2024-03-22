@@ -3,8 +3,8 @@
     <div class="flex flex-row items-center mt-4">
         <div class="w-full">
             <BarChart v-if="studyData" :options="netOperatingProfitByNumberActorsData"
-            @chartSeriesClick="handleChartSeriesClick"></BarChart>
-            <MiniChartContainer :currentStage="currentStage" title="Net Operating Profit per actor">
+            @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
+            <MiniChartContainer v-if="selectedStage" :currentStage="selectedStage" title="Net Operating Profit per actor">
                 <div class="flex flex-row w-full justify-evenly mt-6">
                     <div class="w-full flex flex-row justify-center">
                         <Ring :options="currentStageSplitData"></Ring>
@@ -33,24 +33,26 @@ const props = defineProps({
     currency: String
 })
 
-const currentStage = ref('')
+const selectedStage = ref(null)
+const handleDataChartSeriesClick = (event) => {
+  if (selectedStage.value == event.name) {
+    selectedStage.value = null
+  }
+  else {
+    selectedStage.value = event.name
+  }
+}
 
 const { prettyAmount, convertAmount } = useCurrencyUtils(props);
 const { stages, actors } = useActorsAndStages(props);
 
-const netOperatingProfitByNumberActorsData = computed(() => getNetOperatingProfitByNumberActorsData(stages, actors, convertAmount, prettyAmount, currentStage))
+const netOperatingProfitByNumberActorsData = computed(() => getNetOperatingProfitByNumberActorsData(stages, actors, convertAmount, prettyAmount, selectedStage))
 const currentStageSplitData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === currentStage.value)
+    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
     return getNetOperatingProfitPerActorOfStage(currentStageActors, convertAmount.value, prettyAmount.value)
 })
 
 const availableStages = computed(() => netOperatingProfitByNumberActorsData.value.xAxis.data)
-
-const handleChartSeriesClick = (event) => currentStage.value = event.name
-
-onMounted(() => {
-    currentStage.value = availableStages.value[0]
-})
 </script>
 
 <style scoped lang="scss"></style>

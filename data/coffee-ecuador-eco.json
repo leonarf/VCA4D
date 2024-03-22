@@ -562,17 +562,17 @@
       {
         "label": "arabica producer export instant",
         "farmPrice": 9600,
-        "finalPrice": 13000
+        "endPrice": 13000
       },
       {
         "label": "robusta producer export instant",
         "farmPrice": 2970,
-        "finalPrice": 11000
+        "endPrice": 11000
       },
       {
         "label": "arabica  producer domestic toasted",
         "farmPrice": 1200,
-        "finalPrice": 8500
+        "endPrice": 8500
       }
     ]
   }

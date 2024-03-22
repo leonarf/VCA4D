@@ -741,32 +741,32 @@
       {
         "label": "Cacao seco",
         "farmPrice": 2000,
-        "finalPrice": 2430
+        "endPrice": 2430
       },
       {
         "label": "Cacao seco2",
         "farmPrice": 2000,
-        "finalPrice": 3220
+        "endPrice": 3220
       },
       {
         "label": "Cacao seco3",
         "farmPrice": 2000,
-        "finalPrice": 4210
+        "endPrice": 4210
       },
       {
         "label": "Cacao seco to Semi-Elaborate",
         "farmPrice": 2000,
-        "finalPrice": 3145.7
+        "endPrice": 3145.7
       },
       {
         "label": "Cacao seco to Chocolate",
         "farmPrice": 2000,
-        "finalPrice": 19148.847
+        "endPrice": 19148.847
       },
       {
         "label": "Cacao seco to Chocolate for National Market",
         "farmPrice": 2000,
-        "finalPrice": 11877.3
+        "endPrice": 11877.3
       }
     ]
   }

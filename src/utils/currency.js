@@ -95,29 +95,6 @@ export const getValueInCurrency = (amount, fromCurrency, toCurrency, year) => {
   return amount / getRate(fromCurrency, year) * getRate("EUR", year)
 }
 
-export const prettyFormatAmount = (amount, currency) => {
-  let numberDigits = 0
-  let divisor = 1
-  let textUnit = ''
-  if (Math.abs(amount) > 1e9) {
-    numberDigits = 1
-    divisor = 1e9
-    textUnit = 'Billions '
-  } else if (Math.abs(amount) > 1e6) {
-    numberDigits = 1
-    divisor = 1e6
-    textUnit = 'Millions '
-  } else if (Math.abs(amount) < 100) {
-    numberDigits = 2
-    divisor = 1
-    textUnit = ''
-  }
-  return `${new Intl.NumberFormat('en', {
-    style: "decimal",
-    maximumFractionDigits: numberDigits,
-  }).format(amount / divisor)} ${textUnit}${getCurrencySymbol(currency)}`;
-}
-
 export const isValidCurrency = (ccy) => {
   try {
     new Intl.NumberFormat(undefined, {
