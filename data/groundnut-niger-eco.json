@@ -227,7 +227,7 @@
         }
       },
       {
-        "name": "Wholesaller",
+        "name": "Wholesaler",
         "stage": "Wholesalers",
         "id": 112,
         "numberOfActors": 119.109375,
@@ -579,7 +579,7 @@
       },
       {
         "sellerActorName": "Collector",
-        "buyerActorName": "Wholesaller",
+        "buyerActorName": "Wholesaler",
         "volumeExchanged": 170247,
         "monetaryValue": 44264220000,
         "unitPrice": 260000,
@@ -588,7 +588,7 @@
       },
       {
         "sellerActorName": "Collector",
-        "buyerActorName": "Wholesaller",
+        "buyerActorName": "Wholesaler",
         "volumeExchanged": 40656,
         "monetaryValue": 10570560000,
         "unitPrice": 260000,
@@ -597,7 +597,7 @@
       },
       {
         "sellerActorName": "Collector",
-        "buyerActorName": "Wholesaller",
+        "buyerActorName": "Wholesaler",
         "volumeExchanged": 17787,
         "monetaryValue": 4624620000,
         "unitPrice": 260000,
@@ -614,7 +614,7 @@
         "product": "Groundnuts"
       },
       {
-        "sellerActorName": "Wholesaller",
+        "sellerActorName": "Wholesaler",
         "buyerActorName": "Semi-Wholesaler Domestic",
         "volumeExchanged": 170247,
         "monetaryValue": 47669160000,
@@ -623,7 +623,7 @@
         "product": "Groundnuts"
       },
       {
-        "sellerActorName": "Wholesaller",
+        "sellerActorName": "Wholesaler",
         "buyerActorName": "COOP processing",
         "volumeExchanged": 40656,
         "monetaryValue": 13823040000,
@@ -632,7 +632,7 @@
         "product": "Groundnuts"
       },
       {
-        "sellerActorName": "Wholesaller",
+        "sellerActorName": "Wholesaler",
         "buyerActorName": "Reg.market",
         "volumeExchanged": 17787,
         "monetaryValue": 7114800000,

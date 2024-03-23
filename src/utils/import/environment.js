@@ -2,7 +2,10 @@ import { ErrorLevels, setImportErrors, parseActorTypes, getSheetNameContent } fr
 
 const parseValueChainsDescriptions = (json) => {
   var sheetname = "Value chains description"
-  var sheetAsJson = json[sheetname]
+  var sheetAsJson = getSheetNameContent(json, sheetname)
+  if (sheetAsJson == null) {
+    return
+  }
   const res = sheetAsJson.map((valuechain) => ({
     name: valuechain['Value chain name'],
     volume: valuechain['annual volume'],
@@ -22,7 +25,7 @@ const parseValueChainsDescriptions = (json) => {
 
 const parseActorsAndChainsMatrix = (json, valueChains) => {
   var sheetname = "Actors and Chains matrix"
-  var sheetAsJson = getSheetNameContent(json,sheetname)
+  var sheetAsJson = getSheetNameContent(json, sheetname)
   if (sheetAsJson == null) {
     return
   }

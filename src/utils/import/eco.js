@@ -1,4 +1,4 @@
-import { ErrorLevels, setImportErrors, getImportErrors, parseActorTypes, doColumnExist, checkColumnsExistence} from '@/utils/import/generic.js'
+import { ErrorLevels, setImportErrors, getImportErrors, getSheetNameContent, parseActorTypes, checkColumnsExistence} from '@/utils/import/generic.js'
 import { getTotalAddedValue } from '../economics'
 
 export const ECO_SHEET_NAMES = {
@@ -11,7 +11,8 @@ export const ECO_SHEET_NAMES = {
   ValueAddedReceivers: "Direct value added receivers",
   Employment: "Employment",
   AccountByActor: "Account by actor type",
-  ImportExport: "Imported And exported goods"
+  ImportExport: "Imported And exported goods",
+  Translation: "AFA Translations",
 }
 
 export const HOME_LABELS = {
@@ -36,6 +37,11 @@ const FARM_GATE_COLUMNS = {
   FarmProduct: "Farm product",
   EndPrice: "End products unit value",
   EndProducts: "End products"
+}
+
+const TRANSLATIONS_COLUMNS = {
+  AFAName: 'AFA Names',
+  EnglishTranslation: 'English translation',
 }
 
 const FLOWS_COLUMNS = {
@@ -115,10 +121,13 @@ const parseStageSheet = (json) => {
     Description: "Description",
   }
   var sheetname = ECO_SHEET_NAMES.StagesDescription
-  var sheetAsJson = json[sheetname]
+  var sheetAsJson = getSheetNameContent(json, sheetname)
+  if (sheetAsJson == null) {
+    return
+  }
   checkColumnsExistence(sheetAsJson, STAGE_SHEET_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  return json[sheetname].map((stage, index) => ({
+  return sheetAsJson.map((stage, index) => ({
     name: stage[STAGE_SHEET_COLUMNS.Stages],
     description: stage[STAGE_SHEET_COLUMNS.Description] || '',
     index
@@ -126,9 +135,27 @@ const parseStageSheet = (json) => {
   )
 }
 
+const parseTranslationSheet = (json) => {
+  var sheetname = ECO_SHEET_NAMES.Translation
+  var sheetAsJson = getSheetNameContent(json, sheetname)
+  if (sheetAsJson == null) {
+    return
+  }
+  checkColumnsExistence(sheetAsJson, TRANSLATIONS_COLUMNS, sheetname, ErrorLevels.BreaksInformations)
+
+  var translationDict = {}
+  sheetAsJson.forEach((item) => {
+    translationDict[item[TRANSLATIONS_COLUMNS.AFAName]] = item[TRANSLATIONS_COLUMNS.EnglishTranslation]
+  })
+  return translationDict
+}
+
 const parseFlowsSheet = (json) => {
   var sheetname = ECO_SHEET_NAMES.Flows
-  var sheetAsJson = json[sheetname]
+  var sheetAsJson = getSheetNameContent(json, sheetname)
+  if (sheetAsJson == null) {
+    return
+  }
   checkColumnsExistence(sheetAsJson, FLOWS_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
   return sheetAsJson.map(flow => {
@@ -142,7 +169,11 @@ const parseFlowsSheet = (json) => {
 
 const parseIndicatorsSheet = (json, actors) => {
   var sheetname = ECO_SHEET_NAMES.Indicators
-  var sheetAsJson = json[sheetname]
+
+  var sheetAsJson = getSheetNameContent(json, sheetname)
+  if (sheetAsJson == null) {
+    return
+  }
   checkColumnsExistence(sheetAsJson, INDICATORS_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
   const indicators = sheetAsJson.map(indicator => ({
@@ -184,10 +215,13 @@ const parseIndicatorsSheet = (json, actors) => {
 
 const parseValueAddedReceiverSheet = (json, actors) => {
   var sheetname = ECO_SHEET_NAMES.ValueAddedReceivers
-  var sheetAsJson = json[sheetname]
+  var sheetAsJson = getSheetNameContent(json, sheetname)
+  if (sheetAsJson == null) {
+    return
+  }
   checkColumnsExistence(sheetAsJson, VALUE_ADDED_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const addedValueItems = json[sheetname].map(addedValue => ({
+  const addedValueItems = sheetAsJson.map(addedValue => ({
     receiverName: addedValue[VALUE_ADDED_COLUMNS.ReceiverName],
     value: addedValue[VALUE_ADDED_COLUMNS.Value] || 0
   }))
@@ -228,10 +262,13 @@ const parseValueAddedReceiverSheet = (json, actors) => {
 
 const parseEmploymentSheet = (json, actors) => {
   var sheetname = ECO_SHEET_NAMES.Employment
-  var sheetAsJson = json[sheetname]
+  var sheetAsJson = getSheetNameContent(json, sheetname)
+  if (sheetAsJson == null) {
+    return
+  }
   checkColumnsExistence(sheetAsJson, EMPLOYMENT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const employments = json[sheetname].map(employment => {
+  const employments = sheetAsJson.map(employment => {
     const actorName = employment[EMPLOYMENT_COLUMNS.ActorType]
     const tempMale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempMale])
     const tempFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempFemale])
@@ -287,10 +324,13 @@ const parseEmploymentSheet = (json, actors) => {
 
 const parseAccountByActorSheet = (json, actors, stages) => {
   var sheetname = ECO_SHEET_NAMES.AccountByActor
-  var sheetAsJson = json[sheetname]
+  var sheetAsJson = getSheetNameContent(json, sheetname)
+  if (sheetAsJson == null) {
+    return
+  }
   checkColumnsExistence(sheetAsJson, ACCOUNT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const accountItems = json[ECO_SHEET_NAMES.AccountByActor].map(accountItem => ({
+  const accountItems = sheetAsJson.map(accountItem => ({
     actorName: accountItem[ACCOUNT_COLUMNS.ActorName],
     data: {
       costOrRevenue: accountItem[ACCOUNT_COLUMNS.CostOrRevenue],
@@ -323,10 +363,13 @@ const parseAccountByActorSheet = (json, actors, stages) => {
 
 const parseImportExportSheet = (json) => {
   var sheetname = ECO_SHEET_NAMES.ImportExport
-  var sheetAsJson = json[sheetname]
+  var sheetAsJson = getSheetNameContent(json, sheetname)
+  if (sheetAsJson == null) {
+    return
+  }
   checkColumnsExistence(sheetAsJson, IMPORT_EXPORT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const importExportItems = json[sheetname].map(importExportItem => ({
+  const importExportItems = sheetAsJson.map(importExportItem => ({
         label: importExportItem[IMPORT_EXPORT_COLUMNS.Goods],
         importExport: importExportItem[IMPORT_EXPORT_COLUMNS.ImportOrExport],
         amount: importExportItem[IMPORT_EXPORT_COLUMNS.Value],
@@ -378,10 +421,13 @@ const parseImportExportSheet = (json) => {
 
 const parseFarmGatePriceSheet = (json, currencyRatio) => {
   var sheetname = ECO_SHEET_NAMES.FarmGate
-  var sheetAsJson = json[sheetname]
+  var sheetAsJson = getSheetNameContent(json, sheetname)
+  if (sheetAsJson == null) {
+    return
+  }
   checkColumnsExistence(sheetAsJson, FARM_GATE_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  var result = json[ECO_SHEET_NAMES.FarmGate].map(priceItem => ({
+  var result = sheetAsJson.map(priceItem => ({
     label: priceItem[FARM_GATE_COLUMNS.Case],
     farmPrice: priceItem[FARM_GATE_COLUMNS.FarmPrice],
     farmProduct: priceItem[FARM_GATE_COLUMNS.FarmProduct],
@@ -397,6 +443,24 @@ const parseFarmGatePriceSheet = (json, currencyRatio) => {
     })
   }
   return result
+}
+
+const applyTranslation = (studyData, translationDict) => {
+  var namesToTranslate = Object.keys(translationDict)
+  for (var actor of studyData.actors) {
+    if (namesToTranslate.includes(actor.name)) {
+      actor.name = translationDict[actor.name]
+    }
+  }
+  for (var flow of studyData.flows) {
+    if (namesToTranslate.includes(flow.sellerActorName)) {
+      flow.sellerActorName = translationDict[flow.sellerActorName]
+    }
+    if (namesToTranslate.includes(flow.buyerActorName)) {
+      flow.buyerActorName = translationDict[flow.buyerActorName]
+    }
+  }
+  return studyData
 }
 
 export const parseEconomicsJson = (json, currencyRatio) => {
@@ -439,7 +503,7 @@ export const parseEconomicsJson = (json, currencyRatio) => {
   macroData["domesticResourceCostRatio"] = getValueChainProperty(json, HOME_LABELS.DomesticResourceCostRatio)
   macroData["nominalProtectionCoefficient"] = getValueChainProperty(json, HOME_LABELS.NominalProtectionCoefficient)
   
-  return {
+  var studyData = {
     macroData,
     stages,
     actors,
@@ -448,6 +512,9 @@ export const parseEconomicsJson = (json, currencyRatio) => {
     importExport,
     farmToFinalPricesRatio
   }
+  const translationDictionnary = parseTranslationSheet(json)
+  studyData = applyTranslation(studyData, translationDictionnary)
+  return studyData
 }
 
   export const getErrors = (study) => {

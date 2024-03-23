@@ -10,7 +10,6 @@
   "ecoData": {
     "macroData": {
       "giniIndex": 0.69,
-      "FTE_Definition": null,
       "rateOfIntegration": 0.871,
       "publicFundsBalance": 0.004,
       "valueAddedShareNationalGdp": 0.006999999999999999,
@@ -52,7 +51,7 @@
     ],
     "actors": [
       {
-        "name": "Producer NASH",
+        "name": "Small farm",
         "stage": "Producers",
         "id": 89,
         "numberOfActors": 374089.068825911,
@@ -77,7 +76,7 @@
         }
       },
       {
-        "name": "Producer ASH",
+        "name": "Average farm",
         "stage": "Producers",
         "id": 90,
         "numberOfActors": 27337.2781065089,
@@ -102,7 +101,7 @@
         }
       },
       {
-        "name": "Producer CF",
+        "name": "Large intensive farm",
         "stage": "Producers",
         "id": 91,
         "numberOfActors": 1223.77622377622,
@@ -127,7 +126,7 @@
         }
       },
       {
-        "name": "Aggregator",
+        "name": "Informal aggregator",
         "stage": "Collectors",
         "id": 92,
         "numberOfActors": 2565.87692307692,
@@ -152,7 +151,7 @@
         }
       },
       {
-        "name": "Processor Paste infor",
+        "name": "Informal Paste processor",
         "stage": "Processors",
         "id": 94,
         "numberOfActors": 15724.3489304813,
@@ -177,7 +176,7 @@
         }
       },
       {
-        "name": "Processor Snack infor",
+        "name": "Informal Snack processor",
         "stage": "Processors",
         "id": 95,
         "numberOfActors": 3738.18103864734,
@@ -202,7 +201,7 @@
         }
       },
       {
-        "name": "Processor Kulikuli infor",
+        "name": "Kulikuli processor",
         "stage": "Processors",
         "id": 96,
         "numberOfActors": 288.678791270285,
@@ -227,7 +226,7 @@
         }
       },
       {
-        "name": "Processor Flour infor",
+        "name": "Informal Flour processor",
         "stage": "Processors",
         "id": 97,
         "numberOfActors": 386.41872659176,
@@ -252,7 +251,7 @@
         }
       },
       {
-        "name": "Processor Paste formal",
+        "name": "Formal Paste processor",
         "stage": "Processors",
         "id": 102,
         "numberOfActors": 23.3369326923077,
@@ -277,7 +276,7 @@
         }
       },
       {
-        "name": "Processor Snack formal",
+        "name": "Formal Snack processor",
         "stage": "Processors",
         "id": 103,
         "numberOfActors": 23.3369326923077,
@@ -327,7 +326,7 @@
         }
       },
       {
-        "name": "Aggregator formal",
+        "name": "Formal Aggregator",
         "stage": "Wholesalers",
         "id": 101,
         "numberOfActors": 20,
@@ -352,7 +351,7 @@
         }
       },
       {
-        "name": "Retailer informal",
+        "name": "Retailer",
         "stage": "Retailers",
         "id": 98,
         "numberOfActors": 13685.8269387755,
@@ -397,8 +396,8 @@
     ],
     "flows": [
       {
-        "sellerActorName": "Producer NASH",
-        "buyerActorName": "Aggregator",
+        "sellerActorName": "Small farm",
+        "buyerActorName": "Informal aggregator",
         "volumeExchanged": 147840000,
         "monetaryValue": 325248007.049561,
         "unitPrice": 2.20000004768372,
@@ -406,7 +405,7 @@
         "product": "Unshelled"
       },
       {
-        "sellerActorName": "Producer NASH",
+        "sellerActorName": "Small farm",
         "buyerActorName": "Wholesaler",
         "volumeExchanged": 69615797.4683544,
         "monetaryValue": 393329262.335282,
@@ -415,8 +414,8 @@
         "product": "Shelled"
       },
       {
-        "sellerActorName": "Producer ASH",
-        "buyerActorName": "Aggregator",
+        "sellerActorName": "Average farm",
+        "buyerActorName": "Informal aggregator",
         "volumeExchanged": 18942000,
         "monetaryValue": 41672400.903225,
         "unitPrice": 2.20000004768372,
@@ -424,8 +423,8 @@
         "product": "Unshelled"
       },
       {
-        "sellerActorName": "Producer ASH",
-        "buyerActorName": "Aggregator formal",
+        "sellerActorName": "Average farm",
+        "buyerActorName": "Formal Aggregator",
         "volumeExchanged": 18900000,
         "monetaryValue": 52919999.0987778,
         "unitPrice": 2.79999995231628,
@@ -433,8 +432,8 @@
         "product": "Unshelled"
       },
       {
-        "sellerActorName": "Producer CF",
-        "buyerActorName": "Aggregator formal",
+        "sellerActorName": "Large intensive farm",
+        "buyerActorName": "Formal Aggregator",
         "volumeExchanged": 7980000,
         "monetaryValue": 22343999.6194839,
         "unitPrice": 2.79999995231628,
@@ -442,8 +441,8 @@
         "product": "Unshelled"
       },
       {
-        "sellerActorName": "Aggregator",
-        "buyerActorName": "Processor Paste infor",
+        "sellerActorName": "Informal aggregator",
+        "buyerActorName": "Informal Paste processor",
         "volumeExchanged": 44681179.6351331,
         "monetaryValue": 232342125.580433,
         "unitPrice": 5.19999980926514,
@@ -451,8 +450,8 @@
         "product": "Shelled"
       },
       {
-        "sellerActorName": "Aggregator",
-        "buyerActorName": "Processor Snack infor",
+        "sellerActorName": "Informal aggregator",
+        "buyerActorName": "Informal Snack processor",
         "volumeExchanged": 23516410.3342806,
         "monetaryValue": 122285329.25286,
         "unitPrice": 5.19999980926514,
@@ -460,8 +459,8 @@
         "product": "Shelled"
       },
       {
-        "sellerActorName": "Aggregator",
-        "buyerActorName": "Processor Kulikuli infor",
+        "sellerActorName": "Informal aggregator",
+        "buyerActorName": "Kulikuli processor",
         "volumeExchanged": 3919401.7223801,
         "monetaryValue": 20380888.20881,
         "unitPrice": 5.19999980926514,
@@ -469,8 +468,8 @@
         "product": "Shelled"
       },
       {
-        "sellerActorName": "Aggregator",
-        "buyerActorName": "Processor Flour infor",
+        "sellerActorName": "Informal aggregator",
+        "buyerActorName": "Informal Flour processor",
         "volumeExchanged": 6271042.75580815,
         "monetaryValue": 32609421.1340959,
         "unitPrice": 5.19999980926514,
@@ -479,7 +478,7 @@
       },
       {
         "sellerActorName": "Wholesaler",
-        "buyerActorName": "Processor Paste infor",
+        "buyerActorName": "Informal Paste processor",
         "volumeExchanged": 39681004.556962,
         "monetaryValue": 258720148.954537,
         "unitPrice": 6.51999998092651,
@@ -488,7 +487,7 @@
       },
       {
         "sellerActorName": "Wholesaler",
-        "buyerActorName": "Processor Snack infor",
+        "buyerActorName": "Informal Snack processor",
         "volumeExchanged": 20884739.2405063,
         "monetaryValue": 136168499.449756,
         "unitPrice": 6.51999998092651,
@@ -497,7 +496,7 @@
       },
       {
         "sellerActorName": "Wholesaler",
-        "buyerActorName": "Processor Kulikuli infor",
+        "buyerActorName": "Kulikuli processor",
         "volumeExchanged": 3480789.87341772,
         "monetaryValue": 22694749.9082927,
         "unitPrice": 6.51999998092651,
@@ -506,7 +505,7 @@
       },
       {
         "sellerActorName": "Wholesaler",
-        "buyerActorName": "Processor Flour infor",
+        "buyerActorName": "Informal Flour processor",
         "volumeExchanged": 5569263.79746835,
         "monetaryValue": 36311599.8532684,
         "unitPrice": 6.51999998092651,
@@ -515,7 +514,7 @@
       },
       {
         "sellerActorName": "Wholesaler",
-        "buyerActorName": "Processor Paste infor",
+        "buyerActorName": "Informal Paste processor",
         "volumeExchanged": 19128060,
         "monetaryValue": 124714950.835161,
         "unitPrice": 6.51999998092651,
@@ -524,7 +523,7 @@
       },
       {
         "sellerActorName": "Wholesaler",
-        "buyerActorName": "Processor Snack infor",
+        "buyerActorName": "Informal Snack processor",
         "volumeExchanged": 10067400,
         "monetaryValue": 65639447.8079796,
         "unitPrice": 6.51999998092651,
@@ -533,7 +532,7 @@
       },
       {
         "sellerActorName": "Wholesaler",
-        "buyerActorName": "Processor Kulikuli infor",
+        "buyerActorName": "Kulikuli processor",
         "volumeExchanged": 1677900,
         "monetaryValue": 10939907.9679966,
         "unitPrice": 6.51999998092651,
@@ -542,7 +541,7 @@
       },
       {
         "sellerActorName": "Wholesaler",
-        "buyerActorName": "Processor Flour infor",
+        "buyerActorName": "Informal Flour processor",
         "volumeExchanged": 2684640,
         "monetaryValue": 17503852.7487946,
         "unitPrice": 6.51999998092651,
@@ -550,8 +549,8 @@
         "product": "Shelled"
       },
       {
-        "sellerActorName": "Processor Paste infor",
-        "buyerActorName": "Retailer informal",
+        "sellerActorName": "Informal Paste processor",
+        "buyerActorName": "Retailer",
         "volumeExchanged": 36194565.6415418,
         "monetaryValue": 452432070.519273,
         "unitPrice": 12.5,
@@ -559,8 +558,8 @@
         "product": "Paste"
       },
       {
-        "sellerActorName": "Processor Paste infor",
-        "buyerActorName": "Retailer informal",
+        "sellerActorName": "Informal Paste processor",
+        "buyerActorName": "Retailer",
         "volumeExchanged": 47631124.2004386,
         "monetaryValue": 595389052.505482,
         "unitPrice": 12.5,
@@ -568,8 +567,8 @@
         "product": "Paste"
       },
       {
-        "sellerActorName": "Processor Snack infor",
-        "buyerActorName": "Retailer informal",
+        "sellerActorName": "Informal Snack processor",
+        "buyerActorName": "Retailer",
         "volumeExchanged": 19753216.6515606,
         "monetaryValue": 237038599.818727,
         "unitPrice": 12,
@@ -577,8 +576,8 @@
         "product": "Snacks"
       },
       {
-        "sellerActorName": "Processor Snack infor",
-        "buyerActorName": "Retailer informal",
+        "sellerActorName": "Informal Snack processor",
+        "buyerActorName": "Retailer",
         "volumeExchanged": 26000918.4163456,
         "monetaryValue": 312011020.996147,
         "unitPrice": 12,
@@ -586,7 +585,7 @@
         "product": "Snacks"
       },
       {
-        "sellerActorName": "Processor Kulikuli infor",
+        "sellerActorName": "Kulikuli processor",
         "buyerActorName": "Consumer",
         "volumeExchanged": 2351641.03342806,
         "monetaryValue": 23516410.3342806,
@@ -595,7 +594,7 @@
         "product": "Kulikuli"
       },
       {
-        "sellerActorName": "Processor Kulikuli infor",
+        "sellerActorName": "Kulikuli processor",
         "buyerActorName": "Consumer",
         "volumeExchanged": 744591.655713031,
         "monetaryValue": 6626865.4518068,
@@ -604,7 +603,7 @@
         "product": "Oil"
       },
       {
-        "sellerActorName": "Processor Kulikuli infor",
+        "sellerActorName": "Kulikuli processor",
         "buyerActorName": "Consumer",
         "volumeExchanged": 3095213.92405063,
         "monetaryValue": 30952139.2405063,
@@ -613,7 +612,7 @@
         "product": "Kulikuli"
       },
       {
-        "sellerActorName": "Processor Kulikuli infor",
+        "sellerActorName": "Kulikuli processor",
         "buyerActorName": "Consumer",
         "volumeExchanged": 980337.985002751,
         "monetaryValue": 8725007.69255522,
@@ -622,7 +621,7 @@
         "product": "Oil"
       },
       {
-        "sellerActorName": "Processor Flour infor",
+        "sellerActorName": "Informal Flour processor",
         "buyerActorName": "Consumer",
         "volumeExchanged": 3636901.84944333,
         "monetaryValue": 36369018.4944333,
@@ -631,7 +630,7 @@
         "product": "Flour"
       },
       {
-        "sellerActorName": "Processor Flour infor",
+        "sellerActorName": "Informal Flour processor",
         "buyerActorName": "Consumer",
         "volumeExchanged": 1191346.64914085,
         "monetaryValue": 10602984.7228909,
@@ -640,7 +639,7 @@
         "product": "Oil"
       },
       {
-        "sellerActorName": "Processor Flour infor",
+        "sellerActorName": "Informal Flour processor",
         "buyerActorName": "Consumer",
         "volumeExchanged": 4787862.31150247,
         "monetaryValue": 47878623.1150247,
@@ -649,7 +648,7 @@
         "product": "Flour"
       },
       {
-        "sellerActorName": "Retailer informal",
+        "sellerActorName": "Retailer",
         "buyerActorName": "Consumer",
         "volumeExchanged": 83825689.8419804,
         "monetaryValue": 1397374256.06121,
@@ -658,7 +657,7 @@
         "product": "Paste"
       },
       {
-        "sellerActorName": "Retailer informal",
+        "sellerActorName": "Retailer",
         "buyerActorName": "Consumer",
         "volumeExchanged": 45754135.0679062,
         "monetaryValue": 754943228.620452,
@@ -667,8 +666,8 @@
         "product": "Snacks"
       },
       {
-        "sellerActorName": "Aggregator formal",
-        "buyerActorName": "Processor Paste formal",
+        "sellerActorName": "Formal Aggregator",
+        "buyerActorName": "Formal Paste processor",
         "volumeExchanged": 7281122.63808791,
         "monetaryValue": 55336531.3550862,
         "unitPrice": 7.59999990463257,
@@ -676,8 +675,8 @@
         "product": "Shelled"
       },
       {
-        "sellerActorName": "Aggregator formal",
-        "buyerActorName": "Processor Snack formal",
+        "sellerActorName": "Formal Aggregator",
+        "buyerActorName": "Formal Snack processor",
         "volumeExchanged": 7281122.63808791,
         "monetaryValue": 55336531.3550862,
         "unitPrice": 7.59999990463257,
@@ -685,7 +684,7 @@
         "product": "Shelled"
       },
       {
-        "sellerActorName": "Processor Paste formal",
+        "sellerActorName": "Formal Paste processor",
         "buyerActorName": "Supermarket",
         "volumeExchanged": 4601669.50727156,
         "monetaryValue": 92033390.1454312,
@@ -694,7 +693,7 @@
         "product": "Paste"
       },
       {
-        "sellerActorName": "Processor Paste formal",
+        "sellerActorName": "Formal Paste processor",
         "buyerActorName": "Exporter",
         "volumeExchanged": 1150417.37681789,
         "monetaryValue": 23008347.5363578,
@@ -703,7 +702,7 @@
         "product": "Paste"
       },
       {
-        "sellerActorName": "Processor Snack formal",
+        "sellerActorName": "Formal Snack processor",
         "buyerActorName": "Supermarket",
         "volumeExchanged": 4485171.54506215,
         "monetaryValue": 89703430.901243,
@@ -712,7 +711,7 @@
         "product": "Snacks"
       },
       {
-        "sellerActorName": "Processor Snack formal",
+        "sellerActorName": "Formal Snack processor",
         "buyerActorName": "Exporter",
         "volumeExchanged": 1121292.88626554,
         "monetaryValue": 22425857.7253108,
