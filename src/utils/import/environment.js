@@ -52,7 +52,7 @@ const impactsColumnNamesMapping = {
 
 const totalValueLabel = "Sub-chain total"
 
-const parseImpactsFirstRow = (row, valueChains, sheetname) => {
+const parseImpactsFirstRow = (row, valueChains, sheetname, actors) => {
   var valuechain_and_actors_mapping = {}
   for (var key of Object.keys(impactsColumnNamesMapping)) {
     // Checking that mandatory columns exist
@@ -76,24 +76,27 @@ const parseImpactsFirstRow = (row, valueChains, sheetname) => {
       setImportErrors(
         sheetname,
         ErrorLevels.BreaksALot,
-        `The chain value defined on first line of sheet ${sheetname}, named |${regex_result[1]}| doesn't match with previous value chain name ${valueChains.map(valuechain => valuechain.name)}`)
+        `The chain value defined on first line of sheet ${sheetname}, named |${regex_result[1]}| should match one of the following value chain name:\n
+        ${valueChains.map(valuechain => valuechain.name)}`)
       continue
     }
-    if (row[props] in matchingValuechains[0].actors) {
+    var actorsName = actors.map(actor => actor.name)
+    if (row[props] in actorsName) {
       valuechain_and_actors_mapping[props] = { valuechain_name: matchingValuechains[0].name, actor_name: row[props]}
     }
     else if (row[props] != totalValueLabel) {
       setImportErrors(
         sheetname,
         ErrorLevels.BreaksALot,
-        `The actor named |${row[props]}| on second line of sheet ${sheetname}, doesn't match with previous actors name for the value chain ${matchingValuechains[0].name}`)
+        `The actor named |${row[props]}| on second line of sheet ${sheetname}, should match one of the following actors:
+        \n${actorsName}`)
     }
   }
   return valuechain_and_actors_mapping
 }
 
 
-const parseImpacts = (json, valueChains) => {
+const parseImpacts = (json, valueChains, actors) => {
   var impacts = []
   var sheetname = "Impacts"
   var sheetAsJson = getSheetNameContent(json, sheetname)
@@ -106,7 +109,7 @@ const parseImpacts = (json, valueChains) => {
   for (var row of sheetAsJson) {
     ++rowCount
     if (rowCount == 1) {
-      dictionnaire_chain_actors_props = parseImpactsFirstRow(row, valueChains, sheetname)
+      dictionnaire_chain_actors_props = parseImpactsFirstRow(row, valueChains, sheetname, actors)
       continue
     }
     if (rowCount == 2) {
@@ -146,7 +149,7 @@ export const parseEnvironmentJson = (json) => {
 
   parseActorsAndChainsMatrix(json, valuechains, actors)
 
-  var impacts = parseImpacts(json, valuechains)
+  var impacts = parseImpacts(json, valuechains, actors)
   console.log("impacts:", impacts)
   return {
     valuechains,
