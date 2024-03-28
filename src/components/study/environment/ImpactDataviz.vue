@@ -21,6 +21,7 @@ import MiniChartContainer from '@charts/MiniChartContainer.vue'
 import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
+import { formatNumber } from '@utils/format.js'
 
 const props = defineProps({
     impact: Object,
@@ -44,6 +45,7 @@ const populatedRingChartData = computed(() => {
   var series = {}
     var items = props.impact.values.filter(item => item.valuechain_name == selectedValueChain.value)
     .map(item => {
+      tooltip[item.actor_name] = `${formatNumber(item.value)} per functionnal unit`
       return {
         name: item.actor_name,
         value: item.value,
@@ -71,8 +73,10 @@ const populatedBarChartData = computed(() => {
   for (var value of props.impact.values) {
     if (!(value.valuechain_name in valuesByChain)) {
       valuesByChain[value.valuechain_name] = 0
+      tooltip[value.valuechain_name] = ""
     }
     valuesByChain[value.valuechain_name] += value.value
+    tooltip[value.valuechain_name] += `<b>${value.actor_name}</b>: ${formatNumber(value.value)} per functionnal unit<br>`
   }
 
   const items = Object.keys(valuesByChain).map((chainName) => {

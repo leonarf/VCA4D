@@ -8,27 +8,32 @@ export const formatNumber = (value) => {
   let numberDigits = 0
   let divisor = 1
   let textUnit = ''
-  if (Math.abs(value) > 1e9) {
+  const absoluteValue = Math.abs(value)
+  if (absoluteValue > 1e9) {
     numberDigits = 1
     divisor = 1e9
     textUnit = 'Billions'
-  } else if (Math.abs(value) > 1e6) {
+  } else if (absoluteValue > 1e6) {
     numberDigits = 1
     divisor = 1e6
     textUnit = 'Millions'
-  } else if (Math.abs(value) > 1e3) {
+  } else if (absoluteValue > 1e3) {
     numberDigits = 1
     divisor = 1e3
     textUnit = 'k'
-  } else if (Math.abs(value) < 100) {
+  } else if (absoluteValue > 100) {
+    numberDigits = 0
+    divisor = 1
+    textUnit = ''
+  } else if (absoluteValue > 10) {
     numberDigits = 1
     divisor = 1
     textUnit = ''
-  } else if (Math.abs(value) < 10) {
+  } else if (absoluteValue > 1) {
     numberDigits = 2
     divisor = 1
     textUnit = ''
-  } else if (Math.abs(value) < 1) {
+  } else if (absoluteValue < 1) {
     return `${(value).toLocaleString('en', { maximumSignificantDigits: 2 })}`
   }
   return `${(value / divisor).toLocaleString('en', { maximumFractionDigits: numberDigits })} ${textUnit}`

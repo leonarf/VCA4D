@@ -6,12 +6,17 @@ const parseValueChainsDescriptions = (json) => {
   if (sheetAsJson == null) {
     return
   }
-  const res = sheetAsJson.map((valuechain) => ({
-    name: valuechain['Value chain name'],
-    volume: valuechain['annual volume'],
-    volumeYear: valuechain['year of volume'],
-    volumeUnit: valuechain['unit']
-  }))
+
+  const res = sheetAsJson.filter(row => (row['Value chain name'] != undefined
+                                        && (row['annual volume'] != undefined
+                                            || row['year of volume'] != undefined
+                                            || row['unit'] != undefined)))
+                          .map((valuechain) => ({
+                            name: valuechain['Value chain name'],
+                            volume: valuechain['annual volume'],
+                            volumeYear: valuechain['year of volume'],
+                            volumeUnit: valuechain['unit']
+                          }))
   for (const r of res) {
     if (!r.volume) {
       setImportErrors(
@@ -37,6 +42,7 @@ const parseActorsAndChainsMatrix = (json, valueChains) => {
         sheetname,
         ErrorLevels.MayBreakNothing,
         `Found an unknown chain value named ${valueChainName} in sheet ${sheetname}`)
+        continue
     }
     valueChain["actors"] = {...item}
     delete valueChain["actors"]["Sub-chain"]
@@ -47,28 +53,29 @@ const impactsColumnNamesMapping = {
   name: "Impact category",
   method: "LCIA method",
   functional_unit: "Functional Unit",
-  unit: "Sub-chain =>"
+  unit: "Sub-chain →"
 }
 
 const totalValueLabel = "Sub-chain total"
 
-const parseImpactsFirstRow = (row, valueChains, sheetname, actors) => {
+const parseImpactsFirstRow = (firstRow, secondRow, valueChains, sheetname, actors) => {
   var valuechain_and_actors_mapping = {}
   for (var key of Object.keys(impactsColumnNamesMapping)) {
     // Checking that mandatory columns exist
-    if (impactsColumnNamesMapping[key] in row) {
-      delete row[impactsColumnNamesMapping[key]]
+    if (impactsColumnNamesMapping[key] in firstRow) {
+      delete firstRow[impactsColumnNamesMapping[key]]
     }
     else {
       setImportErrors(
         sheetname,
         ErrorLevels.BreaksALot,
-        `The column ${impactsColumnNamesMapping[key]} is missing in sheet ${sheetname}.
-        First cell of this column must contains '${impactsColumnNamesMapping[key]}' only`)
+        `The column ${impactsColumnNamesMapping[key]} is missing in first row of sheet ${sheetname}.\n
+        First cell of this column must contains '${impactsColumnNamesMapping[key]}' only, and second cell must not be empty\n
+        ${Object.keys(firstRow)}\n`)
     }
   }
   // Checking given valuechain and actors name are known, and building the dictionnary
-  for (var props in row) {
+  for (var props in firstRow) {
     const regex = /([^_]*)_?[0-9]*/;
     var regex_result = regex.exec(props);
     var matchingValuechains = valueChains.filter(valuechain => valuechain.name == regex_result[1])
@@ -81,14 +88,17 @@ const parseImpactsFirstRow = (row, valueChains, sheetname, actors) => {
       continue
     }
     var actorsName = actors.map(actor => actor.name)
-    if (row[props] in actorsName) {
-      valuechain_and_actors_mapping[props] = { valuechain_name: matchingValuechains[0].name, actor_name: row[props]}
+    if (actorsName.includes(secondRow[props])) {
+      valuechain_and_actors_mapping[props] = { valuechain_name: matchingValuechains[0].name, actor_name: secondRow[props]}
     }
-    else if (row[props] != totalValueLabel) {
+    else if (firstRow[props] == totalValueLabel) {
+      valuechain_and_actors_mapping[props] = { valuechain_name: matchingValuechains[0].name, actor_name: totalValueLabel}
+    }
+    else {
       setImportErrors(
         sheetname,
         ErrorLevels.BreaksALot,
-        `The actor named |${row[props]}| on second line of sheet ${sheetname}, should match one of the following actors:
+        `The actor named |${secondRow[props]}| on third line of sheet ${sheetname}, should match one of the following actors:
         \n${actorsName}`)
     }
   }
@@ -106,14 +116,16 @@ const parseImpacts = (json, valueChains, actors) => {
   console.log("plan de travail pour les impacts", sheetAsJson)
   var rowCount = 0
   var dictionnaire_chain_actors_props = {}
+  var firstRow = null
   for (var row of sheetAsJson) {
     ++rowCount
     if (rowCount == 1) {
-      dictionnaire_chain_actors_props = parseImpactsFirstRow(row, valueChains, sheetname, actors)
+      firstRow = row
       continue
     }
     if (rowCount == 2) {
-      // Ignoring second row because it's part of header
+      // First and second rows contain value chain's actor's names
+      dictionnaire_chain_actors_props = parseImpactsFirstRow(firstRow, row, valueChains, sheetname, actors)
       continue
     }
     var newImpact = {}
@@ -131,8 +143,16 @@ const parseImpacts = (json, valueChains, actors) => {
     }
     newImpact["values"] = []
     for (var props in row) {
-      if (props in dictionnaire_chain_actors_props) {
-        newImpact["values"].push({...dictionnaire_chain_actors_props[props], value : row[props]})
+      if (props in dictionnaire_chain_actors_props
+        && dictionnaire_chain_actors_props[props]["actor_name"] != totalValueLabel) {
+        var sameActorImpact = newImpact["values"].filter(item => item.actor_name == dictionnaire_chain_actors_props[props].actor_name
+                                                                && item.valuechain_name == dictionnaire_chain_actors_props[props].valuechain_name)
+        if (sameActorImpact.length == 1) {
+          sameActorImpact[0].value += row[props]
+        }
+        else {
+          newImpact["values"].push({...dictionnaire_chain_actors_props[props], value : row[props]})
+        }
       }
     }
     impacts.push(newImpact)

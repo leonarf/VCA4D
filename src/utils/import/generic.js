@@ -48,7 +48,7 @@ export const parseActorTypes = (json) => {
   var sheetAsJson = json[ECO_SHEET_NAMES.ActorTypes]
   checkColumnsExistence(sheetAsJson, ACTORS_SHEET_COLUMNS, sheetname, ErrorLevels.BreaksALot)
 
-  return sheetAsJson.map(actor => ({
+  return sheetAsJson.filter(row => row['Actor type name'] != undefined).map(actor => ({
     name: actor['Actor type name'],
     stage: actor['Stage'] || '',
     id: actor['Actor type code']
