@@ -197,7 +197,6 @@ export const getSelectableBarChart = (items, currentItem, tooltip, formatLabel, 
                             borderColor: "black",
                             borderWidth: 2,
                             borderRadius: 5
-
                         } : {})
             }
         })
@@ -205,10 +204,18 @@ export const getSelectableBarChart = (items, currentItem, tooltip, formatLabel, 
     return {
         xAxis: {
             data: labels,
+            type: 'category',
             left: 0,
             axisLabel: {
+                hideOverlap: false,
+                align: 'center',
                 fontSize: 15,
                 fontWeight: 500,
+                overflow: 'break',
+                /*TODO : il faut calculer la largeur max des labels (width) du graph bar en fonction de la taille de la fenêtre
+                pour que la propriété 'overflow' fonctionne et que le label soit renvoyé à la ligne automatiquement
+                width: 100,*/
+                interval: 0,
             },
             axisTick: {
                 alignWithLabel: true
