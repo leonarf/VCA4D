@@ -4,7 +4,7 @@
       <h1>Is the value chain environmentally sustainable?</h1>
     </SectionTitle>
 
-    <h2>Which sub-chain value has most impact ?</h2>
+    <h2>Which sub-chain contributes the most to environmental impacts ?</h2>
     <p>
       Environmental sustainability of a value chain should rather be assessed by product. And yet,
       specific policies or project may be developped in order to improve the sustainability of a
