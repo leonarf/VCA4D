@@ -144,9 +144,11 @@ const parseTranslationSheet = (json) => {
   checkColumnsExistence(sheetAsJson, TRANSLATIONS_COLUMNS, sheetname, ErrorLevels.BreaksInformations)
 
   var translationDict = {}
-  sheetAsJson.forEach((item) => {
-    translationDict[item[TRANSLATIONS_COLUMNS.AFAName]] = item[TRANSLATIONS_COLUMNS.EnglishTranslation]
-  })
+  for (var row of sheetAsJson) {
+    if (row[TRANSLATIONS_COLUMNS.EnglishTranslation] && row[TRANSLATIONS_COLUMNS.AFAName]) {
+      translationDict[row[TRANSLATIONS_COLUMNS.AFAName]] = row[TRANSLATIONS_COLUMNS.EnglishTranslation]
+    }
+  }
   return translationDict
 }
 
@@ -158,13 +160,20 @@ const parseFlowsSheet = (json) => {
   }
   checkColumnsExistence(sheetAsJson, FLOWS_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  return sheetAsJson.map(flow => {
-    var result = {}
-    for (var key in FLOWS_COLUMNS) {
-      result[key] = flow[FLOWS_COLUMNS[key]]
+  var result = []
+  for (var row of sheetAsJson) {
+    // Ignore row with a lot of emptyness
+    if (!row[FLOWS_COLUMNS.buyerActorName] && !row[FLOWS_COLUMNS.sellerActorName] && !row[FLOWS_COLUMNS.product])
+    {
+      continue
     }
-    return result
-  })
+    var newItem = {}
+    for (var key in FLOWS_COLUMNS) {
+      newItem[key] = row[FLOWS_COLUMNS[key]]
+    }
+    result.push(newItem)
+  }
+  return result
 }
 
 const parseIndicatorsSheet = (json, actors) => {
@@ -427,13 +436,21 @@ const parseFarmGatePriceSheet = (json, currencyRatio) => {
   }
   checkColumnsExistence(sheetAsJson, FARM_GATE_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  var result = sheetAsJson.map(priceItem => ({
-    label: priceItem[FARM_GATE_COLUMNS.Case],
-    farmPrice: priceItem[FARM_GATE_COLUMNS.FarmPrice],
-    farmProduct: priceItem[FARM_GATE_COLUMNS.FarmProduct],
-    endPrice: priceItem[FARM_GATE_COLUMNS.EndPrice],
-    endProducts: priceItem[FARM_GATE_COLUMNS.EndProducts]
-  }))
+  var result = sheetAsJson.map(priceItem => {
+    if (!priceItem[FARM_GATE_COLUMNS.EndProducts]) {
+      setImportErrors(sheetname,
+        ErrorLevels.BreaksInformations,
+        `In spreadsheet '${sheetname}', case of start and end price named <b>'${priceItem[FARM_GATE_COLUMNS.Case]}'</b> has its column <b>${FARM_GATE_COLUMNS.EndProducts}</b> empty`
+      )
+    }
+    return {
+      label: priceItem[FARM_GATE_COLUMNS.Case],
+      farmPrice: priceItem[FARM_GATE_COLUMNS.FarmPrice],
+      farmProduct: priceItem[FARM_GATE_COLUMNS.FarmProduct],
+      endPrice: priceItem[FARM_GATE_COLUMNS.EndPrice],
+      endProducts: priceItem[FARM_GATE_COLUMNS.EndProducts]
+    }
+  })
   if (currencyRatio && currencyRatio != 1) {
     result = result.map(item => {
       var newItem = {...item}
@@ -513,7 +530,9 @@ export const parseEconomicsJson = (json, currencyRatio) => {
     farmToFinalPricesRatio
   }
   const translationDictionnary = parseTranslationSheet(json)
-  studyData = applyTranslation(studyData, translationDictionnary)
+  if (translationDictionnary) {
+    studyData = applyTranslation(studyData, translationDictionnary)
+  }
   return studyData
 }
 
@@ -559,12 +578,6 @@ export const parseEconomicsJson = (json, currencyRatio) => {
       errors.push({
         level: 'error',
         message: `Total added value created found in spreadsheet '${ECO_SHEET_NAMES.Indicators}' is ${totalCreatedAddedValue}. And total added value received found in spreadsheet '${ECO_SHEET_NAMES.ValueAddedReceivers}' is ${totalReceivedAddedValue}. But both should be equal`
-      })
-    }
-    if (!study.ecoData.macroData?.giniIndex) {
-      errors.push({
-        level: 'info',
-        message: `<b>Gini Index</b> not specified in sheet <b>${ECO_SHEET_NAMES.Home}</b> in cell <b>${HOME_LABELS.GiniIndex}</b>`
       })
     }
     if (!study.ecoData.macroData?.rateOfIntegration) {

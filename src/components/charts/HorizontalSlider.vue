@@ -23,6 +23,8 @@
 
 <script setup>
 import { computed } from 'vue';
+import { formatNumber, formatPercent } from '@utils/format.js'
+
 const props = defineProps({
   value: Number,
   min: Number,
@@ -34,7 +36,7 @@ const props = defineProps({
 })
 
 const leftPosition = computed(() => `${100 * props.value / (props.max - props.min)}%`)
-const label = computed(() => props.isPercent ? `${100 * props.value} %`: props.value)
+const label = computed(() => props.isPercent ? formatPercent(props.value): formatNumber(props.value))
 </script>
 
 <style>

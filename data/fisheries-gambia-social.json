@@ -1,7 +1,7 @@
 {
   "id": "fisheries-gambia",
   "country": "gambia",
-  "commodity": "Fisheries",
+  "commodity": "fisheries",
   "year": 2020,
   "type": "social",
   "socialData": [
