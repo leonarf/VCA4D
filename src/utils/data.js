@@ -26,7 +26,6 @@ export const getStudiesByProduct = async (productId) => {
 }
 
 export const getStudyData = async (studyId) => {
-
     if (studyId === LOCAL_STORAGE_ID) {
         const localStudyData = localStorage.getItem('localStudyData')
         return localStudyData ? JSON.parse(localStudyData) : null

@@ -1,25 +1,47 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import Skeleton from '@components/Skeleton.vue'
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import ByCategories from '@components/home/ByCategories.vue';
 import ByContinents from '@components/home/ByContinents.vue';
-import { getAllJsonData } from '@utils/data';
+import { getAllJsonData, getStudyData } from '@utils/data';
 
-const studies = ref([])
+
 const countries = ref([])
+const studies = ref([])
 const continents = ref([])
 const categories = ref([])
+const mandatoryStudiesPart = ref([])
 
 onMounted(async () => {
     const allJsonData = getAllJsonData()
-    studies.value = allJsonData.studies
     countries.value = allJsonData.countries
+    studies.value = allJsonData.studies
     continents.value = [...new Set(countries.value.map(country => country.continent))] 
     categories.value = allJsonData.categories
 })
 
 const currency = computed(() => localStorage.getItem('currency') || 'LOCAL')
+
+watch(mandatoryStudiesPart, async (newMandatoryParts, oldMandatoryParts) => {
+    const allJsonData = getAllJsonData()
+    console.log("allJsonData", allJsonData)
+    console.log("mandatoryStudiesPart", mandatoryStudiesPart)
+
+    studies.value = []
+    allJsonData.studies.forEach(study => {
+        getStudyData(study.id).then(dataStudy => {
+            for (var studyPart of mandatoryStudiesPart.value) {
+                if (!dataStudy[studyPart]) {
+                    console.log(studyPart, 'not in ', dataStudy)
+                    return
+                }
+            }
+            studies.value.push(study)
+        })
+    })
+
+})
 
 </script>
 
@@ -48,7 +70,15 @@ const currency = computed(() => localStorage.getItem('currency') || 'LOCAL')
                     <li>the impact of the value chain on <strong>environment</strong>.</li>
                 </ul>
             </section>
+            <input type="checkbox" id="withEcoData" value="ecoData" v-model="mandatoryStudiesPart">
+            <label for="withEcoData">With economic data</label>
 
+            <input type="checkbox" id="withACVData" value="acvData" v-model="mandatoryStudiesPart">
+            <label for="withACVData">With environnemental data</label>
+
+            <input type="checkbox" id="withSocialData" value="socialData" v-model="mandatoryStudiesPart">
+            <label for="withSocialData">With social profil</label>
+            <div>Number of studies: {{ studies.length }}</div>
             <ByCategories :categories="categories" :studies="studies" :countries="countries" :currency="currency"/>
 
             <ByContinents :studies="studies" :countries="countries" :currency="currency"/>
