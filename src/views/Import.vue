@@ -1,16 +1,105 @@
+<style scoped lang="scss">
+
+h1{
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-weight: 700;
+}
+h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+h4{
+    text-transform: uppercase;
+    color: grey;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+ol{
+    list-style: decimal;
+    margin-left: 1.5rem;
+}
+.corps{
+    max-width: 800px;
+    margin: auto;
+    align-items: left;
+}
+.contents-of-the-file{
+    background-color: rgb(236, 236, 236);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.contents-of-one-tab{
+    border-left: 10px solid #FF9280;
+    padding: 1rem;
+}
+.content-missing{
+
+}
+.tab-present{
+    color:#02AA18
+}
+.property{
+    margin-top: 2rem;
+}
+.checkmark{
+    background-color: #FF9280;
+    border-radius: 100%;
+    color: white;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 900;
+    vertical-align: center;
+    margin-right: 5px;
+}
+.error-title{
+    color: #FF9280;
+
+}
+.explanation{
+
+}
+</style>
 <template>
     <Skeleton :skipFooter="true">
-        <h1 class="mb-4">Import a study file</h1>
-        <div v-if="isObjectNotEmpty(studyProperties)" class="flex flex-col items-center">
-            <div class="flex flex-col items-center">
-                <div>You have imported this study: <b>{{ studyProperties['id'] }}</b></div>
-                <div class="ml-4">
-                    Press 
-                    <button class="delete" @click="clearData"
-                        >Remove</button>
-                    to import another study
+        <h1>Step 1 : Import a study file</h1>
+
+        <ol>
+            <li><a href="inserer l'url du fichier vide" target="_blank">Download a blank file</a></li>
+            <li>Fill in the study data for each tab</li>
+            <li>
+                Upload the file to the platform
+                <br>
+                <input type="file" @change="handleFileUpload" />
+            </li>
+        </ol>
+
+        <div v-if="isObjectNotEmpty(studyProperties)">
+
+            <h1>Step 2 : Check that all data is there</h1>
+            <p>Complete the file for missing data, then re-upload the file (back to step 1).</p>
+
+            <h4>Contents of the file</h4>
+            <div class="contents-of-the-file">
+                <div class="contents-of-one-tab content-missing">
+                    <h3>Tab: Study Identification</h3>
+                    <p class="tab-present">Tab present in the file</p>
+                    <div class="property">
+                        <p class="error-title">
+                            <span class="checkmark">✕</span> <b>Country</b>: Unknown country
+                        </p>
+                        <p class="explanation">
+                            Known countries are: Angola, Benin, Bostwana, Burkina Faso, Burundi, Cambodia, Cameroon, Colombia, Comoros, Dominican Republic, Ecuador, Ethiopia, Gambia, Georgia, Ghana, Guinea-Bissau, Honduras, Ivory Coast, Kenya, Mali, Nicaragua, Niger, Nigeria, Papua New Guinea, Sao Tome e Principe, Sierra Leone, Swaziland, Tanzania, Togo, Zambia, Zimbabwe Please respect name and isocode from https://en.wikipedia.org/wiki/ISO_3166-1 to add new countries
+                        </p>
+                    </div>
                 </div>
+
             </div>
+
+            
             <div class="mt-4 flex flex-row gap-x-4">
                 <RouterLink to="/">
                     <button
@@ -29,9 +118,7 @@
         </div>
         <div class="w-full px-8 flex flex-col text-center">
             <div v-if="!isObjectNotEmpty(studyProperties)">
-                <input
-                    class="relative m-0 inline min-w-0 flex-auto cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] font-normal leading-[2.15] text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
-                    type="file" @change="handleFileUpload" />
+                
             </div>
 
             <div v-if="excelData" class="flex flex-col gap-y-4 text-left mt-2 text-lg mx-auto max-w-5xl">
@@ -113,8 +200,8 @@
                 </ul>
 
                 <div class="my-4">
-                    <h2>Add study to repo</h2>
-                    <p>Step 1 : download both following files</p>
+                    <h1>Step 3 : Add study to repo</h1>
+                    <p>1. Download both following files</p>
                     <h4 class="font-bold">{{ `Replace data file and add study file in /data/ ` }}</h4>
                     <div class="flex flex-row mb-2 gap-x-2">
                         <button class="download"
@@ -482,20 +569,3 @@ onMounted(() => {
 })
 </script>
   
-
-<style scoped lang="scss">
-button {
-    @apply rounded py-2 px-4 border hover:border-transparent font-semibold
-}
-button.delete {
-    @apply bg-transparent hover:bg-red-500 text-red-700  hover:text-white py-1 px-1.5 border-red-500 
-}
-
-button.browse {
-    @apply bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white  border-blue-500
-}
-
-button.download {
-    @apply bg-blue-500 hover:bg-blue-700 text-white
-}
-</style>

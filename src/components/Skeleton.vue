@@ -21,7 +21,7 @@ const props = defineProps({
         </div>
     </header>
 
-    <main>
+    <main class="corps">
         <slot></slot>
     </main>
 
@@ -53,8 +53,14 @@ header {
     }
 }
 
-main {
-    @apply flex flex-col justify-start items-center
+// main {
+//     @apply flex flex-col justify-start items-center
+// }
+
+.corps{
+    max-width: 800px;
+    margin: auto;
+    align-items: left;
 }
 
 
