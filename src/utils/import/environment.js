@@ -118,40 +118,41 @@ const parseImpacts = (json, valueChains, actors) => {
   var dictionnaire_chain_actors_props = {}
   var firstRow = null
   for (var row of sheetAsJson) {
+    var mutableRow = {...row}
     ++rowCount
     if (rowCount == 1) {
-      firstRow = row
+      firstRow = mutableRow
       continue
     }
     if (rowCount == 2) {
       // First and second rows contain value chain's actor's names
-      dictionnaire_chain_actors_props = parseImpactsFirstRow(firstRow, row, valueChains, sheetname, actors)
+      dictionnaire_chain_actors_props = parseImpactsFirstRow(firstRow, mutableRow, valueChains, sheetname, actors)
       continue
     }
     var newImpact = {}
     for (var key of Object.keys(impactsColumnNamesMapping)) {
-      if (impactsColumnNamesMapping[key] in row) {
-        newImpact[key] = row[impactsColumnNamesMapping[key]]
-        delete row[impactsColumnNamesMapping[key]]
+      if (impactsColumnNamesMapping[key] in mutableRow) {
+        newImpact[key] = mutableRow[impactsColumnNamesMapping[key]]
+        delete mutableRow[impactsColumnNamesMapping[key]]
       }
       else {
         setImportErrors(
           sheetname,
           ErrorLevels.BreaksDataviz,
-          `The column ${impactsColumnNamesMapping[key]} in sheet ${sheetname} is not filled at line ${rowCount}`)
+          `The column ${impactsColumnNamesMapping[key]} in sheet ${sheetname} is not filled at line ${rowCount+1}`)
       }
     }
     newImpact["values"] = []
-    for (var props in row) {
+    for (var props in mutableRow) {
       if (props in dictionnaire_chain_actors_props
         && dictionnaire_chain_actors_props[props]["actor_name"] != totalValueLabel) {
         var sameActorImpact = newImpact["values"].filter(item => item.actor_name == dictionnaire_chain_actors_props[props].actor_name
                                                                 && item.valuechain_name == dictionnaire_chain_actors_props[props].valuechain_name)
         if (sameActorImpact.length == 1) {
-          sameActorImpact[0].value += row[props]
+          sameActorImpact[0].value += mutableRow[props]
         }
         else {
-          newImpact["values"].push({...dictionnaire_chain_actors_props[props], value : row[props]})
+          newImpact["values"].push({...dictionnaire_chain_actors_props[props], value : mutableRow[props]})
         }
       }
     }
