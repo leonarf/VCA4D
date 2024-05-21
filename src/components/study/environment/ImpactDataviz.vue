@@ -6,7 +6,10 @@
         <MiniChartContainer :currentStage="selectedValueChain" :title="`${impact.name} (${impact.unit})`" :isEnvironment="true">
             <div class="flex flex-row w-full justify-evenly mt-6">
                 <div class="w-full flex flex-row justify-center">
-                  <Ring :options="populatedRingChartData"></Ring>
+<!--
+  <Ring :options="populatedRingChartData"></Ring>
+-->
+                  <BarChart :options="detailBarChartOptions"></BarChart>
                 </div>
             </div>
         </MiniChartContainer>
@@ -22,13 +25,13 @@ import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 import { formatNumber } from '@utils/format.js'
+import { getRingColor } from '@utils/colors.js'
 
 const props = defineProps({
     impact: Object,
     perUnit: String,
-    volumes: Array
+    volumes: Object
 })
-
 
 const selectedValueChain = ref(null)
 const handleDataChartSeriesClick = (event) => {
@@ -42,29 +45,103 @@ const handleDataChartSeriesClick = (event) => {
 
 const populatedRingChartData = computed(() => {
   var tooltip = {}
-  var series = {}
-    var items = props.impact.values.filter(item => item.valuechain_name == selectedValueChain.value)
-    .map(item => {
-      tooltip[item.actor_name] = `${formatNumber(item.value)} per functionnal unit`
-      return {
-        name: item.actor_name,
-        value: item.value,
-        label: {
-            width: 250,
-            overflow: 'break',
-            color: "#e2e0e0",
-            fontSize: 16
-        },
-        labelLine: {
-            length: 40,
-            length2: 10,
-            smooth: true,
-        },
-      }
-    })
-    series = getRingChart(items, tooltip, "", true)
+  var items = props.impact.values.filter(item => item.valuechain_name == selectedValueChain.value)
+  .map(item => {
+    tooltip[item.actor_name] = `${formatNumber(item.value)} per functionnal unit`
+    return {
+      name: item.actor_name,
+      value: item.value,
+      label: {
+          width: 250,
+          overflow: 'break',
+          color: "#e2e0e0",
+          fontSize: 16
+      },
+      labelLine: {
+          length: 40,
+          length2: 10,
+          smooth: true,
+      },
+    }
+  })
+  var series = getRingChart(items, tooltip, "", true)
   return series
 })
+
+const detailBarChartOptions = computed(() => {
+  var tooltip = {}
+  var labels = []
+  var values = []
+  props.impact.values.filter(item => item.valuechain_name == selectedValueChain.value)
+  .forEach(item => {
+    labels.push(item.actor_name)
+    var color = getRingColor(item.actor_name)
+    values.push({
+        value: item.value,
+        itemStyle: {
+          color
+        }
+    })
+    tooltip[item.actor_name] = `${formatNumber(item.value)} per functionnal unit`
+  })
+  let barChartExample = {
+    title: {
+      text: ''
+    },
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'shadow'
+      },
+      formatter: function (info) {
+        return tooltip[info[0].axisValueLabel]
+      }
+    },
+    grid: {
+      top: 80,
+      bottom: 30
+    },
+    xAxis: {
+      type: 'value',
+      position: 'top',
+      splitLine: {
+        lineStyle: {
+          type: 'dashed'
+        }
+      }
+    },
+    yAxis: {
+      type: 'category',
+      axisLine: { show: false },
+      axisLabel: { show: false },
+      axisTick: { show: false },
+      splitLine: { show: false },
+      data: labels
+    },
+    series: [
+      {
+        name: 'Cost',
+        type: 'bar',
+        stack: 'Total',
+        label: {
+          show: true,
+          formatter: '{b}'
+        },
+        data: values
+      }
+    ]
+  }
+  return barChartExample
+})
+
+// Multiply by chain's annual volume if annual value wanted by user
+function convertACVValue(value, chainName) {
+  var factor = 1.0
+  if (props.perUnit === 'year') {
+    factor = props.volumes[chainName]
+  }
+  return value * factor
+}
 
 const populatedBarChartData = computed(() => {
   var tooltip = {}
@@ -82,7 +159,7 @@ const populatedBarChartData = computed(() => {
   const items = Object.keys(valuesByChain).map((chainName) => {
     return {
       name: chainName,
-      value: valuesByChain[chainName] * (props.perUnit === 'year' ? props.volumes.find(item => item.name === chainName).yearlyVolume : 1.0)
+      value: convertACVValue(valuesByChain[chainName], chainName)
     }
   })
 

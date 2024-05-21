@@ -80,10 +80,13 @@ const allBarChartsData = computed(() => {
   return impactsToDrawOnGraph
 })
 
-const yearlyVolumes = computed(() => props.studyData.acvData.valuechains.map(item => ({
-  name: item.name,
-  yearlyVolume: item.volume
-})))
+const yearlyVolumes = computed(() => {
+  var result = {}
+  props.studyData.acvData.valuechains.map(item => {
+    result[item.name] = item.volume
+  })
+  return result
+})
 
 const units = [
   { label: 'Pt', value: 'PT' },

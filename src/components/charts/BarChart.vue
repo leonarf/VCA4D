@@ -34,6 +34,7 @@ use([
 <style scoped lang="scss">
 .bar-chart {
   height: 500px;
+  width: 100%;
 }
 .chart {
   height: 500px;

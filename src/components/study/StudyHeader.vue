@@ -5,7 +5,7 @@
             <div class="subtitle">Commodity</div>
         </div>
         <div class="bloc">
-            <div class="title">{{ studyData.country }}</div>
+            <div class="title">{{ dataToDisplay.country }}</div>
             <div class="subtitle">Country</div>
         </div>
         <div class="bloc">
@@ -20,12 +20,27 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { getCurrencySymbol } from '@utils/currency.js'
+import { getCountry } from '@utils/data.js'
+
 const props = defineProps({
     studyData: {
       type: Object,
       required: true,
     }
+})
+
+let dataToDisplay = computed(() => {
+    let result = {}
+    let country = getCountry(props.studyData.country)
+    if (country) {
+        result.country = country.prettyName
+    }
+    else {
+        result.country = props.studyData.country
+    }
+    return result
 })
 </script>
 

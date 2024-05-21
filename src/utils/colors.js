@@ -23,7 +23,6 @@ export const addColorsForValueChains = (valuechains) => {
   // Du genre + polluant = plus rouge
 }
 
-
 export const getStageColor = (stageName, isEnvironment = false) => {
   if (isEnvironment) {
     return getSubChainColor(stageName)
@@ -34,12 +33,9 @@ export const getStageColor = (stageName, isEnvironment = false) => {
   if (stageName in ChainValuesColors) {
     return ChainValuesColors[stageName]
   }
-  else {
-    var pickedColor = ADDITIONAL_COLORS[Object.keys(ChainValuesColors).length % ADDITIONAL_COLORS.length]
-    ChainValuesColors[stageName] = pickedColor
-    return ChainValuesColors[stageName]
-  }
-  return "#ff1100"
+  var pickedColor = ADDITIONAL_COLORS[Object.keys(ChainValuesColors).length % ADDITIONAL_COLORS.length]
+  ChainValuesColors[stageName] = pickedColor
+  return ChainValuesColors[stageName]
 }
 
 const SUB_CHAIN_COLORS = [
@@ -66,7 +62,6 @@ const getSubChainColor = (subchainName) => {
     subChainsColors[subchainName] = SUB_CHAIN_COLORS[Object.keys(subChainsColors).length % SUB_CHAIN_COLORS.length]
   }
   return subChainsColors[subchainName]
-
 }
 
 let ringColors = {}
