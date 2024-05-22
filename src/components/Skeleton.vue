@@ -44,6 +44,8 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    padding-left: 50rem;
+
     &>a {
         font-size: 1.5rem;
         font-weight: bold;
@@ -58,7 +60,7 @@ header {
 // }
 
 .corps{
-    max-width: 800px;
+    // max-width: 800px;
     margin: auto;
     align-items: left;
 }

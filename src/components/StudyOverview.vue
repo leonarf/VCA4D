@@ -1,7 +1,7 @@
 <template>
     <article class="mt-4">
         <SectionTitle>
-            <h1><strong>Overview</strong></h1>
+            <h1>Overview</h1>
         </SectionTitle> 
 
         <section class="pt-2">

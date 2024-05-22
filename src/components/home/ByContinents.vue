@@ -20,7 +20,7 @@ const getStudiesByContinent = (continent) => {
 
 <template>
     <section>
-        <h3>Browse studies by <strong>country</strong></h3>
+        <h2>Browse studies by <strong>country</strong></h2>
         <template v-for="continent in continents" :key="continent">
             <ByContinent :continent="continent" :studies="getStudiesByContinent(continent)" :countries="countries" :currency="currency"/>
         </template>

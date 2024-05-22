@@ -13,7 +13,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="card min-h-[180px] relative">
+    <div class="card relative">
         <component :is="link ? 'RouterLink' : 'v-fragment'" :to="link" class="w-[150px]">
             <div :class="`cursor-pointer card-icon ${isLocal ? 'bg-[#868686]' : (isOpen ? 'bg-[#9B9B9B]' :  'bg-[#DFDFDF]')} hover:bg-[#CFCFCF]`">
                 <slot name="logo"></slot>
@@ -26,9 +26,14 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .card {
-    @apply flex flex-col items-center space-y-1 w-[150px]
+    // @apply flex flex-col items-center space-y-1 w-[150px]
+    width: 110px;
+
 }
 .card-icon {
-    @apply flex flex-col items-center justify-evenly text-[#303030] px-2 text-center rounded-lg w-full h-[140px] pt-4 pb-2
+    @apply flex flex-col items-center justify-evenly text-center rounded-lg w-full pt-4 pb-2;
+    height:110px;
+    margin-bottom: 0.5rem;
+    color: black;
 }
 </style>

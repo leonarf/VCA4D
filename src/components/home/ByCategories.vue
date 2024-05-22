@@ -32,7 +32,7 @@ const filterStudiesByCategory = (category) => {
 
 <template>
     <section>
-        <h3>Browse studies by <strong>product</strong></h3>
+        <h2>Browse studies by <strong>product</strong></h2>
         <template v-for="category in categories" :key="category.id">
             <ByCategory :studies="filterStudiesByCategory(category.id)" :countries="countries" :category="category" :currency="currency"/>
         </template>
