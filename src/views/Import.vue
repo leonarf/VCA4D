@@ -189,7 +189,7 @@ ol{
                     </ul>
 
                     <div class="my-4">
-                        <h1>Step 3 : Add study to repo</h1>
+                        <h2>Step 3 : Add study to repo</h2>
                         <p>1. Download both following files</p>
                         <h4 class="font-bold">{{ `Replace data file and add study file in /data/ ` }}</h4>
                         <div class="flex flex-row mb-2 gap-x-2">
