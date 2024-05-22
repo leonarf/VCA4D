@@ -1,20 +1,7 @@
 <style scoped lang="scss">
-
-h1{
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    font-weight: 700;
-}
-h3{
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-h4{
-    text-transform: uppercase;
-    color: grey;
-    font-weight: 700;
-    margin-top: 1rem;
+.corps-page-import{
+    max-width: 800px;
+    margin: auto;
 }
 ol{
     list-style: decimal;
@@ -64,158 +51,161 @@ ol{
 }
 </style>
 <template>
-    <Skeleton :skipFooter="true">
-        <h1>Step 1 : Import a study file</h1>
+    <Skeleton :skipFooter="true" >
+        <div class="corps-page-import">
+            <h1>Add a study to the VCA4D website</h1>
+            <h2>Step 1 : Import a study file</h2>
 
-        <ol>
-            <li><a href="inserer l'url du fichier vide" target="_blank">Download a blank file</a></li>
-            <li>Fill in the study data for each tab</li>
-            <li>
-                Upload the file to the platform
-                <br>
-                <input type="file" @change="handleFileUpload" />
-            </li>
-        </ol>
+            <ol>
+                <li><a href="inserer l'url du fichier vide" target="_blank">Download a blank file</a></li>
+                <li>Fill in the study data for each tab</li>
+                <li>
+                    Upload the file to the platform
+                    <br>
+                    <input type="file" @change="handleFileUpload" />
+                </li>
+            </ol>
 
-        <div v-if="isObjectNotEmpty(studyProperties)">
+            <div v-if="isObjectNotEmpty(studyProperties)">
 
-            <h1>Step 2 : Check that all data is there</h1>
-            <p>Complete the file for missing data, then re-upload the file (back to step 1).</p>
+                <h2>Step 2 : Check that all data is there</h2>
+                <p>Complete the file for missing data, then re-upload the file (back to step 1).</p>
 
-            <h4>Contents of the file</h4>
-            <div class="contents-of-the-file">
-                <div class="contents-of-one-tab content-missing">
-                    <h3>Tab: Study Identification</h3>
-                    <p class="tab-present">Tab present in the file</p>
-                    <div class="property">
-                        <p class="error-title">
-                            <span class="checkmark">✕</span> <b>Country</b>: Unknown country
-                        </p>
-                        <p class="explanation">
-                            Known countries are: Angola, Benin, Bostwana, Burkina Faso, Burundi, Cambodia, Cameroon, Colombia, Comoros, Dominican Republic, Ecuador, Ethiopia, Gambia, Georgia, Ghana, Guinea-Bissau, Honduras, Ivory Coast, Kenya, Mali, Nicaragua, Niger, Nigeria, Papua New Guinea, Sao Tome e Principe, Sierra Leone, Swaziland, Tanzania, Togo, Zambia, Zimbabwe Please respect name and isocode from https://en.wikipedia.org/wiki/ISO_3166-1 to add new countries
-                        </p>
+                <h4>Contents of the file</h4>
+                <div class="contents-of-the-file">
+                    <div class="contents-of-one-tab content-missing">
+                        <h3>Tab: Study Identification</h3>
+                        <p class="tab-present">Tab present in the file</p>
+                        <div class="property">
+                            <p class="error-title">
+                                <span class="checkmark">✕</span> <b>Country</b>: Unknown country
+                            </p>
+                            <p class="explanation">
+                                Known countries are: Angola, Benin, Bostwana, Burkina Faso, Burundi, Cambodia, Cameroon, Colombia, Comoros, Dominican Republic, Ecuador, Ethiopia, Gambia, Georgia, Ghana, Guinea-Bissau, Honduras, Ivory Coast, Kenya, Mali, Nicaragua, Niger, Nigeria, Papua New Guinea, Sao Tome e Principe, Sierra Leone, Swaziland, Tanzania, Togo, Zambia, Zimbabwe Please respect name and isocode from https://en.wikipedia.org/wiki/ISO_3166-1 to add new countries
+                            </p>
+                        </div>
                     </div>
+
                 </div>
 
-            </div>
-
-            
-            <div class="mt-4 flex flex-row gap-x-4">
-                <RouterLink to="/">
-                    <button
-                        class="browse">
-                        Find your study on the home page
-                    </button>
-                </RouterLink>
-                <RouterLink :to="'/study?id=localStorage'">
-                    <button
-                        class="browse">
-                        Browse this study
-                    </button>
-                </RouterLink>
-
-            </div>
-        </div>
-        <div class="w-full px-8 flex flex-col text-center">
-            <div v-if="!isObjectNotEmpty(studyProperties)">
                 
-            </div>
+                <div class="mt-4 flex flex-row gap-x-4">
+                    <RouterLink to="/">
+                        <button
+                            class="browse">
+                            Find your study on the home page
+                        </button>
+                    </RouterLink>
+                    <RouterLink :to="'/study?id=localStorage'">
+                        <button
+                            class="browse">
+                            Browse this study
+                        </button>
+                    </RouterLink>
 
-            <div v-if="excelData" class="flex flex-col gap-y-4 text-left mt-2 text-lg mx-auto max-w-5xl">
-                <h2>Summary</h2>
-                <div class="flex flex-row">
-                    <div class="w-1/4">
-                        <h3 class="table-cell">Type of file</h3>
-                    </div>
-                    <div class="flex flex-row w-3/4">
-                        <div v-for="t in TypesOfFile" :key="t"
-                        class="bg-gray-200 rounded mr-8 px-4 py-2 border border-gray-400 "
-                        :class="{ 'bg-green-300 font-semibold border-2': typeOfFile === t}">{{ t }}</div>
-                    </div>
                 </div>
-                <div class="flex flex-row">
-                    <div class="w-1/4">
-                        <h3 class="table-cell">Country</h3>
-                    </div>
-                    <div class="w-3/4">
-                        <div class="text-2xl" v-if="knownCountry">
-                            {{ knownCountry.prettyName }}
-                        </div>
-                        <div v-else class="text-red-600">
-                            Unknown country: <b>{{ studyProperties['country'] }}</b>
-                            <br />
-                            Known countries are: <b>{{knownCountries.sort((c1, c2) => c1.id.localeCompare(c2.id)).map(c => c.prettyName).join(', ')}}</b>
-                            Please respect name and isocode from https://en.wikipedia.org/wiki/ISO_3166-1 to add new countries
-                        </div>
-                    </div>
+            </div>
+            <div class="w-full px-8 flex flex-col text-center">
+                <div v-if="!isObjectNotEmpty(studyProperties)">
+                    
                 </div>
-                <div class="flex flex-row items-center">
-                    <div class="w-1/4">
-                        <h3 class="table-cell">Product</h3>
-                    </div>
-                    <div class="w-3/4">
-                        <div class="text-2xl" v-if="isKnownProduct">
-                            {{ studyProperties['commodity'] }}
+
+                <div v-if="excelData" class="flex flex-col gap-y-4 text-left mt-2 text-lg mx-auto max-w-5xl">
+                    <h2>Summary</h2>
+                    <div class="flex flex-row">
+                        <div class="w-1/4">
+                            <h3 class="table-cell">Type of file</h3>
                         </div>
-                        <div v-else class="text-red-600">
-                            Unknown commodity: <b>{{ slugify(studyProperties['commodity']) }}</b>
-                            <br />
-                            Known commodities are: <b>{{knownProducts.sort((a, b) => a.localeCompare(b)).join(', ')}}</b>
+                        <div class="flex flex-row w-3/4">
+                            <div v-for="t in TypesOfFile" :key="t"
+                            class="bg-gray-200 rounded mr-8 px-4 py-2 border border-gray-400 "
+                            :class="{ 'bg-green-300 font-semibold border-2': typeOfFile === t}">{{ t }}</div>
                         </div>
                     </div>
-                </div>
-                <div v-if="typeOfFile === TypesOfFile.Economics" class="flex flex-row items-center">
-                    <div class="w-1/4">
-                        <h3 class="table-cell">Currency</h3>
-                    </div>
-                    <div class="w-3/4 text-xl">
-                        <div v-if="!isValidCurrency(studyProperties.targetCurrency)">
-                            <span v-if="studyProperties.localCurrency != null" class="text-red-600">
-                                Currency <b>{{ studyProperties.localCurrency }}</b> defined in cell <b>{{ HOME_LABELS.LocalCcy}}</b> or <b>{{ HOME_LABELS.TargetCcy }}</b> is not valid.
-                            </span>
-                            <span v-else class="text-red-600">
-                                <b>{{ HOME_LABELS.LocalCcy}}</b> not found in uploaded file.
-                            </span>
-                            <br/>
-                            Find all valid currencies code by visiting <a class="font-semibold underline" href="https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes" target="_blank">this wiki page.</a>
+                    <div class="flex flex-row">
+                        <div class="w-1/4">
+                            <h3 class="table-cell">Country</h3>
                         </div>
-                        <div v-else>
-                            <div v-if="!isCurrencySupported(studyProperties.targetCurrency, studyProperties.year)">
-                                Currency <b>{{ studyProperties.targetCurrency}}</b> is valid but we do not have it's rate change to USD for the year's study ({{ studyProperties.year }}).
+                        <div class="w-3/4">
+                            <div class="text-2xl" v-if="knownCountry">
+                                {{ knownCountry.prettyName }}
+                            </div>
+                            <div v-else class="text-red-600">
+                                Unknown country: <b>{{ studyProperties['country'] }}</b>
+                                <br />
+                                Known countries are: <b>{{knownCountries.sort((c1, c2) => c1.id.localeCompare(c2.id)).map(c => c.prettyName).join(', ')}}</b>
+                                Please respect name and isocode from https://en.wikipedia.org/wiki/ISO_3166-1 to add new countries
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <div class="w-1/4">
+                            <h3 class="table-cell">Product</h3>
+                        </div>
+                        <div class="w-3/4">
+                            <div class="text-2xl" v-if="isKnownProduct">
+                                {{ studyProperties['commodity'] }}
+                            </div>
+                            <div v-else class="text-red-600">
+                                Unknown commodity: <b>{{ slugify(studyProperties['commodity']) }}</b>
+                                <br />
+                                Known commodities are: <b>{{knownProducts.sort((a, b) => a.localeCompare(b)).join(', ')}}</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="typeOfFile === TypesOfFile.Economics" class="flex flex-row items-center">
+                        <div class="w-1/4">
+                            <h3 class="table-cell">Currency</h3>
+                        </div>
+                        <div class="w-3/4 text-xl">
+                            <div v-if="!isValidCurrency(studyProperties.targetCurrency)">
+                                <span v-if="studyProperties.localCurrency != null" class="text-red-600">
+                                    Currency <b>{{ studyProperties.localCurrency }}</b> defined in cell <b>{{ HOME_LABELS.LocalCcy}}</b> or <b>{{ HOME_LABELS.TargetCcy }}</b> is not valid.
+                                </span>
+                                <span v-else class="text-red-600">
+                                    <b>{{ HOME_LABELS.LocalCcy}}</b> not found in uploaded file.
+                                </span>
+                                <br/>
+                                Find all valid currencies code by visiting <a class="font-semibold underline" href="https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes" target="_blank">this wiki page.</a>
                             </div>
                             <div v-else>
-                                This study is in {{ studyProperties.localCurrency }} and will be converted to {{  studyProperties.targetCurrency }} with a rate of {{ studyProperties.currencyRatio }}
+                                <div v-if="!isCurrencySupported(studyProperties.targetCurrency, studyProperties.year)">
+                                    Currency <b>{{ studyProperties.targetCurrency}}</b> is valid but we do not have it's rate change to USD for the year's study ({{ studyProperties.year }}).
+                                </div>
+                                <div v-else>
+                                    This study is in {{ studyProperties.localCurrency }} and will be converted to {{  studyProperties.targetCurrency }} with a rate of {{ studyProperties.currencyRatio }}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <h2 class="mt-8">Warnings</h2>
-                <div v-if="errors.length === 0">
-                    There are no warnings.
-                </div>
-                <ul v-else>
-                    <li v-for="(error, index) in errors" :key="index" class="list-disc">
-                        <div :class="`${error.level === 'error' ? 'text-red-500' : ''}`" :innerHTML="error.message"></div>
-                    </li>
-                </ul>
-
-                <div class="my-4">
-                    <h1>Step 3 : Add study to repo</h1>
-                    <p>1. Download both following files</p>
-                    <h4 class="font-bold">{{ `Replace data file and add study file in /data/ ` }}</h4>
-                    <div class="flex flex-row mb-2 gap-x-2">
-                        <button class="download"
-                            @click="downloadDataJson">Download data file</button>
-                        <button class="download"
-                            @click="downloadStudy">Download study file</button>
+                    <h2 class="mt-8">Warnings</h2>
+                    <div v-if="errors.length === 0">
+                        There are no warnings.
                     </div>
-                    <p>Step 2 : Go to https://github.com/leonarf/VCA4D/tree/main/data</p>
-                    <p>Step 3 : Login to a VCA4D authorised github account</p>
-                    <p>Step 4 : Click on "Add file" and then "Create new file"</p>
-                    <img :src="upload_files_screenshot" alt="github screenshot">
-                    <p>Step 5 : Upload both previously downloaded files, and click on "Commit changes"</p>
-                    <img :src="commit_creation_screenshot" alt="github screenshot">
-                    <p>Step optional : rename your Excel file to {{ `${studyFileName}.ods` }} before saving it into github</p>
+                    <ul v-else>
+                        <li v-for="(error, index) in errors" :key="index" class="list-disc">
+                            <div :class="`${error.level === 'error' ? 'text-red-500' : ''}`" :innerHTML="error.message"></div>
+                        </li>
+                    </ul>
+
+                    <div class="my-4">
+                        <h1>Step 3 : Add study to repo</h1>
+                        <p>1. Download both following files</p>
+                        <h4 class="font-bold">{{ `Replace data file and add study file in /data/ ` }}</h4>
+                        <div class="flex flex-row mb-2 gap-x-2">
+                            <button class="download"
+                                @click="downloadDataJson">Download data file</button>
+                            <button class="download"
+                                @click="downloadStudy">Download study file</button>
+                        </div>
+                        <p>Step 2 : Go to https://github.com/leonarf/VCA4D/tree/main/data</p>
+                        <p>Step 3 : Login to a VCA4D authorised github account</p>
+                        <p>Step 4 : Click on "Add file" and then "Create new file"</p>
+                        <img :src="upload_files_screenshot" alt="github screenshot">
+                        <p>Step 5 : Upload both previously downloaded files, and click on "Commit changes"</p>
+                        <img :src="commit_creation_screenshot" alt="github screenshot">
+                        <p>Step optional : rename your Excel file to {{ `${studyFileName}.ods` }} before saving it into github</p>
+                    </div>
                 </div>
             </div>
         </div>
