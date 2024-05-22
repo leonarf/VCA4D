@@ -50,12 +50,12 @@ watch(mandatoryStudiesPart, async (newMandatoryParts, oldMandatoryParts) => {
         <section class="banner">
             <div>
                 <h1><b>V</b>alue <b>C</b>hain <b>A</b>nalysis <b>F</b>or <b>D</b>evelopment</h1>
-                <h2>Providing value chain analysis for improving operations</h2>
+                <p>Providing value chain analysis for improving operations</p>
             </div>
         </section>
         <section class="mx-4 sm:mx-8 md:mx-12 lg:mx-48 xl:mx-60">
             <section>
-                <h2>Get insight into food value chains in developing countries</h2>
+                <h1>Get insight into food value chains in developing countries</h1>
                 <p>
                     Welcome to the VCA4D website. You will find a tailored access to 35 value chain analyses
                     across 16 different agricultural commodities around the world. Based on a standardised
@@ -109,8 +109,8 @@ section.banner {
 
     div {
         height: 60%;
-        max-width: 75%;
-        padding: 1rem;
+        max-width: 50%;
+        padding: 2rem;
         border-radius: 1.5rem;
         background-color: hsla(0, 0%, 0%, 0.7);
 
@@ -123,15 +123,17 @@ section.banner {
         align-items: flex-start;
 
         h1,
-        h2 {
+        p {
             color: white;
             margin: 0;
+            font-weight: 300;
         }
 
         h1 {
             font-size: 2.5rem;
             font-weight: 500;
             line-height: 1.2;
+            margin-top: 0;
         }
 
         h2 {

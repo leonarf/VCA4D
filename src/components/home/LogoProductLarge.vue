@@ -13,10 +13,13 @@ const props = defineProps({
     <img 
         :src="getProductLogo(productName)" 
         :alt="alt"
-        style="height: 75px; width: 75px;"
-        class="w-24">
+        style="height: 50px; width: 50px;"
+        >
 </template>
 
 <style scoped lang="scss">
-
+img{
+    filter: saturate(0);
+    opacity: 0.5;
+}
 </style>

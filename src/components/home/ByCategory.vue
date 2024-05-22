@@ -58,11 +58,11 @@ const getCountry = countryId => props.countries.find(country => country.id === c
                                         :alt="`Link to ${item.studies[0].title} study`" />
                             </template>
                             <template v-slot:footer>
-                                <CardFooter :text="getCountry(item.studies[0].country)['prettyName'] ">
-                                <template v-slot:logo>
-                                <LogoCountrySmall :iso-code="getCountry(item.studies[0].country)?.iso || 'gr'" />
-                                </template>
-                            </CardFooter>
+                                <CardFooter :text="getCountry(item.studies[0].country)['prettyName']">
+                                    <template v-slot:logo>
+                                        <LogoCountrySmall :iso-code="getCountry(item.studies[0].country)?.iso || 'gr'" />
+                                    </template>
+                                </CardFooter>
                             </template>
                         </Card>
                     </template>

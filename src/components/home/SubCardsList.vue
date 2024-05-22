@@ -14,7 +14,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="absolute top-[145px] bg-[#F0F0F0] p-4 rounded-lg text-white z-50">
+    <div class="absolute top-[120px] bg-[#F0F0F0] p-4 rounded-lg text-white z-50 sub-cards-list">
         <div class="flex flex-row gap-x-4">
             <slot></slot>
         </div>
@@ -26,4 +26,8 @@ const props = defineProps({
     </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.sub-cards-list{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+</style>
