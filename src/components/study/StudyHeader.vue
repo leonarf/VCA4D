@@ -49,7 +49,8 @@ let dataToDisplay = computed(() => {
         @apply text-[#656565] text-xs
     }
     .title {
-        @apply text-[#303030] text-3xl font-thin
+        @apply text-[#303030] text-3xl font-thin;
+        text-transform: capitalize;
     }
     .bloc {
         @apply mr-20
