@@ -1,7 +1,14 @@
 import { ErrorLevels, setImportErrors, parseActorTypes, getSheetNameContent } from '@utils/import/generic.js'
 
+export const ACV_SHEET_NAMES = {
+  Home: "Value Chain",
+  ValueChainsDescription: "Value chains description",
+  ActorTypes: "Actor types",
+  Impacts: "Impacts",
+}
+
 const parseValueChainsDescriptions = (json) => {
-  var sheetname = "Value chains description"
+  var sheetname = ACV_SHEET_NAMES.ValueChainsDescription
   var sheetAsJson = getSheetNameContent(json, sheetname)
   if (sheetAsJson == null) {
     return
@@ -108,7 +115,7 @@ const parseImpactsFirstRow = (firstRow, secondRow, valueChains, sheetname, actor
 
 const parseImpacts = (json, valueChains, actors) => {
   var impacts = []
-  var sheetname = "Impacts"
+  var sheetname = ACV_SHEET_NAMES.Impacts
   var sheetAsJson = getSheetNameContent(json, sheetname)
   if (sheetAsJson == null) {
     return null
