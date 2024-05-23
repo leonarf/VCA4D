@@ -24,8 +24,7 @@ ol{
                     <div>You have imported this study: <b>{{ studyProperties['id'] }}</b></div>
                     <div class="ml-4">
                         Press 
-                        <button class="delete" @click="clearData"
-                        >Remove</button> or
+                        <button @click="clearData">Remove</button> or
                     </div>
                 </div>
                 <p v-else>Upload the file to the platform</p>
@@ -40,9 +39,9 @@ ol{
                 <a href="https://github.com/leonarf/VCA4D/tree/main/data/xls" target="_blank">Here you can find example blank file to help you upload your study</a>
                 
                 <h4>Contents of the file</h4>
-                <li v-for="(errors, spreadsheet, index) in errorsBySpreadsheet" :key="index">
+                <div v-for="(errors, spreadsheet, index) in errorsBySpreadsheet" :key="index">
                     <ImportWarning :spreadsheetName="spreadsheet" :errors="errors"/>
-                </li>
+                </div>
 
                 <div v-if="isObjectNotEmpty(studyProperties)" class="flex flex-col items-center">
                     <div class="mt-4 flex flex-row gap-x-4">

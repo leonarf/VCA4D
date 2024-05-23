@@ -3,6 +3,7 @@
     background-color: rgb(236, 236, 236);
     border-radius: 1rem;
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 .contents-of-one-tab{
     border-left: 10px solid #FF9280;
@@ -36,12 +37,12 @@
     <div class="contents-of-one-tab">
       <h3>Tab: {{ spreadsheetName }}</h3>
       <p v-if="!spreadsheetMissing" class="tab-present">Tab present in the file</p>
-      <li v-for="(error, index) in errors" :key="index">
+      <div v-for="(error, index) in errors" :key="index">
         <div class="property">
           <p class="error-title"><span class="checkmark">✕</span> {{ error.level }}</p>
           <p :innerHTML="error.message"></p>
         </div>
-      </li>
+      </div>
     </div>
   </div>
 </template>
