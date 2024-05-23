@@ -4,7 +4,6 @@ import { getTotalAddedValue } from '../economics'
 export const ECO_SHEET_NAMES = {
   Home: "Value Chain",
   StagesDescription: "Stages description",
-  Flows: "Flow by actor type",
   ActorTypes: "Actor types",
   FarmGate: "Farm gate price In final price",
   Indicators: "Indicator by actor type",
@@ -13,6 +12,7 @@ export const ECO_SHEET_NAMES = {
   AccountByActor: "Account by actor type",
   ImportExport: "Imported And exported goods",
   Translation: "AFA Translations",
+  Flows: "Flow by actor type",
 }
 
 export const HOME_LABELS = {

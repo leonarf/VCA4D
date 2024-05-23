@@ -12,43 +12,6 @@ ol{
     margin: auto;
     align-items: left;
 }
-.contents-of-the-file{
-    background-color: rgb(236, 236, 236);
-    border-radius: 1rem;
-    padding: 1rem;
-}
-.contents-of-one-tab{
-    border-left: 10px solid #FF9280;
-    padding: 1rem;
-}
-.content-missing{
-
-}
-.tab-present{
-    color:#02AA18
-}
-.property{
-    margin-top: 2rem;
-}
-.checkmark{
-    background-color: #FF9280;
-    border-radius: 100%;
-    color: white;
-    width: 26px;
-    height: 26px;
-    display: inline-block;
-    text-align: center;
-    font-weight: 900;
-    vertical-align: center;
-    margin-right: 5px;
-}
-.error-title{
-    color: #FF9280;
-
-}
-.explanation{
-
-}
 </style>
 <template>
     <Skeleton :skipFooter="true" >
@@ -56,60 +19,49 @@ ol{
             <h1>Add a study to the VCA4D website</h1>
             <h2>Step 1 : Import a study file</h2>
 
-            <ol>
-                <li><a href="inserer l'url du fichier vide" target="_blank">Download a blank file</a></li>
-                <li>Fill in the study data for each tab</li>
-                <li>
-                    Upload the file to the platform
-                    <br>
-                    <input type="file" @change="handleFileUpload" />
-                </li>
-            </ol>
+            <div>
+                <div v-if="isObjectNotEmpty(studyProperties)">
+                    <div>You have imported this study: <b>{{ studyProperties['id'] }}</b></div>
+                    <div class="ml-4">
+                        Press 
+                        <button class="delete" @click="clearData"
+                        >Remove</button> or
+                    </div>
+                </div>
+                <p v-else>Upload the file to the platform</p>
+                <br>
+                <input type="file" @change="handleFileUpload" />
+            </div>
 
             <div v-if="isObjectNotEmpty(studyProperties)">
 
                 <h2>Step 2 : Check that all data is there</h2>
                 <p>Complete the file for missing data, then re-upload the file (back to step 1).</p>
-
-                <h4>Contents of the file</h4>
-                <div class="contents-of-the-file">
-                    <div class="contents-of-one-tab content-missing">
-                        <h3>Tab: Study Identification</h3>
-                        <p class="tab-present">Tab present in the file</p>
-                        <div class="property">
-                            <p class="error-title">
-                                <span class="checkmark">✕</span> <b>Country</b>: Unknown country
-                            </p>
-                            <p class="explanation">
-                                Known countries are: Angola, Benin, Bostwana, Burkina Faso, Burundi, Cambodia, Cameroon, Colombia, Comoros, Dominican Republic, Ecuador, Ethiopia, Gambia, Georgia, Ghana, Guinea-Bissau, Honduras, Ivory Coast, Kenya, Mali, Nicaragua, Niger, Nigeria, Papua New Guinea, Sao Tome e Principe, Sierra Leone, Swaziland, Tanzania, Togo, Zambia, Zimbabwe Please respect name and isocode from https://en.wikipedia.org/wiki/ISO_3166-1 to add new countries
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
+                <a href="https://github.com/leonarf/VCA4D/tree/main/data/xls" target="_blank">Here you can find example blank file to help you upload your study</a>
                 
-                <div class="mt-4 flex flex-row gap-x-4">
-                    <RouterLink to="/">
-                        <button
-                            class="browse">
-                            Find your study on the home page
-                        </button>
-                    </RouterLink>
-                    <RouterLink :to="'/study?id=localStorage'">
-                        <button
-                            class="browse">
-                            Browse this study
-                        </button>
-                    </RouterLink>
+                <h4>Contents of the file</h4>
+                <li v-for="(errors, spreadsheet, index) in errorsBySpreadsheet" :key="index">
+                    <ImportWarning :spreadsheetName="spreadsheet" :errors="errors"/>
+                </li>
 
+                <div v-if="isObjectNotEmpty(studyProperties)" class="flex flex-col items-center">
+                    <div class="mt-4 flex flex-row gap-x-4">
+                        Check the study appears on the front page, and at the right place
+                        <RouterLink to="/">
+                            <button>
+                                Find your study on the home page
+                            </button>
+                        </RouterLink>
+                        Check the study's data are well transformed into graphic on dedicated page(s)
+                        <RouterLink :to="'/study?id=localStorage'">
+                            <button>
+                                Browse this study
+                            </button>
+                        </RouterLink>
+                    </div>
                 </div>
             </div>
             <div class="w-full px-8 flex flex-col text-center">
-                <div v-if="!isObjectNotEmpty(studyProperties)">
-                    
-                </div>
-
                 <div v-if="excelData" class="flex flex-col gap-y-4 text-left mt-2 text-lg mx-auto max-w-5xl">
                     <h2>Summary</h2>
                     <div class="flex flex-row">
@@ -178,15 +130,6 @@ ol{
                             </div>
                         </div>
                     </div>
-                    <h2 class="mt-8">Warnings</h2>
-                    <div v-if="errors.length === 0">
-                        There are no warnings.
-                    </div>
-                    <ul v-else>
-                        <li v-for="(error, index) in errors" :key="index" class="list-disc">
-                            <div :class="`${error.level === 'error' ? 'text-red-500' : ''}`" :innerHTML="error.message"></div>
-                        </li>
-                    </ul>
 
                     <div class="my-4">
                         <h2>Step 3 : Add study to repo</h2>
@@ -214,23 +157,23 @@ ol{
   
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue';
+import { RouterLink } from 'vue-router'
 import * as XLSX from 'xlsx'
+
 import Skeleton from '@components/Skeleton.vue'
-import { slugify } from '@utils/format.js'
+import ImportWarning from '@components/import/ImportWarning.vue'
+
 import jsonData from '@data/data.json'
-import { parseSustainabilityWorksheet } from '@utils/import/social.js'
-import { parseEconomicsJson, getErrors, getValueChainProperty } from '@utils/import/eco.js'
-import { parseEnvironmentJson } from '@utils/import/environment.js'
+import { isValidCurrency, isCurrencySupported } from '@utils/currency.js'
+import { getAllJsonData } from '@utils/data.js';
+import { slugify } from '@utils/format.js'
+import { HOME_LABELS, ECO_SHEET_NAMES, parseEconomicsJson, getErrors, getValueChainProperty } from '@utils/import/eco.js'
+import { ACV_SHEET_NAMES, parseEnvironmentJson } from '@utils/import/environment.js'
 import { ErrorLevels, setImportErrors, clearImportErrors, getImportErrors } from '@utils/import/generic.js'
-import { HOME_LABELS } from '@utils/import/eco'
-import { isValidCurrency, isCurrencySupported } from '@utils/currency'
+import { parseSustainabilityWorksheet } from '@utils/import/social.js'
+
 import upload_files_screenshot from '@images/tuto_upload/upload_files_on_github.png'
 import commit_creation_screenshot from '@images/tuto_upload/commit_creation_screenshot.png'
-
-
-
-import { RouterLink } from 'vue-router'
-import { getAllJsonData } from '@utils/data';
 
 const excelData = ref(undefined);
 const workbook = ref(undefined)
@@ -268,6 +211,7 @@ const sheetsNameForEnvironmentalData = ["Value chains description"]
 const sheetsNameForEconomicData = ["Stages description"]
 
 const handleFileUpload = (event) => {
+    clearData()
     const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
@@ -453,7 +397,32 @@ watch(studyData, (newValue) => {
     localStorage.setItem('localStudyData', JSON.stringify(newValue))
 })
 
-const errors = computed(() => typeOfFile.value === TypesOfFile.Economics ? getErrors(studyData.value) : getImportErrors())
+const errorsBySpreadsheet = computed(() => {
+    let result = {}
+    let rawErrors = null
+    if (typeOfFile.value === TypesOfFile.Economics) {
+        rawErrors = getErrors(studyData.value)
+        Object.keys(ECO_SHEET_NAMES).forEach(spreadsheetName => {
+            result[ECO_SHEET_NAMES[spreadsheetName]] = []
+        })
+    }
+    else {
+        if (typeOfFile.value === TypesOfFile.Environment) {
+            Object.keys(ACV_SHEET_NAMES).forEach(spreadsheetName => {
+                result[ACV_SHEET_NAMES[spreadsheetName]] = []
+            })
+        }
+        rawErrors = getImportErrors()
+    }
+    rawErrors.forEach(error => {
+        if (!result[error.spreadsheet]) {
+            result[error.spreadsheet] = []
+        }
+        result[error.spreadsheet].push(error)
+    })
+    console.log("error to display", result)
+    return result
+})
 
 const jsonFile = computed(() => {
     return JSON.stringify(
