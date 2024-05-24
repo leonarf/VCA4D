@@ -6,12 +6,13 @@
       "color": "#5F8A64",
       "textColor": "#5F8A64",
       "commodities": [
-        "banana",
+        "cocoa",
+        "coffee",
         "cashew",
-        "groundnut",
+        "banana",
         "mango",
-        "pineapple",
-        "vanilla"
+        "vanilla",
+        "oil palm"
       ]
     },
     {
@@ -32,14 +33,13 @@
       "textColor": "#806C00",
       "commodities": [
         "cassava",
-        "cocoa",
-        "coffee",
         "cotton",
+        "groundnut",
         "cowpea",
         "french beans",
         "maize",
-        "oil palm",
-        "sorghum"
+        "sorghum",
+        "pineapple"
       ]
     },
     {
