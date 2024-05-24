@@ -86,4 +86,8 @@ export const getCountries = () => {
     return jsonData.countries
 }
 
+export const getAllKnownProducts = () => {
+    return jsonData.categories.reduce((arr, item) => arr.concat(item.commodities) , [])
+}
+
 export const getCountry = (countryId) => getCountries().find(country => country.id === countryId)

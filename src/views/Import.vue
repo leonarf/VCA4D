@@ -13,6 +13,7 @@ ol{
     align-items: left;
 }
 </style>
+
 <template>
     <Skeleton :skipFooter="true" >
         <div class="corps-page-import">
@@ -20,8 +21,8 @@ ol{
             <h2>Step 1 : Import a study file</h2>
 
             <div>
-                <div v-if="isObjectNotEmpty(studyProperties)">
-                    <div>You have imported this study: <b>{{ studyProperties['id'] }}</b></div>
+                <div v-if="isStudyObjectNotEmpty">
+                    <div>You have imported this study: <b>{{ studyData['id'] }}</b></div>
                     <div class="ml-4">
                         Press 
                         <button @click="clearData">Remove</button> or
@@ -32,182 +33,47 @@ ol{
                 <input type="file" @change="handleFileUpload" />
             </div>
 
-            <div v-if="isObjectNotEmpty(studyProperties)">
-
-                <h2>Step 2 : Check that all data is there</h2>
-                <p>Complete the file for missing data, then re-upload the file (back to step 1).</p>
-                <a href="https://github.com/leonarf/VCA4D/tree/main/data/xls" target="_blank">Here you can find example blank file to help you upload your study</a>
-                
-                <h4>Contents of the file</h4>
-                <div v-for="(errors, spreadsheet, index) in errorsBySpreadsheet" :key="index">
-                    <ImportWarning :spreadsheetName="spreadsheet" :errors="errors"/>
-                </div>
-
-                <div v-if="isObjectNotEmpty(studyProperties)" class="flex flex-col items-center">
-                    <div class="mt-4 flex flex-row gap-x-4">
-                        Check the study appears on the front page, and at the right place
-                        <RouterLink to="/">
-                            <button>
-                                Find your study on the home page
-                            </button>
-                        </RouterLink>
-                        Check the study's data are well transformed into graphic on dedicated page(s)
-                        <RouterLink :to="'/study?id=localStorage'">
-                            <button>
-                                Browse this study
-                            </button>
-                        </RouterLink>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full px-8 flex flex-col text-center">
-                <div v-if="excelData" class="flex flex-col gap-y-4 text-left mt-2 text-lg mx-auto max-w-5xl">
-                    <h2>Summary</h2>
-                    <div class="flex flex-row">
-                        <div class="w-1/4">
-                            <h3 class="table-cell">Type of file</h3>
-                        </div>
-                        <div class="flex flex-row w-3/4">
-                            <div v-for="t in TypesOfFile" :key="t"
-                            class="bg-gray-200 rounded mr-8 px-4 py-2 border border-gray-400 "
-                            :class="{ 'bg-green-300 font-semibold border-2': typeOfFile === t}">{{ t }}</div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row">
-                        <div class="w-1/4">
-                            <h3 class="table-cell">Country</h3>
-                        </div>
-                        <div class="w-3/4">
-                            <div class="text-2xl" v-if="knownCountry">
-                                {{ knownCountry.prettyName }}
-                            </div>
-                            <div v-else class="text-red-600">
-                                Unknown country: <b>{{ studyProperties['country'] }}</b>
-                                <br />
-                                Known countries are: <b>{{knownCountries.sort((c1, c2) => c1.id.localeCompare(c2.id)).map(c => c.prettyName).join(', ')}}</b>
-                                Please respect name and isocode from https://en.wikipedia.org/wiki/ISO_3166-1 to add new countries
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-row items-center">
-                        <div class="w-1/4">
-                            <h3 class="table-cell">Product</h3>
-                        </div>
-                        <div class="w-3/4">
-                            <div class="text-2xl" v-if="isKnownProduct">
-                                {{ studyProperties['commodity'] }}
-                            </div>
-                            <div v-else class="text-red-600">
-                                Unknown commodity: <b>{{ slugify(studyProperties['commodity']) }}</b>
-                                <br />
-                                Known commodities are: <b>{{knownProducts.sort((a, b) => a.localeCompare(b)).join(', ')}}</b>
-                            </div>
-                        </div>
-                    </div>
-                    <div v-if="typeOfFile === TypesOfFile.Economics" class="flex flex-row items-center">
-                        <div class="w-1/4">
-                            <h3 class="table-cell">Currency</h3>
-                        </div>
-                        <div class="w-3/4 text-xl">
-                            <div v-if="!isValidCurrency(studyProperties.targetCurrency)">
-                                <span v-if="studyProperties.localCurrency != null" class="text-red-600">
-                                    Currency <b>{{ studyProperties.localCurrency }}</b> defined in cell <b>{{ HOME_LABELS.LocalCcy}}</b> or <b>{{ HOME_LABELS.TargetCcy }}</b> is not valid.
-                                </span>
-                                <span v-else class="text-red-600">
-                                    <b>{{ HOME_LABELS.LocalCcy}}</b> not found in uploaded file.
-                                </span>
-                                <br/>
-                                Find all valid currencies code by visiting <a class="font-semibold underline" href="https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes" target="_blank">this wiki page.</a>
-                            </div>
-                            <div v-else>
-                                <div v-if="!isCurrencySupported(studyProperties.targetCurrency, studyProperties.year)">
-                                    Currency <b>{{ studyProperties.targetCurrency}}</b> is valid but we do not have it's rate change to USD for the year's study ({{ studyProperties.year }}).
-                                </div>
-                                <div v-else>
-                                    This study is in {{ studyProperties.localCurrency }} and will be converted to {{  studyProperties.targetCurrency }} with a rate of {{ studyProperties.currencyRatio }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="my-4">
-                        <h2>Step 3 : Add study to repo</h2>
-                        <p>1. Download both following files</p>
-                        <h4 class="font-bold">{{ `Replace data file and add study file in /data/ ` }}</h4>
-                        <div class="flex flex-row mb-2 gap-x-2">
-                            <button class="download"
-                                @click="downloadDataJson">Download data file</button>
-                            <button class="download"
-                                @click="downloadStudy">Download study file</button>
-                        </div>
-                        <p>Step 2 : Go to https://github.com/leonarf/VCA4D/tree/main/data</p>
-                        <p>Step 3 : Login to a VCA4D authorised github account</p>
-                        <p>Step 4 : Click on "Add file" and then "Create new file"</p>
-                        <img :src="upload_files_screenshot" alt="github screenshot">
-                        <p>Step 5 : Upload both previously downloaded files, and click on "Commit changes"</p>
-                        <img :src="commit_creation_screenshot" alt="github screenshot">
-                        <p>Step optional : rename your Excel file to {{ `${studyFileName}.ods` }} before saving it into github</p>
-                    </div>
-                </div>
+            <div v-if="isStudyObjectNotEmpty">
+                <CheckImportedDataStep :studyData="studyData"/>
+                <SaveOnGithubStep :studyData="studyData"/>
             </div>
         </div>
     </Skeleton>
 </template>
   
 <script setup>
-import { computed, onMounted, ref, watch } from 'vue';
-import { RouterLink } from 'vue-router'
+import { computed, onMounted, ref } from 'vue';
+
 import * as XLSX from 'xlsx'
 
 import Skeleton from '@components/Skeleton.vue'
-import ImportWarning from '@components/import/ImportWarning.vue'
+import SaveOnGithubStep from '@components/import/SaveOnGithubStep.vue'
+import CheckImportedDataStep from '@components/import/CheckImportedDataStep.vue'
 
-import jsonData from '@data/data.json'
-import { isValidCurrency, isCurrencySupported } from '@utils/currency.js'
 import { getAllJsonData } from '@utils/data.js';
-import { slugify } from '@utils/format.js'
-import { HOME_LABELS, ECO_SHEET_NAMES, parseEconomicsJson, getErrors, getValueChainProperty } from '@utils/import/eco.js'
-import { ACV_SHEET_NAMES, parseEnvironmentJson } from '@utils/import/environment.js'
-import { ErrorLevels, setImportErrors, clearImportErrors, getImportErrors } from '@utils/import/generic.js'
-import { parseSustainabilityWorksheet } from '@utils/import/social.js'
+import { processUploadedExcelFile, clearImportErrors } from '@utils/import/generic.js'
 
-import upload_files_screenshot from '@images/tuto_upload/upload_files_on_github.png'
-import commit_creation_screenshot from '@images/tuto_upload/commit_creation_screenshot.png'
-
-const excelData = ref(undefined);
-const workbook = ref(undefined)
+const workbook = ref(null)
 
 const clearData = () => {
-    localStorage.removeItem('localStudyProperties')
-    localStorage.removeItem('localStudyData')
-    localStorage.removeItem('localExcel')
+    console.log("clearing all data")
     localStorage.removeItem('localWorkbook')
+    workbook.value = null
     clearImportErrors()
-    window.location.reload()
 }
 
-const knownCountries = ref([])
 const knownProducts = ref([])
-
 onMounted(async () => {
     const allJsonData = getAllJsonData()
-    knownCountries.value = allJsonData.countries
     knownProducts.value = allJsonData.categories.reduce((arr, item) => arr.concat(item.commodities) , [])
 })
 
-const knownCountry = computed(() => knownCountries.value.find(c => c.id === studyProperties.value['country']))
-const isKnownProduct = computed(() => knownProducts.value.includes(studyProperties.value['commodity']?.toLowerCase()))
-
-const isObjectNotEmpty = (obj) => {
-    if (!obj) {
+const isStudyObjectNotEmpty = computed(() => {
+    if (!studyData.value) {
         return false
     }
-    return Object.keys(obj).length > 0;
-}
-
-const sheetNameForSustainabilityData = "Questionnaire"
-const sheetsNameForEnvironmentalData = ["Value chains description"]
-const sheetsNameForEconomicData = ["Stages description"]
+    return Object.keys(studyData.value).length > 0;
+})
 
 const handleFileUpload = (event) => {
     clearData()
@@ -217,309 +83,25 @@ const handleFileUpload = (event) => {
         reader.onload = (e) => {
             const data = e.target.result;
             const wb = XLSX.read(data, { type: 'binary' });
-            let output = {}
-            wb.SheetNames.forEach((workSheet) => {
-                console.log("Converting to JSON sheet", workSheet)
-                const rowObject = XLSX.utils.sheet_to_json(
-                    wb.Sheets[workSheet]
-                )
-                output[workSheet] = rowObject
-            })
-            excelData.value = output
             workbook.value = wb
-            localStorage.setItem('localExcel', JSON.stringify(output))
             localStorage.setItem('localWorkbook', JSON.stringify(wb))
         };
         reader.readAsArrayBuffer(file);
     }
 }
 
-const TypesOfFile = {
-    Sustainability: 'Sustainability',
-    Environment: 'Environment',
-    Economics: 'Economics',
-};
-
-const typeOfFile = computed(() => {
-    if (!excelData.value) {
-        return null
-    }
-    if (excelData.value[sheetNameForSustainabilityData]) {
-        return TypesOfFile.Sustainability
-    }
-    if (excelData.value[sheetsNameForEnvironmentalData[0]]) {
-        return TypesOfFile.Environment
-    }
-    if (excelData.value[sheetsNameForEconomicData[0]]) {
-        return TypesOfFile.Economics
-    }
-    setImportErrors(
-        sheetNameForSustainabilityData,
-        ErrorLevels.BreaksALot,
-        `Missing sheet. At least one of the following should be in the file: '${sheetNameForSustainabilityData}', '${sheetsNameForEnvironmentalData[0]}' or '${sheetsNameForEconomicData[0]}' depending of the excel type, ${Object.keys(TypesOfFile)}`)
-    return null
-})
-
-const studyProperties = computed(() => {
-    if (typeOfFile.value == null) {
-        return null
-    }
-    const localStorageValue = localStorage.getItem('localStudyProperties')
-    if (localStorageValue) {
-        try {
-            return JSON.parse(localStorageValue);
-        } catch (e) {
-            console.log("value of 'studyProperties' saved in the local storage in invalid", localStorageValue, typeof(localStorageValue))
-        }
-    }
-
-    if (typeOfFile.value === TypesOfFile.Sustainability) {
-        if (!workbook.value) {
-            return {}
-        }
-        const questionnaireSheet = workbook.value.Sheets[sheetNameForSustainabilityData]
-        const country = slugify(questionnaireSheet['D1']?.v)
-        const commodity = questionnaireSheet['B1']?.v.trim()
-        const year = null
-        return {
-            id: slugify(commodity + "-" + country),
-            country,
-            commodity,
-            year,
-            type: 'social'
-        }
-
-    }
-    if (!excelData.value) {
-        return {}
-    }
-
-    const country = slugify(getValueChainProperty(excelData.value, HOME_LABELS.Country))
-    const commodity = getValueChainProperty(excelData.value, HOME_LABELS.Commodity)
-
-    if (!knownProducts.value.includes(slugify(commodity))) {
-        setImportErrors(
-            sheetNameForSustainabilityData,
-            ErrorLevels.BreaksALot,
-            `Commodity <b>${slugify(commodity)}</b> is not recognized.`)
-    }
-
-    var result = {
-        id: slugify(commodity + "-" + country),
-        country,
-        commodity
-    }
-
-    if (typeOfFile.value === TypesOfFile.Economics) {
-        const year = getValueChainProperty(excelData.value, "Reference Year");
-        const localCurrency = getValueChainProperty(excelData.value, HOME_LABELS.LocalCcy)
-        var targetCurrency = null
-        var currencyRatio = null
-        // Si localCurrency est standard, pas besoin de targetCurrency ou currencyRatio
-        if (isValidCurrency(localCurrency))
-        {
-            targetCurrency = localCurrency
-            currencyRatio = 1.0
-        }
-        else {
-            targetCurrency = getValueChainProperty(excelData.value, HOME_LABELS.TargetCcy)
-            if (isValidCurrency(targetCurrency))
-            {
-                currencyRatio = getValueChainProperty(excelData.value, HOME_LABELS.RatioCcy)
-            }
-            else {
-                setImportErrors(
-                    sheetNameForSustainabilityData,
-                    ErrorLevels.BreaksFunctionalities,
-                    `Either currencies defined by '${HOME_LABELS.LocalCcy}' or '${HOME_LABELS.TargetCcy}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`)
-            }
-        }
-
-        result = {...result,
-            year,
-            localCurrency,
-            targetCurrency,
-            currencyRatio,
-            type: 'eco'
-        }
-    }
-    else if (typeOfFile.value === TypesOfFile.Environment) {
-        result.type = "ACV"
-    }
-    console.log("studyProperties will be", result)
-    return result
-})
-
-watch(studyProperties, (newValue) => {
-    localStorage.setItem('localStudyProperties', JSON.stringify(newValue))
-})
-
 const studyData = computed(() => {
-    if (typeOfFile.value == null) {
+    console.log("studyData computation trigger")
+    if (!workbook.value) {
         return null
     }
-    const localStorageValue = localStorage.getItem('localStudyData')
-    if (localStorageValue) {
-        return JSON.parse(localStorageValue)
-    }
 
-    if (typeOfFile.value === TypesOfFile.Sustainability) {
-        if (!workbook.value) {
-            return {}
-        }
-        const questionnaireSheet = workbook.value.Sheets[sheetNameForSustainabilityData]
-        return {
-            ...studyProperties.value,
-            socialData: parseSustainabilityWorksheet(questionnaireSheet)
-        }
-    }
-    if (!excelData.value) {
-        return {}
-    }
-    if (typeOfFile.value === TypesOfFile.Economics) {
-        const currencyRatio = studyProperties.value.currencyRatio
-        return {
-            ...studyProperties.value,
-            ecoData: parseEconomicsJson(excelData.value, currencyRatio)
-        }
-    }
-    if (typeOfFile.value === TypesOfFile.Environment) {
-        return {
-            ...studyProperties.value,
-            acvData: parseEnvironmentJson(excelData.value)
-        }
-    }
-    return null
-})
-
-watch(studyData, (newValue) => {
-    localStorage.setItem('localStudyData', JSON.stringify(newValue))
-})
-
-const errorsBySpreadsheet = computed(() => {
-    let result = {}
-    let rawErrors = null
-    if (typeOfFile.value === TypesOfFile.Economics) {
-        rawErrors = getErrors(studyData.value)
-        Object.keys(ECO_SHEET_NAMES).forEach(spreadsheetName => {
-            result[ECO_SHEET_NAMES[spreadsheetName]] = []
-        })
-    }
-    else {
-        if (typeOfFile.value === TypesOfFile.Environment) {
-            Object.keys(ACV_SHEET_NAMES).forEach(spreadsheetName => {
-                result[ACV_SHEET_NAMES[spreadsheetName]] = []
-            })
-        }
-        rawErrors = getImportErrors()
-    }
-    rawErrors.forEach(error => {
-        if (!result[error.spreadsheet]) {
-            result[error.spreadsheet] = []
-        }
-        result[error.spreadsheet].push(error)
-    })
-    console.log("error to display", result)
+    let result = processUploadedExcelFile(workbook.value)
+    console.log("studyData new value", result)
     return result
 })
-
-const jsonFile = computed(() => {
-    return JSON.stringify(
-        studyData.value
-        , null, 2)
-})
-
-const dataFile = computed(() => {
-    if (!jsonData.studies.find(study => study.id === studyData.value.id)) {
-        jsonData.studies.push({
-            id: `${studyData.value.id}`,
-            title: `${studyData.value.country} ${studyData.value.commodity}`,
-            year: studyData.value.year,
-            country: studyData.value.country.toLowerCase(),
-            product: studyData.value.commodity.toLowerCase()
-        })
-    }
-    jsonData.studies.sort(function (itemA, itemB) {
-        if (itemA.country < itemB.country) {
-            return -1
-        }
-        else if (itemA.country > itemB.country) {
-            return 1
-        }
-        if (itemA.product < itemB.product) {
-            return -1
-        }
-        else if (itemA.product > itemB.product) {
-            return 1
-        }
-    });
-    const slugifiedCountry = slugify(studyData.value.country)
-    if (!jsonData.countries.find(country => country.id === slugifiedCountry)) {
-        jsonData.countries.push({
-            id: slugifiedCountry,
-            prettyName: studyData.value.country
-        })
-    }
-    jsonData.countries.sort(function (itemA, itemB) {
-        if (itemA.id < itemB.id) {
-            return -1
-        }
-        else if (itemA.id > itemB.id) {
-            return 1
-        }
-    });
-    const existingCommodities = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
-    const slugifiedCommodity = slugify(studyData.value.commodity)
-    if (!existingCommodities.includes(slugifiedCommodity)) {
-        jsonData.categories.find(category => category.id === 'unknown').commodities.push(slugifiedCommodity)
-    }
-
-    return JSON.stringify(
-        jsonData
-        , null, 2)
-})
-
-const studyFileName = computed(() => {
-    var suffix = ""
-    if (typeOfFile.value == TypesOfFile.Economics) {
-        suffix = "eco"
-    }
-    else if (typeOfFile.value == TypesOfFile.Environment) {
-        suffix = "acv"
-    }
-    else if (typeOfFile.value == TypesOfFile.Sustainability) {
-        suffix = "social"
-    }
-    return `${studyProperties.value.id}-${suffix}`
-})
-
-const downloadFile = (data, fileName) => {
-    const blob = new Blob([data], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = fileName;
-    a.click();
-
-    URL.revokeObjectURL(url);
-
-}
-const downloadStudy = () => {
-    downloadFile(jsonFile.value, `${studyFileName.value}.json`)
-}
-
-const downloadDataJson = () => {
-    downloadFile(dataFile.value, 'data.json')
-}
 
 onMounted(() => {
-    clearImportErrors()
-    const localStorageExcel = localStorage.getItem('localExcel')
-    if (localStorageExcel) {
-        excelData.value = JSON.parse(localStorageExcel)
-    }
-
     const localStorageWorkbook = localStorage.getItem('localWorkbook')
     if (localStorageWorkbook) {
         workbook.value = JSON.parse(localStorageWorkbook)
