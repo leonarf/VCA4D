@@ -126,12 +126,13 @@ import { computed, onMounted, ref } from 'vue'
 
 import ImportWarning from '@components/import/ImportWarning.vue'
 
-import { isCurrencySupported } from '@utils/currency.js'
+import { isCurrencySupported, isValidCurrency } from '@utils/currency.js'
 import { getCountries, getAllKnownProducts } from '@utils/data.js'
 import { slugify } from '@utils/format.js'
 
 import { ACV_SHEET_NAMES } from '@utils/import/environment.js'
 import { getImportErrors } from '@utils/import/generic.js'
+import { ECO_SHEET_NAMES, getErrors } from '@utils/import/eco.js'
 
 const props = defineProps({
   studyData: Object

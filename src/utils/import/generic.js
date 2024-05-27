@@ -1,11 +1,12 @@
 import * as XLSX from 'xlsx'
 
-import { HOME_LABELS, ECO_SHEET_NAMES, getValueChainProperty } from "./eco.js"
+import { HOME_LABELS, ECO_SHEET_NAMES, getValueChainProperty, parseEconomicsJson } from "./eco.js"
 import { parseEnvironmentJson } from './environment.js'
 
 import { processSocialExcelFile } from "./social.js"
-import { slugify } from '@utils/format.js'
+import { isValidCurrency } from '@utils/currency.js'
 import { getAllKnownProducts } from '@utils/data.js';
+import { slugify } from '@utils/format.js'
 
 
 
