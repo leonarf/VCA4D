@@ -27,11 +27,17 @@
                             style="height: 300px;"></Ring>
                         </div>
                     </template>
+                    <template v-else>
+                        <p>No data about job's qualification</p>
+                    </template>
                     <template v-if="currentStageEmploymentByGenderData">
                         <div class="w-1/3 aspect-w-1 aspect-h-1">
                             <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px;">
                             </Ring>
                         </div>
+                    </template>
+                    <template v-else>
+                        <p>No data about job's gender</p>
                     </template>
                 </template>
                     
