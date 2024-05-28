@@ -1,5 +1,5 @@
 <template>
-  <div :title="`Rating: ${scale}`" class="rounded-xl min-w-[9rem] font-bold py-1 text-center" :style="{ background: scaleColor }">{{ appreciation }}
+  <div :title="`Rating: ${scale}`" class="min-w-[9rem] font-bold py-1 text-center tag" :style="{ background: scaleColor }">{{ appreciation }}
   </div>
 </template>
 
@@ -16,4 +16,8 @@ const scaleColor = computed(() => getTagColor(props.scale))
 
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.tag{
+  border-radius: 1000px;
+}
+</style>

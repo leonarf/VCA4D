@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-row items-center rounded-3xl px-3 py-2 max-w-[650px] my-8 cursor-pointer"
+    <div class="social-details-group flex flex-row items-center rounded-3xl px-3 py-2 max-w-[650px] my-8 cursor-pointer"
         @click="isOpen = !isOpen"
-        :style="{ background: getTagColor(group.averageValue) + '81' }">
+        :style="{ '--color': getTagColor(group.averageValue) + '81', '--color-hover': getTagColor(group.averageValue) }">
         <div class="tag-number">{{ getNumberInTitle(group.title) }}
         </div>
         <div class="font-bold flex-grow">{{ removeNumberFromTitle(group.title) }}</div>
@@ -37,5 +37,11 @@ const removeNumberFromTitle = (title) => title.split(' ').slice(1).join(' ')
 <style scoped lang="scss">
 .tag-number {
     @apply bg-[#8a8a8a] text-white py-0 px-3 mr-3 font-bold rounded-2xl
+}
+.social-details-group{
+    background-color: var(--color);   
+}
+.social-details-group:hover{
+    background-color: var(--color-hover);   
 }
 </style>
