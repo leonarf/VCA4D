@@ -1,6 +1,6 @@
 <template>
-    <h1>Is the value chain <strong>socially sustainable</strong>?</h1>
-        <div class="grid grid-cols-3 w-full text-center gap-2">
+    <h1>Is the value chain socially sustainable?</h1>
+        <div class="grid grid-cols-3 w-full gap-2">
             <div class="row-span-2 self-start xl:self-end">
                 <SummaryBlock title="Living conditions" :anchor="6" :average-value="getSocialAverageGroup(studyData.socialData, 5)">
                     <SummaryBlockQuestion
