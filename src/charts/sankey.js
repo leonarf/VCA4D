@@ -1,8 +1,6 @@
 import { useCurrencyUtils } from '@utils/format.js'
 import { addColors } from '@utils/colors.js'
 
-const SANKEY_TITLE = "The various actors and their share in the flows of the value chain"
-
 const getNodeGap = (studyData) => {
     // First we look at number of flows we have. We force it in the range [10, 40]
     const nbFlows  = studyData.ecoData.flows.length
@@ -25,7 +23,7 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
 
     let result = {
         title: {
-            text: SANKEY_TITLE + ` ln(${sankeyDisplayMode})`,
+            text: "",
         },
         series: {
             type: 'sankey',
@@ -223,5 +221,6 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
             }
         }
     };
+    console.log("sankey chart options:", result)
     return result;
 }
