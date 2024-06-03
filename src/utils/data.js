@@ -58,7 +58,7 @@ export const getStudyData = async (studyId) => {
 }
 
 export const getAllJsonData = () => {
-    const localStudyProperties = localStorage.getItem('localStudyProperties')
+    const localStudyProperties = localStorage.getItem('localStudyData')
     const localStudy = localStudyProperties ?  JSON.parse(localStudyProperties) : null
     if (!localStudy) {
         return jsonData
