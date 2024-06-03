@@ -58,6 +58,7 @@ const workbook = ref(null)
 const clearData = () => {
     console.log("clearing all data")
     localStorage.removeItem('localWorkbook')
+    localStorage.removeItem('localStudyData')
     workbook.value = null
     clearImportErrors()
 }
@@ -98,6 +99,7 @@ const studyData = computed(() => {
 
     let result = processUploadedExcelFile(workbook.value)
     console.log("studyData new value", result)
+    localStorage.setItem('localStudyData', JSON.stringify(result))
     return result
 })
 
