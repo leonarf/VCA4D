@@ -7,8 +7,8 @@
     <p>1. Download both following files</p>
     <h4 class="font-bold">Replace data file and add study file in /data/</h4>
     <div class="flex flex-row mb-2 gap-x-2">
-      <button class="download" @click="downloadDataJson">Download data file</button>
-      <button class="download" @click="downloadStudy">Download study file</button>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="downloadDataJson">Download data file</button>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="downloadStudy">Download study file</button>
     </div>
     <p>Step 2 : Go to https://github.com/leonarf/VCA4D/tree/main/data</p>
     <p>Step 3 : Login to a VCA4D authorised github account</p>

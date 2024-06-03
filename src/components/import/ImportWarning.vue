@@ -5,8 +5,12 @@
     padding: 1rem;
     margin-bottom: 1rem;
 }
-.contents-of-one-tab{
+.tab_in_error{
     border-left: 10px solid #FF9280;
+    padding: 1rem;
+}
+.tab_ok{
+    border-left: 10px solid #02AA18;
     padding: 1rem;
 }
 .tab-present{
@@ -34,7 +38,10 @@
 
 <template>
   <div class="contents-of-the-file">
-    <div class="contents-of-one-tab">
+    <div v-bind:class="{
+          tab_ok: errors.length == 0,
+          tab_in_error: errors.length > 0,
+        }">
       <h3>Tab: {{ spreadsheetName }}</h3>
       <p v-if="!spreadsheetMissing" class="tab-present">Tab present in the file</p>
       <div v-for="(error, index) in errors" :key="index">
