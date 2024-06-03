@@ -106,6 +106,7 @@ const studyData = computed(() => {
 onMounted(() => {
     const localStorageWorkbook = localStorage.getItem('localWorkbook')
     if (localStorageWorkbook) {
+        clearImportErrors()
         workbook.value = JSON.parse(localStorageWorkbook)
     }
 })

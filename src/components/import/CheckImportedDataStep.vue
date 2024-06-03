@@ -18,11 +18,11 @@
       <div class="mt-4 flex flex-row gap-x-4">
         Check the study appears on the front page, and at the right place
         <RouterLink to="/">
-          <button>Find your study on the home page</button>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Find your study on the home page</button>
         </RouterLink>
         Check the study's data are well transformed into graphic on dedicated page(s)
         <RouterLink :to="'/study?id=localStorage'">
-          <button>Browse this study</button>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Browse this study</button>
         </RouterLink>
       </div>
     </div>
