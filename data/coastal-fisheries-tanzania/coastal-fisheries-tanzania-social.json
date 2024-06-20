@@ -1,0 +1,571 @@
+{
+  "id": "coastal-fisheries-tanzania",
+  "country": "tanzania",
+  "commodity": "Coastal Fisheries",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 2.2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "All 8 fundamental ILO international labour conventions  in force for URT.  URT has expressed its consent to the ICESCR and the ICCPR and the treaties have entered into force since 1976.  No evidence that sea food processing companies (only operating on MLT) are not respecting labour standards, but most workers in fisheries value chains are in the informal sector.  "
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT & ZNZ follow separate labour laws.   MLT:  Most workers have the right to form and join independent trade unions, bargain collectively, and conduct legal strikes. The law prohibits antiunion discrimination, but the government nevertheless restricted these rights.\r\nZNZ : The law provides the registrar considerable powers to restrict union registration by setting criteria for determining whether an organization’s constitution protects its members’ interests. Both government and private-sector workers have the right to strike as long as they follow procedures outlined in the law. The law provides for collective bargaining by the private sector and most in the public-sectors. Enforcement of labour law is insufficient, especially on Pemba.\r\n About 3% of all  workers in the country are unionized, but subordination of trade unions to the interests of the government has crippled trade union contributions to the advancement of occupational health.  "
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Labour laws cover all workers, including foreign and migrant workers and those in the informal  sector. However, in general, many workers did not have employment contracts and lacked legal protections. The government did not adequately enforce labour standards, particularly in the informal sector, where the majority of fishery-related workers are employed.                                                                                                                                                                                 MLT: Medium to large seafood companies with a strong focus on octopus and prawn fisheries, but also fin fish, are in the formal sector and workers are under greater effective  protection of employment law\r\n"
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The law prohibits most forms of forced or compulsory labour. The law establishes criminal penalties for employers using forced labor. Penalties were not commensurate with penalties for similar violations. The government did not adequately enforce the law.   No examples of forced labour were identified in the MLT or ZNZ coastal fisheries value chains."
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The law prohibits workplace discrimination, directly or indirectly, against an employee based on skin color, nationality, tribe, place of origin, race, national extraction, social origin, political opinion, religion, sex, gender, pregnancy, marital status, family responsibility, disability, HIV/AIDS, age, or station in life. The law does not specifically prohibit discrimination based on sexual orientation or gender identity, language, citizenship, or other communicable disease status.  The government in general did not effectively enforce the law, and penalties were insufficient to deter violations. Penalties were commensurate with penalties for similar violations.\r\nWomen have the same status as men under labour law on MLT.  However, gender-based discrimination in terms of wages, promotions, and legal protections in employment continued in the private sector. Problems were particularly acute in the informal sector, where most fisheries workers arnd women are employed. "
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": " MLT: In 2014 25% of all children aged 5–13 years were considered to be in child labour . Nearly 95% of children in child labour were in agricultural sector.  1 out of 5 of the coastal regions (Mtwara, 35%) was above the national average.  Of children aged 5-13 years, 55.6% were in school exclusively, 19.7% were in school and working and 24.7% were completely out of school. Overall child labour rate for 5-17 years for MLT was 28.8 % (4.2 million children), with 29,285 children  of 5-17 years working in fisheries (fresh and marine) sector, but not stated how many working as child labour.  \r\nZNZ: in some fishing villages children’s work at fish markets prevents them from attending school.  On our field visit, a small number of children were observed processing fish in the afternoon at one landing site.  "
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Law prohibits exploitation of children in workplace. By law minimum age for employment on MLT is 14 and ZNZ is 15.  Children older than 14 but younger than 18 may be employed only to do non-hazardous work (not likely to be harmful to the child’s health & development or attendance at school).  There are regulations to define hazardous work for children in several sectors, including fishery .  Legal penalties for violations of minimum age laws are likely sufficient to deter violations, but both MLT and ZNZ labour inspectorates lack resources to adequately enforce minimum age laws.  Inadequate enforcement leave children vulnerable to exploitation. "
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The Occupational Health and Safety Act 2003 leaves out the informal sector. There is no official data available on accidents and health damages associated with coastal fisheries VCs.  During our fieldwork a number of deaths through accidents at sea in the last 12 months were reported.  A lack of appropriate rescue services and equipment  were reported in the literature and during our fieldwork."
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Measuring attractiveness of remunerations in fisheries value chains is challenging because it varies with sub-chain, stakeholder, location and over time.   Many fishers appears to earning incomes below the national minimum wage."
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The literature and our fieldwork suggests that fisheries are attractive to youth in the MLT and ZNZ.  However,  this is at least partly due to lack of alternative livelihood options. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": " MLT: An active National Task Force and a National Plan of Action (NPoA) to implement the Voluntary Guidelines on Securing Sustainable Small-Scale Fisheries in the Context of Food Security and Poverty Eradication (SSF Guidelines). Achievements include the formation of the Tanzania Women Fish Workesrs Association and a Gender focal person in the Department of Fisheries and Development.                                                                                                                                                           ZNZ: Drafted a NPoA to impement the SSF Guidelines.  Some observers have been critical of previous Zanzibar Fisheries Policy not being aligned with SSF guidelines.                                                                                                                                MLT and ZNZ: Government and private sector coastal development  investments resulting in outcomes not aligned with SSF guidelines. "
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "MLT: No recent large scale land acquisitions by private sector actors in the coastal fisheries VCs were identified.  (there was an example from the early 2000s of  a Prawn farm in Mafia).     Fishers “property rights” are mainly being affected by the creation of protected areas by state actors.                                                                                                                                ZNZ: No large scale acquisitions by private sector actors in coastal fisheries VCs identified. Fishers “property rights” are mainly being affected by the creation of protected areas by state actors and coastal developments which are not directly linked to fisheries value chains, particularly tourism.  "
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT Early stages of discussions with local communties around MPAs appear to align with an open,  co-management approach but then benefits to local communities fail to materialize.                                                                                             ZNZ:     Early stages of discussions with local communties around PAs appear to align with an open,  co-management approach but then benefits to local communities fail to materialize. Level of prior disclosure for tourist and other coastal development investments is not clear, but Hikmany et al (2015) suggest there needs to be more transparency, acountability and public participation. "
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "See above"
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "See above"
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "See above"
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT:  Land policy and law is widely considered to have been designed to protect citizens' rights and enable all citizens to to participtate in decsions on matters concerned with their occupation of land.  However, the implementation is often not in accordance with the rules.                                                                                                                                                             ZNZ:   Situation is not clear, but Hikmany et al (2015) suggest there needs to be more transparency, acountability and public participation.  "
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "See above"
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT: In an assessment  of whether compensation procedures  comply with international standards on the valuation of compensation using indiactors based on the VGGTs and other international standards on the valuation of compensation.   Maninland Tz was was ranked 3rd out of 50 countries; 7 out of 10 indicators were fully met, one partially met and two not met at all .   There are major challenges with implementation.                                                                                                                                                          ZNZ:   The Land Tenure Act 1992  provides that land can be leased to anyone intending to use the land for investment purposes, subject to approval of the investment by ZIPA. Provided that the land to be leased is comprised under a Right of Occupancy, the Minister will be required to obtain consent from the holder of the Right of Occupancy before the land is leased.   There are major challenges with implementation.                                                                                        "
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT:  Land conflicts are common.  Land resource conflicts (according to the 1995 National Land Policy) are currently resolved through tribunals at various  levels, but there are major capacity issues.   Conflicts. Examples of villagers proving that they were the rightful custodians of the natural resources in Mafia Island and the Rufiji Delta, especially of fisheries and forestry resources, which they have governed traditionally for centuries.  The villagers collaborated with one another and with researchers to appeal to the Tanzanian authorities at the national level, including the Commission for Human Rights and Good Governance. The Commission, in turn, conducted transparent public hearings and reached conclusions that the villagers’ rights had indeed been violated.                                                                                                                                                       ZNZ: The situation is less clear, but  there cleraly are stakeholder complaints. Hikmany et al (2015) suggest there needs to be more transparency, acountability and public participation.    "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT and ZNZ: Risks are associated with cultural barriers, economic barriers, access to fisheries resources and policy.  At the production level, there are risks of being excluded from Octopus catching as diving (predominantly male) becoming increasingly prevalent and from shoreline fishing in some protected areas. There is also a risk that men will displace women that harvest or trade globally traded goods such as octopus However, women are becoming increasingly active in post havest activies as both both managers/ entrepreneurs and workers suggesting risks of being excluded are diminishing.    "
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "MLT and ZNZ: Women have relatively little involvement in the coastal fisheries value chains at the production stage (the major exception being octopus) but are highly involved in post-harvest activities. the extent to which they are active varies with value chain and, to some extent, location.    "
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women do have ownership of assets. For Tanzania as a whole, only 7.4 % of Tanzania’s house owners are women . In ZNZ 20.9% of house owners are women.  Women in some  in some coastal fishery communities reported house ownership by women to be higher than men."
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Tanzania has a dual land tenure system where customary tenure operates alongside statutory tenure.  Formal legal provisions guarantee women access to, ownership and protection of their rights to land and equal rights to men . Customary tenure can still be discriminatory.  Hence, the situation on the ground where many women are still discriminated against and denied their rights to land "
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Considerable improvement over the past twenty years with 68–70 % of Tanzanian women having access to loans through empowerment funds, and significant growth of women’s formal non-bank finance compared with informal finance.  Access to and quality of informal financial services for women has improved.However, women remain largely excluded from mainstream financial services structures due to a lack of assets. Moderate rating. "
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Female traders, in general,  face limited access to business development services in Tanzania."
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 2.4,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Traditionally, most direct decisions related to fisheries production in coastal Tanzania would be made by men. However, women would be directly involved in some fisheries production decisions in the inter-tidal zone such as foot fishing for octopus, net fishing for shrimp and smaller types of fish, collecting shellfish.  "
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The female labour force participation rate in Tanzania is high compard to ther parts of Sub-Saharan Africa. However, high levels of female labour force participation do not automatically imply greater levels of gender equality or women’s empowerment. In Tanzania, women are often obligated to take up poor-quality work alongside care responsibilities to make meagre ends meet. This would appear to be the situation for many women engaging in fisheries value chains."
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women working in fisheries value chains can control their own income.  The choice of how the income is used varies with household, but for many the income is used for household needs.  "
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Women can earn independent income. This varies between households"
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "This varies tremendously between households."
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2.25,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women are more likley to belong to groups such as SACCOSs and CBOs than larger organizations.                                          MLT: Women belong to BMU committees  ZNZ: To a limited extent women belong to VFCs"
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women are less likeley to hold leadership positions than men.  But women are increasingly holding leadership positions.      MLT  In BMUs women were in leadership positions and in Village Governments women were Chairs.                                   ZNZ: Women were not generally in leadership positions in VFCs, but there were female Shehas.   "
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women are chairs of village committes (MLT); Shehas (ZNZ) district councillors; 19% of MPs were female in 2019; The President is a woman.  But in general women's political empowerment is still relatively low. "
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women do speak in public."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": " MLT: women reported that the division of labour within the households is not equal in their communities.                                                                                                          ZNZ: women reported that their workload was far higher than men and this was linked to women now having to earn an income as  well as most of the household activities. "
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "There was no indication that risk of women being subject to strenous work was being minimised."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "MLT and ZNZ: Based on feedback from women's focus groups, local food production is decreasing in coastal fishing communities. Women  linked this to factors such as declining access to land, declining soil fertility, climate change, crop pests and diseases."
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "MLT and ZNZ: Based on feedback from women's focus groups, food supplies are increasing on local markets. This was at least partly linked to improving infrastructure."
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT and ZNZ:  Trends in income from fisheries value chains is highly variable for different stakeholders.  "
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT and ZNZ: Relative consumer food prices appear to be increasing"
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT and ZNZ: Womens FGDs suggest that the nutritional quality of available food was improving in markets "
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT and ZNZ:  There appears to be a mixed picture.  Nutritional practices  are increasingly dependent on households' ability to buy nutritious food.     Non-communicable diseases are increasing in coastal areas."
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT and ZNZ: There appears to be a mixed picture.   Dietary diversity is increasingly dependent on households' ability to buy different types of  food.   "
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT and ZNZ:  People are increasingly dependent on purchased food.  The risks associated with own food production are reduced. However, the risks of high dependency on income associated with fisheries VCs are high for fishers' households given increasing numbers of fishers and also for other households depending on fisheries if stocks are not sustained and /or more and people are attracted to their communities.  "
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT and ZNZ: There is no evidence that excessive food price variation is reduced. Food prices are influenced by a range of economic, geographical, biophysical and political factors. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT and ZNZ There are are a range of formal and informal oranizations participating in fisheries value chains.   Externally insitigated organizations have a had a strong focus on marine conservation. Goals and performance of these different organizations appears to vary considerably.  Many of the fishers interviewed did not feel well represented. "
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The inclusivity of membership of these organizations varies according to a number of factors including their purpose, location and governance.  BMUs (Mainland) are much more inclusive than VFCs (Zanzibar).  The recently formed TAWFA provides a network for organizations involving women in fisheries-related activities.  "
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Organizations vary tremendously.   BMU and VFC leadership is periodically elected and in that sense is representative and accountable. Howver, many of the fishers interviewed did not feel well represented.  "
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In general fishers appear to negotiate on an individual or very small group (crew basis).   Examples of fishery-related  cooperatives were identified who negotiated as an organization to secure large tenders for dagaa in ZNZ.  On Mafia examples of fishers forming informal and formal groups to secure a boat and gear were identified.     In ZNZ the government is providing glass fibre boats and gear (on interest free loan) to already existing groups.  BMUs and VFCs appear to have a role negotiating for improved equipment and infrstructure on behalf of their members."
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Services are generally weak.  BMUs (MLT) and VFCs (ZNZ) have  a role providing information about illegal fishing practices and fisheries policy.  "
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There is a complex web of social and economic relations in which SSF market actors are embedded. This includes various forms of informal credit arrangements based on trust "
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 2.3333333333333335,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "BMUs, VFCs and VLCs (if protected areas) are institutional arrangements which in principle enable communities to participate in marine resource decisions that impact on their livelihoods.  In practice, performance is very variable.."
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "It is not all clear that traditional knowledge and resources are respected in fisheries/ coastal resources management.  Rated low. "
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "BMU, VFC and VLC Committee members carry out this role on a voluntary basis.   Various other village committees were mentioned in women's FGD e.g Village Health Committee; Environmetal Conservation Association (keeping village clean); Village Elders Committee. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 2.3333333333333335,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "MLT and ZNZ: Womens FGD participants reported that health facilities had improved.                                                                                         ZNZ: 63% of households (49.5% in rural areas) reported that they were less than one km and 85% (79.6% in rural areas) were less than two km from a primary health centre (ZHBS, 2019/20).  "
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT: Faces a critical shortage of health staff. There are significant variances in per capita health sector allocations to regions driven by the availability or lack of health facilities and medical personnel                                                                                                                                              ZNZ:The ZHBS 2019/20 reports that one-tenth of the respondents had faced some problems at the time they visited the health facility for medical services. The most common problem was long waiting time (10 % of the respondents who visited a health care facility).  Availability of drugs at the facility was the second most common problem (1.9 % of the patients), which is a decline by about 8 percentage points from the 2009/10 figure."
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT: Out-of-pocket spending on health accounts for 23 % of household expenditure                                                      ZNZ:Out-of-pocket spending accounts for 30% of hpusehold expenditure. ZHBS 2019/20 found that of all the respondents who were ill or injured but failed to consult a health care professional, only 1.6 % thought the medical services were too expensive. "
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "MLT:  Women's FGDs and official survey statistics indicate major increase and high proportion (84 %  and 76.6% in rural areas); of houses with \"modern\" roof (iron sheets) and to alesser extent walls and floors.   Womens FGDs report fisheries income has contributed                                                                                                                                                                ZNZ:  Women's FGDs and official survey statistics indicate major increase and high proportion (91.3 % and 85.7% in rural areas); of houses with \"modern\" roof (iron sheets) and to alesser extent walls and floors.Womens FGDs report fisheries income has contributed                                                                                                     "
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT: 88% of households (91.8% in rural areas) have access to an improved water source in the wet season.  This drops to 73% (65% in rural areas ) in the dry season.  Coastal regions of Tanga (58.7%), Mtwara (59.9%), Lindi (62.7%) are below the dry season rural average for the Mainland while Pwani (73.4%) is above. Women's FGD reported  a variable situation with availability and increasing saltiness of water a problem in some locations.  Impovements in water supply not linked to fisheries. 94.2% of households (91.4% in rural areas) have a toilet facility. Tanga (90.7%) is below the rural average, while Mtwara (94.1%), Lindi (97.3%) and Pwani (94.7%) are  above.                                                                                                                                                        ZNZ:, 94.7% of households (91.8% in rural areas) have access to a protected water source and 98.8% of households (98% in rural areas) are within 1 km of source of drinking water. 87.5% of households (78.9% in rural areas) have a toilet facility. Improvment in water supply  not linked to fisheries."
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "MLT: primary school net enrolment rate is 83.4% (81.3% in rural areas).  Women's FGDs reported that fisheries-related income had contributed to educational costs and in at least one location exam performance.  \r\nZNZ: primary school net enrolment rate is 81.4% (78% in rural areas).  97.9% of households (97.1% in rural areas) are within 2 km of a primary school.  Average time spent travelling to primary school is 12.7 minutes (14.5 minutes in rural areas).Women in FGDs reported that there was more access to education now and particularly it was now equal for both girls and boys (in the past more boys were educated).  In Matemwe an Chawka participants didn’t think were was a link with fishing. In Nungwi participants reported that fishing has both a positive and negative link.  On the positive side, money from fishing may be used to support child’s education.  On the negative side, some students may be attracted to fishing because of market opportunities.  "
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "MLT : Secondary school enrolment rate is 32.9% (23.2 % in rural areas).  2.8% of children on Mainland aged 7-13 were not attending school because they were working. No children in the coastal regions were reported to be in that category.\r\nZNZ: Secondary school enrolment rate is 52.1% (44.3 % in rural areas).    Average time spent travelling to  secondary school 14 minutes (14.9 minutes in rural areas)."
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "MLT:  Seafood processing companies in the formal sector are training their staff.  For example, one company had sent a quality control officer to India for training.                                                                                                                                     ZNZ:   No companies processing locally caught seafood.                                                                                                                For MLT and ZNZ most fisheries activities are in the informal sector                                                                                                                      "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

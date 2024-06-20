@@ -1,0 +1,571 @@
+{
+  "id": "egg-zambia",
+  "country": "Zambia",
+  "commodity": "Egg",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 2.2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "July 2016 - Zambia country commercial guide \"The government adheres closely to International Labor Organization (ILO) conventions.  The government ratified all eight International Labor Organization (ILO) core conventions, and has been engaged in revising labor laws to improve compliance since 2006.  There are still gaps in law and practice.  Strikes are not uncommon in the public sector and often are related to the government’s failure to pay salaries or allowances on time; but lawful strikes are very difficult to hold due to several restrictions and conditions.\""
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "This is allowed/encouraged under Zambian law.   \"The government generally protects unions’ right to conduct their activities without interference.  All categories of workers except police and military are free to form or join unions.  Workers’ organizations are independent of government and political parties\"  "
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Larger producers have clear written contracts with employees, based on the the Zambia Farm Employers Association 3 year collective agreement signed in July 2015 which covers retirement and gratuity benefits, funeral and medical assistance and subsistence and tool allowances.  This did not cover wages which were agreed in July 2014.  A wage agreement, with a 14.8% increase, was reached and made effective from 1st Nov 2016 for farm workers. Small egg producers mostly have verbal agreements.  Small-scale soya producers have access to contract farming arrangements which are enforcable, but \"fairness\" of these is limited by the fact that they do not have any price guarantees, which exposes them to high levels of risk when soya prices are low. "
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "No evidence of this was found but it is noted that \"while this  (i.e. prohibition of forced labour and child labour) is recognised under domestic labour law enforcement is often weak\"  https://www.export.gov/article?id=Zambia-Labor.  This was not noted in any of the sites visited, and all workers seen were adults.   It is possible that with smaller producers labourers borrow from their employers so an element of indebtedness is potentially present in cases.   where they are not able to pay back - no evidence of interests charged in the farmers interviewed, but some negative reports with regard to Chinese smaller producers."
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Zambia is bound by the ILO convention on Discrimination and by the Industrial and Labour Relations Act Chapter 269 which provides protection for employees discriminated against on grounds of \"race, sex, marital status, religion, political opinion or affiliation, tribal extraction or status of the employee”.  However the extent to which this is enforced, and employees awareness of this and access to support in case they wish to present a case is probably very limited in practice, particulary given the high rate of unemployement and fear that making a fuss would have negative consequences. "
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Substantial of an averable primary school enrollment rate nationally of 97%.  Also because we did not come across any cases of children working in egg production or the allied sector. We did not gather any evidence to suggest that children are providing labour for the larger and commercial egg producers, or even for smaller egg producers.    In the latter case, when children are more likely to be staying on the farm in accomodation provided for their parents, and may be available to help out, this is unlikely to happen in the poultry operation because of hygeine concerns.   We did gather evidence that in urban areas some children are involved in hawking cooked eggs.  One boy we met said that he used the money he made to buy school books.  "
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "As above, particularly in the egg producing farms and the feed processing plants where children are not allowed into the work areas for security and health and safety reasons.   There is some risk in cases where children are involved in selling cooked eggs on the street when they might be exposed to poor sanitory conditions and possible exploitation by adults - though no specific cases of this were identified - to be further explored."
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In general the risks are low compared, for example, to mining, given the nature of the work.  The most dangerous work is probably on the egg transport side, for drivers.  In the larger operations, systems were in place to monitor drivers using GPS, which while mainly for reasons of ensuring the driver is sticking to the agreed schedule, is also a way of providing safety for drivres when out on the road in remoter areas.  The more at risk are the traders using cycles or motor-cyles who are at risk of accidents -http://zambianeye.com/spotlight-on-vulnerable-road-users-as-pedestrian-and-cyclist-deaths-worsen-in-zambia. There is a potential future risk from Avian influenza.  For small-scale soya producers, there are potential risks from exposure to agro-chemicals which are widely used in some areas, and in some cases abused (e.g. used in cases of suicide of younger married men)."
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "For the commercial egg producers, the ZFEA agreement provides remuneration arising from a collective bargaining arrangement.  Some companies (e.g. Zambeef) state that they pay above the minumum wage and only to employ staff with formal qualifications as a minimum requirement.  Smaller producers provide a more varied pattern of remuneration, some include accomodation on the farm, and payment in kind including assistance with school fees, medical expenses, and produce, as well as small plots of land for growing food.  For small-scale soya producers, their remuneration is very much determined by price after the time of harvest and by seasonal conditions which affect their yield, and the relative price of other crops.   For those able to choose between working locally on each others farms or working on nearby commercial farms there are advantages and disadvantages - for example they can earn more in a day by performing some tasks on each others farms than on commercial farms, but the work may be less regular on each others farms."
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The employers we spoke to did not have specific policies regarding youth employment.  They varied in their views on the types of employee who they preferred; some preferred to use women for certain jobs, others preferred men for certain tasks.   Due to the technical nature of the work most preferred employees who were quick to learn and conscientous, and one noted that an older employee they had given extra responsibility to was not be able to pick things up quickly enough so they identified a younger member of staff who was quick to learn, supporting him to get a driving licence so that he could also help with distribution and marketing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": "n/a",
+          "averageText": "n/a",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "The egg farming companies interviewed used existing state land held on lease and had not aquired new land through the process of conversion of customary to state tenure so they did not have a need to consider the VGGT.  "
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "As above.  However there is a probablity that as a consequence of vertical integration more large scale egg farms will start to acquire land for feed production and so this could become an issue in the near future."
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": "n/a",
+          "averageText": "n/a",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "As the study did not come across any cases of new land acquisition to establish egg farms, the questions are largely theoretical.  See discussion of the more general situation regarding land acquisition in the main social analysis text."
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "As above"
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "As above"
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "As above"
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 2.25,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The norms and rules relating to land tenure are in a state of transition, with customary tenure operating alongside legislation and practices which allow customary land under the jurisdiction of chiefs and local farmilies to be converted to leasehold land.  If family heads sell part of the family land to non-family members, with the sanction of the local chief,  then the descendents may loose out.  They can go to their local chief to request alternative land to settle on, and there is still currently land available in many areas, but this situation will not continue indefinitely.  A rental system for cropping is now quite common in many rural areas, and this is a relatively new development; indicative of increasing commercialisation of the rural economy. "
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "As noted above, in most rural areas there are a range of strategies, along with locally regulated systems available to enable households to gain access to land for agriculture and residence.    During the study a case was found of a agri-business company looking for new land to establish a farm as part of expanding an existing out-grower scheme.  The were not able to go ahead in a particular case due to the high costs associated with compensating the people affected, including building new housing to a high standard and establishing boreholes.   This company was in receipt of donor funds, hence showing due diligence."
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There is limited information available, in that while systems do exist, the extent to which these are adhered to is difficult to asses and is likely to vary from one area to another.  There is growing awareness of the importance of consultation and negotiation between investors and local communities, and this was referred to in speeches made by political leaders and a customary chief in Luapula Province during the second field visit."
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "As above, there are provisions, but there is limited transparency and publicity given to actual cases where an affected stakeholder has complained.  This is likely to change in the future however as public awareness grows and land acquisition by investors continues with the scope for increasing numbers of conflicts. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The legal and policy framework in Zambia is broadly supportive of inclusion of women in economic acticities, including agriculture. Support for gender inclusiveness is usually reflected in the policies of NGOs, government and also many of the larger companies. Most agricultural training institutions positively discriminate to increase the enrollment of female students, through lower entry requirements for females."
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "However, in spite of inclusive policies, the proportion of women graduating from agricultural training courses (at certificate, diploma and degree level) and remains low, so the proportion of women likely to gain senior technical positions within the egg production sector is low.   The livestock and layer sector is also \"gendered\", in that women traditionally own and manage most of the village chickens, and in the production of table eggs certain roles tend to be dominated by one gender.  For example, many of the tasks in the value chain (milling, grain transport and marketing, feed production, egg production) involve heavy lifting, and for this reason a number of the larger employers have an unofficial policy of employing men for these tasks, and women for tasks that require more dexterity and attention to detail (egg collection, sorting, caring for pre-laying birds from day old, finance and recording).   All of the general managers and senior staff of the large producers visited were men.  On ther other hand for the smaller producers visited it was women who managed the egg production, in some cases with moral and financial backing for start-up from their husband.  "
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 2.75,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The inheritance laws in Zambia are protective of widows, and are observed and enforced.  This is a massive change because under customary law usually did not inherit in cases where their husbands died..  This means that in family based egg production, women have security of ownership of the assets relating to the enterprise."
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "As noted about, inheritance laws protect widows.  Most of the peri-urban smaller scale egg producers operate on state land with protected tenure rights."
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "While the policies are supportive of providing access to credit, this will depend on collateral, and often land and property is registered in the name of the male head of household, whose permission will usually be needed if the land and house is to be used as collateral.   However, not only are people in peri-urban areas averse to securing  loans to fund enterprises with their land, which is main \"security/pension\", the interest rates for loans are prohibitively high (35% plus arrangement fees).   Three of the four medium-scale female egg producers, stated that would not go for a loan to expand their enterprise, the fourth was considering this option but we advised that this was high risk.  "
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The policies and practices in the sector are broadly supportive of women accessing extension services and advice, much of which is provided through the suppliers of equipment, point of lay hens, feed and medicines for layers.  The women involved in managing the smaller enterprises are all educated, with access to transport and networks which enables them to access these services without major barriers. "
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 2.2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The score is moderate to low because as decision makers women are only dominant in th smaller scale egg production operations (less than 10,000 layers).  In the larger scale and corporated operations of the value chain (egg production, feed production, grain transport and marketing) men dominate the decision making. The situation is quite different in the village chicken sector, when women generally control the management of poultry and decisions about management of productive hens."
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The score is moderate to low for similar reasons to those stated above - but also because the egg sector requires high levels of management to reduce the significant risks and to ensure quality control, management will tend to be hierarchical for all staff.   The situation is quite different in the village chicken sector, when women and also children are generally autonomous in organising the management of productive hens."
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The score is moderate to low because as financial decision makers women are only dominant in th smaller scale egg production operations (less than 10,000 layers).  In the larger scale and corporated operations of the value chain (egg production, feed production, grain transport and marketing) men dominate the decision making.  The situation is quite different in the village chicken sector, when women generally control the very small amounts of income from loal sale of eggs."
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The score would be substantial because as financial decision makers women dominate in th smaller scale peri-urban egg production operations (less than 10,000 layers).  In the larger scale and corporated operations of the value chain (egg production, feed production, grain transport and marketing) the women earn independent income either as employees, or on a self employed basis (e.g. as traders). In the village chicken sector women generally or children control the small amounts of income from local sale of eggs.  However, it is moderate because .  In the case of smallholder soya and maize production, only female household heads are likely to earn an independent income from crop sales.   In other types of household the male head is most likely to have the major say in how the proceeds of crop sales are used."
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "This is not easy to score, because the information is not easy to access on household decision making.   The main assets for purchase or sale would be the equipment, point of lay hens and spent hens.  The score of substantial is because the women involved in smaller scale egg production who we interviewed were educated, with grown up children, in long term stable marriages, and were clearly in control of the decision making with regard to the poultry enterprise, and had strong views on the security of their assets, and evidenced that they consulted with their spouses on major decisions.  The sample was small, and it is quite probable that some other women may not be so much involved in this area of decision making.   However, it is less likely that such women would have egg laying enterprises, because of the support they would need to start up such an enterprise."
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2.75,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "As noted above, relatively few women employed on egg farms or with feed companies, and egg trading is largely a male occupation, so this question does not really apply to employment in these segments of the Egg VC.   While full data was not available on the gender of medium scale egg farmers with PAZ, informal discussion indicated that it is common for women to be in charge of medium scale egg operations.  None of the four female egg farmers interviewed was active in PAZ, although all were receptive to the idea of getting more involved in an organisation through which they might provide mutual support to each other as producers.   Women are much more involved in the production and marketing of soya, as small-scale farmers and also as aggregators.   Most female farmers in rural areas belong to local cooperatives,"
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": " It is common for women to have leadership positions within local rural cooperatives and also self-help organisations.  Female chiefs are also found in some rural areas, particularly in Lusaka and Central Province."
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "As noted, management of the large scale egg production segment of the VC, and also feed and egg trading segments, are male dominated.  For this reason alone, women have very limited power to influence services and policy decision making relating to these segments of the Egg VC.  While women are active in the small-scale grain production sector, they have relatively minor influence on services and policy decisions.   This is not because they lack the capacity to express their views in private or in public, but largely because important decisions relating to services are taken centrally, by senior managers of institutions who they never meet.  The same applies to policy decisions.  In cases where local chiefs are female then they do have significant territorial power. "
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women are able to speak out in public in most rural settings, and it is common for them to do so on matters of importance, although they are usually more forthcoming when they are meeting in the absence of men."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "This is difficult to score due to the varied situation within the egg value chain and also the gendered nature of the division of labour in Zambian society, both rural and peri-urban.  For example, the smaller-scale egg producers are mostly family enterprises managed by women, whose main role is managerial. They will employ and manage others (often younger men) to undertake the labourious tasks in egg production and also may employ workers to assist with domestic tasks, traditionally assigned to women,  within their own homes.  For the women employed in the larger-scale egg enterprises, it will be fairly common for them to have a dual role of wage earner and housekeeper/home maker.    They may have assistance with domestic work and childcare, from their own children or relatives, but will typically have a larger burden of responsibility which spans earning a cash income and the domestic sphere than their husbands or partners (if they have one) who will be expected mainly to bring home cash and not undertake many domestic tasks, particularly among the less educated sector of the population.   In rural areas the workload of women is typically higher than that of men, particularly in terms of the hours in the day spent on productive tasks, and men will typically be doing the more physical and dangerous tasks (e.g. construction, tree felling, land clearing, digging wells, work with draft animals), or be expected to find paid work locally or in urban areas to help with major  household expences (e.g. school fees, medical costs etc.)     "
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The risks of this are minimised substantially through the practice of most egg producing enterprises of assigning strenuous tasks to men rather than to women on the work force.  In addition, cage systems and semi-automated systems which are becoming increasingly common in the sector (including watering systems and more mechanised manure removal) reduce the amount of strenuous work involved.   Village chickens dont require strenuous labour input - (if there is a large flock fetching drinking water for the hens will be the most demanding task which may be done by women, but the data suggests that large flocks are owned by more wealth households who would typically either have their own well, or use draft animals to fetch water from the nearest source). "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "This is broadly the case along the value chain.  The volume of table eggs produced in Zambia has increased phenominally over the previous ten years, so that there is now a significant surplus of table eggs exported.  Maize and soya are the main ingredients of layer feed, and the demand for poultry feed has increased as a result of increased egg production, which has stimulated increased production of maize and soya, both of which are also used for human foods, particularly with the small-scale farming sector.  "
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "There has been a noted increase of the availability of table eggs in all the main local markets in the urban and peri-urban areas, and increasingly in the more remoter administrative centres - the main constraint to a further increase of supply of table eggs being quality of the road network away from the line of rail in Zambia.  In the rural areas the number of shops and small kiosks selling various items, including food items, is increasing steadilly."
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The Value chain does provide employment and via this provides income, a proportion of which is used for food: 1) in urban and peri-urban areas in the egg production, marketing and distribution activities, 2)in the supply chain and support services in these areas and 3) in the rural areas through production and sale of grain and employment in the agricultural support services.  This is rated moderate to low because of the indirect effect, and particularly because in rural areas when soya and maize prices are low then families who have accessed inputs on credit may run into debt and have their food security compromised.  The crop is sold in July August when food is plentiful.  When food is scarce from Nov to March then income that could be used for food is also required for purchasing farm inputs. It is common in such situation for farmers to borrow from each other via a local system called “lilalimo” – “eating in advance”.    Money to buy grain or other things is borrowed, at harvest time the loan is paid back in maize or other grain at the value of the amount borrowed at the current price paid by traders buying the grain.   The relatively cheapness of table eggs as a protein source does provide a substantial benefit to lower income households in urban areas, and in this sense the benefit is substantial - see the comment below.  "
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "As noted above, eggs provide a very affordable source of protein for many urban and peri-urban households, and this is at a time when the prices of other alternatives, including fish and beef is increasing, and when the price of charcoal used for cooking beans which are another cheaper form of protein is also increasing, hence the impact is rated substantial.  A further reason is that profit margins for egg producers have reduced over the past 2-3 years, which means that table eggs are currently providing value for money for consumers.  Small-scale farmers mostly aim to grow their own basic food items, and only spend cash available on salt, and will spend more on other items such as sugar, tea, cooking oil, milk when they have cash available."
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 2.33333333333333,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Eggs provide a valuable source of human nutrition, not just of affordable protein, but also a number of important nutrients and vitamins, including Vitamin C.  Soya products also provide nutritional benefits at affordable prices for many lower income urban households.   Soya provides a very useful source of protein and food enrichment, including for infant feeding, for rural households. However the knowledge of household level soya utilisation is currently very limited and patchy as soya is still usually seen as a cash crop.    "
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There is limited promotional actiity relating to both the use of eggs and soya products to improve nutrition, including nutrition for under 5s.  This applies to both higher density urban areas and the rural areas."
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Yes, not only because affordable table eggs are not available to a wider section of the urban population (which is 50% of total population) but also because soya which is the most important feed ingredient for laying hens, is also increasingly available in the form of food products (e.g. soya chunks) which provide an additional affordable source of protein which was previously not available.  Increase production of soya by small-scale farmers also increases potential diversity, provided this is not at the expense of planting other important food crops, which is an ongoing risk to be managed"
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Low, because periodic food shortage is mainly a rural phenonmena for the poorer households who are much less likely to be in a position to produce maize or soya for sale.  While low income urban households who may struggle to buy sufficient food, will struggle most when the price of maize meal is highest, but government is inclined to subsidise this indirectly, and the egg value chain will have minimum impact on this.   It may even have a negative impact on rural households in years when maize production is low, because rural households will be more inclined to sell their surplus maize due to higher prices, and as a result there will be less maize for local redistribution to poorer households via kinship ties and other forms of less commercial arrangements (e.g. payment in kind for labour)."
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Low because the government tries to ensure that maize meal is affordable through various interventions, and this is not directly related to the egg VC.   From another point of view, the fact that table eggs are currenlty \"good value for money\" and increasingly popular as a cheap form of relish and an affordable snack, does to some extent protect poorer households from the impact of price hikes for other sources of protein/relish.  "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Low because the main organisation, Poultry Association of Zambia, under ZNFU is made up of a diverse group of producers, in which the large-scale commecial produces appear to have the strong voice.  Moreover, it was noted that the PAZ members are reluctant to share information with each other, and smaller farmers interviewed did not see the benefits of PAZ membership,  which is indicative that the organisation is relatively weak and has limited impact.  One the other hand, the Livestock Society, which is also affiliated to ZNFU, has good standing in the eyes of smaller producers because of the quality of service it provides, but the small-scale egg producers have limited incluence on how this organisation is run. "
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Membership of PAZ is purely a function of purchasing day old chicks which carry a levy -  it is fully inclusive in that sense, but active membership depends on the individuals interest and connectedness with office holders in PAZ."
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The individual producers interviewed, both egg producers and soya producers, indicated that the associations they belonged to (i.e. PAZ and local cooperatives) did have leadership but they did not expect a lot from the leaders of these organisations in terms of influence and representing their interests"
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Larger producers of eggs are able to negotiate on aspects of policy, but smaller egg producers and rural cooperatives representing small-scale farmers growing soya have limited very influence on input and output markets."
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Yes they do.  Large commercial producers have acess to technical advice from outside of the country (RSA, Netherlands), medium and smaller egg producers have access to technical advice via input suppliers and agricultural extension services.  Agricultural policies are available via websites, the media and egg farmers have access to this information through membership of PAZ and ZNFU which has effective media access and reach.  Small-scale farmers also have a easonable access to policy related information and to commodity prices, although not to the same extent as egg farmers.  What small-scale farmers lack is market intelligence on future prices, and this makes them vulnerable to exploitation by grain traders shortly after harvest when they are anxious to sell their crops, and as a result often receive low prices at the start of the selling season.   The better off farmers are more inclined to store their grain and wait for prices to rise before selling. "
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Large-scale egg producers clearly stated that the sharing of information within the sector is very limited, and guarded (both within and outside of PAZ).  Smaller scale egg producers were much more open to sharing information with each other, but often had limited social networks and mechanisms for this, and most were not engaged with PAZ in any significant way.  In both cases their relationship with their customers was not strong, and they had difficultly in building up customer loyalty. Smaller scale egg producers tended to be customer loyal in relation to the suppliers of their main inputs (feed, day old chicks or point of lay, and veterinary products), whereas larger producers mainly had ambitions or a strategy of vertical integration to lower transaction costs or cut out other value chain actors.   The small-scale Soya producers interviewed were new to growing soya as a cash crop and therefore still forming relationships with the ago-trading agents involved with soya inputs and marketing.  The manager of NWK noted that based on his experience women farmers were more trust-worthy than male farmers in terms of loan repayment..  "
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 1.66666666666667,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Table egg production is not a community level enterprise, but operated by companies and individuals with the primary objective of making profit or supplementing the family income in the case of better off peri-urban families.  We did not come across bigger producers who were making significant contributions to community services (for example by investing surport in supporting local schools, clinics, road improvement).  In the small-scale farming area visited there was limited involvement in community activities, most invidivual housheholds focused on cash cropping as the main enterprise, and had access to reasonable local education, health and other services provided by the government or NGOs."
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "The reason for \"not at all\" is the emphasis on the word \"respect\".  The egg production sites are on state land, rather than on customary land, and the production practices generally are based on modern technical knowledge, rather than on traditional knowledge, which was not mentioned at the farms visited which model their husbandry practices on state -of- art international techonology and knowlege.  Having said that we did come across one small-scale egg producer with a cage system who uses traditional herbs in the drinking water based on traditional knowledge passed on by her mother and stated that it is efficacious.  Small-scale farmers growing soya are generally not encouraged to use traditional knowledge, but rather to use input intensive production techniques, but they do use their traditional knowledge."
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There is limited information, mainly anecdotal.  One large scale producer reported that they freeze the produce from broken eggs and donate this to local orphanages.   A small-scale producer had plans to set up a clinic on their farm to service the local community.   Another small-scale producer organised voluntary work on the road to the area where their farm is located."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "In both rural and urban areas most households are able to access local clinics and also district hospitals, provided they are able to fund the transport costs associated"
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "See above, the health services are provided by the nearby health facilities, and also by pharmacies that are mostly within easy travelling distance of the main enterprises within the value chain."
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Government services and some services run by charitable organisations include free consultation and diagnosis,  and in some cases free medication, diagnostic tests, operations and hospital beds.  In other cases patients families are required to pay for medication and diagnostic tests. "
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Zambia has a history of progressive housing legislation and policy, while at the same time currently experiencing a major deficit of affordable housing, particularly in the urban areas.  For example in Lusaka, 70% of household stock has been assessed as \"substandard\", http://housingfinanceafrica.org/challenges-of-affordable-housing-delivery-in-zambia/.  The majority of larger scale egg producers do not provide housing for the majority of their staff, who typically live in nearby higher density residential areas, where the standard of housing is quite low.  Housing standards on the Copperbelt tend to be better than around Lusaka.  In egg production units based on larger farms more employee housing may be available, but the trend is towards discouraging this  arrangement due to the perceived increased disease risks to hens associated with human movements.  For this reason larger producers like to have their senior staff housed close by, with the other staff housed outside of the vicinity of egg production and rearing operations.  Smaller egg producers often have their staff housed on the farm by preference in a reasonable standard of housing (solid structures, with electricity and water provided).    In the rural areas housing is of a variable standard, but as in the urban areas the standard has been improving steadily, and in good years crop sales are used to fund housing improvements."
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Nationally, in 2015,  35% of households lacked access to an improved water source while 56% lacked access to improved sanitation.   While employees and their  households living on the farms where egg production units are operating are most likely to have access to an improved water source, and a reasonable proportion are also likely to be able to access improved sanitation, this is less likely in the high density urban areas where the lower paid employees who travel to work on nearby egg production farms live.    "
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 2.33333333333333,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The Zambian government has an ambitious policy of providing free primary education to all people, and to date has made significant progress in this respect, with an relatively high rate of enrollment and also completion of primary school.  The completion rate is higher in urban areas where table egg production and consumption is focused, hence the rating of \"high\" overall."
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Most individuals as employees or as small-scale producers have limited income which influences the extent of investement in secondary education"
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Some players, e.g. Day oldl and point of lay providers, Agrovets, Livestock Services, NWK and MRI, do provide some training, and the general quality of this is good, but the focus is rather narrow, on the use of the products that they supply and/or commodities that they buy from farmers."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

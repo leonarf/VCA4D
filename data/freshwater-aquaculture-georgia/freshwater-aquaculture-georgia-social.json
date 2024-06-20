@@ -1,0 +1,565 @@
+{
+  "id": "freshwater-aquaculture-georgia",
+  "country": "georgia",
+  "commodity": "freshwater-aquaculture",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Georgia has ratified 8 fundamental ILO conventions and ICESCR and ICCPR conventions. However, farmers/companies involved in the value chain mostly do not have formal contract with their employees. Therefore, respect of the abovementioned standard is low. "
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The freedom of association is allowed by the law. However, there are no cases when the employees use these possibilities in aquaculture."
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Most of the employees do not have a formal contract in the aquaculture sector. Therefore, they can not benefit from the fair contracts."
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There were no cases observed  on the forced labour In the value chain. \r\n"
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "No cases of child labour were observed in the farms consulted. Hence, there is no risk of child labour. "
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There is labour inspection responsible for the safety standard in the workplace. However, it is newly established and there were no cases when they inspected the farms in aquaculture. The farmers use their knowledge and tools for the job’s safety. No serious job-related health risk was observed in the farms consulted. "
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The renumeration in the farms is half the average wage in Georgia. However, it is according to the wage standards in the sector of agriculture in Georgia. However, the wage can only suffice for the basic needs of the employees. "
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The work in the aquaculture farms is considered hard. Workers have limited time for social life. Youth prefer to find a job in the cities. The renumeration is also relatively low. Therefore, not many young people choose to work in aquaculture.\r\n\r\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There is limited knowledge on the VGGT guidelines within the companies and farmers consulted. "
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "There are no large investments observed in the field of aquaculture in Georgia."
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There is a limited knowledge on the Law on Aquaculture and its demands within the farmers. "
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The involvement of the farmers or aquaculture associations in the policy making on the aquaculture is very low. "
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There is the need to involve farmers and associations in the development of policy on aquaculture.\r\n"
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "\r\nThere are no obstacles observed related to the land rights.\r\n"
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Most of the small and medium farmers involved in the aquaculture have activities in another field of aquaculture. The different income sources ensure the sustainability of the households. "
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Farming in aquaculture is perceived as \"men’s\" job. However, women are indirectly involved in farming as they provide necessary housework for male farmers. "
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women are more actively involved in hotels, restaurants and when selling the fish in markets. Women’s roles are also significant in hatcheries and caviar producing links of value chain. "
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women have relatively low ownership of the assets involved in aquaculture farms. Most assets belong to men. "
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Owning the land is mostly based on cultural norms. Hereby, women own relatively low agricultural land than men do in Georgia. "
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "As there were no women owning   the aquaculture farms the information about women’s accessibility to the credit was not obtained. "
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In general, there are very limited extension services related to aquaculture. Therefore, women also have limited accessibility to the extension services in the field of aquaculture. "
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 2.3333333333333335,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The women are relatively less involved in the decision-making process on the farm level in aquaculture. However, women’s roles increase in the agricultural markets where they sell the fish and are one of main decision makers. Moreover, women’s roles are significant in the restaurant where they are employed. \r\n"
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a"
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Based on the consultation with farmers, decisions of how to spend household income is negotiated between women and men. Decisions about expenses related to the aquaculture farm is mostly made by the men. \r\n"
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a"
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The role of women in decision-making regarding purchasing farm facilities or selling the products is relatively low on the farm level. "
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Within the aquaculture farming association, the role of the women is high, as they are founders of organizations. "
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "In the fish farming associations two women are in leadership positions and have significant role in decision making. "
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In general, both female and male farmers have limited role in policy making related to aquaculture"
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "In general, women are active in public sphere. There are no hindering factors in this regard. "
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In aquacultural farms most job is done by men. However, domestic work and childcare are mostly women’s responsibilities. "
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "As observed, there were no risks of strenuous work for women. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "According to the data of MEPA, local productions of food has increased. However, the country depends on the export of different types of food.\r\n"
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The local fish production gradually increases. However, there is a large amount of exported fish in Georgia."
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Most of the population is possible to allocate their income for food in Georgia. However, people living below the poverty line have problems to allocate enough income for the food. "
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "due to a relatively high inflation, the price of food has significantly increased in Georgia. "
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": "n/a",
+          "averageText": "n/a",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "scoreValue": "n/a",
+              "scoreText": "n/a"
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a"
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a"
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "There was no risk of food shortage identified during the field visits in the fish farms in Georgia."
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Due to a relatively high inflation, the price of food has significantly increased in Georgia. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There are two fish farm associations in Georgia. However, membership of farmers within these associations is relatively low. There are no cases when the associations have influence on the policies of aquaculture in Georgia. The state of the associations can be characterised as weak. There are informal contacts between farmers in the farm and carp value chains. There are cases when they share knowledge with each other. However, the united approach between the farmers to solve problems related to their farm development is not  development. "
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There are cooperatives in trout farms in Georgia. However, analysis of the history of these cooperatives shows that they were established due to the demand of international organizations to give them a funding. The members of cooperatives are mostly family members. Very rarely there are cases when members of cooperatives are beyond the family. There are no cases of cooperatives in the carp value chain. "
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a"
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Cooperation between farmers is weak. There are no cases when they negotiate on different issues that will beneficial form them.  "
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Due to the lack of human resources the extension service in aquaculture is not developed. This applies both to governmental and private extension services. Therefore, the farmers lack the qualified advice in the field of aquaculture. Farmers have little knowledge about aquaculture policies in Georgia. There is a gap between governmental institutions and farmers to exchange information on the state of aquaculture in Georgia. Involvement of farmers in aquaculture policy-making is relatively low. "
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "There is a trust between farmers and wholesalers in the value chain. There are cases when the wholesalers take the fish and (pay for the fish later?) /give the money to the farmers later on or vice versa.  The feed suppliers give the fish feed to the farmers and pay money later on. This kind of trust is characteristic to the value chain both in carp and trout system. "
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Farmers as  residents of their communities are involved in the decisions that impact their livelihood. "
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "In some cases farmers provide free fish for the ceremonies. when there is a wedding or a funeral in the community where the farmers live. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 2.6666666666666665,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Most of the farmers and employees in the aquaculture sector do not have private health insurance. However, the Government of Georgia has universal healthcare programme and the employees involved in the sector are beneficiaries of this programme. However, the programme covers only part of health care services. "
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "There are hospitals in most municipalities of Georgia. Moreover, in most of the villages there are “village doctors”. Therefore, it can be concluded that the people involved in the sector have access to healthcare services. However, expenses for medicines are high for the households in Georgia, part of the society (households below the poverty line) are not enable to buy necessary medicines. "
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "If the health service is not covered by universal healthcare programme, part of the households has problems to cover health related services by themselves. "
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Based on the census 2014, most of the households have relatively good conditions in terms of house facilities. However, the dwellings near the farms where the farmers spend most of the time have relatively low living conditions."
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In the dwelling, near the farms where farmers spend most of the time in many cases there is lack of good quality water (in carp farms most of the cases) and sanitation facilities."
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Two VET colleges provide courses related to aquaculture. Although, the number of the students is relatively low. Furthermore, the farmers do not apply to get this VET education in aquaculture. "
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There are very rare trainings when different institutions provide trainings for farmers in aquaculture. Exceptionally, when some farmers receive the funding for the trout farms from international organizations, they receive the training as well. In general, it is observed that there is the lack of trainers in the field of aquaculture as well. "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

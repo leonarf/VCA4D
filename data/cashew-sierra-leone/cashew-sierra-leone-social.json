@@ -1,0 +1,571 @@
+{
+  "id": "cashew-sierra-leone",
+  "country": "Sierra Leone",
+  "commodity": "Cashew",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 2.8,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There are currently very limited number of companies involved in cashew value chain. Industrial scale processing of cashew is not significant as at present, with only two main players involved - KamCashew  and National Agriculture Development Export Co (NaDeCo) - and their processing operations are running haltingly. It is widely-acknowledged fact that the implementation and enforcement of existing labour rules and regulations in the country are weak. The tracking of compliances to labour laws and conventions are non-existent or non-visible."
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "None of these workers (except in a block farm model) have any type of documentation of their engagement in the full-time or part-time employment. Given this arrangement and level of unemployment /under-employment, there is no association of workers and all collective bargaining possibilities are nullified. "
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Except workers at a 'block farm', most other workers in the value chain are ‘informal’ workers meaning that they neither have a contract nor any benefits (health, insurance, pension etc.). Majority of workers across different part of the value chain are probably earning much less than the minimum wages (~800 USD per annum), as data from sample investigations in the four districts shows. The worse-off are farm workers involved in cashew production. The study estimates  that the farm level workers (both men and women) are probably earning between 1.8 million to 2.4 million SLL (240 to 320 USD) per annum. "
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "No forced labour /no bonded labour is observed in the value chain. Youth are involved in collecting, baggage and transportation but they generally belong to the family or are part of extended family network. "
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "The discrimination in employment based on kinship, sex, other affiliations was not observed in the value chain. "
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Even though school enrolment figures are increasing along with education investments and standards, there is some possibility of school drop outs working on family farms and /or other farms. The secondary data from different household surveys and key informant interviews corroborates this finding."
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "It is observed that the children (aged 12-17) who gets involved in cashew production and processing are generally not given the most hazardous activities such as brushing, pruning, etc."
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Key informant interviews suggest that general safety precautions in cashew farming and processing are being observed in most cases, though not in all cases. "
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The attractiveness of the job, if assessed based on remunerations received is not high as most of the workers across the value chain receive less than minimum wages  (~800 USD per annum)"
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "As median age of cashew farmer is going up, some recent initiatives (such as block farming model) are promoting youth involvement as farm workers.The block farming model offer earning potential of about 300-400 USD per year from a part-time engagement (3 days a week for 24 weeks). This could be an attractive proposition to youth, some 500 of which have already become part of cashew block farms being established (~2000 ha).  "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The examples of large-scale land leases in other commodities in the country suggest history of violations and non-compliances with the principles of VGGT. This is not the case in cashew value chain. This presents a clean slate to begin cashew VC development – learning from experiences in other crops (e.g. oil palm, sugarcane in Sierra Leone) and from other countries (in cashew)"
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Large-scale land investments in cashew is a distinct possibility in next few years. Conditions are favourable for investments. In addition, promising models are being developed by Balmed and COOPI, which could provide an alternative to large-scale land acquisition by ‘non-natives’. However, it is to be seen, whether past mistakes would not be repeated. "
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 2.75,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Cashew value chain development is at nascent stage in the country. Only few large-scale plantations are established so far. One of the significant investment is from Balmed which have dedicatedly followed principle of prior disclosure and consultations with the land owners, potential farm workers and chiefdom chiefs. An instance of one other large investment is also witnessed wherein these principles were not followed. "
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The challenge in increasing transparency, participation and consultation lies in the existing legal and regulatory framework for land governance. The approach to build up a strong legal and regulatory framework for land governance is to have a longer term, broader vision for the country. Many NGOs (such as WHH) and organisations like Namati are acting on behalf of community for training primary and secondary stakeholders on voluntary guidelines and for ensuring adherence to the principles of VGGT. "
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The Environmental Impact Assessments (EIA) are being done in the country, however no such assessment has been done for investments in cashew plantations. Lessons from other value chain can guide investment-friendly EIA processes in cashew value chain. "
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Same as 2.2.1"
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Equity, compensation and justice have been hostage to the discretions of MDAs and have led to compromises on legitimate tenure rights of individuals and communities. Cashew value chain is too nascent to assess whether this can happen or not happen. However, if past experiences are any guide to the future and in the absence of proper awareness, capacities and bargaining power, the land-owners in cashew value chain also could find themselves short-shrifted. "
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Two main investors in the cashew value chain are Kamcashew and NaDeCo. Both has near about 500 ha each of cashew plantation which needs better upkeep and management. Community involvement in management of these plantations is a possible way out and a win:win solution for ensuring better output from the plantation as well as community benefit from intercropping and share of harvests.   "
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "If large-scale land investments in cashew sector become a reality (which it may), then there is a need to rethink and revise the compensation for the land owners. More so, as alternative business model of block farming can provide much better returns (~100 to 200 USD per ha. ) to land owners. "
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The new land policy (NLP) will have high relevance for the cashew value chain as it can help cashew sector avoid the pitfalls already experienced by other commodity sectors. New agri-business investments in land acquisitions for cashew plantations and for setting up cashew processing plants could be guided by an enabling NLP. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The women are economically very active in cashew value chain and play significant roles throughout the VC. Women play main role in harvesting and play subsidiary roles in other activities as part of family farming; Women are also part of the farm management group  in block farming model; Men mostly control incomes from cashew farming. Women have direct control of incomes earned from processing and trading engagements. "
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Cashew production is a family enterprise, involving men, women and children. Men play significant roles in many cashew operations while women’s role in dominant in harvesting. Small scale processing is carried out mostly by women. These women are entrepreneurs who have started their own cashew business and in some cases are also trading in RCN (selling to other processors). "
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women ownership of assets (such as housing) are very low, which is partly explained by historical context, socio-cultural norms and patrilineal systems of the Sierra Leonean society. The fact that about one-third of the men have polygamous relationships (WHH Spiral project survey) adds to the complexity of access to land and other resources for women. "
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Land is inherited by men and women do not have any formal rights of their land. The men in a cashew growers group told the study team that in their village, only one women has land in her name. The DHS survey (2013) suggest that only 5% women have ownership of house. "
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The women are actively involved economically in all parts of the VC, yet their access to financial and agriculture extension services are very poor. SIGI data has reported ‘very high’ level of discrimination in women's access to resources and assets. The data from the World Bank Global Financial Index (FINDEX) for Sierra Leone suggest that 12% women have an account at a financial institution, which is only 7% in rural areas. Only 5% women have received any transfers from the Government in past one year. Only 3% have borrowed from a financial institution."
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "While there is a generally very low access to other services, in the VC, the financial inclusion and access to agriculture extension services in relatively much better for women who are involved as members of CPU /FBOs/ABCs. "
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 2.2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women are relatively more independent and have a more say in household decision-making, when they are working at ‘processing’ segment of the VC. Women have relatively less say in the household decision-making at ‘production’ segment of the VC. Women’s role in ‘trading’ segment of the VC is in balance with men. "
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Local trade and processing in cashew is mostly carried out by women (stretching from Kambia to Bambali to Waterloo). The lesson here is that the women running their own business will have a better chance of controlling their income than the women who are doing joint farming operations with their husbands. "
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women have relatively more control over income when they are earning themseleves, e.g. in processing segment of the VC. Women have very little control over their income in 'production' segment of the VC. "
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The cashew value chain offers many economic opportunities (such as cashew apple processing, bee keeping, nursery management) for women to increase their independent incomes and consequently economic standing and decision-making role within the family /community."
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Not so far, however new National Land Policy provide specific provisions for \"joint spousal consent to land disposals\". The implementation of the policy is yet to be promulgated.  "
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2.25,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Generally, women are members of CPUs /FBOs/ABCs and constitute about 25-40% membership of these groups. The data from a survey of women processors suggest that 7 out of 12 women processors (58%) are part of FBOs /farmer groups.  "
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Few of these CPUs/FBOs/ABCs have women as leaders. However, CPUs promoted by Coopi offer an opportnity to promote women leadership in the cashew value chain "
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women have limited presence, visibility and voice within the groups where they are members. CPUs stand at a vantage point for promoting women inclusion, leadership and empowerment which necessitate strongly gendered business planning approach.   "
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women's ability to speak in public is dependent upon their abilities and on opportunities available to them. Participation in different type of groups enhances both their abilities and opportunities as is seen in the cases studied."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "women’ role is pervasive and dominant in many segments of the cashew value chain. Women work on the cashew farm, in some cases do cashew processing, are trader /intermediaries in cashew sale and at the same time are also running petty businesses. Women are doing all this without much support from their husbands. Women take on most of responsibilities related to domestic work and child care as men play very limited role in these spheres."
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The strenuous activities in cashew production are mostly carried out by men. However, given the women’s work load, there is huge scope for labour savings technologies in cashew production (e.g. for cashew harvesting) and processing (e.g. mechanical processing tools) as also in other spheres of women’s activities. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Local production of food and trend in food supplies in local markets can be deduced from household expenditure on food. Cashew household food expenditure is on the upturn and have shown 70 to 140% increase over last five years, resulting in an annual food inflation of 15 to 28%"
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "This dataset as well as general trend in the economy  shows reduction in local production and food supplies in Sierra Leone, with increasing reliance on imports"
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Cashew communities have experienced hungry season and have adopted various coping strategies. food consumption scores are much below the national average in cashew growing districts (Kambia, Port Loko, Bombali). Close to two-third households in these districts are either poor or on the borderline of food consumption scores (CFSVA, 2015)"
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The consumer food prices are increasing at higher rate than even the overall rate of inflation in the country. The food inflation was under 10% up to September 2015 when it started rising and went up to 22% in March 2017. The food inflation rate  currently (April 2018) hovers around 17%. Correspondingly, the overall inflation rate was around 8% in September 2015 when it kept rising to 20% in March 2017. The overall inflation rate currently (April 2018) hovers around 16%. Under such conditions, the trend of high and rising food prices poses a serious threat to food security in Sierra Leone (WFP CFSVA 2015). "
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Interactions with cashew farmers about their diet suggest that most eat rice with soup most of the time. Some cashew families eat fish with potato chips. Many a times, most members just eat rice with palm oil. No or very limited amount of fruits and vegetables are there in the diet, similarly not much animal sourced protein is consumed. Clearly, the diet of cashew producers and processors generally lack proteins and vitamins. About 60 to 70 % of cashew farmers are suffering from dietary deficiency, which have deteriorated over last five years (key informant interviews). "
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Cashew and its products have potential to address some of these nutritional deficiencies. These are highlighted in the report. "
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The WFP study (CFSVA, 2015) found out that food insecure households consume a diet insufficiently diverse for good health and wellbeing, with 56.8 percent of households consuming four or less food groups on a weekly basis, and 13.9 percent of households consuming two food groups or less on a weekly basis. COOPI is developing nutrition specific programming in it cashew areas, chiefly working with women. Many options are being promoted under this initiative – vegetable growing, backyard garden, growing oranges, pototo leaves, leafy vegetable, consuming some fruits and vegetables instead of selling it all, intercrop plantation of nutritious crops such as Cajanus cajan (pigeon pea), ground nut, promoting traditional and developing new nutritious recipes etc."
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The study analysed the potential of cashew value chain development in Sierra Loene in addressing the dire situation of food and nutrition insecurity. With a 2.5 ha cashew farm (median cashew holding of a cashew farmer as per Comcashew baseline survey, 2017), a small holder farmer in Sierra Leone can, in many likelihoods, earn annual profits (after deducting cost of production) almost equivalent to the living wage (USD 800) in the country. Cashew can therefore be a poverty alleviation tool."
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "As indicated above, food price variations are increasing over last 5 years, putting additional pressures on household economy. Cashew value chain development, in this context, have potential to increase stability of incomes and food security for cashew producers and processors. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Besides FBOs and ABCs, cashew value chain also have CPUs  owned and run by cashew communities, under management guidance from COOPI team. COOPI has mobilised cashew farmer groups and is developing a new approach to collective farming. MAFFS and COOPI are currently supporting Ladeka ABC in Bombali district as a unique experiment. This is first, mostly women, targeted ABC for cashew value chain development. All this provides a solid base for cashew value chain upgradation, using existing and new institutional vehicles. "
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Comcashew baseline survey (2018) found that 57% of the surveyed households member are part of a formal, registered farmers’ association or cooperative. More participation for cashew producers and processors in existing FBOs /ABCs can be encouraged as these organisations can provide various services to their members, including easy source of finance for cashew producers and processors."
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The main challenge FBOs /ABCs face are the lack of accountable and transparent leadership. This has been established by many studies conducted with these groups. "
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "CPUs are starting to play a role in input and output markets. CPUs can potentially become a point of collection to transport the processed cashew to the other markets, especially the international market of Kambia. This will require strengthening CPUs capacities. The CPU will need infusion of both technology and finance to make headway on the business plan as otherwise grant-based initiative will fail to become a profitable social venture. The study found out that there is not defined place for market for cashew in the district, no organisation of the farmers to get fair price. So, farmers get discouraged and this could be one of the factor why farmers generally do not take care of their farm. The value chain may need some institutional interventions such as cashew commodity association at district level and cashew development board at national level to steer and coordinate all cashew value chain upgradation activities at respective levels. At the same time, PMB could play a hugely important role in organising and governing the value chain (in areas such as transparent price discovery, cashew quality standards setting and regulation, regional trade regulation, producer support programme etc.). Realisation of cashew’s full potential demand such structural improvement actions.  "
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The farmers in the value chain have very low access to information and agriculture extension services. In the cashew sector, ComCashew baseline survey (2018) found that only 21% of the 231 responding households have had some training on cashew within the last 5 years. Cashew farmers are facing constraints related to capital and labour availability. Technical support capacity at MAFFS and SLARI needs to be upgraded as well. These are constraining to farmers for achieving higher agricultural productivity. "
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The marketing structure in the sector is evolving. Keen interest is being shown by Balmed and many traders coming from Guinea (including Indians). Farmers seem to prefer Guinea traders as they pay more money. There is another phenomenon seen of village-based agent getting trusted more by the cashew growers. COOPI has also started promoting this structure of village-based buying agents. A need has emerged for streamlining marketing structures."
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 2.6666666666666665,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Cashew value chain have seen many novel experiments of working with cashew producers and processors. Balmed’s block farm model, COOPI’s semi block farming concept, COOPI’s CPUs, women-centric ABC working on cashew trading and processing (Ladeka ABC) are some examples of on-going value chain experiments of social involvement at small-scale. Further development and strengthening of these initiatives can improve their effectiveness and can potentially lead to scaling up in the next few years. Despite many challenges, it is possible to achieve country’s export potential of cashew (~10,000 t) . Making that happen will require continuous improvisation (based on experience) and consistent support to social involvement models in cashew. If that happens, it will be an exemplary pro-poor and inclusive value chain development. "
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Kamcashew’s cashew farm has not been productive due to many factors. Apart from management under-sight, community involvement has not been adequate to ensure farm protection and proper farm management. "
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Both Balmed's and COOPI's approach promote volunatary communal activities which benefit the entire community. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 1.6666666666666667,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Basic health infrastructure in rural areas in Sierra Leone is very limited. Primary health centres are available approximately 2-3 miles from a village. The secondary hospitals are further away from villages. "
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "As per Comcashew baseline survey (2018), of the 231 surveyed households, 139 (43%) reported having at least one member with some chronic health problem while 212 (92%) reported having had some acute (sickness, accident, injury) problem. As per ProAct baseline survey (2017), insufficient access to health and WASH facilities largely contribute to the high malnutrition rates in Sierra Leone. "
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "The first line of treatment in most cases is village-level herbalist (a registered herbalist in some case). If that does not work, then people go to a nearby government health facility (PHC). While cost of local treatment is around 10,000 Le (~1.5 USD), the cost of treatment through a PHC is exorbitant at ~70,000 to 230,000 (~10 to 30 USD), depending on the disease. The health services are rudimentary and increasingly less affordable. "
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Many cashew producers and processors reside in dilapidated dwellings. Three main type of dwellings were seen in cashew districts: Type 1: Mud walls with thatched roof; Type 2: Cemented wall with tin roof; Type 3: Brick walls with tin roof. These dwelling have mud or cemented flooring and have one or two rooms. Generally, a family of 6-8 people reside in such houses. "
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "As per ProAct baseline survey (2017), insufficient access to health and WASH facilities largely contribute to the high malnutrition rates in Sierra Leone. Just 4.3% of the households in rural area have access to improved sanitation facilities. Access to safe drinking water is poor especially in Kambia where 51.4 % of the households obtain their water from river, stream or pond. "
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 2.3333333333333335,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "ComCashew survey (2018) report that 44% household head have either completed or have some primary school education and 4.4% have at least some secondary school education. 71 percent of children of primary school age are attending school—an improvement from 2008, when it was estimated at 62 percent at the primary school level (DHS, 2013).The situation is changing for the current generation with most school-age boys and girls being in school, as the country is rebuilding schools (destroyed by the war) and increasing efforts on primary school enrolment. "
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Secondary data and interaction with headmasters confirmed that dropout rates are very high for pupils moving to secondary schools (esp. from JSS to SSS). More drop out phenomenon seems to occur with girls than for boys as girls’ numbers reduces considerably in secondary schools. Teenage pregnancy was also cited as one of the reason. The cost of education (as estimated during an FGD) for a child is around 400,000 to 500,000 Le; 51 to 64 USD per year, which is steep and unaffordable for majority of people and is one of cause of indebtedness."
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Cashew production by smallholders is hampered, in terms of both quantity and quality, by limited education and training, as highlighted in earlier sections. The farmers need to improve their knowledge and skills related to cashew production and processing. COOPI, with MAFFs is providing extension services to about 4000 farmers and workers. This could possibly be scaled up to 10 to 20,000 farmers and workers.  "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

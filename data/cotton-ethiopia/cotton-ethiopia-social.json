@@ -1,0 +1,571 @@
+{
+  "id": "cotton-ethiopia",
+  "country": "ethiopia",
+  "commodity": "Cotton",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Indications show that employers of the garment factories and the government neglect workers right. The employers are notably accused to violate the following of the 8 fundamental ILO rights: (low wages, violation of the right of dignity, difficulties for unions to work and workers to join unions. ILO in 2019: \"However, Ethiopia’s garment industry faces multiple challenges, in particular with regard to productivity, working conditions, industrial relations and social compliance. (source: https://www.ilo.org/africa/hundred/WCMS_698944/lang--en/index.htm). The  ILO has initiated a comprehensive and coordinated intervention to advance decent work and inclusive industrialization in the country. The government on its side is committed to adhere to the conventions and to improve the situation. ILO and its richer members states (like Germany, Norwegian and particularly the EU) are supporting this process through various projects. Ethiopia signed the ICESCR and ICCPR convention and should the companies based in Ethiopia adhere to them and be monitored by the state. (sourced: http://www.industriall-union.org/sites/default/files/uploads/documents/Global-Worker/2019-1/profile-_organizing_in_the_garment_and_textile_sector_in_ethiopia.pdf).     According to D35, the following laws must be addressed (this D35  is written mainly for Chinese investors): The following labour legislation must be observed in Ethiopia:  Labour Proclamation (2019);  Constitution of the Federal Democratic Republic of Ethiopia;  National Policy on Occupational Health and Safety (2019);  Civil Code Proclamation (1960);  Social Health Insurance Proclamation 2010);  Private Organization Employees Pension Proclamation (2011);  Urban Lands Lease Holding Proclamation (2011);  Rural Land Administration and Land Use Proclamation (2005). "
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "This freedom is allowed, but not effective. Ethiopia scores a 4 on the ITUC Global Rights Index (scale 1-5) for freedom of association and workers’ rights, which stands for systematic violations of labour rights. The government and/or companies are engaged in serious efforts to crush the collective voice of workers putting fundamental rights under continuous threat.  60% of factories have some form of workers’ representation. The government is pushing for this. For some factories this takes the shape of a union, some have worker representatives meetings, some have suggestion boxes (D38). The national union of the scector, IFTLGWU states in a report (2018?): \"Minimum and living wages are central to a campaign by the 55,000-strong IFTLGWU, affiliated to CETU. With the current wages most workers struggle to make ends meet and can be described as working poor. A low wage economy means jobs that will neither change living standards of the workers, nor end poverty. The government promotes ‘industrial harmony’ - but unions say harmony can only be attained through inclusive social dialogue. To achieve this, the IFTLGWU is working with the CETU, the International Labour Organization, FNV Mondiaal, the Friedrich Ebert Stiftung, IndustriALL and other partners in various activities that include building union capacity for collective bargaining towards social dialogue\". Ethiopia is ranked 4 out of 5 in violating union rights (5 is worst) (D46). The International Trade Union Confederation (ITUC) registered flaws in legislative compliance with international standards on the right to organise, the right to collective bargaining, and the right to strike (D46)."
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The low wages (<70$ can hardly be called fair, considering the living costs and particularly the renting costs already over 30$ in average. Often, the salaries are below 50$. This is true for both farm and factory workers. The general situation is however changing with the workers uprises in 2017. \"In the aftermath of power struggle, the two employers’ organisations agreed in 2018 to create a new confederation that now represents employers in national tripartite structures. The trade union movement is budding: the membership rate grew by 40% from 2011 to 2018, and the trade union density of employees increased from 5.4% to 7.5% during the same period\". The same source: \"Experts argue that previous Labour Law (377/2003) and its amendments were highly responsive to the ILO standards. These standards are maintained in the new Labour Law (1156/2019). The new bill is more addressing the long-term inquiry of employers and investors’ concerns than workers\"."
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Although   forced   labour   is   prohibited   in   labour legislation in Ethiopia, it does occur (D45). Again, this situation is  related  to  insufficient  government  staff  to  effectively enforce  the  law  and to  a workforcedominated  by  the informal economy. In practice, many adults and children are  often  under  coercion while  engaging  in a  wide range   of   tasks,   e.g.   in   street   vending,   begging, traditional    weaving    of    hand-woven    textiles,    or agricultural work. The risk is emanating in the following narrative (D27): \"This is a new issue for our people. I have the strong feeling it will be bad. If highlanders are resettled here to provide farm labour, there will be drinking [ ], we will slowly sell our cattle, then begging is next. We will lose our selfsufficiency. Our culture will go when the highlanders come. This is the end of pastoralism in southern Ethiopia\". The pastoralists in the South face increased risks to be victims of forced labor or get in trouble with fights related for land access rights. "
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Again to cite D27: \"Attempts to bring about a transition from a pastoral to a sedentary lifestyle have been fraught with all kinds of pitfalls elsewhere in Ethiopia (for example in the Awash Valley of eastern Ethiopia) due to lack of consent, lack of adequate planning, and aggressive approaches to “top-down” development.The Ethiopian Electric Power Corporation (EEPCO) commissioned an “Environmental and Social Impact Assessment” (ESIA) in 2005, an “Additional Study of Downstream Impacts,” and a two volume resettlement action plan for the Gibe III dam and reservoir. These were only published in January 2009, three years after dam construction had begun. They did not consider the downstream effects of large-scale commercial irrigation schemes, nor of the planned Gibe IV and V dams.\" The pastoralists forced to settle and to produce cotton (and other crops) are at risk. But also the factory workers risk discrimination. "
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "School enrollment is low, particularly in rural areas.  To reinforce the importance of attending school, joint NGO, government, and community-based awareness efforts target communities where children were heavily engaged in agricultural work.  The government invests in modernizing agricultural practices and constructing schools to combat the problem of child labor in agricultural sectors (D40). Generally, Ethiopia  has  one  of  the  highest  rates  of  child  labour  in the  world.  Most  of  these  children  live  in  rural  areas. One factor that  keeps  child  labour  widespread  is  that the majority of Ethiopians are in subsistence agriculture, often  with  minimal  mechanisation.  It  is  customary for many  rural  families  to allow children to support  the families’ economic and practical activities. This situation will  take  time  to  change. Some  of  the  challenges  are that many rural children live far away from school and many families cannot afford to support schooling (D45). To note that 43% of the population are children (5-17 years).  (D46)."
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "According to reports, child labor still exists in the garrment sector (D41): \"The Ethiopian law forbids child labour, so it is commonly stated that there are no people working in the industry below the age of 17. However, the US dept. of Labor has found reason to believe child labour occurs in the production of hand-woven textiles in Ethiopia. It is reported that children, mostly boys as young as seven years old, produce woven textiles under conditions of forced labour in Ethiopia. These children typically work in Addis Ababa, however many come from the south, including Gamo Gofa and Wolaita zones, some of them as victims of trafficking. The trafficked children are often sold to recruiters, and the parents and children are deceived with false promises about the wages and opportunities for education while working.  Some of the children sleep at the worksites, held in captivity and isolation, and are not provided with sufficient food. They are punished with physical abuse.  Some children are forced to work long hours, and receive little, if any, pay.\" D40 reports: Child labor remained a serious problem and significant numbers of children worked in prohibited, dangerous work sectors, particularly construction. Child labor in weaving üand other sectors, particularly agriculture] is not uncommon\"."
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The main risk concerns the exposure to pesticides during cotton production. PAN reports (D42): \"Interviews indicate that pesticide-poisoning incidents were common among cotton farmers before this project. Workers who apply pesticides are unlikely to use protective clothing and farmers perceptions of pesticides as ‘plant medicines’ rather than ‘poisons’ increased exposure and poisoning incidents. Respondents of a survey in 2013 reported that 31.8% of the farmers questioned reported impacts on their health in the previous 12 months. Symptoms included headaches (56.4%), skin irritation (48.7%), weakness (30.8%), eye irritation (23.7%), loss of appetite (17.9%), nausea (10.3%), excessive salivation and vomiting (5.1%) and difficulty breathing (2.6%). Communities having received training have ceased using pesticides and even farmers who have not been trained in the project are more aware of the potential impact on their health and the environment.\" D43 reports about continuous environmental and occupational risk of DDT in Ethiopia. In addition,that  the extensive use of Endosulfat on horticultural food crops in SSIF is worrisome since it is not registered for use on vegetables and can only be restrictively used on for instance cotton. Commercial cotton production seems to be the cause for misuse in vegatables of Endosulat. To note that smallholders hardly use pesticides. MVO further reports (D41): \"Ethiopia’s occupational safety and health standards are not effectively enforced. The government employs 516 labour inspectors, which is less than half of the ILO’s recommended number of 1,321.      Factories: There are reports (like D57) that state that female workers in the apparel industry face particular sexual and reproductive health risks. Low levels of knowledge and confidence around these topics, combined with the abrupt transition from living in traditional home settings to living alone in areas with more men, creates a higher potential for risks such as sexually-transmitted infections, HIV, and unwanted pregnancy. Physical pain at work is experienced, most notably leg pain for cutters who spend their whole day standing up, and neck, arm, and back pain for operators who spend their working day at sewing machines. Often, personal protective equipment is not available. Some factories had previously improvised facemasks for workers out of material scraps from the production line (D57)."
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "On Ethiopian cotton fields, working conditions are often poor. This is especially the case on commercial farms. Many employees have no contract, free days or maternity leave. According to a report by the Worker Rights Consortium  Ethiopia’s garment workers face violations of their rights, for instance in the shape of excessive wage deductions for ‘such offenses as drinking water at their work stations’; verbal abuse from supervisors; pregnancy discrimination, with hiring managers at one factory manually probing the bellies of job applicants; and forced and unpaid overtime. Research by WageIndicator.org amongst 1062 garment sector workers from 52 factories showed a lack of job security during up to 6 months of illness.  These violations contravene codes of conduct of brands sourcing in Ethiopia (D41). Hence we assume that the attractivity of the sector is rather beyond the average.    Many farm laborershave no working contract (I20) The conditions in SNNP are or seem to be worse than in the North (Amhara, Tigray)."
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The relative advantage for the youth is the opportunity to be employed compared to the alternative having no opportunity. But only if the expectations will meet minimal standards will this remain an asset. To note themany efforts of ITC and partners to enhance sustainability matters in this VC, including by addressing foreign investors from China (D35): \"There is a special focus on Chinese investment in this handbook. This has to do with the fact that Chinese investors represent close to 60% of the FDI inflow to Ethiopia, and a large number of potential and existing Chinese investors have expressed interest in receiving guidance on the issue of sustainability from the PIGA project and EIC. However, we believe all investors, both foreign and local, will benefit from the guidance this handbook provides to make their investments sustainable\". The youth will be the first beneficiaries of fair working conditions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The VGGT report from 2017 on Ethiopia signals a very weak adherence to Ethiopia to the princiles of good practices on expropriation and compensation: We cite (D44):\" Section 2(5) of the Expropriation of Landholdings for Public Purposes and Payment of Compensation Proclamation No. 455/2005 states \"public purpose\" means the use of land defined as such by decision of the appropriate body in conformity with urban structure plan or development plan in order to ensure the interest of the peoples to acquire direct or indirect benefits from the use of the land and to consolidate sustainable socio-economic development.\" Section 3 states \"a woreda or an urban administration shall, upon payment in advance of compensation...have the power to expropriate rural or urban landholdings for public purpose where it believes that is should be used for a better development project to be carried out by public entitles, private investors, cooperative societies or other organs, or where such expropriation has ben decided by the appropriate higher regional or federal government organ.\" Article 1464 of the Expropriation Proclamation provides that \"expropriation proceedings may not be used for the purpose solely of obtaining financial benefits\". Further, the \"holder of rural land who is evicted for purpose of public use shall be given compensation proportional to the development he has made [only] on the land and that the laws assessed do not provide compensation for unregistered customary tenure rights. Concerning the approach, the laws assessed do not require the government to identify all affected persons prior to expropriating land, nor is a feasibility study prior to expropriation required. Furthermore, the laws assessed do not require the government to provide affected landholders with the reasons for expropriation nor to conduct a social impact assessment prior to expropriating land. The laws assessed do not recognize the indigenous right to Free Prior and Informed Consent (FPIC).Considering that the State is not effectively implementing the VGGT, it is not probable that the foreign companies will do so, as it is not in their short-term interest."
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "The contracts between investors and the government are closed to the public and often even to ministers. D50: \"According to one major investor, disclosure clauses are in place to ensure that information contained within the agreements remains confidential.\""
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "poor information obtained on this (see above). I assume taht the level is very low."
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Basically the same as above. In the bipartite social dialogue within enterprises, labour-employer relations remain fragile and mandatory workplace policies are rarely in place to secure occupational safety and health standards (D46). However, the poor State staffing situation, the low educational level of the farmers and workers and the issue at stake may lead to low levels of satisfactory levels of accessability."
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Regional states control deals upto 5'000 ha. Above, the federal government is in charge. In both cases, individuals and groups of villagers/herders have hardlypossibilities to influence the decion-making process."
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 2.6666666666666665,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The rules depend on the regional state. OI (2011) reports for Tigray: \"There is also a perception that Tigrayans are being given land across the lowlands in order to crowd out indigenous populations, to build EPRDF support in the rural areas and eventually dominate regional government offices. In many of the regional government offices that we visited in the lowlands, Tigrayans held most of the positions. In those regions most of the businesses are owned by the Tigrayans (and other Highlanders to a lesser degree), and almost all of the domestic agricultural investment lands are held by the Tigrayans\". The discrimination of the indegenous peoples of the lowlands, disadvataged by less powerful social orgnaisation, related to a harsh natural environment, by highlanders mainly from Amhara and Tigray, is highly probable, but a hot issue within Ethiopia. The scope of this study obliges us just to mention this fact as a cause of the current socia-political turmoil. Foreign investors perceive however the lease contracts as rather secure. To cite an investor from Inida (D50): \"Here land is state property but government gives the rights by way of leases which are transferable, are renewable, which are pledgeable, in a lot of ways leases are tantamount to near ownership”"
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "The farmers always have alternative strategies. They just switch to other cash or food crops. The workers are also relatively flexible, and move out of the work contracts if salary or working conditions remain under their expectations.The most vulnerable people remain the workers in the ginning factories and the textile factories."
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "We focus here just on the case of the Omo valley, which is a core area of commercail farming since 10 years and a place with expropriation (at least in the last 10 years). The proble again seems to be the application of existing laws. HRW reports: \"Human Rights Watch also urges Ethiopia’s donors, including the World Bank, to press for appropriate social and environmental impact assessments. Current and future investors should comply with best practices of corporate social responsibility and refrain from any investment activities in areas where land title is contested, and involuntary resettlement is occurring, until all violations are investigated and remedied.\" So systems seems to be in place, but the implementation is deficient."
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "not sufficient data on this question."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women are less likely than men to be paid for their work: over half of all women engaged in the agricultural sector, for example, receive no payment. Similar trends exist in other industries like small-scale manufacturing, where 58 percent of female workers are unpaid family workers, relative to 40 percent of male workers (D55). Unions said they will continue fighting outsourcing which in most instances replaces permanent jobs with precarious ones. Men do not expect women to work in the cotton fields, particularly if they are far from home. This protects the women from additional work overload."
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women constitute more than 80 per cent of the workers in the rapidly growing textile and garment sector in Ethiopia. Women are dominant in the apparel industries (processing) as simple workers. But the conditions there are not satisfactory. D57:“There is no decision-making process or person (responsible if problems arise). Problems are brought up but not dealt with. Yet management keeps on pushing their own agenda. There is no two-way street respect. Only Human Resources  has Ethiopian staff, but rest of management are expats. Interestingly, women are rarely involved in the traditional weaving. Particularly in the Amhara region, this is mainly a domain for men, and often for (land-less) Muslims (D58)."
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women have limited access to skill trainings, formal education, innovative agricultural inputs, and finance. They also have limited ownership and control over productive assets and technologies (D53). While 46 percent of male-owned businesses used mobile phones for business purposes, only 3 percent of female owned businesses did (D55)"
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "“Taking the importance of land into account, Ethiopia has afforded a legal protection for a woman’s right to equality with men and equal protection before the law under its Federal Constitution of 1995, State constitutions, family laws and land laws. Thus Ethiopian women have equal right to own, administer and control property under the existing laws. Particularly, they have a right to access the rural land free of charge and control it equally with men. The revised family codes of the country also uniformly recognize a woman’s right to equal share of a common property, including land, upon divorce. Furthermore, women have an equal right to property inheritance”(D56). However, the problem is the implementation often due to communitie’s attitudes towards women rights.Women face many barriers to formal jobs, have lower levels of education  than  men –particularly  at  secondary  and tertiary   levels –and   have   significant   wage   gaps compared   to   men. A   study   suggests   that   gender inequalities  in  Ethiopia  may  lead  to  a  misallocation  of labour   and an underinvestment   in   human   capital, leading to larger-than-estimated output losses (D45). Women are less literate, suffer from poorer health outcomes, and have fewer basic rights than men. These wide and pervasive gender gaps hinder not only female livelihoods, but also the potential for poverty alleviation and growth on a national level (D55). Women are the most marginalized group of the society in relation to accessing and controlling rural land in Ethiopia (D56)."
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women have much less access to credit than men. One reason why women may have less access to formal credit is that they are less likely to own and control physical assets that serve as collateral. Furthermore, on average, women have lower levels of human and social capital which, in turn, can decrease their eligibility for formal credit. This puts women at a disadvantage: when credit is constrained, farmers are likely to use suboptimal levels of productive inputs, thereby limiting their productive capacity (D55)."
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women have less access to extension services (D55). This is historical, as the WB report (D55) says: “On the supply side, top-down agricultural extension models historically targeted farmers who were more likely to adopt technological innovations, frequently leaving out female farmers” (D55). The lack of training on the women and workers right exponses women to additional risks and low status jobs."
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women hold only 8.7% of agricultural land. Despite recent policies strengthening the position of women, rural women still have restricted access to agricultural inputs, fertilizers, finance, credit, extension services, technology and information. These factors limit their contributions to household food security and household income. They also face challenges when it comes to diversifying their work and building productive assets to deal with droughts and other shocks due to climate change (D47). All these factors reduce their involvement in decision taking related to production."
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Some recent studies argue that women are significantly less  likely  to  own  a  business,  and  when  they  do, they face  significant  operating  constraints.  Just 17%  of  all businesses registered with the Ministry of Trade in 2014 were owned by women. The median start-up capital of male-owned enterprises is five times higher than that of female-owned     enterprises.     Women-owned     firms appear  to  have  less  access  to  finance,  fewer  land  use rights  in  some  areas,  and  smaller   (D45)"
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Even if women would earn independent income, the prospects are less good than for men: Female farmers have lower rates of agricultural productivity than their male counterparts, and in entrepreneurship, female owned firms underperform those owned by men in an array of critical dimensions including profitability, survival rate, average size, and growth trajectory (D55)."
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2.75,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Weak institutional structures to support women’s cooperatives and microfinance institutions, lack of integrating gender into the planning and implementation of activities to support women, and low numbers of women in the leadership of such institutions are hindering factors for women to get orgnaized (D52)."
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Rural women’s lack of power to decide and influence the community due to an absence of membership in economic and social groups, a lack of comfort in public speaking, and an absence of decision-making power over productive resources are among the main factors that result in their disempowerment (D52)."
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "The progress for rural women over the last 10 years in empowerment has only marginally improved (D54): \"These results show large discrepancies in women’s realization of basic rights in Ethiopia.\" We have no reason to assume that the situation in cotton areas is different than in non-cotton areas. An exeption might be in Industrial parks, which are to be considered as urban areas, with better prospects on institutions providing empowerment services. The regional differences are important: (i) High gender inequality in adult literacy in Gambela and in adolescent literacy for Somali; (ii) High incidence of child marriage, teenage pregnancy and FGM in Somali and Afar (and Gambela concerning child marriage); (iii) Lower incidence of women’s participation in household decision-making in Somali, SNNPR and Afar (D54). Therefore, a regional focus in tackling gender inequality is recommended. Considering the larger impact of the women in the textile sector and its impact on conscienscness also on rural women, we may consider the power to influence through the VC as substantial."
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "In the few meetings we had and considering the evolution over the last 10-20 years, the voices of women are getting louder and women are freerer now to speak in public."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "In relation to cotton production, men accept the limits of employing women and take care not to overlaod them. Hence, cotton might contibute to balance the workload. The differences however between regions , families and ethnic groups might be important."
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "It is minimized through taking over by men."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Increase in food production requires support from extension and input availability. In Ethiopia's cotton areas, these services will have to come from the DA (development agents). Here again we observe that \"technology transfer is also fashioned and adopted as the only good approach to extension. Despite the persistence of technology transfer as an alternative extension approach, end users have limited access to technologies or inputs they need, such as improved seeds. Similarly, the farmers’ growing need for product markets and customer satisfaction has still not been met (by extension)\" (D47). Only 33% of the cotton land is produced by SCF (see Tab.1). This land can be changed already during the next season for food crops if needed. The cotton area of the commercial lands however will be determinded by company interest or sometime even by political ones, being Ethiopian or by the foreign country interested in this land (D49).   Farms in Amhara and Tigray report that the cotton cultivation increases soil fertilityand that the rotation crops(often cereals) will benefit. This observation was confirmed by the Tigray research institute(I34)"
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "a) Commercial cotton: The fertile river valleys in Gambella and SNNPR are prime land investment areas because of ample water supplies and good soil fertility. However, many of these areas face ongoing food security problems (D50). Some urban highanders (migrated under the DErg in the 1970ties) might benefit from jobs, but the herders and indegenous farmers (having lost land) will rather suffer. Slightly negative balance.   b) SCF: here, the farmers are flexible to decide on the amonut of cotton grown. We can assume that they will benefit economically with the cotton cultivated. This will be exacerbated if supported by advisers and particularly with identity cotton, mainly CmiA and organic cotton.   c) workers: considering the slightly better wages on the farms and in the factories than the alternatives, the food security might slighly improve."
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Cotton farmers in Amhara and Tigray produce cotton instead of additional sorghum and sesame. If the year has a favorable price relation between cotton and sesame, they win, if not they might lose income. Important is also the weather: if the rain is good and they have planted cotton, then it is good for the farmers income (in principe), as the sesame suffers from too much rain. But a key factor for having more income through cotton is the availability of land. Households with less than 3 ha barely benefit from cotton, as they normally use less than 20% of the land for cotton. To note that even in the cotton-sesame belt, less than 15% of the arable land is used for cotton (and so about 30% for cotton + sesame). Self-sufficiency with cereals remains a key strategy."
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "No specific data here. But generally: The  EU  and  Africa  must  join  efforts  to  reach  the  Sustainable  Development  Goal  of  zero hunger and  address  the  challenges  of  nutrition  and  food  security  by boosting  safe  and sustainable agri-food systems. A partnership on agriculture would support the development of   environment-friendly   agricultural   practices,   promote   local   production   and   integrate biodiversity  concerns.  This  includes  setting  sanitary  and  phytosanitary  standards  and  the protection of natural resources. Trade between the EU and Africa plays an instrumental role supporting opportunities for sustainable food systems."
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "for this important question, we have no data."
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "In Amhara and Tigray's cotton areas, the cotton oil is used for preparingthe staple dish \"injera\". The high nutritional quality of cotton oil is from this perspective contributing to the nutritional quality.  See the cottonoil marketer: https://www.selinawamucii.com/produce/processed/ethiopia-cottonseed-oil/ .   Apart from their wonderful uses, cottonseed is a good source of nutrients, vitamins and minerals. 1 kg of cottonseed offers 218 g of Total Fat, 76.95 mg of Vitamin E, 53.8 µg of Vitamin K and 0.4 mg of Choline (to be checked). source: https://www.healthbenefitstimes.com/cottonseed-facts-and-health-benefits/ "
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "for this important question, we have no data."
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Many officials believe that food security in the country will be increased by leasing land to foreign investors (D50). It is however to assume that these investors are more committed to the food security interests of their origin, like India (D49), and /or that the ecological and social side-effects of the new farms decrease the food security of the local communities, as f.ex. in Gambella. The complexity of the situation might shine through the following statement of OI (D50): \"It is also arguable that EPRDF’s desire for land investment is associated with the likely further marginalization/disempowerment of the indigenous people, increased dependence on government for food security, and increased difficulty for rebel groups to operate in the lowland areas\". However in the traditional cotton areas dominated by smallholders, where cotton seems to improve the soil quality and farm diversity is maintained, the risk for food shortages is reduced."
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The critical geographic areas are where big commercial farms are competing (or often: have sucessfully competed) with small and poor households and peasants, being farmers, herders or fisherfolk. It is these communities having lost access to land which will definetively face more risks and effective sufferings from hunger. As the commercial farms often produce for export markets, in such areas food price variation is hardly reduced. In the other areas, where cotton is produced on rather small fields (less than 3 ha) and part of a diversified farming system, food price increases will be addressed relatively fast by switching to the crops with intersting prices."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "\"The concept of participation is essentially used as an ideological tool or catchphrase in the state’s rural development strategy for the survival of the system, while the beneficiaries have never felt like they have real ownership, particularly in some communal development endeavors\" (D47). The implication of cooperatives is rather limited, as (D17) \"Primary cooperatives lack access to finance to lend farmers the money they need to cover weeding and harvest costs or to supply inputs on credit for farmers. They also cannot access credit in order to buy seed cotton from their farmers, although they do get credit from the unions to aggregate sesame. They need such access to encourage farmers to produce more\".  The Farmer Cooperative Union in Amhara is involved in the oil VC (sesame, cotton). A farmer union in Tigray sells sesame directly through ForEx. Cotton is in this cooperative number 3 crop after sesame and sorghum.\r\n"
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "No systematic exclusion cases known or heard about."
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "In principle yes at cotton producer level. Less clear in the other networks and figurations (workers at the various levels)."
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "no data"
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "According to the NCDS, the situation of the cotton extension system is bleak at the moment: (i) The transfer of the cotton sector from MoANR to MoI has led to a withdrawal of the MoANR extension services for cotton production; (ii) The development of private extension services is still very limited; the large commercial cotton farms are usually unable to provide adequate services to the smallholders; (iii) The links with research are very limited and farmers are often not aware of the activities conducted by the researchers. The problem is a structural one. I cite (D47, p.230): \"The demand side of agricultural extension—the input plans and delivery system—is not only based on farmers’ demands but also on the previous year’s achievement records and a combination of actual farmer needs and the quota plans transmitted by the regional authorities to the woredas and kebeles. Therefore, the woredas are less decentralized in the development of their own implementation plans and cannot make decisions, which is a critical structural problem in the AES. The woreda, therefore, remains dependent on top-down quota plans. Farmer participation and decision-making in agricultural extension is extremely low in practice. Thus, the decentralization of the extension system has not been well nurtured and promoted such that it can support bottom-up planning and ensure real farmer participation.\" The farmers are therefore recepients of instructions and are hardly supposed to take their own decisions on own plans and aspirations."
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Generally speaking, trust prevails. If not, the current VC would not be possible considering the important interdependencies between input providers, cotton producers (farmers, laboreres), ginners, industry employers and workers in the factories and handloom workshops. The closer to the ground, the better the trust, so a certain fragility remains in the overall system of the VC."
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 2.6666666666666665,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Although the view among cooperative leaders is that the  farmers organisations are not free to set their own agendas (since it is the government that sets the parameters within which cooperative programmes operate), they have played a significant role in improving members’ welfare. \r\nParticipation and collective action are supposed to align with a proper decentralization system and the woreda actors’ joint planning and implementation capacity with the target groups, but this is poorly executed at the local level (D47). In most areas, therefore, forced participation is considered a constraint to rural development."
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Respect of traditional knowledge by state actors is just beginning timidly, and it will take time to create trustworthy relations between (cotton) farmers and the state. The introduction of new extension systems or technologies based on ambitious sectoral plans - like in the massive extension of cotton areas- as part of economic cooperation needs to take into account the traditions and felt needs of the end users. Dufera (D47) provides a concrete example, which is also relevant for cotton and its way of production (like agroecological or conventional): \"For most farmers in Ethiopia, crops and livestock interaction are extremely important in terms of both diversifying outputs and the cultural values attached to them. Therefore, strictly orienting the agricultural extension services system to the demands, knowledge, experiences, and values of the farmers may increase its acceptability. As a “public good,” agricultural extension must provide inclusive benefits to the poor and disadvantaged groups of society, particularly in rural areas, so as to actively facilitate the agricultural transformation of the country."
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The main activity within the VC is the work of the workers unions and related to the textile sector. Here, the VC is contributingdirectly and indirectly also tovillage and neighborhood communities.The relatively well established cotton producers union contribute also on their side on volunatry communal work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Commercial farms provide a series of benefits on top of wages, usually including housing, food, drinking water and medical treatment. They have a positive impact on households’ livelihoods, as well giving neighbours access to new resources (for example rehabilitating tracks and facilitating contacts with remote social services) (D17). We do however not enough data to assess this validity on the individual commercail farms situtation (over 190). It remains an assumption that it is true for over 50% of the cases. "
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There are reports, that the investors of cotton farms do not provide the promised health services (mainly Gambella)"
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "No data"
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Smallscale farmers producing cotton when prices are good will be better off then others, workers employed on cotton farms and textile factories better off than unemployed. Loosing are indigenous people having lost their land to cotton plantations."
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "no data"
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 2.3333333333333335,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Primary education does not seem to be dependent directly on cotton areas. However, indirectly may cotton contribute to sustainable intensification and so to more social dynamics and stimulation of investments by the state into education. Although it may be difficult to change the level of education of current mothers and fathers, by educating today’s children, the next generation will benefit from more educated parents (D54)."
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In the agricultural extension services system, the disadvantaged groups of society, such as the poor, the youth, and women, do not receive enough attention (D47). But how is the situation in the cotton sector and particularly with the new strategy launched in 2017? Secondary and further education would be required not only to enhance work productivity, but also in order to increase the salary: Secondary and postsecondary education help individuals to develop more advanced skills to gain higher wages: employees who hold a bachelor’s or graduate degree, have, on average, a 50 percent higher hourly wage relative to individuals who only completed secondary education, and the latter have at least a 20 percent higher wage than those who only completed their primary education (D55). But the negative factor is, that the cotton areas and the social status of textile workers remain rather neglected in the overall policies. "
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The (foreign) investors do not seem to fullfil their promises if ever made."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

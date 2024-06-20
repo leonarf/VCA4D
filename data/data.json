@@ -48,7 +48,7 @@
       "color": "#0073CF",
       "textColor": "#0073CF",
       "commodities": [
-        "aquaculture tilapia",
+        "freshwater-aquaculture",
         "aquaculture",
         "coastal fisheries",
         "inland fisheries",
@@ -129,6 +129,12 @@
       "prettyName": "Ecuador",
       "continent": "America",
       "iso": "ec"
+    },
+    {
+      "id": "eswatini",
+      "prettyName": "Swaziland",
+      "continent": "Africa",
+      "iso": "sz"
     },
     {
       "id": "ethiopia",
@@ -219,12 +225,6 @@
       "prettyName": "Sierra Leone",
       "continent": "Africa",
       "iso": "sl"
-    },
-    {
-      "id": "swaziland",
-      "prettyName": "Swaziland",
-      "continent": "Africa",
-      "iso": "sz"
     },
     {
       "id": "tanzania",
@@ -337,6 +337,13 @@
       "product": "banana"
     },
     {
+      "id": "mango-dominican-republic",
+      "title": "dominican-republic mango",
+      "year": null,
+      "country": "dominican-republic",
+      "product": "mango"
+    },
+    {
       "id": "cocoa-ecuador",
       "title": "Cocoa",
       "year": 2020,
@@ -349,6 +356,13 @@
       "year": 2020,
       "country": "ecuador",
       "product": "coffee"
+    },
+    {
+      "id": "beef-eswatini",
+      "title": "Beef",
+      "year": 2020,
+      "country": "eswatini",
+      "product": "beef"
     },
     {
       "id": "cotton-ethiopia",
@@ -365,11 +379,11 @@
       "product": "fisheries"
     },
     {
-      "id": "aquaculture-georgia",
-      "title": "Aquaculture",
+      "id": "freshwater-aquaculture-georgia",
+      "title": "Freshwater Aquaculture",
       "year": 2020,
       "country": "georgia",
-      "product": "aquaculture"
+      "product": "freshwater-aquaculture"
     },
     {
       "id": "groundnut-ghana",
@@ -384,6 +398,13 @@
       "year": 2020,
       "country": "ghana",
       "product": "sorghum"
+    },
+    {
+      "id": "mango-guinea-bissau",
+      "title": "guinea-bissau mango",
+      "year": null,
+      "country": "guinea-bissau",
+      "product": "mango"
     },
     {
       "id": "coffee-honduras",
@@ -491,13 +512,6 @@
       "product": "oil palm"
     },
     {
-      "id": "beef-swaziland",
-      "title": "Beef",
-      "year": 2020,
-      "country": "swaziland",
-      "product": "beef"
-    },
-    {
       "id": "coastal-fisheries-tanzania",
       "title": "tanzania Coastal Fisheries",
       "year": 2020,
@@ -519,11 +533,11 @@
       "product": "pineapple"
     },
     {
-      "id": "aquaculture-tilapia-zambia",
+      "id": "aquaculture-zambia",
       "title": "Aquaculture (tilapia)",
       "year": 2020,
       "country": "zambia",
-      "product": "aquaculture tilapia"
+      "product": "aquaculture"
     },
     {
       "id": "egg-zambia",

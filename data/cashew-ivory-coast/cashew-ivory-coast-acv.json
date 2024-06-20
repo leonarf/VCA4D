@@ -1,0 +1,996 @@
+{
+  "id": "cashew-ivory-coast",
+  "country": "ivory-coast",
+  "commodity": "Cashew",
+  "type": "ACV",
+  "acvData": {
+    "valuechains": [
+      {
+        "name": "Export RCN",
+        "volume": 957000,
+        "volumeYear": 2019,
+        "volumeUnit": "t",
+        "actors": {
+          "Producer (dense plantation)": "x",
+          "Producer (traditional plantation)": "x",
+          "Producer (modern plantation)": "x",
+          "Producer (rehabilitated plantation)": "x",
+          "Collector": "x",
+          "Wholesaler": "x",
+          "Exporter": "x"
+        }
+      },
+      {
+        "name": "Export kernels",
+        "volume": 143000,
+        "volumeYear": 2019,
+        "volumeUnit": "t",
+        "actors": {
+          "Producer (dense plantation)": "x",
+          "Producer (traditional plantation)": "x",
+          "Producer (modern plantation)": "x",
+          "Producer (rehabilitated plantation)": "x",
+          "Collector": "x",
+          "Wholesaler": "x",
+          "Industrial processor (<5 kt, >5 kt)": "x",
+          "Exporter": "x"
+        }
+      },
+      {
+        "name": "Total production",
+        "volume": 1100000,
+        "volumeYear": 2019,
+        "volumeUnit": "t"
+      }
+    ],
+    "actors": [
+      {
+        "name": "Producer (dense plantation)",
+        "stage": "Producers"
+      },
+      {
+        "name": "Producer (traditional plantation)",
+        "stage": "Producers"
+      },
+      {
+        "name": "Producer (modern plantation)",
+        "stage": "Producers"
+      },
+      {
+        "name": "Producer (rehabilitated plantation)",
+        "stage": "Producers"
+      },
+      {
+        "name": "Collector",
+        "stage": "Collectors"
+      },
+      {
+        "name": "Wholesaler",
+        "stage": "Wholesalers"
+      },
+      {
+        "name": "Industrial processor (<5 kt, >5 kt)",
+        "stage": "Processors"
+      },
+      {
+        "name": "Exporter",
+        "stage": "Wholesalers"
+      }
+    ],
+    "impacts": [
+      {
+        "name": "Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "DALY",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (dense plantation)",
+            "value": -0.00096819866
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -0.0041256938
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (modern plantation)",
+            "value": -0.00022275158
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -0.0002227683
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Collector",
+            "value": 0.000062370935
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Wholesaler",
+            "value": 0.000037422561
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.000024948374
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (dense plantation)",
+            "value": -0.00461046980952381
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -0.019646160952381
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (modern plantation)",
+            "value": -0.00106072180952381
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -0.00106080142857143
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Collector",
+            "value": 0.000297004452380952
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Wholesaler",
+            "value": 0.000178202671428571
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Industrial processor (<5 kt, >5 kt)",
+            "value": 0.0013886
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Exporter",
+            "value": 0.000034246075
+          }
+        ]
+      },
+      {
+        "name": "Ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (dense plantation)",
+            "value": -6.0938355e-10
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (traditional plantation)",
+            "value": 0.000019781128
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (modern plantation)",
+            "value": 0.000007274077
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": 0.0000026592914
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Collector",
+            "value": 1.47747695e-7
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Wholesaler",
+            "value": 8.8648617e-8
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 5.9099078e-8
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (dense plantation)",
+            "value": -2.90182642857143e-9
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (traditional plantation)",
+            "value": 0.0000941958476190476
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (modern plantation)",
+            "value": 0.0000346384619047619
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": 0.0000126632923809524
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Collector",
+            "value": 7.03560452380953e-7
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Wholesaler",
+            "value": 4.22136271428571e-7
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Industrial processor (<5 kt, >5 kt)",
+            "value": 0.0000030335441
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Exporter",
+            "value": 8.1123979e-8
+          }
+        ]
+      },
+      {
+        "name": "Resources",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "USD2013",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (dense plantation)",
+            "value": 0.92754368
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (traditional plantation)",
+            "value": 6.5352902
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (modern plantation)",
+            "value": 0.4006326
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": 0.40024883
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Collector",
+            "value": 2.8999986
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Wholesaler",
+            "value": 1.73999916
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 1.15999944
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (dense plantation)",
+            "value": 4.41687466666667
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (traditional plantation)",
+            "value": 31.1204295238095
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (modern plantation)",
+            "value": 1.90777428571429
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": 1.90594680952381
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Collector",
+            "value": 13.8095171428571
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Wholesaler",
+            "value": 8.28571028571429
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Industrial processor (<5 kt, >5 kt)",
+            "value": 98.403501
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Exporter",
+            "value": 1.5923053
+          }
+        ]
+      },
+      {
+        "name": "Total",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (dense plantation)",
+            "value": -16.143096
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -63.421094
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (modern plantation)",
+            "value": -1.7457254
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -2.993845
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Collector",
+            "value": 1.1010042
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Wholesaler",
+            "value": 0.66060252
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.44040168
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (dense plantation)",
+            "value": -76.8718857142857
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -302.00520952381
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (modern plantation)",
+            "value": -8.3129780952381
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -14.2564047619048
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Collector",
+            "value": 5.24287714285714
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Wholesaler",
+            "value": 3.14572628571429
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Industrial processor (<5 kt, >5 kt)",
+            "value": 24.684719
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Exporter",
+            "value": 0.60452951
+          }
+        ]
+      },
+      {
+        "name": "Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (dense plantation)",
+            "value": -16.149554
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -68.816573
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (modern plantation)",
+            "value": -3.7154963
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -3.7157752
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Collector",
+            "value": 1.0403472
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Wholesaler",
+            "value": 0.62420832
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.41613888
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (dense plantation)",
+            "value": -76.9026380952381
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -327.697966666667
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (modern plantation)",
+            "value": -17.6928395238095
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -17.6941676190476
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Collector",
+            "value": 4.95403428571429
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Wholesaler",
+            "value": 2.97242057142857
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Industrial processor (<5 kt, >5 kt)",
+            "value": 23.161848
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Exporter",
+            "value": 0.57122452
+          }
+        ]
+      },
+      {
+        "name": "Ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (dense plantation)",
+            "value": -0.00016477731
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (traditional plantation)",
+            "value": 5.3488169
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (modern plantation)",
+            "value": 1.9669104
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": 0.71907238
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Collector",
+            "value": 0.0399509765
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Wholesaler",
+            "value": 0.0239705859
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.0159803906
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (dense plantation)",
+            "value": -0.000784653857142857
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (traditional plantation)",
+            "value": 25.4705566666667
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (modern plantation)",
+            "value": 9.36624
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": 3.42415419047619
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Collector",
+            "value": 0.190242745238095
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Wholesaler",
+            "value": 0.114145647142857
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Industrial processor (<5 kt, >5 kt)",
+            "value": 0.82027032
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Exporter",
+            "value": 0.021935924
+          }
+        ]
+      },
+      {
+        "name": "Resources",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (dense plantation)",
+            "value": 0.0066226619
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (traditional plantation)",
+            "value": 0.046661972
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (modern plantation)",
+            "value": 0.0028605168
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": 0.0028577767
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Collector",
+            "value": 0.02070599
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Wholesaler",
+            "value": 0.012423594
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.008282396
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (dense plantation)",
+            "value": 0.0315364852380952
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (traditional plantation)",
+            "value": 0.222199866666667
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (modern plantation)",
+            "value": 0.0136215085714286
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": 0.0136084604761905
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Collector",
+            "value": 0.0985999523809524
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Wholesaler",
+            "value": 0.0591599714285714
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Industrial processor (<5 kt, >5 kt)",
+            "value": 0.702601
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Exporter",
+            "value": 0.01136906
+          }
+        ]
+      },
+      {
+        "name": "Global warming. Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (dense plantation)",
+            "value": -16.806514
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -71.144079
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (modern plantation)",
+            "value": -3.8045205
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -3.8046324
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Collector",
+            "value": 0.386490155
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Wholesaler",
+            "value": 0.231894093
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.154596062
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (dense plantation)",
+            "value": -80.031019047619
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -338.781328571429
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (modern plantation)",
+            "value": -18.1167642857143
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -18.1172971428571
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Collector",
+            "value": 1.84042930952381
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Wholesaler",
+            "value": 1.10425758571429
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Industrial processor (<5 kt, >5 kt)",
+            "value": 11.64112
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Exporter",
+            "value": 0.21221055
+          }
+        ]
+      },
+      {
+        "name": "Global warming. Terrestrial ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (dense plantation)",
+            "value": -0.82259766
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -3.4819652
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (modern plantation)",
+            "value": -0.18620175
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -0.18620722
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Collector",
+            "value": 0.018908256
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Wholesaler",
+            "value": 0.0113449536
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.0075633024
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (dense plantation)",
+            "value": -3.91713171428571
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -16.5807866666667
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (modern plantation)",
+            "value": -0.886675
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -0.886701047619048
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Collector",
+            "value": 0.0900393142857143
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Wholesaler",
+            "value": 0.0540235885714286
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Industrial processor (<5 kt, >5 kt)",
+            "value": 0.56950315
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Exporter",
+            "value": 0.010381976
+          }
+        ]
+      },
+      {
+        "name": "Global warming. Freshwater ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (dense plantation)",
+            "value": -0.000022467328
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -0.000095100966
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (modern plantation)",
+            "value": -0.0000050856216
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -0.000005085771
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Collector",
+            "value": 5.1642135e-7
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Wholesaler",
+            "value": 3.0985281e-7
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 2.0656854e-7
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (dense plantation)",
+            "value": -0.000106987276190476
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -0.000452861742857143
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (modern plantation)",
+            "value": -0.0000242172457142857
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -0.0000242179571428571
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Collector",
+            "value": 0.00000245914928571429
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Wholesaler",
+            "value": 0.00000147548957142857
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Industrial processor (<5 kt, >5 kt)",
+            "value": 0.000015554316
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Exporter",
+            "value": 2.83552e-7
+          }
+        ]
+      },
+      {
+        "name": "Global warming",
+        "method": "ReCiPe 2016 Midpoint (H) V1.08 / World (2010) H",
+        "functional_unit": "1 t",
+        "unit": "kg CO2 eq",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (dense plantation)",
+            "value": -1086.1154
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -4597.4631
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (modern plantation)",
+            "value": -245.85444
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -245.86166
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Collector",
+            "value": 24.968943
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Wholesaler",
+            "value": 14.9813658
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 9.9875772
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (dense plantation)",
+            "value": -5171.9780952381
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (traditional plantation)",
+            "value": -21892.6814285714
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (modern plantation)",
+            "value": -1170.73542857143
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Producer (rehabilitated plantation)",
+            "value": -1170.76980952381
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Collector",
+            "value": 118.899728571429
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Wholesaler",
+            "value": 71.3398371428571
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Industrial processor (<5 kt, >5 kt)",
+            "value": 752.05164
+          },
+          {
+            "valuechain_name": "Export kernels",
+            "actor_name": "Exporter",
+            "value": 13.709723
+          }
+        ]
+      }
+    ]
+  }
+}

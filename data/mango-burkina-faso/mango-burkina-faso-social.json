@@ -1,0 +1,571 @@
+{
+  "id": "mango-burkina-faso",
+  "country": "Burkina Faso",
+  "commodity": "Mango",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1 WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 3.4,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Dans les CdV de mangues destinés à l'exportation ces conventions sont appliquées à cause d'un nombre de systèmes de certification qui les prennent en compte et à cause de l'état qui essaye d'harmoniser ces lois et procédures à ces conventions. Un des enjeux est le respect de la durée de travail de 8 heures par jour, car les travailleurs sont payés à l'heure. l'autre concerne les 'permutateurs' qui travaillent dans la plupart des cas durant 24 heures pour assurer la qualité de la mangue séchée. On se reserve de tirer des conclusions pour les CdV pour la consommation nationale et sous-régionale"
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "La liberté d'expression est permie dans les entreprises, mais les travailleurs sont tout d'abord satisfaits de toucher un salaire pendant quelques mois. La culture de revendiquer ces droits n'est pas tellement développée au Burkina"
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les salaires se situent au niveau du SMIG, les heures de travail sont respectées et si nécessaire on partage l'ampleur du travail entre les travailleurs pour que chacun ait quelque chose à la fin du mois. Ceci est surtout valable pour les CdVs destinées à l'exportation et on ne peut pas se prononcer par rapport aux autres CdVs."
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "On n'a pas trouvé des cas des travaux forcés"
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "on n'a pas trouvé des cas de discrimintation entre hommes et femmes, ni entre jeunes et vieux"
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "10 % des enfants qui vont à l'école primaire à Orodara et dans quelques autres communes s'absentent de l'école pour récolter des mangues contre remunération. Ceci influence les résultats des examens de fins d'année. C'est un phénomème probablement local et culturel et qui concerne surtout les CdVs nationales et sous-régionales."
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les enfants qui participent à la récolte des mangues contre remunération sont exposés."
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 4,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Le risque avec le plus d'impact négatif est celui des incendies des fours Attesta de la première génération. Les autres accidents sont plus légers. Dans les entreprises des mesures sont pris pour attenuer les risques"
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 4,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Dans les CdV de mangues destinés pour l'exportation on paye le SMIG et on cherche à respecter les heures de travail."
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Le travail dans les unités de transformation et de conditionnement est attrayant car on reçoit un salaire stable pendant quelques mois au niveau du SMIG. Ceci est meilleur par rapport aux revenus non certains gagnés par le petit commerce ou d'autres activités génératrices sans contrat de travail pour la plus grande partie de la population"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2 LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": "n/a",
+          "averageText": "n/a",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "On ne connait pas les Directives Volontaires ni les Principes directeurs relatifs aux investissements fonciers à grande échelle en Afrique. Ces directives et principes ne sont pas d'applicabilité car jusqu'ici la production des mangues ne se fait pas sur des grandes surfaces. Il n'y a pas de plantations industrielles. Il en est du même pour les surfaces demandées pour la transformation et le conditionnement des mangues."
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Idem"
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 1.75,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "L'obtention des attestations de possession foncière est accordée par des chefs traditionnels et les CVD. Ces structures ont tendance à surtout représenter les populations autochtones, des sages (vieux) du villages. L'obtention des parcelles est jusqu'ici reglée selon le droit coutumier ou parfois de façon illicite. Jusqu'ici toutes les personnes qui ont acquis des verger à travers le PAFASP ou de façon individuelle sont passées par cette voie traditionnelle seulement et non par voie étatique."
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Aussi en ville des unités de transformation de mangues sont opérationnelles dans des zones non-loties et sans titres fonciers formalisés auprès des instances publiques."
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "L'acquisition des terres par voie coutumière a tendance à exclure les migrants, surtout lorsqu'ils veulent commencer des vergers, et les jeunes. Les éleveurs transhumants se voient privés des corridors de passage du bétail et de l'accès aux points d'eau."
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Le problème majeur est que les terres qui appartiennent selon le droit coutumier à des familles, n'ont pas des titres auprès de l'état. Le risque que quelqu'un achète de la terre sans le consentiment  de la famille est réel et se produit actuellement, mais pas encore dans le secteur de la mangue."
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 1,
+          "averageText": "Low",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "La population rurale se sente insécure par rapport à ces droits coutumiers à la terre, car la loi foncière de l'état ouvre les possibilités d'obtention des parcelles pour des hommes d'affaires agricoles. En même temps cette loi ne s'applique pas car les structures ne sont pas en plac. Le résultat est du bricolage par rapport à l'obtention des titres fonciers, parfois au détriment de la populations qui a hérité ces terres depuis des générations. "
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "La loi foncière ne s'applique pas"
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "La loi foncière ne s'applique pas"
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "La loi foncière ne s'applique pas, les promoteurs des vergers modernes ont eu des titres foncièrs selon le droit coutumier, mais dans 5 cas ces titres ont été retirés par les chefs traditionnels et les CVDs. Une partie des unités de transformation est opérationnelle dans des zones non-loties ou n'a pas des titres fonciers officiels."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3 GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les femmes assument dans les CdVs les responsabilités qui sont traditionnellement assignées à elles selon les normes et valeurs. Rares sont les femmes qui assument des responsibilités surtout masculines, tels que la production des mangues, le pistage et le transport. Si 34 % des unités de transformation soient gerées par des femmes, les femmes n'occupent que 21 % des postes permanents dans les entreprises. Les autres sont embauchées pendant les 3-5 mois de la campagne de mangue ou par jour."
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "71 % des travailleurs dans les unités d'exportation et 84 % des travailleurs dans les unités de transformation sont des femmes"
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 1.33333333333333,
+          "averageText": "Low",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "La loi foncière et les procédures en vigeuer ne s'appliquent pas. Selon la tradition, les femmes n'ont pas de droit de propriété sur la terre, mais le droit d'usage, ce qui implique qu'elle n'ont pas le droit de planter des arbres comme la mangue. Puis les femmes ne peuvent pas hériter de la terre selon la tradition. Le % des femmes arboriculteurs était de 2 % dans le Centre Ouest et 4 % dans les Cascades et les Hauts Bassins en 2008."
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "La demande de crédit par les femmes est 5 % de la population > 15 ans et 12 % des hommes 12 %. La demande de crédit par les femmes est honorée en 90 % des cas et en 95 % des cas pour les hommes. L'accès au crédit pour les femmes qui gèrent des PME dans la filière mangue est plus difficile que pour les hommes."
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "En fonction de leur responsabilités dans la filière de mangues, les femmes reçoivent des formations pour s'acquitter de leurs tâches. "
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Les femmes ne sont guere impliquées dans la production des mangues. Elles ne prennent pas part dans la prise de décision quant aux autres produits tels que les céréales et les produits maraichers, sauf si elles même produisent ces produits à côté des activités de production par le chef de ménage."
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Pendant la saison culturale, les femmes sont censées travailler sur le champ familial, ce qui est incompatible avec le travail dans les unités de transformation ou de conditionnement\nComme la mangue est un produit très périssable, leur transformation et de conditionnement demande un régime stricte de travail, en fonction de l'approvisionnement et de l'expédiation. La transformation d'autres produits moins périssables laisse plus de liberté aux femmes."
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Au niveau national la grande majorité des femmes ont le contrôle sur leurs propres revenus, mais pas sur les revenus de l'époux. Ceci est également le cas pour les femmes qui travaillent dans les usines de mangues, à condition que le mari a un travail et salaire régulier. Dans le cas échéant, le couple s'entre-aide."
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les femmes en zone rurale acquirent souvent le droit d'usage sur des parcelles de terre pour l'agriculture ou le maraîchage. Les revenus de ces activités, ainsi que les revenus des autres AGRs, les appartiennent. Ceci est également le cas pour les femmes qui travaillent dans les usines de mangues"
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La grande majorité des femmes avec un  revenu propre peuvent décider sur son utilisation. Seulement les femmes avec un niveau de scolarité considérable peuvent influencer la prise de décision concernant les dépenses de leur propre santé et des achats importants du ménage prise en charge par l'epoux."
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Le taux de participation aux structures associatives pour les hommes et les femmes est faible et varie de 13 à 31 % pour les 3 régions. La participation des femmes varie de 22 % dans les Hauts Bassins à 48 % dans le Centre Ouest. Des chiffres pour la filière de la mangue manquent; du fait que la production des mangues est l'affaire des hommes, on estime que le % des membres féminin des structures coopératives ne dépasse pas les 33 % de la Coopérative Agricole Artisanale Yiwalo à Zoula. Il n'y a pas de syndicats de travailleurs dans la filière mangue. "
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "19 % des femmes qui sont membre d'une structure associative occupent des postes de responsabilité dans leur organisation. "
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Du fait que les femmes travailleuses reviennent à la maison avec un salaire, accroît considérablement leur capacité de négociation au niveau du ménage."
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 1,
+          "averageText": "Low",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "La plupart des femmes qui travaillent dans les usines sont responsables pour des enfants et les travaux ménagers. Elles ont la charge de préparer le repas de midi pour la famille élargie dans la plupart des cas, ainsi que de préparer le répas du soir.  Leur travail dans les usines de mangues remplace leurs activités de petit commerce qu'elles mènent d'habitude en saison de mangue."
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Pas d'information. L'impression est que les femmes ne pilent plus les céréales au pilon, mais les amènent au moulin. Dans les usines, les femmes exécutent des travaux traditionnellement assignés aux femmes, dites légers (ce qui reste à discuter)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4 FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availibility of food ",
+          "averageValue": 3.5,
+          "averageText": "High",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\n",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Il est fort probable que la production des mangues a augmenté depuis 2008, mais des chiffres manquent sur le rendement, le nombre de producteurs, et les surfaces de mangues. Les 3 régions ont des taux de couverture des besoins en céréales élevés, ont un cheptel au delà de la moyenne nationale, et produisent aussi des cultures de rente comme le coton et l'anacarde. "
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Quelques indications existent que les mangues pour la consommation locale deviennent rares dans la province de Kenedougou (Hauts Bassins). Les mangues sont tellement transportées en dehors de la province ou à l'extérieur, qu'il n'est plus possible de produire des nouveau plantules et que les prix de mangues au marché local sont chers. Ces données demandent à être vérifiées. \nLa disponibilité des céréales et des arachides aux marchés locales est la plus limité dans la période de mai-septembre; le lait est surtout disponible entre juin-septembre."
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "La vente de la mangue par les producteur et leur transformation ou conditionnement constituent une source de revenus importante dans la période de l'année où il n'y a plus d'autres entrées d'argent."
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Pas d'information sur le % des mangues consommées à la maison ou achetées au marché local. Les prix des produits alimentaires sur le marché dependent surtout de la récolte des céréales, à l'exception de l'année 2008, l'anné de la crise alimentaire. Mais les céréales coûtent chers entre juillet-septembre. Dans les Cascades et les Hauts Bassins, 65 % des ménages a un stock de produits alimentaires pendant 10 mois ce qui est plus que la moyenne nationale. Dans le Centre Ouest la plupart des ménages a un stock de 4-6 mois (40 %), se qui represente la moyenne nationale."
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 2.33333333333333,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "La mangue est un produit très nutritif mais si elle n'est pas lavée et/ou trop mangée, elle cause de la diarrhée. Elle est beaucoup mangé pendant la période de récolte. Les Cascades et Hauts Bassins ont plus de ménages avec une consommation acceptable que le niveau national, le Centre Ouest est en dessous de ce %"
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Non: Bien que 92 % des ménages dans les Cascades ont une consommation acceptable, cad mangent une diversité de produits alimentaires, le taux de malnutrition chronique des enfants depasse largement le seuil critique et la moyenne nationale. Ceci est dû aux mauvaises pratiques d'allaitement et alimentaires de l'enfant, une alimentation pauvre en vitamines et micronutriments, le diarrhée et la fièvre, et la négligence/manque de suivi des enfants pendant la saison culturale et par des femmes qui travaillent dans les unités de transformation."
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "La mangue diversifie considérablement la diversité de la nourriture qui pour une grande partie des ménages ne consiste que des céréales et de légumes, puis de la viande/poisson 1 ou 2 fois par semaine. Le pourcentage des ménages qui ont une consommation diversifiée des produits dépend beaucoup des récoltes des céréales et ainsi des pluies et autres. Dans des années avec des mauvaises récoltes, ce % diminue. Un autre facteur est la méconnaissance des effets d'une nourriture peu diversifié et des habitudes alimentaires."
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "La vente de la mangue par les producteurs et leur transformation ou conditionnement constituent une source de revenus importante dans la période de l'année où il n'y a plus d'autres entrées d'argent. Dans les Cascades et les Hauts Bassins, la période de soudure ne se fait pas sentir car 65 % des ménages a un stock de 10 mois. Dans le Centre Ouest, la mangue pourra augmenter la durée du stock qui est actuellement de 4-6 mois."
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "les années avec les plus grandes variations de prix sont les années où la production des céréales est mauvaise. Ceci est le cas en 2008 et en 2010-2012."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5 SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Le % des producteurs de mangue organisé en GIE ou coopératives varie de 10 à 30 % selon différentes informations"
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "les GIE et Coops visités ont des membres qui sont remplacés par leurs déscendants ou par leurs épouses quand ils meurent. Dans des rares cas (la Coopérative de Yiwalo), les veuves remplacent leur epoux comme membre. Les 3 structures associatives semblent ne pas être ouvertes à d'autres familles."
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "les GIE et Coops qui font parti des CdVs orientées vers l'exportation des produits et chaines entières certifiés reçoivent des appuis de leurs acheteurs, les usines, pour améliorer leur capacité associative. Mais ceci demande beaucoup d'efforts de ces derniers."
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "En principe le prix de la mangue est fixé au début de la campagne: les GIE et Coops qui négocient directement avec l'usine de transformation ou d'exportation ont une marge de négociation un peu plus élevée que ceux qui écoulent leurs mangue à travers un pisteur, mais ils sont exposées à des risques plus élevés.\nLa capacité de négociation dans les CdVs nationales n'est pas connue."
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Surtout les producteurs qui livrent des mangues dans des CdVs certifiées et orientées vers l'exportation reçoivent plusieurs formations en bonnes pratiques agricoles et en la lutte contre les mouches de fruits. Puis des pisteurs et recolteurs reçoivent de formations dans ces CdVs certifiées. Les producteurs ne connaissent probablement pas les prix d'exportation des mangues, seulement le prix d'achat des mangues par les unités de transformation ou de conditionnement; même si des pisteurs et récolteurs sont impliqués. "
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Des incidents montrent que la confiance entre opérateurs des CdVs d'exportation n'est pas pleinement instaurée, mais l'ampleur de ces incidents n'est pas connue. Avec la tendence des usines à vouloir se concentrer sur un nombre limité de producteurs, la confiance pourra avoir tendance à accroître."
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Please add justification."
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "les primes obtenues pour les CdVs certifiées FLO - Commerce Equitable, sont utilisées par les GIE et Coops pour financer des actions sociales dans leurs villages. Des problèmes existent quand même par rapport à l'obtention ou l'utilisation de ces primes. Des informations additionnelles sont nécessaires."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6 LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 3.33333333333333,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": " le % des CSPS qui remplissent les normes minimales de personnel est passé de 83 % en 2009 à 90 % en 2014; \nla propotion des ménages qui sont à moins de 5 km d'un CSPS est de 71 % au niveau national"
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Please add justification."
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Les producteurs et travailleurs dans les CdV de mangue utilisent les revenus pour payer les frais de santé (88 % de producteurs de mangues ou d'anacarde d'un village)\nLe faible taux de fréquentation des services sanitaires (55 – 65 % de la population) s’explique d’abord par un taux très élevé d’automédication (68 %), suivi des contraintes financières (13 %). La distance pour joindre le Centre de Santé n’est pas du tout un facteur, ni la capacité du personnel dans les centres de santé. "
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les producteurs de la filière mangue et anacarde investissent dans la construction des maisons (80 % des producteurs d'un village), et ils mettent surtout des toitures et des murs en ciment. Dans les 3 régions le % des maisons avec les murs en ciment est faible, car entre 67 et 90 % des maisons ont des murs en terre, paille ou bois, et ces pourcentages se situent entre 20 et 34 % pour les toitures."
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "pas d'indication que les producteurs de mangues investissent dans l'eau potable. Dans les 3 régions entre 66 et 88 % des ménages a accès à l'eau potable, mais entre 22 et 40 % des ménages dans les Cascades et les Hauts Bassins n'ont pas de latrines et 70 % des ménages dans le Centre Ouest."
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 2.33333333333333,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les producteurs et des travailleuses investissent dans l'éducation de leurs enfants (86 % des producteurs dans un village)\nDepuis 2007, les frais scolaires ont diminué et des classes ont été construites pour l'école primaire. 87 % des enfants vont à l'école dans un rayon de 3 km. le TBS a augmenté considérablement à partir de 2009-2010 et varie entre 79 et 97 % dans les 3 régions; les filles représentent presque 50 % des élèves. Un enseignant a entre 44 et 50 élèves et une classe a 49 à 59 élèves. Ces rapports sont en train de s'améliorer depuis 2009/2010"
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Seulement 40/100 enfants vont au collège et 13/100 enfants vont au secondaire en 2013-2014, un légère augmentation depuis 2009-2010. le % des filles est 46 %. L'offre de l'enseignement post primaire et secondaire est très bas et ne corresponde pas avec la demande des enfants. "
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les producteurs et les travailleurs dans les usines reçoivent les formations nécessaires pour remplir les conditions de certification pour l'exportation des produits de mangues."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

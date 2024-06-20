@@ -1,0 +1,579 @@
+{
+  "id": "coffee-ecuador",
+  "country": "ecuador",
+  "commodity": "Coffee",
+  "year": 2020,
+  "localCurrency": "USD",
+  "targetCurrency": "USD",
+  "currencyRatio": 1,
+  "type": "eco",
+  "ecoData": {
+    "macroData": {
+      "giniIndex": 0.82,
+      "rateOfIntegration": 0.685,
+      "publicFundsBalance": 0.002,
+      "valueAddedShareNationalGdp": 0.001,
+      "valueAddedShareAgriculturalGdp": 0.009000000000000001,
+      "domesticResourceCostRatio": 0.2,
+      "nominalProtectionCoefficient": 1
+    },
+    "stages": [
+      {
+        "name": "Agricultural producers",
+        "description": "",
+        "index": 0
+      },
+      {
+        "name": "Collectors",
+        "description": "",
+        "index": 1
+      },
+      {
+        "name": "Processors",
+        "description": "",
+        "index": 2
+      },
+      {
+        "name": "Wholesalers",
+        "description": "",
+        "index": 3
+      },
+      {
+        "name": "Retailers",
+        "description": "",
+        "index": 4
+      },
+      {
+        "name": "Exporters",
+        "description": "",
+        "index": 5
+      }
+    ],
+    "actors": [
+      {
+        "name": "Producer arabica bola",
+        "stage": "Agricultural producers",
+        "id": 186,
+        "numberOfActors": 34363.6356188246,
+        "directAddedValue": 8496409.09090909,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 5841818.16543232,
+        "totalCosts": 3513681.83456768,
+        "receivedAddedValue": 5841818.16543232,
+        "employment": {
+          "tempMale": 0,
+          "tempFemale": null,
+          "unskilledMale": 0,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": 0,
+          "totalSkilled": null,
+          "totalUnskilled": 0,
+          "total": 0
+        }
+      },
+      {
+        "name": "Local market instant arabica",
+        "stage": "Domestic market",
+        "id": 190,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Producer arabica cherry",
+        "stage": "Agricultural producers",
+        "id": 192,
+        "numberOfActors": 11579.4116429082,
+        "directAddedValue": 4091874.63235294,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 2724539.08577526,
+        "totalCosts": 1606160.91422474,
+        "receivedAddedValue": 2724539.08577526,
+        "employment": {
+          "tempMale": 0,
+          "tempFemale": null,
+          "unskilledMale": 0,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": 0,
+          "totalSkilled": null,
+          "totalUnskilled": 0,
+          "total": 0
+        }
+      },
+      {
+        "name": "Local market roasted arabica",
+        "stage": "Domestic market",
+        "id": 194,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Producer robusta",
+        "stage": "Agricultural producers",
+        "id": 195,
+        "numberOfActors": 11728.3947395248,
+        "directAddedValue": 8227000.25770399,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 6101463.23162832,
+        "totalCosts": 2363037.02607567,
+        "receivedAddedValue": 6101463.23162832,
+        "employment": {
+          "tempMale": 0,
+          "tempFemale": null,
+          "unskilledMale": 0,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 0,
+          "totalFemale": null,
+          "totalTemp": 0,
+          "totalSkilled": null,
+          "totalUnskilled": 0,
+          "total": 0
+        }
+      },
+      {
+        "name": "International market robusta",
+        "stage": "Export market",
+        "id": 200,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Local market robusta",
+        "stage": "Domestic market",
+        "id": 201,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Collector arabica",
+        "stage": "Collectors",
+        "id": 187,
+        "numberOfActors": 63,
+        "directAddedValue": 1489385.55792334,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 729927.234903763,
+        "totalCosts": 15901544.7650962,
+        "receivedAddedValue": 729927.234903763,
+        "employment": {
+          "tempMale": 152.212275372031,
+          "tempFemale": null,
+          "unskilledMale": 0,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 152.212275372031,
+          "totalFemale": null,
+          "totalTemp": 152.212275372031,
+          "totalSkilled": null,
+          "totalUnskilled": 0,
+          "total": 152.212275372031
+        }
+      },
+      {
+        "name": "Trader robusta",
+        "stage": "Collectors",
+        "id": 196,
+        "numberOfActors": 66.9014084507042,
+        "directAddedValue": 249916.905900121,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 136646.465550005,
+        "totalCosts": 8641353.53444999,
+        "receivedAddedValue": 136646.465550005,
+        "employment": {
+          "tempMale": 21.4084507042254,
+          "tempFemale": null,
+          "unskilledMale": 0,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 21.4084507042254,
+          "totalFemale": null,
+          "totalTemp": 21.4084507042254,
+          "totalSkilled": null,
+          "totalUnskilled": 0,
+          "total": 21.4084507042254
+        }
+      },
+      {
+        "name": "Industry instant arabica",
+        "stage": "Processors",
+        "id": 188,
+        "numberOfActors": 2.99904761904762,
+        "directAddedValue": 7040386.48857139,
+        "publicFundsBalance": 29999.0476190476,
+        "netOperatingProfit": 621430.271428541,
+        "totalCosts": 14843078.7761905,
+        "receivedAddedValue": 621430.271428541,
+        "employment": {
+          "tempMale": 389.17165075149,
+          "tempFemale": null,
+          "unskilledMale": 72.9696845159044,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 462.1413352673944,
+          "totalFemale": null,
+          "totalTemp": 389.17165075149,
+          "totalSkilled": null,
+          "totalUnskilled": 72.9696845159044,
+          "total": 462.1413352673944
+        }
+      },
+      {
+        "name": "Trader arabica",
+        "stage": "Processors",
+        "id": 191,
+        "numberOfActors": 138.140350877193,
+        "directAddedValue": 393700,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 293502.198874323,
+        "totalCosts": 4430897.80112568,
+        "receivedAddedValue": 293502.198874323,
+        "employment": {
+          "tempMale": 12.2791423001949,
+          "tempFemale": null,
+          "unskilledMale": 0,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 12.2791423001949,
+          "totalFemale": null,
+          "totalTemp": 12.2791423001949,
+          "totalSkilled": null,
+          "totalUnskilled": 0,
+          "total": 12.2791423001949
+        }
+      },
+      {
+        "name": "Industry roasted arabica",
+        "stage": "Processors",
+        "id": 193,
+        "numberOfActors": 29.9904761904762,
+        "directAddedValue": 12826092.8095238,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 12271410.4190476,
+        "totalCosts": 9147909.58095238,
+        "receivedAddedValue": 12271410.4190476,
+        "employment": {
+          "tempMale": 49.2784362898615,
+          "tempFemale": null,
+          "unskilledMale": 9.23970680434903,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 58.51814309421053,
+          "totalFemale": null,
+          "totalTemp": 49.2784362898615,
+          "totalSkilled": null,
+          "totalUnskilled": 9.23970680434903,
+          "total": 58.51814309421053
+        }
+      },
+      {
+        "name": "Industry Instant robusta",
+        "stage": "Processors",
+        "id": 199,
+        "numberOfActors": 3.17857142857143,
+        "directAddedValue": 37431029.0923913,
+        "publicFundsBalance": 144806.02006689,
+        "netOperatingProfit": 25846547.4870402,
+        "totalCosts": 96644313.7169732,
+        "receivedAddedValue": 25846547.4870402,
+        "employment": {
+          "tempMale": 1853.51708447574,
+          "tempFemale": null,
+          "unskilledMale": 347.534453339202,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 2201.051537814942,
+          "totalFemale": null,
+          "totalTemp": 1853.51708447574,
+          "totalSkilled": null,
+          "totalUnskilled": 347.534453339202,
+          "total": 2201.051537814942
+        }
+      },
+      {
+        "name": "Exportador instant arabica",
+        "stage": "Wholesalers",
+        "id": 189,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "Wholesaler Local robusta",
+        "stage": "Wholesalers",
+        "id": 197,
+        "numberOfActors": 192.567567567568,
+        "directAddedValue": 1341149.61508044,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 830641.433828528,
+        "totalCosts": 10169739.0009541,
+        "receivedAddedValue": 830641.433828528,
+        "employment": {
+          "tempMale": 75.9277176823765,
+          "tempFemale": null,
+          "unskilledMale": 14.2364470654456,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 90.1641647478221,
+          "totalFemale": null,
+          "totalTemp": 75.9277176823765,
+          "totalSkilled": null,
+          "totalUnskilled": 14.2364470654456,
+          "total": 90.1641647478221
+        }
+      },
+      {
+        "name": "Wholesaler Nacional robusta",
+        "stage": "Wholesalers",
+        "id": 198,
+        "numberOfActors": 20.0384615384615,
+        "directAddedValue": 2296667.52321569,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 679657.000221099,
+        "totalCosts": 13074690.8258659,
+        "receivedAddedValue": 679657.000221099,
+        "employment": {
+          "tempMale": 265.901360644419,
+          "tempFemale": null,
+          "unskilledMale": 49.8565051208285,
+          "unskilledFemale": null,
+          "skilledMale": null,
+          "skilledFemale": null,
+          "totalMale": 315.7578657652475,
+          "totalFemale": null,
+          "totalTemp": 265.901360644419,
+          "totalSkilled": null,
+          "totalUnskilled": 49.8565051208285,
+          "total": 315.7578657652475
+        }
+      }
+    ],
+    "flows": [
+      {
+        "sellerActorName": "Producer arabica bola",
+        "buyerActorName": "Collector arabica",
+        "volumeExchanged": 9450,
+        "monetaryValue": 9355500,
+        "unitPrice": 990,
+        "product": "Cafe bola"
+      },
+      {
+        "sellerActorName": "Collector arabica",
+        "buyerActorName": "Industry instant arabica",
+        "volumeExchanged": 2362.5,
+        "monetaryValue": 6237000,
+        "unitPrice": 2640,
+        "product": "Cafe oro"
+      },
+      {
+        "sellerActorName": "Collector arabica",
+        "buyerActorName": "Industry roasted arabica",
+        "volumeExchanged": 2362.5,
+        "monetaryValue": 6237000,
+        "unitPrice": 2640,
+        "product": "Cafe oro"
+      },
+      {
+        "sellerActorName": "Collector arabica",
+        "buyerActorName": "Industry instant arabica",
+        "volumeExchanged": 787.4,
+        "monetaryValue": 2078736,
+        "unitPrice": 2640,
+        "product": "Cafe oro"
+      },
+      {
+        "sellerActorName": "Collector arabica",
+        "buyerActorName": "Industry roasted arabica",
+        "volumeExchanged": 787.4,
+        "monetaryValue": 2078736,
+        "unitPrice": 2640,
+        "product": "Cafe oro"
+      },
+      {
+        "sellerActorName": "Industry instant arabica",
+        "buyerActorName": "Exportador instant arabica",
+        "volumeExchanged": 284.990952380952,
+        "monetaryValue": 3704882.38095238,
+        "unitPrice": 13000,
+        "product": "Cafe soluble exportacion"
+      },
+      {
+        "sellerActorName": "Industry instant arabica",
+        "buyerActorName": "Local market instant arabica",
+        "volumeExchanged": 839.973333333333,
+        "monetaryValue": 11759626.6666667,
+        "unitPrice": 14000,
+        "product": "Cafe soluble mercado local"
+      },
+      {
+        "sellerActorName": "Trader arabica",
+        "buyerActorName": "Collector arabica",
+        "volumeExchanged": 7874,
+        "monetaryValue": 4724400,
+        "unitPrice": 600,
+        "product": "Cafe cereza"
+      },
+      {
+        "sellerActorName": "Producer arabica cherry",
+        "buyerActorName": "Trader arabica",
+        "volumeExchanged": 7874,
+        "monetaryValue": 4330700,
+        "unitPrice": 550,
+        "product": "Cafe cereza"
+      },
+      {
+        "sellerActorName": "Industry roasted arabica",
+        "buyerActorName": "Local market roasted arabica",
+        "volumeExchanged": 2519.92,
+        "monetaryValue": 21419320,
+        "unitPrice": 8500,
+        "product": "Cafe tostado y molido"
+      },
+      {
+        "sellerActorName": "Producer robusta",
+        "buyerActorName": "Trader robusta",
+        "volumeExchanged": 28500,
+        "monetaryValue": 8464500,
+        "unitPrice": 297,
+        "product": "Robusta cereza"
+      },
+      {
+        "sellerActorName": "Trader robusta",
+        "buyerActorName": "Wholesaler Local robusta",
+        "volumeExchanged": 28500,
+        "monetaryValue": 8778000,
+        "unitPrice": 308,
+        "product": "Robusta cereza"
+      },
+      {
+        "sellerActorName": "Wholesaler Local robusta",
+        "buyerActorName": "Wholesaler Nacional robusta",
+        "volumeExchanged": 5730.97826086957,
+        "monetaryValue": 10716929.3478261,
+        "unitPrice": 1870,
+        "product": "Robusta pilado"
+      },
+      {
+        "sellerActorName": "Wholesaler Nacional robusta",
+        "buyerActorName": "Industry Instant robusta",
+        "volumeExchanged": 5730.97826086957,
+        "monetaryValue": 13754347.826087,
+        "unitPrice": 2400,
+        "product": "Robusta oro"
+      },
+      {
+        "sellerActorName": "Industry Instant robusta",
+        "buyerActorName": "Industry Instant robusta",
+        "volumeExchanged": 17800,
+        "monetaryValue": 35244000,
+        "unitPrice": 1980,
+        "product": "Robusta importado"
+      },
+      {
+        "sellerActorName": "Industry Instant robusta",
+        "buyerActorName": "International market robusta",
+        "volumeExchanged": 4628,
+        "monetaryValue": 46280000,
+        "unitPrice": 10000,
+        "product": "Robusta soluble ex"
+      },
+      {
+        "sellerActorName": "Industry Instant robusta",
+        "buyerActorName": "Local market robusta",
+        "volumeExchanged": 1725.23076923077,
+        "monetaryValue": 18977538.4615385,
+        "unitPrice": 11000,
+        "product": "Robusta soluble"
+      },
+      {
+        "sellerActorName": "Industry Instant robusta",
+        "buyerActorName": "International market robusta",
+        "volumeExchanged": 511.379598662208,
+        "monetaryValue": 5113795.98662208,
+        "unitPrice": 10000,
+        "product": "Robusta soluble ex"
+      },
+      {
+        "sellerActorName": "Industry Instant robusta",
+        "buyerActorName": "Local market robusta",
+        "volumeExchanged": 1534.13879598662,
+        "monetaryValue": 16875526.7558528,
+        "unitPrice": 11000,
+        "product": "Robusta soluble"
+      }
+    ],
+    "addedValue": {
+      "landOwnersFees": 0,
+      "depreciation": 11979570.8198526,
+      "employeeWages": 15651653.0923037,
+      "financialInstitutionsInterests": 0,
+      "government": 174805.067685938
+    },
+    "importExport": {
+      "import": [
+        {
+          "label": "Robusta importado",
+          "importExport": "Imported",
+          "amount": 35244000
+        },
+        {
+          "label": "FUEL",
+          "importExport": "Imported",
+          "amount": 1746665.226
+        },
+        {
+          "label": "Other",
+          "importExport": "Imported",
+          "amount": 1059545.756
+        },
+        {
+          "label": "CHEMICAL-INPUTS",
+          "importExport": "Imported",
+          "amount": 678408.48
+        },
+        {
+          "label": "PACKAGING",
+          "importExport": "Imported",
+          "amount": 320398.308
+        },
+        {
+          "label": "Energia",
+          "importExport": "Imported",
+          "amount": 1445.072
+        }
+      ],
+      "export": [
+        {
+          "label": "Coffee ",
+          "importExport": "Exported",
+          "amount": 51393795.9866221
+        }
+      ]
+    },
+    "farmToFinalPricesRatio": [
+      {
+        "label": "arabica producer export instant",
+        "farmPrice": 9600,
+        "endPrice": 13000
+      },
+      {
+        "label": "robusta producer export instant",
+        "farmPrice": 2970,
+        "endPrice": 11000
+      },
+      {
+        "label": "arabica  producer domestic toasted",
+        "farmPrice": 1200,
+        "endPrice": 8500
+      }
+    ]
+  }
+}

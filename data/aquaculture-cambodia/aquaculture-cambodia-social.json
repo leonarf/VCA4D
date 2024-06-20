@@ -1,0 +1,571 @@
+{
+  "id": "aquaculture-cambodia",
+  "country": "cambodia",
+  "commodity": "Aquaculture",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1 WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "These standards are included in Cambodian labour law 1997 which also covers working hours, paid leave and special leave, child labour and children’s right to education, women 's labour, safety and health and settlement of disputes, and sexual harassment. Aquaculture is characterised by family operations or small scale enterprises which operate outside formal labour law. The Cambodian Code of Conduct for Responsible Fisheries,  based on the Code of Conduct for Responsible Fisheries is a set of voluntary guidelines and good practices for all stakeholders in the fisheries sector, but there is limited awareness of the content of the CAMCODE among fisheries personnel and fisheries stakeholders. "
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Freedom of association and collective bargaining are included in  Cambodian Labour law  1997, but there have been some recent changes. A new trade union law approved in April 2016 has made changes to how unions are formed, operated and dissolved. This primarily affects workers in garment and footwear industries which are the main sectors unionised. Some have questioned the new law's compliance with ILO Convention 87 on freedom of association and protection of the right to organize, and ILO Convention 98 on the right to organize and collective bargaining."
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Workers in the aquaculture value chain  do not have contracts - they are  recruited through personal networks rather than the formal labour market. "
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "There was no evidence of forced labour in the aquaculture value chain. "
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The value chain is  characterised by informal employment, which follows local norms and social networks. These may obscure certain types of discrimination against specific categories of people. Women in all categories of employment except garment workers, receive lower wages than men.  In case of expansion in larger-scale higher capital intensive commercial production, employment opportunities are likely to favour men. "
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "National net attendance rates at primary level (6-12 years) are 81% for boys and 83% for girls. Lower at secondary level - 42% for boys and 44% for girls. Children in producer households who contribute to aquaculture work on average less than one hour per day, outside school hours. "
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Children mainly do lighter tasks in aquaculture, feeding fish, collecting feed materials, sorting fish, processing fish etc. Occasionally they help with pond preparation. The main risk is from liming ponds. Communities combining fishing and aquaculture may constitute more of a risk, although those met in the study said they did not allow children to go  fishing. "
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The main health risks arise in the processing part of the value chain resulting in risks to workers and consumers. There was a lack of general cleanliness in processing work areas, particularly  the handling of fish waste and waste water. Most have toilet and washing facilities with soap. Most provided gloves but not other protective clothing. Pollution of water from poor sanitation and industrial effluent are further risks in some locations"
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Average remuneration per worker was between 150 to 200 USD per month. In some cases accommodation, food and medical care were also provided. Aquaculture  provides a comparatively good wage; the minimum monthly wage in the textile and footwear industry is 153 USD per month. However, working hours in aquaculture production and trading enterprises are unregulated "
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": " Aquaculture can be an attractive proposition for young people - mainly young men - if they have access to capital or have help from their family to invest and receive good technical advice. For those without such access, other forms of employment are more attractive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2 LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": 1,
+          "averageText": "Low",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "The available information on Cambodia and tenure issues makes no reference to the VGGT. While Cambodian land law reflects many of the principles embodied in the VGGT, the process of granting economic land concessions to investors has not necessarily followed them. State public land can be reclassified as State private land under certain conditions, which allows for its expropriation for other uses. There is a lack of local institutions to regulate the use of and access to water ."
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Among other requirements, the Guide to Due Diligence requires contractors to ensure that legitimate tenure rights of individuals and communities, including where applicable, those with customary tenure systems, should be recognised, respect and protected (article 8.2).  It appears from experience with land concessions that these provisions are not necessily  applied. "
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 1.75,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Levels of prior disclosure, participation and consultation are highly variable, depending on local relationships. Prior consent is not a obvious criteria in any of the laws or guidelines. "
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The legal issues around land tenure are not widely understood by producers or processors in the value chain. Fisheries Administration staff make efforts to communicate fisheries policy to communities engaged in fisheries so there is a reasonable level of understanding and awareness, for example, around the ban on snakehead production and its recent lifting. "
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Information is provided, but no systematic consultation processes are followed. "
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Stakeholders are informed to various extents, but consent is not required"
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "In most communities visited, those involved in aquaculture did not indicate any insecurity of tenure although only one community had land rights registered through a cadastral survey. They rely on the local recognition of their rights in their commune. No cases were directly encourntered where any of these rights had been challenged. Land sales by smallholders are often prompted by debt, particularly to private finance institutions. In floating villages or more recent settlements around the lake, people do not own land. The 1980s distribution was only for mainland households.  Access to living space for floating houses  is in principle, open and without registration, although some people protect their space. \r\n\r\n"
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Alternative strategies are not always considered, developed or promoted. There are concerns about  displacement and eviction owing to large scale land concessions and urban development. Relocation sites are lacking in infrastructure and services. "
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Cambodian land law requires compensation to be paid in case of expropriation.The CAMCODE is specific about the need to provide appropriate alternative livelihoods in case these are disrupted by changes in laws or policies. However, implementation is variable. Relocation sites are lacking in infrastructure and services. "
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Conflict resolution mechanisms include the Commune Councils, the Administrative Committees, the Cadastral Commission, the National Authority for Land Conflict Resolution, and the judiciary. There does not appear to be an independent dispute resolution mechanism and access to remedy. However, practically, people are unwilling to challenge decisions. The environmental impacts of enterprises are also difficult for smallholders to deal with."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3 GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women are not excluded from aquaculture production, processing or trade.  They are particularly active in processing and local trade. However, poverty is a factor, with value chain participation depending on access to land, labour and capital to invest. The preference of poorer rural households was to concentrate on rice production and other income sources such as wage labour. The development of rice-fish farming and local seed producer networks , were reported to have made a difference to women and poorer participating households who received some assistance in the establishment and stocking of their ponds."
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women are active as producers, processors, traders and retailers. Women run their own aquaculture operations and are also involved as part of a family based activity. They also undertake small-scale capture fisheries, collection of aquatic plants and animals. Women are particularly active in the post-harvest sector.  They run processing businesses and are employed as workers in processing businesses.  Women’s operations in aquaculture production are smaller  than among male producers. Women are proportionately more represented in the semi intensive systems and small cage production than intensive ponds and large scale cage production"
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 2.75,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Non-land assets can be undivided or separate property. Household assets are generally considered undivided assets, particularly as on marriage, both the bride and groom’s families will contribute to the asset pool. Decisions on undivided property require agreement of both spouses. "
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women and men have equal inheritance rights for land and other property  and equal rights in contracts and administration of property, housing and marriage with respect to ownership, management, enjoyment and disposal of property including on divorce.  About 12% of land is owned by women headed households, 80% of whom own less than 1ha. Actual practices are influenced by several factors, including limited awareness of rights among women and poor access to legal advice in case of disputes. "
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "43% of women producers, 60% of the women processors and 38% of women intermediaries interviewed in the Value Chain Survey reported taking a loan. The majority 84% were bank loans, 14% from money lenders and 2% from other sources such as village credit organisations. Neither men nor women can access credit alone without their spouse or other married couple in the family or associated person to guarentee the loan. "
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Government has limited extension activity and input supply companies do not have a close relationshp with farmers. Advice and training is mainly from Fisheries Administration personnel and from their local seed producer. Radio and TV are  also sources of information. Access to services and inputs is harder for cage producers who frequently rely on each other for information and advice. They also had limited access to input providers, partly as a result of their location ."
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 3.2,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women with their own aquaculture ponds and cages are the main decision makers concerning their production. Men and women generally describe their practice as joint decision making, for agriculture (crops and livestock) and aquaculture. For decisions on market trading, women are more influential"
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Women have varying degrees of autonomy in organisation of their work depending on the level of specialisation. Where women are active in aquaculture in their own right, they organise their own work, however, they are influenced by gender norms and family circumstances. "
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "The common practice is for pooling of household income under the management of the woman.  Arrangements may be more variable among larger scale intensive producers, processors and traders. Women were said to have considerable control over family income and their own contribution to this. Money from enterprises managed by unmarried young adults in the household is also given to the mother to manage.  Women’s perspective was that their control was important to secure household needs. They  manage the daily living expenses.\r\n"
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "One study found that 47% of married women earned their own cash incomes. \r\n"
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Decisions on undivided property such as sale of land or house are required to have the consent of both husband and wife.  Because women mainly hold the money, they have a considerable degree of influence. But major decisions on expenditure are discussed and negotiated among family members, and final decisions are by consensus.  This arrangement has potential for conflict in times of scarcity, as pooled resources are drawn on for household and individual needs and not all needs can be met.  Surveys show an acceptance of a level of domestic violence.  46% women agreed with at least one reason why a man may be justified in beating his wife. 22% of ever married women have experienced physical, emotional or sexual violence, with higher rates where husbands have a lower educational level and there are higher numbers of children. Few cases go to court and are often settled informally at community level with small payments to victims or the family. The National Action Plan to prevent violence against women has prioritised legal protection for women and girls and is promoting effective service delivery to survivors of violence against women. "
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Limited numbers of groups exist at community level, but those that do have women membership"
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women are not commonly found in leadership positions. Female  membership in commune and district councils is required. Within groups, women are more often deputy or assistant leaders rather than leaders. "
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Despite their role in the economic sphere, women have lacked political influence and  are less represented at high levels of decision making . The  National Program for Sub-National Democratic Development 2010-2019 (NP-SNDD), includes a quota system and political reforms in local decision making. "
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women members of the community fisheries groups and the fish seed producer networks talk in public. However, beyond the community level, women have a limited role in public life, although recently there have been steps to increase women’s representation in the national parliament and among civil servants. There are appear to be cultural constraints on women in political roles although these are beginning to change."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "An important distinction is drawn in local understanding between the hours of work and the intensity of work. Overall, women work longer hours while men have more recreational or rest time, however, local people explained that men perform physically heavier work and hence 'need greater rest and leisure time'. The gendered division of labour, while relatively flexible, assigns women the domestic roles of food preparation and child care, which constrains their economic development. While they have taken up opportunities for earning income, ‘the problem is the increase in women’s workload. There has been a lack of transformation in gender roles, in particular the domestic burdens on women. "
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "FGDs reported that in general women do not do the physically most demanding jobs in aquaculture. Intensive pond producers handling large volumes of feed, usually employ male labour. There are seasonal variations in the work load which is especially heavy during the rice farming season. For processors and traders, their work is more intensive in the main fish capture season and during the peak aquaculture production. \r\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4 FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availibility of food ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Overall rice production has more than doubled since 2004, from 1,977 kg/ha i to 3,264.7 in 2014. Productivity of rice has improved through access to new technology such as new varieties and management practices. However, this is dependent on location and adequate rainfall. Rice-fish farmers in different districts described the benefits of this system for rice crop yields and labour reduction for weeding. Overall fish production in Cambodia has shown a small increase since 2012.   Several producers noted the decline in availability of wild fish. Aquaculture production contributes to household food especially fish  consumption in the dry season and reduces household expenditure. Information on consumption of fish from different sources (capture v aquaculture) or combinations of sources is generally lacking. 74% of aquaculture producer households interviewed consumed some of the fish they had grown and 68% gave some away to friends and relatives. More semi intensive households (79%) consumed their farmed fish than cage (70%) or intensive producers (63%). "
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "There is ready availability of fish on local markets with large volumes of imported fish. While this is an advantage for consumers, fish producers complained about its negative impact on prices. Most producers met in focus group discussions said that food supplies and access to food have been improving. "
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": " How much income people in aquaculture have to allocate to food depends on their position in value chain - small producers moderate/low improvement, large processors, traders high. There were variable responses from producers in the FGDs.  "
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The wholesale price of mixed rice has not increased markedly since 2010. Average retail prices for rice have fallen or remained stable, while daily wages for unskilled labour have gone up over the same period in both rural and urban areas, with improving ‘terms of trade’ between wages and the cost of rice. ."
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": " Food preparation practices  influence nutritional content and economic pressures encourage poor households to sell fish, or forgo other high quality foods in order to use their money to secure their staple food, rice. Micro nutrient deficiencies are the main issue. Decline in the availability of micronutrient rich small fish is an important factor.\r\n"
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Trends in nutritional status are taken as indicators of whether nutritional quality of diets and dietary practices are improving. Despite high rates of fish consumption, levels of child malnutrition are high. In 2014 the incidence of stunting in children under 5 was 32%, down from 40% in 2010. 30% of children aged 6-23 months are fed appropriately and met minimum standards based on all three infant and young child feeding practices . Poor water and sanitation provision contribute to poor nutrition. Some FGDs reported having more information on nutrition than a few years ago.\r\n"
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Diversity of diets could be improved – only 48% of children under 5 received foods from the minimum number of food groups for their age. FGDs among aquaculture producers reported consuming a greater variety of foodstuffs than 10 years ago. \r\n"
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The agricultural census shows a relatively low proportion of households (16%) reporting food insecurity and shortages in the 12 months prior to the Agricultural census (2012/13). More female headed households reported food insecurity and for longer periods than male headed household. The main reasons were low production, shortage of capital and land, crop loss and damage, high cost of food, low production though illness and disability, and a limited food budget due to loss of job. Aquaculture producers in FGDs said they felt food secure.\r\n"
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The seasonal calendar described by semi intensive farmers highlights September and October as months of hardship;  food prices  are higher in this period  \r\nCage producers often move to a different location to accommodate the changing water levels, which vary in proximity to markets and hence prices. This may occur several times as water levels change, each time incurring considerable costs. Both pond and cage producers emphasised the food security contribution and convenience of aquaculture.\r\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5 SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There were relatively few groups and farmers’ orgnisations reported in the communities visited, connected with agricultural production, savings and credit or community fisheries.  Reluctance to engage in collective action is partly a result of history. In aquaculture there were informal groups formed around local fingerling producers,  for accessing fingerlings and technical information. For marketing, there were no formal groups encountered, but informal arrangements among a group of 10 intensive producers in Siem Reap helped individuals to share transport and access imported fingerlings and fish feed from Vietnam and collaborate on stocking and harvesting times, but   marketing arrangements were individual. For processors, there were no formal groups reported and past efforts at collective production and marketing by prahok processors  were not successful. Individuals with successful processing businesses have developed relationships with customers based on a long history of personal relationship and trust and negotiate based on this relationship. Customers also want to deal with individuals they know. Therefore they perceive limited benefit from collaboration. Similarly, small scale fish traders operate on an individual basis, selling to  buyers within whom they have established relationships.  Market instability and unpredictability contribute to the perceived risk and reluctance to engage in collective enterprise.\r\n\r\n"
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Most groups at community level are based on common interest and hence are selective of those who have the necessary resources to participate or to develop the resources (e.g. by enlarging a small pond). Both women and men participate. Participation in savings and credit groups requires the ability to make the required regular contributions. Thus it is likely that group membership in practice excludes the poorest members of communities. Landless ethnic minorities may also be excluded.  "
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": " NGOs and projects increasingly recognise the need for investment in leadership skill development. Community Fisheries are formally constituted bodies with registered members and an elected management committee. However, there is variation in the extent to which the leadership is regarded as having legitimacy and representation, particularly of poorer community members. "
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Women small scale traders have limited capital and negotiating power in relation to large scale traders who are mostly male, but have not organised to overcome this.  Women cage producers in Pursat reported that they generally cannot negotiate on prices. If they try to bargain, the buyer can refuse to buy. The supplier of inputs and feed and the collector are the same person. He requires immediate cash payment from them, although they may wait for up to one month for payment from him. Volumes from individual producers were said to be insufficient to attract more buyers and expand the competition."
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Aquaculture pond producers reported having access to technical advice and training from FIA,  local seed producers trained by FIA , agriculture focal points, and projects. The village head and commune head provide information on policy. Cage producers, particularly women, were less positive about their access to information, relying on each other for advice, and some expressing reluctance to attend training courses. Information on market prices depends on producers and processors own networks. Contacts are made by mobile phone to inquire about and negotiate market prices. "
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Over 50% of producers in all groups rated the level of trust with their buyers to be high, but  levels of trust were highest among intensive producers. Rankings on level of trust were higher for processors and intermediaries.\r\nFocus groups of aquaculture producers were asked more generally about the perceived level of trust within their community and in their relationships with outsiders. Most ranked trust within their community at a medium level with two groups putting it at high to medium. Trust of outsiders was lower than within the community and is lower when the relationship involves money.\r\n"
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 2.3333333333333335,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "People are informed on issues relating to aquaculture and aquaculture policy, fishery law and related topics in meetings convened by local government and NGOs, but there appears to be little systematic feedback and discussion solicited at these meetings which is subsequently acted upon. "
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "The CAMCODE recommends that decisions should be evidence based taking into account traditional knowledge of the resources and aquatic habitats, as well as relevant environmental, cultural, economic and social factors. Actions around community fisheries draw on local knowledge of the environment and seasonality. It is less clear the extent to which local knowledge is integrated into the technical recommendations and training content for aquaculture. "
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "The main contributions are to communal labour or financial contribution for the upkeep of roads, maintenance of pagodas and fencing. This is organized by the village head. In some locations, people assist each other in field operations for rice cultivation. Community members also contribute to the cost of traditional ceremonies.   Social relationships can bring positive and negative impacts; an example  widely discussed, was the level of social expenditures on ceremonies and weddings estimated at over 100$ per year. People receiving an invitation are expected to contribute. "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6 LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 2.6666666666666665,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Health facilities are accessible in the areas of the country visited during fieldwork. There is a combination of public and private health care provision and traditional medicine. All communities visited said there was a clinic or health centre within 10km distance. "
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Households have access if they have money to pay for treatment, drugs and accomodation. Private health service providers are medically trained, but there is no system of licensing, so quality of service could be an issue. Other health services include nutritional supplements for mothers and babies, immunization etc. "
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "There were some reports of households getting into  debt as a result of expenditures on treatment. There is no health insurance widely available.  Fees are charged for attendance at private facilities. Public facilities such as community health centres make a small charge (less than 1$) unless households have a social welfare ID card, but medicine is free. An overnight stay costs 10$ per night. \r\n"
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Housing quality in rural areas of Cambodia is of relatively good quality. In rural areas 93% of households have roofs made of permanent materials and 77.1% use hard permanent wall materials. Flooring in rural areas is mainly of wooden planks, and 13% are tiled or cement . House ownership is 95% in rural areas . Access to mains electricity is 58% in urban and 47% in rural areas where many people use battery power,  solar and traditional lamps.Most use woodfuel for cooking. Floating houses need regular expenditure on maintenance and major structural repairs every few years. The contribution of aquaculture in addition to fishing is important to cover these expenses. "
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Water provision is satisfactory;  access to safe drinking water varies according to season. Overall, 43% of rural  of households have access to improved water sources in the wet season and 51% in the dry season.  67% of rural households treat their drinking water. Focus group discussions r reported using underground wells, ponds and rainwater for drinking. Some purchased water for drinking, particularly in the dry season, using pond and lake water for washing clothes and dishes. \r\nWith respect to sanitation, overall 46% of rural households have access to improved toilet facilities. 47% of households use open land in rural areas. There has been an improvement over the 2009 rate of 20%, but the poor state of sanitation remains an issue in disease transmission and poor hygiene. \r\n\r\nParticipants in villages commented that the presence or otherwise of latrines depends on whether the village has had NGO involvement, in which case households generally have latrines. Across the locations visited, 50-80% of households were said to have a latrine, with the lower rates in poorer areas. However, among the cage producers living in floating villages or houses by the lake, the rates were much lower. For example, in Prasat Bakong, Siem Reap, the group reported around 2% having latrines. They said they used to be contacted about this, but now there is no programme. During the flood season they can take a boat out to the forest, in the dry season, they use nearby fields or plastic bags at night. A latrine costs about 500$.\r\n"
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 2.3333333333333335,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "There is free public education in Cambodia, although private schools also exist. Access to education is easier at the earlier stages and increases in difficulty in terms of distance and cost, at secondary and post secondary levels. Most communes have a primary school,  providing for the first six years of education and some covering up to nine years (ages 6 to 14). All the focus group discussions said that nearly all children of primary school age were in school. "
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Some communes also have a secondary school, which also serves adjacent communes. Attendance at secondary school  is influenced by the distance pupils have to travel. The costs of sending children to school increase with age as they have to travel longer distances. There is a high dropout rate at this transition point, around 50%, linked to cost. "
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "For producers, investment in training by FIA, donor funded projects and NGO initiatives, has had useful results. Important examples in aquaculture are the training of local seed producers and the development of their network; training for individuals in freshwater prawn production and training in the rice/fish system. The Post Harvest Technology and Quality department of FIA provides training for fish processor including on hygiene practices at processing facilities (stakeholder interview FIA). The issue is the extent of coverage in relation to need, given limited resources. "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

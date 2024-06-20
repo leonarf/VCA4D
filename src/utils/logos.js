@@ -48,7 +48,7 @@ export const getProductLogo = (product) => {
             return PalmOilLogo
         case 'cassava':
             return CassavaLogo
-        case 'aquaculture tilapia':
+        case 'freshwater-aquaculture':
         case 'aquaculture':
         case "coastal fisheries":
         case "inland fisheries":

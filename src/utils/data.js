@@ -3,7 +3,16 @@ import jsonData from '@data/data.json'
 
 export const LOCAL_STORAGE_ID = 'localStorage'
 
-const getStudyDataFromFileName = (fileName) => json(`${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${fileName}.json`).then(json => json)
+const getStudyDataFromFileName = (studyId, studyPart) =>
+    json(`${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-${studyPart}.json`).then(json => json)
+
+export const getBriefPdfPath = (studyId) => {
+    return `${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-brief-report.pdf`
+}
+
+export const getFullReportPdfPath = (studyId) => {
+    return `${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-full-report.pdf`
+}
 
 export const getStudiesByCountry = async (countryId) => {
     const studyIds = jsonData.studies.filter(study => study.country === countryId).map(study => study.id)
@@ -34,17 +43,17 @@ export const getStudyData = async (studyId) => {
     let socialData = undefined
     let acvData = undefined
     try {
-        ecoData = await getStudyDataFromFileName(`${studyId}-eco`)
+        ecoData = await getStudyDataFromFileName(studyId, "eco")
     } catch {
         console.log(`did not find eco data for ${studyId}`)
     }
     try {
-        socialData = await getStudyDataFromFileName(`${studyId}-social`)
+        socialData = await getStudyDataFromFileName(studyId, "social")
     } catch {
         console.log(`did not find social data for ${studyId}`)
     }
     try {
-        acvData = await getStudyDataFromFileName(`${studyId}-acv`)
+        acvData = await getStudyDataFromFileName(studyId, "acv")
     } catch {
         console.log(`did not find acv data for ${studyId}`)
     }

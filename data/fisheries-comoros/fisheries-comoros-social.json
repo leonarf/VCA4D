@@ -1,0 +1,571 @@
+{
+  "id": "fisheries-comoros",
+  "country": "comoros",
+  "commodity": "fisheries",
+  "year": 2020,
+  "type": "social",
+  "socialData": [
+    {
+      "title": "1. WORKING CONDITIONS",
+      "groups": [
+        {
+          "title": "1.1 Respect of labour rights",
+          "averageValue": 2.6,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La CV se caractérise par la prédominance de l'informalité; les normes du Code du Travail ne s'y appliquent pas."
+            },
+            {
+              "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La liberté d'association est reconnue et pratiquée (associations de pêcheurs, coopératives, syndicats régionaux et national). La capacité de négociation reste cependant limitée."
+            },
+            {
+              "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Bien qu'oraux, les contrats bénéficient d'une garantie collective du fait que leurs termes sont établis au niveau des communautés de pêcheurs qui se caractérisent par leur grande cohésion sociale."
+            },
+            {
+              "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "La pêche comorienne est traditionnelle et artisanale. Elle se déroule dans des communautés à forte cohésion sociale. Ces caractéristiques réduisent totalement la possibilité de travail forcé."
+            },
+            {
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Excepté l'absence de participation des femmes à la pêche en embarcation, du fait de la dureté du travail, il n'existe aucune évidence de risque de discrimination dans la CV."
+            }
+          ]
+        },
+        {
+          "title": "1.2 Child Labour",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "A partir de l'âge de 8 à 10 ans, un certains nombre d'enfants travaillent comme aides au débarquement. Leur scolarité s'en trouve affectée."
+            },
+            {
+              "text": "1.2.2 Are children protected from exposure to harmful jobs?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les aides au débarquement peuvent avoir à soulever des charges lourdes, sans protection particulière."
+            }
+          ]
+        },
+        {
+          "title": "1.3 Job safety",
+          "averageValue": 2,
+          "averageText": "Moderate/Low",
+          "questions": [
+            {
+              "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La sécurité en mer reste une préoccupation majeure. Les équiments prévus à cet effet sont limités (ééléphones portables, boussoles, GPA fréquant, mais pas d'équipements en balises ou en gilets de suavetage). Utilisation non systématiques de protection dans les chantiers navals."
+            }
+          ]
+        },
+        {
+          "title": "1.4 Attractiveness",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les rémunérations des équipages embarqués sont effectuées en nature, selon des règles de partage des captures établies collectivement au niveau des villages."
+            },
+            {
+              "text": "1.4.2 Are conditions of activities attractive for youth?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "L'attractivité de la pêche pour les jeunes est relative; la population de pêcheurs connaît un vieillissement. L'option de l'émigration est souvent choisie malgré les risques qu'elle représente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. LAND & WATER RIGHTS",
+      "groups": [
+        {
+          "title": "2.1 Adherence to VGGT ",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Le Code de la Pêche s'inspire largement des Directives volontaires."
+            },
+            {
+              "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
+              "scoreValue": "n/a",
+              "scoreText": "n/a",
+              "comment": "Il n'existe actuellement pas de sociétés de pêche en fonctionnement."
+            }
+          ]
+        },
+        {
+          "title": "2.2 Transparency, participation and consultation",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Large participation des communautés à la définition et à la mise en oeuvre des premiers accords de cogestion (de 2ème génération), mais ceux-ci restent peu nombreux (8 au total)."
+            },
+            {
+              "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Le Code de la pêche a été communiqué aux organisations de pêcheurs"
+            },
+            {
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Forte implication des associations villageoises de pêcheurs dans la définition et la mise en oeuvre des règles locales d'usage."
+            },
+            {
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les plus récents accords de cogestion ont reproduit les accords précédents sans consultation des intéressés."
+            }
+          ]
+        },
+        {
+          "title": "2.3  Equity,compensation and justice",
+          "averageValue": 2.25,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "L'accès au commun côtier et marin est libre."
+            },
+            {
+              "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Des petites compensations sont accordées aux pêcheurs à pied pour la fermeture temporaire du platier."
+            },
+            {
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Il n'existe pas d'expropriation, mais des interdictions de certaines techniques de pêche et des fermetures temporaires du platier, qui affectent indirectement les communautés voisines sans que celles-ci ne soient sujettes à comprensation."
+            },
+            {
+              "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "L'efficacité des instances d'arbitrage des conflits à l'intérieur des communautés de pêcheurs et entre communautés voisines reste limitée."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. GENDER EQUALITY",
+      "groups": [
+        {
+          "title": "3.1 Economic activities",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les femmes ne participent pas à la pêche en embarcation du fait de la dureté de ce travail, mais participent aux autres segments de la CV."
+            },
+            {
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Elles sont actives dans la pêche à pied, la transformation et la commercialisation, où elles sont majoritaires."
+            }
+          ]
+        },
+        {
+          "title": "3.2 Access to resources and services",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.2.1 Do women have ownership of assets (other than land)?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les femmes sont toujours propriétaires de l'habitat."
+            },
+            {
+              "text": "3.2.2 Do women have equal land rights as men?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les droits d'accès aux ressources du platier sont identiques à ceux des hommes."
+            },
+            {
+              "text": "3.2.3 Do women have access to credit?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Même accès que les hommes, mais le crédit formel est peu utilisé dans la CV."
+            },
+            {
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Elles ont accès aux formations liées à la pêche à pied. Leur utilisation d'intrants est faible, hormis des équipements de base pour la commercialisation."
+            }
+          ]
+        },
+        {
+          "title": "3.3 Decision making",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.3.1 To what extent do women take part in the decisions related to production?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les femmes prennent leurs d´´cisions dans les segments de la CV où elles sont actives."
+            },
+            {
+              "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "Dans ces activités, elles sont totalement autonomes."
+            },
+            {
+              "text": "3.3.3 Do women have control over income?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Elles contrôlent également les revenus qu'elles y génèrent."
+            },
+            {
+              "text": "3.3.4 Do women earn independent income?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Dans leurs activités au sein de la CV, elles sont génèrent leur propres revenus. Mais ceuz-ci sont limités, hormis dans la commercialisation. "
+            },
+            {
+              "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Elles participent aux décisions de transaction."
+            }
+          ]
+        },
+        {
+          "title": "3.4 Leadership and empowerment",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les femmes sont membres des associations villageoises et créent aussi leurs propres organisations dans la transformation, la pêche à pied et la commercialisation."
+            },
+            {
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Elles occupent des postes de responsabilité dans les organisations entièrement composées de femmes, ainsi que dans les récentes organisations de transformation, mais plus rarement dans les organisations mixtes."
+            },
+            {
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Elles influencent peu la délivrance de services, mais davantage les pouvoirs locaux et les preneurs de décisions dans les aspects concernant la gestion du platier."
+            },
+            {
+              "text": "3.4.4 Do women speak in public?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Elles s'expriment librement."
+            }
+          ]
+        },
+        {
+          "title": "3.5 Hardship and division of labour",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La charge de travail est importante dans la production vivrière, maraîchère et avicole et dans les tâches ménagères."
+            },
+            {
+              "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Il n'est pas fait usage de technologies permettant de réduire la pénibilité de leur travail."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. FOOD AND NUTRITION SECURITY",
+      "groups": [
+        {
+          "title": "4.1 Availability of food ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.1.1 Does the local production of food increase?\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La croissance de la production d'aliments suit celle de la population, sans arriver à satisfaire les besoins de la population. Les captures de poisson croissent de manière plus importante, surtout à Anjouan. L'île de Grande Comore est déficitaire et dépend des approvionnements des autres îles."
+            },
+            {
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "L'approvisionnement des marchés en denrées alimentaires repose donc sur les importations."
+            }
+          ]
+        },
+        {
+          "title": "4.2 Accessibility of food ",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "La stabilité du PIB/hab ne permet pas à la population de disposer de revenus croissants pour son alimentation. Cette situation est en partie compensée par les flux financiers en provenance de la diaspora."
+            },
+            {
+              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Le poids de l'alimentation dans la consommation des ménages est considérable.L'insécurité alimentaire, bien que peu profonde, est très étendue. La situation se serait aggravée avec l'augmentation du prix des denrées alimentaires suite à la crise du Covid et la guerre en Ukraine. "
+            }
+          ]
+        },
+        {
+          "title": "4.3 Utilisation and nutritional adequacy ",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Absence d'évolution notable de la qualité nutritionnelle des aliments."
+            },
+            {
+              "text": "4.3.2 Are nutritional practices being improved?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Absence d'évolution notable des pratiques de  nutrition, mais une meilleure prise en charge des mères allaitantes et des jeunes enfants souffrant de malnutrition sévère."
+            },
+            {
+              "text": "4.3.3 Is dietary diversity increased?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Absence d'évolution notable de la diversité de la diète."
+            }
+          ]
+        },
+        {
+          "title": "4.4 Stability ",
+          "averageValue": 1.5,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Forte dépendance aux importations de denrées alimentaires avec de fréquentes ruptures d'approvisionnement."
+            },
+            {
+              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "Forte exposition des ménages aux variations des prix alimentaires mondiaux et des prix internes du poisson. Absence de mécanismes efficaces de stabilisation des prix."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. SOCIAL CAPITAL",
+      "groups": [
+        {
+          "title": "5.1 Strength of producer organisations",
+          "averageValue": 2.25,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "La quasi-totalité des villages de pêcheurs compte au moins une organisation. Chaque île dispose d'un syndicat de pêcheurs auquel s'ajoute un syndicat national."
+            },
+            {
+              "text": "5.1.2 How inclusive is group/cooperative membership?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "L'adhésion aux organisations est ouverte. L'affiliation aux organisations est massive, avec des droits d'adhésion."
+            },
+            {
+              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les organisations disposent de leadership, Leur fonctionnement présente des faiblesses en matière de renouvellement des bureaux exécutifs et de tenue des assemblées générales."
+            },
+            {
+              "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
+              "scoreValue": 1,
+              "scoreText": "Not at all",
+              "comment": "La capacité de négociation est très faible, voire nulle."
+            }
+          ]
+        },
+        {
+          "title": "5.2 Information and confidence",
+          "averageValue": 2.5,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les acteurs de la CV ont accès à l'information sur les pratiques de pêche, sur le cadre légal et réglementaire et sur les prix, mais de manière informelle, partielle et/ou irrégulière."
+            },
+            {
+              "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Les relations entre les acteurs de la CV bénéficie d'un climat de condfiance, mais le rôle joué par les syndicats de pêcheurs ne fait pas l'objet d'une reconnaissance généralisée.Des tensions entre villages existent au sujet des règles d'usage locales."
+            }
+          ]
+        },
+        {
+          "title": "5.3 Social involvement",
+          "averageValue": 2.33333333333333,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Les communautés participent de manière plus ou moins actives dans la prises des décisions relatives à l'usage local des zones de pêche."
+            },
+            {
+              "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Il n'existe pas à proprement parler d'actions spécifiques destinées au respect des savoirs traditionnels relatifs à la pêche, mais une transmission informelle."
+            },
+            {
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "Il existe une participation à l'entretien des infrastructures communautaires, liées ou non à l'activité de pêche."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. LIVING CONDITIONS",
+      "groups": [
+        {
+          "title": "6.1 Health services",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.1.1 Do households have access to health facilities?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Insuffisance des infrastructures de santé."
+            },
+            {
+              "text": "6.1.2 Do households have access to health services?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Faible nombre des professionnels de santé."
+            },
+            {
+              "text": "6.1.3  Are health services affordable for households?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Coût elevé des soins."
+            }
+          ]
+        },
+        {
+          "title": "6.2 Housing",
+          "averageValue": 2,
+          "averageText": "Moderate",
+          "questions": [
+            {
+              "text": "6.2.1 Do households have access to good quality accomodations?",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Nette amélioration de l'habitat grâce en particulier aux apports de la diaspora.Instabilité de l'approvisionnement en électricité."
+            },
+            {
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Faible disponibilité et qualité de l'eau. Manque de dispositifs d'assainissement."
+            }
+          ]
+        },
+        {
+          "title": "6.3 Education and training",
+          "averageValue": 3,
+          "averageText": "Substantial",
+          "questions": [
+            {
+              "text": "6.3.1 Is primary education accessible to households?",
+              "scoreValue": 4,
+              "scoreText": "High",
+              "comment": "L'éducation primaire est largement accessible avec un bon niveau de couverture."
+            },
+            {
+              "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
+              "scoreValue": 3,
+              "scoreText": "Substantial",
+              "comment": "L'accès au collège et au lycée est plus difficile, avec une baisse des taux de scolarisation, du fait de son coût et de la nécessit´´de générer des revenus."
+            },
+            {
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "scoreValue": 2,
+              "scoreText": "Moderate/Low",
+              "comment": "Existence de l'ENPMM qui dispense une formation de qualité, mais dont le manque de moyens réduit la couverture de la formation continue."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

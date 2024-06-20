@@ -1,0 +1,927 @@
+{
+  "id": "cashew-sierra-leone",
+  "country": "sierra-leone",
+  "commodity": "Cashew",
+  "type": "ACV",
+  "acvData": {
+    "valuechains": [
+      {
+        "name": "Export RCN",
+        "volume": 3741,
+        "volumeYear": 2019,
+        "volumeUnit": "t",
+        "actors": {
+          "Smallholder": "x",
+          "Private plantation": "x",
+          "Block farming": "x",
+          "Trader": "x",
+          "Retailer": "x",
+          "Exporter": "x"
+        }
+      },
+      {
+        "name": "Kernels for national consumption",
+        "volume": 559,
+        "volumeYear": 2019,
+        "volumeUnit": "t",
+        "actors": {
+          "Smallholder": "x",
+          "Private plantation": "x",
+          "Block farming": "x",
+          "Trader": "x",
+          "Retailer": "x",
+          "Artisanal processor": "x",
+          "Semi-industrial processor": "x"
+        }
+      },
+      {
+        "name": "Total production",
+        "volume": 4300,
+        "volumeYear": 2019,
+        "volumeUnit": "t"
+      },
+      {
+        "name": "Smallholder",
+        "volume": 0.95,
+        "volumeUnit": "VCA4D rapport"
+      },
+      {
+        "name": "Private plantation",
+        "volume": 0.02,
+        "volumeUnit": "VCA4D rapport"
+      },
+      {
+        "name": "Block farming",
+        "volume": 0.03,
+        "volumeYear": 1,
+        "volumeUnit": "VCA4D rapport"
+      },
+      {
+        "name": "Trader",
+        "volume": 0.52,
+        "volumeUnit": "VCA4D rapport"
+      },
+      {
+        "name": "Retailer",
+        "volume": 0.39,
+        "volumeUnit": "VCA4D rapport"
+      },
+      {
+        "name": "Processors",
+        "volume": 0.09,
+        "volumeYear": 1,
+        "volumeUnit": "VCA4D rapport"
+      },
+      {
+        "name": "Artisanal processor",
+        "volume": 0.8,
+        "volumeUnit": "hypothese"
+      },
+      {
+        "name": "Semi-industrial processor",
+        "volume": 0.2,
+        "volumeYear": 1,
+        "volumeUnit": "hypothese"
+      }
+    ],
+    "actors": [
+      {
+        "name": "Smallholder",
+        "stage": "Producers"
+      },
+      {
+        "name": "Private plantation",
+        "stage": "Producers"
+      },
+      {
+        "name": "Block farming",
+        "stage": "Producers"
+      },
+      {
+        "name": "Trader",
+        "stage": "Collectors"
+      },
+      {
+        "name": "Retailer",
+        "stage": "Collectors"
+      },
+      {
+        "name": "Artisanal processor",
+        "stage": "Processors"
+      },
+      {
+        "name": "Semi-industrial processor",
+        "stage": "Processors"
+      },
+      {
+        "name": "Exporter",
+        "stage": "Wholesalers"
+      }
+    ],
+    "impacts": [
+      {
+        "name": "Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "DALY",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Smallholder",
+            "value": 0.0000513318516
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Private plantation",
+            "value": 0.00000108067056
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Block farming",
+            "value": 0.00000162100584
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Trader",
+            "value": 0.00034434529
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Retailer",
+            "value": 0.000239478895
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.000239478895
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Smallholder",
+            "value": 0.0001488623666
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Private plantation",
+            "value": 0.00000313394456
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Block farming",
+            "value": 0.00000470091684
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Trader",
+            "value": 0.000947732094
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Retailer",
+            "value": 0.00010177853000000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Artisanal processor",
+            "value": 0.004374567120000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Semi-industrial processor",
+            "value": 0.002211514
+          }
+        ]
+      },
+      {
+        "name": "Ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "species.yr",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Smallholder",
+            "value": 0.00024636297749999997
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Private plantation",
+            "value": 0.0000051865889999999995
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Block farming",
+            "value": 0.0000077798835
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Trader",
+            "value": 0.0000017084488
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Retailer",
+            "value": 0.00000115086845
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.00000115086845
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Smallholder",
+            "value": 0.0007144526338000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Private plantation",
+            "value": 0.000015041108080000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Block farming",
+            "value": 0.000022561662120000002
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Trader",
+            "value": 0.00000470211686
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Retailer",
+            "value": 4.891191e-7
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Artisanal processor",
+            "value": 0.0000500908768
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Semi-industrial processor",
+            "value": 8.724632400000001e-7
+          }
+        ]
+      },
+      {
+        "name": "Resources",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "USD2013",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Smallholder",
+            "value": 1.5360014199999998
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Private plantation",
+            "value": 0.032336872
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Block farming",
+            "value": 0.048505308
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Trader",
+            "value": 5.5958097
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Retailer",
+            "value": 5.451739
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 5.451739
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Smallholder",
+            "value": 4.454404213
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Private plantation",
+            "value": 0.0937769308
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Block farming",
+            "value": 0.1406653962
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Trader",
+            "value": 15.40119436
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Retailer",
+            "value": 2.3169892
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Artisanal processor",
+            "value": 21.830879200000002
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Semi-industrial processor",
+            "value": 0.5631505800000001
+          }
+        ]
+      },
+      {
+        "name": "Total",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Smallholder",
+            "value": 36.93846364
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Private plantation",
+            "value": 27.70384773
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Block farming",
+            "value": 6.393195629999999
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Trader",
+            "value": 6.245598
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Retailer",
+            "value": 4.34462825
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 4.34462825
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Smallholder",
+            "value": 195.7028215
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Private plantation",
+            "value": 4.120059400000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Block farming",
+            "value": 6.1800891
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Trader",
+            "value": 17.189589
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Retailer",
+            "value": 1.8464670000000003
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Artisanal processor",
+            "value": 86.66822400000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Semi-industrial processor",
+            "value": 37.127988
+          }
+        ]
+      },
+      {
+        "name": "Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Smallholder",
+            "value": 0.4686652048
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Private plantation",
+            "value": 0.3514989036
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Block farming",
+            "value": 0.0811151316
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Trader",
+            "value": 5.7436794
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Retailer",
+            "value": 3.994508
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 3.994508
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Smallholder",
+            "value": 2.4830242909999996
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Private plantation",
+            "value": 0.0522741956
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Block farming",
+            "value": 0.07841129339999998
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Trader",
+            "value": 15.808172000000003
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Retailer",
+            "value": 1.69766588
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Artisanal processor",
+            "value": 72.9677792
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Semi-industrial processor",
+            "value": 36.888052
+          }
+        ]
+      },
+      {
+        "name": "Ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Smallholder",
+            "value": 36.46379516
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Private plantation",
+            "value": 27.34784637
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Block farming",
+            "value": 6.311041469999999
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Trader",
+            "value": 0.46196454
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Retailer",
+            "value": 0.311194835
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.311194835
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Smallholder",
+            "value": 193.18799289999998
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Private plantation",
+            "value": 4.06711564
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Block farming",
+            "value": 6.10067346
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Trader",
+            "value": 1.2714523899999999
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Retailer",
+            "value": 0.132257804
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Artisanal processor",
+            "value": 13.544572800000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Semi-industrial processor",
+            "value": 0.23591406
+          }
+        ]
+      },
+      {
+        "name": "Resources",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Smallholder",
+            "value": 0.00600301728
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Private plantation",
+            "value": 0.00450226296
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Block farming",
+            "value": 0.00103898376
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Trader",
+            "value": 0.039954081
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Retailer",
+            "value": 0.038925417
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.038925417
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Smallholder",
+            "value": 0.03180444637
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Private plantation",
+            "value": 0.0006695672920000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Block farming",
+            "value": 0.0010043509380000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Trader",
+            "value": 0.1099645252
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Retailer",
+            "value": 0.016543302200000002
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Artisanal processor",
+            "value": 0.15587248
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Semi-industrial processor",
+            "value": 0.0040208952
+          }
+        ]
+      },
+      {
+        "name": "Global warming. Human health",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Smallholder",
+            "value": 0.219385036
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Private plantation",
+            "value": 0.164538777
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Block farming",
+            "value": 0.037970487
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Trader",
+            "value": 0.65420339
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Retailer",
+            "value": 0.6083018
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.6083018
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Smallholder",
+            "value": 1.162318806
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Private plantation",
+            "value": 0.024469869600000003
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Block farming",
+            "value": 0.036704804400000006
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Trader",
+            "value": 1.80054618
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Retailer",
+            "value": 0.25852826
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Artisanal processor",
+            "value": 14.3534416
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Semi-industrial processor",
+            "value": 1.4317235400000001
+          }
+        ]
+      },
+      {
+        "name": "Global warming. Terrestrial ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Smallholder",
+            "value": 0.010718318
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Private plantation",
+            "value": 0.0080387385
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Block farming",
+            "value": 0.0018550934999999999
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Trader",
+            "value": 0.032001221
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Retailer",
+            "value": 0.029755124
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 0.029755124
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Smallholder",
+            "value": 0.056786473250000004
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Private plantation",
+            "value": 0.0011955047000000002
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Block farming",
+            "value": 0.0017932570500000002
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Trader",
+            "value": 0.08807608780000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Retailer",
+            "value": 0.012645927600000002
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Artisanal processor",
+            "value": 0.701081872
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Semi-industrial processor",
+            "value": 0.069924362
+          }
+        ]
+      },
+      {
+        "name": "Global warming. Freshwater ecosystems",
+        "method": "ReCiPe 2016 Endpoint (H) V1.08 / World (2010) H/A",
+        "functional_unit": "1 t",
+        "unit": "Pt",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Smallholder",
+            "value": 2.925745836e-7
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Private plantation",
+            "value": 2.194309377e-7
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Block farming",
+            "value": 5.06379087e-8
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Trader",
+            "value": 8.7419161e-7
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Retailer",
+            "value": 8.1280385e-7
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 8.1280385e-7
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Smallholder",
+            "value": 0.000001550082662
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Private plantation",
+            "value": 3.26333192e-8
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Block farming",
+            "value": 4.89499788e-8
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Trader",
+            "value": 0.0000024060137000000005
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Retailer",
+            "value": 3.4544162e-7
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Artisanal processor",
+            "value": 0.0000191453968
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Semi-industrial processor",
+            "value": 0.00000190848254
+          }
+        ]
+      },
+      {
+        "name": "Global warming",
+        "method": "ReCiPe 2016 Midpoint (H) V1.08 / World (2010) H",
+        "functional_unit": "1 t",
+        "unit": "kg CO2 eq",
+        "values": [
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Smallholder",
+            "value": 14.15685908
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Private plantation",
+            "value": 10.617644310000001
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Block farming",
+            "value": 2.45022561
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Trader",
+            "value": 42.263488
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Retailer",
+            "value": 39.297138
+          },
+          {
+            "valuechain_name": "Export RCN",
+            "actor_name": "Exporter",
+            "value": 39.297138
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Smallholder",
+            "value": 75.00412849000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Private plantation",
+            "value": 1.5790342840000002
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Block farming",
+            "value": 2.3685514260000002
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Trader",
+            "value": 116.3206504
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Retailer",
+            "value": 16.7012836
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Artisanal processor",
+            "value": 926.1184800000001
+          },
+          {
+            "valuechain_name": "Kernels for national consumption",
+            "actor_name": "Semi-industrial processor",
+            "value": 92.36303000000001
+          }
+        ]
+      }
+    ]
+  }
+}
