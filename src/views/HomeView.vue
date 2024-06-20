@@ -33,7 +33,7 @@ watch(mandatoryStudiesPart, async (newMandatoryParts, oldMandatoryParts) => {
         getStudyData(study.id).then(dataStudy => {
             for (var studyPart of mandatoryStudiesPart.value) {
                 if (!dataStudy[studyPart]) {
-                    console.log(studyPart, 'not in ', dataStudy)
+                    console.log(studyPart, 'not in ', study.id)
                     return
                 }
             }

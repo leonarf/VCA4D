@@ -25,11 +25,17 @@ const props = defineProps({
         <slot></slot>
     </main>
 
-    <footer v-if="!skipFooter" class="TODO">
+    <footer v-if="!skipFooter">
         <ul>
             <li><a href="https://github.com/leonarf/VCA4D">Code source sur Github</a></li>
             <li>
-                <RouterLink to="/admin-import">(admin) Import a study</RouterLink>
+                <RouterLink to="/admin-import">Import a study</RouterLink>
+            </li>
+            <li>
+                <a href="https://capacity4dev.europa.eu/projects/value-chain-analysis-for-development-vca4d_en">VCA4D's website project</a>
+            </li>
+            <li>
+                <a href="https://lebasic.com/">Website developped by Basic</a>
             </li>
         </ul>
     </footer>

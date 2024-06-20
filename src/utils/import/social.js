@@ -1,3 +1,4 @@
+import { slugify } from '@utils/format.js'
 
 const getQuestionsGroup = (ws, firstRow, lastRow) => {
   return {
@@ -72,7 +73,7 @@ export const parseSustainabilityWorksheet = (worksheet) => {
 
 export const processSocialExcelFile = (workbook) => {
   const sheetNameForSustainabilityData = "Questionnaire"
-  const questionnaireSheet = workbook.value.Sheets[sheetNameForSustainabilityData]
+  const questionnaireSheet = workbook.Sheets[sheetNameForSustainabilityData]
   const country = slugify(questionnaireSheet['D1']?.v)
   const commodity = questionnaireSheet['B1']?.v.trim()
   const year = null

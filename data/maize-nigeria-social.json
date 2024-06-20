@@ -1,8 +1,8 @@
 {
   "id": "maize-nigeria",
-  "country": "Nigeria",
+  "country": "nigeria",
   "commodity": "Maize",
-  "year": 2020,
+  "year": null,
   "type": "social",
   "socialData": [
     {
