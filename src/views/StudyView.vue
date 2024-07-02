@@ -20,6 +20,7 @@
                     :hasEco="!!studyData.ecoData"
                     :hasSocial="!!studyData.socialData"
                     :hasACV="!!studyData.acvData"
+                    :fullReportPdfUrl="studyData.fullReportPdfUrl"
                 @update:currency="updateCurrency" />
             </div>
              <template v-if="studyData">
@@ -54,18 +55,17 @@ const updateCurrency = (event) => {
     currency.value = event
 }
 
-const view = ref(undefined)
 const studyData = ref(undefined)
 const error = ref(undefined)
 const isLocal = ref(undefined)
 
-const TypeOfViews = ref({
+const TypeOfViews = {
     overview: undefined,
     environment: "environment",
     'economic-growth': 'economic-growth',
     inclusiveness: "inclusiveness",
     'social-sustainability': 'social-sustainability'
-})
+}
 
 watch(currency, (newCurrency) => {
     router.push({ query: 
@@ -79,7 +79,7 @@ watch(currency, (newCurrency) => {
 
 const currencySymbol = computed( () => currency.value === 'LOCAL' ? studyData.value.targetCurrency : currency.value);
 
-
+const view = ref(undefined)
 onMounted(async () => {
   const studyId = route.query.id;
   const currencyFromUrl = route.query.currency
@@ -106,14 +106,17 @@ onMounted(async () => {
   if (route.query.view) {
     view.value = route.query.view;
   }
-  else if (!studyData.value.ecoData) {
-    if (!studyData.value.acvData) {
-      // Display social view if we only have social data
-      view.value = TypeOfViews.value['social-sustainability']
-    }
-    else if (!studyData.value.socialData) {
-      // Display environmental view if we only have environmental data
-      view.value = TypeOfViews.value.environment
+  else {
+    // Heuristique pour savoir si ça vaut le coup d'afficher la page overview, ou directement la seule page disponible de l'étude
+    let possibleStudyParts = ["ecoData", "acvData", "socialData", "briefReportPdfUrl"]
+    let availableParts = possibleStudyParts.filter(part => studyData.value[part])
+    if (availableParts.length == 1 && availableParts[0] != "ecoData") {
+      if (availableParts[0] == "acvData") {
+        view.value = TypeOfViews.environment
+      }
+      else if (availableParts[0] == "socialData") {
+        view.value = TypeOfViews['social-sustainability']
+      }
     }
   }
 })

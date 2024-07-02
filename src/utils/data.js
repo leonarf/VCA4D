@@ -1,4 +1,4 @@
-import {json} from 'd3-fetch'
+import { json } from 'd3-fetch'
 import jsonData from '@data/data.json'
 
 export const LOCAL_STORAGE_ID = 'localStorage'
@@ -6,12 +6,26 @@ export const LOCAL_STORAGE_ID = 'localStorage'
 const getStudyDataFromFileName = (studyId, studyPart) =>
     json(`${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-${studyPart}.json`).then(json => json)
 
-export const getBriefPdfPath = (studyId) => {
-    return `${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-brief-report.pdf`
+export const getBriefPdfPath = async (studyId) => {
+    let pdfUrl = `${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-brief-report.pdf`
+    let res = await fetch(pdfUrl, { method: 'HEAD' })
+    if (res.status === 200) {
+        console.log("pdf found!!!", pdfUrl)
+        return pdfUrl;
+    }
+    console.log("got status", res.status, "for pdf", pdfUrl)
+    return null
 }
 
-export const getFullReportPdfPath = (studyId) => {
-    return `${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-full-report.pdf`
+export const getFullReportPdfPath = async (studyId) => {
+    let pdfUrl = `${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-full-report.pdf`
+    let res = await fetch(pdfUrl, { method: 'HEAD' })
+    if (res.status === 200) {
+        console.log("pdf found!!!", pdfUrl)
+        return pdfUrl;
+    }
+    console.log("got status", res.status, "for pdf", pdfUrl)
+    return null
 }
 
 export const getStudiesByCountry = async (countryId) => {
@@ -58,17 +72,24 @@ export const getStudyData = async (studyId) => {
         console.log(`did not find acv data for ${studyId}`)
     }
     const metaInfo = ecoData ? ecoData : socialData ? socialData : acvData
+
+    let fullReportPdfUrl = await getFullReportPdfPath(studyId)
+    let briefReportPdfUrl = await getBriefPdfPath(studyId)
+
+    console.log("fullReportPdfUrl :", fullReportPdfUrl)
     return {
         ...metaInfo,
         ecoData: ecoData?.ecoData,
         socialData: socialData?.socialData,
-        acvData: acvData?.acvData
+        acvData: acvData?.acvData,
+        fullReportPdfUrl: fullReportPdfUrl,
+        briefReportPdfUrl: briefReportPdfUrl
     }
 }
 
 export const getAllJsonData = () => {
     const localStudyProperties = localStorage.getItem('localStudyData')
-    const localStudy = localStudyProperties ?  JSON.parse(localStudyProperties) : null
+    const localStudy = localStudyProperties ? JSON.parse(localStudyProperties) : null
     if (!localStudy) {
         return jsonData
     }
@@ -96,7 +117,7 @@ export const getCountries = () => {
 }
 
 export const getAllKnownProducts = () => {
-    return jsonData.categories.reduce((arr, item) => arr.concat(item.commodities) , [])
+    return jsonData.categories.reduce((arr, item) => arr.concat(item.commodities), [])
 }
 
 export const getCountry = (countryId) => getCountries().find(country => country.id === countryId)

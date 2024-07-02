@@ -12,7 +12,7 @@
         <div>
             Access the recommendations of the full study and the four analysis dimensions of the value chain in this synthesis.
         </div>
-        <PdfReader :path="pdfPath" />
+        <PdfReader :path="studyBriefUrl" />
     </div>
 </template>
 
@@ -22,15 +22,13 @@ import { getBriefPdfPath } from '@utils/data';
 import PdfReader from './PdfReader.vue'
 
 const props = defineProps({
-  studyId: String
+  studyBriefUrl: String
 });
-
-const pdfPath = ref(getBriefPdfPath(props.studyId))
 
 const downloadPdf = async () => {
 
     try {
-        const response = await fetch(pdfPath.value);
+        const response = await fetch(props.studyBriefUrl);
         const blob = await response.blob();
         const url = URL.createObjectURL(blob);
         

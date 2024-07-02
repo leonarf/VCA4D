@@ -4,7 +4,7 @@
             <h1>Overview</h1>
         </SectionTitle> 
 
-        <section class="pt-2">
+        <section v-if="studyData.ecoData" class="pt-2">
             <h3>Main steps in the value chain</h3>
             <div class="flex flex-row flex-wrap gap-y-8 justify-evenly mt-4 mb-8">
                 <div class="text-[#303030] text-center flex flex-col space-y-2 items-center max-w-[200px]" v-for="step in populatedSteps" :key="step.name">
@@ -16,13 +16,13 @@
         </section>
 
         <section v-if="studyData" class="explore">
-            <h2>Explore the 4 dimensions of the value chain</h2>
-            <RouterLink :to="'/study?id=' + studyData.id + '&view=economic-growth'">
+            <h2>Explore up to 4 dimensions of the value chain</h2>
+            <RouterLink v-if="!!studyData.ecoData" :to="'/study?id=' + studyData.id + '&view=economic-growth'">
                 <h3>Contribution to growth</h3>
                 <p>Learn more about <em>Contribution to GDP</em>, <em>Public finances</em>, 
                     <em>Balance of trade</em> and <em>Viability in international economy</em></p>
             </RouterLink>
-            <RouterLink :to="'/study?id=' + studyData.id + '&view=inclusiveness'">
+            <RouterLink v-if="!!studyData.ecoData" :to="'/study?id=' + studyData.id + '&view=inclusiveness'">
                 <h3>Inclusiveness</h3>
                 <p>Learn more about <em>Employment</em>, <em>Profits distribution across actors</em> and 
                     <em>Impact of governance</em></p>
@@ -35,7 +35,7 @@
                     <em>Living conditions</em>
                 </p>
             </RouterLink>
-            <RouterLink v-if="false" :to="'/study?id=' + studyData.id + '&view=environment'">
+            <RouterLink v-if="!!studyData.acvData" :to="'/study?id=' + studyData.id + '&view=environment'">
                 <h3>Environmental sustainability</h3>
                 <p>Learn more about <em>Climate change</em>, <em>human health</em> and
                     <em>Ecosystems</em> </p>
@@ -43,14 +43,11 @@
 
         </section>
 
+        <PdfSection v-if="studyData.briefReportPdfUrl" :study-brief-url="studyData.briefReportPdfUrl" />
+        <a v-if="studyData.fullReportPdfUrl" :href="studyData.fullReportPdfUrl">Download study full report</a>
         <section v-if="studyData && studyData.ecoData">
             <Sankey :studyData="studyData"/>
         </section>
-        <section v-else class="TODO">
-            <p>Not enough data to display sankey diagram</p>
-        </section>
-        <PdfSection :study-id="studyData.id" />
-
     </article>
 
 </template>

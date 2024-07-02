@@ -9,7 +9,7 @@
                 >{{ route.label }}</RouterLink>
             </li>
             <li>
-                <a :href="fullReportPath">Study full report</a>
+                <a v-if="fullReportPdfUrl" :href="fullReportPdfUrl">Study full report</a>
             </li>
         </ol>
         <div class="text-[#868686] mt-4 mb-2">Select currency</div>
@@ -30,7 +30,6 @@
 
 <script setup>
     import { ref} from 'vue'
-    import { getFullReportPdfPath } from '@utils/data';
 
     import { getCurrencySymbol, isCurrencySupported } from '@utils/currency.js'
     const props = defineProps({
@@ -40,9 +39,9 @@
         isLocalStudy: Boolean,
         hasEco: Boolean,
         hasSocial: Boolean,
-        hasACV: Boolean
+        hasACV: Boolean,
+        fullReportPdfUrl: String,
     })
-    const fullReportPath = ref(getFullReportPdfPath(props.studyId))
     const selectedCurrency = ref(props.currency);
     const routes = [
         {
