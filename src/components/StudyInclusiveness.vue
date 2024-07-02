@@ -32,7 +32,7 @@
         </div>
         <br>
 
-        <h3>What is the impact of the <strong>governance systems</strong> on income distribution?</h3>
+        <h3>What is the impact of the <strong>governance system</strong> on the income distribution?</h3>
         <InfoTitle title="Share of farm gate price in final price" class="mb-4 mt-8" :class="{'TODO': !hasPricesData}" />
         <ShareOfFarmPrice v-if="hasPricesData" :data="pricesData"/>
         <br />

@@ -1,5 +1,5 @@
 <template>
-    <InfoTitle title="Net operating profit across actor types"/>
+    <InfoTitle title="Net operating profit across types of actors"/>
     <div class="flex flex-row items-center mt-4 mb-4">
         <div class="w-full">
             <BarChart v-if="studyData" :options="netOperatingProfitData"

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>What are the impacts of this value chain on {{impact.name}}?</h3>
       <InfoTitle :title="impact.name" :information="impact.method" class="my-4"/>
       <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
       <div v-if="selectedValueChain">
