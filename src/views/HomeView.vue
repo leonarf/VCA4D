@@ -51,7 +51,7 @@ watch(mandatoryStudiesPart, async (newMandatoryParts, oldMandatoryParts) => {
       </div>
     </section>
     <section class="mx-4 sm:mx-8 md:mx-12 lg:mx-48 xl:mx-60">
-      <section>
+      <section class="welcome-message">
         <h1>Get insights into agri-food value chains in EU partner countries</h1>
         <p>
           Welcome to the Value Chain Analysis for Development (VCA4D) Information and Knowledge
@@ -161,6 +161,16 @@ section.banner {
     h2 {
       font-size: 1.2rem;
     }
+  }
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h1 {
+    margin-bottom: 1rem;
   }
 }
 </style>
