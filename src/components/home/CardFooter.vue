@@ -5,13 +5,11 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="">
+    <div class="flex">
         <slot name="logo"></slot>
         <span class="">{{ text }}</span>
     </div>
 </template>
 
 <style scoped lang="scss">
-
-
 </style>
