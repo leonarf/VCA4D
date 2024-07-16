@@ -5,10 +5,11 @@
             <div class="flex flex-col items-center gap-y-2"
             >
                 <div v-if="study.id" class="flex flex-row items-center justify-center">
-                    <LogoCountrySmall :iso-code="getStudyDetails(study)['country_iso_code'] || 'gr'" />
-                    <div>
-                        {{ getStudyDetails(study).country_name }}
-                    </div>
+                    <CardFooter :text="getStudyDetails(study).country_name">
+                        <template v-slot:logo>
+                            <LogoCountrySmall :iso-code="getStudyDetails(study)['country_iso_code'] || 'gr'" />
+                        </template>
+                    </CardFooter>
                 </div>
                 <Card
                     :link="getLink(study, 'LOCAL')"
@@ -32,6 +33,7 @@ import { getLink } from '@utils/router'
 import LogoCountrySmall from '@components/home/LogoCountrySmall.vue';
 import LogoProductLarge from '@components/home/LogoProductLarge.vue';
 import Card from '@components/home/Card.vue';
+import CardFooter from '../home/CardFooter.vue';
 const props = defineProps({
     studies: Array,
 })
