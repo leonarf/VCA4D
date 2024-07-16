@@ -6,7 +6,9 @@ const props = defineProps({
 
 <template>
     <div class="card-footer">
-        <slot name="logo"></slot>
+        <div class="fixed-height-logo">
+            <slot name="logo"></slot>
+        </div>
         <span class="">{{ text }}</span>
     </div>
 </template>
@@ -17,5 +19,9 @@ const props = defineProps({
     gap: 5px;
 
     justify-content: left;
+
+    .fixed-height-logo {
+        height: 30px;
+    }
 }
 </style>
