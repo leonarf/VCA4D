@@ -15,6 +15,5 @@ const props = defineProps({
     width: 25px;
     display: inline-block;
     position: relative;
-    margin-right: 5px;
 }
 </style>
