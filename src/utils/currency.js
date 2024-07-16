@@ -1,5 +1,4 @@
 import { CHANGE_RATES } from '@utils/rateChanges.js'
-// Récupérer les taux de change sur https://lebasic.nohost.me/api/taux_de_change/
 
 export const KNOWN_CURRENCIES = ["USD", ...Object.keys(CHANGE_RATES)]
 
@@ -13,6 +12,11 @@ const getCurrencyFormatter = (currency) => {
     });
   }
   return CurrencyFormatters[currency]
+}
+
+const currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
+export const getCurrencyName = (currencyISOCode) => {
+  return currencyNames.of(currencyISOCode)
 }
 
 export const getCurrencySymbol = (currency) => getCurrencyFormatter(currency).format(0).replace(/\d/g, '')

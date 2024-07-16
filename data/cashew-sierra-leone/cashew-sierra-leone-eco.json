@@ -5,11 +5,11 @@
   "year": 2018,
   "localCurrency": "1000 SLL",
   "targetCurrency": "SLL",
-  "currencyRatio": null,
+  "currencyRatio": 1000,
   "type": "eco",
   "ecoData": {
     "macroData": {
-      "giniIndex": null,
+      "giniIndex": 0.422,
       "FTE_Definition": null,
       "rateOfIntegration": 0.86,
       "publicFundsBalance": 0.001,
@@ -21,17 +21,17 @@
     "stages": [
       {
         "name": "Producers",
-        "description": "There are three types of producers in the country: ‘smallholders’, covering 90/95% of the production (with average yields of 150 kg/ha on 2.5 ha), block farmers,\r\n(groups of organised smallholders) and private plantations\r\nof various sizes with better yields (250 kg/ha on 10 ha on\r\naverage).",
+        "description": "There are three types of producers in the country: ‘smallholders’, covering 90/95% of the production (with average yields of 150 kg/ha on 2.5 ha), block farmers,\n(groups of organised smallholders) and private plantations\nof various sizes with better yields (250 kg/ha on 10 ha on\naverage).",
         "index": 0
       },
       {
         "name": "Collectors",
-        "description": "local\r\nintermediaries collect from village to village and from\r\nproduction areas to larger storage centres",
+        "description": "local\nintermediaries collect from village to village and from\nproduction areas to larger storage centres",
         "index": 1
       },
       {
         "name": "Processors",
-        "description": "households’ processing for self-consumption, with a little\r\nquantity sold in community markets co-exists with small and medium\r\nscale processors that sell cashews to markets and\r\nlarge-scale industrialized processors",
+        "description": "households’ processing for self-consumption, with a little\nquantity sold in community markets co-exists with small and medium\nscale processors that sell cashews to markets and\nlarge-scale industrialized processors",
         "index": 2
       },
       {
@@ -55,25 +55,25 @@
         "name": "Smallholder",
         "stage": "Producers",
         "id": 218,
-        "numberOfActors": 13186.666666666666,
-        "directAddedValue": 13007328.020121258,
+        "numberOfActors": 13186.6666666667,
+        "directAddedValue": 13007328.0201213,
         "publicFundsBalance": 0,
-        "netOperatingProfit": 5095328.020121258,
-        "totalCosts": 8750671.979878742,
-        "receivedAddedValue": 5095328.020121258,
+        "netOperatingProfit": 5095328.02012126,
+        "totalCosts": 8750671.97987874,
+        "receivedAddedValue": 5095328.02012126,
         "employment": {
-          "tempMale": 527466.6666666666,
+          "tempMale": 527466.666666667,
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
           "skilledFemale": 0,
-          "totalMale": 527466.6666666666,
+          "totalMale": 527466.666666667,
           "totalFemale": 0,
-          "totalTemp": 527466.6666666666,
+          "totalTemp": 527466.666666667,
           "totalSkilled": 0,
           "totalUnskilled": 0,
-          "total": 527466.6666666666
+          "total": 527466.666666667
         }
       },
       {
@@ -89,16 +89,16 @@
         "employment": {
           "tempMale": 0,
           "tempFemale": 0,
-          "unskilledMale": 13125.016174935225,
+          "unskilledMale": 13125.0161749352,
           "unskilledFemale": 0,
-          "skilledMale": 24.104681365480275,
+          "skilledMale": 24.1046813654803,
           "skilledFemale": 0,
-          "totalMale": 13149.120856300706,
+          "totalMale": 13149.12085630068,
           "totalFemale": 0,
           "totalTemp": 0,
-          "totalSkilled": 24.104681365480275,
-          "totalUnskilled": 13125.016174935225,
-          "total": 13149.120856300706
+          "totalSkilled": 24.1046813654803,
+          "totalUnskilled": 13125.0161749352,
+          "total": 13149.12085630068
         }
       },
       {
@@ -114,20 +114,20 @@
         "employment": {
           "tempMale": 0,
           "tempFemale": 0,
-          "unskilledMale": 1042.753411724547,
+          "unskilledMale": 1042.75341172455,
           "unskilledFemale": 0,
-          "skilledMale": 10.080063043309364,
+          "skilledMale": 10.0800630433094,
           "skilledFemale": 0,
-          "totalMale": 1052.8334747678564,
+          "totalMale": 1052.8334747678593,
           "totalFemale": 0,
           "totalTemp": 0,
-          "totalSkilled": 10.080063043309364,
-          "totalUnskilled": 1042.753411724547,
-          "total": 1052.8334747678564
+          "totalSkilled": 10.0800630433094,
+          "totalUnskilled": 1042.75341172455,
+          "total": 1052.8334747678593
         }
       },
       {
-        "name": "Farm/Village gate Trader",
+        "name": "Collector",
         "stage": "Collectors",
         "id": 222,
         "numberOfActors": 3164.8,
@@ -156,34 +156,34 @@
         "stage": "Processors",
         "id": 221,
         "numberOfActors": 395.6,
-        "directAddedValue": 3956238.987069706,
+        "directAddedValue": 3956238.98706971,
         "publicFundsBalance": 0,
-        "netOperatingProfit": 378092.48706970597,
-        "totalCosts": 6930732.5129302945,
-        "receivedAddedValue": 378092.48706970597,
+        "netOperatingProfit": 378092.487069706,
+        "totalCosts": 6930732.51293029,
+        "receivedAddedValue": 378092.487069706,
         "employment": {
           "tempMale": 0,
           "tempFemale": 0,
-          "unskilledMale": 16656.34670034733,
+          "unskilledMale": 16656.3467003473,
           "unskilledFemale": 0,
           "skilledMale": 0,
           "skilledFemale": 0,
-          "totalMale": 16656.34670034733,
+          "totalMale": 16656.3467003473,
           "totalFemale": 0,
           "totalTemp": 0,
           "totalSkilled": 0,
-          "totalUnskilled": 16656.34670034733,
-          "total": 16656.34670034733
+          "totalUnskilled": 16656.3467003473,
+          "total": 16656.3467003473
         }
       },
       {
-        "name": "Unofficial Transbordary Trader",
+        "name": "Regional market",
         "stage": "Wholesalers",
         "id": 226,
         "receivedAddedValue": 0
       },
       {
-        "name": "Official exporter",
+        "name": "Exporter",
         "stage": "Wholesalers",
         "id": 228,
         "numberOfActors": 1,
@@ -208,7 +208,7 @@
         }
       },
       {
-        "name": "Retailer",
+        "name": "Wholesaler",
         "stage": "Retailers",
         "id": 223,
         "numberOfActors": 1,
@@ -222,30 +222,30 @@
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
-          "skilledMale": 22.50014062587891,
+          "skilledMale": 22.5001406258789,
           "skilledFemale": 0,
-          "totalMale": 22.50014062587891,
+          "totalMale": 22.5001406258789,
           "totalFemale": 0,
           "totalTemp": 0,
-          "totalSkilled": 22.50014062587891,
+          "totalSkilled": 22.5001406258789,
           "totalUnskilled": 0,
-          "total": 22.50014062587891
+          "total": 22.5001406258789
         }
       },
       {
-        "name": "RCN Selfcons",
+        "name": "Local consumption",
         "stage": "End use",
         "id": 224,
         "receivedAddedValue": 0
       },
       {
-        "name": "Kernels Selfcons",
+        "name": "Local consumption",
         "stage": "End use",
         "id": 225,
         "receivedAddedValue": 0
       },
       {
-        "name": "Conso export",
+        "name": "World market",
         "stage": "End use",
         "id": 227,
         "receivedAddedValue": 0
@@ -263,7 +263,7 @@
       },
       {
         "sellerActorName": "Smallholder",
-        "buyerActorName": "Farm/Village gate Trader",
+        "buyerActorName": "Collector",
         "volumeExchanged": 3164800,
         "monetaryValue": 11076800,
         "unitPrice": 3.5,
@@ -272,7 +272,7 @@
       },
       {
         "sellerActorName": "Smallholder",
-        "buyerActorName": "RCN Selfcons",
+        "buyerActorName": "Local consumption",
         "volumeExchanged": 395600,
         "monetaryValue": 1384600,
         "unitPrice": 3.5,
@@ -290,7 +290,7 @@
       },
       {
         "sellerActorName": "Private Plantation",
-        "buyerActorName": "Farm/Village gate Trader",
+        "buyerActorName": "Collector",
         "volumeExchanged": 252900,
         "monetaryValue": 1390950,
         "unitPrice": 5.5,
@@ -299,7 +299,7 @@
       },
       {
         "sellerActorName": "Block Farming",
-        "buyerActorName": "Retailer",
+        "buyerActorName": "Wholesaler",
         "volumeExchanged": 63000,
         "monetaryValue": 409500,
         "unitPrice": 6.5,
@@ -308,7 +308,7 @@
       },
       {
         "sellerActorName": "Processor",
-        "buyerActorName": "Kernels Selfcons",
+        "buyerActorName": "Local consumption",
         "volumeExchanged": 21075,
         "monetaryValue": 484725,
         "unitPrice": 23,
@@ -317,7 +317,7 @@
       },
       {
         "sellerActorName": "Processor",
-        "buyerActorName": "Kernels Selfcons",
+        "buyerActorName": "Local consumption",
         "volumeExchanged": 296700,
         "monetaryValue": 6824100,
         "unitPrice": 23,
@@ -325,8 +325,8 @@
         "product": "Kernels"
       },
       {
-        "sellerActorName": "Farm/Village gate Trader",
-        "buyerActorName": "Unofficial Transbordary Trader",
+        "sellerActorName": "Collector",
+        "buyerActorName": "Regional market",
         "volumeExchanged": 252900,
         "monetaryValue": 2529000,
         "unitPrice": 10,
@@ -334,8 +334,8 @@
         "product": "RCN"
       },
       {
-        "sellerActorName": "Farm/Village gate Trader",
-        "buyerActorName": "Unofficial Transbordary Trader",
+        "sellerActorName": "Collector",
+        "buyerActorName": "Regional market",
         "volumeExchanged": 3164800,
         "monetaryValue": 31648000,
         "unitPrice": 10,
@@ -343,8 +343,8 @@
         "product": "RCN"
       },
       {
-        "sellerActorName": "Retailer",
-        "buyerActorName": "Official exporter",
+        "sellerActorName": "Wholesaler",
+        "buyerActorName": "Exporter",
         "volumeExchanged": 63000,
         "monetaryValue": 630000,
         "unitPrice": 10,
@@ -352,11 +352,11 @@
         "product": "RCN"
       },
       {
-        "sellerActorName": "Official exporter",
-        "buyerActorName": "Conso export",
+        "sellerActorName": "Exporter",
+        "buyerActorName": "World market",
         "volumeExchanged": 63000,
         "monetaryValue": 903294.018745422,
-        "unitPrice": 14.338000297546387,
+        "unitPrice": 14.3380002975464,
         "volumeUnit": "Kilogram",
         "product": "RCN"
       }
@@ -365,6 +365,7 @@
       "landOwnersFees": 0,
       "depreciation": 10662790,
       "employeeWages": 8918431.5,
+      "financialInstitutionsInterests": 0,
       "government": 8670628
     },
     "importExport": {
@@ -436,18 +437,24 @@
     "farmToFinalPricesRatio": [
       {
         "label": "Small producer to local market",
-        "farmPrice": 3500,
-        "endPrice": 17250
+        "farmPrice": 3.5,
+        "farmProduct": "Raw Cashew Nut",
+        "endPrice": 17.25,
+        "endProducts": "Cashew nut"
       },
       {
         "label": "Cashew plantation to regional market",
-        "farmPrice": 5500,
-        "endPrice": 10000
+        "farmPrice": 5.5,
+        "farmProduct": "Raw Cashew Nut",
+        "endPrice": 10,
+        "endProducts": "Raw Cashew Nut"
       },
       {
         "label": "Block farming to export",
-        "farmPrice": 6300,
-        "endPrice": 14000
+        "farmPrice": 6.3,
+        "farmProduct": "Raw Cashew Nut",
+        "endPrice": 14,
+        "endProducts": "Raw Cashew Nut"
       }
     ]
   }

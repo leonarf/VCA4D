@@ -9,7 +9,7 @@
   "type": "eco",
   "ecoData": {
     "macroData": {
-      "giniIndex": null,
+      "giniIndex": 0.2343,
       "FTE_Definition": "300 days for temporary,  288 days for permanent unskill and 236 days for permanent skilled",
       "rateOfIntegration": 0.8740000000000001,
       "publicFundsBalance": 0.015,

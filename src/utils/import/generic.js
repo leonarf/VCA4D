@@ -66,7 +66,7 @@ export const parseActorTypes = (json) => {
 }
 
 export const doColumnExist = (excelDataAsJson, columnName) => {
-  var filteredItems = excelDataAsJson.find(row => !!row[columnName])
+  var filteredItems = excelDataAsJson.find(row => row[columnName] != undefined)
   return !!filteredItems
 }
 
@@ -108,7 +108,6 @@ export const getTypeOfExcelFile = (workbook) => {
   return null
 }
 
-
 export const processUploadedExcelFile = (workbook) => {
   let typeOfFile = getTypeOfExcelFile(workbook)
 
@@ -131,7 +130,7 @@ export const processUploadedExcelFile = (workbook) => {
   let knownProducts = getAllKnownProducts()
   if (!knownProducts.includes(slugify(commodity))) {
     setImportErrors(
-      sheetNameForSustainabilityData,
+      ECO_SHEET_NAMES.Home,
       ErrorLevels.BreaksALot,
       `Commodity <b>${slugify(commodity)}</b> is not recognized.`)
   }
@@ -159,7 +158,7 @@ export const processUploadedExcelFile = (workbook) => {
       }
       else {
         setImportErrors(
-          sheetNameForSustainabilityData,
+          ECO_SHEET_NAMES.Home,
           ErrorLevels.BreaksFunctionalities,
           `Either currencies defined by '${HOME_LABELS.LocalCcy}' or '${HOME_LABELS.TargetCcy}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`)
       }

@@ -207,7 +207,7 @@ const parseIndicatorsSheet = (json, actors) => {
 
   actors = actors.map(actor => {
     let indicator = indicators.filter(indicator => indicator.actorName === actor.name)
-    if (indicator.length == 0) {
+    if (indicator.length == 0 && actor.stage != "End use") {
       setImportErrors(
         sheetname,
         ErrorLevels.MayBreakNothing,
