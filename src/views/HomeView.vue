@@ -82,20 +82,22 @@ watch(mandatoryStudiesPart, async (newMandatoryParts, oldMandatoryParts) => {
           <li>Is the value chain <strong>environmentally</strong> sustainable?</li>
         </ul>
       </section>
-      <input type="checkbox" id="withEcoData" value="ecoData" v-model="mandatoryStudiesPart" />
-      <label for="withEcoData">With economic data</label>
+      <section>
+        <input type="checkbox" id="withEcoData" value="ecoData" v-model="mandatoryStudiesPart" />
+        <label for="withEcoData">With economic data</label>
 
-      <input type="checkbox" id="withACVData" value="acvData" v-model="mandatoryStudiesPart" />
-      <label for="withACVData">With environnemental data</label>
+        <input type="checkbox" id="withACVData" value="acvData" v-model="mandatoryStudiesPart" />
+        <label for="withACVData">With environnemental data</label>
 
-      <input
-        type="checkbox"
-        id="withSocialData"
-        value="socialData"
-        v-model="mandatoryStudiesPart"
-      />
-      <label for="withSocialData">With social profil</label>
-      <div>Number of studies: {{ studies.length }}</div>
+        <input
+          type="checkbox"
+          id="withSocialData"
+          value="socialData"
+          v-model="mandatoryStudiesPart"
+        />
+        <label for="withSocialData">With social profil</label>
+        <div>Number of studies: {{ studies.length }}</div>
+      </section>
       <ByCategories
         :categories="categories"
         :studies="studies"
