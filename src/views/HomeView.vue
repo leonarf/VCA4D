@@ -69,7 +69,7 @@ function toggleFilter(filterKey) {
         <p>
           Welcome to the Value Chain Analysis for Development (VCA4D) Information and Knowledge
           Management System. You will find access to all available value chain analyses across
-          agricultural commodities around the world realised through VCA4D.
+          agricultural commodities around the world realised by VCA4D.
         </p>
         <p>
           Value chain analyses assist in informing policy dialogue and investment operations. They
