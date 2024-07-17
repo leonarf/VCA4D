@@ -63,20 +63,8 @@ const dataFile = computed(() => {
             product: props.studyData.commodity.toLowerCase()
         })
     }
-    jsonData.studies.sort(function (itemA, itemB) {
-        if (itemA.country < itemB.country) {
-            return -1
-        }
-        else if (itemA.country > itemB.country) {
-            return 1
-        }
-        if (itemA.product < itemB.product) {
-            return -1
-        }
-        else if (itemA.product > itemB.product) {
-            return 1
-        }
-    });
+    jsonData.studies.sort(sortFunctionByProperties(["country", "product"]));
+  
     const slugifiedCountry = slugify(props.studyData.country)
     if (!jsonData.countries.find(country => country.id === slugifiedCountry)) {
         jsonData.countries.push({
@@ -84,14 +72,8 @@ const dataFile = computed(() => {
             prettyName: props.studyData.country
         })
     }
-    jsonData.countries.sort(function (itemA, itemB) {
-        if (itemA.id < itemB.id) {
-            return -1
-        }
-        else if (itemA.id > itemB.id) {
-            return 1
-        }
-    });
+    jsonData.countries.sort(sortFunctionByProperties(["id"]));
+
     const existingCommodities = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
     const slugifiedCommodity = slugify(props.studyData.commodity)
     if (!existingCommodities.includes(slugifiedCommodity)) {
@@ -102,6 +84,19 @@ const dataFile = computed(() => {
         jsonData
         , null, 2)
 })
+
+function sortFunctionByProperties(propertyKeys) {
+  return function(itemA, itemB) {
+    for (var key of propertyKeys) {
+      if (itemA[key] < itemB[key]) {
+          return -1
+      }
+      else if (itemA[key] > itemB[key]) {
+          return 1
+      }
+    }
+  }
+}
 
 const downloadFile = (data, fileName) => {
   const blob = new Blob([data], { type: 'application/json' })
