@@ -96,9 +96,11 @@ function toggleFilter(filterKey) {
         </ul>
       </section>
       <section>
-        <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')"/>
-        <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')"/>
-        <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')"/>
+        <div class="flex gap-2">
+          <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')"/>
+          <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')"/>
+          <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')"/>
+        </div>
         
         <div>Number of studies: {{ filteredStudies.length }}</div>
       </section>
