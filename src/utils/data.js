@@ -121,3 +121,13 @@ export const getAllKnownProducts = () => {
 }
 
 export const getCountry = (countryId) => getCountries().find(country => country.id === countryId)
+
+export function getProduct(productId) {
+    const jsonProducts = jsonData.products;
+    return jsonProducts.find(product => product.id === productId);
+}
+
+export function getStudy(studyId) {
+    const jsonStudies = jsonData.studies;
+    return jsonStudies.find(study => study.id === studyId);
+}

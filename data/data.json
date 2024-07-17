@@ -2,7 +2,7 @@
   "categories": [
     {
       "id": "orchard",
-      "prettyName": "Orchards",
+      "prettyName": "Tree crops",
       "color": "#5F8A64",
       "textColor": "#5F8A64",
       "commodities": [
@@ -44,7 +44,7 @@
     },
     {
       "id": "halieutic",
-      "prettyName": "Halieutic",
+      "prettyName": "Fisheries and aquaculture",
       "color": "#0073CF",
       "textColor": "#0073CF",
       "commodities": [
@@ -588,7 +588,7 @@
     },
     {
       "id": "oil palm",
-      "prettyName": "oil palm"
+      "prettyName": "Palm Oil"
     },
     {
       "id": "beef",
@@ -620,7 +620,7 @@
     },
     {
       "id": "french beans",
-      "prettyName": "french beans"
+      "prettyName": "green beans"
     },
     {
       "id": "maize",
