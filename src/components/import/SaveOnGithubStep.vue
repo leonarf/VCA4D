@@ -80,6 +80,8 @@ const dataFile = computed(() => {
         jsonData.categories.find(category => category.id === 'unknown').commodities.push(slugifiedCommodity)
     }
 
+    jsonData.products = updateProductList(jsonData.products, existingCommodities);
+
     return JSON.stringify(
         jsonData
         , null, 2)
@@ -96,6 +98,20 @@ function sortFunctionByProperties(propertyKeys) {
       }
     }
   }
+}
+
+function updateProductList(products = [], existingProductKeys) {
+  const newProducts = [...products];
+  existingProductKeys.forEach(productKey => {
+    if (!products.find(product => product.id === productKey)) {
+      newProducts.push({
+        id: productKey,
+        prettyName: productKey 
+      });
+    }
+  });
+  newProducts.sort(sortFunctionByProperties("id"));
+  return newProducts;
 }
 
 const downloadFile = (data, fileName) => {
