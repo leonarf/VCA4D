@@ -4,13 +4,18 @@ import Skeleton from '@components/Skeleton.vue'
 import { computed, onMounted, ref, watch } from 'vue'
 import ByCategories from '@components/home/ByCategories.vue'
 import ByContinents from '@components/home/ByContinents.vue'
+import FilterInput from '@components/home/FilterInput.vue'
 import { getAllJsonData, getStudyData } from '@utils/data'
 
 const countries = ref([])
 const studies = ref([])
 const continents = ref([])
 const categories = ref([])
-const mandatoryStudiesPart = ref([])
+const mandatoryStudiesFilter = ref({
+  ecoData: false,
+  acvData: false,
+  socialData: false
+});
 
 onMounted(async () => {
   const allJsonData = getAllJsonData()
@@ -22,16 +27,16 @@ onMounted(async () => {
 
 const currency = computed(() => localStorage.getItem('currency') || 'LOCAL')
 
-watch(mandatoryStudiesPart, async (newMandatoryParts, oldMandatoryParts) => {
+watch(mandatoryStudiesFilter, async () => {
   const allJsonData = getAllJsonData()
   console.log('allJsonData', allJsonData)
-  console.log('mandatoryStudiesPart', mandatoryStudiesPart)
+  console.log('mandatoryStudiesFilter', mandatoryStudiesFilter)
 
   studies.value = []
   allJsonData.studies.forEach((study) => {
     getStudyData(study.id).then((dataStudy) => {
-      for (var studyPart of mandatoryStudiesPart.value) {
-        if (!dataStudy[studyPart]) {
+      for (var studyPart in mandatoryStudiesFilter.value) {
+        if (mandatoryStudiesFilter.value[studyPart] && !dataStudy[studyPart]) {
           console.log(studyPart, 'not in ', study.id)
           return
         }
@@ -39,7 +44,11 @@ watch(mandatoryStudiesPart, async (newMandatoryParts, oldMandatoryParts) => {
       studies.value.push(study)
     })
   })
-})
+}, { deep: true })
+
+function toggleFilter(filterKey) {
+  mandatoryStudiesFilter.value[filterKey] = !mandatoryStudiesFilter.value[filterKey];
+}
 </script>
 
 <template>
@@ -83,19 +92,10 @@ watch(mandatoryStudiesPart, async (newMandatoryParts, oldMandatoryParts) => {
         </ul>
       </section>
       <section>
-        <input type="checkbox" id="withEcoData" value="ecoData" v-model="mandatoryStudiesPart" />
-        <label for="withEcoData">With economic data</label>
-
-        <input type="checkbox" id="withACVData" value="acvData" v-model="mandatoryStudiesPart" />
-        <label for="withACVData">With environnemental data</label>
-
-        <input
-          type="checkbox"
-          id="withSocialData"
-          value="socialData"
-          v-model="mandatoryStudiesPart"
-        />
-        <label for="withSocialData">With social profil</label>
+        <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')"/>
+        <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')"/>
+        <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')"/>
+        
         <div>Number of studies: {{ studies.length }}</div>
       </section>
       <ByCategories
