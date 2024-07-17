@@ -27,15 +27,15 @@ const props = defineProps({
 
     <footer v-if="!skipFooter">
         <ul>
-            <li><a href="https://github.com/leonarf/VCA4D">Code source sur Github</a></li>
+            <li><a target="_blank" class="hover:underline" href="https://github.com/leonarf/VCA4D">Code source sur Github</a></li>
             <li>
-                <RouterLink to="/admin-import">Import a study</RouterLink>
+                <RouterLink class="hover:underline"to="/admin-import">Import a study</RouterLink>
             </li>
             <li>
-                <a href="https://capacity4dev.europa.eu/projects/value-chain-analysis-for-development-vca4d_en">VCA4D's website project</a>
+                <a target="_blank" class="hover:underline" href="https://capacity4dev.europa.eu/projects/value-chain-analysis-for-development-vca4d_en">VCA4D's website project</a>
             </li>
             <li>
-                <a href="https://lebasic.com/">Website developped by Basic</a>
+                <a target="_blank" class="hover:underline" href="https://lebasic.com/">Website developped by Basic</a>
             </li>
         </ul>
     </footer>
