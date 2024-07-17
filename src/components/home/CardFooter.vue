@@ -5,13 +5,23 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="">
-        <slot name="logo"></slot>
+    <div class="card-footer">
+        <div class="fixed-height-logo">
+            <slot name="logo"></slot>
+        </div>
         <span class="">{{ text }}</span>
     </div>
 </template>
 
 <style scoped lang="scss">
+.card-footer {
+    display: flex;
+    gap: 5px;
 
+    justify-content: left;
 
+    .fixed-height-logo {
+        height: 30px;
+    }
+}
 </style>

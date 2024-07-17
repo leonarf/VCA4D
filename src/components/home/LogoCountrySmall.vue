@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div :class="`fib fi-${isoCode} bg-cover rounded-full logo-country-small` "></div>
+    <div :class="`fib fi-${isoCode} bg-cover rounded-full logo-country-small shrink-0`"></div>
 </template>
 
 <style scoped lang="scss">
@@ -15,7 +15,5 @@ const props = defineProps({
     width: 25px;
     display: inline-block;
     position: relative;
-    top: 6px;
-    margin-right: 5px;
 }
 </style>
