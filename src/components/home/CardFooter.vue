@@ -21,6 +21,7 @@ const props = defineProps({
     justify-content: left;
 
     .fixed-height-logo {
+        flex-shrink: 0;
         height: 30px;
     }
 }
