@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import _ from 'lodash';
 import Skeleton from '@components/Skeleton.vue'
 import { computed, onMounted, ref, watch } from 'vue'
 import ByCategories from '@components/home/ByCategories.vue'
@@ -20,31 +20,35 @@ const mandatoryStudiesFilter = ref({
 onMounted(async () => {
   const allJsonData = getAllJsonData()
   countries.value = allJsonData.countries
-  studies.value = allJsonData.studies
+  studies.value = await populateStudiesData(allJsonData.studies);
   continents.value = [...new Set(countries.value.map((country) => country.continent))]
   categories.value = allJsonData.categories
 })
 
+async function populateStudiesData(jsonStudies) {
+  return Promise.all(jsonStudies.map(populateStudyData));
+
+  async function populateStudyData(jsonStudy) {
+    const studyData = await getStudyData(jsonStudy.id);
+    return {
+      ...jsonStudy,
+      ..._.pick(studyData, ["ecoData", "acvData", "socialData"])
+    };
+  }
+}
+
 const currency = computed(() => localStorage.getItem('currency') || 'LOCAL')
 
-watch(mandatoryStudiesFilter, async () => {
-  const allJsonData = getAllJsonData()
-  console.log('allJsonData', allJsonData)
-  console.log('mandatoryStudiesFilter', mandatoryStudiesFilter)
+const filteredStudies = computed(() => {
+  return studies.value.filter(hasMandatoryParts);
 
-  studies.value = []
-  allJsonData.studies.forEach((study) => {
-    getStudyData(study.id).then((dataStudy) => {
-      for (var studyPart in mandatoryStudiesFilter.value) {
-        if (mandatoryStudiesFilter.value[studyPart] && !dataStudy[studyPart]) {
-          console.log(studyPart, 'not in ', study.id)
-          return
-        }
-      }
-      studies.value.push(study)
-    })
-  })
-}, { deep: true })
+  function hasMandatoryParts(study) {
+    for (var studyPart in mandatoryStudiesFilter.value) {
+      if (mandatoryStudiesFilter.value[studyPart] && !study[studyPart]) { return false; }
+    }
+    return true;
+  }
+})
 
 function toggleFilter(filterKey) {
   mandatoryStudiesFilter.value[filterKey] = !mandatoryStudiesFilter.value[filterKey];
@@ -96,16 +100,16 @@ function toggleFilter(filterKey) {
         <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')"/>
         <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')"/>
         
-        <div>Number of studies: {{ studies.length }}</div>
+        <div>Number of studies: {{ filteredStudies.length }}</div>
       </section>
       <ByCategories
         :categories="categories"
-        :studies="studies"
+        :studies="filteredStudies"
         :countries="countries"
         :currency="currency"
       />
 
-      <ByContinents :studies="studies" :countries="countries" :currency="currency" />
+      <ByContinents :studies="filteredStudies" :countries="countries" :currency="currency" />
     </section>
   </Skeleton>
 </template>
