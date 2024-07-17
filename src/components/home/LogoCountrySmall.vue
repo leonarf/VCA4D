@@ -11,8 +11,8 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .logo-country-small{
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     display: inline-block;
     position: relative;
 }

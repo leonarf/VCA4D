@@ -13,7 +13,7 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .number-badge{
-    height: 28px;
-    width: 28px;
+    height: 30px;
+    width: 30px;
 }
 </style>

@@ -9,7 +9,7 @@ const props = defineProps({
         <div class="logo">
             <slot name="logo"></slot>
         </div>
-        <span class="">{{ text }}</span>
+        <span class="text">{{ text }}</span>
     </div>
 </template>
 
@@ -19,11 +19,16 @@ const props = defineProps({
     gap: 5px;
 
     justify-content: left;
-    
-    min-height: 30px;
+    align-items: start;
 
     .logo {
         flex-shrink: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .text {
+        margin-top: 3px;
     }
 }
 </style>

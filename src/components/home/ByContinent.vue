@@ -71,7 +71,7 @@ const getCountry = (countryId) => {
                             <LogoCountryLarge :isoCode="getCountry(item.country).iso || 'gr'" />
                         </template>
                         <template v-slot:footer>
-                            <CardFooter :text="item.studies[0].title">
+                            <CardFooter class="capitalize" :text="item.studies[0].title">
                                 <template v-slot:logo>
                                     <LogoProductSmall :product-name="item.studies[0].product" :alt="`Link to ${item.studies[0].title} study`"/>
                                 </template>
