@@ -20,18 +20,7 @@
             </RouterLink>
         </p>
 
-        <h3 class="mt-8">How is <strong>employment</strong> distributed across the value chain?</h3>
-
-        <p>Methodology</p>
-        <p>Employment data only relate to full time equivalent jobs for this specific value chain and do not include total
-            employment of each actor. In addition, the informal family workforce at the agricultural production level is not
-            accounted for.</p>
-        <div class="flex flex-col gap-y-4 mt-4">
-            <EmploymentDistributionActors :studyData="studyData"/>
-            <EmploymentDistributionJobs :studyData="studyData"/>
-        </div>
-
-        <h3>How is <strong>income</strong> distributed across actors of the value chain?</h3>
+        <QuestionTitle>How is <strong>income</strong> distributed across actors of the value chain?</QuestionTitle>
         <p>Actors that are in small numbers but receive an important share of the value chain's net operating profit are in
             a stronger position of negociation in front of actore that are more divided.</p>
         <p>NB: The income data only relate to this specific value chain: the data do not include any other income from any
@@ -41,9 +30,19 @@
             <NetOperatingProfit :studyData="studyData" :currency="currency"/>
             <NetOperatingProfitPerActor :studyData="studyData" :currency="currency" />
         </div>
+
+        <QuestionTitle class="mt-8">How is <strong>employment</strong> distributed across the value chain?</QuestionTitle>
+        <p>Employment data only relate to full time equivalent jobs for this specific value chain and do not include total
+            employment of each actor. In addition, the informal family workforce at the agricultural production level is not
+            accounted for.</p>
+        <div class="flex flex-col gap-y-4 mt-4">
+            <EmploymentDistributionActors :studyData="studyData"/>
+            <EmploymentDistributionJobs :studyData="studyData"/>
+        </div>
+
         <br>
 
-        <h3>What is the impact of the <strong>governance system</strong> on the income distribution?</h3>
+        <QuestionTitle>What is the impact of the <strong>governance system</strong> on the income distribution?</QuestionTitle>
         <InfoTitle title="Share of farm gate price in final price" class="mb-4 mt-8" :class="{'TODO': !hasPricesData}" />
         <ShareOfFarmPrice v-if="hasPricesData" :data="pricesData"/>
         <br />
@@ -62,6 +61,7 @@ import NetOperatingProfitPerActor from './study/inclusiveness/NetOperatingProfit
 import InfoTitle from '@typography/InfoTitle.vue'
 import GiniIndex from './study/inclusiveness/GiniIndex.vue'
 import ShareOfFarmPrice from './study/inclusiveness/ShareOfFarmPrice.vue'
+import QuestionTitle from "@components/study/QuestionTitle.vue"
 import { computed } from 'vue'
 import { useCurrencyUtils } from '@utils/format'
 import { LOCAL_STORAGE_ID } from '@utils/data.js'
