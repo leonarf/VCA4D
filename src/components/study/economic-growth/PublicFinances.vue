@@ -1,5 +1,5 @@
 <template>
-    <h3 class="mt-12">What is the contribution of the value chain to the <strong>public finances</strong>?</h3>
+    <QuestionTitle>What is the contribution of the value chain to the <strong>public finances</strong>?</QuestionTitle>
     <div class="flex flex-row flex-wrap items-center ml-12">
       <div class="w-full lg:w-1/4">
         <div class="uppercase font-semibold text-[#303030] text-xl">Public Funds Balance</div>
@@ -41,6 +41,7 @@ import {
 import { useCurrencyUtils, formatPercent } from '@utils/format.js'
 import { useActorsAndStages } from '@utils/misc.js'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
+import QuestionTitle from '@components/study/QuestionTitle.vue'
 
 const props = defineProps({
     studyData: Object,

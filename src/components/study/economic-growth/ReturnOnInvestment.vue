@@ -1,5 +1,5 @@
 <template>
-    <h3>How <strong>profitable</strong> and viable are the value chain activities for the actors involved?</h3>
+    <QuestionTitle>How <strong>profitable</strong> and viable are the value chain activities for the actors involved?</QuestionTitle>
     <InfoTitle title="Return on investment (%)" information="percentage of net operating profit in total costs (NB : for
       producers this includes actor revenue)" class="mb-4" />
       <template v-if="studyData">
@@ -30,6 +30,7 @@ import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
 import { useCurrencyUtils } from '@utils/format.js'
 import { useActorsAndStages } from '@utils/misc.js'
+import QuestionTitle from '@components/study/QuestionTitle.vue'
 
 const props = defineProps({
     studyData: Object,

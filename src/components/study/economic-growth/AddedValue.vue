@@ -1,4 +1,5 @@
 <template>
+  <QuestionTitle>Total Value Added and its share in national and agricultural GDP</QuestionTitle>
   <div class="flex flex-row flex-wrap justify-evenly w-full items-center my-8 gap-y-8">
     <NiceMetric label="Total value added" :value="totalAddedValueCreators" />
     <NiceMetric
@@ -11,7 +12,7 @@
     />
   </div>
 
-  <h2>Is the value chain independent from imports?</h2>
+  <QuestionTitle>Is the value chain independent from imports?</QuestionTitle>
 
   <InfoTitle
     title="Rate of integration into domestic economy"
@@ -29,7 +30,7 @@
     textRight="<b>> 70% :</b><br> Only few goods need to be imported"
     :is-percent="true"
   />
-  <h3>Who <strong>creates and receives</strong> the value added?</h3>
+  <QuestionTitle>Who <strong>creates and receives</strong> the value added?</QuestionTitle>
   <div class="flex flex-row flex-wrap gap-y-8 justify-evenly my-12">
     <div class="flex flex-col items-center">
       <Ring
@@ -60,6 +61,7 @@ import { useActorsAndStages } from '@utils/misc.js'
 import InfoTitle from '@typography/InfoTitle.vue'
 import HorizontalSlider from '@components/charts/HorizontalSlider.vue'
 import { formatPercent } from '@utils/format.js'
+import QuestionTitle from '@components/study/QuestionTitle.vue'
 
 const props = defineProps({
   studyData: Object,
