@@ -49,7 +49,7 @@
     const routes = [
         {
             view: undefined,
-            label: 'Overview',
+            label: 'Functional Analysis',
             accessible: (props.hasEco + props.hasSocial + props.hasACV) >= 2
         },
         {

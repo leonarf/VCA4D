@@ -1,7 +1,7 @@
 <template>
     <article class="mt-4">
         <SectionTitle>
-            <h1>Overview</h1>
+            <h1>Functional Analysis</h1>
         </SectionTitle> 
 
         <section v-if="studyData.ecoData" class="pt-2">

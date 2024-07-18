@@ -283,7 +283,7 @@ export const getReturnOnInvestmentData = (stages, actors, currentStage, convertA
         ...ret,
         yAxis: {
             type: 'value',
-            name: 'RETURN ON INVESTMENT (%)',
+            name: 'BENEFIT/COST RATIO (%)',
             axisLine: {
                 show: true,
             }

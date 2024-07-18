@@ -3,11 +3,11 @@
   <div class="flex flex-row flex-wrap justify-evenly w-full items-center my-8 gap-y-8">
     <NiceMetric label="Total value added" :value="totalAddedValueCreators" />
     <NiceMetric
-      label="Value added share of the agricultural sector GDP"
+      label="Total Value Added share of the agricultural sector GDP"
       :value="formatPercent(+studyData.ecoData.macroData?.valueAddedShareAgriculturalGdp)"
     />
     <NiceMetric
-      label="Value added share of national GDP"
+      label="Total Value Added share of national GDP"
       :value="formatPercent(+studyData.ecoData.macroData?.valueAddedShareNationalGdp)"
     />
   </div>

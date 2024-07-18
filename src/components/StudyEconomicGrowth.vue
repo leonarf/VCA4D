@@ -4,10 +4,11 @@
       <h1>What is the contribution of the value chain to <strong>economic growth</strong>?</h1>
     </SectionTitle>
     <p>
-      VCA4D analyses show not only the value chain's contribution to the national wealth and to the
-      wealth in agriculture. The methodology has also developped data on the distribution of the net
-      benefits across the various actors of the value chain, including the contribution left to the
-      state budget, after public investment in the value chain.
+      The economic analysis aims at measuring and interpreting the <strong>profitability and economic sustainability</strong>
+      of the value chain operations for all the actors directly involved. Its purpose is to inform on the 
+      economic <strong>effects</strong> of the value chain within the national economy in terms of 
+      <strong>growth generation</strong> and <strong>distribution of incomes</strong>. 
+      It also assesses its <strong>viability</strong> within the global economy.  
     </p>
 
     <ReturnOnInvestment :studyData="studyData" :currency="currency"/>
