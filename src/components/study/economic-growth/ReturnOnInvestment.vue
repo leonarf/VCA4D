@@ -1,12 +1,12 @@
 <template>
-    <QuestionTitle>How <strong>profitable</strong> and viable are the value chain activities for the actors involved?</QuestionTitle>
-    <InfoTitle title="Return on investment (%)" information="percentage of net operating profit in total costs (NB : for
+    <QuestionTitle>How <strong>profitable</strong> and sustainable are the value chain activities for the actors involved?</QuestionTitle>
+    <InfoTitle title="Benefit/Cost Ratio (%)" information="percentage of net operating profit in total costs (NB : for
       producers this includes actor revenue)" class="mb-4" />
       <template v-if="studyData">
         <BarChart :options="populatedBarChartData" 
           @chartSeriesClick="handleDataChartSeriesClick" />
         <div v-if="selectedStage">
-          <MiniChartContainer :currentStage="selectedStage" title="Return On Investment">
+          <MiniChartContainer :currentStage="selectedStage" title="Benefit/Cost Ratio (%)">
               <div class="flex flex-row w-full justify-evenly mt-6">
                   <div class="w-full flex flex-row justify-center">
                     <Ring :options="currentStageReturnOnInvestmentData"></Ring>
