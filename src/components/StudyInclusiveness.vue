@@ -1,13 +1,24 @@
 <template>
     <article class="mt-8">
         <SectionTitle>
-            <h1>Is the economic growth <strong>inclusive</strong>?</h1>
+            <h1>Is the VC economic growth <strong>inclusive</strong>?</h1>
         </SectionTitle>
-        <p>A value chain is inclusive in one country not only by the number of jobs created, but also considering these
-            jobs' quality. The way the income is distributed across the value chain from the samll producers to the
-            consumers also tell about the power dynamics and the policies that may be improved for more inclusiveness. For
-            detailed information on the value chain's impact on the most vulnerable groups, like women and youth, please go
-            directly to Social sustainability part (*link).</p>
+        <p>
+            To build an image of the inclusiveness of the value chain, a VCA4D study 
+            highlights how the VC organisation and governance involve the various 
+            stakeholders and how the incomes and employment generated are distributed 
+            among social groups. The value chain specific impact on vulnerable groups 
+            such as subsistence-oriented farmers, smallholders, women, youth, and 
+            marginalised people (landless rural workers, minority communities…) is 
+            closely documented. Please also visit
+            <RouterLink 
+                :to="`/study?id=${studyData.id}&view=social-sustainability&currency=${studyData.targetCurrency}`"
+                :class="{ disabled: !studyData.socialData}"
+                class="text-blue-600"
+            >
+                our page on Social Sustainability
+            </RouterLink>
+        </p>
 
         <h3 class="mt-8">How is <strong>employment</strong> distributed across the value chain?</h3>
 
@@ -43,6 +54,7 @@
 
 <script setup>
 import SectionTitle from '@typography/SectionTitle.vue'
+import { RouterLink } from "vue-router";
 import EmploymentDistributionActors from './study/inclusiveness/EmploymentDistributionActors.vue'
 import EmploymentDistributionJobs from './study/inclusiveness/EmploymentDistributionJobs.vue'
 import NetOperatingProfit from './study/inclusiveness/NetOperatingProfit.vue'
@@ -52,6 +64,8 @@ import GiniIndex from './study/inclusiveness/GiniIndex.vue'
 import ShareOfFarmPrice from './study/inclusiveness/ShareOfFarmPrice.vue'
 import { computed } from 'vue'
 import { useCurrencyUtils } from '@utils/format'
+import { LOCAL_STORAGE_ID } from '@utils/data.js'
+
 
 const props = defineProps({
     studyData: Object,
@@ -65,6 +79,9 @@ const hasPricesData = computed(() => {
         return false
     }
     return props.studyData.ecoData.farmToFinalPricesRatio.length > 0
+})
+const isLocalStudy = computed(() => {
+    return studyId === LOCAL_STORAGE_ID;
 })
 
 
