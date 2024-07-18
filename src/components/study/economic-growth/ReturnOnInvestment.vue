@@ -19,9 +19,9 @@
           </MiniChartContainer>
         </div>
       </template>
-      <template v-else>
-        <a class="TODO">Data are missing to display this GraphBar</a>
-      </template>
+      <div v-else class="mt-4">
+        <NoDataBadge/>
+      </div>
 </template>
 
 <script setup>
@@ -35,6 +35,7 @@ import Ring from '@charts/Ring.vue'
 import { useCurrencyUtils } from '@utils/format.js'
 import { useActorsAndStages } from '@utils/misc.js'
 import QuestionTitle from '@components/study/QuestionTitle.vue'
+import NoDataBadge from '@components/study/NoDataBadge.vue'
 
 const props = defineProps({
     studyData: Object,
