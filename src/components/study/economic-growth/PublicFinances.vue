@@ -5,8 +5,7 @@
         <div class="uppercase font-semibold text-[#303030] text-xl">Public Funds Balance</div>
         <div class="font-semibold text-2xl text-[#C1C1C1]">{{ publicFundsBalance }}</div>
         <div class="mt-2">
-          Taxes - Subventions<br>
-          Positive if the sector contributes to the government income more than it receives in subsidies and tax break
+          The positive balance (Taxes minus Subsidies) means that the value chain contributes to the government income more than it receives through subsidies and tax break.
         </div>
         <div class="uppercase font-semibold text-[#C1C1C1] text-2xl mt-4 ">{{ formatPercent(parseFloat(studyData.ecoData.macroData?.publicFundsBalance)) }}</div>
         <div class="uppercase font-semibold text-[#656565] text-base">Public Funds Balance / Public Budget</div>

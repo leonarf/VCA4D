@@ -3,16 +3,24 @@
 	    <p>
 	      The VCA4D methodology assesses for each value chain its dependency on international exports as
 	      well as its capacity to export on international markets with competitive price or on the
-	      contrary a higher remuneration of the actors supported by porection policies.
+	      contrary a higher remuneration of the actors supported by protection policies.
 	    </p>
 	    <br>
-	    <h3>Is it financially attractive to sell abroad ?</h3>
+	    <h3>Is the VC able to compete within the international market?</h3>
 	
-	    <InfoTitle title="Domestic resource cost ratio" class="mb-4" :class="{'TODO': !studyData.ecoData.macroData?.domesticResourceCostRatio}" />
+	    <InfoTitle
+				class="mb-4"
+				:class="{'TODO': !studyData.ecoData.macroData?.domesticResourceCostRatio}"
+				title="Domestic Resource Cost ratio (DRC)"
+				information="The DRC measures the value of domestic factors necessary to gain one foreign currency unit. DRC < 1 means that the VC is viable in the global economy because the value of domestic factors which are consumed is lower than the value they produce, without any subventions on input and taxes on output (from the standpoint of the international markets and considering the present level of remuneration of domestic factors). "
+			/>
 	    <DomesticResourceCostRatio v-if="studyData.ecoData.macroData?.domesticResourceCostRatio" :value="studyData.ecoData.macroData?.domesticResourceCostRatio" />
 	    <br>
-	    <InfoTitle title="Nominal protection Coefficient" information="Domestic price / Internation parity price"
-	      class="mb-4" />
+	    <InfoTitle
+				title="Nominal Protection Coefficient (NPC)"
+				information="NPC assesses the international competitiveness by comparing the national and international prices of every VC product. A NPC > 1 means that the domestic value is higher than the international market price. Thus, the overall VC remuneration is higher than it would be if applying international parity prices."
+	      class="mb-4"
+			/>
 	    <NominalProtectionCoefficient :value="studyData.ecoData.macroData?.nominalProtectionCoefficient" />
 </template>
 
