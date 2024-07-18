@@ -5,7 +5,7 @@
       <div class="uppercase font-semibold text-[#303030] text-xl">Balance of trade of the value chain</div>
       <div class="font-semibold text-2xl text-[#C1C1C1]">{{  balanceOfTrade  }}</div>
       <div class="mt-2">
-        exported value chain products minus imported value chain inputs
+        Importing intermediate consumption goods for the VC activities denotes losing foreign currency for the national economy while VC exports (if any) bring foreign currency gains
       </div>
     </div>
     <div class="bg-[#DBEDDD] rounded-xl px-6 py-4">
