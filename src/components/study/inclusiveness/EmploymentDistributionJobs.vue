@@ -1,48 +1,50 @@
 <template>
-    <InfoTitle title="Jobs" class="mt-8" />
-    <div class="flex flex-col mb-8">
-        <div class="flex flex-row flex-wrap items-start justify-center">
-            <div class="w-1/2 md:w-1/5 flex flex-col space-y-4 pt-8">
-                <NiceMetric label="Waged employment" :value="totalNumberOfJobs" />
-                <NiceMetric label="% female employment" :value="`${percentFemaleEmployment}`" />
-            </div>
-            <div class="w-full md:w-4/5">
-                <BarChart v-if="studyData" :options="numberOfJobsData"
-                    @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
-            </div>
-        </div>
-        <div v-if="selectedStage">
-            <MiniChartContainer :currentStage="selectedStage" title="Employment">
-                <div class="flex flex-row w-full justify-evenly mt-6">
-                    <template v-if="studyData">
-                        <template v-if="currentStageEmploymentByTypeOfActorData">
-                            <div class="w-1/3 aspect-w-1 aspect-h-1">
-                            <Ring :options="currentStageEmploymentByTypeOfActorData"
-                            style="height: 300px;"></Ring>
-                        </div>
-                    </template>
-                    <template v-if="currentStageEmploymentByQualificationData">
-                        <div class="w-1/3 aspect-w-1 aspect-h-1">
-                            <Ring v-if="studyData" :options="currentStageEmploymentByQualificationData"
-                            style="height: 300px;"></Ring>
-                        </div>
-                    </template>
-                    <template v-else>
-                        <p>No data about job's qualification</p>
-                    </template>
-                    <template v-if="currentStageEmploymentByGenderData">
-                        <div class="w-1/3 aspect-w-1 aspect-h-1">
-                            <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px;">
-                            </Ring>
-                        </div>
-                    </template>
-                    <template v-else>
-                        <p>No data about job's gender</p>
-                    </template>
-                </template>
-                    
+    <div>
+        <InfoTitle title="Jobs" class="mt-8" />
+        <div class="flex flex-col mb-8">
+            <div class="flex flex-row flex-wrap items-start justify-center">
+                <div class="w-1/2 md:w-1/5 flex flex-col space-y-4 pt-8">
+                    <NiceMetric label="Waged employment" :value="totalNumberOfJobs" />
+                    <NiceMetric label="% female employment" :value="`${percentFemaleEmployment}`" />
                 </div>
-            </MiniChartContainer>
+                <div class="w-full md:w-4/5">
+                    <BarChart v-if="studyData" :options="numberOfJobsData"
+                        @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
+                </div>
+            </div>
+            <div v-if="selectedStage">
+                <MiniChartContainer :currentStage="selectedStage" title="Employment">
+                    <div class="flex flex-row w-full justify-evenly mt-6">
+                        <template v-if="studyData">
+                            <template v-if="currentStageEmploymentByTypeOfActorData">
+                                <div class="w-1/3 aspect-w-1 aspect-h-1">
+                                <Ring :options="currentStageEmploymentByTypeOfActorData"
+                                style="height: 300px;"></Ring>
+                            </div>
+                        </template>
+                        <template v-if="currentStageEmploymentByQualificationData">
+                            <div class="w-1/3 aspect-w-1 aspect-h-1">
+                                <Ring v-if="studyData" :options="currentStageEmploymentByQualificationData"
+                                style="height: 300px;"></Ring>
+                            </div>
+                        </template>
+                        <template v-else>
+                            <p>No data about job's qualification</p>
+                        </template>
+                        <template v-if="currentStageEmploymentByGenderData">
+                            <div class="w-1/3 aspect-w-1 aspect-h-1">
+                                <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px;">
+                                </Ring>
+                            </div>
+                        </template>
+                        <template v-else>
+                            <p>No data about job's gender</p>
+                        </template>
+                    </template>
+                        
+                    </div>
+                </MiniChartContainer>
+            </div>
         </div>
     </div>
 </template>

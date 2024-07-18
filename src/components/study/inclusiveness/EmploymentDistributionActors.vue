@@ -1,23 +1,25 @@
 <template>
-    <InfoTitle title="Number of actors" class="mb-4 mt-8" />
-    <div class="flex flex-col mt-4">
-        <div class="flex flex-row flex-wrap items-center justify-center">
-            <div class="w-1/2 md:w-1/5">
-                <NiceMetric label="Number of actors" :value="totalNumberOfActors" />
-            </div>
-            <div class="w-full md:w-4/5">
-                <BarChart v-if="studyData" :options="numberOfActorsData"
-                        @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
-            </div>
-        </div>
-        <div v-if="selectedStage">
-            <MiniChartContainer :currentStage="selectedStage" title="Number of actors">
-                <div class="flex flex-row w-full justify-evenly mt-6">
-                    <div class="w-full flex flex-row justify-center">
-                        <Ring :options="currentStageNumberOfActorsByTypeOfActorData"></Ring>
-                    </div>
+    <div>
+        <InfoTitle title="Number of actors" class="mb-4 mt-8" />
+        <div class="flex flex-col mt-4">
+            <div class="flex flex-row flex-wrap items-center justify-center">
+                <div class="w-1/2 md:w-1/5">
+                    <NiceMetric label="Number of actors" :value="totalNumberOfActors" />
                 </div>
-            </MiniChartContainer>
+                <div class="w-full md:w-4/5">
+                    <BarChart v-if="studyData" :options="numberOfActorsData"
+                            @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
+                </div>
+            </div>
+            <div v-if="selectedStage">
+                <MiniChartContainer :currentStage="selectedStage" title="Number of actors">
+                    <div class="flex flex-row w-full justify-evenly mt-6">
+                        <div class="w-full flex flex-row justify-center">
+                            <Ring :options="currentStageNumberOfActorsByTypeOfActorData"></Ring>
+                        </div>
+                    </div>
+                </MiniChartContainer>
+            </div>
         </div>
     </div>
 </template>
