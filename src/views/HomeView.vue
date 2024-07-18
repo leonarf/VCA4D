@@ -1,45 +1,58 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import _ from 'lodash';
 import Skeleton from '@components/Skeleton.vue'
 import { computed, onMounted, ref, watch } from 'vue'
 import ByCategories from '@components/home/ByCategories.vue'
 import ByContinents from '@components/home/ByContinents.vue'
+import FilterInput from '@components/home/FilterInput.vue'
 import { getAllJsonData, getStudyData } from '@utils/data'
 
 const countries = ref([])
 const studies = ref([])
 const continents = ref([])
 const categories = ref([])
-const mandatoryStudiesPart = ref([])
+const mandatoryStudiesFilter = ref({
+  ecoData: false,
+  acvData: false,
+  socialData: false
+});
 
 onMounted(async () => {
   const allJsonData = getAllJsonData()
   countries.value = allJsonData.countries
-  studies.value = allJsonData.studies
+  studies.value = await populateStudiesData(allJsonData.studies);
   continents.value = [...new Set(countries.value.map((country) => country.continent))]
   categories.value = allJsonData.categories
 })
 
+async function populateStudiesData(jsonStudies) {
+  return Promise.all(jsonStudies.map(populateStudyData));
+
+  async function populateStudyData(jsonStudy) {
+    const studyData = await getStudyData(jsonStudy.id);
+    return {
+      ...jsonStudy,
+      ..._.pick(studyData, ["ecoData", "acvData", "socialData"])
+    };
+  }
+}
+
 const currency = computed(() => localStorage.getItem('currency') || 'LOCAL')
 
-watch(mandatoryStudiesPart, async (newMandatoryParts, oldMandatoryParts) => {
-  const allJsonData = getAllJsonData()
-  console.log('allJsonData', allJsonData)
-  console.log('mandatoryStudiesPart', mandatoryStudiesPart)
+const filteredStudies = computed(() => {
+  return studies.value.filter(hasMandatoryParts);
 
-  studies.value = []
-  allJsonData.studies.forEach((study) => {
-    getStudyData(study.id).then((dataStudy) => {
-      for (var studyPart of mandatoryStudiesPart.value) {
-        if (!dataStudy[studyPart]) {
-          console.log(studyPart, 'not in ', study.id)
-          return
-        }
-      }
-      studies.value.push(study)
-    })
-  })
+  function hasMandatoryParts(study) {
+    for (var studyPart in mandatoryStudiesFilter.value) {
+      if (mandatoryStudiesFilter.value[studyPart] && !study[studyPart]) { return false; }
+    }
+    return true;
+  }
 })
+
+function toggleFilter(filterKey) {
+  mandatoryStudiesFilter.value[filterKey] = !mandatoryStudiesFilter.value[filterKey];
+}
 </script>
 
 <template>
@@ -51,12 +64,12 @@ watch(mandatoryStudiesPart, async (newMandatoryParts, oldMandatoryParts) => {
       </div>
     </section>
     <section class="mx-4 sm:mx-8 md:mx-12 lg:mx-48 xl:mx-60">
-      <section>
+      <section class="welcome-message">
         <h1>Get insights into agri-food value chains in EU partner countries</h1>
         <p>
           Welcome to the Value Chain Analysis for Development (VCA4D) Information and Knowledge
           Management System. You will find access to all available value chain analyses across
-          agricultural commodities around the world realised through VCA4D.
+          agricultural commodities around the world realised by VCA4D.
         </p>
         <p>
           Value chain analyses assist in informing policy dialogue and investment operations. They
@@ -82,28 +95,23 @@ watch(mandatoryStudiesPart, async (newMandatoryParts, oldMandatoryParts) => {
           <li>Is the value chain <strong>environmentally</strong> sustainable?</li>
         </ul>
       </section>
-      <input type="checkbox" id="withEcoData" value="ecoData" v-model="mandatoryStudiesPart" />
-      <label for="withEcoData">With economic data</label>
-
-      <input type="checkbox" id="withACVData" value="acvData" v-model="mandatoryStudiesPart" />
-      <label for="withACVData">With environnemental data</label>
-
-      <input
-        type="checkbox"
-        id="withSocialData"
-        value="socialData"
-        v-model="mandatoryStudiesPart"
-      />
-      <label for="withSocialData">With social profil</label>
-      <div>Number of studies: {{ studies.length }}</div>
+      <section>
+        <div class="flex gap-2">
+          <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')"/>
+          <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')"/>
+          <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')"/>
+        </div>
+        
+        <div>Number of studies: {{ filteredStudies.length }}</div>
+      </section>
       <ByCategories
         :categories="categories"
-        :studies="studies"
+        :studies="filteredStudies"
         :countries="countries"
         :currency="currency"
       />
 
-      <ByContinents :studies="studies" :countries="countries" :currency="currency" />
+      <ByContinents :studies="filteredStudies" :countries="countries" :currency="currency" />
     </section>
   </Skeleton>
 </template>
@@ -161,6 +169,16 @@ section.banner {
     h2 {
       font-size: 1.2rem;
     }
+  }
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h1 {
+    margin-bottom: 1rem;
   }
 }
 </style>
