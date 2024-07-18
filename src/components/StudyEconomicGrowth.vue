@@ -16,21 +16,7 @@
       
     <BalanceOfTrade :study-data="studyData" :currency="currency" />
 
-    <h3 class="mt-12">Is the value chain <strong>viable in the international economy</strong>?</h3>
-    <p>
-      The VCA4D methodology assesses for each value chain its dependency on international exports as
-      well as its capacity to export on international markets with competitive price or on the
-      contrary a higher remuneration of the actors supported by porection policies.
-    </p>
-    <br>
-    <h2>Is it financially attractive to sell abroad ?</h2>
-
-    <InfoTitle title="Domestic resource cost ratio" class="mb-4" :class="{'TODO': !studyData.ecoData.macroData?.domesticResourceCostRatio}" />
-    <DomesticResourceCostRatio v-if="studyData.ecoData.macroData?.domesticResourceCostRatio" :value="studyData.ecoData.macroData?.domesticResourceCostRatio" />
-    <br>
-    <InfoTitle title="Nominal protection Coefficient" information="Domestic price / Internation parity price"
-      class="mb-4" />
-    <NominalProtectionCoefficient :value="studyData.ecoData.macroData?.nominalProtectionCoefficient" />
+    <AbroadSelling :studyData="studyData"/>
   </article>
 </template>
 
@@ -38,11 +24,9 @@
 import ReturnOnInvestment from './study/economic-growth/ReturnOnInvestment.vue'
 import AddedValue from './study/economic-growth/AddedValue.vue'
 import PublicFinances from './study/economic-growth/PublicFinances.vue'
-import InfoTitle from '@typography/InfoTitle.vue'
 import SectionTitle from '@typography/SectionTitle.vue'
-import DomesticResourceCostRatio from './study/economic-growth/DomesticResourceCostRatio.vue'
-import NominalProtectionCoefficient from './study/economic-growth/NominalProtectionCoefficient.vue'
 import BalanceOfTrade from './study/economic-growth/BalanceOfTrade.vue'
+import AbroadSelling from './study/economic-growth/AbroadSelling.vue'
 
 const props = defineProps({
   studyData: Object,
