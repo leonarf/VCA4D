@@ -62,13 +62,6 @@ p {
     padding: 1.5rem 6rem;
 }
 
-.TODO {
-    min-height: 1rem;
-    min-width: 1rem;
-    background-color: pink;
-    border: 5px dashed red;
-}
-
 select {
     -webkit-appearance: none;
     appearance: none;
