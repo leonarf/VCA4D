@@ -1,5 +1,5 @@
 <template >
-  <QuestionTitle :class="{'TODO': !hasData}">What is the contribution of the value chain to the <strong>balance of trade</strong>?</QuestionTitle>
+  <QuestionTitle>What is the contribution of the value chain to the <strong>balance of trade</strong>?</QuestionTitle>
   <div v-if="hasData" class="ml-4 md:ml-12 mt-8">
     <div class="w-3/4 md:w-2/3 mb-4">
       <div class="uppercase font-semibold text-[#303030] text-xl">Balance of trade of the value chain</div>
@@ -20,6 +20,7 @@
       </div>
     </div>
   </div>
+  <NoDataBadge v-else/>
 </template>
 
 <script setup>
@@ -28,6 +29,8 @@ import { getImportedProductsData, getExportedProductsData } from '@/charts/chart
 import { computed } from 'vue';
 import { useCurrencyUtils } from '@utils/format'
 import QuestionTitle from '@components/study/QuestionTitle.vue';
+import NoDataBadge from '@components/study/NoDataBadge.vue';
+
 const props = defineProps({
   studyData: Object,
   currency: String

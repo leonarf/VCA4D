@@ -10,12 +10,14 @@
 	
 	    <InfoTitle
 				class="mb-4 mt-4"
-				:class="{'TODO': !studyData.ecoData.macroData?.domesticResourceCostRatio}"
 				title="Domestic Resource Cost ratio (DRC)"
 				information="The DRC measures the value of domestic factors necessary to gain one foreign currency unit. DRC < 1 means that the VC is viable in the global economy because the value of domestic factors which are consumed is lower than the value they produce, without any subventions on input and taxes on output (from the standpoint of the international markets and considering the present level of remuneration of domestic factors). "
 			/>
-	    <DomesticResourceCostRatio v-if="studyData.ecoData.macroData?.domesticResourceCostRatio" :value="studyData.ecoData.macroData?.domesticResourceCostRatio" />
-	    <br>
+			<div>
+				<DomesticResourceCostRatio v-if="studyData.ecoData.macroData?.domesticResourceCostRatio" :value="studyData.ecoData.macroData?.domesticResourceCostRatio" />
+				<NoDataBadge v-else />
+			</div>
+			<br>
 	    <InfoTitle
 				title="Nominal Protection Coefficient (NPC)"
 				information="NPC assesses the international competitiveness by comparing the national and international prices of every VC product. A NPC > 1 means that the domestic value is higher than the international market price. Thus, the overall VC remuneration is higher than it would be if applying international parity prices."
@@ -29,6 +31,7 @@ import InfoTitle from '@components/typography/InfoTitle.vue';
 import DomesticResourceCostRatio from "@components/study/economic-growth/DomesticResourceCostRatio.vue";
 import NominalProtectionCoefficient from "@components/study/economic-growth/NominalProtectionCoefficient.vue";
 import QuestionTitle from '@components/study/QuestionTitle.vue'
+import NoDataBadge from '@components/study/NoDataBadge.vue';
 
 defineProps({
 	studyData: Object

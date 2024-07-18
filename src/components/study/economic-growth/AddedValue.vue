@@ -21,7 +21,6 @@
   <InfoTitle
     title="Rate of integration"
     information="The rate of integration measures the share of the intermediates consumptions (e.g. fertilizers, fuel, packaging, etc.) purchased by the value chain actors that are produced within the country. The higher the share, the higher the effects of the value chain on the national economy."
-    :class="{ TODO: !studyData.ecoData.macroData?.rateOfIntegration }"
   />
   <HorizontalSlider
     v-if="!!studyData.ecoData.macroData?.rateOfIntegration"
@@ -33,6 +32,9 @@
     textRight="<b>> 70% :</b><br> Only few goods need to be imported"
     :is-percent="true"
   />
+  <div v-else class="mt-4">
+    <NoDataBadge />
+  </div>
   <QuestionTitle>Who <strong>creates and receives</strong> the value added?</QuestionTitle>
   <InfoTitle
     title="Direct Value Added"
@@ -69,6 +71,8 @@ import InfoTitle from '@typography/InfoTitle.vue'
 import HorizontalSlider from '@components/charts/HorizontalSlider.vue'
 import { formatPercent } from '@utils/format.js'
 import QuestionTitle from '@components/study/QuestionTitle.vue'
+import NoDataBadge from '@components/study/NoDataBadge.vue';
+
 
 const props = defineProps({
   studyData: Object,
