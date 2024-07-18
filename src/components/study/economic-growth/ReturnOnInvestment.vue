@@ -1,10 +1,14 @@
 <template>
     <QuestionTitle>How <strong>profitable</strong> and sustainable are the value chain activities for the actors involved?</QuestionTitle>
-    <InfoTitle title="Benefit/Cost Ratio (%)" information="percentage of net operating profit in total costs (NB : for
-      producers this includes actor revenue)" class="mb-4" />
+    <InfoTitle
+      title="Benefit/Cost Ratio (%)"
+      information="percentage of net operating profit in total costs (NB : for producers this includes actor revenue)"
+    />
       <template v-if="studyData">
-        <BarChart :options="populatedBarChartData" 
-          @chartSeriesClick="handleDataChartSeriesClick" />
+        <BarChart
+          :options="populatedBarChartData" 
+          @chartSeriesClick="handleDataChartSeriesClick"
+        />
         <div v-if="selectedStage">
           <MiniChartContainer :currentStage="selectedStage" title="Benefit/Cost Ratio (%)">
               <div class="flex flex-row w-full justify-evenly mt-6">

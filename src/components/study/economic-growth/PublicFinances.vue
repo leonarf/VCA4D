@@ -1,6 +1,6 @@
 <template>
     <QuestionTitle>What is the contribution of the value chain to the <strong>public finances</strong>?</QuestionTitle>
-    <div class="flex flex-row flex-wrap items-center ml-12">
+    <div class="flex flex-row flex-wrap items-center ml-4 md:ml-12 -mt-8 -mb-8">
       <div class="w-full lg:w-1/4">
         <div class="uppercase font-semibold text-[#303030] text-xl">Public Funds Balance</div>
         <div class="font-semibold text-2xl text-[#C1C1C1]">{{ publicFundsBalance }}</div>
