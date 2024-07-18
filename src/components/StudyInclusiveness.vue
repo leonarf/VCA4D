@@ -43,11 +43,17 @@
         <br>
 
         <QuestionTitle>What is the impact of the <strong>governance system</strong> on the income distribution?</QuestionTitle>
-        <InfoTitle title="Share of farm gate price in final price" class="mb-4 mt-8" :class="{'TODO': !hasPricesData}" />
-        <ShareOfFarmPrice v-if="hasPricesData" :data="pricesData"/>
+        <InfoTitle title="Share of farm gate price in final price" class="mb-4 mt-8"/>
+        <div>
+            <ShareOfFarmPrice v-if="hasPricesData" :data="pricesData"/>
+            <NoDataBadge v-else/>
+        </div>
         <br />
-        <InfoTitle title="Gini index" class="mb-4 mt-8" :class="{ 'TODO': !studyData.ecoData.macroData?.giniIndex}" />
-        <GiniIndex v-if="studyData.ecoData.macroData?.giniIndex" :value="studyData.ecoData.macroData?.giniIndex"/>
+        <InfoTitle title="Gini index" class="mb-4 mt-8" />
+        <div class="mb-8">
+            <GiniIndex v-if="studyData.ecoData.macroData?.giniIndex" :value="studyData.ecoData.macroData?.giniIndex"/>
+            <NoDataBadge v-else/>
+        </div>
     </article>
 </template>
 
@@ -61,6 +67,7 @@ import NetOperatingProfitPerActor from './study/inclusiveness/NetOperatingProfit
 import InfoTitle from '@typography/InfoTitle.vue'
 import GiniIndex from './study/inclusiveness/GiniIndex.vue'
 import ShareOfFarmPrice from './study/inclusiveness/ShareOfFarmPrice.vue'
+import NoDataBadge from '@components/study/NoDataBadge.vue';
 import QuestionTitle from "@components/study/QuestionTitle.vue"
 import { computed } from 'vue'
 import { useCurrencyUtils } from '@utils/format'
