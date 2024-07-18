@@ -12,7 +12,7 @@
           :src="getStepLogo(step)"
           :alt="step.name + ' illustration'"
         />
-        <div class="font-semibold">{{ step.name }}</div>
+        <div class="font-semibold">{{ PRETTY_NAME_BY_STEP[step.name] }}</div>
         <p class="text-center">{{ step.description || 'Pas de description' }}</p>
       </div>
     </div>
@@ -34,14 +34,16 @@ const props = defineProps({
     stagesDescription: Object
 })
 
-const DISPLAY_STEPS = [
-  'Producers',
-  'Collectors',
-  'Processors',
-  'Wholesalers',
-  'Retailers',
-  'End use'
-]
+const PRETTY_NAME_BY_STEP = {
+  'Producers': 'Production',
+  'Collectors': 'Collection',
+  'Processors': 'Processing',
+  'Wholesalers': 'Wholesaling',
+  'Retailers': 'Retailing',
+  'End use': 'End use'
+};
+
+const DISPLAY_STEPS = Object.keys(PRETTY_NAME_BY_STEP);
 
 const populatedSteps = computed(() => {
   return props.stagesDescription
