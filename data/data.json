@@ -2,7 +2,7 @@
   "categories": [
     {
       "id": "orchard",
-      "prettyName": "Orchards",
+      "prettyName": "Tree crops",
       "color": "#5F8A64",
       "textColor": "#5F8A64",
       "commodities": [
@@ -44,7 +44,7 @@
     },
     {
       "id": "halieutic",
-      "prettyName": "Halieutic",
+      "prettyName": "Fisheries and aquaculture",
       "color": "#0073CF",
       "textColor": "#0073CF",
       "commodities": [
@@ -559,6 +559,100 @@
       "year": 2020,
       "country": "zimbabwe",
       "product": "beef"
+    }
+  ],
+  "products": [
+    {
+      "id": "cocoa",
+      "prettyName": "cocoa"
+    },
+    {
+      "id": "coffee",
+      "prettyName": "coffee"
+    },
+    {
+      "id": "cashew",
+      "prettyName": "cashew"
+    },
+    {
+      "id": "banana",
+      "prettyName": "banana"
+    },
+    {
+      "id": "mango",
+      "prettyName": "mango"
+    },
+    {
+      "id": "vanilla",
+      "prettyName": "vanilla"
+    },
+    {
+      "id": "oil palm",
+      "prettyName": "Palm Oil"
+    },
+    {
+      "id": "beef",
+      "prettyName": "beef"
+    },
+    {
+      "id": "egg",
+      "prettyName": "egg"
+    },
+    {
+      "id": "milk",
+      "prettyName": "milk"
+    },
+    {
+      "id": "cassava",
+      "prettyName": "cassava"
+    },
+    {
+      "id": "cotton",
+      "prettyName": "cotton"
+    },
+    {
+      "id": "groundnut",
+      "prettyName": "groundnut"
+    },
+    {
+      "id": "cowpea",
+      "prettyName": "cowpea"
+    },
+    {
+      "id": "french beans",
+      "prettyName": "green beans"
+    },
+    {
+      "id": "maize",
+      "prettyName": "maize"
+    },
+    {
+      "id": "sorghum",
+      "prettyName": "sorghum"
+    },
+    {
+      "id": "pineapple",
+      "prettyName": "pineapple"
+    },
+    {
+      "id": "freshwater-aquaculture",
+      "prettyName": "freshwater-aquaculture"
+    },
+    {
+      "id": "aquaculture",
+      "prettyName": "aquaculture"
+    },
+    {
+      "id": "coastal fisheries",
+      "prettyName": "coastal fisheries"
+    },
+    {
+      "id": "inland fisheries",
+      "prettyName": "inland fisheries"
+    },
+    {
+      "id": "fisheries",
+      "prettyName": "fisheries"
     }
   ]
 }
