@@ -1,6 +1,6 @@
 <template >
   <QuestionTitle :class="{'TODO': !hasData}">What is the contribution of the value chain to the <strong>balance of trade</strong>?</QuestionTitle>
-  <div v-if="hasData" class="ml-4 md:ml-12">
+  <div v-if="hasData" class="ml-4 md:ml-12 mt-8">
     <div class="w-3/4 md:w-2/3 mb-4">
       <div class="uppercase font-semibold text-[#303030] text-xl">Balance of trade of the value chain</div>
       <div class="font-semibold text-2xl text-[#C1C1C1]">{{  balanceOfTrade  }}</div>

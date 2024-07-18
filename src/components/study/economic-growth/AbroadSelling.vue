@@ -9,7 +9,7 @@
 	    <h3>Is the VC able to compete within the international market?</h3>
 	
 	    <InfoTitle
-				class="mb-4"
+				class="mb-4 mt-4"
 				:class="{'TODO': !studyData.ecoData.macroData?.domesticResourceCostRatio}"
 				title="Domestic Resource Cost ratio (DRC)"
 				information="The DRC measures the value of domestic factors necessary to gain one foreign currency unit. DRC < 1 means that the VC is viable in the global economy because the value of domestic factors which are consumed is lower than the value they produce, without any subventions on input and taxes on output (from the standpoint of the international markets and considering the present level of remuneration of domestic factors). "
