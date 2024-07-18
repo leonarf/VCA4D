@@ -1,16 +1,18 @@
 <template>
-    <InfoTitle title="Mean net operating profit across types of actors"/>
-    <div class="flex flex-row items-center mt-4">
-        <div class="w-full">
-            <BarChart v-if="studyData" :options="netOperatingProfitByNumberActorsData"
-            @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
-            <MiniChartContainer v-if="selectedStage" :currentStage="selectedStage" title="Net Operating Profit per actor">
-                <div class="flex flex-row w-full justify-evenly mt-6">
-                    <div class="w-full flex flex-row justify-center">
-                        <Ring :options="currentStageSplitData"></Ring>
+    <div>
+        <InfoTitle title="Mean net operating profit across types of actors"/>
+        <div class="flex flex-row items-center mt-4">
+            <div class="w-full">
+                <BarChart v-if="studyData" :options="netOperatingProfitByNumberActorsData"
+                @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
+                <MiniChartContainer v-if="selectedStage" :currentStage="selectedStage" title="Net Operating Profit per actor">
+                    <div class="flex flex-row w-full justify-evenly mt-6">
+                        <div class="w-full flex flex-row justify-center">
+                            <Ring :options="currentStageSplitData"></Ring>
+                        </div>
                     </div>
-                </div>
-            </MiniChartContainer>
+                </MiniChartContainer>
+            </div>
         </div>
     </div>
 </template>
