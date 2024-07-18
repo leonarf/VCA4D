@@ -10,8 +10,8 @@
       state budget, after public investment in the value chain.
     </p>
 
-    <AddedValue :studyData="studyData" :currency="currency"/>
     <ReturnOnInvestment :studyData="studyData" :currency="currency"/>
+    <AddedValue :studyData="studyData" :currency="currency"/>
     <PublicFinances :studyData="studyData" :currency="currency"/>
       
     <BalanceOfTrade :study-data="studyData" :currency="currency" />
