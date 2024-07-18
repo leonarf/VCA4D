@@ -1,14 +1,14 @@
 <template>
   <QuestionTitle>Total Value Added and its share in national and agricultural GDP</QuestionTitle>
-  <div class="flex flex-row flex-wrap justify-evenly w-full items-center my-8 gap-y-8">
+  <div class="flex flex-row flex-wrap justify-evenly w-full items-start my-8 gap-y-8">
     <NiceMetric label="Total value added" :value="totalAddedValueCreators" />
-    <NiceMetric
-      label="Total Value Added share of the agricultural sector GDP"
-      :value="formatPercent(+studyData.ecoData.macroData?.valueAddedShareAgriculturalGdp)"
-    />
     <NiceMetric
       label="Total Value Added share of national GDP"
       :value="formatPercent(+studyData.ecoData.macroData?.valueAddedShareNationalGdp)"
+    />
+    <NiceMetric
+      label="Total Value Added share of the agricultural sector GDP"
+      :value="formatPercent(+studyData.ecoData.macroData?.valueAddedShareAgriculturalGdp)"
     />
   </div>
 
