@@ -1,7 +1,7 @@
 <template>
     <div class="text-xl rounded bg-[#dcefbb] flex flex-row flex-wrap gap-y-4 py-3 pl-8 rounded-none md:rounded-full justify-center md:justify-start">
         <div class="bloc">
-            <div class="title">{{ studyData.commodity }}</div>
+            <div class="title">{{ commodityName }}</div>
             <div class="subtitle">Commodity</div>
         </div>
         <div class="bloc">
@@ -22,7 +22,7 @@
 <script setup>
 import { computed } from 'vue'
 import { getCurrencySymbol } from '@utils/currency.js'
-import { getCountry } from '@utils/data.js'
+import { getCountry, getProduct, getStudy } from '@utils/data.js'
 
 const props = defineProps({
     studyData: {
@@ -30,6 +30,10 @@ const props = defineProps({
       required: true,
     }
 })
+
+const commodityName = computed(() => {
+    return getProduct(getStudy(props.studyData.id).product).prettyName;
+});
 
 let dataToDisplay = computed(() => {
     let result = {}
@@ -46,7 +50,7 @@ let dataToDisplay = computed(() => {
 
 <style scoped lang="scss">
     .subtitle {
-        @apply text-[#656565] text-xs
+        @apply text-[#656565] text-xs;
     }
     .title {
         @apply text-[#303030] text-3xl font-thin;

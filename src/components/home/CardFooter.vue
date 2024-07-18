@@ -19,7 +19,7 @@ const props = defineProps({
     gap: 5px;
 
     justify-content: left;
-    align-items: start;
+    align-items: flex-start;
 
     .logo {
         flex-shrink: 0;
@@ -28,7 +28,7 @@ const props = defineProps({
     }
 
     .text {
-        margin-top: 3px;
+        margin-top: 2px;
     }
 }
 </style>

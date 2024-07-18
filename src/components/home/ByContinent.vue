@@ -1,6 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import { getLink, getCompareCountryLink } from '@utils/router'
+import { getCountry, getProduct } from '@utils/data.js'
 import LogoProductLarge from './LogoProductLarge.vue';
 import LogoProductSmall from './LogoProductSmall.vue';
 import LogoCountryLarge from './LogoCountryLarge.vue';
@@ -52,10 +53,6 @@ const getStudiesByCountry = () => {
     }))
 }
 
-const getCountry = (countryId) => {
-    return props.countries.find(country => country.id === countryId)
-}
-
 </script>
 
 <template>
@@ -71,7 +68,7 @@ const getCountry = (countryId) => {
                             <LogoCountryLarge :isoCode="getCountry(item.country).iso || 'gr'" />
                         </template>
                         <template v-slot:footer>
-                            <CardFooter class="capitalize" :text="item.studies[0].title">
+                            <CardFooter class="capitalize" :text="getProduct(item.studies[0].product).prettyName">
                                 <template v-slot:logo>
                                     <LogoProductSmall :product-name="item.studies[0].product" :alt="`Link to ${item.studies[0].title} study`"/>
                                 </template>
@@ -96,7 +93,7 @@ const getCountry = (countryId) => {
                             <Card v-for="study in item.studies" :key="study.id"
                                 :link="getLink(study, currency)"
                                 :is-local="study.local"
-                                :title="study.title">
+                                :title="getProduct(study.product).prettyName">
                                 <template v-slot:logo>
                                     <LogoProductLarge :product-name="study.product" :alt="`Link to ${study.title} study`" />
                                 </template>

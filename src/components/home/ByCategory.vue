@@ -1,6 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { getLink, getCompareProductLink } from '@utils/router'
+import { getCountry, getProduct } from '@utils/data.js'
 import LogoCountrySmall from './LogoCountrySmall.vue';
 import LogoCountryLarge from './LogoCountryLarge.vue';
 import LogoProductLarge from './LogoProductLarge.vue';
@@ -38,7 +39,6 @@ const getStudiesByProduct = () => {
     }))
 }
 
-const getCountry = countryId => props.countries.find(country => country.id === countryId)
 
 
 </script>
@@ -52,13 +52,13 @@ const getCountry = countryId => props.countries.find(country => country.id === c
                         <Card
                             :link="getLink(item.studies[0], currency)"
                             :is-local="item.studies[0].local"
-                            :title="item.product">
+                            :title="getProduct(item.product).prettyName">
                             <template v-slot:logo>
                                 <LogoProductLarge :product-name="item.product"
                                         :alt="`Link to ${item.studies[0].title} study`" />
                             </template>
                             <template v-slot:footer>
-                                <CardFooter :text="getCountry(item.studies[0].country)['prettyName']">
+                                <CardFooter :text="getCountry(item.studies[0].country).prettyName">
                                     <template v-slot:logo>
                                         <LogoCountrySmall :iso-code="getCountry(item.studies[0].country)?.iso || 'gr'" />
                                     </template>
@@ -71,7 +71,7 @@ const getCountry = countryId => props.countries.find(country => country.id === c
                             @click.stop="openedProduct === item.product ? openedProduct = null : openedProduct = item.product"
                             :is-local="false"
                             :is-open="openedProduct === item.product"
-                            :title="item.product"
+                            :title="getProduct(item.product).prettyName"
                             >
                             <template v-slot:logo>
                                 <LogoProductLarge :product-name="item.product" />

@@ -79,7 +79,7 @@ function toggleFilter(filterKey) {
         </p>
         <p>
           The European Commission has developed the VCA4D standardised methodological framework for
-          analysis (<a href="https://capacity4dev.europa.eu/info/1-vca4d-methodology_en">The VCA4D Methodology | Capacity4dev</a>). It aims at understanding to what extent
+          analysis (<a target="_blank" class="text-blue-600" href="https://capacity4dev.europa.eu/info/1-vca4d-methodology_en">The VCA4D Methodology | Capacity4dev</a>). It aims at understanding to what extent
           the value chain allows for inclusive economic growth and whether it is both socially and
           environmentally sustainable.
         </p>

@@ -25,7 +25,7 @@ ol{
                     <div>You have imported this study: <b>{{ studyData['id'] }}</b></div>
                     <div class="ml-4">
                         Press 
-                        <button @click="clearData">Remove</button> or
+                        <a class="cursor-pointer text-blue-600" @click="clearData">Remove</a> or
                     </div>
                 </div>
                 <p v-else>Upload the file to the platform</p>
@@ -111,4 +111,3 @@ onMounted(() => {
     }
 })
 </script>
-  

@@ -37,7 +37,7 @@
         </section>
 
         <PdfSection v-if="studyData.briefReportPdfUrl" :study-brief-url="studyData.briefReportPdfUrl" />
-        <a v-if="studyData.fullReportPdfUrl" :href="studyData.fullReportPdfUrl">Download study full report</a>
+        <a target="_blank" class="text-blue-600" v-if="studyData.fullReportPdfUrl" :href="studyData.fullReportPdfUrl">Download study full report</a>
         <section v-if="studyData && studyData.ecoData">
             <Sankey :studyData="studyData"/>
         </section>
