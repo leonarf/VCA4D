@@ -1,5 +1,6 @@
 import { formatNumber, formatPercent } from '@utils/format.js'
 import { getStageColor, getRingColor, COLORS_IMPORTED_PRODUCTS, COLORS_EXPORTED_PRODUCTS } from '@utils/colors.js'
+import { getStageLabel } from '../utils/stages'
 const RADIUSES_MINI_PIE = ['20%', '40%']
 const RIADUSES_PIE = ['50%', '75%']
 const SELECTED_COLOR = "#F7E9EB"
@@ -53,7 +54,8 @@ export const getAddedValueCreatorsData = (stages, actors, convertAmount, prettyA
             tooltip[stageName] = toolTip
             return {
                 value: subTotal || 0,
-                name: stageName
+                name: stageName,
+                label: getStageLabel(stageName)
             }
         }
     }).filter(item => !!item)
@@ -79,7 +81,8 @@ export const getAddedValueReceiversData = (stages, actors, convertAmount, pretty
 
         return {
             value: subTotal,
-            name: stageName
+            name: stageName,
+            label: getStageLabel(stageName)
         }
     })
     for (let key in addedValue) {
