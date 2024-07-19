@@ -30,9 +30,9 @@ const getAddedValueClass = (value) => {
         return "gray"
     }
     if (value > 0) {
-        return "light-red"
+        return "negative"
     }
-    return "light-green"
+    return "positive"
 }
 
 const availableImpacts = computed(() => props.studies.reduce((arr, study) => arr.concat(study.acvData?.impacts), [])
@@ -64,5 +64,11 @@ const getImpactValue = (impact, study) => {
 
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+    .negative {
+        background-color: #ffac9e;
+    }
+    .positive {
+        background-color: #94d99d;
+    }
 </style>

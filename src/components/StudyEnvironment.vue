@@ -3,14 +3,37 @@
     <SectionTitle>
       <h1>Is the value chain environmentally sustainable?</h1>
     </SectionTitle>
-
-    <h2>Which sub-chain contributes the most to environmental impacts ?</h2>
     <p>
-      Environmental sustainability of a value chain should rather be assessed by product. And yet,
-      specific policies or project may be developped in order to improve the sustainability of a
-      step or of some actors to improve the overall sustainability of the value chain.
+      The approach to evaluate the environmental sustainability of the value chain is twofold. 
     </p>
-    <div class="flex flex-row justify-center gap-x-20">
+    <p>
+      First, damages entailed by the VC operations are calculated on <strong>Resource depletion</strong>, 
+      <strong>Ecosystem quality</strong> and <strong>Human health</strong>, as well as their contribution 
+      to <trong>Climate Change</trong> through the quantitative <strong>Life Cycle Assessment (LCA)</strong>.
+    </p>
+    <p> 
+      Second, an <strong>exploratory assessment of biodiversity risks is provided</strong>. 
+      The appraisal of the environmental sustainability of the value chain is carried out by combining quantitative and qualitative data.
+    </p>
+    <p class="mt-4">
+      LCA inventories the material and energy flows used, produced or released by the activities of the VC. 
+      The substances emitted or consumed by the activities at each stage are recorded and measured. 
+      According to their physical, chemical and biological nature, they activate cause-and-effect 
+      chains that induce changes in the environment. These changes cause (or counteract) specific 
+      environmental problems such as terrestrial acidification, freshwater deprivation or ecotoxicity.
+    </p><p>
+      LCA refers to the effects as <strong>“impacts”</strong> (the “midpoints” level). The consequences of these impacts 
+      on Natural Resources, Ecosystem Quality and Human Health are referred to as <strong>“damage”</strong>. 
+      LCA also enables to measure the contribution of the VC to climate change through its <strong>carbon footprint</strong>.
+
+    </p>
+
+    <QuestionTitle>Which sub-chain contributes the most to environmental impacts ?</QuestionTitle>
+    <p>
+      Sub-chains can be compared according to the damage they generate in the three areas of protection. 
+      This highlights the gaps between them and helps determine actions for environmental improvements.
+    </p>
+    <div class="flex flex-row justify-center gap-x-20 mb-8 mt-4">
       <div class="flex flex-row justify-center gap-x-4">
           <label v-for="unit in units" :key="unit.value"
           :class="{
@@ -63,6 +86,7 @@ import { computed, ref } from 'vue'
 import SectionTitle from '@typography/SectionTitle.vue'
 import ImpactDataviz from '@components/study/environment/ImpactDataviz.vue'
 import { ACVImpacts } from '@utils/misc.js'
+import QuestionTitle from "@components/study/QuestionTitle.vue"
 
 const props = defineProps({
   studyData: Object
