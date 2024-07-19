@@ -5,6 +5,7 @@
 </template>
 
 <script setup>
+import { onErrorCaptured } from "vue";
 import { use } from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
 import { SankeyChart } from "echarts/charts";
@@ -26,6 +27,16 @@ use([
   TooltipComponent,
   LegendComponent
 ]);
+
+const IGNORED_SANKEY_ERRORS = [
+  "nodes[data.getRawIndex(...)] is undefined"
+];
+onErrorCaptured((err) => {
+  if (IGNORED_SANKEY_ERRORS.includes(err.message)) {
+    return false;
+  }
+});
+
 </script>
 
 <style scoped lang="scss">
