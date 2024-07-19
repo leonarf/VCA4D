@@ -5,6 +5,7 @@
 <script setup>
 import { computed } from 'vue';
 import { getSocialAverageGroup } from '@utils/misc.js'
+import { getTagColor } from '@utils/colors.js'
 
 import Radar from '@charts/Radar.vue'
 const props = defineProps({
@@ -37,10 +38,10 @@ const chartData = computed(() => {
             splitArea: {
                 areaStyle: {
         color: [
-          'rgba(255, 0, 0, 0.3)', 
-          'rgba(255, 165, 0, 0.3)',
-          'rgba(124, 252, 0, 0.3)',
-          'rgba(0, 230, 65, 0.3)', 
+            getTagColor(1),
+            getTagColor(2),
+            getTagColor(3),
+            getTagColor(4),
         ],
       },
             },
@@ -58,7 +59,7 @@ const chartData = computed(() => {
         },
         },
         tooltip: {
-            show: true, 
+            show: false,
             trigger: 'item',
             formatter: function () {
                 return `Working: ${averageWorking.value}<br />
