@@ -12,11 +12,11 @@ export const formatNumber = (value) => {
   if (absoluteValue > 1e9) {
     numberDigits = 1
     divisor = 1e9
-    textUnit = 'Billions'
+    textUnit = 'billion'
   } else if (absoluteValue > 1e6) {
     numberDigits = 1
     divisor = 1e6
-    textUnit = 'Millions'
+    textUnit = 'million'
   } else if (absoluteValue > 1e3) {
     numberDigits = 1
     divisor = 1e3
