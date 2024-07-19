@@ -1,6 +1,10 @@
 <template>
     <div>
-        <InfoTitle title="Number of actors" class="mb-4 mt-8" />
+        <InfoTitle
+            title="Number of actors"
+            class="mb-4 mt-8"
+            information="It is the number of the actors (self-employed and companies) directly involved in the value chain. It is to be noted that family workers are excluded."
+        />
         <div class="flex flex-col mt-4">
             <div class="flex flex-row flex-wrap items-center justify-center">
                 <div class="w-1/2 md:w-1/5">

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <InfoTitle title="Mean net operating profit across types of actors"/>
+        <InfoTitle title="Individual Net Operating Profit per actor type"/>
         <div class="flex flex-row items-center mt-4">
             <div class="w-full">
                 <BarChart v-if="studyData" :options="netOperatingProfitByNumberActorsData"
