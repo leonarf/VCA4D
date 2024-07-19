@@ -1,6 +1,10 @@
 <template>
     <div>
-        <InfoTitle title="Jobs" class="mt-8" />
+        <InfoTitle
+            title="Jobs"
+            class="mt-8"
+            information="the number of jobs is computed based on the wages paid to workers by the  direct self-employed Value chain actors (self-employed and companies). It does not include family work."
+        />
         <div class="flex flex-col mb-8">
             <div class="flex flex-row flex-wrap items-center justify-center">
                 <div class="w-1/2 md:w-1/5 flex flex-col space-y-4 pt-8">

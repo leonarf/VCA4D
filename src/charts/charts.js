@@ -56,7 +56,7 @@ export const getAddedValueCreatorsData = (stages, actors, convertAmount, prettyA
     }).filter(item => !!item)
         .filter(item => item.value !== 0)
 
-    return getRingChart(items, tooltip, 'Who creates the direct value added')
+    return getRingChart(items, tooltip, 'Who creates the direct value added?')
 }
 
 export const getAddedValueReceiversData = (stages, actors, convertAmount, prettyAmount, addedValue) => {
@@ -88,7 +88,7 @@ export const getAddedValueReceiversData = (stages, actors, convertAmount, pretty
     }
 
     items = items.filter(item => !!item).filter(item => item.value !== 0)
-    return getRingChart(items, tooltip, 'Who receives the direct value added')
+    return getRingChart(items, tooltip, 'Who receives the direct value added?')
 }
 
 /*
