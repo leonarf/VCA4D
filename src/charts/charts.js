@@ -21,6 +21,9 @@ export const getRingChart = (items, tooltip, title, isEnvironment = false) => {
                 return tooltip[info.name]
             }
         },
+        label: {
+            formatter: params => params.data.label || params.data.name
+        },
         series: [
             {
                 type: 'pie',
@@ -80,15 +83,34 @@ export const getAddedValueReceiversData = (stages, actors, convertAmount, pretty
         }
     })
     for (let key in addedValue) {
-        tooltip[key] = `<b>${key}</b>: ${prettyAmount.value(convertAmount.value(addedValue[key]))}`
+        const label = getOtherValueReceiverLabel(key);
+        tooltip[key] = `<b>${label}</b>: ${prettyAmount.value(convertAmount.value(addedValue[key]))}`
         items.push({
             value: convertAmount.value(addedValue[key]),
-            name: key
+            name: key,
+            label
         })
     }
 
     items = items.filter(item => !!item).filter(item => item.value !== 0)
     return getRingChart(items, tooltip, 'Who receives the direct value added?')
+
+    function getOtherValueReceiverLabel(stageName) {
+        switch (stageName) {
+            case "depreciation":
+                return "Depreciation";
+            case "employeeWages":
+                return "Employee Wages";
+            case "financialInstitutionsInterests":
+                return "Financial Insitutions Interests";
+            case "landOwnersFees":
+                return "Land Owners Fees";
+            case "government":
+                return "Government";
+            default:
+                return stageName;
+        }
+    }
 }
 
 /*
