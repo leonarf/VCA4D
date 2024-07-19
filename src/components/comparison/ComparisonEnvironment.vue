@@ -29,7 +29,7 @@ const getAddedValueClass = (value) => {
     if (!value) {
         return "gray"
     }
-    if (value < 0) {
+    if (value > 0) {
         return "light-red"
     }
     return "light-green"

@@ -66,7 +66,7 @@ tr {
     @apply bg-green-700
 }
 .light-red {
-    @apply bg-red-500
+    @apply bg-red-300
 }
 .dark-red {
     @apply bg-red-700
