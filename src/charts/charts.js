@@ -47,7 +47,7 @@ export const getAddedValueCreatorsData = (stages, actors, convertAmount, prettyA
 
         const subTotal = convertAmount.value(stageActors.reduce((res, actor) => res + actor.directAddedValue, 0))
         if (!isNaN(subTotal)) {
-            let toolTip = `<b>${stageName}</b>: ${prettyAmount.value(subTotal)}`
+            let toolTip = `<b>${stageName}</b>: ${prettyAmount.value(subTotal)}<br>`
             for (const actor of stageActors) {
                 toolTip += `<br><b>${actor.name}</b>: ${prettyAmount.value(convertAmount.value(actor.directAddedValue))}`
             }
@@ -73,7 +73,7 @@ export const getAddedValueReceiversData = (stages, actors, convertAmount, pretty
 
         const subTotal = convertAmount.value(stageActors.reduce((res, actor) => res + actor.receivedAddedValue, 0))
 
-        let toolTip = `<b>${stageName}</b>: ${prettyAmount.value(subTotal)}`
+        let toolTip = `<b>${stageName}</b>: ${prettyAmount.value(subTotal)}<br>`
         for (const actor of stageActors) {
             toolTip += `<br><b>${actor.name}</b>: ${prettyAmount.value(convertAmount.value(actor.receivedAddedValue))}`
         }
@@ -324,9 +324,9 @@ export const getNumberOfActorsData = (stages, actors, currentStage) => {
         const subTotal = stageActors
             .reduce((res, actor) => res + actor.numberOfActors || 0, 0)
         if (subTotal !== 0) {
-            let toolTipValue = `${stage.name}: ${formatNumber(subTotal)}`
+            let toolTipValue = ""
             for (const actor of stageActors) {
-                toolTipValue += `<br>${actor.name}: ${formatNumber(actor.numberOfActors)}`
+                toolTipValue += `${actor.name}: ${formatNumber(actor.numberOfActors)}<br>`
             }
 
             tooltip[stage.name] = toolTipValue
@@ -348,19 +348,19 @@ export const getNumberOfJobsData = (stages, actors, currentStage) => {
             .reduce((res, curr) => res + curr, 0)
 
         if (subTotal !== 0) {
-            let toolTipValue = `<b>${stage.name}</b>: ${formatNumber(subTotal)}`
-            toolTipValue += `<br><b>Male temp</b>: ${formatNumber(stageActors.map(actor => actor.employment?.tempMale || 0)
-                .reduce((res, curr) => res + curr, 0))}`
-            toolTipValue += `<br><b>Female temp</b>: ${formatNumber(stageActors.map(actor => actor.employment?.tempFemale || 0)
-                .reduce((res, curr) => res + curr, 0))}`
-            toolTipValue += `<br><b>Male unskilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.unskilledMale || 0)
-                .reduce((res, curr) => res + curr, 0))}`
-            toolTipValue += `<br><b>Female unskilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.unskilledFemale || 0)
-                .reduce((res, curr) => res + curr, 0))}`
-            toolTipValue += `<br><b>Male skilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.skilledMale || 0)
-                .reduce((res, curr) => res + curr, 0))}`
-            toolTipValue += `<br><b>Female skilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.skilledFemale || 0)
-                .reduce((res, curr) => res + curr, 0))}`
+            let toolTipValue = "";
+            toolTipValue += `<b>Male temp</b>: ${formatNumber(stageActors.map(actor => actor.employment?.tempMale || 0)
+                .reduce((res, curr) => res + curr, 0))}<br>`
+            toolTipValue += `<b>Female temp</b>: ${formatNumber(stageActors.map(actor => actor.employment?.tempFemale || 0)
+                .reduce((res, curr) => res + curr, 0))}<br>`
+            toolTipValue += `<b>Male unskilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.unskilledMale || 0)
+                .reduce((res, curr) => res + curr, 0))}<br>`
+            toolTipValue += `<b>Female unskilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.unskilledFemale || 0)
+                .reduce((res, curr) => res + curr, 0))}<br>`
+            toolTipValue += `<b>Male skilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.skilledMale || 0)
+                .reduce((res, curr) => res + curr, 0))}<br>`
+            toolTipValue += `<b>Female skilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.skilledFemale || 0)
+                .reduce((res, curr) => res + curr, 0))}<br>`
             tooltip[stage.name] = toolTipValue
             return {
                 name: stage.name,
@@ -383,10 +383,10 @@ export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyA
             .reduce((res, actor) => res + actor.netOperatingProfit || 0, 0))
         if (subTotal !== 0) {
             total += subTotal
-            let toolTipValue = `${stage.name}: ${prettyAmount.value(subTotal)}`
+            let toolTipValue = "";
             for (const actor of stageActors) {
                 var convertedActorProfit = convertAmount.value(actor.netOperatingProfit)
-                toolTipValue += `<br>${actor.name}: ${prettyAmount.value(convertedActorProfit)} (${formatPercent(convertedActorProfit / subTotal)})`
+                toolTipValue += `${actor.name}: ${prettyAmount.value(convertedActorProfit)} (${formatPercent(convertedActorProfit / subTotal)})<br>`
             }
             tooltip[stage.name] = toolTipValue
             return {
@@ -408,9 +408,9 @@ export const getNetOperatingProfitByNumberActorsData = (stages, actors, convertA
         const subTotalNumberOfActors = stageActors
             .reduce((res, actor) => res + actor.numberOfActors || 0, 0)
         if (subTotalOperatingProfit !== 0 && subTotalNumberOfActors !== 0) {
-            let toolTipValue = `${stage.name}: ${prettyAmount.value(subTotalOperatingProfit / subTotalNumberOfActors)} per actor`
+            let toolTipValue = ""
             for (const actor of stageActors) {
-                toolTipValue += `<br>${actor.name}: net operating profit= ${prettyAmount.value(convertAmount.value(actor.netOperatingProfit))} -- #actors= ${formatNumber(actor.numberOfActors)}`
+                toolTipValue += `${actor.name}: net operating profit= ${prettyAmount.value(convertAmount.value(actor.netOperatingProfit))} -- #actors= ${formatNumber(actor.numberOfActors)}<br>`
             }
             tooltip[stage.name] = toolTipValue
             return {
