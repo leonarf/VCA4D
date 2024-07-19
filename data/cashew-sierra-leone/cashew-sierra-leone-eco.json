@@ -239,7 +239,7 @@
         "receivedAddedValue": 0
       },
       {
-        "name": "Local consumption",
+        "name": "Kernels Local consumption",
         "stage": "End use",
         "id": 225,
         "receivedAddedValue": 0
@@ -308,7 +308,7 @@
       },
       {
         "sellerActorName": "Processor",
-        "buyerActorName": "Local consumption",
+        "buyerActorName": "Kernels Local consumption",
         "volumeExchanged": 21075,
         "monetaryValue": 484725,
         "unitPrice": 23,
@@ -317,7 +317,7 @@
       },
       {
         "sellerActorName": "Processor",
-        "buyerActorName": "Local consumption",
+        "buyerActorName": "Kernels Local consumption",
         "volumeExchanged": 296700,
         "monetaryValue": 6824100,
         "unitPrice": 23,

@@ -91,7 +91,7 @@ const IMPORT_EXPORT_COLUMNS = {
   Value: "Value (local currency)",
 }
 
-export const getValueChainProperty = (json, propertyName) => {
+export const getValueChainProperty = (json, propertyName, mandatory = true) => {
   let sheetName = "Study id"
   if (!Object.keys(json).includes(sheetName)) {
     sheetName = ECO_SHEET_NAMES.Home
@@ -108,10 +108,12 @@ export const getValueChainProperty = (json, propertyName) => {
   if (elementFound) {
     return elementFound["Value"]
   }
-  setImportErrors(
-    sheetName,
-    ErrorLevels.BreaksFunctionalities,
-    `Couldn't find '${propertyName}' in excel's sheet '${sheetName}'`)
+  if (mandatory) {
+    setImportErrors(
+      sheetName,
+      ErrorLevels.BreaksFunctionalities,
+      `Couldn't find '${propertyName}' in excel's sheet '${sheetName}'`)
+  }
   return null
 }
 
@@ -160,6 +162,21 @@ const parseTranslationSheet = (json) => {
     }
   }
   return translationDict
+}
+
+const checkDataConsistencyAfterTranslation = (study) => {
+  let uniqueActorName = new Set()
+  study.actors.forEach(actor => {
+    if (uniqueActorName.has(actor.name)) {
+      setImportErrors(
+        ECO_SHEET_NAMES.Translation,
+        ErrorLevels.BreaksFunctionalities,
+        `In spreadsheet '${ECO_SHEET_NAMES.Translation}', after translation applied, more than one actor with the name '${actor.name}'`, 'info')
+    }
+    else {
+      uniqueActorName.add(actor.name)
+    }
+  })
 }
 
 const parseFlowsSheet = (json) => {
@@ -393,24 +410,6 @@ const parseImportExportSheet = (json) => {
     amount: importExportItem[IMPORT_EXPORT_COLUMNS.Value],
   })
   )
-  if (importExportItems.every(item => { return item.label == undefined })) {
-    setImportErrors(
-      sheetname,
-      ErrorLevels.BreaksDataviz,
-      `Column '${IMPORT_EXPORT_COLUMNS.Goods}' seems to be missing from excel worksheet '${sheetname}'`)
-  }
-  if (importExportItems.every(item => { return item.importExport == undefined })) {
-    setImportErrors(
-      sheetname,
-      ErrorLevels.BreaksDataviz,
-      `Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' seems to be missing from excel worksheet '${sheetname}'`)
-  }
-  if (importExportItems.every(item => { return item.amount == undefined })) {
-    setImportErrors(
-      sheetname,
-      ErrorLevels.BreaksDataviz,
-      `Column '${IMPORT_EXPORT_COLUMNS.Value}' seems to be missing from excel worksheet '${sheetname}'`)
-  }
 
   var importExport = {
     import: [],
@@ -519,7 +518,6 @@ export const parseEconomicsJson = (json, currencyRatio) => {
 
   // Macro economic indicators
   var macroData = {}
-  macroData["homeSheet"] = json[ECO_SHEET_NAMES.Home]
   macroData["giniIndex"] = getValueChainProperty(json, HOME_LABELS.GiniIndex)
   macroData["FTE_Definition"] = getValueChainProperty(json, HOME_LABELS.FTE_Definition)
   macroData["rateOfIntegration"] = (getValueChainProperty(json, HOME_LABELS.RateOfIntegrationIntoDomesticEconomy) / 100.0) || undefined
@@ -541,6 +539,7 @@ export const parseEconomicsJson = (json, currencyRatio) => {
   const translationDictionnary = parseTranslationSheet(json)
   if (translationDictionnary) {
     studyData = applyTranslation(studyData, translationDictionnary)
+    checkDataConsistencyAfterTranslation(studyData)
   }
   return studyData
 }

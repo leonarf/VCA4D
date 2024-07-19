@@ -349,9 +349,9 @@ export const getNumberOfJobsData = (stages, actors, currentStage) => {
 
         if (subTotal !== 0) {
             let toolTipValue = "";
-            toolTipValue += `<b>Male temp</b>: ${formatNumber(stageActors.map(actor => actor.employment?.tempMale || 0)
+            toolTipValue += `<b>Male temporary</b>: ${formatNumber(stageActors.map(actor => actor.employment?.tempMale || 0)
                 .reduce((res, curr) => res + curr, 0))}<br>`
-            toolTipValue += `<b>Female temp</b>: ${formatNumber(stageActors.map(actor => actor.employment?.tempFemale || 0)
+            toolTipValue += `<b>Female temporary</b>: ${formatNumber(stageActors.map(actor => actor.employment?.tempFemale || 0)
                 .reduce((res, curr) => res + curr, 0))}<br>`
             toolTipValue += `<b>Male unskilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.unskilledMale || 0)
                 .reduce((res, curr) => res + curr, 0))}<br>`

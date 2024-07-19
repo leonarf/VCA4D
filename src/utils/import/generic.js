@@ -4,7 +4,7 @@ import { HOME_LABELS, ECO_SHEET_NAMES, getValueChainProperty, parseEconomicsJson
 import { parseEnvironmentJson } from './environment.js'
 
 import { processSocialExcelFile } from "./social.js"
-import { isValidCurrency } from '@utils/currency.js'
+import { isValidCurrency, isCurrencySupported } from '@utils/currency.js'
 import { getAllKnownProducts } from '@utils/data.js';
 import { slugify } from '@utils/format.js'
 
@@ -108,6 +108,45 @@ export const getTypeOfExcelFile = (workbook) => {
   return null
 }
 
+const readingOfCurrencies = (excelData) => {
+  const localCurrency = getValueChainProperty(excelData, HOME_LABELS.LocalCcy)
+  var targetCurrency = getValueChainProperty(excelData, HOME_LABELS.TargetCcy, false)
+  var currencyRatio = null
+  // Si localCurrency est standard, et pas de targetCurrency, ça suffit
+  if (isValidCurrency(localCurrency) && !isValidCurrency(targetCurrency)) {
+    targetCurrency = localCurrency
+    currencyRatio = 1.0
+  }
+  // Si seule targetCurrency est valide, il faut le taux de change
+  else if (isValidCurrency(targetCurrency)) {
+      currencyRatio = getValueChainProperty(excelData, HOME_LABELS.RatioCcy)
+  }
+  // Aucune n'est valide, on met un message d'erreur
+  else if (!isValidCurrency(localCurrency)){
+    setImportErrors(
+      ECO_SHEET_NAMES.Home,
+      ErrorLevels.BreaksFunctionalities,
+      `Either currencies defined by '${HOME_LABELS.LocalCcy}' or '${HOME_LABELS.TargetCcy}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`)
+    return {
+      localCurrency: null,
+      targetCurrency: null,
+      currencyRatio: null,
+    }
+  }
+  // vérification qu'on a le taux de change vers USD
+  if (!isCurrencySupported(targetCurrency)) {
+    setImportErrors(
+      ECO_SHEET_NAMES.Home,
+      ErrorLevels.BreaksFunctionalities,
+      `We don't have the rate change to USD for currency '${targetCurrency}'. Please send an e-mail with it to the administrator`)
+  }
+  return {
+    localCurrency,
+    targetCurrency,
+    currencyRatio
+  }
+}
+
 export const processUploadedExcelFile = (workbook) => {
   let typeOfFile = getTypeOfExcelFile(workbook)
 
@@ -143,35 +182,13 @@ export const processUploadedExcelFile = (workbook) => {
 
   if (typeOfFile === TypesOfFile.Economics) {
     const year = getValueChainProperty(excelData, "Reference Year");
-    const localCurrency = getValueChainProperty(excelData, HOME_LABELS.LocalCcy)
-    var targetCurrency = null
-    var currencyRatio = null
-    // Si localCurrency est standard, pas besoin de targetCurrency ou currencyRatio
-    if (isValidCurrency(localCurrency)) {
-      targetCurrency = localCurrency
-      currencyRatio = 1.0
-    }
-    else {
-      targetCurrency = getValueChainProperty(excelData, HOME_LABELS.TargetCcy)
-      if (isValidCurrency(targetCurrency)) {
-        currencyRatio = getValueChainProperty(excelData, HOME_LABELS.RatioCcy)
-      }
-      else {
-        setImportErrors(
-          ECO_SHEET_NAMES.Home,
-          ErrorLevels.BreaksFunctionalities,
-          `Either currencies defined by '${HOME_LABELS.LocalCcy}' or '${HOME_LABELS.TargetCcy}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`)
-      }
-    }
-
+    const currencies = readingOfCurrencies(excelData)
     result = {
       ...result,
       year,
-      localCurrency,
-      targetCurrency,
-      currencyRatio,
+      ...currencies,
       type: 'eco',
-      ecoData: parseEconomicsJson(excelData, currencyRatio)
+      ecoData: parseEconomicsJson(excelData, currencies.currencyRatio)
     }
   }
   else if (typeOfFile === TypesOfFile.Environment) {

@@ -4,11 +4,13 @@
   "commodity": "Cashew",
   "year": 2014,
   "localCurrency": "CFA",
-  "targetCurrency": "CFA",
+  "targetCurrency": "XOF",
   "currencyRatio": 1,
   "type": "eco",
   "ecoData": {
-    "macroData": {},
+    "macroData": {
+      "FTE_Definition": null
+    },
     "stages": [
       {
         "name": "Producers",
