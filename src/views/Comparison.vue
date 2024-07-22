@@ -6,7 +6,7 @@
                 v-if="studies.length > 0"
                 :studies="studies"
             />
-            <div class="no-study" v-else>
+            <div class="no-study" v-else-if="loading === false">
                 No study is selected
             </div>
         </div>  
@@ -23,6 +23,7 @@ import { extractStudiesFromQueryString } from '@utils/router';
 
 const route = useRoute();
 
+const loading = ref(false);
 const studies = ref([])
 
 watch(route, async () => {
@@ -31,7 +32,9 @@ watch(route, async () => {
         return;
     }
     const studyIds = extractStudiesFromQueryString(route.query.studies);
+    loading.value = true;
     studies.value = await Promise.all(studyIds.map(getStudyData))
+    loading.value = false;
 }, { immediate: true })
 
 </script>
