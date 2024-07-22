@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch, computed } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import Skeleton from '@components/Skeleton.vue'
 import StudyOverview from '@components/StudyOverview.vue'
