@@ -2,7 +2,13 @@
     <Skeleton>
         <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 max-w-[90%] lg:w-[80%]">
             <h1>Compare VCA4D Value chain studies</h1>
-            <StudiesComparison :studies="studies"></StudiesComparison>
+            <StudiesComparison
+                v-if="studies.length > 0"
+                :studies="studies"
+            />
+            <div class="no-study" v-else>
+                No study is selected
+            </div>
         </div>  
     </Skeleton>
 </template>
@@ -31,4 +37,13 @@ watch(route, async () => {
 </script>
 
 <style scoped lang="scss">
+.no-study {
+    display:flex;
+    justify-content: center;
+    padding: 64px 16px;
+    margin-bottom: 32px;
+    background-color: #ededed;
+    border-radius: 8px;
+    width: 100%;
+}
 </style>
