@@ -43,7 +43,7 @@ import StudyInclusiveness from '@components/StudyInclusiveness.vue'
 import StudySocialSustainability from '@components/StudySocialSustainability.vue'
 import StudyHeader from '@components/study/StudyHeader.vue'
 import StudyMenu from '@components/study/StudyMenu.vue'
-import { getStudyData, LOCAL_STORAGE_ID } from '@utils/data.js'
+import { getStudyData } from '@utils/data.js'
 
 const route = useRoute();
 const router = useRouter()
@@ -55,7 +55,6 @@ const updateCurrency = (event) => {
 
 const studyData = ref(null)
 const error = ref(undefined)
-const isLocal = ref(undefined)
 
 watch(currency, (newCurrency) => {
     router.push({ query: 
@@ -140,8 +139,6 @@ onMounted(async () => {
     currency.value = localStorage.getItem('currency')
   }
 
-  const isLocalStudy = studyId === LOCAL_STORAGE_ID
-  isLocal.value =  isLocalStudy
   try {
     studyData.value = await getStudyData(studyId)
     
