@@ -13,13 +13,18 @@ import { watch, ref } from 'vue';
 import { useRoute } from 'vue-router'
 import { getStudyData } from '@utils/data';
 import StudiesComparison from '../components/StudiesComparison.vue';
+import { extractStudiesFromQueryString } from '@utils/router';
 
 const route = useRoute();
 
 const studies = ref([])
 
 watch(route, async () => {
-    const studyIds = route.query.studies;
+    if (! route.query.studies) { 
+        studies.value = [];
+        return;
+    }
+    const studyIds = extractStudiesFromQueryString(route.query.studies);
     studies.value = await Promise.all(studyIds.map(getStudyData))
 }, { immediate: true })
 

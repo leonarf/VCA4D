@@ -2,6 +2,7 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { getLink } from '@utils/router'
 import { getCountry, getProduct } from '@utils/data.js'
+import { getStudyListQueryString } from '@utils/router.js'
 import LogoCountrySmall from './LogoCountrySmall.vue';
 import LogoCountryLarge from './LogoCountryLarge.vue';
 import LogoProductLarge from './LogoProductLarge.vue';
@@ -11,6 +12,7 @@ import CardFooter from './CardFooter.vue';
 import NumberBadge from './NumberBadge.vue';
 import Card from './Card.vue';
 import SubCardsList from './SubCardsList.vue'
+
 const props = defineProps({
     studies: Array,
     countries: Array,
@@ -78,7 +80,7 @@ const getStudiesByProduct = () => {
                             </template>
                             <template v-slot:footer>
                                 <SubCardsList v-if="openedProduct === item.product" 
-                                :link="{ name: 'comparison', query: { studies: item.studies.map(study => study.id) } }"
+                                :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
                                 :linkTitle="`Compare all ${item.product} studies`">
                                     <Card v-for="study in item.studies" :key="study.id"
                                             :link="getLink(study, currency)"
