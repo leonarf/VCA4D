@@ -15,7 +15,7 @@
                   v-if="!! studyData"
                   :views="views"
                   :localCurrency="studyData.targetCurrency" 
-                  :currency="currency"
+                  :currency="route.query.currency"
                   :fullReportPdfUrl="studyData.fullReportPdfUrl"
                   @update:currency="updateCurrency"
                   @select="selectView($event)"
@@ -48,25 +48,17 @@ import { getStudyData } from '@utils/data.js'
 const route = useRoute();
 const router = useRouter()
 
-const currency = ref('')
-const updateCurrency = (event) => {
-    currency.value = event
-}
-
 const studyData = ref(null)
 const error = ref(undefined)
 
-watch(currency, (newCurrency) => {
-    router.push({ query: 
-        {
-            ...route.query,
-            currency: newCurrency
-        }
-    })
+function updateCurrency(newCurrency) {
     localStorage.setItem('currency', newCurrency);
-})
-
-const currencySymbol = computed( () => currency.value === 'LOCAL' ? studyData.value.targetCurrency : currency.value);
+    router.push({ query: {
+      ...route.query,
+      currency: newCurrency
+    } })
+}
+const currencySymbol = computed(() => route.query.currency === 'LOCAL' ? studyData.value.targetCurrency : route.query.currency);
 
 const views = computed(() => {
   if (!studyData.value) { return []; }
@@ -130,21 +122,12 @@ function selectView(viewKey) {
 }
 
 onMounted(async () => {
-  const studyId = route.query.id;
-  const currencyFromUrl = route.query.currency
-
-  currency.value = currencyFromUrl
-
-  if (!currency.value && localStorage.getItem('currency')) {
-    currency.value = localStorage.getItem('currency')
+  if (!route.query.currency) {
+    updateCurrency(localStorage.getItem('currency') || "LOCAL");
   }
 
   try {
-    studyData.value = await getStudyData(studyId)
-    
-    if (!currency.value) {
-        currency.value = "LOCAL"
-    }
+    studyData.value = await getStudyData(route.query.id)
   } catch(err) {
     error.value = err;
   }
