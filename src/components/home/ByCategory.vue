@@ -1,6 +1,6 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
-import { getLink, getCompareProductLink } from '@utils/router'
+import { getLink } from '@utils/router'
 import { getCountry, getProduct } from '@utils/data.js'
 import LogoCountrySmall from './LogoCountrySmall.vue';
 import LogoCountryLarge from './LogoCountryLarge.vue';
@@ -78,7 +78,7 @@ const getStudiesByProduct = () => {
                             </template>
                             <template v-slot:footer>
                                 <SubCardsList v-if="openedProduct === item.product" 
-                                :link="`/comparison/${getCompareProductLink(item.product)}`"
+                                :link="{ name: 'comparison', query: { studies: item.studies.map(study => study.id) } }"
                                 :linkTitle="`Compare all ${item.product} studies`">
                                     <Card v-for="study in item.studies" :key="study.id"
                                             :link="getLink(study, currency)"
