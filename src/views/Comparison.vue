@@ -9,26 +9,19 @@
 
 <script setup>
 import Skeleton from '@components/Skeleton.vue';
-import { onMounted, ref } from 'vue';
+import { watch, ref } from 'vue';
 import { useRoute } from 'vue-router'
-import { getStudiesByProduct, getStudiesByCountry } from '@utils/data';
+import { getStudyData } from '@utils/data';
 import StudiesComparison from '../components/StudiesComparison.vue';
 
 const route = useRoute();
 
 const studies = ref([])
-onMounted(async () => {
-    const params = route.params.params || "country=ecuador"
-    const [key, value ] = params.split('=')
-    if (key === 'country') {
-        studies.value = await getStudiesByCountry(value)
-        return
-    }
-    if (key === 'product') {
-        studies.value = await getStudiesByProduct(value)
-        return
-    }
-})
+
+watch(route, async () => {
+    const studyIds = route.query.studies;
+    studies.value = await Promise.all(studyIds.map(getStudyData))
+}, { immediate: true })
 
 </script>
 

@@ -28,26 +28,6 @@ export const getFullReportPdfPath = async (studyId) => {
     return null
 }
 
-export const getStudiesByCountry = async (countryId) => {
-    const studyIds = jsonData.studies.filter(study => study.country === countryId).map(study => study.id)
-    let ret = []
-    for (const studyId of studyIds) {
-        const study = await getStudyData(studyId)
-        ret.push(study)
-    }
-    return ret
-}
-
-export const getStudiesByProduct = async (productId) => {
-    const studyIds = jsonData.studies.filter(study => study.product === productId).map(study => study.id)
-    let ret = []
-    for (const studyId of studyIds) {
-        const study = await getStudyData(studyId)
-        ret.push(study)
-    }
-    return ret
-}
-
 export const getStudyData = async (studyId) => {
     if (studyId === LOCAL_STORAGE_ID) {
         const localStudyData = localStorage.getItem('localStudyData')
