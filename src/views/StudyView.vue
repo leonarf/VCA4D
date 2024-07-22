@@ -12,23 +12,21 @@
             </header>
             <div class="w-full text-left ml-24 my-8">
                 <StudyMenu 
-                    v-if="studyData"  
-                    :studyId="studyData.id" 
-                    :localCurrency="studyData.targetCurrency" 
-                    :currency="currency"
-                    :isLocalStudy="isLocal"
-                    :hasEco="!!studyData.ecoData"
-                    :hasSocial="!!studyData.socialData"
-                    :hasACV="!!studyData.acvData"
-                    :fullReportPdfUrl="studyData.fullReportPdfUrl"
-                @update:currency="updateCurrency" />
+                  v-if="!! studyData"
+                  :views="views"
+                  :localCurrency="studyData.targetCurrency" 
+                  :currency="currency"
+                  :fullReportPdfUrl="studyData.fullReportPdfUrl"
+                  @update:currency="updateCurrency"
+                  @select="selectView($event)"
+                />
             </div>
              <template v-if="studyData">
-                <StudyOverview v-if="view === undefined" :studyData="studyData"></StudyOverview>
-                <StudyEnvironment v-if="view === 'environment'" :studyData="studyData"></StudyEnvironment>
-                <StudyEconomicGrowth v-if="view === 'economic-growth'" :studyData="studyData" :currency="currencySymbol"></StudyEconomicGrowth>
-                <StudyInclusiveness v-if="view === 'inclusiveness'" :studyData="studyData" :currency="currencySymbol"></StudyInclusiveness>
-                <StudySocialSustainability v-if="view === 'social-sustainability'" :studyData="studyData"></StudySocialSustainability>
+                <component
+                  :is="viewComponent"
+                  :studyData="studyData"
+                  :currency="currencySymbol"
+                />
             </template>
         </div>
     </Skeleton>
@@ -55,17 +53,9 @@ const updateCurrency = (event) => {
     currency.value = event
 }
 
-const studyData = ref(undefined)
+const studyData = ref(null)
 const error = ref(undefined)
 const isLocal = ref(undefined)
-
-const TypeOfViews = {
-    overview: undefined,
-    environment: "environment",
-    'economic-growth': 'economic-growth',
-    inclusiveness: "inclusiveness",
-    'social-sustainability': 'social-sustainability'
-}
 
 watch(currency, (newCurrency) => {
     router.push({ query: 
@@ -79,7 +69,67 @@ watch(currency, (newCurrency) => {
 
 const currencySymbol = computed( () => currency.value === 'LOCAL' ? studyData.value.targetCurrency : currency.value);
 
-const view = ref(undefined)
+const views = computed(() => {
+  if (!studyData.value) { return []; }
+  
+  const hasEco = !!studyData.value.ecoData;
+  const hasSocial = !!studyData.value.socialData;
+  const hasACV = !!studyData.value.acvData;
+  return [
+    {
+      key: "overview",
+      label: 'Functional Analysis',
+      accessible: [hasEco, hasSocial, hasACV].filter(hasStudyPart => hasStudyPart).length >= 2,
+      component: StudyOverview
+    },
+    {
+      key: 'economic-growth',
+      label: 'Contribution to economic growth',
+      accessible: hasEco,
+      component: StudyEconomicGrowth
+    },
+    {
+      key: 'inclusiveness',
+      label: 'Inclusiveness',
+      accessible: hasEco,
+      component: StudyInclusiveness
+    },
+    {
+      key: 'social-sustainability',
+      label: 'Social sustainability',
+      accessible: hasSocial,
+      component: StudySocialSustainability
+    },
+    {
+      key: 'environment',
+      label: 'Environmental sustainability',
+      accessible: hasACV,
+      component: StudyEnvironment
+    }
+  ]
+});
+
+const view = computed(() => {
+  return route.query.view || findFirstAvailableView();
+
+  function findFirstAvailableView() {
+    const accessibleViews = views.value.filter(view => view.accessible);
+    return accessibleViews[0].key;
+  }
+})
+
+const viewComponent = computed(() => {
+  const viewConfig = views.value.find(viewConfig => viewConfig.key === view.value);
+  return viewConfig?.component || null;
+});
+
+function selectView(viewKey) {
+  router.push({ query: {
+    ...route.query,
+    view: viewKey
+  } });
+}
+
 onMounted(async () => {
   const studyId = route.query.id;
   const currencyFromUrl = route.query.currency
@@ -101,30 +151,7 @@ onMounted(async () => {
   } catch(err) {
     error.value = err;
   }
-
-  view.value = TypeOfViews.overview
-  if (route.query.view) {
-    view.value = route.query.view;
-  }
-  else {
-    // Heuristique pour savoir si ça vaut le coup d'afficher la page overview, ou directement la seule page disponible de l'étude
-    let possibleStudyParts = ["ecoData", "acvData", "socialData", "briefReportPdfUrl"]
-    let availableParts = possibleStudyParts.filter(part => studyData.value[part])
-    if (availableParts.length == 1 && availableParts[0] != "ecoData") {
-      if (availableParts[0] == "acvData") {
-        view.value = TypeOfViews.environment
-      }
-      else if (availableParts[0] == "socialData") {
-        view.value = TypeOfViews['social-sustainability']
-      }
-    }
-  }
 })
-
-const onBeforeRouteUpdate = (to, from) => {
-  const view = to.query.view;
-  view.value = view;
-};
 </script>
 
 <style scoped lang="scss">
