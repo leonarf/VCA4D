@@ -1,7 +1,10 @@
 <template>
     <table class="w-full">
         <tbody>
-            <ComparisonHeader :studies="studies" />
+            <ComparisonHeader
+                :studies="studies"
+                @select-studies="emit('select-studies',$event)"
+            />
             <ComparisonEconomics :studies="studies" />
             
             <ComparisonSeparator :studies="studies" />
@@ -27,6 +30,7 @@ import ComparisonEconomics from './comparison/ComparisonEconomics.vue'
 const props = defineProps({
     studies: Array,
 })
+const emit = defineEmits(["select-studies"]);
 
 </script>
 
