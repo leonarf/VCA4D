@@ -21,7 +21,6 @@ const props = defineProps({
     .svg {
         height: 27px;
         width: 27px;
-        fill: #979797;
-        stroke: #979797;
+        color: #979797;
     }
 </style>
