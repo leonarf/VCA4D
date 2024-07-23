@@ -2,14 +2,19 @@
     <nav class="flex flex-col">
         <div class="text-[#868686] mb-2">Contents</div>
         <ol class="text-[#2E6BAD] space-y-2">
-            <li v-for="(route, indexRoute) in routes" :key="indexRoute">
-                <RouterLink 
-                    :to="`/study?id=${isLocalStudy ? 'localStorage' : studyId}${route.view ? `&view=${route.view}` : ''}&currency=${currency}`"
-                    :class="{ disabled: !route.accessible}"
-                >{{ route.label }}</RouterLink>
+            <li v-for="(view, index) in views" :key="index">
+                <a 
+                    class="hover:underline cursor-pointer"
+                    :class="{ disabled: !view.accessible}"
+                    @click="emits('select', view.key)"
+                >{{ view.label }}</a>
             </li>
             <li>
-                <a v-if="fullReportPdfUrl" :href="fullReportPdfUrl">Study full report</a>
+                <a
+                    v-if="fullReportPdfUrl"
+                    class="hover:underline cursor-pointer"
+                    :href="fullReportPdfUrl"
+                >Study full report</a>
             </li>
         </ol>
         <div v-if="localCurrency">
@@ -19,8 +24,8 @@
                     id="currencies"
                     class="border border-[#656565] text-[#868686] rounded-lg focus:ring-[#868686] focus:border-[#868686] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     v-model="selectedCurrency"
-                    @change="$emit('update:currency', $event.target.value)"
-                    >
+                    @change="emits('update:currency', $event.target.value)"
+                >
                     <option v-if="isCurrencySupported(localCurrency)" value="LOCAL">{{ getCurrencyName(localCurrency) }} ({{ getCurrencySymbol(localCurrency) }})</option>
                     <option v-else value="LOCAL">{{ localCurrency }} ({{  getCurrencySymbol(localCurrency) }})</option>
                     <option v-if="localCurrency !== 'USD' && isCurrencySupported(localCurrency)" value="USD">{{ getCurrencyName("USD") }} ({{ getCurrencySymbol("USD") }})</option>
@@ -32,47 +37,17 @@
 </template>
 
 <script setup>
-    import { ref} from 'vue'
+    import { ref, defineEmits } from 'vue'
 
     import { getCurrencySymbol, getCurrencyName, isCurrencySupported } from '@utils/currency.js'
     const props = defineProps({
-        studyId: String,
+        views: Array,
         localCurrency : String,
         currency: String,
-        isLocalStudy: Boolean,
-        hasEco: Boolean,
-        hasSocial: Boolean,
-        hasACV: Boolean,
         fullReportPdfUrl: String,
     })
+    const emits = defineEmits(["select"])
     const selectedCurrency = ref(props.currency);
-    const routes = [
-        {
-            view: undefined,
-            label: 'Functional Analysis',
-            accessible: (props.hasEco + props.hasSocial + props.hasACV) >= 2
-        },
-        {
-            view: 'economic-growth',
-            label: 'Contribution to economic growth',
-            accessible: props.hasEco
-        },
-        {
-            view: 'inclusiveness',
-            label: 'Inclusiveness',
-            accessible: props.hasEco
-        },
-        {
-            view: 'social-sustainability',
-            label: 'Social sustainability',
-            accessible: props.hasSocial
-        },
-        {
-            view: 'environment',
-            label: 'Environmental sustainability',
-            accessible: props.hasACV
-        }
-    ]
 </script>
 
 <style scoped lang="scss">
