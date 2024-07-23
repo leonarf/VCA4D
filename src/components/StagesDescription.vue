@@ -7,10 +7,9 @@
         v-for="step in populatedSteps"
         :key="step.name"
       >
-        <img
-          style="height: 50px; width: 50px"
-          :src="getStepLogo(step)"
-          :alt="step.name + ' illustration'"
+        <component
+          class="stage-picto"
+          :is="getStepLogo(step)"
         />
         <div class="font-semibold">{{ getStageLabel(step.name) }}</div>
         <p class="text-center">{{ step.description || 'Pas de description' }}</p>
@@ -67,4 +66,8 @@ const getStepLogo = (step) => {
 </script>
 
 <style scoped lang="scss">
+.stage-picto {
+  height: 50px;
+  width: 50px;
+}
 </style>

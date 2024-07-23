@@ -71,7 +71,7 @@ const getStudiesByCountry = () => {
                         <template v-slot:footer>
                             <CardFooter class="capitalize" :text="getProduct(item.studies[0].product).prettyName">
                                 <template v-slot:logo>
-                                    <LogoProductSmall :product-name="item.studies[0].product" :alt="`Link to ${item.studies[0].title} study`"/>
+                                    <LogoProductSmall :product-name="item.studies[0].product"/>
                                 </template>
                             </CardFooter>
                         </template>
@@ -96,7 +96,7 @@ const getStudiesByCountry = () => {
                                 :is-local="study.local"
                                 :title="getProduct(study.product).prettyName">
                                 <template v-slot:logo>
-                                    <LogoProductLarge :product-name="study.product" :alt="`Link to ${study.title} study`" />
+                                    <LogoProductLarge :product-name="study.product"/>
                                 </template>
                             </Card>
                         </SubCardsList>
