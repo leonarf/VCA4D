@@ -4,13 +4,6 @@
         <td v-for="(study) in studiesWithDetails" :key="`${study.id}`">
             <div class="flex flex-col items-center gap-y-2"
             >
-                <div v-if="study.id" class="flex flex-row items-center justify-center">
-                    <CardFooter :text="study.country_name">
-                        <template v-slot:logo>
-                            <LogoCountrySmall :iso-code="study['country_iso_code'] || 'gr'" />
-                        </template>
-                    </CardFooter>
-                </div>
                 <Card
                     :link="getLink(study, 'LOCAL')"
                     :is-local="false"
@@ -20,6 +13,13 @@
                         <LogoProductLarge :product-name="study.product.id"/>
                     </template>
                 </Card>
+                <div v-if="study.id" class="flex flex-row items-center justify-center">
+                    <CardFooter :text="study.country_name">
+                        <template v-slot:logo>
+                            <LogoCountrySmall :iso-code="study['country_iso_code'] || 'gr'" />
+                        </template>
+                    </CardFooter>
+                </div>
             </div>
         </td>
     </tr>
