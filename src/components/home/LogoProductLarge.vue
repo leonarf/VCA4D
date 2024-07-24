@@ -19,8 +19,4 @@ const props = defineProps({
 </template>
 
 <style scoped lang="scss">
-.logo {
-    filter: saturate(0);
-    opacity: 0.5;
-}
 </style>
