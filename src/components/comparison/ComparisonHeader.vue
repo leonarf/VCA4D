@@ -29,7 +29,7 @@
 
 import { computed } from 'vue';
 import { slugify } from '@utils/format.js'
-import { getCountry, getProduct } from '@utils/data.js'
+import { getCountry, getProduct } from '@utils/data'
 import { getLink } from '@utils/router'
 import LogoCountrySmall from '@components/home/LogoCountrySmall.vue';
 import LogoProductLarge from '@components/home/LogoProductLarge.vue';

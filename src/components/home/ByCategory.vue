@@ -1,7 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { getLink } from '@utils/router'
-import { getCountry, getProduct } from '@utils/data.js'
+import { getCountry, getProduct } from '@utils/data'
 import { getStudyListQueryString } from '@utils/router.js'
 import LogoCountrySmall from './LogoCountrySmall.vue';
 import LogoCountryLarge from './LogoCountryLarge.vue';

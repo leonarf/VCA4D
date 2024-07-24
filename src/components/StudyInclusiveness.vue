@@ -84,7 +84,7 @@ import NoDataBadge from '@components/study/NoDataBadge.vue';
 import QuestionTitle from "@components/study/QuestionTitle.vue"
 import { computed } from 'vue'
 import { useCurrencyUtils } from '@utils/format'
-import { LOCAL_STORAGE_ID } from '@utils/data.js'
+import { LOCAL_STORAGE_ID } from '@utils/data'
 
 
 const props = defineProps({

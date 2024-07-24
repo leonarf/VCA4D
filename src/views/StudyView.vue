@@ -44,7 +44,7 @@ import StudyInclusiveness from '@components/StudyInclusiveness.vue'
 import StudySocialSustainability from '@components/StudySocialSustainability.vue'
 import StudyHeader from '@components/study/StudyHeader.vue'
 import StudyMenu from '@components/study/StudyMenu.vue'
-import { getStudyData } from '@utils/data.js'
+import { getStudyData } from '@utils/data'
 import { getStudyPdfUrls } from '../utils/data'
 
 const route = useRoute();
