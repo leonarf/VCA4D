@@ -7,7 +7,7 @@
 
 <script setup>
 defineProps({
-  svg: Function
+  svg: Object
 });
 </script>
 
