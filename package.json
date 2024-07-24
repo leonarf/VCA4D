@@ -14,6 +14,7 @@
     "clipboard": "^2.0.11",
     "d3-fetch": "^3.0.1",
     "echarts": "^5.5.0",
+    "vite-svg-loader": "^5.1.0",
     "vue": "^3.2.47",
     "vue-echarts": "^6.6.9",
     "vue-pdf-embed": "^2.0.3",

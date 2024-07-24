@@ -1,11 +1,9 @@
 <template>
 	<div class="wrapper">
 	    <div class="badge bg-[#EDEDED]">
-	      <img
-	          style="height: 20px; width: 20px"
-	          :src="EmptyDocumentLogo"
-	          alt="Empty document"
-	        />
+	      <EmptyDocumentLogo
+					style="height: 20px; width: 20px;"
+				/>
 	      <span>No data for this study</span>
 	    </div>
 	  </div>
@@ -15,7 +13,7 @@
 	import EmptyDocumentLogo from '@images/icons/empty-document.svg';
 </script>
 
-<style scoped labng="scss">
+<style scoped lang="scss">
 .wrapper {
 	display: inline-block;
 
