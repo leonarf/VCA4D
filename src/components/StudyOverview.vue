@@ -36,8 +36,8 @@
 
         </section>
 
-        <PdfSection v-if="studyData.briefReportPdfUrl" :study-brief-url="studyData.briefReportPdfUrl" />
-        <a target="_blank" class="text-blue-600" v-if="studyData.fullReportPdfUrl" :href="studyData.fullReportPdfUrl">Download study full report</a>
+        <PdfSection v-if="studyPdfUrls.briefReportPdfUrl" :study-brief-url="studyPdfUrls.briefReportPdfUrl" />
+        <a target="_blank" class="text-blue-600" v-if="studyPdfUrls.fullReportPdfUrl" :href="studyPdfUrls.fullReportPdfUrl">Download study full report</a>
         <section v-if="studyData && studyData.ecoData">
             <Sankey :studyData="studyData"/>
         </section>
@@ -54,7 +54,8 @@ import PdfSection from './pdf/PdfSection.vue';
 import Sankey from './charts/Sankey.vue'
 
 const props = defineProps({
-  studyData: Object
+  studyData: Object,
+  studyPdfUrls: Object
 });
 </script>
 

@@ -2,29 +2,30 @@
     <Skeleton>
         <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 max-w-[90%]">
             <header>
-                <div v-if="!studyData && !error" class="loading">Loading...</div>
+                <div v-if="! isDataLoaded && !error" class="loading">Loading...</div>
 
                 <div v-if="error" class="error">{{ error }}</div>
 
-                <div v-if="studyData">
+                <div v-if="isDataLoaded">
                     <StudyHeader :studyData="studyData"/>
                 </div>
             </header>
             <div class="w-full text-left ml-24 my-8">
                 <StudyMenu 
-                  v-if="!! studyData"
+                  v-if="isDataLoaded"
                   :views="views"
                   :localCurrency="studyData.targetCurrency" 
                   :currency="route.query.currency"
-                  :fullReportPdfUrl="studyData.fullReportPdfUrl"
+                  :fullReportPdfUrl="studyPdfUrls.fullReportPdfUrl"
                   @update:currency="updateCurrency"
                   @select="selectView($event)"
                 />
             </div>
-             <template v-if="studyData">
+             <template v-if="isDataLoaded">
                 <component
                   :is="viewComponent"
                   :studyData="studyData"
+                  :studyPdfUrls="studyPdfUrls"
                   :currency="currencySymbol"
                 />
             </template>
@@ -44,11 +45,13 @@ import StudySocialSustainability from '@components/StudySocialSustainability.vue
 import StudyHeader from '@components/study/StudyHeader.vue'
 import StudyMenu from '@components/study/StudyMenu.vue'
 import { getStudyData } from '@utils/data.js'
+import { getStudyPdfUrls } from '../utils/data'
 
 const route = useRoute();
 const router = useRouter()
 
 const studyData = ref(null)
+const studyPdfUrls = ref({})
 const error = ref(undefined)
 
 function updateCurrency(newCurrency) {
@@ -127,11 +130,16 @@ onMounted(async () => {
   }
 
   try {
-    studyData.value = await getStudyData(route.query.id)
+    studyData.value = await getStudyData(route.query.id);
+    studyPdfUrls.value = await getStudyPdfUrls(route.query.id);
   } catch(err) {
     error.value = err;
   }
 })
+
+const isDataLoaded = computed(() => {
+  return !! studyData.value && !! studyPdfUrls.value;
+});
 </script>
 
 <style scoped lang="scss">

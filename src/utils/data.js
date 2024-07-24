@@ -53,17 +53,18 @@ export const getStudyData = async (studyId) => {
     }
     const metaInfo = ecoData ? ecoData : socialData ? socialData : acvData
 
-    let fullReportPdfUrl = await getFullReportPdfPath(studyId)
-    let briefReportPdfUrl = await getBriefPdfPath(studyId)
-
-    console.log("fullReportPdfUrl :", fullReportPdfUrl)
     return {
         ...metaInfo,
         ecoData: ecoData?.ecoData,
         socialData: socialData?.socialData,
-        acvData: acvData?.acvData,
-        fullReportPdfUrl: fullReportPdfUrl,
-        briefReportPdfUrl: briefReportPdfUrl
+        acvData: acvData?.acvData
+    }
+}
+
+export async function getStudyPdfUrls(studyId) {
+    return {
+        fullReportPdfUrl: await getFullReportPdfPath(studyId),
+        briefReportPdfUrl: await getBriefPdfPath(studyId)
     }
 }
 
