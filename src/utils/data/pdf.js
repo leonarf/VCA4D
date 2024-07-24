@@ -3,7 +3,6 @@ export async function getBriefPdfPath(studyId) {
   let pdfUrl = `${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-brief-report.pdf`
   let res = await fetch(pdfUrl, { method: 'HEAD' })
   if (res.status === 200) {
-      console.log("pdf found!!!", pdfUrl)
       return pdfUrl;
   }
   console.log("got status", res.status, "for pdf", pdfUrl)
@@ -14,7 +13,6 @@ async function getFullReportPdfPath(studyId) {
   let pdfUrl = `${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-full-report.pdf`
   let res = await fetch(pdfUrl, { method: 'HEAD' })
   if (res.status === 200) {
-      console.log("pdf found!!!", pdfUrl)
       return pdfUrl;
   }
   console.log("got status", res.status, "for pdf", pdfUrl)

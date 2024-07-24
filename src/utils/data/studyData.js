@@ -1,5 +1,4 @@
 import { json } from 'd3-fetch'
-
 export const LOCAL_STORAGE_ID = 'localStorage'
 
 const cachedDataByStudyId = {};
@@ -42,4 +41,31 @@ async function getStudyDataFromFileName(studyId, studyPart) {
   } catch {
     return undefined;
   }
+}
+
+export function logMissingData(studiesData) {
+  const studiesWithMissingData = studiesData
+    .map(inventoryMissingData)
+    .filter(hasMissingData);
+  
+  console.log(formatReport(studiesWithMissingData));
+}
+function inventoryMissingData(studyData) {
+  const missingDataKeys = ["ecoData", "socialData", "acvData"].filter(key => ! studyData[key]);
+
+  return {
+    id: studyData.id,
+    missingDataKeys
+  };
+}
+function hasMissingData({ missingDataKeys }) {
+  return missingDataKeys.length !== 0;
+}
+function formatReport(studiesWithMissingData) {
+  if (studiesWithMissingData.length === 0) { return ""; }
+
+  return `Studies are missing data:\n`
+    + studiesWithMissingData.map(({ id, missingDataKeys }) =>
+        `- ${id} is missing: ${missingDataKeys.join(", ")}`
+      ).join("\n");
 }

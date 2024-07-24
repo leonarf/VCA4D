@@ -5,7 +5,7 @@ import { computed, onMounted, ref, watch } from 'vue'
 import ByCategories from '@components/home/ByCategories.vue'
 import ByContinents from '@components/home/ByContinents.vue'
 import FilterInput from '@components/home/FilterInput.vue'
-import { getAllJsonData, getStudyData } from '@utils/data'
+import { getAllJsonData, getStudyData, logMissingData } from '@utils/data'
 
 const countries = ref([])
 const studies = ref([])
@@ -26,7 +26,9 @@ onMounted(async () => {
 })
 
 async function populateStudiesData(jsonStudies) {
-  return Promise.all(jsonStudies.map(populateStudyData));
+  const studiesData = await Promise.all(jsonStudies.map(populateStudyData));
+  logMissingData(studiesData);
+  return studiesData;
 
   async function populateStudyData(jsonStudy) {
     const studyData = await getStudyData(jsonStudy.id);
