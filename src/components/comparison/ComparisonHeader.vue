@@ -27,7 +27,9 @@
             </div>
         </td>
         <td class="add-studies">
-            <AddStudiesButton/>
+            <AddStudiesButton
+                :currentStudySelection="studiesWithDetails.map(study => study.id)"
+            />
         </td>
     </tr>
 </template>

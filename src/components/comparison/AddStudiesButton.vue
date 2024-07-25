@@ -1,13 +1,33 @@
 <template>
-  <a class="add-studies-button">
-    <Svg class="plus" :svg="PlusLogo"/>
-    <div>Add studies</div>
-  </a>
+  <div>
+    <a class="add-studies-button" @click="opened = true">
+      <Svg class="plus" :svg="PlusLogo"/>
+      <div>Add studies</div>
+    </a>
+    <Modal
+      :opened="opened"
+      @close="opened = false"
+    >
+      <div class="modal-title">Select studies to compare</div>
+      <StudiesListTable
+        :selectedStudies="currentStudySelection"
+      />
+    </Modal>
+  </div>
 </template>
 
 <script setup>
+  import { ref } from 'vue';
   import PlusLogo from '../../images/icons/plus.svg'
   import Svg from "@components/Svg.vue"
+  import Modal from "@components/Modal.vue"
+  import StudiesListTable from './StudiesListTable.vue';
+
+  defineProps({
+    currentStudySelection: Array
+  })
+
+  const opened = ref(false);
 </script>
 
 <style scoped lang="scss">
@@ -28,5 +48,9 @@
     &:hover {
       color: #1C64F2;
     }
+  }
+  .modal-title {
+    font-size: 40px;
+    margin-bottom: 20px;
   }
 </style>
