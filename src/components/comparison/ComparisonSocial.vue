@@ -14,6 +14,7 @@
                 />
             </div>
         </td>
+        <td></td>
     </tr>
 </template>
 

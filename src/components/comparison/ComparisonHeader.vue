@@ -26,6 +26,9 @@
                 </div>
             </div>
         </td>
+        <td class="add-studies">
+            <AddStudiesButton/>
+        </td>
     </tr>
 </template>
 
@@ -40,6 +43,7 @@ import LogoProductLarge from '@components/home/LogoProductLarge.vue';
 import Card from '@components/home/Card.vue';
 import CardFooter from '@components/home/CardFooter.vue';
 import Svg from '@components/Svg.vue';
+import AddStudiesButton from '@components/comparison/AddStudiesButton.vue';
 import CrossLogo from '../../images/icons/cross.svg'
 
 const props = defineProps({
@@ -106,5 +110,10 @@ function removeStudy(studyIdToRemove) {
         display: flex;
         width: 115px;
     }
+}
+.add-studies {
+    display: flex;
+    padding: 30px;
+
 }
 </style>

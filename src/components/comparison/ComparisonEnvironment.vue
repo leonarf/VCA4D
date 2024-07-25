@@ -11,6 +11,7 @@
                     {{ formatNumber(getImpactValue(impact, study)) }}
                 </div>
             </td>
+            <td></td>
         </tr>
     </template>
 </template>

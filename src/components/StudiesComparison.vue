@@ -77,7 +77,7 @@ td:first-child {
 .right-border {
     @apply border-r-2
 }
-tr td:not(:first-child):not(:last-child) {
+tr td:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
   @apply border-r-2
 }
 tr.rounded td:not(:first-child) div {
@@ -86,7 +86,7 @@ tr.rounded td:not(:first-child) div {
 tr.rounded td:nth-child(2) div{
     @apply rounded-l-full
 }
-tr.rounded td:last-child div {
+tr.rounded td:nth-last-child(2) div {
     @apply rounded-r-full
 }
 </style>
