@@ -1,5 +1,6 @@
 <script setup>
 import { getProductLogo } from '@utils/logos';
+import Svg from '@components/Svg.vue';
 const props = defineProps({
     productName: String,
     alt: {
@@ -10,16 +11,12 @@ const props = defineProps({
 </script>
 
 <template>
-    <img 
-        :src="getProductLogo(productName)" 
-        :alt="alt"
-        style="height: 50px; width: 50px;"
-        >
+    <Svg 
+        :svg="getProductLogo(productName)" 
+        class="logo"
+        style="height: 50px; width: 50px"
+    />
 </template>
 
 <style scoped lang="scss">
-img{
-    filter: saturate(0);
-    opacity: 0.5;
-}
 </style>

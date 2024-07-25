@@ -56,8 +56,7 @@ const getStudiesByProduct = () => {
                             :is-local="item.studies[0].local"
                             :title="getProduct(item.product).prettyName">
                             <template v-slot:logo>
-                                <LogoProductLarge :product-name="item.product"
-                                        :alt="`Link to ${item.studies[0].title} study`" />
+                                <LogoProductLarge :product-name="item.product"/>
                             </template>
                             <template v-slot:footer>
                                 <CardFooter :text="getCountry(item.studies[0].country).prettyName">

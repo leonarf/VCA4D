@@ -34,6 +34,6 @@ const props = defineProps({
     @apply flex flex-col items-center justify-evenly text-center rounded-lg w-full pt-4 pb-2;
     height:110px;
     margin-bottom: 0.5rem;
-    color: black;
+    color: #404040 ;
 }
 </style>
