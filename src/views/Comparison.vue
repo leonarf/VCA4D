@@ -1,12 +1,13 @@
 <template>
     <Skeleton>
-        <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 max-w-[90%] lg:w-[80%]">
-            <h1>Compare VCA4D Value chain studies</h1>
-            <StudiesComparison
-                v-if="studies.length > 0"
-                :studies="studies"
-                @select-studies="selectStudies($event)"
-            />
+        <div>
+            <h1 class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48">Compare VCA4D Value chain studies</h1>
+            <div class="py-1 pb-16 px-4 sm:px-8 md:px-12 lg:px-40 xl:px-48 studies-wrapper" v-if="studies.length > 0">
+                <StudiesComparison
+                    :studies="studies"
+                    @select-studies="selectStudies($event)"
+                />
+            </div>
             <div class="no-study" v-else-if="loading === false">
                 No study is selected
             </div>
@@ -46,6 +47,12 @@ function selectStudies(studyIds) {
 </script>
 
 <style scoped lang="scss">
+.studies-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: scroll;
+}
 .no-study {
     display:flex;
     justify-content: center;

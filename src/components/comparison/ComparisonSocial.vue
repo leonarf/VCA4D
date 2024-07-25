@@ -5,8 +5,13 @@
             <div class="subtitle">{{ part }}</div>
         </td>
         <td v-for="study in studies" :key="`${study.id}`">
-            <div class="w-3/4 mx-auto my-2">
-                <Tag v-if="study.socialData" :scale="getSocialAverageGroup(study.socialData, index)" :appreciation="getAppreciation(getSocialAverageGroup(study.socialData, index))" />
+            <div class="tag-container mx-auto my-2">
+                <Tag
+                    v-if="study.socialData"
+                    class="tag"
+                    :scale="getSocialAverageGroup(study.socialData, index)"
+                    :appreciation="getAppreciation(getSocialAverageGroup(study.socialData, index))"
+                />
             </div>
         </td>
     </tr>
@@ -48,4 +53,12 @@ const getAppreciation = (scale) => {
 </script>
 
 <style scoped lang="scss">
+.tag-container {
+    margin: 0.5rem auto;
+    min-width: 200px;
+    .tag {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
 </style>

@@ -17,7 +17,7 @@
                         <Svg :svg="CrossLogo"/>
                     </a>
                 </div>
-                <div v-if="study.id" class="flex flex-row items-center justify-center">
+                <div v-if="study.id" class="footer">
                     <CardFooter :text="study.country_name">
                         <template v-slot:logo>
                             <LogoCountrySmall :iso-code="study['country_iso_code'] || 'gr'" />
@@ -78,6 +78,7 @@ function removeStudy(studyIdToRemove) {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    height: 200px;
 
     .card-box {
         position: relative;
@@ -99,6 +100,11 @@ function removeStudy(studyIdToRemove) {
                 background-color: #ffac9e;
             }
         }
+    }
+
+    .footer {
+        display: flex;
+        width: 115px;
     }
 }
 </style>
