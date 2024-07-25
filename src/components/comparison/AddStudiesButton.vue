@@ -11,6 +11,7 @@
       <div class="modal-title">Select studies to compare</div>
       <StudiesListTable
         :selectedStudies="currentStudySelection"
+        @select-studies="selectStudies($event)"
       />
     </Modal>
   </div>
@@ -28,6 +29,13 @@
   })
 
   const opened = ref(false);
+
+  const emits = defineEmits(["select-studies"]);
+
+  function selectStudies(studySelection) {
+    opened.value = false;
+    emits("select-studies", studySelection);
+  }
 </script>
 
 <style scoped lang="scss">

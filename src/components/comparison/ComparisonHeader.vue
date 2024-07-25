@@ -29,6 +29,7 @@
         <td class="add-studies">
             <AddStudiesButton
                 :currentStudySelection="studiesWithDetails.map(study => study.id)"
+                @select-studies="emits('select-studies', $event)"
             />
         </td>
     </tr>

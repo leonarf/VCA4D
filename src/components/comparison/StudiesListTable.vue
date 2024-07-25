@@ -19,11 +19,14 @@
       />
     </template>
   </TableLite>
+  <div class="footer">
+    <button class="confirm-button" @click="emits('select-studies', newSelectedStudies)">Show comparison</button>
+  </div>
 </template>
 
 <script setup>
   import _ from "lodash";
-  import { onMounted, ref } from 'vue';
+  import { onMounted, ref, computed } from 'vue';
   import TableLite from 'vue3-table-lite';
   import { getAllJsonData, getStudy, getStudyData, getProduct, getCountry } from '@utils/data';
 
@@ -54,6 +57,8 @@
     }
   }
 
+  const emits = defineEmits(["select-studies"]);
+
   const columns = [{
     field: "checkbox"
   }, {
@@ -81,6 +86,25 @@
 <style scoped lang="scss">
 .table {
   overflow-y: scroll;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+
+  .confirm-button {
+    color:white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    background-color: #3F83F8;
+    border-radius: 0.25rem;
+    right: 0px;
+    width: 200px;
+
+    &:hover {
+      background-color: #1A56DB;
+    }
+  }
 }
 </style>
 
