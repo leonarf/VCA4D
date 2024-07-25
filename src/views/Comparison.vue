@@ -8,8 +8,12 @@
                     @select-studies="selectStudies($event)"
                 />
             </div>
-            <div class="no-study" v-else-if="loading === false">
+            <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 no-study" v-else-if="loading === false">
                 No study is selected
+                <AddStudiesButton
+                    :currentStudySelection="studies.map(study => study.id)"
+                    @select-studies="selectStudies($event)"
+                />
             </div>
         </div>  
     </Skeleton>
@@ -55,11 +59,12 @@ function selectStudies(studyIds) {
 }
 .no-study {
     display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     justify-content: center;
     padding: 64px 16px;
-    margin-bottom: 32px;
     background-color: #ededed;
     border-radius: 8px;
-    width: 100%;
 }
 </style>
