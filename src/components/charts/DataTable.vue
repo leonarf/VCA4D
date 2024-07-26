@@ -6,7 +6,9 @@
       :rows="props.rows"
       :total="props.rows.length"
       :sortable="true"
-      :is-hide-paging="props.rows.length <= 10"
+      :max-height="maxHeight"
+      :pageSize="pageSize"
+      :is-hide-paging="props.rows.length <= pageSize"
       @row-clicked="onClickRow"
     >
       <template v-if="selectable" v-slot:checkbox="{ value: rowData }">
@@ -29,6 +31,15 @@
     selectedIds: {
       type: Array,
       default: []
+    },
+    pageSize: { 
+      type: Number,
+      default: 10,
+      validator: (size) => [10, 25, 50].includes(size)
+    },
+    maxHeight: {
+      type: Number,
+      required: false
     },
     rows: Array,
     columns: Array
