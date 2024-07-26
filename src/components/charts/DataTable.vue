@@ -18,7 +18,7 @@
   import TableLite from "vue3-table-lite";
 
   const props = defineProps({
-    données: Array
+    rows: Array
   });
   const table = ref({
     isLoading: false,
@@ -29,7 +29,7 @@
   });
 
   const tableContent = computed(() => {
-    var columns = Object.keys(props.données[0]).map((property) => {
+    var columns = Object.keys(props.rows[0]).map((property) => {
       return {
         label: property,
         field: property,
@@ -38,8 +38,8 @@
     });
     return {
       columns,
-      rows: props.données,
-      totalRecordCount: props.données.length,
+      rows: props.rows,
+      totalRecordCount: props.rows.length,
     };
   });
 </script>

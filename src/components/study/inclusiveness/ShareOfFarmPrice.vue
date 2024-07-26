@@ -1,21 +1,21 @@
 <template >
   <div>
-    <TableauDeDonnées
-            :données="donnéesPourLeTableau"
-          />
+    <DataTable
+      :rows="tableRows"
+    />
   </div>
 </template>
 
 <script setup>
 import { computed } from 'vue'
 
-import TableauDeDonnées from "@components/charts/TableauDeDonnées.vue";
+import DataTable from "@components/charts/DataTable.vue";
 import { formatPercent } from '@utils/format.js'
 const props = defineProps({
     data: Array,
 })
 
-const donnéesPourLeTableau = computed(() => {
+const tableRows = computed(() => {
   return props.data.map(item => {
     return {
       "Case": item.label,
