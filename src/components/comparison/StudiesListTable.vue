@@ -1,24 +1,14 @@
 <template>
-  <TableLite
-    :is-slot-mode="true"
+  <DataTable
     class="table"
-    :isLoading="studies.length === 0"
-    :columns="columns"
-    :max-height="500"
-    :total="studies.length"
+    selectable
+    :selectedIds="newSelectedStudies"
+    :maxHeight="500"
+    :pageSize="50"
     :rows="studies"
-    :page-size="50"
-    :is-hide-paging="studies.length <= 50"
-    @row-clicked="(rowData) => toggleRowSelection(rowData.id)"
-  >
-    <template v-slot:checkbox="{ value: studyData }">
-      <input
-        type="checkbox"
-        :checked="isSelected(studyData.id)"
-        @click.stop="toggleRowSelection(studyData.id)"
-      />
-    </template>
-  </TableLite>
+    :columns="columns"
+    @update:selectedIds="newSelectedStudies = $event"
+  />
   <div class="footer">
     <button class="confirm-button" @click="emits('select-studies', newSelectedStudies)">Show comparison</button>
   </div>
@@ -26,8 +16,8 @@
 
 <script setup>
   import _ from "lodash";
-  import { onMounted, ref, computed } from 'vue';
-  import TableLite from 'vue3-table-lite';
+  import DataTable from "@components/charts/DataTable.vue";
+  import { onMounted, ref } from 'vue';
   import { getAllJsonData, getStudy, getStudyData, getProduct, getCountry } from '@utils/data';
 
   const props = defineProps({
@@ -46,22 +36,9 @@
     }
   });
 
-  function isSelected(studyId) {
-    return newSelectedStudies.value.includes(studyId);
-  }
-  function toggleRowSelection(studyId) {
-    if (newSelectedStudies.value.includes(studyId)) {
-      newSelectedStudies.value = newSelectedStudies.value.filter(id => id !== studyId);
-    } else {
-      newSelectedStudies.value.push(studyId)
-    }
-  }
-
   const emits = defineEmits(["select-studies"]);
 
   const columns = [{
-    field: "checkbox"
-  }, {
     label: "Product",
     display: (studyData) => _.capitalize(getProduct(getStudy(studyData.id).product).prettyName)
   }, {
