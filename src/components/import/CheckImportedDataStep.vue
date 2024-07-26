@@ -127,7 +127,7 @@ import { computed, onMounted, ref } from 'vue'
 import ImportWarning from '@components/import/ImportWarning.vue'
 
 import { isCurrencySupported, isValidCurrency } from '@utils/currency.js'
-import { getCountries, getAllKnownProducts } from '@utils/data.js'
+import { getCountries, getAllKnownProducts } from '@utils/data'
 import { slugify } from '@utils/format.js'
 
 import { ACV_SHEET_NAMES } from '@utils/import/environment.js'

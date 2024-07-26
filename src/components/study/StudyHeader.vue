@@ -22,7 +22,7 @@
 <script setup>
 import { computed } from 'vue'
 import { getCurrencySymbol } from '@utils/currency.js'
-import { getCountry, getProduct, getStudy } from '@utils/data.js'
+import { getCountry, getProduct, getStudy } from '@utils/data'
 
 const props = defineProps({
     studyData: {

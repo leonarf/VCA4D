@@ -50,7 +50,7 @@ import Skeleton from '@components/Skeleton.vue'
 import SaveOnGithubStep from '@components/import/SaveOnGithubStep.vue'
 import CheckImportedDataStep from '@components/import/CheckImportedDataStep.vue'
 
-import { getAllJsonData } from '@utils/data.js';
+import { getAllJsonData } from '@utils/data';
 import { processUploadedExcelFile, clearImportErrors } from '@utils/import/generic.js'
 
 const workbook = ref(null)

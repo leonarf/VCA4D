@@ -5,7 +5,7 @@ import { parseEnvironmentJson } from './environment.js'
 
 import { processSocialExcelFile } from "./social.js"
 import { isValidCurrency, isCurrencySupported } from '@utils/currency.js'
-import { getAllKnownProducts } from '@utils/data.js';
+import { getAllKnownProducts } from '@utils/data';
 import { slugify } from '@utils/format.js'
 
 
