@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 100%">
+  <div style="width: 100%" :class="{ selectable }">
     <TableLite
       :is-slot-mode="true"
       :columns="columnsWithCheckbox"
@@ -151,6 +151,24 @@
   
     td {
       padding: 2px 4px 4px !important;
+    }
+  }
+}
+
+.selectable :deep(table) {
+  tr:hover {
+    td {
+      color: #3F83F8 !important;
+    }
+  }
+
+  td {
+    user-select: none;
+    cursor: pointer;
+
+    input {
+      accent-color: #3F83F8;
+      cursor: pointer;
     }
   }
 }
