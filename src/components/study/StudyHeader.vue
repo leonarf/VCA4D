@@ -16,6 +16,16 @@
             <div class="title">{{ studyData.year }}</div>
             <div class="subtitle">Reference year</div>
         </div>
+        <div>
+            <RouterLink :to="`/comparison/${commodityId}`">
+                Compare all {{ commodityName }} studies
+            </RouterLink>
+        </div>
+        <div>
+            <RouterLink :to="`/comparison/${studyData.country}`">
+                Compare all {{ dataToDisplay.country }} studies
+            </RouterLink>
+        </div>
     </div>
 </template>
 
@@ -30,6 +40,14 @@ const props = defineProps({
       required: true,
     }
 })
+
+const commodityId = computed(() => {
+    return getStudy(props.studyData.id).product;
+});
+
+const countryId = computed(() => {
+    return getStudy(props.studyData.id).product;
+});
 
 const commodityName = computed(() => {
     return getProduct(getStudy(props.studyData.id).product).prettyName;
