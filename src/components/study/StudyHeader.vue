@@ -16,12 +16,12 @@
             <div class="title">{{ studyData.year }}</div>
             <div class="subtitle">Reference year</div>
         </div>
-        <div>
+        <div v-if="false">
             <RouterLink :to="`/comparison/${commodityId}`">
                 Compare all {{ commodityName }} studies
             </RouterLink>
         </div>
-        <div>
+        <div v-if="false">
             <RouterLink :to="`/comparison/${studyData.country}`">
                 Compare all {{ dataToDisplay.country }} studies
             </RouterLink>
