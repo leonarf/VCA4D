@@ -7,9 +7,9 @@
         v-for="step in populatedSteps"
         :key="step.name"
       >
-        <component
+        <Svg
           class="stage-picto"
-          :is="getStepLogo(step)"
+          :svg="getStepLogo(step)"
         />
         <div class="font-semibold">{{ getStageLabel(step.name) }}</div>
         <p class="text-center">{{ step.description || 'Pas de description' }}</p>
@@ -28,6 +28,7 @@ import WholesaleLogo from '../images/icons/wholesale.svg'
 import CollectionLogo from '../images/icons/collection.svg'
 import ProductionLogo from '../images/icons/production.svg'
 import ExportLogo from '../images/icons/export.svg'
+import Svg from '@components/Svg.vue'
 import { STAGES as DISPLAY_STAGES, getStageLabel } from '@utils/stages'
 
 const props = defineProps({
