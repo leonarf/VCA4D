@@ -18,10 +18,10 @@
             </li>
         </ol>
         <div v-if="localCurrency">
-            <div class="text-[#868686] mt-4 mb-2">Select currency</div>
+            <label for="select-currency" class="text-[#868686] mt-4 mb-2">Select currency</label>
             <div class="max-w-[175px] text-[#868686] select-wrapper">
                 <select
-                    id="currencies"
+                    id="select-currency"
                     class="border border-[#656565] text-[#868686] rounded-lg focus:ring-[#868686] focus:border-[#868686] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     v-model="selectedCurrency"
                     @change="emits('update:currency', $event.target.value)"
