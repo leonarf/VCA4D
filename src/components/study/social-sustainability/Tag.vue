@@ -5,14 +5,14 @@
 
 <script setup>
 import { computed } from 'vue';
-import { getTagColor } from '@utils/colors.js'
+import { getSocialScoreColor } from '@utils/colors.js'
 
 const props = defineProps({
   scale: Number,
   appreciation: String
 });
 
-const scaleColor = computed(() => getTagColor(props.scale))
+const scaleColor = computed(() => getSocialScoreColor(props.scale))
 
 </script>
 

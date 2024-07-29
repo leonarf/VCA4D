@@ -1,5 +1,5 @@
 import { formatNumber, formatPercent } from '@utils/format.js'
-import { getStageColor, getRingColor, COLORS_IMPORTED_PRODUCTS, COLORS_EXPORTED_PRODUCTS } from '@utils/colors.js'
+import { getColor, getRingColor, COLORS_IMPORTED_PRODUCTS, COLORS_EXPORTED_PRODUCTS } from '@utils/colors.js'
 import { getStageLabel } from '../utils/stages'
 const RADIUSES_MINI_PIE = ['20%', '40%']
 const RIADUSES_PIE = ['50%', '75%']
@@ -32,7 +32,7 @@ export const getRingChart = (items, tooltip, title, isEnvironment = false) => {
                 radius: RIADUSES_PIE,
                 itemStyle: {
                     color: function (info) {
-                        return isEnvironment ? getRingColor(info.name) : getStageColor(info.name)
+                        return isEnvironment ? getRingColor(info.name) : getColor(info.name)
                     }
                 }
             }
@@ -207,9 +207,9 @@ export const getSelectableBarChart = (items, currentItem, tooltip, formatLabel, 
     let values = []
     items.map(item => {
         labels.push(item.name)
-        // const color = currentItem === item.name ? SELECTED_COLOR : getStageColor(item.name)
-        // const emphasisColor = currentItem === item.name ? SELECTED_COLOR_HOVER : getStageColor(item.name) + "B3"
-        const color = getStageColor(item.name, isEnvironment)
+        // const color = currentItem === item.name ? SELECTED_COLOR : getColor(item.name)
+        // const emphasisColor = currentItem === item.name ? SELECTED_COLOR_HOVER : getColor(item.name) + "B3"
+        const color = getColor(item.name, isEnvironment)
         const emphasisColor = color + "B3"
         values.push({
             value: item.value,
@@ -448,7 +448,17 @@ const getMiniBarChart = (items, tooltip, formatLabel) => {
     let values = []
     items.map(item => {
         labels.push(item.name)
-        values.push(item.value)
+        // code temporaire pour récupérer une couleur, il faudra récupérer la couleur du stage quand pertinent à l'avenir
+        const color = getColor(item.name)
+        const emphasisColor = color + "B3"
+        console.log("items", item)
+        values.push({
+            value: item.value,
+            emphasisColor,
+            itemStyle: {
+                color,
+            }
+        })
     })
     return {
         xAxis: {
@@ -457,7 +467,7 @@ const getMiniBarChart = (items, tooltip, formatLabel) => {
             axisLabel: {
                 fontSize: 15,
                 fontWeight: 500,
-                color: '#e2e0e0',
+                //color: '#e2e0e0',
                 interval: 0,
                 rotate: -10,
                 margin: 20
@@ -470,13 +480,13 @@ const getMiniBarChart = (items, tooltip, formatLabel) => {
                 if (!d.data) {
                     return ""
                 }
-                return formatLabel ? formatLabel(d.data) : formatNumber(d.data)
+                return formatLabel ? formatLabel(d.data.value) : formatNumber(d.data.value)
             },
             textStyle: {
                 fontSize: 22,
                 fontWeight: 500,
             },
-            color: '#e2e0e0'
+            //color: '#e2e0e0'
         },
         tooltip: {
             trigger: 'item',
@@ -576,7 +586,7 @@ const getMiniPieChart = (data, title, valueFormatter) => {
                 label: {
                     width: 120,
                     overflow: 'break',
-                    color: "#e2e0e0",
+                    //color: "#e2e0e0",
                     fontSize: 15
                 },
                 labelLine: {

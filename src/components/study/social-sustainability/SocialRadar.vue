@@ -5,7 +5,7 @@
 <script setup>
 import { computed } from 'vue'
 import { getSocialAverageGroup } from '@utils/misc.js'
-import { getTagColor } from '@utils/colors.js'
+import { getSocialScoreColor } from '@utils/colors.js'
 
 import Radar from '@charts/Radar.vue'
 const props = defineProps({
@@ -44,7 +44,7 @@ const chartData = computed(() => {
       splitNumber: 4,
       splitArea: {
         areaStyle: {
-          color: [getTagColor(1), getTagColor(2), getTagColor(3), getTagColor(4)]
+          color: [getSocialScoreColor(1), getSocialScoreColor(2), getSocialScoreColor(3), getSocialScoreColor(4)]
         }
       },
       axisLine: {
