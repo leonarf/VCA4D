@@ -114,3 +114,14 @@
     return newSortedRows;
   }
 </script>
+
+<style scoped lang="scss">
+:deep(table) {
+  thead {
+    .vtl-sortable {
+      background-size: auto;
+      background-position: bottom right;
+    }
+  }
+}
+</style>
