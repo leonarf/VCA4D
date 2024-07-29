@@ -1,18 +1,22 @@
 <template>
   <div>
-    <h3>What are the impacts of this value chain on {{impact.name}}?</h3>
-      <InfoTitle :title="impact.name" :information="impact.method" class="my-4"/>
+    <h3>What are the impacts of this value chain on {{detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name}}?</h3>
+      <InfoTitle :title="detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name" :information="detailsToDisplay.helpBoxText" class="my-4"/>
       <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
       <div v-if="selectedValueChain">
-        <MiniChartContainer :currentStage="selectedValueChain" :title="`${impact.name} (${impact.unit})`" :isEnvironment="true">
-            <div class="flex flex-row w-full justify-evenly mt-6">
-                <div class="w-full flex flex-row justify-center">
+        <MiniChartContainer
+          :currentStage="selectedValueChain"
+          :title="`${detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name} (${impact.unit})`"
+          :isEnvironment="true"
+        >
+          <div class="flex flex-row w-full justify-evenly mt-6">
+              <div class="w-full flex flex-row justify-center">
 <!--
   <Ring :options="populatedRingChartData"></Ring>
 -->
-                  <BarChart :options="detailBarChartOptions"></BarChart>
-                </div>
-            </div>
+                <BarChart :options="detailBarChartOptions"></BarChart>
+              </div>
+          </div>
         </MiniChartContainer>
       </div>
     </div>
@@ -27,11 +31,17 @@ import Ring from '@charts/Ring.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 import { formatNumber } from '@utils/format.js'
 import { getRingColor } from '@utils/colors.js'
+import { ACVImpacts } from '@utils/misc.js'
 
 const props = defineProps({
     impact: Object,
     perUnit: String,
     volumes: Object
+})
+
+const detailsToDisplay = computed(() => {
+  var details = ACVImpacts.find(item => item.name == props.impact.name)
+  return details
 })
 
 const selectedValueChain = ref(null)
