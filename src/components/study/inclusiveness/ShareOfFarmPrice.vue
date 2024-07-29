@@ -1,7 +1,7 @@
 <template >
   <div>
     <DataTable
-      :rows="props.data"
+      :rows="rowsWithRatio"
       :columns=columns
     />
   </div>
@@ -11,8 +11,22 @@
 
 import DataTable from "@components/charts/DataTable.vue";
 import { formatPercent } from '@utils/format.js'
+import { computed } from "vue";
+import { useCurrencyUtils } from '@utils/format';
+
 const props = defineProps({
     data: Array,
+    currency: String,
+    studyData: Object
+})
+
+const { prettyAmount, convertAmount } = useCurrencyUtils(props);
+
+const rowsWithRatio = computed(() => {
+  return props.data.map(item => ({
+    ...item,
+    ratio: item.farmPrice / item.endPrice
+  }))
 })
 
 const columns = [{
@@ -25,7 +39,8 @@ const columns = [{
     sortable: true,
   }, {
     label: "Farm gate price",
-    display: item => `${item.farm} per kg`,
+    field: "farmPrice",
+    display: (item) => `${prettyAmount.value(convertAmount.value(item.farmPrice))} per kg`,
     sortable: true,
   }, {
     label: "End products",
@@ -33,10 +48,12 @@ const columns = [{
     sortable: true,
   }, {
     label: "End products unit value",
-    display: item => `${item.final} per kg`,
+    field: "endPrice",
+    display: (item) => `${prettyAmount.value(convertAmount.value(item.endPrice))} per kg`,
     sortable: true,
   }, {
     label: "Farm value part",
+    field: "ratio",
     display: item => formatPercent(item.ratio),
     sortable: true,
   }
