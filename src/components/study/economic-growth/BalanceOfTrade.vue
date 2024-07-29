@@ -2,10 +2,14 @@
   <QuestionTitle>What is the contribution of the value chain to the <strong>balance of trade</strong>?</QuestionTitle>
   <div v-if="hasData" class="ml-4 md:ml-12 mt-8">
     <div class="w-3/4 md:w-2/3 mb-4">
-      <div class="uppercase font-semibold text-[#303030] text-xl">Balance of trade of the value chain</div>
-      <div class="font-semibold text-2xl text-[#C1C1C1]">{{  balanceOfTrade  }}</div>
+      <div class="uppercase font-semibold text-[#303030] text-xl">
+        Balance of trade of the value chain
+      </div>
+      <div class="font-semibold text-2xl text-[#C1C1C1]">{{ balanceOfTrade }}</div>
       <div class="mt-2">
-        Importing intermediate consumption goods for the VC activities denotes losing foreign currency for the national economy while VC exports (if any) bring foreign currency gains
+        Importing intermediate consumption goods for the Value Chain activities denotes losing
+        foreign currency for the national economy while Value Chain exports (if any) bring foreign
+        currency gains
       </div>
     </div>
     <div class="bg-[#DBEDDD] rounded-xl px-6 py-4">
@@ -26,17 +30,17 @@
 <script setup>
 import BarChart from '@charts/BarChart.vue'
 import { getImportedProductsData, getExportedProductsData } from '@/charts/charts'
-import { computed } from 'vue';
+import { computed } from 'vue'
 import { useCurrencyUtils } from '@utils/format'
-import QuestionTitle from '@components/study/QuestionTitle.vue';
-import NoDataBadge from '@components/study/NoDataBadge.vue';
+import QuestionTitle from '@components/study/QuestionTitle.vue'
+import NoDataBadge from '@components/study/NoDataBadge.vue'
 
 const props = defineProps({
   studyData: Object,
   currency: String
 })
 
-const { prettyAmount, convertAmount } = useCurrencyUtils(props);
+const { prettyAmount, convertAmount } = useCurrencyUtils(props)
 
 const hasData = computed(() => {
   if (!props.studyData?.ecoData?.importExport) {
@@ -54,8 +58,12 @@ const balanceOfTrade = computed(() => {
   return prettyAmount.value(convertAmount.value(exports - imports))
 })
 
-const optionsImported = computed(() => getImportedProductsData(props.studyData?.ecoData, prettyAmount.value, convertAmount.value))
-const optionsExported = computed(() => getExportedProductsData(props.studyData?.ecoData, prettyAmount.value, convertAmount.value))
+const optionsImported = computed(() =>
+  getImportedProductsData(props.studyData?.ecoData, prettyAmount.value, convertAmount.value)
+)
+const optionsExported = computed(() =>
+  getExportedProductsData(props.studyData?.ecoData, prettyAmount.value, convertAmount.value)
+)
 </script>
 
 <style ></style>
