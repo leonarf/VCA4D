@@ -1,6 +1,7 @@
 import MilkLogo from '@images/icons/products/milk.svg'
 import PineappleLogo from '@images/icons/products/pineapple.svg'
 import BananaLogo from '@images/icons/products/banana.svg'
+import BeansLogo from '@images/icons/products/beans.svg'
 import CoffeeLogo from '@images/icons/products/coffee.svg'
 import MangoLogo from '@images/icons/products/mango.svg'
 import CashewLogo from '@images/icons/products/cashew.svg'
@@ -14,6 +15,7 @@ import PeanutLogo from '@images/icons/products/peanut.svg'
 import PalmOilLogo from '@images/icons/products/palm-tree.svg'
 import CassavaLogo from '@images/icons/products/cassava.svg'
 import FishLogo from '@images/icons/products/fish.svg'
+import WheatLogo from '@images/icons/products/wheat.svg'
 import DefaultLogo from '@images/icons/products/default.svg'
 
 export const getProductLogo = (product) => {
@@ -24,6 +26,9 @@ export const getProductLogo = (product) => {
             return BananaLogo
         case 'coffee':
             return CoffeeLogo
+        case 'cowpea':
+        case 'french beans':
+            return BeansLogo;
         case 'mango':
             return MangoLogo
         case 'cashew':
@@ -46,6 +51,8 @@ export const getProductLogo = (product) => {
             return PineappleLogo
         case 'oil palm':
             return PalmOilLogo
+        case 'sorghum':
+            return WheatLogo
         case 'cassava':
             return CassavaLogo
         case 'freshwater-aquaculture':
