@@ -1,7 +1,10 @@
 <template>
     <table class="w-full">
         <tbody>
-            <ComparisonHeader :studies="studies" />
+            <ComparisonHeader
+                :studies="studies"
+                @select-studies="emit('select-studies',$event)"
+            />
             <ComparisonEconomics :studies="studies" />
             
             <ComparisonSeparator :studies="studies" />
@@ -13,8 +16,6 @@
             <ComparisonEnvironment :studies="studies" />
         </tbody>
     </table>
-    <div>
-    </div>
 </template>
 
 <script setup>
@@ -27,6 +28,7 @@ import ComparisonEconomics from './comparison/ComparisonEconomics.vue'
 const props = defineProps({
     studies: Array,
 })
+const emit = defineEmits(["select-studies"]);
 
 </script>
 
@@ -38,10 +40,11 @@ td {
     @apply w-1/5
 }
 td.title {
-    @apply uppercase text-[#8A8A8A] font-bold text-sm pb-4
+    @apply uppercase text-[#8A8A8A] font-bold text-sm pb-4;
 }
-tr {
-    @apply flex flex-row
+td:first-child {
+    min-width: 220px;
+    padding-right: 20px;
 }
 .definition {
     @apply text-[#9B9B9B] italic
@@ -74,7 +77,7 @@ tr {
 .right-border {
     @apply border-r-2
 }
-tr td:not(:first-child):not(:last-child) {
+tr td:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
   @apply border-r-2
 }
 tr.rounded td:not(:first-child) div {
@@ -83,7 +86,7 @@ tr.rounded td:not(:first-child) div {
 tr.rounded td:nth-child(2) div{
     @apply rounded-l-full
 }
-tr.rounded td:last-child div {
+tr.rounded td:nth-last-child(2) div {
     @apply rounded-r-full
 }
 </style>
