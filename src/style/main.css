@@ -78,4 +78,5 @@ select {
     top: 9px;
     right: 10px;
     position: absolute;
+    pointer-events: none;
 }
