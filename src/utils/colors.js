@@ -1,51 +1,45 @@
-
-const ADDITIONAL_COLORS = ["#e5d08f", "#e3d4b6",
-  "#cacbce",
-  "#e1dfdf"]
-
-var StagesColors = {
-  Producers: "#6AAB9C",
-  Collectors: "#FA9284",
-  Processors: "#E06C78",
-  Wholesalers: "#5874DC",
-  Retailers: "#384E78",
-  Exporters: "#b57ba6",
-  landOwnersFees: ADDITIONAL_COLORS[0],
-  depreciation: ADDITIONAL_COLORS[1],
-  employeeWages:ADDITIONAL_COLORS[2],
-  financialInstitutionsInterests: ADDITIONAL_COLORS[3]
+const AVAILABLE_COLORS = {
+  StageProducerGreen : "#6AAB9C",
+  StageCollectorSalmon : "#FA9284",
+  StageProcessorRed : "#E06C78",
+  StageWholesalerBlue : "#5874DC",
+  StageRetailerDarkBlue : "#384E78",
+  Grey : "#CACBCE",
+  LightGrey : "E1DFDF",
+  Bronze : "#E5D08F",
+  LightBronze : "#E3D4B6",
+  BadScoreRed: "#ffac9e",
+  LowScoreOrange: "#fec875",
+  SubstantialScoreYellow: "#d7e275",
+  HighScoreGreen : "#94d99d",
 }
 
-var ChainValuesColors = {}
-
-export const addColorsForValueChains = (valuechains) => {
-  // TODO remplir ChainValuesColors avec de bonnes couleurs en utilisant une heuristique basée sur l'impact de la chaîne de valeur si possible
-  // Du genre + polluant = plus rouge
+var FixedColorsMapping = {
+  Producers: AVAILABLE_COLORS["StageProducerGreen"],
+  Collectors: AVAILABLE_COLORS["StageCollectorSalmon"],
+  Processors: AVAILABLE_COLORS["StageProcessorRed"],
+  Wholesalers: AVAILABLE_COLORS["StageWholesalerBlue"],
+  Retailers: AVAILABLE_COLORS["StageRetailerDarkBlue"],
+  landOwnersFees: AVAILABLE_COLORS["Bronze"],
+  depreciation: AVAILABLE_COLORS["LightBronze"],
+  employeeWages:AVAILABLE_COLORS["Grey"],
+  financialInstitutionsInterests: AVAILABLE_COLORS["LightGrey"]
 }
 
-export const getStageColor = (stageName, isEnvironment = false) => {
-  if (isEnvironment) {
-    return getSubChainColor(stageName)
-  }
-  if (stageName in StagesColors) {
-    return StagesColors[stageName]
-  }
-  if (stageName in ChainValuesColors) {
-    return ChainValuesColors[stageName]
-  }
-  var pickedColor = ADDITIONAL_COLORS[Object.keys(ChainValuesColors).length % ADDITIONAL_COLORS.length]
-  ChainValuesColors[stageName] = pickedColor
-  return ChainValuesColors[stageName]
-}
+var DynamicColorsMapping = {}
 
-const SUB_CHAIN_COLORS = [
-  "#6AAB9C",
-  "#FA9284",
-  "#E06C78",
-  "#5874DC",
-  "#384E78",
-  "#b57ba6",
-]
+export const getColor = (itemName) => {
+  if (itemName in FixedColorsMapping) {
+    return FixedColorsMapping[itemName]
+  }
+  if (itemName in DynamicColorsMapping) {
+    return DynamicColorsMapping[itemName]
+  }
+  var pickedColorName = Object.keys(AVAILABLE_COLORS)[Object.keys(DynamicColorsMapping).length % Object.keys(AVAILABLE_COLORS).length]
+  console.log("Dynamically added color to item", itemName, pickedColorName)
+  DynamicColorsMapping[itemName] = AVAILABLE_COLORS[pickedColorName]
+  return DynamicColorsMapping[itemName]
+}
 
 const RING_COLORS = [
   '#8B0000',
@@ -56,14 +50,6 @@ const RING_COLORS = [
   '#008080'
 ]
 
-let subChainsColors = {}
-const getSubChainColor = (subchainName) => {
-  if (!(subchainName in subChainsColors)) {
-    subChainsColors[subchainName] = SUB_CHAIN_COLORS[Object.keys(subChainsColors).length % SUB_CHAIN_COLORS.length]
-  }
-  return subChainsColors[subchainName]
-}
-
 let ringColors = {}
 export const getRingColor = (name) => {
   if (!(name in ringColors)) {
@@ -72,25 +58,20 @@ export const getRingColor = (name) => {
   return ringColors[name]
 } 
 
-export const addColors = (sankeyStages) => {
-  let ret = sankeyStages.map(sStage => (sStage.name in StagesColors) ? ({...sStage, color: StagesColors[sStage.name]}) : sStage)
-  
-  const stagesWithNoColors = ret.filter(sStage => !sStage.color)
-  stagesWithNoColors.map((stage, index) => {
-    const color = ADDITIONAL_COLORS[index % ADDITIONAL_COLORS.length]
-    ret = ret.map(sStage => sStage.name === stage.name ? {...sStage, color} : sStage)
-  })
-  return ret
+export const getSocialScoreColor = (value) => {
+  if (value < 1.5) {
+    return AVAILABLE_COLORS["BadScoreRed"]
+  }
+  else if (value < 2.5) {
+    return AVAILABLE_COLORS["LowScoreOrange"]
+  }
+  else if (value < 3.5) {
+    return AVAILABLE_COLORS["SubstantialScoreYellow"]
+  }
+  else {
+    return AVAILABLE_COLORS["HighScoreGreen"]
+  }
 }
-
-const tagsColors = [
-  "#ffac9e",
-  "#fec875",
-  "#d7e275",
-  "#94d99d",
-];
-
-export const getTagColor = (value) => tagsColors[Math.round(value) - 1]
 
 export const COLORS_IMPORTED_PRODUCTS = ['#5F8A64', '#71A578', '#9DB95F', '#C1CC5E']
 export const COLORS_EXPORTED_PRODUCTS = ['#b06245', '#C46D4D']

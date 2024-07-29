@@ -1,7 +1,7 @@
 <template>
     <div class="social-details-group flex flex-row items-center rounded-3xl px-3 py-2 max-w-[650px] my-8 cursor-pointer"
         @click="isOpen = !isOpen"
-        :style="{ '--color': getTagColor(group.averageValue) + '81', '--color-hover': getTagColor(group.averageValue) }">
+        :style="{ '--color': getSocialScoreColor(group.averageValue) + '81', '--color-hover': getSocialScoreColor(group.averageValue) }">
         <div class="tag-number">{{ getNumberInTitle(group.title) }}
         </div>
         <div class="font-bold flex-grow">{{ removeNumberFromTitle(group.title) }}</div>
@@ -21,7 +21,7 @@
 <script setup>
 import { ref } from 'vue';
 import Tag from './Tag.vue'
-import { getTagColor } from '@utils/colors.js'
+import { getSocialScoreColor } from '@utils/colors.js'
 
 const props = defineProps({
     group: Object

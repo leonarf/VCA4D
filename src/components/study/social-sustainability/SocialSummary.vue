@@ -19,10 +19,10 @@
     </p>
     <p>
       The four levels of social sustainability are illustrated by different colours in the chart:
-      <b :style="{ backgroundColor: getTagColor(4) }">high (green)</b>,
-      <b :style="{ backgroundColor: getTagColor(3) }">substantial (yellow)</b>,
-      <b :style="{ backgroundColor: getTagColor(2) }">moderate/low (orange)</b>,
-      <b :style="{ backgroundColor: getTagColor(1) }">not at all (red)</b>.
+      <b :style="{ backgroundColor: getSocialScoreColor(4) }">high (green)</b>,
+      <b :style="{ backgroundColor: getSocialScoreColor(3) }">substantial (yellow)</b>,
+      <b :style="{ backgroundColor: getSocialScoreColor(2) }">moderate/low (orange)</b>,
+      <b :style="{ backgroundColor: getSocialScoreColor(1) }">not at all (red)</b>.
     </p>
     <div class="grid grid-cols-3 w-full gap-2">
       <div class="row-span-2 self-start xl:self-end">
@@ -100,7 +100,7 @@ import SocialRadar from './SocialRadar.vue'
 import SummaryBlock from './SummaryBlock.vue'
 import SummaryBlockQuestion from './SummaryBlockQuestion.vue'
 import { getSocialAverageGroup } from '@utils/misc.js'
-import { getTagColor } from '@utils/colors.js'
+import { getSocialScoreColor } from '@utils/colors.js'
 
 const props = defineProps({
   studyData: Object

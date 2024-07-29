@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { getStageColor } from '@utils/colors.js'
+import { getColor } from '@utils/colors.js'
 
 const props = defineProps({
     currentStage: String,
@@ -12,17 +12,24 @@ const props = defineProps({
     }
 })
 
-const bgColor = computed(() => {
+const divStyle = computed(() => {
     return {
-        backgroundColor: getStageColor(props.currentStage, props.isEnvironment) 
+        border: "1rem solid",
+        borderColor: getColor(props.currentStage, props.isEnvironment),
+    }
+})
+
+const titleStyle = computed(() => {
+    return {
+        backgroundColor: getColor(props.currentStage, props.isEnvironment),
     }
 })
 </script>
 
 <template>
-    <div :style="bgColor" class="rounded-2xl px-12 py-12 w-full">
+    <div :style="divStyle" class="rounded-2xl px-12 py-12 w-full">
         <template v-if="currentStage !== ''">
-            <span class="text-[#e2e0e0] text-xl"><strong>{{ title }}</strong> in {{ currentStage }}</span>
+            <span :style="titleStyle" class="text-[#e2e0e0] text-xl"><strong>{{ title }}</strong> in {{ currentStage }}</span>
             <slot></slot>
         </template>
     </div>

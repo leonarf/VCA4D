@@ -12,7 +12,7 @@
 
 <script setup>
 import { computed } from 'vue';
-import { getTagColor } from '@utils/colors.js'
+import { getSocialScoreColor } from '@utils/colors.js'
 const props = defineProps({
   title: String,
   anchor: Number,
@@ -30,7 +30,7 @@ const slideTo = (id) => {
 }
 
 const bgColor = computed(() => {
-    const color = getTagColor(props.averageValue)
+    const color = getSocialScoreColor(props.averageValue)
     return {
         backgroundColor: color ? color + '81' : '#f1f1f1'
     }

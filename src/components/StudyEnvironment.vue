@@ -9,7 +9,7 @@
     <p>
       First, damages entailed by the Value Chain operations are calculated on <strong>Resource depletion</strong>,
       <strong>Ecosystem quality</strong> and <strong>Human health</strong>, as well as their contribution
-      to <trong>Climate Change</trong> through the quantitative <strong>Life Cycle Assessment (LCA)</strong>.
+      to <strong>Climate Change</strong> through the quantitative <strong>Life Cycle Assessment (LCA)</strong>.
     </p>
     <p> 
       Second, an <strong>exploratory assessment of biodiversity risks is provided</strong>.

@@ -1,5 +1,5 @@
 import { useCurrencyUtils } from '@utils/format.js'
-import { addColors } from '@utils/colors.js'
+import { getColor } from '@utils/colors.js'
 
 const getNodeGap = (studyData) => {
     // First we look at number of flows we have. We force it in the range [10, 40]
@@ -84,8 +84,7 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
         return ret
     })
 
-    sankeyStages = addColors(sankeyStages)
-
+    sankeyStages.forEach(item => {item.color = getColor(item.name)})
     // Attribute an index to each stage. If a stage with index N give a flow to another stage it will have index N + 1
     for (let idx = 0; idx < 15; idx++) {
         const stages = sankeyStages.filter(sStage => sStage.index === idx)
