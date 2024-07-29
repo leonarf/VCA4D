@@ -117,10 +117,40 @@
 
 <style scoped lang="scss">
 :deep(table) {
+
+  td, th {
+    color: #303030 !important;
+    background-color: white !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: none !important;
+  }
+  td {
+    padding: 2px 4px 4px !important;
+  }
+
   thead {
-    .vtl-sortable {
-      background-size: auto;
-      background-position: bottom right;
+    border-collapse: separate !important;
+    th {
+      border-top: none !important;
+      padding: 2px 4px 20px !important;
+
+      .vtl-sortable {
+        background-size: auto;
+        background-position: bottom right;
+        filter: hue-rotate(-20deg) saturate(2);
+      }
+
+    }
+  }
+  
+  tbody {
+    tr:first-child td {
+      border-top: none !important;
+    }
+  
+    td {
+      padding: 2px 4px 4px !important;
     }
   }
 }
