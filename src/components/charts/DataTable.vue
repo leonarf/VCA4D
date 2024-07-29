@@ -3,13 +3,17 @@
     <TableLite
       :is-slot-mode="true"
       :columns="columnsWithCheckbox"
-      :rows="props.rows"
-      :total="props.rows.length"
-      :sortable="true"
+      :rows="sortedRows"
+      :total="sortedRows.length"
+      :sortable="{
+        order: 'id',
+        sort: 'asc',
+      }"
       :max-height="maxHeight"
       :pageSize="pageSize"
-      :is-hide-paging="props.rows.length <= pageSize"
+      :is-hide-paging="sortedRows.length <= pageSize"
       @row-clicked="onClickRow"
+      @do-search="updateSortOnSearch"
     >
       <template v-if="selectable" v-slot:checkbox="{ value: rowData }">
         <input
@@ -23,7 +27,7 @@
 </template>
 
 <script setup>
-  import { computed } from "vue";
+  import { computed, ref } from "vue";
   import TableLite from "vue3-table-lite";
 
   const props = defineProps({
@@ -43,6 +47,11 @@
     },
     rows: Array,
     columns: Array
+  });
+
+  const sortingOptions = ref({
+    sortingField: null,
+    sortOrder: null
   });
 
   const emits = defineEmits(["update:selectedIds"]);
@@ -76,4 +85,32 @@
       ...props.columns
     ];
   })
+
+  function updateSortOnSearch(_first, _last, newSortingField, newSortOrder) {
+    sortingOptions.value = {
+      sortingField: newSortingField,
+      sortOrder: newSortOrder
+    };
+  }
+  const sortedRows = computed(() => {
+    if (! sortingOptions.value.sortingField) { return props.rows; }
+    
+    const rows = sortRows([...props.rows], sortingOptions.value);
+    return rows;
+  })
+
+  function sortRows(rows, { sortingField, sortOrder }) {
+    const newSortedRows = rows.sort((itemA, itemB) => {
+      if (itemA[sortingField] < itemB[sortingField]) {
+        return -1;
+      } else if (itemA[sortingField] > itemB[sortingField]) {
+        return 1;
+      } else { return 0; }
+    })
+
+    if (sortOrder === "desc") {
+      newSortedRows.reverse();
+    }
+    return newSortedRows;
+  }
 </script>

@@ -32,31 +32,47 @@
 
     async function loadStudyData() {
       const jsonStudies = getAllJsonData().studies;
-      return Promise.all(jsonStudies.map(({ id }) => getStudyData(id)))
+      return Promise.all(jsonStudies.map(({ id }) => populateStudy(id)))
     }
   });
+  async function populateStudy(id) {
+    const studyData = await getStudyData(id);
+    return {
+      id: studyData.id,
+      product: _.capitalize(getProduct(getStudy(studyData.id).product).prettyName),
+      country: _.capitalize(getCountry(getStudy(studyData.id).country).prettyName),
+      isEcoAvailable: isAvailable(studyData, "ecoData"),
+      isSocialAvailable: isAvailable(studyData, "socialData"),
+      isAcvAvailable: isAvailable(studyData, "acvData")
+    }
+  }
 
   const emits = defineEmits(["select-studies"]);
 
   const columns = [{
     label: "Product",
-    display: (studyData) => _.capitalize(getProduct(getStudy(studyData.id).product).prettyName)
+    field: "product",
+    sortable: true
   }, {
     label: "Country",
-    display:(studyData) => _.capitalize(getCountry(getStudy(studyData.id).country).prettyName)
+    field: "country",
+    sortable: true
   }, {
     label: "Macro economic indicators",
-    display: buildAvailibilityDisplay("ecoData")
+    field: "isEcoAvailable",
+    sortable: true
   }, {
     label: "Social sustainability",
-    display: buildAvailibilityDisplay("socialData")
+    field: "isSocialAvailable",
+    sortable: true
   }, {
     label: "Environmental analysis",
-    display: buildAvailibilityDisplay("acvData")
+    field: "isAcvAvailable",
+    sortable: true
   }];
 
-  function buildAvailibilityDisplay(dataKey) {
-    return (studyData) => !! studyData[dataKey] ? "Available" : "-"
+  function isAvailable(studyData, dataKey) {
+    return !! studyData[dataKey] ? "Available" : "-"
   }
 </script>
 
