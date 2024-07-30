@@ -5,6 +5,8 @@
       name: 'comparison',
       query: { studies: getStudyListQueryString(otherStudies) }
     }"
+    :title="title"
+    target="_blank"
   >
     <Svg :svg="BalanceLogo" height="18px"/>
     {{ otherStudies.length }}
@@ -12,10 +14,11 @@
 </template>
 
 <script setup>
+  import _ from "lodash"
   import { computed } from "vue";
   import BalanceLogo from "../../images/icons/balance.svg"
   import Svg from "@components/Svg.vue"
-  import { getStudy, getProductStudies, getCountryStudies } from "@utils/data";
+  import { getStudy, getProduct, getCountry, getProductStudies, getCountryStudies } from "@utils/data";
   import { getStudyListQueryString } from "@utils/router";
 
   const props = defineProps({
@@ -34,6 +37,18 @@
         return getCountryStudies(getStudy(props.studyId).country);
       default:
         return [];
+    }
+  })
+  const title = computed(() => {
+    switch(props.type) {
+      case "product":
+        const product = getProduct(getStudy(props.studyId).product).prettyName;
+        return `Compare the ${otherStudies.value.length} ${_.capitalize(product)} studies`;
+      case "country":
+        const country = getCountry(getStudy(props.studyId).country).prettyName;
+        return `Compare the ${otherStudies.value.length} ${_.capitalize(country)} studies`;
+      default:
+        return "";
     }
   })
 </script>
