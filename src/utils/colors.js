@@ -5,13 +5,13 @@ const AVAILABLE_COLORS = {
   StageWholesalerBlue : "#5874DC",
   StageRetailerDarkBlue : "#384E78",
   Grey : "#CACBCE",
-  LightGrey : "E1DFDF",
+  LightGrey : "#E1DFDF",
   Bronze : "#E5D08F",
   LightBronze : "#E3D4B6",
-  BadScoreRed: "#ffac9e",
-  LowScoreOrange: "#fec875",
-  SubstantialScoreYellow: "#d7e275",
-  HighScoreGreen : "#94d99d",
+  BadScoreRed: "#FFAC9E",
+  LowScoreOrange: "#FEC875",
+  SubstantialScoreYellow: "#D7E275",
+  HighScoreGreen : "#94D99D",
 }
 
 var FixedColorsMapping = {
@@ -23,7 +23,8 @@ var FixedColorsMapping = {
   landOwnersFees: AVAILABLE_COLORS["Bronze"],
   depreciation: AVAILABLE_COLORS["LightBronze"],
   employeeWages:AVAILABLE_COLORS["Grey"],
-  financialInstitutionsInterests: AVAILABLE_COLORS["LightGrey"]
+  financialInstitutionsInterests: AVAILABLE_COLORS["LightGrey"],
+  government: AVAILABLE_COLORS["SubstantialScoreYellow"]
 }
 
 var DynamicColorsMapping = {}

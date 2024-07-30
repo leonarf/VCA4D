@@ -22,11 +22,16 @@ export const getRingChart = (items, tooltip, title, isEnvironment = false) => {
                 return tooltip[info.name]
             }
         },
-        label: {
-            formatter: params => params.data.label || params.data.name
-        },
         series: [
             {
+                label: {
+                    position: 'outer',
+                    alignTo: 'labelLine',
+                    overflow: 'break',
+                    bleedMargin: 0,
+                    ellipsis: '..',
+                    formatter: params => params.data.label || params.data.name
+                },
                 type: 'pie',
                 data: items,
                 radius: RIADUSES_PIE,
@@ -38,82 +43,6 @@ export const getRingChart = (items, tooltip, title, isEnvironment = false) => {
             }
         ]
     };
-}
-
-export const getAddedValueCreatorsData = (stages, actors, convertAmount, prettyAmount) => {
-    const tooltip = {}
-    const items = stages.value.map(({ name: stageName }) => {
-        const stageActors = actors.value.filter(actor => actor.stage === stageName)
-
-        const subTotal = convertAmount.value(stageActors.reduce((res, actor) => res + actor.directAddedValue, 0))
-        if (!isNaN(subTotal)) {
-            let toolTip = `<b>${stageName}</b>: ${prettyAmount.value(subTotal)}<br>`
-            for (const actor of stageActors) {
-                toolTip += `<br><b>${actor.name}</b>: ${prettyAmount.value(convertAmount.value(actor.directAddedValue))}`
-            }
-            tooltip[stageName] = toolTip
-            return {
-                value: subTotal || 0,
-                name: stageName,
-                label: getStageLabel(stageName)
-            }
-        }
-    }).filter(item => !!item)
-        .filter(item => item.value !== 0)
-
-    return getRingChart(items, tooltip, 'Who creates the direct value added?')
-}
-
-export const getAddedValueReceiversData = (stages, actors, convertAmount, prettyAmount, addedValue) => {
-
-    const tooltip = {}
-
-    let items = stages.value.map(({ name: stageName }) => {
-        const stageActors = actors.value.filter(actor => actor.stage === stageName)
-
-        const subTotal = convertAmount.value(stageActors.reduce((res, actor) => res + actor.receivedAddedValue, 0))
-
-        let toolTip = `<b>${stageName}</b>: ${prettyAmount.value(subTotal)}<br>`
-        for (const actor of stageActors) {
-            toolTip += `<br><b>${actor.name}</b>: ${prettyAmount.value(convertAmount.value(actor.receivedAddedValue))}`
-        }
-        tooltip[stageName] = toolTip
-
-        return {
-            value: subTotal,
-            name: stageName,
-            label: getStageLabel(stageName)
-        }
-    })
-    for (let key in addedValue) {
-        const label = getOtherValueReceiverLabel(key);
-        tooltip[key] = `<b>${label}</b>: ${prettyAmount.value(convertAmount.value(addedValue[key]))}`
-        items.push({
-            value: convertAmount.value(addedValue[key]),
-            name: key,
-            label
-        })
-    }
-
-    items = items.filter(item => !!item).filter(item => item.value !== 0)
-    return getRingChart(items, tooltip, 'Who receives the direct value added?')
-
-    function getOtherValueReceiverLabel(stageName) {
-        switch (stageName) {
-            case "depreciation":
-                return "Depreciation";
-            case "employeeWages":
-                return "Employee Wages";
-            case "financialInstitutionsInterests":
-                return "Financial Insitutions Interests";
-            case "landOwnersFees":
-                return "Land Owners Fees";
-            case "government":
-                return "Government";
-            default:
-                return stageName;
-        }
-    }
 }
 
 /*
@@ -279,43 +208,6 @@ export const getSelectableBarChart = (items, currentItem, tooltip, formatLabel, 
     };
 }
 
-export const getReturnOnInvestmentData = (stages, actors, currentStage, convertAmount, prettyAmount) => {
-    let tooltip = {}
-    const items = stages.value.map(stage => {
-        const stageActors = actors.value.filter(actor => actor.stage === stage.name)
-
-        const netOperatingProfits = convertAmount.value(stageActors.map(actor => actor.netOperatingProfit || 0).reduce((res, item) => res + item, 0))
-        let totalCosts = convertAmount.value(stageActors.map(actor => actor.totalCosts || 0).reduce((res, item) => res + item, 0))
-        if (stage.name === 'Producers') {
-            totalCosts += netOperatingProfits
-        }
-        if (!netOperatingProfits) {
-            return null
-        }
-        tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
-            Total costs = ${prettyAmount.value(totalCosts)}<br>
-            Return on investment = ${formatPercent(
-            netOperatingProfits / totalCosts
-        )}`
-        return {
-            name: stage.name,
-            value: (100 * netOperatingProfits / totalCosts)
-        }
-    }).filter(item => !!item)
-
-    const ret = getSelectableBarChart(items, currentStage.value, tooltip, (value) => formatPercent(value / 100))
-    return {
-        ...ret,
-        yAxis: {
-            type: 'value',
-            name: 'BENEFIT/COST RATIO (%)',
-            axisLine: {
-                show: true,
-            }
-        }
-    }
-}
-
 export const getNumberOfActorsData = (stages, actors, currentStage) => {
     let tooltip = {}
     const items = stages.value.map(stage => {
@@ -443,15 +335,16 @@ export const getPublicFinancesData = (stages, actors, convertAmount, prettyAmoun
 * MINI BAR CHART
 */
 
-const getMiniBarChart = (items, tooltip, formatLabel) => {
+export const getMiniBarChart = (items, tooltip, formatLabel, color) => {
     let labels = []
     let values = []
     items.map(item => {
         labels.push(item.name)
         // code temporaire pour récupérer une couleur, il faudra récupérer la couleur du stage quand pertinent à l'avenir
-        const color = getColor(item.name)
+        if (!color) {
+            color = getColor(item.name)
+        }
         const emphasisColor = color + "B3"
-        console.log("items", item)
         values.push({
             value: item.value,
             emphasisColor,
@@ -505,56 +398,6 @@ const getMiniBarChart = (items, tooltip, formatLabel) => {
             }
         ]
     };
-}
-
-export const getReturnOnInvestmentByActorsData = (actors, convertAmount, prettyAmount, isProducer) => {
-    const tooltip = {}
-    const items = actors.map(actor => {
-        const netOperatingProfits = convertAmount.value(actor.netOperatingProfit || 0)
-        let totalCosts = convertAmount.value(actor.totalCosts)
-        if (isProducer) {
-            totalCosts += netOperatingProfits
-        }
-        tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
-            Total costs = ${prettyAmount.value(totalCosts)}<br>
-            Return on investment = ${formatPercent(
-            netOperatingProfits / totalCosts
-        )}`
-        return {
-            name: actor.name,
-            value: (netOperatingProfits / totalCosts)
-        }
-    }).filter(item => !!item)
-    return getMiniBarChart(items, tooltip, formatPercent)
-}
-
-export const getNetOperatingProfitPerActorOfStage = (actors, convertAmount, prettyAmount) => {
-    const tooltip = {}
-    const items = actors.map(actor => {
-        const netOperatingProfit = convertAmount(actor.netOperatingProfit || 0)
-        const numberOfActors = actor.numberOfActors || 0
-        if (netOperatingProfit && numberOfActors) {
-            tooltip[actor.name] = `netOperatingProfit=${prettyAmount(netOperatingProfit)}<br>number of actor=${formatNumber(numberOfActors)}`
-            return {
-                name: actor.name,
-                value: netOperatingProfit / numberOfActors
-            }
-        }
-    }).filter(item => !!item && item.value > 0)
-    return getMiniBarChart(items, tooltip, prettyAmount)
-}
-
-export const getPublicFinancesPerStage = (actors, convertAmount, prettyAmount) => {
-    const tooltip = {}
-    const items = actors.map(actor => {
-        const subTotal = convertAmount(actor.publicFundsBalance || 0)
-        tooltip[actor.name] = `${prettyAmount(subTotal)}`
-        return {
-            name: actor.name,
-            value: subTotal
-        }
-    }).filter(item => !!item && item.value > 0)
-    return getMiniBarChart(items, tooltip, prettyAmount)
 }
 
 /*

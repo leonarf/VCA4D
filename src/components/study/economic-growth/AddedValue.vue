@@ -63,10 +63,11 @@
 <script setup>
 import { computed } from 'vue'
 import Ring from '@charts/Ring.vue'
-import { getAddedValueCreatorsData, getAddedValueReceiversData } from '@/charts/charts'
+import { getRingChart } from '@/charts/charts.js'
 import NiceMetric from '@typography/NiceMetric.vue'
 import { useCurrencyUtils } from '@utils/format.js'
 import { useActorsAndStages } from '@utils/misc.js'
+import { getStageLabel } from '@/utils/stages.js'
 import InfoTitle from '@typography/InfoTitle.vue'
 import HorizontalSlider from '@components/charts/HorizontalSlider.vue'
 import { formatPercent } from '@utils/format.js'
@@ -82,17 +83,90 @@ const { prettyAmount, convertAmount } = useCurrencyUtils(props)
 const { stages, actors } = useActorsAndStages(props)
 
 const addedValueCreatorsRingChartData = computed(() => {
-  return getAddedValueCreatorsData(stages, actors, convertAmount, prettyAmount)
+  const tooltip = {}
+  const items = stages.value
+    .map(({ name: stageName }) => {
+      const stageActors = actors.value.filter((actor) => actor.stage === stageName)
+
+      const subTotal = convertAmount.value(
+        stageActors.reduce((res, actor) => res + actor.directAddedValue, 0)
+      )
+      if (!isNaN(subTotal)) {
+        let toolTip = `<b>${stageName}</b>: ${prettyAmount.value(subTotal)}<br>`
+        for (const actor of stageActors) {
+          toolTip += `<br><b>${actor.name}</b>: ${prettyAmount.value(
+            convertAmount.value(actor.directAddedValue)
+          )}`
+        }
+        tooltip[stageName] = toolTip
+        return {
+          value: subTotal || 0,
+          name: stageName,
+          label: getStageLabel(stageName)
+        }
+      }
+    })
+    .filter((item) => !!item)
+    .filter((item) => item.value !== 0)
+
+  return getRingChart(items, tooltip, 'Who creates the direct value added?')
 })
 
+function getOtherValueReceiverLabel(stageName) {
+  switch (stageName) {
+    case 'depreciation':
+      return 'Depreciation'
+    case 'employeeWages':
+      return 'Employee Wages'
+    case 'financialInstitutionsInterests':
+      return 'Financial Insitutions Interests'
+    case 'landOwnersFees':
+      return 'Land Owners Fees'
+    case 'government':
+      return 'Government'
+    default:
+      return stageName
+  }
+}
+
 const addedValueReceiversRingChartData = computed(() => {
-  return getAddedValueReceiversData(
-    stages,
-    actors,
-    convertAmount,
-    prettyAmount,
-    props.studyData.ecoData.addedValue
-  )
+  const tooltip = {}
+
+  let items = stages.value.map(({ name: stageName }) => {
+    const stageActors = actors.value.filter((actor) => actor.stage === stageName)
+
+    const subTotal = convertAmount.value(
+      stageActors.reduce((res, actor) => res + actor.receivedAddedValue, 0)
+    )
+
+    let toolTip = `<b>${stageName}</b>: ${prettyAmount.value(subTotal)}<br>`
+    for (const actor of stageActors) {
+      toolTip += `<br><b>${actor.name}</b>: ${prettyAmount.value(
+        convertAmount.value(actor.receivedAddedValue)
+      )}`
+    }
+    tooltip[stageName] = toolTip
+
+    return {
+      value: subTotal,
+      name: stageName,
+      label: getStageLabel(stageName)
+    }
+  })
+  for (let key in props.studyData.ecoData.addedValue) {
+    const label = getOtherValueReceiverLabel(key)
+    tooltip[key] = `<b>${label}</b>: ${prettyAmount.value(
+      convertAmount.value(props.studyData.ecoData.addedValue[key])
+    )}`
+    items.push({
+      value: convertAmount.value(props.studyData.ecoData.addedValue[key]),
+      name: key,
+      label
+    })
+  }
+
+  items = items.filter((item) => !!item).filter((item) => item.value !== 0)
+  return getRingChart(items, tooltip, 'Who receives the direct value added?')
 })
 
 const totalAddedValueReceivers = computed(() => {
