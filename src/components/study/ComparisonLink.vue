@@ -1,16 +1,21 @@
 <template>
   <RouterLink
-    class="comparison-link"
-    :to="{
-      name: 'comparison',
-      query: { studies: getStudyListQueryString(otherStudies) }
-    }"
+    v-if="! disabled"
+    class="comparison-link "
+    :to="route"
     :title="title"
     target="_blank"
   >
-    <Svg :svg="BalanceLogo" height="18px"/>
+    <Svg :svg="BalanceLogo" height="20px"/>
     {{ otherStudies.length }}
   </RouterLink>
+  <span
+    v-else
+    class="no-comparison"
+    :title="noStudyTitle"
+  >
+    <Svg :svg="BalanceLogo" height="20px"/>
+  </span>
 </template>
 
 <script setup>
@@ -39,6 +44,14 @@
         return [];
     }
   })
+
+  const route = computed(() => {
+    if (disabled.value) { return {}; }
+    return {
+      name: "comparison",
+      query: { studies: getStudyListQueryString(otherStudies.value) }
+    }
+  })
   const title = computed(() => {
     switch(props.type) {
       case "product":
@@ -51,19 +64,35 @@
         return "";
     }
   })
+  const noStudyTitle = computed(() => {
+    return `No other study for this ${props.type}`;
+  })
+
+  const disabled = computed(() => {
+    return otherStudies.value.length <= 1;
+  });
 </script>
 
 <style scoped lang="scss">
-  .comparison-link {
+  .comparison-link, .no-comparison {
     display: flex;
     height: 20px;
-    color: #656565;
     gap: 0.25rem;
     font-size: 18px;
     line-height: 18px;
+    height: 20px;
+    align-items: flex-end;
+  }
+
+  .comparison-link {
+    color: #656565;
+    cursor: pointer;
 
     &:hover {
       color: #1C64F2;
     }
+  }
+  .no-comparison {
+    color: #BBB;
   }
 </style>
