@@ -1,30 +1,34 @@
 <template>
-    <div class="text-xl rounded bg-[#dcefbb] flex flex-row flex-wrap gap-y-4 py-3 pl-8 rounded-none md:rounded-full justify-center md:justify-start">
-        <div class="bloc">
-            <div class="title">{{ commodityName }}</div>
+    <div class="header">
+        <div>
+            <div class="title">
+              {{ commodityName }}
+              <ComparisonLink
+                class="link"
+                type="product"
+                :studyId="studyData.id"
+              />
+            </div>
             <div class="subtitle">Commodity</div>
         </div>
-        <div class="bloc">
-            <div class="title">{{ dataToDisplay.country }}</div>
+        <div>
+            <div class="title">
+              {{ dataToDisplay.country }}
+              <ComparisonLink
+                class="link"
+                type="country"
+                :studyId="studyData.id"
+              />
+            </div>
             <div class="subtitle">Country</div>
         </div>
-        <div class="bloc">
+        <div>
             <div class="title">{{ studyData.targetCurrency ? getCurrencySymbol(studyData.targetCurrency) : '-'}}</div>
             <div class="subtitle">Local currency</div>
         </div>
-        <div class="bloc">
+        <div>
             <div class="title">{{ studyData.year }}</div>
             <div class="subtitle">Reference year</div>
-        </div>
-        <div v-if="false">
-            <RouterLink :to="`/comparison/${commodityId}`">
-                Compare all {{ commodityName }} studies
-            </RouterLink>
-        </div>
-        <div v-if="false">
-            <RouterLink :to="`/comparison/${studyData.country}`">
-                Compare all {{ dataToDisplay.country }} studies
-            </RouterLink>
         </div>
     </div>
 </template>
@@ -33,6 +37,7 @@
 import { computed } from 'vue'
 import { getCurrencySymbol } from '@utils/currency.js'
 import { getCountry, getProduct, getStudy } from '@utils/data'
+import ComparisonLink from '@components/study/ComparisonLink.vue';
 
 const props = defineProps({
     studyData: {
@@ -67,14 +72,28 @@ let dataToDisplay = computed(() => {
 </script>
 
 <style scoped lang="scss">
+  .header {
+    display: flex;
+    gap: 5rem;
+    border-radius: 10000px;
+    justify-content: flex-start;
+    padding: 0.75rem 2rem;
+    background-color: #dcefbb;
+    flex-wrap: wrap;
+
     .subtitle {
         @apply text-[#656565] text-xs;
     }
     .title {
         @apply text-[#303030] text-3xl font-thin;
         text-transform: capitalize;
+        display: flex;
+        align-items: flex-end;
+        gap: 0.5rem;
+
+        .link {
+          margin-bottom: 5px;
+        }
     }
-    .bloc {
-        @apply mr-20
-    }
+  }
 </style>
