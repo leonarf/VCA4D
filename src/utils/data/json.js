@@ -46,3 +46,15 @@ export function getStudy(studyId) {
   const jsonStudies = jsonData.studies;
   return jsonStudies.find(study => study.id === studyId);
 }
+
+export function getProductStudies(productId) {
+  return jsonData.studies
+    .filter(study => study.product === productId)
+    .map(study => study.id);
+}
+
+export function getCountryStudies(countryId) {
+  return jsonData.studies
+    .filter(study => study.country === countryId)
+    .map(study => study.id);
+}
