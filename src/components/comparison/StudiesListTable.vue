@@ -1,24 +1,14 @@
 <template>
-  <TableLite
-    :is-slot-mode="true"
+  <DataTable
     class="table"
-    :isLoading="studies.length === 0"
-    :columns="columns"
-    :max-height="500"
-    :total="studies.length"
+    selectable
+    :selectedIds="newSelectedStudies"
+    :maxHeight="500"
+    :pageSize="50"
     :rows="studies"
-    :page-size="50"
-    :is-hide-paging="studies.length <= 50"
-    @row-clicked="(rowData) => toggleRowSelection(rowData.id)"
-  >
-    <template v-slot:checkbox="{ value: studyData }">
-      <input
-        type="checkbox"
-        :checked="isSelected(studyData.id)"
-        @click.stop="toggleRowSelection(studyData.id)"
-      />
-    </template>
-  </TableLite>
+    :columns="columns"
+    @update:selectedIds="newSelectedStudies = $event"
+  />
   <div class="footer">
     <button class="confirm-button" @click="emits('select-studies', newSelectedStudies)">Show comparison</button>
   </div>
@@ -26,8 +16,8 @@
 
 <script setup>
   import _ from "lodash";
-  import { onMounted, ref, computed } from 'vue';
-  import TableLite from 'vue3-table-lite';
+  import DataTable from "@components/charts/DataTable.vue";
+  import { onMounted, ref } from 'vue';
   import { getAllJsonData, getStudy, getStudyData, getProduct, getCountry } from '@utils/data';
 
   const props = defineProps({
@@ -42,44 +32,47 @@
 
     async function loadStudyData() {
       const jsonStudies = getAllJsonData().studies;
-      return Promise.all(jsonStudies.map(({ id }) => getStudyData(id)))
+      return Promise.all(jsonStudies.map(({ id }) => populateStudy(id)))
     }
   });
-
-  function isSelected(studyId) {
-    return newSelectedStudies.value.includes(studyId);
-  }
-  function toggleRowSelection(studyId) {
-    if (newSelectedStudies.value.includes(studyId)) {
-      newSelectedStudies.value = newSelectedStudies.value.filter(id => id !== studyId);
-    } else {
-      newSelectedStudies.value.push(studyId)
+  async function populateStudy(id) {
+    const studyData = await getStudyData(id);
+    return {
+      id: studyData.id,
+      product: _.capitalize(getProduct(getStudy(studyData.id).product).prettyName),
+      country: _.capitalize(getCountry(getStudy(studyData.id).country).prettyName),
+      isEcoAvailable: isAvailable(studyData, "ecoData"),
+      isSocialAvailable: isAvailable(studyData, "socialData"),
+      isAcvAvailable: isAvailable(studyData, "acvData")
     }
   }
 
   const emits = defineEmits(["select-studies"]);
 
   const columns = [{
-    field: "checkbox"
-  }, {
     label: "Product",
-    display: (studyData) => _.capitalize(getProduct(getStudy(studyData.id).product).prettyName)
+    field: "product",
+    sortable: true
   }, {
     label: "Country",
-    display:(studyData) => _.capitalize(getCountry(getStudy(studyData.id).country).prettyName)
+    field: "country",
+    sortable: true
   }, {
     label: "Macro economic indicators",
-    display: buildAvailibilityDisplay("ecoData")
+    field: "isEcoAvailable",
+    sortable: true
   }, {
     label: "Social sustainability",
-    display: buildAvailibilityDisplay("socialData")
+    field: "isSocialAvailable",
+    sortable: true
   }, {
     label: "Environmental analysis",
-    display: buildAvailibilityDisplay("acvData")
+    field: "isAcvAvailable",
+    sortable: true
   }];
 
-  function buildAvailibilityDisplay(dataKey) {
-    return (studyData) => !! studyData[dataKey] ? "Available" : "-"
+  function isAvailable(studyData, dataKey) {
+    return !! studyData[dataKey] ? "Available" : "-"
   }
 </script>
 

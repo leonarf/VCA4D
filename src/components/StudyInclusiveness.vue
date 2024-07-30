@@ -54,7 +54,12 @@
             class="mb-4 mt-8"
         />
         <div>
-            <ShareOfFarmPrice v-if="hasPricesData" :data="pricesData"/>
+            <ShareOfFarmPrice
+              v-if="hasPricesData"
+              :studyData="studyData"
+              :currency="currency"
+              :data="props.studyData.ecoData.farmToFinalPricesRatio"
+            />
             <NoDataBadge v-else/>
         </div>
         <br />
@@ -83,7 +88,6 @@ import ShareOfFarmPrice from './study/inclusiveness/ShareOfFarmPrice.vue'
 import NoDataBadge from '@components/study/NoDataBadge.vue';
 import QuestionTitle from "@components/study/QuestionTitle.vue"
 import { computed } from 'vue'
-import { useCurrencyUtils } from '@utils/format'
 import { LOCAL_STORAGE_ID } from '@utils/data'
 
 
@@ -92,7 +96,6 @@ const props = defineProps({
     currency: String
 })
 
-const { prettyAmount, convertAmount } = useCurrencyUtils(props);
 
 const hasPricesData = computed(() => {
     if (!props.studyData.ecoData.farmToFinalPricesRatio) {
@@ -102,21 +105,6 @@ const hasPricesData = computed(() => {
 })
 const isLocalStudy = computed(() => {
     return studyId === LOCAL_STORAGE_ID;
-})
-
-
-const pricesData = computed(() => {
-    if (!hasPricesData.value) {
-        return null
-    }
-    return props.studyData.ecoData.farmToFinalPricesRatio.map(item => ({
-        label: item.label,
-        farmProduct: item.farmProduct,
-        endProducts: item.endProducts,
-        farm: prettyAmount.value(convertAmount.value(item.farmPrice)),
-        final: prettyAmount.value(convertAmount.value(item.endPrice)),
-        ratio: item.farmPrice / item.endPrice
-    }))
 })
 
 </script>
