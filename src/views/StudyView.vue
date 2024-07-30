@@ -15,7 +15,7 @@
                   v-if="isDataLoaded"
                   :views="views"
                   :localCurrency="studyData.targetCurrency" 
-                  :currency="route.query.currency"
+                  :currency="currencySymbol"
                   :selectedViewKey="view"
                   :fullReportPdfUrl="studyPdfUrls.fullReportPdfUrl"
                   @update:currency="updateCurrency"
@@ -62,7 +62,13 @@ function updateCurrency(newCurrency) {
       currency: newCurrency
     } })
 }
-const currencySymbol = computed(() => route.query.currency === 'LOCAL' ? studyData.value.targetCurrency : route.query.currency);
+
+const currencySymbol = computed(() => {
+  if (route.query.currency) {
+   return route.query.currency === 'LOCAL' ? studyData.value.targetCurrency : route.query.currency
+  }
+  return studyData.value.targetCurrency
+});
 
 const views = computed(() => {
   if (!studyData.value) { return []; }

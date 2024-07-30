@@ -78,6 +78,7 @@
         <ImpactDataviz :impact="impact" :per-unit="selectedPerUnit" :volumes="yearlyVolumes"/>
       </div>
     </template>
+    <AttachmentLink :studyId="studyData.id" attachmentType="acv.xlsx" />
   </article>
 </template>
 
@@ -87,6 +88,7 @@ import SectionTitle from '@typography/SectionTitle.vue'
 import ImpactDataviz from '@components/study/environment/ImpactDataviz.vue'
 import { ACVImpacts } from '@utils/misc.js'
 import QuestionTitle from "@components/study/QuestionTitle.vue"
+import AttachmentLink from '@components/pdf/AttachmentLink.vue'
 
 const props = defineProps({
   studyData: Object
