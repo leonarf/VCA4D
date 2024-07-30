@@ -1,30 +1,20 @@
 <template>
-    <div class="text-xl rounded bg-[#dcefbb] flex flex-row flex-wrap gap-y-4 py-3 pl-8 rounded-none md:rounded-full justify-center md:justify-start">
-        <div class="bloc">
+    <div class="header">
+        <div>
             <div class="title">{{ commodityName }}</div>
             <div class="subtitle">Commodity</div>
         </div>
-        <div class="bloc">
+        <div>
             <div class="title">{{ dataToDisplay.country }}</div>
             <div class="subtitle">Country</div>
         </div>
-        <div class="bloc">
+        <div>
             <div class="title">{{ studyData.targetCurrency ? getCurrencySymbol(studyData.targetCurrency) : '-'}}</div>
             <div class="subtitle">Local currency</div>
         </div>
-        <div class="bloc">
+        <div>
             <div class="title">{{ studyData.year }}</div>
             <div class="subtitle">Reference year</div>
-        </div>
-        <div v-if="false">
-            <RouterLink :to="`/comparison/${commodityId}`">
-                Compare all {{ commodityName }} studies
-            </RouterLink>
-        </div>
-        <div v-if="false">
-            <RouterLink :to="`/comparison/${studyData.country}`">
-                Compare all {{ dataToDisplay.country }} studies
-            </RouterLink>
         </div>
     </div>
 </template>
@@ -67,6 +57,15 @@ let dataToDisplay = computed(() => {
 </script>
 
 <style scoped lang="scss">
+  .header {
+    display: flex;
+    gap: 5rem;
+    border-radius: 10000px;
+    justify-content: flex-start;
+    padding: 0.75rem 2rem;
+    background-color: #dcefbb;
+    flex-wrap: wrap;
+
     .subtitle {
         @apply text-[#656565] text-xs;
     }
@@ -74,7 +73,5 @@ let dataToDisplay = computed(() => {
         @apply text-[#303030] text-3xl font-thin;
         text-transform: capitalize;
     }
-    .bloc {
-        @apply mr-20
-    }
+  }
 </style>
