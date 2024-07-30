@@ -12,8 +12,4 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-  .svg {
-    fill: currentColor;
-    stroke: currentColor;
-  }
 </style>
