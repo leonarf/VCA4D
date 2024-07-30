@@ -13,7 +13,7 @@
                             <LogoProductLarge :product-name="study.product.id"/>
                         </template>
                     </Card>
-                    <a v-if="IS_COMPARISON_V2_ACTIVATED" class="remove-button" @click="removeStudy(study.id)">
+                    <a class="remove-button" @click="removeStudy(study.id)">
                         <Svg :svg="CrossLogo"/>
                     </a>
                 </div>
@@ -28,7 +28,6 @@
         </td>
         <td class="add-studies">
             <AddStudiesButton
-                v-if="IS_COMPARISON_V2_ACTIVATED"
                 :currentStudySelection="studiesWithDetails.map(study => study.id)"
                 @select-studies="emits('select-studies', $event)"
             />
@@ -50,7 +49,6 @@ import Svg from '@components/Svg.vue';
 import AddStudiesButton from '@components/comparison/AddStudiesButton.vue';
 import CrossLogo from '../../images/icons/cross.svg'
 
-const IS_COMPARISON_V2_ACTIVATED = false;
 const props = defineProps({
     studies: Array,
 })

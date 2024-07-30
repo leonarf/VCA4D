@@ -1,22 +1,23 @@
 <template>
-    <Skeleton>
-        <div>
-            <h1 class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48">Compare VCA4D Value chain studies</h1>
-            <div class="py-1 pb-16 px-4 sm:px-8 md:px-12 lg:px-40 xl:px-48 studies-wrapper" v-if="studies.length > 0">
-                <StudiesComparison
-                    :studies="studies"
-                    @select-studies="selectStudies($event)"
-                />
-            </div>
-            <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 no-study" v-else-if="loading === false">
-                No study is selected
-                <AddStudiesButton
-                    :currentStudySelection="studies.map(study => study.id)"
-                    @select-studies="selectStudies($event)"
-                />
-            </div>
-        </div>  
-    </Skeleton>
+  <Skeleton>
+    <div>
+      <h1 class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48">Compare VCA4D Value chain studies</h1>
+      <div class="py-1 pb-16 px-4 sm:px-8 md:px-12 lg:px-40 xl:px-48 studies-wrapper" v-if="studies.length > 0">
+        <StudiesComparison
+          :studies="studies"
+          @select-studies="selectStudies($event)"
+        />
+      </div>
+      <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 no-study" v-else-if="loading === false">
+        No study is selected
+        <AddStudiesButton
+          class="mt-4"
+          :currentStudySelection="studies.map(study => study.id)"
+          @select-studies="selectStudies($event)"
+        />
+      </div>
+    </div>  
+  </Skeleton>
 </template>
 
 <script setup>
@@ -25,6 +26,7 @@ import { watch, ref, } from 'vue';
 import { useRoute, useRouter } from 'vue-router'
 import { getStudyData } from '@utils/data';
 import StudiesComparison from '../components/StudiesComparison.vue';
+import AddStudiesButton from "@components/comparison/AddStudiesButton.vue";
 import { extractStudiesFromQueryString, getStudyListQueryString } from '@utils/router';
 
 const route = useRoute();
