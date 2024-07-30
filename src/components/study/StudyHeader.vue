@@ -1,11 +1,25 @@
 <template>
     <div class="header">
         <div>
-            <div class="title">{{ commodityName }}</div>
+            <div class="title">
+              {{ commodityName }}
+              <ComparisonLink
+                class="link"
+                type="product"
+                :studyId="studyData.id"
+              />
+            </div>
             <div class="subtitle">Commodity</div>
         </div>
         <div>
-            <div class="title">{{ dataToDisplay.country }}</div>
+            <div class="title">
+              {{ dataToDisplay.country }}
+              <ComparisonLink
+                class="link"
+                type="country"
+                :studyId="studyData.id"
+              />
+            </div>
             <div class="subtitle">Country</div>
         </div>
         <div>
@@ -23,6 +37,7 @@
 import { computed } from 'vue'
 import { getCurrencySymbol } from '@utils/currency.js'
 import { getCountry, getProduct, getStudy } from '@utils/data'
+import ComparisonLink from '@components/study/ComparisonLink.vue';
 
 const props = defineProps({
     studyData: {
@@ -72,6 +87,13 @@ let dataToDisplay = computed(() => {
     .title {
         @apply text-[#303030] text-3xl font-thin;
         text-transform: capitalize;
+        display: flex;
+        align-items: flex-end;
+        gap: 0.5rem;
+
+        .link {
+          margin-bottom: 5px;
+        }
     }
   }
 </style>
