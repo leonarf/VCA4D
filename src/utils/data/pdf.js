@@ -1,27 +1,25 @@
-
-export async function getBriefPdfPath(studyId) {
-  let pdfUrl = `${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-brief-report.pdf`
-  let res = await fetch(pdfUrl, { method: 'HEAD' })
-  if (res.status === 200) {
-      return pdfUrl;
+let studiesAttachment = {}
+export async function getStudyFileAttachmentUrl(studyId, attachementType) {
+  if (studiesAttachment[studyId] == undefined) {
+    studiesAttachment[studyId] = {}
   }
-  console.log("got status", res.status, "for pdf", pdfUrl)
-  return null
-}
-
-async function getFullReportPdfPath(studyId) {
-  let pdfUrl = `${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-full-report.pdf`
-  let res = await fetch(pdfUrl, { method: 'HEAD' })
-  if (res.status === 200) {
-      return pdfUrl;
+  if (studiesAttachment[studyId][attachementType] == undefined) {
+    let attachmentUrl = `${window.location.origin}${import.meta.env.DEV ? '/' : '/../VCA4D/'}data/${studyId}/${studyId}-${attachementType}`
+    let res = await fetch(attachmentUrl, { method: 'HEAD' })
+    if (res.status === 200) {
+      studiesAttachment[studyId][attachementType] = attachmentUrl;
+    }
+    else {
+      console.log("got status", res.status, "for attachment", attachmentUrl)
+      studiesAttachment[studyId][attachementType] = null;
+    }
   }
-  console.log("got status", res.status, "for pdf", pdfUrl)
-  return null
+  return studiesAttachment[studyId][attachementType]
 }
 
 export async function getStudyPdfUrls(studyId) {
   return {
-      fullReportPdfUrl: await getFullReportPdfPath(studyId),
-      briefReportPdfUrl: await getBriefPdfPath(studyId)
+    fullReportPdfUrl: await getStudyFileAttachmentUrl(studyId, 'full-report.pdf'),
+    briefReportPdfUrl: await getStudyFileAttachmentUrl(studyId, 'brief-report.pdf'),
   }
 }
