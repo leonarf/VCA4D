@@ -110,7 +110,7 @@ export const getTypeOfExcelFile = (workbook) => {
 
 const readingOfCurrencies = (excelData) => {
   const localCurrency = getValueChainProperty(excelData, HOME_LABELS.LocalCcy)
-  var targetCurrency = getValueChainProperty(excelData, HOME_LABELS.TargetCcy, false)
+  var targetCurrency = getValueChainProperty(excelData, HOME_LABELS.TargetCcy, true)
   var currencyRatio = null
   // Si localCurrency est standard, et pas de targetCurrency, ça suffit
   if (isValidCurrency(localCurrency) && !isValidCurrency(targetCurrency)) {
@@ -119,7 +119,7 @@ const readingOfCurrencies = (excelData) => {
   }
   // Si seule targetCurrency est valide, il faut le taux de change
   else if (isValidCurrency(targetCurrency)) {
-      currencyRatio = getValueChainProperty(excelData, HOME_LABELS.RatioCcy)
+    currencyRatio = getValueChainProperty(excelData, HOME_LABELS.RatioCcy)
   }
   // Aucune n'est valide, on met un message d'erreur
   else if (!isValidCurrency(localCurrency)){

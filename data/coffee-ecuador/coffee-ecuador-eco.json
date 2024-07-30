@@ -10,6 +10,7 @@
   "ecoData": {
     "macroData": {
       "giniIndex": 0.82,
+      "FTE_Definition": null,
       "rateOfIntegration": 0.685,
       "publicFundsBalance": 0.002,
       "valueAddedShareNationalGdp": 0.001,

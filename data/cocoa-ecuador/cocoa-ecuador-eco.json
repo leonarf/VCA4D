@@ -6,15 +6,18 @@
   "localCurrency": "USD",
   "targetCurrency": "USD",
   "currencyRatio": 1,
-  "giniIndex": 0.71,
-  "rateOfIntegration": 0.875,
-  "publicFundsBalance": 0.00002,
-  "valueAddedShareNationalGdp": 0.006999999999999999,
-  "valueAddedShareAgriculturalGdp": 0.084,
-  "domesticResourceCostRatio": 0.48,
-  "nominalProtectionCoefficient": 1,
   "type": "eco",
   "ecoData": {
+    "macroData": {
+      "giniIndex": 0.71,
+      "FTE_Definition": null,
+      "rateOfIntegration": 0.875,
+      "publicFundsBalance": 0.00002,
+      "valueAddedShareNationalGdp": 0.006999999999999999,
+      "valueAddedShareAgriculturalGdp": 0.084,
+      "domesticResourceCostRatio": 0.48,
+      "nominalProtectionCoefficient": 1
+    },
     "stages": [
       {
         "name": "Producers",
@@ -78,8 +81,8 @@
           "totalMale": 16937.7425,
           "totalFemale": 4234.435625,
           "totalTemp": 21172.178125,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
+          "totalSkilled": null,
+          "totalUnskilled": null,
           "total": 21172.178125
         }
       },
@@ -103,8 +106,8 @@
           "totalMale": 12429.5390625,
           "totalFemale": 3551.296875,
           "totalTemp": 15980.8359375,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
+          "totalSkilled": null,
+          "totalUnskilled": null,
           "total": 15980.8359375
         }
       },
@@ -128,8 +131,8 @@
           "totalMale": 1264.87083333333,
           "totalFemale": 632.435416666666,
           "totalTemp": 1897.306249999996,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
+          "totalSkilled": null,
+          "totalUnskilled": null,
           "total": 1897.306249999996
         }
       },
@@ -153,8 +156,8 @@
           "totalMale": 1171.05625,
           "totalFemale": 585.528125,
           "totalTemp": 1756.5843750000001,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
+          "totalSkilled": null,
+          "totalUnskilled": null,
           "total": 1756.5843750000001
         }
       },
@@ -178,8 +181,8 @@
           "totalMale": 148.105425347222,
           "totalFemale": 0,
           "totalTemp": 148.105425347222,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
+          "totalSkilled": null,
+          "totalUnskilled": null,
           "total": 148.105425347222
         }
       },
@@ -203,8 +206,8 @@
           "totalMale": 548.787986111113,
           "totalFemale": 0,
           "totalTemp": 548.787986111113,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
+          "totalSkilled": null,
+          "totalUnskilled": null,
           "total": 548.787986111113
         }
       },
@@ -228,8 +231,8 @@
           "totalMale": 269.50562042471,
           "totalFemale": 0,
           "totalTemp": 269.50562042471,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
+          "totalSkilled": null,
+          "totalUnskilled": null,
           "total": 269.50562042471
         }
       },
@@ -253,8 +256,8 @@
           "totalMale": 165.846017534382,
           "totalFemale": 165.846017534382,
           "totalTemp": 331.692035068764,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
+          "totalSkilled": null,
+          "totalUnskilled": null,
           "total": 331.692035068764
         }
       },
@@ -278,8 +281,8 @@
           "totalMale": 75.7287760417125,
           "totalFemale": 75.7287760417125,
           "totalTemp": 151.457552083425,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
+          "totalSkilled": null,
+          "totalUnskilled": null,
           "total": 151.457552083425
         }
       },
@@ -303,8 +306,8 @@
           "totalMale": 713.955536107281,
           "totalFemale": 356.977768053641,
           "totalTemp": 1070.933304160922,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
+          "totalSkilled": null,
+          "totalUnskilled": null,
           "total": 1070.933304160922
         }
       },
@@ -328,8 +331,8 @@
           "totalMale": 137.483725009143,
           "totalFemale": 41.2451175027428,
           "totalTemp": 178.7288425118858,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
+          "totalSkilled": null,
+          "totalUnskilled": null,
           "total": 178.7288425118858
         }
       },
@@ -737,37 +740,6 @@
         }
       ]
     },
-    "farmToFinalPricesRatio": [
-      {
-        "label": "Cacao seco",
-        "farmPrice": 2000,
-        "endPrice": 2430
-      },
-      {
-        "label": "Cacao seco2",
-        "farmPrice": 2000,
-        "endPrice": 3220
-      },
-      {
-        "label": "Cacao seco3",
-        "farmPrice": 2000,
-        "endPrice": 4210
-      },
-      {
-        "label": "Cacao seco to Semi-Elaborate",
-        "farmPrice": 2000,
-        "endPrice": 3145.7
-      },
-      {
-        "label": "Cacao seco to Chocolate",
-        "farmPrice": 2000,
-        "endPrice": 19148.847
-      },
-      {
-        "label": "Cacao seco to Chocolate for National Market",
-        "farmPrice": 2000,
-        "endPrice": 11877.3
-      }
-    ]
+    "farmToFinalPricesRatio": []
   }
 }

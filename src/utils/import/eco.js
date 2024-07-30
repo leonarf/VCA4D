@@ -313,7 +313,7 @@ const parseEmploymentSheet = (json, actors) => {
     const skilledFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.SkilledFemale])
 
     const totalMale = (tempMale || 0) + (unskilledMale || 0) + (skilledMale || 0)
-    const totalFemale = tempFemale + unskilledFemale + skilledFemale
+    const totalFemale = (tempFemale || 0) + (unskilledFemale || 0) + (skilledFemale || 0)
     const totalTemp = tempMale + (tempFemale || 0)
     const totalSkilled = skilledMale + (skilledFemale || 0)
     const totalUnskilled = unskilledMale + (unskilledFemale || 0)
