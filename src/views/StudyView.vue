@@ -10,12 +10,13 @@
                     <StudyHeader :studyData="studyData"/>
                 </div>
             </header>
-            <div class="w-full text-left ml-24 my-8">
+            <div class="w-full text-left my-16">
                 <StudyMenu 
                   v-if="isDataLoaded"
                   :views="views"
                   :localCurrency="studyData.targetCurrency" 
                   :currency="route.query.currency"
+                  :selectedViewKey="view"
                   :fullReportPdfUrl="studyPdfUrls.fullReportPdfUrl"
                   @update:currency="updateCurrency"
                   @select="selectView($event)"

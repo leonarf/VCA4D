@@ -1,13 +1,19 @@
 <template>
     <nav class="flex flex-col">
-        <div class="text-[#868686] mb-2">Contents</div>
-        <ol class="text-[#2E6BAD] space-y-2">
+        <div class="text-[#8A8A8A] text-lg font-bold uppercase mb-4">Table of contents</div>
+        <ol class="text-[#2E6BAD] space-y-4">
             <li v-for="(view, index) in views" :key="index">
                 <a 
-                    class="hover:underline cursor-pointer"
-                    :class="{ disabled: !view.accessible}"
-                    @click="emits('select', view.key)"
+                  v-if="view.accessible"
+                  class="hover:underline cursor-pointer"
+                  :class="{ 'selected-view-link': view.key === selectedViewKey }"
+                  @click="emits('select', view.key)"
                 >{{ view.label }}</a>
+                <span 
+                  v-else
+                  class="disabled-view-link"
+                  title="Unavailable for this study"
+                >{{ view.label }}</span>
             </li>
             <li>
                 <a
@@ -17,8 +23,8 @@
                 >Study full report</a>
             </li>
         </ol>
-        <div v-if="localCurrency">
-            <label for="select-currency" class="text-[#868686] mt-4 mb-2">Select currency</label>
+        <div v-if="localCurrency" class="mt-4 flex flex-col gap-1">
+            <label for="select-currency" class="text-[#868686]">Select currency</label>
             <div class="max-w-[175px] text-[#868686] select-wrapper">
                 <select
                     id="select-currency"
@@ -42,6 +48,7 @@
     import { getCurrencySymbol, getCurrencyName, isCurrencySupported } from '@utils/currency.js'
     const props = defineProps({
         views: Array,
+        selectedViewKey: String,
         localCurrency : String,
         currency: String,
         fullReportPdfUrl: String,
@@ -51,9 +58,13 @@
 </script>
 
 <style scoped lang="scss">
-.disabled {
-    pointer-events: none;
-    color: rgb(85, 85, 85);
-    font-style: italic;
+.disabled-view-link {
+  user-select: none;
+  color: rgb(85, 85, 85);
+  font-style: italic;
 }
+
+.selected-view-link {
+    font-weight: 700;
+  }
 </style>
