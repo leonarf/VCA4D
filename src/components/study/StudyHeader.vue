@@ -74,8 +74,9 @@ let dataToDisplay = computed(() => {
 <style scoped lang="scss">
   .header {
     display: flex;
-    gap: 5rem;
-    border-radius: 10000px;
+    column-gap: 5rem;
+    row-gap: 1rem;
+    border-radius: 38px;
     justify-content: flex-start;
     padding: 0.75rem 2rem;
     background-color: #dcefbb;

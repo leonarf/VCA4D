@@ -18,18 +18,12 @@ const divStyle = computed(() => {
         borderColor: getColor(props.currentStage, props.isEnvironment),
     }
 })
-
-const titleStyle = computed(() => {
-    return {
-        backgroundColor: getColor(props.currentStage, props.isEnvironment),
-    }
-})
 </script>
 
 <template>
     <div :style="divStyle" class="rounded-2xl px-12 py-12 w-full">
         <template v-if="currentStage !== ''">
-            <span :style="titleStyle" class="text-[#e2e0e0] text-xl"><strong>{{ title }}</strong> in {{ currentStage }}</span>
+            <span class="text-[#303030] text-xl"><strong>{{ title }}</strong> in {{ currentStage }}</span>
             <slot></slot>
         </template>
     </div>

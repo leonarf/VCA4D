@@ -1,21 +1,12 @@
 <template>
   <RouterLink
-    v-if="! disabled"
     class="comparison-link "
     :to="route"
     :title="title"
-    target="_blank"
   >
     <Svg :svg="BalanceLogo" height="20px"/>
-    {{ otherStudies.length }}
+    {{ hasOtherStudies ? allStudies.length : "" }}
   </RouterLink>
-  <span
-    v-else
-    class="no-comparison"
-    :title="noStudyTitle"
-  >
-    <Svg :svg="BalanceLogo" height="20px"/>
-  </span>
 </template>
 
 <script setup>
@@ -34,7 +25,7 @@
     studyId: String
   })
 
-  const otherStudies = computed(() => {
+  const allStudies = computed(() => {
     switch(props.type) {
       case "product":
         return getProductStudies(getStudy(props.studyId).product);
@@ -46,35 +37,36 @@
   })
 
   const route = computed(() => {
-    if (disabled.value) { return {}; }
     return {
       name: "comparison",
-      query: { studies: getStudyListQueryString(otherStudies.value) }
+      query: { studies: getStudyListQueryString(allStudies.value) }
     }
   })
+
   const title = computed(() => {
+    if (! hasOtherStudies.value) {
+      return "Go to comparison page";
+    }
+
     switch(props.type) {
       case "product":
         const product = getProduct(getStudy(props.studyId).product).prettyName;
-        return `Compare the ${otherStudies.value.length} ${_.capitalize(product)} studies`;
+        return `Compare the ${allStudies.value.length} ${_.capitalize(product)} studies`;
       case "country":
         const country = getCountry(getStudy(props.studyId).country).prettyName;
-        return `Compare the ${otherStudies.value.length} ${_.capitalize(country)} studies`;
+        return `Compare the ${allStudies.value.length} ${_.capitalize(country)} studies`;
       default:
         return "";
     }
   })
-  const noStudyTitle = computed(() => {
-    return `No other study for this ${props.type}`;
-  })
 
-  const disabled = computed(() => {
-    return otherStudies.value.length <= 1;
-  });
+  const hasOtherStudies = computed(() => {
+    return allStudies.value.length > 1
+  })
 </script>
 
 <style scoped lang="scss">
-  .comparison-link, .no-comparison {
+  .comparison-link {
     display: flex;
     height: 20px;
     gap: 0.25rem;
@@ -82,17 +74,11 @@
     line-height: 18px;
     height: 20px;
     align-items: flex-end;
-  }
-
-  .comparison-link {
     color: #656565;
     cursor: pointer;
 
     &:hover {
       color: #1C64F2;
     }
-  }
-  .no-comparison {
-    color: #BBB;
   }
 </style>
