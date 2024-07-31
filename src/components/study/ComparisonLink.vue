@@ -4,7 +4,6 @@
     class="comparison-link "
     :to="route"
     :title="title"
-    target="_blank"
   >
     <Svg :svg="BalanceLogo" height="20px"/>
     {{ otherStudies.length }}
