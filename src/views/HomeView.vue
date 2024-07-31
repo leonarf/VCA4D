@@ -119,9 +119,6 @@ function toggleFilter(filterKey) {
 </template>
 
 <style scoped lang="scss">
-:global(main) {
-  padding: 0 !important;
-}
 
 section {
   padding: 1.5rem;
