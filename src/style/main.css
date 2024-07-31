@@ -63,6 +63,10 @@ p {
     padding: 1.5rem 6rem;
 }
 
+main {
+  padding: 0 !important;
+}
+
 select {
     -webkit-appearance: none;
     appearance: none;

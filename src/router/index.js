@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import StudyView from '../views/StudyView.vue'
-import Import from '../views/Import.vue'
-import Comparison from '../views/Comparison.vue'
+import { defineAsyncComponent } from "vue";
+const HomeView = defineAsyncComponent(() => import('../views/HomeView.vue'))
+const StudyView = defineAsyncComponent(() => import('../views/StudyView.vue'))
+const Import = defineAsyncComponent(() => import('../views/Import.vue'))
+const Comparison = defineAsyncComponent(() => import('../views/Comparison.vue'))
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
