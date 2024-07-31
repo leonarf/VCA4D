@@ -74,6 +74,6 @@ header {
 
 footer {
     min-height: 10rem;
-    background-color: grey;
+    background-color: #D1D5DB;
 }
 </style>
