@@ -1,4 +1,5 @@
 <script setup>
+import QuestionTitle from '@components/study/QuestionTitle.vue';
 import ByCategory from './ByCategory.vue'
 
 const props = defineProps({
@@ -32,8 +33,8 @@ const filterStudiesByCategory = (category) => {
 
 <template>
     <section>
-        <h2>Browse studies by <strong>product</strong></h2>
-        <template v-for="category in categories" :key="category.id">
+        <QuestionTitle>By <strong>product</strong></QuestionTitle>
+        <template v-for="(category) in categories" :key="category.id">
             <ByCategory :studies="filterStudiesByCategory(category.id)" :countries="countries" :category="category" :currency="currency"/>
         </template>
     </section>

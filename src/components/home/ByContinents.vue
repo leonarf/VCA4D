@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue';
 import ByContinent from './ByContinent.vue';
+import QuestionTitle from '@components/study/QuestionTitle.vue';
 
 
 const props = defineProps({
@@ -20,12 +21,15 @@ const getStudiesByContinent = (continent) => {
 
 <template>
     <section>
-        <h2>Browse studies by <strong>country</strong></h2>
+        <QuestionTitle>By <strong>country</strong></QuestionTitle>
         <template v-for="continent in continents" :key="continent">
-            <ByContinent :continent="continent" :studies="getStudiesByContinent(continent)" :countries="countries" :currency="currency"/>
+            <ByContinent class="continent" :continent="continent" :studies="getStudiesByContinent(continent)" :countries="countries" :currency="currency"/>
         </template>
     </section>
 </template>
 
 <style scoped lang="scss">
+.continent:not(:first-child) {
+  margin-top: 48px;
+}
 </style>

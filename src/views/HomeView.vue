@@ -98,13 +98,21 @@ function toggleFilter(filterKey) {
         </ul>
       </section>
       <section>
-        <div class="flex gap-2">
-          <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')"/>
-          <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')"/>
-          <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')"/>
+        <h2><strong>Browse studies</strong></h2>
+        <div class="filter-section">
+          <p>Filter the studies on this page based on the topics addressed.</p>
+          <div>
+            <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')"/>
+            <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')"/>
+            <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')"/>
+          </div>
+          <p>
+            <div>
+              Number of studies: {{ filteredStudies.length }}
+            </div>
+          </p>
         </div>
         
-        <div>Number of studies: {{ filteredStudies.length }}</div>
       </section>
       <ByCategories
         :categories="categories"
@@ -182,5 +190,11 @@ section.banner {
   h1 {
     margin-bottom: 1rem;
   }
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 </style>
