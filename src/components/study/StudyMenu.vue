@@ -20,6 +20,7 @@
                     v-if="fullReportPdfUrl"
                     class="hover:underline cursor-pointer"
                     :href="fullReportPdfUrl"
+                    target="_blank"
                 >Study full report</a>
             </li>
         </ol>
