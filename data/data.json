@@ -564,27 +564,27 @@
   "products": [
     {
       "id": "cocoa",
-      "prettyName": "cocoa"
+      "prettyName": "Cocoa"
     },
     {
       "id": "coffee",
-      "prettyName": "coffee"
+      "prettyName": "Coffee"
     },
     {
       "id": "cashew",
-      "prettyName": "cashew"
+      "prettyName": "Cashew"
     },
     {
       "id": "banana",
-      "prettyName": "banana"
+      "prettyName": "Banana"
     },
     {
       "id": "mango",
-      "prettyName": "mango"
+      "prettyName": "Mango"
     },
     {
       "id": "vanilla",
-      "prettyName": "vanilla"
+      "prettyName": "Vanilla"
     },
     {
       "id": "oil palm",
@@ -592,67 +592,67 @@
     },
     {
       "id": "beef",
-      "prettyName": "beef"
+      "prettyName": "Beef"
     },
     {
       "id": "egg",
-      "prettyName": "egg"
+      "prettyName": "Egg"
     },
     {
       "id": "milk",
-      "prettyName": "milk"
+      "prettyName": "Milk"
     },
     {
       "id": "cassava",
-      "prettyName": "cassava"
+      "prettyName": "Cassava"
     },
     {
       "id": "cotton",
-      "prettyName": "cotton"
+      "prettyName": "Cotton"
     },
     {
       "id": "groundnut",
-      "prettyName": "groundnut"
+      "prettyName": "Groundnut"
     },
     {
       "id": "cowpea",
-      "prettyName": "cowpea"
+      "prettyName": "Cowpea"
     },
     {
       "id": "french beans",
-      "prettyName": "green beans"
+      "prettyName": "Green beans"
     },
     {
       "id": "maize",
-      "prettyName": "maize"
+      "prettyName": "Maize"
     },
     {
       "id": "sorghum",
-      "prettyName": "sorghum"
+      "prettyName": "Sorghum"
     },
     {
       "id": "pineapple",
-      "prettyName": "pineapple"
+      "prettyName": "Pineapple"
     },
     {
       "id": "freshwater-aquaculture",
-      "prettyName": "freshwater-aquaculture"
+      "prettyName": "Freshwater-aquaculture"
     },
     {
       "id": "aquaculture",
-      "prettyName": "aquaculture"
+      "prettyName": "Aquaculture"
     },
     {
       "id": "coastal fisheries",
-      "prettyName": "coastal fisheries"
+      "prettyName": "Coastal fisheries"
     },
     {
       "id": "inland fisheries",
-      "prettyName": "inland fisheries"
+      "prettyName": "Inland fisheries"
     },
     {
       "id": "fisheries",
-      "prettyName": "fisheries"
+      "prettyName": "Fisheries"
     }
   ]
 }
