@@ -81,7 +81,7 @@ function toggleFilter(filterKey) {
         </p>
         <p>
           The European Commission has developed the VCA4D standardised methodological framework for
-          analysis (<a target="_blank" class="text-blue-600" href="https://capacity4dev.europa.eu/info/1-vca4d-methodology_en">The VCA4D Methodology | Capacity4dev</a>). It aims at understanding to what extent
+          analysis (<a target="_blank" class="link" href="https://capacity4dev.europa.eu/info/1-vca4d-methodology_en">The VCA4D Methodology | Capacity4dev</a>). It aims at understanding to what extent
           the value chain allows for inclusive economic growth and whether it is both socially and
           environmentally sustainable.
         </p>
@@ -98,13 +98,24 @@ function toggleFilter(filterKey) {
         </ul>
       </section>
       <section>
-        <div class="flex gap-2">
-          <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')"/>
-          <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')"/>
-          <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')"/>
+        <h2><strong>Browse studies</strong></h2>
+        <div class="filter-section">
+          <p>Filter the studies on this page based on the topics addressed.</p>
+          <div>
+            <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')"/>
+            <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')"/>
+            <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')"/>
+          </div>
+          <p>
+            <div>
+              Number of studies: {{ filteredStudies.length }}
+            </div>
+            <div>
+              You can also <RouterLink class="link" :to="{ name: 'comparison' }">compare studies</RouterLink> based on key indicators
+            </div>
+          </p>
         </div>
         
-        <div>Number of studies: {{ filteredStudies.length }}</div>
       </section>
       <ByCategories
         :categories="categories"
@@ -178,6 +189,20 @@ section.banner {
 
   h1 {
     margin-bottom: 1rem;
+  }
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.link {
+  color: #1C64F2;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 </style>
