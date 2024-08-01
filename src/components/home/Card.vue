@@ -17,7 +17,7 @@ const props = defineProps({
         <component :is="link ? 'RouterLink' : 'v-fragment'" :to="link" class="w-[150px]">
             <div :class="`cursor-pointer card-icon ${isLocal ? 'bg-[#868686]' : (isOpen ? 'bg-[#9B9B9B]' :  'bg-[#DFDFDF]')} hover:bg-[#CFCFCF]`">
                 <slot name="logo"></slot>
-                <p class="font-semibold capitalize text-center">{{ title }}</p>
+                <p class="font-semibold text-center">{{ title }}</p>
             </div>  
         </component>
         <slot name="footer"></slot>   

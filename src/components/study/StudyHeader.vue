@@ -87,7 +87,6 @@ let dataToDisplay = computed(() => {
     }
     .title {
         @apply text-[#303030] text-3xl font-thin;
-        text-transform: capitalize;
         display: flex;
         align-items: flex-end;
         gap: 0.5rem;

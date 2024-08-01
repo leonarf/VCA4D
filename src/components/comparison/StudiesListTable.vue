@@ -15,7 +15,6 @@
 </template>
 
 <script setup>
-  import _ from "lodash";
   import DataTable from "@components/charts/DataTable.vue";
   import { onMounted, ref } from 'vue';
   import { getAllJsonData, getStudy, getStudyData, getProduct, getCountry } from '@utils/data';
@@ -39,8 +38,8 @@
     const studyData = await getStudyData(id);
     return {
       id: studyData.id,
-      product: _.capitalize(getProduct(getStudy(studyData.id).product).prettyName),
-      country: _.capitalize(getCountry(getStudy(studyData.id).country).prettyName),
+      product: getProduct(getStudy(studyData.id).product).prettyName,
+      country: getCountry(getStudy(studyData.id).country).prettyName,
       isEcoAvailable: isAvailable(studyData, "ecoData"),
       isSocialAvailable: isAvailable(studyData, "socialData"),
       isAcvAvailable: isAvailable(studyData, "acvData")
