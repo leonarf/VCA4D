@@ -10,6 +10,7 @@
 </template>
 
 <script setup>
+  import _ from "lodash";
   import { computed } from "vue";
   import BalanceLogo from "../../images/icons/balance.svg"
   import Svg from "@components/Svg.vue"
@@ -49,7 +50,7 @@
 
     switch(props.type) {
       case "product":
-        const product = getProduct(getStudy(props.studyId).product).prettyName;
+        const product = _.lowerCase(getProduct(getStudy(props.studyId).product).prettyName);
         return `Compare the ${allStudies.value.length} ${product} studies`;
       case "country":
         const country = getCountry(getStudy(props.studyId).country).prettyName;
