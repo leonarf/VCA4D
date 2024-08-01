@@ -24,6 +24,7 @@
 </template>
 
 <script setup>
+import _ from "lodash";
 import { computed } from 'vue';
 
 import jsonData from '@data/data.json'
@@ -107,7 +108,7 @@ function updateProductList(products = [], existingProductKeys) {
     if (!products.find(product => product.id === productKey)) {
       newProducts.push({
         id: productKey,
-        prettyName: productKey 
+        prettyName: _.capitalize(productKey) 
       });
     }
   });
