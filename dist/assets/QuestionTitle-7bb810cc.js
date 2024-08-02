@@ -1,0 +1,1 @@
+import{_ as t}from"./json-6107fd81.js";import{o,c as s,r as _}from"./main-2611bfb2.js";const n={},a={class:"mt-12"};function c(e,r){return o(),s("h2",a,[_(e.$slots,"default",{},void 0,!0)])}const l=t(n,[["render",c],["__scopeId","data-v-deaa60b7"]]);export{l as Q};
