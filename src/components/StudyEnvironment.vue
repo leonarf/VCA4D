@@ -90,14 +90,13 @@ const yearlyVolumes = computed(() => {
 })
 
 const units = [
-  { label: 'Pt', value: 'PT' },
-  { label: 'Other units', value: 'OTHER' },
+  { label: 'Single score (Pt)', value: 'PT', subtitle: 'Different impacts (climate, health, water etc.) are expressed in a single weighted unit.' },
+  { label: 'Different units', value: 'OTHER', subtitle: 'Each impact is expressed in its own unit' },
 ];
 
 const perUnits = [
-  {
-    label: "Per year", value: "year"},
-    {label: "Per functional unit", value: "functional unit"}
+  { label: "Total impact per year", value: "year", subtitle: "See which sub-chain currently has most impact in the country" },
+  { label: "Impact per functional unit", value: "functional unit", subtitle: "Compare best performing production systems" }
 ]
 
 const selectedUnit = ref(units[0].value);
