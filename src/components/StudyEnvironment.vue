@@ -33,44 +33,21 @@
       Sub-chains can be compared according to the damage they generate in the three areas of protection. 
       This highlights the gaps between them and helps determine actions for environmental improvements.
     </p>
-    <div class="flex flex-row justify-center gap-x-20 mb-8 mt-4">
-      <div class="flex flex-row justify-center gap-x-4">
-          <label v-for="unit in units" :key="unit.value"
-          :class="{
-            'inline-block w-40 h-10 text-center py-2 border-2 rounded cursor-pointer text-black text-md': true,
-            'border-blue-200 bg-blue-100': selectedUnit === unit.value,
-            'border-gray-200 bg-gray-100': selectedUnit !== unit.value 
-          }" 
-            >
-            <input
-            type="radio"
-            :id="unit.value"
-            :value="unit.value"
-            v-model="selectedUnit"
-            name="radioGroup"
-            class="hidden"
-            />
-            {{ unit.label }}
-          </label>
-      </div>
-      <div class="flex flex-row justify-center gap-x-4">
-          <label v-for="perUnit in perUnits" :key="perUnit.value"
-          :class="{
-            'inline-block w-40 h-10 text-center py-2 border-2 rounded cursor-pointer text-black text-md': true,
-            'border-blue-200 bg-blue-100': selectedPerUnit === perUnit.value,
-            'border-gray-200 bg-gray-100': selectedPerUnit !== perUnit.value 
-          }" 
-            >
-            <input
-            type="radio"
-            :id="perUnit.value"
-            :value="perUnit.value"
-            v-model="selectedPerUnit"
-            name="radioGroup"
-            class="hidden"
-            />
-            {{ perUnit.label }}
-          </label>
+    <div class="unit-selection">
+      <div class="unit-selection-title">Unit Selection</div>
+      <div class="unit-inputs">
+        <RadioInput
+          title="Scope of the results"
+          :options="perUnits"
+          :selected="selectedPerUnit"
+          @update:selected="$event => selectedPerUnit = $event"
+        />
+        <RadioInput
+          title="Unit of the impact"
+          :options="units"
+          :selected="selectedUnit"
+          @update:selected="$event => selectedUnit = $event"
+        />
       </div>
     </div>
     <template v-if="studyData">
@@ -89,6 +66,7 @@ import ImpactDataviz from '@components/study/environment/ImpactDataviz.vue'
 import { ACVImpacts } from '@utils/misc.js'
 import QuestionTitle from "@components/study/QuestionTitle.vue"
 import AttachmentLink from '@components/pdf/AttachmentLink.vue'
+import RadioInput from '@components/study/RadioInput.vue'
 
 const props = defineProps({
   studyData: Object
@@ -115,14 +93,13 @@ const yearlyVolumes = computed(() => {
 })
 
 const units = [
-  { label: 'Pt', value: 'PT' },
-  { label: 'Other units', value: 'OTHER' },
+  { label: 'Single score (Pt)', value: 'PT', subtitle: 'Different impacts (climate, health, water etc.) are expressed in a single weighted unit.' },
+  { label: 'Different units', value: 'OTHER', subtitle: 'Each impact is expressed in its own unit' },
 ];
 
 const perUnits = [
-  {
-    label: "Per year", value: "year"},
-    {label: "Per functional unit", value: "functional unit"}
+  { label: "Total impact per year", value: "year", subtitle: "See which sub-chain currently has most impact in the country" },
+  { label: "Impact per functional unit", value: "functional unit", subtitle: "Compare best performing production systems" }
 ]
 
 const selectedUnit = ref(units[0].value);
@@ -130,4 +107,25 @@ const selectedPerUnit = ref(perUnits[0].value);
 
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.unit-selection {
+  margin: 32px 0;
+  
+  .unit-selection-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #8A8A8A;
+    margin-bottom: 16px;
+  }
+
+  .unit-inputs {
+    display: flex;
+    gap: 30px;
+    margin: 16px 0;
+    > * {
+      flex-grow: 1;
+      max-width: 50%;
+    }
+  }
+}
+</style>

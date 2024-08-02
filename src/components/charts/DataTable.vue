@@ -167,7 +167,6 @@
     cursor: pointer;
 
     input {
-      accent-color: #3F83F8;
       cursor: pointer;
     }
   }
