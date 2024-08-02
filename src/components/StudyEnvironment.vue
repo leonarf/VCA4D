@@ -33,19 +33,22 @@
       Sub-chains can be compared according to the damage they generate in the three areas of protection. 
       This highlights the gaps between them and helps determine actions for environmental improvements.
     </p>
-    <div class="flex">
-      <RadioInput
-        title="Scope of the results"
-        :options="perUnits"
-        :selected="selectedPerUnit"
-        @update:selected="$event => selectedPerUnit = $event"
-      />
-      <RadioInput
-        title="Unit of the impact"
-        :options="units"
-        :selected="selectedUnit"
-        @update:selected="$event => selectedUnit = $event"
-      />
+    <div class="unit-selection">
+      <div class="unit-selection-title">Unit Selection</div>
+      <div class="unit-inputs">
+        <RadioInput
+          title="Scope of the results"
+          :options="perUnits"
+          :selected="selectedPerUnit"
+          @update:selected="$event => selectedPerUnit = $event"
+        />
+        <RadioInput
+          title="Unit of the impact"
+          :options="units"
+          :selected="selectedUnit"
+          @update:selected="$event => selectedUnit = $event"
+        />
+      </div>
     </div>
     <template v-if="studyData">
       <div v-for="impact in allBarChartsData" :key="impact.name">
@@ -104,4 +107,25 @@ const selectedPerUnit = ref(perUnits[0].value);
 
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.unit-selection {
+  margin: 32px 0;
+  
+  .unit-selection-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #8A8A8A;
+    margin-bottom: 16px;
+  }
+
+  .unit-inputs {
+    display: flex;
+    gap: 30px;
+    margin: 16px 0;
+    > * {
+      flex-grow: 1;
+      max-width: 50%;
+    }
+  }
+}
+</style>
