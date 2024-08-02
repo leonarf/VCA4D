@@ -1,19 +1,19 @@
 <template>
   <div class="radio-input">
     <span class="title">{{ title }}</span>
-    <div class="option" v-for="option in options" :key="option.value">
-      <label>
-        <input
-          type="radio"
-          :id="uniqueId"
-          :value="option.value"
-          :checked="selected === option.value"
-          @input="emits('update:selected', option.value)"
-        />
-        <span class="label">{{ option.label }}</span>
-      </label>
-      <span class="subtitle">{{ option.subtitle }}</span>
-    </div>
+    <label class="option" v-for="option in options" :key="option.value">
+      <input
+        type="radio"
+        :id="uniqueId"
+        :value="option.value"
+        :checked="selected === option.value"
+        @input="emits('update:selected', option.value)"
+      />
+      <span class="label">
+        <span>{{ option.label }}</span>
+        <span class="subtitle">{{ option.subtitle }}</span>
+      </span>
+    </label>
   </div>
 </template>
 
@@ -48,16 +48,22 @@
 
   .option {
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+
+    input {
+      margin-top: 6px
+    }
 
     .label {
       margin-left: 6px;
-    }
+      display: flex;
+      flex-direction: column;
 
-    .subtitle {
-      margin-left: 20px;
-      color: #8a8a8a;
-      font-style: italic;
+      .subtitle {
+        color: #8a8a8a;
+        font-style: italic;
+      }
     }
   }
 }
