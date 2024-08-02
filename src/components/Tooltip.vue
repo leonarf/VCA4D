@@ -30,17 +30,11 @@ function initTooltip() {
     interactive: true,
     ...props.options,
     onMount(instance) {
-      const bgColor = "#EDEDED";
-      (
-        instance.popper.querySelector(".tippy-box") as HTMLElement
-      ).style.backgroundColor = bgColor;
-      const textColor = "#6B6B6B";
-      (instance.popper.querySelector(".tippy-box") as HTMLElement).style.color =
-        textColor;
-      const arrowElement = instance.popper.querySelector(
-        ".tippy-arrow"
-      ) as HTMLElement;
-      arrowElement.style.color = bgColor;
+      const tippyBox = instance.popper.querySelector(".tippy-box") as HTMLElement;
+      const arrowElement = instance.popper.querySelector(".tippy-arrow") as HTMLElement;
+      tippyBox.style.backgroundColor = "#EDEDED";
+      arrowElement.style.color = "#EDEDED";
+      tippyBox.style.color = "#6B6B6B";
     },
   });
 }
