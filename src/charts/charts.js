@@ -1,5 +1,5 @@
 import { formatNumber, formatPercent } from '@utils/format.js'
-import { getColor, getRingColor, COLORS_IMPORTED_PRODUCTS, COLORS_EXPORTED_PRODUCTS } from '@utils/colors.js'
+import { getColor, COLORS_IMPORTED_PRODUCTS, COLORS_EXPORTED_PRODUCTS } from '@utils/colors.js'
 import { getStageLabel } from '../utils/stages'
 const RADIUSES_MINI_PIE = ['20%', '40%']
 const RIADUSES_PIE = ['50%', '75%']
@@ -9,7 +9,7 @@ const SELECTED_COLOR_HOVER = "#f7d9de"
 /*
 * RING CHART
 */
-export const getRingChart = (items, tooltip, title, isEnvironment = false) => {
+export const getRingChart = (items, tooltip, title) => {
     return {
         title: {
             text: title,
@@ -37,7 +37,7 @@ export const getRingChart = (items, tooltip, title, isEnvironment = false) => {
                 radius: RIADUSES_PIE,
                 itemStyle: {
                     color: function (info) {
-                        return isEnvironment ? getRingColor(info.name) : getColor(info.name)
+                        return getColor(info.name)
                     }
                 }
             }
