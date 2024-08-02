@@ -77,7 +77,10 @@
     <br />
     <InfoTitle
       title="Gini index"
-      information="Explanation for Gini Index: It is the Value chain Gini Index indicating the level of equality of Net Operating Profit income distribution per individual actor in the Value chain distribution across Value chain actors. A Value chain Gini Index of zero indicates perfect equality while an index close to one refers to a significant inequality where few actors in the Value chain receive a greater part of the Value chain aggregated Net Operating Profit income."
+      information="
+        It is the Value chain Gini Index indicating the level of equality of Net Operating Profit income distribution per individual actor in the Value chain distribution across Value chain actors.<br>
+        A Value chain Gini Index of zero indicates perfect equality while an index close to one refers to a significant inequality where few actors in the Value chain receive a greater part of the Value chain aggregated Net Operating Profit income.
+      "
       class="mb-4 mt-8"
     />
     <div class="mb-8">

@@ -13,7 +13,9 @@
   <InfoTitle
     class="mb-4 mt-4"
     title="Domestic Resource Cost ratio (DRC)"
-    information="The DRC measures the value of domestic factors necessary to gain one foreign currency unit. DRC < 1 means that the Value Chain is viable in the global economy because the value of domestic factors which are consumed is lower than the value they produce, without any subventions on input and taxes on output (from the standpoint of the international markets and considering the present level of remuneration of domestic factors). "
+    information="
+      The DRC measures the value of domestic factors necessary to gain one foreign currency unit.<br>
+      DRC < 1 means that the Value Chain is viable in the global economy because the value of domestic factors which are consumed is lower than the value they produce, without any subventions on input and taxes on output (from the standpoint of the international markets and considering the present level of remuneration of domestic factors). "
   />
   <div>
     <DomesticResourceCostRatio
@@ -25,7 +27,9 @@
   <br />
   <InfoTitle
     title="Nominal Protection Coefficient (NPC)"
-    information="NPC assesses the international competitiveness by comparing the national and international prices of every Value Chain product. A NPC > 1 means that the domestic value is higher than the international market price. Thus, the overall Value Chain remuneration is higher than it would be if applying international parity prices."
+    information="
+      NPC assesses the international competitiveness by comparing the national and international prices of every Value Chain product.<br>
+      A NPC > 1 means that the domestic value is higher than the international market price. Thus, the overall Value Chain remuneration is higher than it would be if applying international parity prices."
     class="mb-4"
   />
   <NominalProtectionCoefficient
