@@ -5,7 +5,10 @@
   >
   <InfoTitle
     title="Benefit/Cost Ratio (%)"
-    information="percentage of net operating profit in total costs (NB : for producers this includes actor revenue)"
+    information="
+      Percentage of net operating profit in total costs<br>
+      (NB : for producers this includes actor revenue)
+    "
   />
   <template v-if="studyData">
     <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
