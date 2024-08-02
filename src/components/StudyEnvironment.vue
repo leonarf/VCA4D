@@ -35,11 +35,13 @@
     </p>
     <div class="flex">
       <RadioInput
+        title="Scope of the results"
         :options="perUnits"
         :selected="selectedPerUnit"
         @update:selected="$event => selectedPerUnit = $event"
       />
       <RadioInput
+        title="Unit of the impact"
         :options="units"
         :selected="selectedUnit"
         @update:selected="$event => selectedUnit = $event"

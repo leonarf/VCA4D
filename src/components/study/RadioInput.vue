@@ -1,14 +1,17 @@
 <template>
-  <label v-for="option in options" :key="option.value">
-    <input
-      type="radio"
-      :id="uniqueId"
-      :value="option.value"
-      :checked="selected === option.value"
-      @input="emits('update:selected', option.value)"
-    />
-    {{ option.label }}
-  </label>
+  <div class="radio-input">
+    <span class="title">{{ title }}</span>
+    <label v-for="option in options" :key="option.value">
+      <input
+        type="radio"
+        :id="uniqueId"
+        :value="option.value"
+        :checked="selected === option.value"
+        @input="emits('update:selected', option.value)"
+      />
+      {{ option.label }}
+    </label>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -17,7 +20,8 @@
   type Option = { label: string; value: string };
   defineProps<{
       options: Option[],
-      selected: string
+      selected: string,
+      title: string
   }>();
 
   const emits = defineEmits<{
@@ -30,4 +34,13 @@
 </script>
 
 <style scoped lang="scss">
+.radio-input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .title {
+    font-weight: 700;
+  }
+}
 </style>
