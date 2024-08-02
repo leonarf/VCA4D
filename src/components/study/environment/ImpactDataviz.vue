@@ -30,7 +30,7 @@ import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 import { formatNumber } from '@utils/format.js'
-import { getRingColor } from '@utils/colors.js'
+import { getColor } from '@utils/colors.js'
 import { ACVImpacts } from '@utils/misc.js'
 
 const props = defineProps({
@@ -75,7 +75,7 @@ const populatedRingChartData = computed(() => {
       },
     }
   })
-  var series = getRingChart(items, tooltip, "", true)
+  var series = getRingChart(items, tooltip, "")
   return series
 })
 
@@ -86,7 +86,7 @@ const detailBarChartOptions = computed(() => {
   props.impact.values.filter(item => item.valuechain_name == selectedValueChain.value)
   .forEach(item => {
     labels.push(item.actor_name)
-    var color = getRingColor(item.actor_name)
+    var color = getColor(item.actor_name)
     values.push({
         value: item.value,
         itemStyle: {
