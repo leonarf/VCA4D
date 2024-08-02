@@ -42,23 +42,6 @@ export const getColor = (itemName) => {
   return DynamicColorsMapping[itemName]
 }
 
-const RING_COLORS = [
-  '#8B0000',
-  '#00008B',
-  '#006400',
-  '#4B0082',
-  '#5A3A3A',
-  '#008080'
-]
-
-let ringColors = {}
-export const getRingColor = (name) => {
-  if (!(name in ringColors)) {
-    ringColors[name] = RING_COLORS[Object.keys(ringColors).length % RING_COLORS.length]
-  }
-  return ringColors[name]
-} 
-
 export const getSocialScoreColor = (value) => {
   if (value < 1.5) {
     return AVAILABLE_COLORS["BadScoreRed"]
