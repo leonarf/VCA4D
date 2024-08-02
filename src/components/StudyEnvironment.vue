@@ -33,45 +33,17 @@
       Sub-chains can be compared according to the damage they generate in the three areas of protection. 
       This highlights the gaps between them and helps determine actions for environmental improvements.
     </p>
-    <div class="flex flex-row justify-center gap-x-20 mb-8 mt-4">
-      <div class="flex flex-row justify-center gap-x-4">
-          <label v-for="unit in units" :key="unit.value"
-          :class="{
-            'inline-block w-40 h-10 text-center py-2 border-2 rounded cursor-pointer text-black text-md': true,
-            'border-blue-200 bg-blue-100': selectedUnit === unit.value,
-            'border-gray-200 bg-gray-100': selectedUnit !== unit.value 
-          }" 
-            >
-            <input
-            type="radio"
-            :id="unit.value"
-            :value="unit.value"
-            v-model="selectedUnit"
-            name="radioGroup"
-            class="hidden"
-            />
-            {{ unit.label }}
-          </label>
-      </div>
-      <div class="flex flex-row justify-center gap-x-4">
-          <label v-for="perUnit in perUnits" :key="perUnit.value"
-          :class="{
-            'inline-block w-40 h-10 text-center py-2 border-2 rounded cursor-pointer text-black text-md': true,
-            'border-blue-200 bg-blue-100': selectedPerUnit === perUnit.value,
-            'border-gray-200 bg-gray-100': selectedPerUnit !== perUnit.value 
-          }" 
-            >
-            <input
-            type="radio"
-            :id="perUnit.value"
-            :value="perUnit.value"
-            v-model="selectedPerUnit"
-            name="radioGroup"
-            class="hidden"
-            />
-            {{ perUnit.label }}
-          </label>
-      </div>
+    <div class="flex">
+      <RadioInput
+        :options="perUnits"
+        :selected="selectedPerUnit"
+        @update:selected="$event => selectedPerUnit = $event"
+      />
+      <RadioInput
+        :options="units"
+        :selected="selectedUnit"
+        @update:selected="$event => selectedUnit = $event"
+      />
     </div>
     <template v-if="studyData">
       <div v-for="impact in allBarChartsData" :key="impact.name">
@@ -89,6 +61,7 @@ import ImpactDataviz from '@components/study/environment/ImpactDataviz.vue'
 import { ACVImpacts } from '@utils/misc.js'
 import QuestionTitle from "@components/study/QuestionTitle.vue"
 import AttachmentLink from '@components/pdf/AttachmentLink.vue'
+import RadioInput from '@components/study/RadioInput.vue'
 
 const props = defineProps({
   studyData: Object
