@@ -1,11 +1,11 @@
 <template>
   <article class="mt-8">
     <SectionTitle>
-      <h1>Is the Value Chain economic growth <strong>inclusive</strong>?</h1>
+      <h1>Is the value chain economic growth <strong>inclusive</strong>?</h1>
     </SectionTitle>
     <p>
       To build an image of the inclusiveness of the value chain, a VCA4D study highlights how the
-      Value Chain organisation and governance involve the various stakeholders and how the incomes
+      value chain organisation and governance involve the various stakeholders and how the incomes
       and employment generated are distributed among social groups. The value chain specific impact
       on vulnerable groups such as subsistence-oriented farmers, smallholders, women, youth, and
       marginalised people (landless rural workers, minority communities…) is closely documented.
@@ -24,15 +24,15 @@
     >
     <p>
       Income distribution is a tangible indicator of how households and businesses take advantage of
-      the Value chain operations. The share of Net Operating Profits across Value chain actors helps
-      indicate the disadvantaged actors who benefit less from the Value chain activities.
+      the value chain operations. The share of Net Operating Profits across value chain actors helps
+      indicate the disadvantaged actors who benefit less from the value chain activities.
     </p>
     <p>
-      Actors that are in small numbers but receive a significant share of the Value chain Net
+      Actors that are in small numbers but receive a significant share of the value chain Net
       Operating Profit are in a stronger position of negotiation in front of those more divided.
     </p>
     <p>
-      It is to be noted that the Net Operating Profit is only related to the Value chain activity
+      It is to be noted that the Net Operating Profit is only related to the value chain activity
       and does not include any other revenue from any other activities.
     </p>
 
@@ -45,9 +45,8 @@
       >How is <strong>employment</strong> distributed across the value chain?</QuestionTitle
     >
     <p>
-      Employment data only relate to full time equivalent jobs for this specific value chain and do
-      not include total employment of each actor. In addition, the informal family workforce at the
-      agricultural production level is not accounted for.
+      Employment data only relate to waged Full Time Equivalent (FTE) jobs for this specific value chain.
+      The informal family workforce at the agricultural production level is not accounted for.
     </p>
     <div class="flex flex-col gap-y-4 mt-4">
       <EmploymentDistributionActors :studyData="studyData" />
@@ -78,9 +77,9 @@
     <InfoTitle
       title="Gini index"
       information="
-        It is the Value chain Gini Index indicating the level of equality of Net Operating Profit income distribution per individual actor in the Value chain distribution across Value chain actors.<br>
-        A Value chain Gini Index of zero indicates perfect equality.<br>
-        On the other hand, an index close to one means that few actors in the Value chain receive a greater part of the Value chain aggregated Net Operating Profit income.
+        It is the value chain Gini Index indicating the level of equality of Net Operating Profit income distribution per individual actor in the value chain distribution across value chain actors.<br>
+        A value chain Gini Index of zero indicates perfect equality.<br>
+        On the other hand, an index close to one means that few actors in the value chain receive a greater part of the value chain aggregated Net Operating Profit income.
       "
       class="mb-4 mt-8"
     />

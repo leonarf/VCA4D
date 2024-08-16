@@ -69,7 +69,7 @@ function toggleFilter(filterKey) {
       <section class="welcome-message">
         <h1>Get insights into agri-food value chains in EU partner countries</h1>
         <p>
-          Welcome to the Value Chain Analysis for Development (VCA4D) Information and Knowledge
+          Welcome to the value chain Analysis for Development (VCA4D) Information and Knowledge
           Management System. You will find access to all available agricultural value chain analyses
           performed by VCA4D project in different partner countries.
         </p>

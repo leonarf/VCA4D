@@ -3,19 +3,16 @@
     <h1>Is the value chain socially sustainable?</h1>
     <p>
       The analysis of social sustainability focuses on assessing established and potential
-      consequences of the Value chain operations in an array of six domains of importance for
+      consequences of the value chain operations in an array of six domains of importance for
       decision makers because they convey key concerns of development:
       <strong>Working Conditions</strong>, <strong>Land and Water Rights</strong>,
       <strong>Gender Equality</strong>, <strong>Food and Nutrition Security</strong>,
       <strong>Social Capital</strong>, and <strong>Living Conditions</strong>.
     </p>
     <p>
-      The purpose of the social analysis is to inform on how the interaction between the Value chain
-      actors and the general social environment contributes to
-      <strong
-        >improving or degrading the situation of the various social groups and types
-        ofactors</strong
-      >.
+      The purpose of the social analysis is to inform on how the interaction between the value chain actors
+      and the general social environment contributes to
+      <strong>improving or degrading the situation of the various social groups and types of actors</strong>.
     </p>
     <p>
       The four levels of social sustainability are illustrated by different colours in the chart:

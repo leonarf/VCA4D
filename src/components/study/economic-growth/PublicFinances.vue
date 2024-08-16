@@ -5,12 +5,12 @@
   >
   <div class="flex flex-row flex-wrap items-center ml-4 md:ml-12 -mt-8 -mb-8">
     <div class="w-full lg:w-1/4">
-      <div class="uppercase font-semibold text-[#303030] text-xl">Public Funds Balance</div>
+      <InfoTitle
+        title="Public Funds Balance"
+        information="The public funds balance is given by the amount of taxes received by the State minus the subsidies."
+      />
+      <div class="uppercase font-semibold text-[#303030] text-xl"></div>
       <div class="font-semibold text-2xl text-[#C1C1C1]">{{ publicFundsBalance }}</div>
-      <div class="mt-2">
-        The positive balance (Taxes minus Subsidies) means that the value chain contributes to the
-        government income more than it receives through subsidies and tax break.
-      </div>
       <div class="uppercase font-semibold text-[#C1C1C1] text-2xl mt-4">
         {{ formatPercent(parseFloat(studyData.ecoData.macroData?.publicFundsBalance)) }}
       </div>
@@ -48,6 +48,8 @@ import { useCurrencyUtils, formatPercent } from '@utils/format.js'
 import { useActorsAndStages } from '@utils/misc.js'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 import QuestionTitle from '@components/study/QuestionTitle.vue'
+import InfoTitle from '@typography/InfoTitle.vue'
+
 
 const props = defineProps({
   studyData: Object,

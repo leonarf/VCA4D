@@ -40,7 +40,7 @@ export const formatNumber = (value) => {
 }
 
 export const formatPercent = (amount) => {
-  return `${formatNumber(100 * amount)}%`
+  return `${formatNumber(100 * amount).trim()}%`
 }
 
 export function useCurrencyUtils(props) {

@@ -6,8 +6,8 @@
     :ticks="[0, 0.5, 1, 1.5, 2]"
     :hasBackground="false"
     :texts="[
-      '<b>Viable in the global economy :</b><br /> the cost of domestic factors (labour, capital, land, environmental goods) is lower than the value they produce.',
-      '<b>Considered not viable within the gobal economy :</b><br /> inefficient use of domestic resources, poor remuneration of domestic factors, this a non-competitive Value Chain into the international economy.'
+      '<b>Viable in the global economy :</b><br />the cost of domestic factors (labour, capital, land, environmental goods) is lower than the value they produce.',
+      '<b>Considered not viable within the global economy :</b><br/> inefficient use of domestic resources, poor remuneration of domestic factors, this a non-competitive value chain into the international economy.'
     ]"
   />
 </template>

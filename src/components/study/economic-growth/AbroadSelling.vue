@@ -8,14 +8,16 @@
     contrary a higher remuneration of the actors supported by protection policies.
   </p>
   <br />
-  <h3>Is the Value Chain able to compete within the international market?</h3>
+  <h3>Is the value chain able to compete within the international market?</h3>
 
   <InfoTitle
     class="mb-4 mt-4"
     title="Domestic Resource Cost ratio (DRC)"
     information="
       The DRC measures the value of domestic factors necessary to gain one foreign currency unit.<br>
-      DRC < 1 means that the Value Chain is viable in the global economy because the value of domestic factors which are consumed is lower than the value they produce, without any subventions on input and taxes on output (from the standpoint of the international markets and considering the present level of remuneration of domestic factors). "
+      DRC < 1 means that the value chain is viable in the global economy because
+      the value of domestic factors which are consumed is lower than the value they produce, without any subventions on input and taxes on output
+      (from the standpoint of the international markets and considering the present level of remuneration of domestic factors)."
   />
   <div>
     <DomesticResourceCostRatio
@@ -28,8 +30,9 @@
   <InfoTitle
     title="Nominal Protection Coefficient (NPC)"
     information="
-      NPC assesses the international competitiveness by comparing the national and international prices of every Value Chain product.<br>
-      A NPC > 1 means that the domestic value is higher than the international market price. Thus, the overall Value Chain remuneration is higher than it would be if applying international parity prices."
+      NPC assesses the international competitiveness by comparing the national and international prices of every value chain product.<br>
+      A NPC > 1 means that the domestic value is higher than the international market price.
+      Thus, the overall value chain remuneration is higher than it would be if applying international parity prices."
     class="mb-4"
   />
   <NominalProtectionCoefficient

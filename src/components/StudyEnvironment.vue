@@ -7,16 +7,16 @@
       The approach to evaluate the environmental sustainability of the value chain is twofold.
     </p>
     <p>
-      First, damages entailed by the Value Chain operations are calculated on <strong>Resource depletion</strong>,
+      First, damages entailed by the value chain operations are calculated on <strong>Resource depletion</strong>,
       <strong>Ecosystem quality</strong> and <strong>Human health</strong>, as well as their contribution
-      to <strong>Climate Change</strong> through the quantitative <strong>Life Cycle Assessment (LCA)</strong>.
+      to <strong>Climate change</strong> through the quantitative <strong>Life Cycle Assessment (LCA)</strong>.
     </p>
     <p> 
       Second, an <strong>exploratory assessment of biodiversity risks is provided</strong>.
       The appraisal of the environmental sustainability of the value chain is carried out by combining quantitative and qualitative data.
     </p>
     <p class="mt-4">
-      LCA inventories the material and energy flows used, produced or released by the activities of the Value Chain.
+      LCA inventories the material and energy flows used, produced or released by the activities of the value chain.
       The substances emitted or consumed by the activities at each stage are recorded and measured.
       According to their physical, chemical and biological nature, they activate cause-and-effect
       chains that induce changes in the environment. These changes cause (or counteract) specific
@@ -24,7 +24,7 @@
     </p><p>
       LCA refers to the effects as <strong>“impacts”</strong> (the “midpoints” level). The consequences of these impacts 
       on Natural Resources, Ecosystem Quality and Human Health are referred to as <strong>“damage”</strong>. 
-      LCA also enables to measure the contribution of the Value Chain to climate change through its <strong>carbon footprint</strong>.
+      LCA also enables to measure the contribution of the value chain to climate change through its <strong>carbon footprint</strong>.
 
     </p>
 

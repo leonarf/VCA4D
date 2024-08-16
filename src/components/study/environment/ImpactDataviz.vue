@@ -58,7 +58,7 @@ const populatedRingChartData = computed(() => {
   var tooltip = {}
   var items = props.impact.values.filter(item => item.valuechain_name == selectedValueChain.value)
   .map(item => {
-    tooltip[item.actor_name] = `${formatNumber(item.value)} per functionnal unit`
+    tooltip[item.actor_name] = `${formatNumber(item.value)} per functional unit`
     return {
       name: item.actor_name,
       value: item.value,
@@ -93,7 +93,7 @@ const detailBarChartOptions = computed(() => {
           color
         }
     })
-    tooltip[item.actor_name] = `${formatNumber(item.value)} per functionnal unit`
+    tooltip[item.actor_name] = `${formatNumber(item.value)} per functional unit`
   })
   let barChartExample = {
     title: {
@@ -164,7 +164,7 @@ const populatedBarChartData = computed(() => {
       tooltip[value.valuechain_name] = ""
     }
     valuesByChain[value.valuechain_name] += value.value
-    tooltip[value.valuechain_name] += `<b>${value.actor_name}</b>: ${formatNumber(value.value)} per functionnal unit<br>`
+    tooltip[value.valuechain_name] += `<b>${value.actor_name}</b>: ${formatNumber(value.value)} per functional unit<br>`
   }
 
   const items = Object.keys(valuesByChain).map((chainName) => {

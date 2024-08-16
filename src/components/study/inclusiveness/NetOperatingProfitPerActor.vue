@@ -1,6 +1,9 @@
 <template>
   <div>
-    <InfoTitle title="Individual Net Operating Profit per actor type" />
+    <InfoTitle
+      title="Individual Net Operating Profit per actor type"
+      information="It is the Net Operating Profit obtained on average by one individual actor of each type."
+    />
     <div class="flex flex-row items-center mt-4">
       <div class="w-full">
         <BarChart

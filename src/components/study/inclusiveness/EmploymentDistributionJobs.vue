@@ -4,8 +4,8 @@
             title="Jobs"
             class="mt-8"
             information="
-              The number of jobs is computed based on the wages paid to workers by the direct self-employed Value Chain actors (self-employed and companies).<br>
-              It does not include family work."
+              The number of jobs is based on the wages paid to workers by the direct self-employed value chain actors
+              (self-employed and companies).<br> It does not include family work."
         />
         <div class="flex flex-col mb-8">
             <div class="flex flex-row flex-wrap items-center justify-center">

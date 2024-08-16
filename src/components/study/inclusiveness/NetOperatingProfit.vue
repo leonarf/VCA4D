@@ -2,7 +2,7 @@
     <div>
         <InfoTitle
             title="Net operating profit across types of actors"
-            information="It is the distribution of the Value chain Net Operating Profits among the direct Value chain actors."
+            information="It is the distribution of the value chain Net Operating Profits among the direct value chain actors."
         />
         <div class="flex flex-row items-center mt-4 mb-4">
             <div class="w-full">
