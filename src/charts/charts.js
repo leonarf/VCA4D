@@ -25,7 +25,7 @@ export const getRingChart = (items, tooltip, title) => {
             {
                 label: {
                     position: 'outer',
-                    alignTo: 'labelLine',
+                    //alignTo: 'labelLine',
                     overflow: 'break',
                     bleedMargin: 0,
                     ellipsis: '..',

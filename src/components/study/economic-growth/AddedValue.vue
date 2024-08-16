@@ -82,7 +82,6 @@ import { getRingChart } from '@/charts/charts.js'
 import NiceMetric from '@typography/NiceMetric.vue'
 import { useCurrencyUtils } from '@utils/format.js'
 import { useActorsAndStages } from '@utils/misc.js'
-import { getStageLabel } from '@/utils/stages.js'
 import InfoTitle from '@typography/InfoTitle.vue'
 import HorizontalSlider from '@components/charts/HorizontalSlider.vue'
 import { formatPercent } from '@utils/format.js'
@@ -117,7 +116,7 @@ const addedValueCreatorsRingChartData = computed(() => {
         return {
           value: subTotal || 0,
           name: stageName,
-          label: getStageLabel(stageName)
+          label: stageName
         }
       }
     })
@@ -165,7 +164,7 @@ const addedValueReceiversRingChartData = computed(() => {
     return {
       value: subTotal,
       name: stageName,
-      label: getStageLabel(stageName)
+      label: stageName
     }
   })
   for (let key in props.studyData.ecoData.addedValue) {
