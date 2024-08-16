@@ -4,7 +4,7 @@ import tippy from "tippy.js";
 import type { Instance, Props } from "tippy.js";
 import { onMounted, onUnmounted, onUpdated, ref } from "vue";
 import "tippy.js/dist/tippy.css";
-import * as sanitizeHtml from "sanitize-html";
+import sanitize from "sanitize-html";
 
 interface Tooltip {
   contenu: string;
@@ -19,7 +19,7 @@ const tooltipRef = ref<HTMLElement>();
 const tooltipInstance = ref<Instance>();
 
 const sanitizedContenu = computed(() => {
-  return sanitizeHtml(props.contenu)
+  return sanitize(props.contenu)
 })
 
 function destroyTooltip() {

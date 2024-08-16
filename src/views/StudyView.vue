@@ -15,7 +15,7 @@
                   v-if="isDataLoaded"
                   :views="views"
                   :localCurrency="studyData.targetCurrency" 
-                  :currency="currencySymbol"
+                  :currency="$route.query.currency || 'LOCAL'"
                   :selectedViewKey="view"
                   :fullReportPdfUrl="studyPdfUrls.fullReportPdfUrl"
                   @update:currency="updateCurrency"
