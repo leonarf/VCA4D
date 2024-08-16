@@ -30,6 +30,7 @@ export const getProductLogo = (product) => {
         case 'french beans':
             return BeansLogo;
         case 'mango':
+        case 'mango|lime':
             return MangoLogo
         case 'cashew':
             return CashewLogo

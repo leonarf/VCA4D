@@ -5,10 +5,7 @@
   >
   <InfoTitle
     title="Benefit/Cost Ratio (%)"
-    information="
-      Percentage of net operating profit in total costs<br>
-      (NB : for producers this includes actor revenue)
-    "
+    information="To do"
   />
   <template v-if="studyData">
     <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
@@ -79,7 +76,7 @@ const populatedBarChartData = computed(() => {
       }
       tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
             Total costs = ${prettyAmount.value(totalCosts)}<br>
-            Return on investment = ${formatPercent(netOperatingProfits / totalCosts)}`
+            Benefit/Cost Ratio = ${formatPercent(netOperatingProfits / totalCosts)}`
       return {
         name: stage.name,
         value: (100 * netOperatingProfits) / totalCosts
@@ -114,7 +111,7 @@ const currentStageReturnOnInvestmentData = computed(() => {
       }
       tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
             Total costs = ${prettyAmount.value(totalCosts)}<br>
-            Return on investment = ${formatPercent(netOperatingProfits / totalCosts)}`
+            Benefit/Cost Ratio = ${formatPercent(netOperatingProfits / totalCosts)}`
       return {
         name: actor.name,
         value: netOperatingProfits / totalCosts

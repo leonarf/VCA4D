@@ -11,6 +11,7 @@
         "cashew",
         "banana",
         "mango",
+        "mango|lime",
         "vanilla",
         "oil palm"
       ]
@@ -77,12 +78,6 @@
       "iso": "bj"
     },
     {
-      "id": "bostwana",
-      "prettyName": "Bostwana",
-      "continent": "Africa",
-      "iso": "bw"
-    },
-    {
       "id": "burkina-faso",
       "prettyName": "Burkina Faso",
       "continent": "Africa",
@@ -132,7 +127,7 @@
     },
     {
       "id": "eswatini",
-      "prettyName": "Swaziland",
+      "prettyName": "e-Swatini",
       "continent": "Africa",
       "iso": "sz"
     },
@@ -216,7 +211,7 @@
     },
     {
       "id": "sao-tome-e-principe",
-      "prettyName": "Sao Tome e Principe",
+      "prettyName": "São Tomé e Príncipe",
       "continent": "Africa",
       "iso": "st"
     },
@@ -400,11 +395,11 @@
       "product": "sorghum"
     },
     {
-      "id": "mango-guinea-bissau",
+      "id": "mango|lime-guinea-bissau",
       "title": "guinea-bissau mango",
       "year": null,
       "country": "guinea-bissau",
-      "product": "mango"
+      "product": "mango|lime"
     },
     {
       "id": "coffee-honduras",
@@ -581,6 +576,14 @@
     {
       "id": "mango",
       "prettyName": "Mango"
+    },
+    {
+      "id": "mango|lime",
+      "prettyName": "mango|lime"
+    },
+    {
+      "id": "mango|lime",
+      "prettyName": "mango|lime"
     },
     {
       "id": "vanilla",

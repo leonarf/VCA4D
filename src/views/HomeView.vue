@@ -70,8 +70,8 @@ function toggleFilter(filterKey) {
         <h1>Get insights into agri-food value chains in EU partner countries</h1>
         <p>
           Welcome to the Value Chain Analysis for Development (VCA4D) Information and Knowledge
-          Management System. You will find access to all available value chain analyses across
-          agricultural commodities around the world realised by VCA4D.
+          Management System. You will find access to all available agricultural value chain analyses
+          performed by VCA4D project in different partner countries.
         </p>
         <p>
           Value chain analyses assist in informing policy dialogue and investment operations. They
@@ -86,16 +86,27 @@ function toggleFilter(filterKey) {
           environmentally sustainable.
         </p>
         <p>
-          Each VCA4D study provides with a functional analysis describing the main features of a
-          value chain and elements of reply to four framing questions:
+          Each VCA4D study provides a functional analysis describing the <strong>main functions, flows and actors</strong> of a value chain
+          and elements of reply to four framing questions:
         </p>
         <ul class="list-disc ml-8">
-          <li><strong>Main functions, flows and actors of the value chain</strong></li>
           <li>What is the contribution of the value chain to <strong>economic growth?</strong></li>
           <li>Is this economic growth <strong>inclusive?</strong></li>
           <li>Is the value chain <strong>socially</strong> sustainable?</li>
           <li>Is the value chain <strong>environmentally</strong> sustainable?</li>
         </ul>
+        <p>
+          The VCA4D Information and Knowledge Management System presents the main economic, social and environmental indicators for each study,
+          to get an insightful overview of the value chain.
+        </p>
+        <p>
+          It also allows users to compare the same products in different countries as well as various VCs within a country.
+        </p>
+        <p>
+          The indicators presented in the economic analysis are gathered from the studies’ Agrifood Chain Analysis (AFA) software files.
+          For the social indicators, the VCA4D studies’ social profiles are employed to inform on the sustainability score levels.
+          Finally, Life Cycle Analysis (LCA) software files are the source of the data for the extraction of the environmental indicators.
+        </p>
       </section>
       <section>
         <h2><strong>Browse studies</strong></h2>
@@ -130,7 +141,6 @@ function toggleFilter(filterKey) {
 </template>
 
 <style scoped lang="scss">
-
 section {
   padding: 1.5rem;
 }
