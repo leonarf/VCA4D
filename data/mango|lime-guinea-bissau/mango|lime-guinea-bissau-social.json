@@ -1,7 +1,7 @@
 {
-  "id": "mango-guinea-bissau",
+  "id": "mango|lime-guinea-bissau",
   "country": "guinea-bissau",
-  "commodity": "mango",
+  "commodity": "mango|lime",
   "year": null,
   "type": "social",
   "socialData": [
