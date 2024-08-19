@@ -26,30 +26,15 @@
         </a>
       </li>
     </ol>
-    <div v-if="localCurrency" class="mt-4 flex flex-col gap-1">
-      <div class="text-[#868686]">
-        Select currency {{ currency }}
-      </div>
-      <div class="max-w-[175px] text-[#868686] select-wrapper">
-        <CurrencySelector
-          :currency="currency"
-          :localCurrency="localCurrency"
-          @update:currency="emits('update:currency', $event)"
-        />
-      </div>
-    </div>
   </nav>
 </template>
 
 <script setup>
 import { defineEmits } from 'vue'
-import CurrencySelector from "./CurrencySelector.vue";
 
 const props = defineProps({
   views: Array,
   selectedViewKey: String,
-  localCurrency: String,
-  currency: String,
   fullReportPdfUrl: String
 })
 const emits = defineEmits(['select'])

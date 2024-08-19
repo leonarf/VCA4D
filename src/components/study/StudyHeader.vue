@@ -23,7 +23,16 @@
             <div class="subtitle">Country</div>
         </div>
         <div>
-            <div class="title">{{ studyData.targetCurrency ? getCurrencySymbol(studyData.targetCurrency) : '-'}}</div>
+          <div class="title">
+            <CurrencySelector
+              v-if="localCurrency"
+              class="title"
+              :currency="currency"
+              :localCurrency="localCurrency"
+              @update:currency="emits('update:currency', $event)"
+            />
+            <div v-else>-</div>
+          </div>
             <div class="subtitle">Local currency</div>
         </div>
         <div>
@@ -35,16 +44,20 @@
 
 <script setup>
 import { computed } from 'vue'
-import { getCurrencySymbol } from '@utils/currency.js'
 import { getCountry, getProduct, getStudy } from '@utils/data'
 import ComparisonLink from '@components/study/ComparisonLink.vue';
+import CurrencySelector from "./CurrencySelector.vue"
 
 const props = defineProps({
     studyData: {
       type: Object,
       required: true,
-    }
+    },
+    currency: String,
+    localCurrency: String
 })
+
+const emits = defineEmits(["update:currency"]);
 
 const commodityId = computed(() => {
     return getStudy(props.studyData.id).product;

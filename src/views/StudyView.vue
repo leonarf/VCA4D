@@ -7,18 +7,20 @@
                 <div v-if="error" class="error">{{ error }}</div>
 
                 <div v-if="isDataLoaded">
-                    <StudyHeader :studyData="studyData"/>
+                    <StudyHeader
+                      :studyData="studyData"
+                      :localCurrency="studyData.targetCurrency" 
+                      :currency="$route.query.currency || 'LOCAL'"
+                      @update:currency="updateCurrency"
+                    />
                 </div>
             </header>
             <div class="w-full text-left my-16">
                 <StudyMenu 
                   v-if="isDataLoaded"
                   :views="views"
-                  :localCurrency="studyData.targetCurrency" 
-                  :currency="$route.query.currency || 'LOCAL'"
                   :selectedViewKey="view"
                   :fullReportPdfUrl="studyPdfUrls.fullReportPdfUrl"
-                  @update:currency="updateCurrency"
                   @select="selectView($event)"
                 />
             </div>
