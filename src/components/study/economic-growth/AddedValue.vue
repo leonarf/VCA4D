@@ -60,7 +60,7 @@
       <Ring
         v-if="studyData"
         :options="addedValueCreatorsRingChartData"
-        style="height: 400px; width: 500px"
+        style="height: 400px; width: 520px"
       ></Ring>
       <div class="font-semibold">{{ totalAddedValueCreators }}</div>
     </div>
@@ -68,7 +68,7 @@
       <Ring
         v-if="studyData"
         :options="addedValueReceiversRingChartData"
-        style="height: 400px; width: 500px"
+        style="height: 400px; width: 520px"
       ></Ring>
       <div class="font-semibold">{{ totalAddedValueReceivers }}</div>
     </div>
