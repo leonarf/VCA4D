@@ -22,18 +22,14 @@
             </div>
             <div class="subtitle">Country</div>
         </div>
-        <div>
-          <div class="title">
-            <CurrencySelector
-              v-if="localCurrency"
-              class="title"
-              :currency="currency"
-              :localCurrency="localCurrency"
-              @update:currency="emits('update:currency', $event)"
-            />
-            <div v-else>-</div>
-          </div>
-            <div class="subtitle">{{ currencySubtitle }}</div>
+        <div v-if="localCurrency">
+          <CurrencySelector
+            class="title"
+            :currency="currency"
+            :localCurrency="localCurrency"
+            @update:currency="emits('update:currency', $event)"
+          />
+          <div class="subtitle">{{ currencySubtitle }}</div>
         </div>
         <div>
             <div class="title">{{ studyData.year }}</div>
