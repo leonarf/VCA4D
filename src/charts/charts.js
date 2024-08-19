@@ -29,6 +29,7 @@ export const getRingChart = (items, tooltip, title) => {
                     overflow: 'break',
                     bleedMargin: 0,
                     ellipsis: '..',
+                    width: 100,
                     formatter: params => params.data.label || params.data.name
                 },
                 type: 'pie',
