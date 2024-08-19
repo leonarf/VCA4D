@@ -33,7 +33,7 @@
             />
             <div v-else>-</div>
           </div>
-            <div class="subtitle">Local currency</div>
+            <div class="subtitle">{{ currencySubtitle }}</div>
         </div>
         <div>
             <div class="title">{{ studyData.year }}</div>
@@ -47,6 +47,7 @@ import { computed } from 'vue'
 import { getCountry, getProduct, getStudy } from '@utils/data'
 import ComparisonLink from '@components/study/ComparisonLink.vue';
 import CurrencySelector from "./CurrencySelector.vue"
+import { getCurrencyName } from '@utils/currency.js'
 
 const props = defineProps({
     studyData: {
@@ -81,6 +82,14 @@ let dataToDisplay = computed(() => {
         result.country = props.studyData.country
     }
     return result
+})
+
+const currencySubtitle = computed(() => {
+  if (props.currency === "LOCAL") {
+     return "Local currency"
+  } else {
+    return `Converted from ${getCurrencyName(props.localCurrency)}`;
+  }
 })
 </script>
 
