@@ -1,7 +1,7 @@
 <template>
   <div class="select-wrapper">
     <select
-      class="border border-[#656565] text-[#868686] rounded-lg focus:ring-[#868686] focus:border-[#868686] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      class="selector"
       v-model="selectedCurrency"
       @change="emits('update:currency', $event.target.value)"
     >
@@ -37,14 +37,35 @@ const emits = defineEmits(['update:currency'])
 
 .select-wrapper {
     position: relative;
+    padding-right: 10px;
 }
 
 .select-wrapper::after {
     content: "▼";
     font-size: 0.9rem;
-    top: 9px;
+    height: 100%;
     right: 10px;
     position: absolute;
     pointer-events: none;
+}
+
+.select-wrapper > *:last-child {
+  padding-right: 20px;
+}
+
+.selector {
+  background-color: transparent;
+  padding: 2px 10px;
+  margin: -2px -10px;
+  border-radius: 100px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+
+  option {
+    @apply text-base
+  }
 }
 </style>
