@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col max-w-[300px]">
         <div class="value">
-          {{ value || "-" }}
+          {{ displayedValue }}
         </div>
         <div class="title">
           <div class="label">
@@ -26,11 +26,18 @@
 import Tooltip from "@components/Tooltip.vue";
 import Svg from "@components/Svg.vue";
 import QuestionMark from '../../images/icons/info-question.svg'
+import { computed } from "vue";
 
 const props = defineProps({
   description: String,
   value: String,
   label: String
+})
+const displayedValue = computed(() => {
+  if (! props.value && typeof props.value !== "number") {
+    return "-";
+  }
+  return props.value;
 })
 </script>
 
