@@ -15,10 +15,10 @@
     </template>
   </ComparisonRow>
   <ComparisonRow
-    v-for="subKey in subKeys"
+    v-for="(subKey, index) in subKeys"
     :studies="studies"
     class="sub-row"
-    :class="{ expanded }"
+    :class="{ expanded, 'last-sub-row': index === subKeys.length - 1 }"
     :title="subKey"
     subtitle="-"
     :getValue="study => getSubValues(study)[subKey]"
@@ -49,8 +49,31 @@ const subKeys = computed(() => Object.keys(props.getSubValues(props.studies[0]))
 </script>
 
 <style scoped lang="scss">
+  $border-radius: 6px;
+  @mixin border-radius-bottom {
+    :deep(td:first-child) {
+      border-bottom-left-radius: $border-radius;
+    }
+    :deep(td:nth-last-child(2)) {
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+  @mixin border-radius-top {
+    :deep(td:first-child) {
+      border-top-left-radius: $border-radius;
+    }
+    :deep(td:nth-last-child(2)) {
+      border-top-right-radius: $border-radius;
+    }
+  }
 
-  .parent-row {    
+  .parent-row {
+    @include border-radius-top;
+    
+    &:not(.expanded) {
+      @include border-radius-bottom;
+    }
+  
     &:hover :deep(td:not(:last-child)) {
       background-color: #A4CAFE;
     }
@@ -67,5 +90,9 @@ const subKeys = computed(() => Object.keys(props.getSubValues(props.studies[0]))
     &:not(.expanded) {
       display: none;
     }
+  }
+
+  .last-sub-row {
+    @include border-radius-bottom;
   }
 </style>
