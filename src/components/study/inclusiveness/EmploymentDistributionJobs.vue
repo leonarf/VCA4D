@@ -10,8 +10,8 @@
         <div class="flex flex-col mb-8">
             <div class="flex flex-row flex-wrap items-center justify-center">
                 <div class="w-1/2 md:w-1/5 flex flex-col space-y-4 pt-8">
-                    <NiceMetric label="Waged employment" :value="totalNumberOfJobs" />
-                    <NiceMetric label="% female employment" :value="`${percentFemaleEmployment}`" />
+                    <NiceMetric label="Waged employment" :description="fteDefinition" :value="totalNumberOfJobs" />
+                    <NiceMetric label="% female employment" :value="percentFemaleEmployment" />
                 </div>
                 <div class="w-full md:w-4/5">
                     <BarChart v-if="studyData" :options="numberOfJobsData"
@@ -108,6 +108,14 @@ const percentFemaleEmployment = computed(() => {
       actor.employment ? actor.employment.total : 0
     )
     return formatPercent(totalFemale / total)
+})
+
+const fteDefinition = computed(() => {
+  const definitionHtml = props.studyData?.ecoData?.macroData?.FTE_Definition || "<i>No FTE definition provided</i>"
+  return `
+    <div><b>Full-time equivalent (FTE) definition</b></div>
+    <div>${definitionHtml}</div>
+  `;
 })
 
 const currentStageEmploymentByTypeOfActorData = computed(() => {
