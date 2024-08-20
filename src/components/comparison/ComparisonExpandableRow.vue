@@ -1,5 +1,7 @@
 <template>
   <ComparisonRow
+    class="parent-row"
+    :class="{ expanded }"
     :studies="studies"
     :title="title"
     :subtitle="subtitle"
@@ -47,9 +49,19 @@ const subKeys = computed(() => Object.keys(props.getSubValues(props.studies[0]))
 </script>
 
 <style scoped lang="scss">
+
+  .parent-row {    
+    &:hover :deep(td:not(:last-child)) {
+      background-color: #A4CAFE;
+    }
+    &.expanded:not(:hover) :deep(td:not(:last-child)) {
+      background-color: #C3DDFD;
+    }
+  }
+
   .sub-row {
     :deep(td:not(:last-child)) {
-      background-color: #E5E7EB;
+      background-color: #E1EFFE;
     }
 
     &:not(.expanded) {

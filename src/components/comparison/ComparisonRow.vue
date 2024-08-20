@@ -53,9 +53,5 @@ const values = computed(() => props.studies.map(study => props.getValue(study)))
 
   .expandable {
     cursor: pointer;
-
-    &:hover td:not(:last-child) {
-      background-color: #F3F4F6;
-    }
   }
 </style>
