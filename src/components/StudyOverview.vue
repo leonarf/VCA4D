@@ -13,7 +13,7 @@
       <div
         v-if="!!studyData.ecoData"
         class="section-link"
-        :to="'/study?id=' + studyData.id + '&view=economic-growth'"
+        @click="emits('select-view', 'economic-growth')"
       >
         <h3>Contribution to growth</h3>
         <p>
@@ -24,7 +24,7 @@
       <div
         v-if="!!studyData.ecoData"
         class="section-link"
-        :to="'/study?id=' + studyData.id + '&view=inclusiveness'"
+        @click="emits('select-view', 'inclusiveness')"
       >
         <h3>Inclusiveness</h3>
         <p>
@@ -34,7 +34,7 @@
       <div
         v-if="!!studyData.socialData"
         class="section-link"
-        :to="'/study?id=' + studyData.id + '&view=social-sustainability'"
+        @click="emits('select-view', 'social-sustainability')"
       >
         <h3>Social sustainability</h3>
         <p>
@@ -46,7 +46,7 @@
       <div
         v-if="!!studyData.acvData"
         class="section-link"
-        :to="'/study?id=' + studyData.id + '&view=environment'"
+        @click="emits('select-view', 'environment')"
       >
         <h3>Environmental sustainability</h3>
         <p>
@@ -73,6 +73,7 @@
 </template>
 
 <script setup>
+import { defineEmits } from "vue";
 import StagesDescription from '@/components/StagesDescription.vue'
 import SectionTitle from './typography/SectionTitle.vue'
 import PdfSection from './pdf/PdfSection.vue';
@@ -82,6 +83,7 @@ const props = defineProps({
   studyData: Object,
   studyPdfUrls: Object
 });
+const emits = defineEmits(["select-view"]);
 </script>
 
 <style scoped lang="scss">
