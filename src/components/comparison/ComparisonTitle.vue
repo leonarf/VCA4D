@@ -19,4 +19,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss">
+  .title {
+    @apply uppercase text-[#8A8A8A] font-bold text-sm pb-4;
+  }
 </style>

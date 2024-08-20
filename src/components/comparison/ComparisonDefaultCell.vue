@@ -41,6 +41,9 @@ function format(value) {
 </script>
 
 <style scoped lang="scss">
+    .gray {
+      @apply bg-gray-300 text-gray-500
+    }
     .negative {
         background-color: #ffac9e;
     }
