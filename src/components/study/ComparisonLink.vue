@@ -4,7 +4,7 @@
     :to="route"
     :title="title"
   >
-    <Svg :svg="ArrowsLogo" height="20px"/>
+    <Svg :svg="ArrowsLogo" height="23px"/>
     {{ hasOtherStudies ? allStudies.length : "" }}
   </RouterLink>
 </template>
@@ -69,11 +69,11 @@
   .comparison-link {
     display: flex;
     height: 20px;
-    gap: 0.25rem;
+    gap: 0rem;
     font-size: 18px;
     line-height: 18px;
     height: 20px;
-    align-items: flex-end;
+    align-items: center;
     color: #656565;
     cursor: pointer;
 
