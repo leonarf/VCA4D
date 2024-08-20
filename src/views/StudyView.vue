@@ -125,6 +125,10 @@ const viewComponent = computed(() => {
 });
 
 function selectView(viewKey) {
+  console.log(route.query, {
+    ...route.query,
+    view: viewKey
+  });
   router.push({ query: {
     ...route.query,
     view: viewKey
