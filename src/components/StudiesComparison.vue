@@ -44,5 +44,12 @@ const emit = defineEmits(["select-studies"]);
     tr td:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
       @apply border-r-2
     }
+
+    tr td:first-child >*:first-child {
+      margin-left: 5px;
+    }
+    tr td:nth-last-child(2) > *:last-child {
+      margin-right: 5px;
+    }
 }
 </style>
