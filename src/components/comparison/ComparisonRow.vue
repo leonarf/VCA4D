@@ -15,13 +15,17 @@
 
 <script setup>
 import { computed } from 'vue';
+import { formatNumber, formatPercent } from '@utils/format.js'
 
 const props = defineProps({
     studies: Array,
     title: String,
     subtitle: String,
     getValue: Function,
-    format: Function
+    valueType: {
+      type: String,
+      validator: (valueType) => ["percent", "number"].includes(valueType)
+    }
 })
 
 const values = computed(() => props.studies.map(study => props.getValue(study)))
@@ -33,6 +37,17 @@ const getAddedValueClass = (value) => {
         return "negative"
     }
     return "positive"
+}
+
+function format(value) {
+  switch (props.valueType) {
+    case "percent":
+      return formatPercent(value);
+    case "number":
+      return formatNumber(value);
+    default:
+      return "";
+  }
 }
 </script>
 
