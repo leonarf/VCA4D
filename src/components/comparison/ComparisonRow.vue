@@ -1,11 +1,13 @@
 <template>
   <tr :class="{ expandable }" @click="emits('toggle-expand')">
-      <td class="row-label">
+      <td class="row-header">
           <div>
-            <div>{{ title }}</div>
+            <div>
+              {{ title }}
+              <span v-if="expandable">{{ expanded ? "▲" : "▼" }}</span>
+            </div>
             <div class="definition">{{ subtitle }}</div>
           </div>
-          <div v-if="expandable">{{ expanded ? "▲" : "▼" }}</div>
       </td>
       <td v-for="(study, index) in studies" :key="`value_added__${study.id}`">
         <slot :value="values[index]"></slot>
@@ -31,13 +33,16 @@ const values = computed(() => props.studies.map(study => props.getValue(study)))
 </script>
 
 <style scoped lang="scss">
-  .row-label {
+  .row-header {
     min-width: 220px;
     padding-right: 20px;
     display: flex;
     align-items: start;
+    gap: 10px;
   }
+
   .definition {
+    min-height: 24px;
     @apply text-[#9B9B9B] italic
   }
   
