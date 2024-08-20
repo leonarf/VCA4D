@@ -134,9 +134,7 @@ function selectView(viewKey) {
 }
 
 onMounted(async () => {
-  if (!route.query.currency) {
-    updateCurrency(localStorage.getItem('currency') || "LOCAL");
-  }
+  setupCurrency()
 
   try {
     studyData.value = await getStudyData(route.query.id);
@@ -145,6 +143,12 @@ onMounted(async () => {
     error.value = err;
   }
 })
+
+function setupCurrency() {
+  if (!route.query.currency) {
+    updateCurrency(localStorage.getItem('currency') || "LOCAL");
+  }
+}
 
 const isDataLoaded = computed(() => {
   return !! studyData.value && !! studyPdfUrls.value;
