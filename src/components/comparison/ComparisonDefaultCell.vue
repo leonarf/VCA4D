@@ -1,5 +1,5 @@
 <template>
-  <div :class="valueClass">
+  <div class="default-comparison-cell" :class="valueClass">
       {{ value ? format(value) : '-' }}
   </div>
 </template>

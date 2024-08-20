@@ -5,7 +5,6 @@
           v-for="impact in impacts"
           :key="`impact_${impact.name}`"
           :studies="studies"
-          class="rounded"
           :title="impact.name"
           :subtitle="`in ${getUnitImpact(impact.name)}`"
           :getValue="(study) => getImpactValue(impact, study)"

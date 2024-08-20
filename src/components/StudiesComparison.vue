@@ -81,13 +81,13 @@ const emit = defineEmits(["select-studies"]);
     tr td:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
     @apply border-r-2
     }
-    tr.rounded td:not(:first-child) div {
+    tr td:not(:first-child) div.default-comparison-cell {
     @apply text-center text-sm py-1.5
     }
-    tr.rounded td:nth-child(2) div{
+    tr td:nth-child(2) div.default-comparison-cell {
         @apply rounded-l-full
     }
-    tr.rounded td:nth-last-child(2) div {
+    tr td:nth-last-child(2) div.default-comparison-cell {
         @apply rounded-r-full
     }
 }

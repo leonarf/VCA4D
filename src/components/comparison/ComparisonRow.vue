@@ -1,5 +1,5 @@
 <template>
-  <tr class="rounded">
+  <tr>
       <td>
           <div class="subtitle">{{ title }}</div>
           <div class="definition">{{ subtitle }}</div>
