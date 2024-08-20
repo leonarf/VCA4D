@@ -1,15 +1,16 @@
 <template>
     <ComparisonTitle title="Macro-Economic Indicators" :studies="studies" />
-    <ComparisonRow 
+    <ComparisonExpandableRow 
       :studies="studies" 
       title="Value added" 
       subtitle="Definition of total value added" 
       :get-value="getTotalAddedValue"
+      :getSubValues="(study) => ({ 'Producers': 1, 'Wholesalers': 2 })"
     >
       <template #default="{ value }">
         <ComparisonDefaultCell :value="value" valueType="number"/>
       </template>
-    </ComparisonRow>
+    </ComparisonExpandableRow>
   
     <ComparisonRow 
         :studies="studies" 
@@ -72,6 +73,7 @@ import { getTotalAddedValue } from '@utils/economics.js'
 import ComparisonTitle from './ComparisonTitle.vue';
 import ComparisonRow from './ComparisonRow.vue';
 import ComparisonDefaultCell from './ComparisonDefaultCell.vue';
+import ComparisonExpandableRow from './ComparisonExpandableRow.vue';
 const props = defineProps({
     studies: Array,
 })
