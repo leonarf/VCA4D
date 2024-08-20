@@ -28,6 +28,7 @@
                   :studyData="studyData"
                   :studyPdfUrls="studyPdfUrls"
                   :currency="currencySymbol"
+                  @select-view="selectView($event)"
                 />
             </template>
         </div>
