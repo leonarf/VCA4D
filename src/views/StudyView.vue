@@ -50,6 +50,7 @@ import StudyHeader from '@components/study/StudyHeader.vue'
 import StudyMenu from '@components/study/StudyMenu.vue'
 import { getStudyData } from '@utils/data'
 import { getStudyPdfUrls } from '../utils/data'
+import { isCurrencySupported } from '@utils/currency.js'
 
 const route = useRoute();
 const router = useRouter()
@@ -135,17 +136,22 @@ function selectView(viewKey) {
 }
 
 onMounted(async () => {
-  if (!route.query.currency) {
-    updateCurrency(localStorage.getItem('currency') || "LOCAL");
-  }
-
   try {
     studyData.value = await getStudyData(route.query.id);
+    setupCurrency();
     studyPdfUrls.value = await getStudyPdfUrls(route.query.id);
   } catch(err) {
     error.value = err;
   }
 })
+
+function setupCurrency() {
+  if (studyData.value && ! isCurrencySupported(studyData.value.targetCurrency)) {
+    updateCurrency("LOCAL");
+  } else if (!route.query.currency) {
+    updateCurrency(localStorage.getItem('currency') || "LOCAL");
+  }
+}
 
 const isDataLoaded = computed(() => {
   return !! studyData.value && !! studyPdfUrls.value;

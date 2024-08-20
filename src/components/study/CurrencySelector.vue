@@ -23,13 +23,18 @@
 
 <script setup>
 import { getCurrencySymbol, getCurrencyName, isCurrencySupported } from '@utils/currency.js'
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
 const props = defineProps({
   localCurrency: String,
   currency: String,
 })
+
 const selectedCurrency = ref(props.currency);
+watch(() => props.currency, () => {
+  selectedCurrency.value = props.currency;
+});
+
 const emits = defineEmits(['update:currency'])
 </script>
 
