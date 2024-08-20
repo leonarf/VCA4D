@@ -1,53 +1,77 @@
 <template>
     <ComparisonTitle title="Macro-Economic Indicators" :studies="studies" />
     <ComparisonRow 
-        :studies="studies" 
-        title="Value added" 
-        subtitle="Definition of total value added" 
-        :get-value="getTotalAddedValue"
-        valueType="number"
-        />
+      :studies="studies" 
+      title="Value added" 
+      subtitle="Definition of total value added" 
+      :get-value="getTotalAddedValue"
+    >
+      <template #default="{ value }">
+        <ComparisonDefaultCell :value="value" valueType="number"/>
+      </template>
+    </ComparisonRow>
+  
     <ComparisonRow 
         :studies="studies" 
         title="Share of agricultural GDP" 
         subtitle="Value chain GDP divided by agricultural GDP" 
         :get-value="(study) => study.ecoData?.macroData?.valueAddedShareAgriculturalGdp"
-        valueType="percent"
-        />
+    >
+      <template #default="{ value }">
+        <ComparisonDefaultCell :value="value" valueType="percent"/>
+      </template>
+    </ComparisonRow>
+  
     <ComparisonRow 
         :studies="studies" 
         title="Share of national GDP" 
         subtitle="Value chain GDP divided by national GDP" 
         :get-value="(study) => study.ecoData?.macroData?.valueAddedShareNationalGdp"
-        valueType="percent"
-        />
+    >
+      <template #default="{ value }">
+        <ComparisonDefaultCell :value="value" valueType="percent"/>
+      </template>
+    </ComparisonRow>
+  
     <ComparisonRow 
         :studies="studies" 
         title="Gini Index" 
         subtitle="-" 
         :get-value="(study) => study.ecoData?.macroData?.giniIndex"
-        valueType="percent"
-        />
+    >
+      <template #default="{ value }">
+        <ComparisonDefaultCell :value="value" valueType="percent"/>
+      </template>
+    </ComparisonRow>
+  
     <ComparisonRow 
         :studies="studies" 
         title="Rate Of Integration" 
         subtitle="-" 
         :get-value="(study) => study.ecoData?.macroData?.rateOfIntegration"
-        valueType="percent"
-        />
+    >
+      <template #default="{ value }">
+        <ComparisonDefaultCell :value="value" valueType="percent"/>
+      </template>
+    </ComparisonRow>
+  
     <ComparisonRow 
         :studies="studies" 
         title="Nominal Protection Coefficient" 
         subtitle="-" 
         :get-value="(study) => study.ecoData?.macroData?.nominalProtectionCoefficient"
-        valueType="percent"
-        />
+    >
+      <template #default="{ value }">
+        <ComparisonDefaultCell :value="value" valueType="percent"/>
+      </template>
+    </ComparisonRow>
 </template>
 
 <script setup>
 import { getTotalAddedValue } from '@utils/economics.js'
 import ComparisonTitle from './ComparisonTitle.vue';
 import ComparisonRow from './ComparisonRow.vue';
+import ComparisonDefaultCell from './ComparisonDefaultCell.vue';
 const props = defineProps({
     studies: Array,
 })

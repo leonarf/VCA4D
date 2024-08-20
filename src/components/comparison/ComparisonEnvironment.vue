@@ -9,9 +9,11 @@
           :title="impact.name"
           :subtitle="`in ${getUnitImpact(impact.name)}`"
           :getValue="(study) => getImpactValue(impact, study)"
-          valueType="number"
-          reverseColors
-        />
+        >
+          <template #default="{ value }">
+            <ComparisonDefaultCell :value="value" valueType="number" reverseColors/>
+          </template>
+        </ComparisonRow>
     </template>
 </template>
 
@@ -21,6 +23,7 @@ import { ACVImpacts } from '@utils/misc.js'
 import { computed } from 'vue';
 import ComparisonTitle from './ComparisonTitle.vue';
 import ComparisonRow from './ComparisonRow.vue';
+import ComparisonDefaultCell from './ComparisonDefaultCell.vue';
 const props = defineProps({
     studies: Array,
 })
