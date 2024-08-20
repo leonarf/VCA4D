@@ -1,16 +1,62 @@
 <template>
     <div class="flex flex-col max-w-[300px]">
-        <div class="text-3xl text-[#303030]">{{ value || "-" }}</div>
-        <div class="uppercase text-base font-semibold text-[#656565]">{{ label }}</div>
+        <div class="value">
+          {{ value || "-" }}
+        </div>
+        <div class="title">
+          <div class="label">
+            {{ label }}
+          </div>
+          <div v-if="description">
+            <Svg
+              class="description-logo"
+              :svg="QuestionMark"
+            />
+            <Tooltip
+              class="tooltip"
+              :contenu="description"
+              :options="{ placement: 'right', maxWidth: 350 }"
+            />
+          </div>
+        </div>
     </div>
 </template>
 
 <script setup>
+import Tooltip from "@components/Tooltip.vue";
+import Svg from "@components/Svg.vue";
+import QuestionMark from '../../images/icons/info-question.svg'
+
 const props = defineProps({
+  description: String,
   value: String,
   label: String
 })
 </script>
 
 <style scoped lang="scss">
+  .value {
+    color: #303030;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .title {
+    color: #656565;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .label {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-transform: uppercase;
+    }
+    .description-logo {
+      width: 0.9rem;
+    }
+    .tooltip {
+      text-transform: none;
+    }
+  }
 </style>
