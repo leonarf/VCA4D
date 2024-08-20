@@ -1,4 +1,4 @@
-export const getLink = (study, currency) => `/study?id=${study.local ? 'localStorage' : study.id}&currency=${currency}`
+export const getLink = (study) => `/study?id=${study.local ? 'localStorage' : study.id}`
 
 export function getStudyListQueryString(studyIds) {
     return studyIds.join(",");

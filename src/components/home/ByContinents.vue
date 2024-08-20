@@ -8,7 +8,6 @@ const props = defineProps({
     categories: Array,
     studies: Array,
     countries: Array,
-    currency: String
 })
 
 const continents = computed(() => [...new Set(props.countries.map(country => country.continent))])
@@ -23,7 +22,7 @@ const getStudiesByContinent = (continent) => {
     <section>
         <QuestionTitle>By <strong>country</strong></QuestionTitle>
         <template v-for="continent in continents" :key="continent">
-            <ByContinent class="continent" :continent="continent" :studies="getStudiesByContinent(continent)" :countries="countries" :currency="currency"/>
+            <ByContinent class="continent" :continent="continent" :studies="getStudiesByContinent(continent)" :countries="countries"/>
         </template>
     </section>
 </template>
