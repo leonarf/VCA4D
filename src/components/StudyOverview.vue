@@ -10,8 +10,9 @@
 
     <section v-if="studyData" class="explore">
       <h2>Explore up to 4 dimensions of the value chain</h2>
-      <RouterLink
+      <div
         v-if="!!studyData.ecoData"
+        class="section-link"
         :to="'/study?id=' + studyData.id + '&view=economic-growth'"
       >
         <h3>Contribution to growth</h3>
@@ -19,18 +20,20 @@
           Learn more about: Contribution to GDP, impact on Public Finances and Balance of Trade,
           Viability in the International Economy
         </p>
-      </RouterLink>
-      <RouterLink
+      </div>
+      <div
         v-if="!!studyData.ecoData"
+        class="section-link"
         :to="'/study?id=' + studyData.id + '&view=inclusiveness'"
       >
         <h3>Inclusiveness</h3>
         <p>
           Learn more about: Employment, Profit distribution among actors and impact of governance on income distribution
         </p>
-      </RouterLink>
-      <RouterLink
+      </div>
+      <div
         v-if="!!studyData.socialData"
+        class="section-link"
         :to="'/study?id=' + studyData.id + '&view=social-sustainability'"
       >
         <h3>Social sustainability</h3>
@@ -39,16 +42,17 @@
           <em>Gender equality</em>, <em>Food & nutrition security</em>, <em>Social capital</em> and
           <em>Living conditions</em>
         </p>
-      </RouterLink>
-      <RouterLink
+      </div>
+      <div
         v-if="!!studyData.acvData"
+        class="section-link"
         :to="'/study?id=' + studyData.id + '&view=environment'"
       >
         <h3>Environmental sustainability</h3>
         <p>
           Learn more about the value chain’s damages to Human Health, Ecosystem Quality, Natural Resources and Climate Change
         </p>
-      </RouterLink>
+      </div>
     </section>
 
     <PdfSection
@@ -69,8 +73,6 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
-
 import StagesDescription from '@/components/StagesDescription.vue'
 import SectionTitle from './typography/SectionTitle.vue'
 import PdfSection from './pdf/PdfSection.vue';
@@ -85,10 +87,11 @@ const props = defineProps({
 <style scoped lang="scss">
 article {
   section.explore {
-    a {
+    .section-link {
       display: block;
       width: 100%;
       min-height: 6rem;
+      cursor: pointer;
 
       padding: 1rem;
       margin-bottom: 1rem;
