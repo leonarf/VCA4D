@@ -5,7 +5,7 @@
             <div class="study-box">
                 <div class="card-box">
                     <Card
-                        :link="getLink(study, 'LOCAL')"
+                        :link="getLink(study)"
                         :is-local="false"
                         :is-open="false"
                         :title="study.product.prettyName">

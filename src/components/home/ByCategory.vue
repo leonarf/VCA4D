@@ -16,7 +16,6 @@ import SubCardsList from './SubCardsList.vue'
 const props = defineProps({
     studies: Array,
     countries: Array,
-    currency: String,
     category: Object
 })
 
@@ -52,7 +51,7 @@ const getStudiesByProduct = () => {
                 <li v-for="item in getStudiesByProduct()" :key="item.product">
                     <template v-if="item.studies.length === 1">
                         <Card
-                            :link="getLink(item.studies[0], currency)"
+                            :link="getLink(item.studies[0])"
                             :is-local="item.studies[0].local"
                             :title="getProduct(item.product).prettyName">
                             <template v-slot:logo>
@@ -82,7 +81,7 @@ const getStudiesByProduct = () => {
                                 :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
                                 :linkTitle="`Compare all ${item.product} studies`">
                                     <Card v-for="study in item.studies" :key="study.id"
-                                            :link="getLink(study, currency)"
+                                            :link="getLink(study)"
                                             :is-local="study.local"
                                             :title="getCountry(study.country)?.prettyName">
                                         <template v-slot:logo>

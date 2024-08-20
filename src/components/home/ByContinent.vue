@@ -16,7 +16,6 @@ const props = defineProps({
     continent: String,
     studies: Array,
     countries: Array,
-    currency: String
 })
 
 const CONTINENT_BG_COLORS = {
@@ -62,7 +61,7 @@ const getStudiesByCountry = () => {
             <li v-for="item in getStudiesByCountry()" :key="item.country">
                 <template v-if="item.studies.length === 1">
                     <Card 
-                        :link="getLink(item.studies[0], currency)"
+                        :link="getLink(item.studies[0])"
                         :is-local="item.studies[0].local"
                         :title="getCountry(item.country).prettyName">
                         <template v-slot:logo>
@@ -92,7 +91,7 @@ const getStudiesByCountry = () => {
                                 :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
                                 :linkTitle="`Compare all ${item.country} studies`">
                             <Card v-for="study in item.studies" :key="study.id"
-                                :link="getLink(study, currency)"
+                                :link="getLink(study)"
                                 :is-local="study.local"
                                 :title="getProduct(study.product).prettyName">
                                 <template v-slot:logo>

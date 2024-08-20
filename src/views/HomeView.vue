@@ -39,8 +39,6 @@ async function populateStudiesData(jsonStudies) {
   }
 }
 
-const currency = computed(() => localStorage.getItem('currency') || 'LOCAL')
-
 const filteredStudies = computed(() => {
   return studies.value.filter(hasMandatoryParts);
 
@@ -132,10 +130,9 @@ function toggleFilter(filterKey) {
         :categories="categories"
         :studies="filteredStudies"
         :countries="countries"
-        :currency="currency"
       />
 
-      <ByContinents :studies="filteredStudies" :countries="countries" :currency="currency" />
+      <ByContinents :studies="filteredStudies" :countries="countries" />
     </section>
   </Skeleton>
 </template>
