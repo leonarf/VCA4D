@@ -22,6 +22,7 @@ const props = defineProps({
     title: String,
     subtitle: String,
     getValue: Function,
+    reverseColors: Boolean,
     valueType: {
       type: String,
       validator: (valueType) => ["percent", "number"].includes(valueType)
@@ -29,14 +30,18 @@ const props = defineProps({
 })
 
 const values = computed(() => props.studies.map(study => props.getValue(study)))
-const getAddedValueClass = (value) => {
-    if (!value) {
-        return "gray"
-    }
-    if (value < 0) {
-        return "negative"
-    }
-    return "positive"
+
+function getAddedValueClass(value) {
+  return getPositiveOrNegativeClass(props.reverseColors ? -value : value);
+}
+function getPositiveOrNegativeClass(value) {
+  if (!value) {
+      return "gray"
+  }
+  if (value < 0) {
+      return "negative"
+  }
+  return "positive"
 }
 
 function format(value) {

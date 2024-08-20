@@ -1,40 +1,29 @@
 <template>
     <template v-if="impacts.length > 0">
         <ComparisonTitle title="Environmental Indicators" :studies="studies" />
-        <tr v-for="impact in impacts" :key="`impact_${impact.name}`" class="rounded">
-            <td>
-                <div class="subtitle">{{ impact.name }}</div>
-                <div class="definition">in {{ getUnitImpact(impact.name) }}</div>
-            </td>
-            <td v-for="study in studies" :key="`${study.id}`">
-                <div :class="getAddedValueClass(getImpactValue(impact, study))">
-                    {{ formatNumber(getImpactValue(impact, study)) }}
-                </div>
-            </td>
-            <td></td>
-        </tr>
+        <ComparisonRow
+          v-for="impact in impacts"
+          :key="`impact_${impact.name}`"
+          :studies="studies"
+          class="rounded"
+          :title="impact.name"
+          :subtitle="`in ${getUnitImpact(impact.name)}`"
+          :getValue="(study) => getImpactValue(impact, study)"
+          valueType="number"
+          reverseColors
+        />
     </template>
 </template>
 
 <script setup>
 
-import { formatNumber } from '@utils/format.js'
 import { ACVImpacts } from '@utils/misc.js'
 import { computed } from 'vue';
 import ComparisonTitle from './ComparisonTitle.vue';
+import ComparisonRow from './ComparisonRow.vue';
 const props = defineProps({
     studies: Array,
 })
-
-const getAddedValueClass = (value) => {
-    if (!value) {
-        return "gray"
-    }
-    if (value > 0) {
-        return "negative"
-    }
-    return "positive"
-}
 
 const availableImpacts = computed(() => props.studies.reduce((arr, study) => arr.concat(study.acvData?.impacts), [])
 .filter(item => !!item)
