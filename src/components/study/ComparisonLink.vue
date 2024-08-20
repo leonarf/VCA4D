@@ -4,7 +4,7 @@
     :to="route"
     :title="title"
   >
-    <Svg :svg="BalanceLogo" height="20px"/>
+    <Svg :svg="ArrowsLogo" height="20px"/>
     {{ hasOtherStudies ? allStudies.length : "" }}
   </RouterLink>
 </template>
@@ -12,7 +12,7 @@
 <script setup>
   import _ from "lodash";
   import { computed } from "vue";
-  import BalanceLogo from "../../images/icons/balance.svg"
+  import ArrowsLogo from "../../images/icons/left-right-arrows.svg"
   import Svg from "@components/Svg.vue"
   import { getStudy, getProduct, getCountry, getProductStudies, getCountryStudies } from "@utils/data";
   import { getStudyListQueryString } from "@utils/router";
