@@ -57,6 +57,10 @@ const error = ref(undefined)
 
 function updateCurrency(newCurrency) {
     localStorage.setItem('currency', newCurrency);
+    console.log(route.query, {
+      ...route.query,
+      currency: newCurrency
+    });
     router.push({ query: {
       ...route.query,
       currency: newCurrency
@@ -137,6 +141,7 @@ function selectView(viewKey) {
 
 onMounted(async () => {
   if (!route.query.currency) {
+    console.log("local storage currency:", localStorage.getItem('currency'))
     updateCurrency(localStorage.getItem('currency') || "LOCAL");
   }
 
