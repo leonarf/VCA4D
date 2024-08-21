@@ -35,7 +35,7 @@ function format(value) {
     case "number":
       return formatNumber(value);
     default:
-      return "";
+      throw new Error("Unrecognized valueType");
   }
 }
 </script>
