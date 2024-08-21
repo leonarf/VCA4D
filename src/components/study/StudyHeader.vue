@@ -29,7 +29,13 @@
             :localCurrency="localCurrency"
             @update:currency="emits('update:currency', $event)"
           />
-          <div class="subtitle">{{ currencySubtitle }}</div>
+          <div class="subtitle">
+            {{ currencySubtitle }}
+            <InfoTooltip
+              v-if="currency !== 'LOCAL'"
+              text="Using the World Bank's currency rates for the reference year"
+            />
+          </div>
         </div>
         <div>
             <div class="title">{{ studyData.year }}</div>
@@ -42,6 +48,7 @@
 import { computed } from 'vue'
 import { getCountry, getProduct, getStudy } from '@utils/data'
 import ComparisonLink from '@components/study/ComparisonLink.vue';
+import InfoTooltip from '@components/typography/InfoTooltip.vue';
 import CurrencySelector from "./CurrencySelector.vue"
 import { getCurrencyName } from '@utils/currency.js'
 
@@ -102,6 +109,10 @@ const currencySubtitle = computed(() => {
 
     .subtitle {
         @apply text-[#656565] text-xs;
+
+        display: flex;
+        gap: 5px;
+        align-items: center;
     }
     .title {
         @apply text-[#303030] text-3xl font-thin;
