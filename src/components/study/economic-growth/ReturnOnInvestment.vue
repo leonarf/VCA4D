@@ -55,10 +55,9 @@ const { prettyAmount, convertAmount } = useCurrencyUtils(props)
 
 const populatedBarChartData = computed(() => {
   let tooltip = {}
-  const items = props.studyData.metrics.eco.returnOnInvestment.stages.map((stage) => {
-    if (!stage.netOperatingProfits) {
-      return null
-    }
+  const items = props.studyData.metrics.eco.returnOnInvestment.stages 
+  .filter(stage => stage.netOperatingProfits !== 0)
+  .map((stage) => {
     tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(stage.netOperatingProfits))}<br>
           Total costs = ${prettyAmount.value(convertAmount.value(stage.totalCosts))}<br>
           Benefit/Cost Ratio = ${formatPercent(stage.benefitCostRatio)}`
@@ -67,7 +66,6 @@ const populatedBarChartData = computed(() => {
       value: stage.benefitCostRatio
     }
   })
-  .filter((item) => !!item)
 
   const ret = getSelectableBarChart(items, selectedStage.value, tooltip, formatPercent)
   return {
