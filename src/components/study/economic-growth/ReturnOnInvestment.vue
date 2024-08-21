@@ -79,14 +79,12 @@ const populatedBarChartData = computed(() => {
             Benefit/Cost Ratio = ${formatPercent(netOperatingProfits / totalCosts)}`
       return {
         name: stage.name,
-        value: (100 * netOperatingProfits) / totalCosts
+        value: netOperatingProfits / totalCosts
       }
     })
     .filter((item) => !!item)
 
-  const ret = getSelectableBarChart(items, selectedStage.value, tooltip, (value) =>
-    formatPercent(value / 100)
-  )
+  const ret = getSelectableBarChart(items, selectedStage.value, tooltip, formatPercent)
   return {
     ...ret,
     yAxis: {
