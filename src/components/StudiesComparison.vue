@@ -19,7 +19,6 @@
 </template>
 
 <script setup>
-
 import ComparisonHeader from '@components/comparison/ComparisonHeader.vue'
 import ComparisonSocial from '@components/comparison/ComparisonSocial.vue'
 import ComparisonSeparator from '@components/comparison/ComparisonSeparator.vue'
@@ -37,12 +36,19 @@ const emit = defineEmits(["select-studies"]);
     td {
         box-sizing: border-box;
     }
-    td {
-        @apply w-1/5
+    td:not(:first-child) {
+        min-width: 20%;
     }
 
     tr td:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
       @apply border-r-2
+    }
+
+    tr td:first-child >*:first-child {
+      margin-left: 5px;
+    }
+    tr td:nth-last-child(2) > *:last-child {
+      margin-right: 5px;
     }
 }
 </style>
