@@ -30,6 +30,7 @@
 </template>
 
 <script setup>
+import _ from "lodash";
 import { computed, ref } from 'vue';
 import ComparisonRow from './ComparisonRow.vue';
 
@@ -45,7 +46,11 @@ const expanded = ref(false);
 function toggleExpand() {
   expanded.value = ! expanded.value;
 }
-const subKeys = computed(() => Object.keys(props.getSubValues(props.studies[0])))
+
+const subKeys = computed(() => {
+  const subValues = props.studies.map(props.getSubValues);
+  return _.union(...subValues.map(Object.keys));
+})
 </script>
 
 <style scoped lang="scss">

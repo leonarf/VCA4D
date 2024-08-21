@@ -1,5 +1,6 @@
 import { json } from 'd3-fetch'
 export const LOCAL_STORAGE_ID = 'localStorage'
+import { computeMetrics } from "./metrics";
 
 const cachedDataByStudyId = {};
 
@@ -14,23 +15,27 @@ export const getStudyData = async (studyId) => {
 async function fetchCachedStudyData(studyId) {
   if (cachedDataByStudyId[studyId]) { return cachedDataByStudyId[studyId]; }
 
-  const data = await fetchedStudyData(studyId);
+  const data = await fetchedPopulatedStudyData(studyId);
   cachedDataByStudyId[studyId] = data;
   return data;
 }
 
-async function fetchedStudyData(studyId) {
+async function fetchedPopulatedStudyData(studyId) {
   let rawEcoData = await getStudyDataFromFileName(studyId, "eco")
   let rawSocialData = await getStudyDataFromFileName(studyId, "social")
   let rawAcvData = await getStudyDataFromFileName(studyId, "acv")
 
   const metaInfo = rawEcoData ? rawEcoData : rawSocialData ? rawSocialData : rawAcvData;
-  return {
+  const rawData = {
       ...metaInfo,
       ecoData: rawEcoData?.ecoData,
       socialData: rawSocialData?.socialData,
       acvData: rawAcvData?.acvData
   };
+  return {
+    ...rawData,
+    metrics: computeMetrics(rawData)
+  }
 }
 
 async function getStudyDataFromFileName(studyId, studyPart) {

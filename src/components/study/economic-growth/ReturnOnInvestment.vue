@@ -25,7 +25,8 @@
 </template>
 
 <script setup>
-import { computed, ref, onMounted } from 'vue'
+import _ from "lodash";
+import { computed, ref } from 'vue'
 import { getSelectableBarChart, getMiniBarChart } from '@/charts/charts'
 import InfoTitle from '@typography/InfoTitle.vue'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
@@ -33,7 +34,6 @@ import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
 import { getColor } from '@utils/colors.js'
 import { useCurrencyUtils, formatPercent } from '@utils/format.js'
-import { useActorsAndStages } from '@utils/misc.js'
 import QuestionTitle from '@components/study/QuestionTitle.vue'
 import NoDataBadge from '@components/study/NoDataBadge.vue'
 
@@ -52,41 +52,22 @@ const handleDataChartSeriesClick = (event) => {
 }
 
 const { prettyAmount, convertAmount } = useCurrencyUtils(props)
-const { stages, actors } = useActorsAndStages(props)
 
 const populatedBarChartData = computed(() => {
   let tooltip = {}
-  const items = stages.value
-    .map((stage) => {
-      const stageActors = actors.value.filter((actor) => actor.stage === stage.name)
+  const items = props.studyData.metrics.eco.returnOnInvestment.stages 
+  .filter(stage => stage.netOperatingProfits !== 0)
+  .map((stage) => {
+    tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(stage.netOperatingProfits))}<br>
+          Total costs = ${prettyAmount.value(convertAmount.value(stage.totalCosts))}<br>
+          Benefit/Cost Ratio = ${formatPercent(stage.benefitCostRatio)}`
+    return {
+      name: stage.name,
+      value: stage.benefitCostRatio
+    }
+  })
 
-      const netOperatingProfits = convertAmount.value(
-        stageActors
-          .map((actor) => actor.netOperatingProfit || 0)
-          .reduce((res, item) => res + item, 0)
-      )
-      let totalCosts = convertAmount.value(
-        stageActors.map((actor) => actor.totalCosts || 0).reduce((res, item) => res + item, 0)
-      )
-      if (stage.name === 'Producers') {
-        totalCosts += netOperatingProfits
-      }
-      if (!netOperatingProfits) {
-        return null
-      }
-      tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
-            Total costs = ${prettyAmount.value(totalCosts)}<br>
-            Benefit/Cost Ratio = ${formatPercent(netOperatingProfits / totalCosts)}`
-      return {
-        name: stage.name,
-        value: (100 * netOperatingProfits) / totalCosts
-      }
-    })
-    .filter((item) => !!item)
-
-  const ret = getSelectableBarChart(items, selectedStage.value, tooltip, (value) =>
-    formatPercent(value / 100)
-  )
+  const ret = getSelectableBarChart(items, selectedStage.value, tooltip, formatPercent)
   return {
     ...ret,
     yAxis: {
@@ -100,26 +81,21 @@ const populatedBarChartData = computed(() => {
 })
 
 const currentStageReturnOnInvestmentData = computed(() => {
-  const currentStageActors = actors.value.filter((actor) => actor.stage === selectedStage.value)
+  const currentStage = props.studyData.metrics.eco.returnOnInvestment.stages.find(stage => stage.name === selectedStage.value);
+  const currentStageActors = currentStage.actors;
   const tooltip = {}
-  const items = currentStageActors
-    .map((actor) => {
-      const netOperatingProfits = convertAmount.value(actor.netOperatingProfit || 0)
-      let totalCosts = convertAmount.value(actor.totalCosts)
-      if (selectedStage.value === 'Producers') {
-        totalCosts += netOperatingProfits
-      }
-      tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
-            Total costs = ${prettyAmount.value(totalCosts)}<br>
-            Benefit/Cost Ratio = ${formatPercent(netOperatingProfits / totalCosts)}`
-      return {
-        name: actor.name,
-        value: netOperatingProfits / totalCosts
-      }
-    })
-    .filter((item) => !!item)
+  const items = currentStageActors.map((actor) => {
+    tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(actor.netOperatingProfits))}<br>
+          Total costs = ${prettyAmount.value(convertAmount.value(actor.totalCosts))}<br>
+          Benefit/Cost Ratio = ${formatPercent(actor.benefitCostRatio)}`
+    return {
+      name: actor.name,
+      value: actor.benefitCostRatio
+    }
+  })
   return getMiniBarChart(items, tooltip, formatPercent, getColor(selectedStage.value))
 })
+
 </script>
 
 <style scoped lang="scss">
