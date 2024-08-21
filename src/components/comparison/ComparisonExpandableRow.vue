@@ -1,12 +1,11 @@
 <template>
   <ComparisonRow
-    class="parent-row"
-    :class="{ expanded }"
+    :class="{ expanded, 'parent-row': hasSubKeys }"
     :studies="studies"
     :title="title"
     :subtitle="subtitle"
     :getValue="getValue"
-    expandable
+    :expandable="hasSubKeys"
     :expanded="expanded"
     @toggle-expand="toggleExpand()"
   >
@@ -50,7 +49,9 @@ function toggleExpand() {
 const subKeys = computed(() => {
   const subValues = props.studies.map(props.getSubValues);
   return _.union(...subValues.map(Object.keys));
-})
+});
+
+const hasSubKeys = computed(() => subKeys.value.length !== 0);
 </script>
 
 <style scoped lang="scss">
