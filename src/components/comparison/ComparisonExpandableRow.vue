@@ -74,17 +74,20 @@ const subKeys = computed(() => Object.keys(props.getSubValues(props.studies[0]))
       @include border-radius-bottom;
     }
   
-    &:hover :deep(td:not(:last-child)) {
-      background-color: #A4CAFE;
+    &:hover, &.expanded {
+      :deep(td:not(:last-child)) {
+        background-color: #E5E7EB;
+      }
     }
+
     &.expanded:not(:hover) :deep(td:not(:last-child)) {
-      background-color: #C3DDFD;
+      background-color: #E5E7EB;
     }
   }
 
   .sub-row {
     :deep(td:not(:last-child)) {
-      background-color: #E1EFFE;
+      background-color: #F3F4F6;
     }
 
     &:not(.expanded) {
