@@ -1,11 +1,12 @@
 <template>
     <ComparisonTitle title="Social Sustainability" :studies="studies" />
-    <ComparisonRow
+    <ComparisonExpandableRow
       v-for="(part, index) in SOCIAL_PARTS"
       :studies="studies"
       :key="`part_${index}`"
       :title="part"
       :getValue="(study) => getOptionalSocialAverageGroup(study.socialData?.[index])"
+      :getSubValues="(study) => getSocialAverageSubGroups(study.socialData?.[index])"
     >
       <template #default="{ value }">
         <div class="tag-container mx-auto my-2">
@@ -17,7 +18,7 @@
           />
         </div>
       </template>
-    </ComparisonRow>
+    </ComparisonExpandableRow>
 </template>
 
 <script setup>
@@ -25,7 +26,7 @@
 import { getSocialAverageGroup } from '@utils/misc.js'
 import Tag from '@components/study/social-sustainability/Tag.vue';
 import ComparisonTitle from './ComparisonTitle.vue';
-import ComparisonRow from './ComparisonRow.vue';
+import ComparisonExpandableRow from './ComparisonExpandableRow.vue';
 const props = defineProps({
     studies: Array,
 })
@@ -58,6 +59,17 @@ function getOptionalSocialAverageGroup(socialImpact) {
   if (! socialImpact) { return null; }
 
   return getSocialAverageGroup(socialImpact)
+}
+
+function getSocialAverageSubGroups(socialImpact) {
+  if (! socialImpact) { return null; }
+
+  const socialAverageSubGroupsByName = {};
+  socialImpact.groups.forEach(group => {
+    const groupTitleWithoutNumber = group.title.slice(4);
+    socialAverageSubGroupsByName[groupTitleWithoutNumber] = Math.round(group.averageValue);
+  });
+  return socialAverageSubGroupsByName;
 }
 </script>
 
