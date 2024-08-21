@@ -15,7 +15,7 @@
       :studies="studies" 
       title="Benefit/Cost ratio" 
       subtitle="-" 
-      :get-value="study => study.metrics.eco.returnOnInvestment.benefitCostRatio"
+      :get-value="study => study.metrics.eco?.returnOnInvestment.benefitCostRatio"
       :getSubValues="getBenefitCostRatioByStage"
     >
       <template #default="{ value }">
@@ -90,7 +90,8 @@ const props = defineProps({
 })
 
 function getBenefitCostRatioByStage(studyData) {
-  const stagesWithBenefit = studyData.metrics.eco.returnOnInvestment.stages
+  if (! studyData.metrics.eco) { return {}; }
+  const stagesWithBenefit = studyData.metrics.eco?.returnOnInvestment.stages
     .filter(stage => stage.netOperatingProfits !== 0);
 
   const benefitCostRatioByStage = {};
