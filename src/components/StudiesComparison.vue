@@ -36,15 +36,16 @@ const emit = defineEmits(["select-studies"]);
     td {
         box-sizing: border-box;
     }
-    td:not(:first-child) {
+    td {
         min-width: 20%;
     }
 
     tr td:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
-      @apply border-r-2
+      @apply border-r-2;
+      border-right-color: #D1D5DB;
     }
 
-    tr td:first-child >*:first-child {
+    tr td:first-child > * {
       margin-left: 5px;
     }
     tr td:nth-last-child(2) > *:last-child {

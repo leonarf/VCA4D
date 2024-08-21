@@ -1,8 +1,8 @@
 import _ from "lodash";
 
-export function buildReturnOnInvestmentData(studyData) {
-  const stages = studyData.ecoData.stages;
-  const actors = studyData.ecoData.actors;
+export function buildReturnOnInvestmentData(ecoData) {
+  const stages = ecoData.stages;
+  const actors = ecoData.actors;
 
   const stagesData = stages.map(stage => buildStageReturnOnInvestmentData(stage, actors))
   return {
