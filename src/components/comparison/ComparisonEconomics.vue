@@ -11,16 +11,17 @@
       </template>
     </ComparisonRow>
 
-    <ComparisonRow 
+    <ComparisonExpandableRow
       :studies="studies" 
       title="Benefit/Cost ratio" 
       subtitle="-" 
       :get-value="study => study.metrics.eco.returnOnInvestment.benefitCostRatio"
+      :getSubValues="getBenefitCostRatioByStage"
     >
       <template #default="{ value }">
         <ComparisonDefaultCell :value="value" valueType="percent"/>
       </template>
-    </ComparisonRow>
+    </ComparisonExpandableRow>
   
     <ComparisonRow 
         :studies="studies" 
@@ -82,10 +83,22 @@
 import { getTotalAddedValue } from '@utils/economics.js'
 import ComparisonTitle from './ComparisonTitle.vue';
 import ComparisonRow from './ComparisonRow.vue';
+import ComparisonExpandableRow from './ComparisonExpandableRow.vue';
 import ComparisonDefaultCell from './ComparisonDefaultCell.vue';
 const props = defineProps({
     studies: Array,
 })
+
+function getBenefitCostRatioByStage(studyData) {
+  const stagesWithBenefit = studyData.metrics.eco.returnOnInvestment.stages
+    .filter(stage => stage.netOperatingProfits !== 0);
+
+  const benefitCostRatioByStage = {};
+  stagesWithBenefit.forEach(stage => {
+    benefitCostRatioByStage[stage.name] = stage.benefitCostRatio;
+  });
+  return benefitCostRatioByStage;
+}
 
 </script>
 
