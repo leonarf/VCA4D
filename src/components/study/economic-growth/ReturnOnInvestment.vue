@@ -58,15 +58,13 @@ const populatedBarChartData = computed(() => {
   let tooltip = {}
   const items = stages.value
     .map((stage) => {
-      const stageActors = actors.value.filter((actor) => actor.stage === stage.name)
+      const stageActors = actors.value.filter((actor) => actor.stage === stage.name).map(buildActorReturnOnInvestmentData);
 
       const netOperatingProfits = stageActors
-          .map((actor) => actor.netOperatingProfit || 0)
+          .map((actor) => actor.netOperatingProfits)
           .reduce((res, item) => res + item, 0)
-      let totalCosts = stageActors.map((actor) => actor.totalCosts || 0).reduce((res, item) => res + item, 0)
-      if (stage.name === 'Producers') {
-        totalCosts += netOperatingProfits
-      }
+      let totalCosts = stageActors.map((actor) => actor.totalCosts).reduce((res, item) => res + item, 0)
+
       if (!netOperatingProfits) {
         return null
       }
@@ -96,24 +94,34 @@ const populatedBarChartData = computed(() => {
 const currentStageReturnOnInvestmentData = computed(() => {
   const currentStageActors = actors.value.filter((actor) => actor.stage === selectedStage.value)
   const tooltip = {}
-  const items = currentStageActors
+  const items = currentStageActors.map(buildActorReturnOnInvestmentData)
     .map((actor) => {
-      const netOperatingProfits = actor.netOperatingProfit || 0
-      let totalCosts = actor.totalCosts
-      if (selectedStage.value === 'Producers') {
-        totalCosts += netOperatingProfits
-      }
-      tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(netOperatingProfits))}<br>
-            Total costs = ${prettyAmount.value(convertAmount.value(totalCosts))}<br>
-            Benefit/Cost Ratio = ${formatPercent(netOperatingProfits / totalCosts)}`
+      tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(actor.netOperatingProfits))}<br>
+            Total costs = ${prettyAmount.value(convertAmount.value(actor.totalCosts))}<br>
+            Benefit/Cost Ratio = ${formatPercent(actor.benefitCostRatio)}`
       return {
         name: actor.name,
-        value: netOperatingProfits / totalCosts
+        value: actor.benefitCostRatio
       }
     })
-    .filter((item) => !!item)
   return getMiniBarChart(items, tooltip, formatPercent, getColor(selectedStage.value))
 })
+
+function buildActorReturnOnInvestmentData(actor) {
+  const netOperatingProfits = actor.netOperatingProfit || 0;
+  let totalCosts = actor.totalCosts;
+
+  if (actor.stage === 'Producers') {
+    totalCosts += netOperatingProfits;
+  }
+  return {
+    name: actor.name,
+    stage: actor.stage,
+    netOperatingProfits,
+    totalCosts,
+    benefitCostRatio: netOperatingProfits / totalCosts,
+  };
+}
 </script>
 
 <style scoped lang="scss">
