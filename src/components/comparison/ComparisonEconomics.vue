@@ -10,6 +10,17 @@
         <ComparisonDefaultCell :value="value" valueType="number"/>
       </template>
     </ComparisonRow>
+
+    <ComparisonRow 
+      :studies="studies" 
+      title="Benefit/Cost ratio" 
+      subtitle="-" 
+      :get-value="study => study.metrics.eco.returnOnInvestment.benefitCostRatio"
+    >
+      <template #default="{ value }">
+        <ComparisonDefaultCell :value="value" valueType="percent"/>
+      </template>
+    </ComparisonRow>
   
     <ComparisonRow 
         :studies="studies" 

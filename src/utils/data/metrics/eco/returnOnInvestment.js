@@ -4,8 +4,10 @@ export function buildReturnOnInvestmentData(studyData) {
   const stages = studyData.ecoData.stages;
   const actors = studyData.ecoData.actors;
 
+  const stagesData = stages.map(stage => buildStageReturnOnInvestmentData(stage, actors))
   return {
-    stages: stages.map(stage => buildStageReturnOnInvestmentData(stage, actors))
+    benefitCostRatio: buildStudyBenefitCostRatio(stagesData),
+    stages: stagesData
   }
 }
 
@@ -22,6 +24,13 @@ function buildStageReturnOnInvestmentData(stage, actors) {
     totalCosts,
     benefitCostRatio: netOperatingProfits / totalCosts,
   }
+}
+
+function buildStudyBenefitCostRatio(stagesData) {
+  const netOperatingProfits = _.sumBy(stagesData, "netOperatingProfits");
+  const totalCosts = _.sumBy(stagesData, "totalCosts");
+
+  return netOperatingProfits / totalCosts;
 }
 
 function buildActorReturnOnInvestmentData(actor) {
