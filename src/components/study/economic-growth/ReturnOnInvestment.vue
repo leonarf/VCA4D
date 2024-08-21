@@ -60,22 +60,18 @@ const populatedBarChartData = computed(() => {
     .map((stage) => {
       const stageActors = actors.value.filter((actor) => actor.stage === stage.name)
 
-      const netOperatingProfits = convertAmount.value(
-        stageActors
+      const netOperatingProfits = stageActors
           .map((actor) => actor.netOperatingProfit || 0)
           .reduce((res, item) => res + item, 0)
-      )
-      let totalCosts = convertAmount.value(
-        stageActors.map((actor) => actor.totalCosts || 0).reduce((res, item) => res + item, 0)
-      )
+      let totalCosts = stageActors.map((actor) => actor.totalCosts || 0).reduce((res, item) => res + item, 0)
       if (stage.name === 'Producers') {
         totalCosts += netOperatingProfits
       }
       if (!netOperatingProfits) {
         return null
       }
-      tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
-            Total costs = ${prettyAmount.value(totalCosts)}<br>
+      tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(netOperatingProfits))}<br>
+            Total costs = ${prettyAmount.value(convertAmount.value(totalCosts))}<br>
             Benefit/Cost Ratio = ${formatPercent(netOperatingProfits / totalCosts)}`
       return {
         name: stage.name,
@@ -102,13 +98,13 @@ const currentStageReturnOnInvestmentData = computed(() => {
   const tooltip = {}
   const items = currentStageActors
     .map((actor) => {
-      const netOperatingProfits = convertAmount.value(actor.netOperatingProfit || 0)
-      let totalCosts = convertAmount.value(actor.totalCosts)
+      const netOperatingProfits = actor.netOperatingProfit || 0
+      let totalCosts = actor.totalCosts
       if (selectedStage.value === 'Producers') {
         totalCosts += netOperatingProfits
       }
-      tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(netOperatingProfits)}<br>
-            Total costs = ${prettyAmount.value(totalCosts)}<br>
+      tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(netOperatingProfits))}<br>
+            Total costs = ${prettyAmount.value(convertAmount.value(totalCosts))}<br>
             Benefit/Cost Ratio = ${formatPercent(netOperatingProfits / totalCosts)}`
       return {
         name: actor.name,
