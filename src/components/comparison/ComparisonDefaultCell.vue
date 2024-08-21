@@ -1,6 +1,6 @@
 <template>
   <div class="default-comparison-cell" :class="valueClass">
-      {{ value ? format(value) : '-' }}
+      {{ formatedValue }}
   </div>
 </template>
 
@@ -28,16 +28,20 @@ function getPositiveOrNegativeClass(value) {
   return "positive"
 }
 
-function format(value) {
+const formatedValue = computed(() => {
+  if (! props.value && typeof props.value !== "number") {
+    return "-";
+  }
+
   switch (props.valueType) {
     case "percent":
-      return formatPercent(value);
+      return formatPercent(props.value);
     case "number":
-      return formatNumber(value);
+      return formatNumber(props.value);
     default:
       throw new Error("Unrecognized valueType");
   }
-}
+});
 </script>
 
 <style scoped lang="scss">
