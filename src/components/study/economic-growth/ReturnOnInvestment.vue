@@ -26,7 +26,7 @@
 
 <script setup>
 import _ from "lodash";
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref } from 'vue'
 import { getSelectableBarChart, getMiniBarChart } from '@/charts/charts'
 import InfoTitle from '@typography/InfoTitle.vue'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
@@ -34,7 +34,6 @@ import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
 import { getColor } from '@utils/colors.js'
 import { useCurrencyUtils, formatPercent } from '@utils/format.js'
-import { useActorsAndStages } from '@utils/misc.js'
 import QuestionTitle from '@components/study/QuestionTitle.vue'
 import NoDataBadge from '@components/study/NoDataBadge.vue'
 
@@ -53,24 +52,23 @@ const handleDataChartSeriesClick = (event) => {
 }
 
 const { prettyAmount, convertAmount } = useCurrencyUtils(props)
-const { stages, actors } = useActorsAndStages(props)
+const returnOnInvestmentData = computed(() => buildReturnOnInvestmentData(props.studyData));
 
 const populatedBarChartData = computed(() => {
   let tooltip = {}
-  const items = stages.value.map((stage) => buildStageReturnOnInvestmentData(stage, actors.value))
-    .map((stage) => {
-      if (!stage.netOperatingProfits) {
-        return null
-      }
-      tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(stage.netOperatingProfits))}<br>
-            Total costs = ${prettyAmount.value(convertAmount.value(stage.totalCosts))}<br>
-            Benefit/Cost Ratio = ${formatPercent(stage.benefitCostRatio)}`
-      return {
-        name: stage.name,
-        value: stage.benefitCostRatio
-      }
-    })
-    .filter((item) => !!item)
+  const items = returnOnInvestmentData.value.stages.map((stage) => {
+    if (!stage.netOperatingProfits) {
+      return null
+    }
+    tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(stage.netOperatingProfits))}<br>
+          Total costs = ${prettyAmount.value(convertAmount.value(stage.totalCosts))}<br>
+          Benefit/Cost Ratio = ${formatPercent(stage.benefitCostRatio)}`
+    return {
+      name: stage.name,
+      value: stage.benefitCostRatio
+    }
+  })
+  .filter((item) => !!item)
 
   const ret = getSelectableBarChart(items, selectedStage.value, tooltip, formatPercent)
   return {
@@ -86,8 +84,8 @@ const populatedBarChartData = computed(() => {
 })
 
 const currentStageReturnOnInvestmentData = computed(() => {
-  const currentStage = stages.value.find(stage => stage.name === selectedStage.value);
-  const currentStageActors = buildStageReturnOnInvestmentData(currentStage, actors.value).actors;
+  const currentStage = returnOnInvestmentData.value.stages.find(stage => stage.name === selectedStage.value);
+  const currentStageActors = currentStage.actors;
   const tooltip = {}
   const items = currentStageActors.map((actor) => {
     tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(actor.netOperatingProfits))}<br>
@@ -101,6 +99,14 @@ const currentStageReturnOnInvestmentData = computed(() => {
   return getMiniBarChart(items, tooltip, formatPercent, getColor(selectedStage.value))
 })
 
+function buildReturnOnInvestmentData(studyData) {
+  const stages = studyData.ecoData.stages;
+  const actors = studyData.ecoData.actors;
+
+  return {
+    stages: stages.map(stage => buildStageReturnOnInvestmentData(stage, actors))
+  }
+}
 function buildStageReturnOnInvestmentData(stage, actors) {
   const stageActors = actors.filter((actor) => actor.stage === stage.name).map(buildActorReturnOnInvestmentData);
 
