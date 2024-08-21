@@ -19,7 +19,6 @@
     class="sub-row"
     :class="{ expanded, 'last-sub-row': index === subKeys.length - 1 }"
     :title="subKey"
-    subtitle="-"
     :getValue="study => getSubValues(study)[subKey]"
   >
     <template #default="{ value }">
