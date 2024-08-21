@@ -12,12 +12,12 @@ const props = defineProps({
   studyData: Object
 })
 
-const averageWorking = computed(() => getSocialAverageGroup(props.studyData.socialData, 0))
-const averageLand = computed(() => getSocialAverageGroup(props.studyData.socialData, 1))
-const averageGender = computed(() => getSocialAverageGroup(props.studyData.socialData, 2))
-const averageFood = computed(() => getSocialAverageGroup(props.studyData.socialData, 3))
-const averageSocial = computed(() => getSocialAverageGroup(props.studyData.socialData, 4))
-const averageLiving = computed(() => getSocialAverageGroup(props.studyData.socialData, 5))
+const averageWorking = computed(() => getSocialAverageGroup(props.studyData.socialData[0]))
+const averageLand = computed(() => getSocialAverageGroup(props.studyData.socialData[1]))
+const averageGender = computed(() => getSocialAverageGroup(props.studyData.socialData[2]))
+const averageFood = computed(() => getSocialAverageGroup(props.studyData.socialData[3]))
+const averageSocial = computed(() => getSocialAverageGroup(props.studyData.socialData[4]))
+const averageLiving = computed(() => getSocialAverageGroup(props.studyData.socialData[5]))
 
 const chartData = computed(() => {
   const values = [

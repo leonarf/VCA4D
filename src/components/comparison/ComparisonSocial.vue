@@ -5,7 +5,7 @@
       :studies="studies"
       :key="`part_${index}`"
       :title="part"
-      :getValue="(study) => study.socialData && getSocialAverageGroup(study.socialData, index)"
+      :getValue="(study) => study.socialData && getSocialAverageGroup(study.socialData[index])"
     >
       <template #default="{ value }">
         <div class="tag-container mx-auto my-2">
