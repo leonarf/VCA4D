@@ -37,8 +37,12 @@ const props = defineProps({
 
 const selectedCurrency = ref(props.currency);
 watch(() => props.currency, () => {
-  selectedCurrency.value = props.currency;
-});
+  if (isGeneric(props.localCurrency) && props.currency === "LOCAL") {
+    selectedCurrency.value = props.localCurrency;
+  } else {
+    selectedCurrency.value = props.currency;
+  }
+}, { immediate: true });
 
 const emits = defineEmits(['update:currency'])
 
