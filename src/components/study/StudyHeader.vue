@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div>
-            <div class="title">
+            <div class="header-title">
               {{ commodityName }}
               <ComparisonLink
                 class="link"
@@ -12,7 +12,7 @@
             <div class="subtitle">Commodity</div>
         </div>
         <div>
-            <div class="title">
+            <div class="header-title">
               {{ dataToDisplay.country }}
               <ComparisonLink
                 class="link"
@@ -24,7 +24,7 @@
         </div>
         <div v-if="localCurrency">
           <CurrencySelector
-            class="title"
+            class="header-title"
             :currency="currency"
             :localCurrency="localCurrency"
             @update:currency="emits('update:currency', $event)"
@@ -38,7 +38,7 @@
           </div>
         </div>
         <div>
-            <div class="title">{{ studyData.year }}</div>
+            <div class="header-title">{{ studyData.year }}</div>
             <div class="subtitle">Reference year</div>
         </div>
     </div>
@@ -114,7 +114,7 @@ const currencySubtitle = computed(() => {
         gap: 5px;
         align-items: center;
     }
-    .title {
+    .header-title {
         @apply text-[#303030] text-3xl font-thin;
         display: flex;
         align-items: flex-end;
