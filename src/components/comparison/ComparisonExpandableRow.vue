@@ -80,13 +80,10 @@ const hasSubKeys = computed(() => subKeys.value.length !== 0);
     }
   
     &:hover, &.expanded {
+      font-weight: 600;
       :deep(td:not(:last-child)) {
         background-color: #E5E7EB;
       }
-    }
-
-    &.expanded:not(:hover) :deep(td:not(:last-child)) {
-      background-color: #E5E7EB;
     }
   }
 

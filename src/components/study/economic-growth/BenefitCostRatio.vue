@@ -13,7 +13,7 @@
       <MiniChartContainer :currentStage="selectedStage" title="Benefit/Cost Ratio (%)">
         <div class="flex flex-row w-full justify-evenly mt-6">
           <div class="w-full flex flex-row justify-center">
-            <Ring :options="currentStageReturnOnInvestmentData"></Ring>
+            <Ring :options="currentStageBenefitCostRatioData"></Ring>
           </div>
         </div>
       </MiniChartContainer>
@@ -55,7 +55,7 @@ const { prettyAmount, convertAmount } = useCurrencyUtils(props)
 
 const populatedBarChartData = computed(() => {
   let tooltip = {}
-  const items = props.studyData.metrics.eco.returnOnInvestment.stages 
+  const items = props.studyData.metrics.eco.benefitCostRatio.stages 
   .filter(stage => stage.netOperatingProfits !== 0)
   .map((stage) => {
     tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(stage.netOperatingProfits))}<br>
@@ -80,8 +80,8 @@ const populatedBarChartData = computed(() => {
   }
 })
 
-const currentStageReturnOnInvestmentData = computed(() => {
-  const currentStage = props.studyData.metrics.eco.returnOnInvestment.stages.find(stage => stage.name === selectedStage.value);
+const currentStageBenefitCostRatioData = computed(() => {
+  const currentStage = props.studyData.metrics.eco.benefitCostRatio.stages.find(stage => stage.name === selectedStage.value);
   const currentStageActors = currentStage.actors;
   const tooltip = {}
   const items = currentStageActors.map((actor) => {
