@@ -7,25 +7,16 @@
           <div class="label">
             {{ label }}
           </div>
-          <div v-if="description">
-            <Svg
-              class="description-logo"
-              :svg="QuestionMark"
-            />
-            <Tooltip
-              class="tooltip"
-              :contenu="description"
-              :options="{ placement: 'right', maxWidth: 350 }"
-            />
-          </div>
+          <InfoTooltip
+            v-if="description"
+            :text="description"
+          />
         </div>
     </div>
 </template>
 
 <script setup>
-import Tooltip from "@components/Tooltip.vue";
-import Svg from "@components/Svg.vue";
-import QuestionMark from '../../images/icons/info-question.svg'
+import InfoTooltip from "@components/typography/InfoTooltip.vue";
 import { computed } from "vue";
 
 const props = defineProps({
@@ -58,12 +49,6 @@ const displayedValue = computed(() => {
       font-size: 1rem;
       line-height: 1.5rem;
       text-transform: uppercase;
-    }
-    .description-logo {
-      width: 0.9rem;
-    }
-    .tooltip {
-      text-transform: none;
     }
   }
 </style>

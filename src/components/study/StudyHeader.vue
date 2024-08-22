@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div>
-            <div class="title">
+            <div class="header-title">
               {{ commodityName }}
               <ComparisonLink
                 class="link"
@@ -12,7 +12,7 @@
             <div class="subtitle">Commodity</div>
         </div>
         <div>
-            <div class="title">
+            <div class="header-title">
               {{ dataToDisplay.country }}
               <ComparisonLink
                 class="link"
@@ -24,15 +24,21 @@
         </div>
         <div v-if="localCurrency">
           <CurrencySelector
-            class="title"
+            class="header-title"
             :currency="currency"
             :localCurrency="localCurrency"
             @update:currency="emits('update:currency', $event)"
           />
-          <div class="subtitle">{{ currencySubtitle }}</div>
+          <div class="subtitle">
+            {{ currencySubtitle }}
+            <InfoTooltip
+              v-if="currency !== 'LOCAL'"
+              text="Using the World Bank's currency rates for the reference year"
+            />
+          </div>
         </div>
         <div>
-            <div class="title">{{ studyData.year }}</div>
+            <div class="header-title">{{ studyData.year }}</div>
             <div class="subtitle">Reference year</div>
         </div>
     </div>
@@ -42,6 +48,7 @@
 import { computed } from 'vue'
 import { getCountry, getProduct, getStudy } from '@utils/data'
 import ComparisonLink from '@components/study/ComparisonLink.vue';
+import InfoTooltip from '@components/typography/InfoTooltip.vue';
 import CurrencySelector from "./CurrencySelector.vue"
 import { getCurrencyName } from '@utils/currency.js'
 
@@ -102,8 +109,12 @@ const currencySubtitle = computed(() => {
 
     .subtitle {
         @apply text-[#656565] text-xs;
+
+        display: flex;
+        gap: 5px;
+        align-items: center;
     }
-    .title {
+    .header-title {
         @apply text-[#303030] text-3xl font-thin;
         display: flex;
         align-items: flex-end;
