@@ -1,3 +1,4 @@
+import _ from "lodash";
 import { useCurrencyUtils } from '@utils/format.js'
 import { getColor } from '@utils/colors.js'
 
@@ -99,14 +100,6 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
         }
     }
 
-    result.series.levels = sankeyStages.map(sStage => ({
-        depth: sStage.index,
-        lineStyle: {
-            color: 'source',
-            opacity: 0.4
-        }
-    }))
-
     const depthByActor = {};
     const maxDepth = Math.max(...sankeyStages.map(sStage => sStage.index))
     actors.forEach((actor) => {
@@ -114,6 +107,14 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
       depthByActor[actor.id] = sankeyStage ? sankeyStage.index : maxDepth + 1; // Actor with unknown stages will be at far right,
     });
 
+    result.series.levels = _.orderBy(_.uniq(Object.values(depthByActor)))
+      .map((_depth, index) => ({
+        depth: index,
+        lineStyle: {
+            color: 'source',
+            opacity: 0.4
+        }
+    }))
     result.series.maxDepth = Math.max(...Object.values(depthByActor));
     // It looks like in echarts, "nodes" key can also be named "data"
     result.series.nodes = actors.map((actor) => {
