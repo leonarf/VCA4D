@@ -32,7 +32,7 @@
           <div class="subtitle">
             {{ currencySubtitle }}
             <InfoTooltip
-              v-if="currency !== 'LOCAL'"
+              v-if="! isLocalCurrencyDisplayed"
               text="Using the World Bank's currency rates for the reference year"
             />
           </div>
@@ -88,11 +88,14 @@ let dataToDisplay = computed(() => {
 })
 
 const currencySubtitle = computed(() => {
-  if (props.currency === "LOCAL") {
-     return "Local currency"
+  if (isLocalCurrencyDisplayed.value) {
+    return "Local currency";
   } else {
     return `Converted from ${getCurrencyName(props.localCurrency)}`;
   }
+})
+const isLocalCurrencyDisplayed = computed(() => {
+  return props.currency === "LOCAL" || props.currency === props.localCurrency;
 })
 </script>
 
