@@ -7,14 +7,12 @@
     @update:selected="$event => sankeyDisplayMode = $event"
   />
   <SankeyChart :options="populatedSankeyChartData"></SankeyChart>
-  <AttachmentLink :studyId="studyData.id" attachmentType="eco.xlsx" />
 </template>
 
 <script setup>
 import { computed, ref } from 'vue'
 import RadioInput from '@components/study/RadioInput.vue';
 import { getSankeyData } from '@/charts/sankey.js';
-import AttachmentLink from '@components/pdf/AttachmentLink.vue'
 
 import SankeyChart from '../SankeyChart.vue'
 
