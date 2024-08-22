@@ -1,5 +1,5 @@
 <template>
-  <h3>The various actors and their share in the flows of the value chain</h3>
+  <h2>The various actors and their share in the flows of the value chain</h2>
   <RadioInput
     title="Unit selection"
     :options="sankeyGraphPossibleDisplayModesList"
