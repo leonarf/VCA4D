@@ -2,7 +2,7 @@ import { computed } from 'vue';
 import { getCurrencySymbol, getValueInCurrency } from '@utils/currency.js'
 
 export const formatNumber = (value) => {
-  if (!value && typeof value !== "number") {
+  if (typeof value !== "number" || isNaN(value)) {
     return '-'
   }
   let numberDigits = 0
