@@ -1,73 +1,73 @@
+import _ from "lodash";
+
 export function buildDepthByActor(actors, flows) {
-    // For each flow we identify the source Stage and the destination Stage
-    const sankeyFlows = flows.map(flow => {
-      const sourceActor = actors.find(a => a.name === flow.sellerActorName)
-      var sourceStage = "Unknown"
-      if (!sourceActor) {
-          console.log(`did not found actor ${flow.sellerActorName} in actors`)
-      } else {
-          sourceStage = sourceActor.stage
-      }
-      const destActor = actors.find(a => a.name === flow.buyerActorName)
-      var destStage = "Unknown"
-      if (!destActor) {
-          console.log(`did not found actor ${flow.buyerActorName} in actors`)
-      } else {
-          destStage = destActor.stage
-      }
+  const { edges, nodes } = buildNodesAndEdges(actors, flows);
+  const {
+    childNodesByNode,
+    sourceNodes
+   } = parseGraph(nodes, edges);
 
-      return {
-          ...flow,
-          sourceStage,
-          destStage
-      }
-  })
+  const depthByNode = buildDepthForLinkedNodes(sourceNodes, { childNodesByNode });
+  assignMaximumDepthToRemainingNodes(depthByNode, nodes);
 
-  // List of all stages in flows
-  let sankeyStages = [...new Set(sankeyFlows.map(sFlow => [sFlow.sourceStage, sFlow.destStage])
-      .reduce((arr, val) => arr.concat(val), []))]
+  return depthByNode;
+}
 
-  // For each stage, identify the list of source stages and destination stages.
-  sankeyStages = sankeyStages.map(stage => {
-      const flowsToStage = sankeyFlows.filter(sFlow => sFlow.destStage === stage && sFlow.sourceStage !== stage).map(sFlow => sFlow.sourceStage)
-      const flowsFromStage = sankeyFlows.filter(sFlow => sFlow.sourceStage === stage && sFlow.destStage !== stage).map(sFlow => sFlow.destStage)
+function buildDepthForLinkedNodes(sourceNodes, { childNodesByNode, parentNodesByNode }) {
+  const depthByNode = {};
+  sourceNodes.forEach(sourceNode => markNodeDepthAsMinimum(sourceNode, 0));
+  return depthByNode;
 
-      let ret = {
-          name: stage,
-          inStages: [...new Set(flowsToStage)],
-          outStages: [...new Set(flowsFromStage)],
-      }
-      // Stages that have no sources have an index of 0. Flows only start from them
-      if (flowsToStage.length === 0) {
-          ret = {
-              ...ret,
-              index: 0
-          }
-      }
-      return ret
-  })
+  function markNodeDepthAsMinimum(node, minimumDepth) {
+    if (_.isUndefined(depthByNode[node])) {
+      depthByNode[node] = 0; 
+    }
+    depthByNode[node] = Math.max(depthByNode[node], minimumDepth);
 
-  // Attribute an index to each stage. If a stage with index N give a flow to another stage it will have index N + 1
-  for (let idx = 0; idx < 15; idx++) {
-      const stages = sankeyStages.filter(sStage => sStage.index === idx)
-      const outStages = [... new Set(stages.reduce((arr, stage) => arr.concat(stage.outStages), []))]
-      if (outStages.length === 0) {
-          break
-      }
-      for (const toStage of outStages) {
-          let tmpStage = sankeyStages.find(stage => stage.name === toStage)
-          if (!tmpStage.index) {
-              tmpStage.index = idx + 1
-          }
-      }
+    if (! childNodesByNode[node]) { return; }
+    childNodesByNode[node].forEach(childNode => markNodeDepthAsMinimum(childNode, minimumDepth + 1));
   }
+}
 
-  const depthByActor = {};
-  const maxDepth = Math.max(...sankeyStages.map(sStage => sStage.index))
-  actors.forEach((actor) => {
-    const sankeyStage = sankeyStages.find(sStage => sStage.name === actor.stage)
-    depthByActor[actor.id] = sankeyStage ? sankeyStage.index : maxDepth + 1; // Actor with unknown stages will be at far right,
+function assignMaximumDepthToRemainingNodes(depthByNode, nodes) {
+  const maxLinkedDepth = Math.max(...Object.values(depthByNode)); 
+  const nodesWithoutDepth = _.difference(nodes, Object.keys(depthByNode).map(key => parseInt(key, 10)));
+  nodesWithoutDepth.forEach(node => {
+    depthByNode[node] = maxLinkedDepth + 1;
+  });
+}
+
+function buildNodesAndEdges(actors, flows) {
+  const edges = flows.map(flow => {
+    const sourceActor = actors.find(actor => actor.name === flow.sellerActorName);
+    const targetActor = actors.find(actor => actor.name === flow.buyerActorName);
+    return [sourceActor.id, targetActor.id];
+  });
+  const nodes = actors.map(actor => actor.id);
+
+  return { nodes, edges };
+}
+
+function parseGraph(nodes, edges) {
+  const childNodesByNode = {};
+  const parentNodesByNode = {};
+  edges.forEach(([sourceNode, targetNode]) => {
+    addToNodesDictionary(childNodesByNode, { key: sourceNode, value: targetNode });
+    addToNodesDictionary(parentNodesByNode, { key: targetNode, value: sourceNode });
   });
 
-  return depthByActor;
+  return {
+    childNodesByNode,
+    sourceNodes: getNodesWithoutParents(nodes, parentNodesByNode)
+  };
+
+  function addToNodesDictionary(dictionary, { key, value }) {
+    if (! dictionary[key]) { dictionary[key] = []; }
+
+    dictionary[key] = _.uniq([...dictionary[key], value]) // In case there's several flows from and to the same nodes
+  }
+}
+function getNodesWithoutParents(nodes, parentNodesByNode) {
+  const nodesWithParents = Object.keys(parentNodesByNode).map(key => parseInt(key, 10));
+  return _.difference(nodes, nodesWithParents);
 }
