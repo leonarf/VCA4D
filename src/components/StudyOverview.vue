@@ -68,6 +68,7 @@
     >
     <section v-if="studyData && studyData.ecoData">
       <Sankey :studyData="studyData" />
+      <AttachmentLink :studyId="studyData.id" attachmentType="eco.xlsx" />
     </section>
   </article>
 </template>
@@ -78,6 +79,7 @@ import StagesDescription from '@/components/StagesDescription.vue'
 import SectionTitle from './typography/SectionTitle.vue'
 import PdfSection from './pdf/PdfSection.vue';
 import Sankey from './charts/Sankey.vue'
+import AttachmentLink from '@components/pdf/AttachmentLink.vue'
 
 const props = defineProps({
   studyData: Object,
