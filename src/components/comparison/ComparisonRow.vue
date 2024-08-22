@@ -1,7 +1,7 @@
 <template>
   <tr class="row" :class="{ expandable }" @click="emits('toggle-expand')">
       <td class="row-header">
-        <div>
+        <div class="row-title">
           {{ title }}
           <span v-if="expandable" class="expand-arrow">{{ expanded ? "▲" : "▼" }}</span>
         </div>
@@ -57,8 +57,5 @@ const values = computed(() => props.studies.map(study => props.getValue(study)))
 
   .expandable {
     cursor: pointer;
-  }
-  .row:hover .expand-arrow {
-    color: #3F83F8;
   }
 </style>

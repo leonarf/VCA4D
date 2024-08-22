@@ -1,7 +1,9 @@
 <template>
     <tr>
-        <td class="title">
-            {{ title }}
+        <td class="comparison-title">
+            <div>
+              {{ title }}
+            </div>
         </td>
         <td v-for="study in studies" :key="`${study.id}`">
             
@@ -19,7 +21,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss">
-  .title {
+  .comparison-title {
     @apply uppercase text-[#8A8A8A] font-bold text-sm pb-4;
   }
 </style>

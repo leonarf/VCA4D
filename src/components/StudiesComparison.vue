@@ -32,11 +32,12 @@ const emit = defineEmits(["select-studies"]);
 </script>
 
 <style lang="scss" scoped>
-:deep(*) {
+  table {
+    margin: 0 -15px;
+  }
+  :deep(*) {
     td {
         box-sizing: border-box;
-    }
-    td {
         min-width: 20%;
     }
 
@@ -46,10 +47,10 @@ const emit = defineEmits(["select-studies"]);
     }
 
     tr td:first-child > * {
-      margin-left: 5px;
+      margin-left: 15px;
     }
     tr td:nth-last-child(2) > *:last-child {
-      margin-right: 5px;
+      margin-right: 15px;
     }
-}
+  }
 </style>
