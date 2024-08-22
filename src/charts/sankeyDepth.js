@@ -15,17 +15,19 @@ export function buildDepthByActor(actors, flows) {
 
 function buildDepthForLinkedNodes(sourceNodes, { childNodesByNode, parentNodesByNode }) {
   const depthByNode = {};
-  sourceNodes.forEach(sourceNode => markNodeDepthAsMinimum(sourceNode, 0));
+  sourceNodes.forEach(sourceNode => markNodeDepthAsMinimum(sourceNode, 0, []));
   return depthByNode;
 
-  function markNodeDepthAsMinimum(node, minimumDepth) {
+  function markNodeDepthAsMinimum(node, minimumDepth, ancestryNodes) {
+    if (ancestryNodes.includes(node)) { return; } // Stop the loop
+
     if (_.isUndefined(depthByNode[node])) {
       depthByNode[node] = 0; 
     }
     depthByNode[node] = Math.max(depthByNode[node], minimumDepth);
 
     if (! childNodesByNode[node]) { return; }
-    childNodesByNode[node].forEach(childNode => markNodeDepthAsMinimum(childNode, minimumDepth + 1));
+    childNodesByNode[node].forEach(childNode => markNodeDepthAsMinimum(childNode, minimumDepth + 1, [...ancestryNodes, node]));
   }
 }
 
