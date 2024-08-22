@@ -84,7 +84,6 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
         return ret
     })
 
-    sankeyStages.forEach(item => {item.color = getColor(item.name)})
     // Attribute an index to each stage. If a stage with index N give a flow to another stage it will have index N + 1
     for (let idx = 0; idx < 15; idx++) {
         const stages = sankeyStages.filter(sStage => sStage.index === idx)
@@ -108,19 +107,21 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
         }
     }))
 
+    const depthByActor = {};
     const maxDepth = Math.max(...sankeyStages.map(sStage => sStage.index))
-    result.series.maxDepth = maxDepth + 1
+    actors.forEach((actor) => {
+      const sankeyStage = sankeyStages.find(sStage => sStage.name === actor.stage)
+      depthByActor[actor.id] = sankeyStage ? sankeyStage.index : maxDepth + 1; // Actor with unknown stages will be at far right,
+    });
+
+    result.series.maxDepth = Math.max(...Object.values(depthByActor));
     // It looks like in echarts, "nodes" key can also be named "data"
     result.series.nodes = actors.map((actor) => {
-        const sankeyStage = sankeyStages.find(sStage => sStage.name === actor.stage)
-        if (!sankeyStage) {
-            console.log("Stage not found for", actor)
-        }
         return {
             "name": actor.name,
-            "depth": sankeyStage ? sankeyStage.index : maxDepth + 1, // Actor with unknown stages will be at far right,
+            "depth": depthByActor[actor.id],
             itemStyle: {
-                color: sankeyStage.color
+                color: getColor(actor.stage)
             }
         };
     });
