@@ -11,7 +11,7 @@
       It also assesses its <strong>viability</strong> within the global economy.  
     </p>
 
-    <ReturnOnInvestment :studyData="studyData" :currency="currency"/>
+    <BenefitCostRatio :studyData="studyData" :currency="currency"/>
     <AddedValue :studyData="studyData" :currency="currency"/>
     <PublicFinances :studyData="studyData" :currency="currency"/>
       
@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import ReturnOnInvestment from './study/economic-growth/ReturnOnInvestment.vue'
+import BenefitCostRatio from './study/economic-growth/BenefitCostRatio.vue'
 import AddedValue from './study/economic-growth/AddedValue.vue'
 import PublicFinances from './study/economic-growth/PublicFinances.vue'
 import SectionTitle from '@typography/SectionTitle.vue'

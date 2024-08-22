@@ -1,4 +1,4 @@
-import { buildReturnOnInvestmentData } from "./eco/returnOnInvestment";
+import { buildBenefitCostRatioData } from "./eco/benefitCostRatio";
 
 export function computeMetrics(studyData) {
   return {
@@ -10,6 +10,6 @@ function buildEcoMetrics(studyData) {
   if (! studyData.ecoData) { return null; }
 
   return {
-    returnOnInvestment: buildReturnOnInvestmentData(studyData.ecoData)
+    benefitCostRatio: buildBenefitCostRatioData(studyData.ecoData)
   };
 }

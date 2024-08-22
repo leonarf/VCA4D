@@ -1,18 +1,18 @@
 import _ from "lodash";
 
-export function buildReturnOnInvestmentData(ecoData) {
+export function buildBenefitCostRatioData(ecoData) {
   const stages = ecoData.stages;
   const actors = ecoData.actors;
 
-  const stagesData = stages.map(stage => buildStageReturnOnInvestmentData(stage, actors))
+  const stagesData = stages.map(stage => buildStageBenefitCostRatioData(stage, actors))
   return {
     benefitCostRatio: buildStudyBenefitCostRatio(stagesData),
     stages: stagesData
   }
 }
 
-function buildStageReturnOnInvestmentData(stage, actors) {
-  const stageActors = actors.filter((actor) => actor.stage === stage.name).map(buildActorReturnOnInvestmentData);
+function buildStageBenefitCostRatioData(stage, actors) {
+  const stageActors = actors.filter((actor) => actor.stage === stage.name).map(buildActorBenefitCostRatioData);
 
   const netOperatingProfits = _.sumBy(stageActors, "netOperatingProfits");
   const totalCosts = _.sumBy(stageActors, "totalCosts");
@@ -33,7 +33,7 @@ function buildStudyBenefitCostRatio(stagesData) {
   return netOperatingProfits / totalCosts;
 }
 
-function buildActorReturnOnInvestmentData(actor) {
+function buildActorBenefitCostRatioData(actor) {
   const netOperatingProfits = actor.netOperatingProfit || 0;
   let totalCosts = actor.totalCosts;
 
