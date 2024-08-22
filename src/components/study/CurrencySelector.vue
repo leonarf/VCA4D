@@ -5,18 +5,23 @@
       v-model="selectedCurrency"
       @change="emits('update:currency', $event.target.value)"
     >
-      <option v-if="isCurrencySupported(localCurrency)" value="LOCAL">
-        {{ getCurrencyName(localCurrency) }} ({{ getCurrencySymbol(localCurrency) }})
-      </option>
-      <option v-else value="LOCAL">
-        {{ localCurrency }} ({{ getCurrencySymbol(localCurrency) }})
-      </option>
-      <option v-if="localCurrency !== 'USD' && isCurrencySupported(localCurrency)" value="USD">
-        {{ getCurrencyName('USD') }} ({{ getCurrencySymbol('USD') }})
-      </option>
-      <option v-if="localCurrency !== 'EUR' && isCurrencySupported(localCurrency)" value="EUR">
-        {{ getCurrencyName('EUR') }} ({{ getCurrencySymbol('EUR') }})
-      </option>
+      <template v-if="! isGeneric(localCurrency)">
+        
+        <option v-if="isCurrencySupported(localCurrency)" value="LOCAL">
+          {{ getCurrencyName(localCurrency) }} ({{ getCurrencySymbol(localCurrency) }})
+        </option>
+        <option v-else value="LOCAL">
+          {{ localCurrency }} ({{ getCurrencySymbol(localCurrency) }})
+        </option>
+      </template>
+      <template v-if="isCurrencySupported(localCurrency)">
+        <option value="USD">
+          {{ getCurrencyName('USD') }} ({{ getCurrencySymbol('USD') }})
+        </option>
+        <option value="EUR">
+          {{ getCurrencyName('EUR') }} ({{ getCurrencySymbol('EUR') }})
+        </option>
+      </template>
     </select>
   </div>
 </template>
@@ -32,10 +37,18 @@ const props = defineProps({
 
 const selectedCurrency = ref(props.currency);
 watch(() => props.currency, () => {
-  selectedCurrency.value = props.currency;
-});
+  if (isGeneric(props.localCurrency) && props.currency === "LOCAL") {
+    selectedCurrency.value = props.localCurrency;
+  } else {
+    selectedCurrency.value = props.currency;
+  }
+}, { immediate: true });
 
 const emits = defineEmits(['update:currency'])
+
+function isGeneric(currency) {
+  return ["USD", "EUR"].includes(currency);
+}
 </script>
 
 <style lang="scss" scoped>

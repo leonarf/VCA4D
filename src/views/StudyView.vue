@@ -61,7 +61,7 @@ const error = ref(undefined)
 
 function updateCurrency(newCurrency) {
     localStorage.setItem('currency', newCurrency);
-    router.push({ query: {
+    router.replace({ query: {
       ...route.query,
       currency: newCurrency
     } })
