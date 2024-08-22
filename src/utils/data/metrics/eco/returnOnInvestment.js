@@ -37,7 +37,7 @@ function buildActorReturnOnInvestmentData(actor) {
   const netOperatingProfits = actor.netOperatingProfit || 0;
   let totalCosts = actor.totalCosts;
 
-  if (actor.stage === 'Producers') {
+  if (paysThemselvesWithProfits(actor)) {
     totalCosts += netOperatingProfits;
   }
   return {
@@ -47,4 +47,8 @@ function buildActorReturnOnInvestmentData(actor) {
     totalCosts,
     benefitCostRatio: netOperatingProfits / totalCosts,
   };
+}
+
+function paysThemselvesWithProfits(actor) {
+  return actor.stage === 'Producers';
 }
