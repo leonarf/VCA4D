@@ -11,12 +11,14 @@
       <option v-else value="LOCAL">
         {{ localCurrency }} ({{ getCurrencySymbol(localCurrency) }})
       </option>
-      <option v-if="localCurrency !== 'USD' && isCurrencySupported(localCurrency)" value="USD">
-        {{ getCurrencyName('USD') }} ({{ getCurrencySymbol('USD') }})
-      </option>
-      <option v-if="localCurrency !== 'EUR' && isCurrencySupported(localCurrency)" value="EUR">
-        {{ getCurrencyName('EUR') }} ({{ getCurrencySymbol('EUR') }})
-      </option>
+      <template v-if="isCurrencySupported(localCurrency)">
+        <option v-if="localCurrency !== 'USD'" value="USD">
+          {{ getCurrencyName('USD') }} ({{ getCurrencySymbol('USD') }})
+        </option>
+        <option v-if="localCurrency !== 'EUR'" value="EUR">
+          {{ getCurrencyName('EUR') }} ({{ getCurrencySymbol('EUR') }})
+        </option>
+      </template>
     </select>
   </div>
 </template>
