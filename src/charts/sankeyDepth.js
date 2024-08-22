@@ -2,14 +2,11 @@ import _ from "lodash";
 
 export function buildDepthByActor(actors, flows) {
   const { edges, nodes } = buildNodesAndEdges(actors, flows);
-  const {
-    childNodesByNode,
-    sourceNodes
-   } = parseGraph(nodes, edges);
+  const { childNodesByNode } = parseGraph(edges);
 
+  const sourceNodes = getProducersNodes(actors);
   const depthByNode = buildDepthForLinkedNodes(sourceNodes, { childNodesByNode });
   assignMaximumDepthToRemainingNodes(depthByNode, nodes);
-
   return depthByNode;
 }
 
@@ -50,18 +47,13 @@ function buildNodesAndEdges(actors, flows) {
   return { nodes, edges };
 }
 
-function parseGraph(nodes, edges) {
+function parseGraph(edges) {
   const childNodesByNode = {};
-  const parentNodesByNode = {};
   edges.forEach(([sourceNode, targetNode]) => {
     addToNodesDictionary(childNodesByNode, { key: sourceNode, value: targetNode });
-    addToNodesDictionary(parentNodesByNode, { key: targetNode, value: sourceNode });
   });
 
-  return {
-    childNodesByNode,
-    sourceNodes: getNodesWithoutParents(nodes, parentNodesByNode)
-  };
+  return { childNodesByNode };
 
   function addToNodesDictionary(dictionary, { key, value }) {
     if (! dictionary[key]) { dictionary[key] = []; }
@@ -69,7 +61,7 @@ function parseGraph(nodes, edges) {
     dictionary[key] = _.uniq([...dictionary[key], value]) // In case there's several flows from and to the same nodes
   }
 }
-function getNodesWithoutParents(nodes, parentNodesByNode) {
-  const nodesWithParents = Object.keys(parentNodesByNode).map(key => parseInt(key, 10));
-  return _.difference(nodes, nodesWithParents);
+
+function getProducersNodes(actors) {
+  return actors.filter(actor => actor.stage === "Producers").map(actor => actor.id);
 }
