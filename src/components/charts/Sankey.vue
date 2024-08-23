@@ -26,9 +26,13 @@ const sankeyGraphPossibleDisplayModesList = [
 ]
 const sankeyDisplayMode = ref(sankeyGraphPossibleDisplayModesList[0].value);
 
-const populatedSankeyChartData = computed(() =>
-  getSankeyData(props.studyData, sankeyDisplayMode.value)
-)
+const populatedSankeyChartData = computed(() => {
+  const { actors, flows } = props.studyData.ecoData;
+  return getSankeyData(actors, flows, {
+    sankeyDisplayMode: sankeyDisplayMode.value,
+    monetaryCurrency: props.studyData.targetCurrency,
+  })
+})
 </script>
 
 <style scoped lang="scss">

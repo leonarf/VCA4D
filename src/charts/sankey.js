@@ -3,9 +3,9 @@ import { useCurrencyUtils } from '@utils/format.js'
 import { getColor } from '@utils/colors.js'
 import { buildDepthByActor } from "./sankeyDepth";
 
-const getNodeGap = (studyData) => {
+const getNodeGap = (flows) => {
     // First we look at number of flows we have. We force it in the range [10, 40]
-    const nbFlows  = studyData.ecoData.flows.length
+    const nbFlows  = flows.length
     const MIN_NB_FLOWS = 10
     const MAX_NB_FLOWS = 40
     const normalizedNbFlows = Math.max(Math.min(nbFlows, MAX_NB_FLOWS), MIN_NB_FLOWS)
@@ -18,10 +18,9 @@ const getNodeGap = (studyData) => {
     return Math.floor(MIN_NODE_GAP + (1.0 - percent) * (MAX_NODE_GAP - MIN_NODE_GAP))
 }
 
-export const getSankeyData = (studyData, sankeyDisplayMode) => {
-    const { prettyAmount, convertAmount } = useCurrencyUtils({currency : studyData.targetCurrency});
-    let monetaryCurrency = studyData.targetCurrency
-    const { actors, flows } = studyData.ecoData
+export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurrency }) => {
+    const { prettyAmount, convertAmount } = useCurrencyUtils({currency: monetaryCurrency});
+    
 
     let result = {
         title: {
@@ -34,7 +33,7 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
                 focus: 'adjacency'
             },
             nodeWidth: 20,
-            nodeGap: getNodeGap(studyData)
+            nodeGap: getNodeGap(flows)
         }
     };
     const depthByActor = buildDepthByActor(actors, flows);
