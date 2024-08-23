@@ -88,30 +88,26 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
         trigger: 'item',
         triggerOn: 'mousemove',
         formatter: (params) => {
-            if (params?.dataType === "node" || params?.dataType === "edge"){
-                if (params?.dataType === "node"){
-                    const actorStage = actors.find((actor) => actor.name === params.data.name);
-                    const actorStageLabel = actorStage ? actorStage.stage : undefined;
-                    return formatTooltip({
-                      "Name": params.data.name,
-                      "Stage": actorStageLabel
-                    });
-                }
-                else if (params?.dataType === "edge"){
-                  return formatTooltip({
-                    "Source": params.data.source,
-                    "Target": params.data.target,
-                    "Monetary value": prettyAmount.value(params.data["Monetary value"], monetaryCurrency),
-                    "Products": params.data['Products'],
-                    "Unitary price (local curency)": prettyAmount.value(params.data['Unitary price (local curency)'], monetaryCurrency),
-                    "Volume exchanged (kg Of product)": params.data['Volume exchanged (kg Of product)'],
-                    "Volume unit": params.data['Volume unit'],
-                    "Remark": params.data['Remark'],
-                  });
-                }
-            }
-            else {
-                return '';
+            switch (params?.dataType) {
+              case "node":
+                const actor = actors.find((actor) => actor.name === params.data.name);
+                return formatTooltip({
+                  "Name": params.data.name,
+                  "Stage": actor ? actor.stage : undefined
+                });
+              case "edge":
+                return formatTooltip({
+                  "Source": params.data.source,
+                  "Target": params.data.target,
+                  "Monetary value": prettyAmount.value(params.data["Monetary value"], monetaryCurrency),
+                  "Products": params.data['Products'],
+                  "Unitary price (local curency)": prettyAmount.value(params.data['Unitary price (local curency)'], monetaryCurrency),
+                  "Volume exchanged (kg Of product)": params.data['Volume exchanged (kg Of product)'],
+                  "Volume unit": params.data['Volume unit'],
+                  "Remark": params.data['Remark'],
+                });
+              default:
+                return "";
             }
         }
     };
