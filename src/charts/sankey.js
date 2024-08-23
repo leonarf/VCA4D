@@ -87,67 +87,28 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
     result.tooltip = {
         trigger: 'item',
         triggerOn: 'mousemove',
-        formatter: (params, ticket) => {
+        formatter: (params) => {
             if (params?.dataType === "node" || params?.dataType === "edge"){
-                let items = [];
-                let rendered_items = [];
                 if (params?.dataType === "node"){
                     const actorStage = actors.find((actor) => actor.name === params.data.name);
                     const actorStageLabel = actorStage ? actorStage.stage : undefined;
-                    items = [
-                        {
-                            label: "Name",
-                            value: params.data.name
-                        },
-                        {
-                            label: "Stage",
-                            value: actorStageLabel
-                        }
-                    ];
+                    return formatTooltip({
+                      "Name": params.data.name,
+                      "Stage": actorStageLabel
+                    });
                 }
                 else if (params?.dataType === "edge"){
-                    items = [
-                        {
-                            label: "Source",
-                            value: params.data.source,
-                        },
-                        {
-                            label: "Target",
-                            value: params.data.target
-                        },
-                        {
-                            label: "Monetary value",
-                            value: prettyAmount.value(params.data["Monetary value"], monetaryCurrency)
-                        },
-                        {
-                            label: "Products",
-                            value: params.data['Products']
-                        },
-                        {
-                            label: "Unitary price (local curency)",
-                            value: prettyAmount.value(params.data['Unitary price (local curency)'], monetaryCurrency)
-                        },
-                        {
-                            label: "Volume exchanged (kg Of product)",
-                            value: params.data['Volume exchanged (kg Of product)']
-                        },
-                        {
-                            label: "Volume unit",
-                            value: params.data['Volume unit']
-                        },
-                        {
-                            label: "Remark",
-                            value: params.data['Remark']
-                        }
-                    ];
+                  return formatTooltip({
+                    "Source": params.data.source,
+                    "Target": params.data.target,
+                    "Monetary value": prettyAmount.value(params.data["Monetary value"], monetaryCurrency),
+                    "Products": params.data['Products'],
+                    "Unitary price (local curency)": prettyAmount.value(params.data['Unitary price (local curency)'], monetaryCurrency),
+                    "Volume exchanged (kg Of product)": params.data['Volume exchanged (kg Of product)'],
+                    "Volume unit": params.data['Volume unit'],
+                    "Remark": params.data['Remark'],
+                  });
                 }
-                rendered_items = items.map((item) => {
-                    if (item.value === undefined){
-                        return null;
-                    }
-                    return `<li><strong>${item.label}</strong>: ${item.value}</li>`;
-                });
-                return `<div style='max-width: 400px; white-space: normal;'><ul style='list-style: initial; margin: 0 10px; padding: initial;'>${rendered_items.join('')}</ul></div>`;
             }
             else {
                 return '';
@@ -156,4 +117,22 @@ export const getSankeyData = (studyData, sankeyDisplayMode) => {
     };
     console.log("sankey chart options:", result)
     return result;
+}
+
+function formatTooltip(items) {
+  const tooltipItems = Object.entries(items)
+    .map(([itemLabel, itemValue]) => formatTooltipItem(itemLabel, itemValue));
+
+  return `
+    <div style='max-width: 400px; white-space: normal;'>
+      <ul style='list-style: initial; margin: 0 10px; padding: initial;'>
+        ${tooltipItems.join('')}
+      </ul>
+    </div>
+  `;
+}
+function formatTooltipItem(label, value) {
+  return `
+    <li><strong>${label}</strong>: ${value}</li>
+  `;
 }
