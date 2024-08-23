@@ -15,6 +15,7 @@ import RadioInput from '@components/study/RadioInput.vue';
 import { getSankeyData } from '@/charts/sankey.js';
 
 import SankeyChart from '../SankeyChart.vue'
+import { getColor } from '@utils/colors.js'
 
 const props = defineProps({
   studyData: Object
@@ -27,11 +28,20 @@ const sankeyGraphPossibleDisplayModesList = [
 const sankeyDisplayMode = ref(sankeyGraphPossibleDisplayModesList[0].value);
 
 const populatedSankeyChartData = computed(() => {
-  const { actors, flows } = props.studyData.ecoData;
-  return getSankeyData(actors, flows, {
-    sankeyDisplayMode: sankeyDisplayMode.value,
-    monetaryCurrency: props.studyData.targetCurrency,
+  return getSankeyData(
+    populatedActors.value,
+    props.studyData.ecoData.flows,
+    {
+      sankeyDisplayMode: sankeyDisplayMode.value,
+      monetaryCurrency: props.studyData.targetCurrency,
   })
+})
+
+const populatedActors = computed(() => {
+  return props.studyData.ecoData.actors.map(actor => ({
+    ...actor,
+    color: getColor(actor.stage)
+  }));
 })
 </script>
 

@@ -1,6 +1,5 @@
 import _ from "lodash";
 import { useCurrencyUtils } from '@utils/format.js'
-import { getColor } from '@utils/colors.js'
 import { buildDepthByActor } from "./sankeyDepth";
 
 const getNodeGap = (flows) => {
@@ -19,7 +18,7 @@ const getNodeGap = (flows) => {
 }
 
 export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurrency }) => {
-    const { prettyAmount, convertAmount } = useCurrencyUtils({currency: monetaryCurrency});
+    const { prettyAmount } = useCurrencyUtils({currency: monetaryCurrency});
     
 
     let result = {
@@ -53,7 +52,7 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
             "name": actor.name,
             "depth": depthByActor[actor.id],
             itemStyle: {
-                color: getColor(actor.stage)
+                color: actor.color
             }
         };
     });
