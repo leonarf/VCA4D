@@ -26,7 +26,7 @@ import RadioInput from '@components/study/RadioInput.vue';
 import { getSankeyData } from '@/charts/sankey.js';
 
 import SankeyChart from '../SankeyChart.vue'
-import { getFixedColor } from '@utils/colors.js'
+import { getColor } from '@utils/colors.js'
 import { STAGES } from '@utils/stages'
 
 const props = defineProps({
@@ -52,7 +52,7 @@ const populatedSankeyChartData = computed(() => {
 const populatedActors = computed(() => {
   return props.studyData.ecoData.actors.map(actor => ({
     ...actor,
-    color: getSankeyColor(actor.stage)
+    color: getColor(actor.stage)
   }));
 });
 
@@ -62,7 +62,7 @@ const legendItems = computed(() => {
   
   const stagesByColor = {};
   stages.forEach(stage => {
-    const color = getSankeyColor(stage);
+    const color = getColor(stage);
     if (! stagesByColor[color]) {
       stagesByColor[color] = [];
     }
@@ -83,9 +83,6 @@ function sortOnEarlierStage(stage1, stage2) {
   }
 }
 
-function getSankeyColor(stage) {
-  return getFixedColor(stage) || "#CACBCE";
-}
 </script>
 
 <style scoped lang="scss">

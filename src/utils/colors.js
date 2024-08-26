@@ -29,23 +29,8 @@ var FixedColorsMapping = {
   government: AVAILABLE_COLORS["SubstantialScoreYellow"]
 }
 
-var DynamicColorsMapping = {}
-
-export const getColor = (itemName) => {
-  if (itemName in FixedColorsMapping) {
-    return FixedColorsMapping[itemName]
-  }
-  if (itemName in DynamicColorsMapping) {
-    return DynamicColorsMapping[itemName]
-  }
-  var pickedColorName = Object.keys(AVAILABLE_COLORS)[Object.keys(DynamicColorsMapping).length % Object.keys(AVAILABLE_COLORS).length]
-  console.log("Dynamically added color to item", itemName, pickedColorName)
-  DynamicColorsMapping[itemName] = AVAILABLE_COLORS[pickedColorName]
-  return DynamicColorsMapping[itemName]
-}
-
-export function getFixedColor(itemName) {
-  return FixedColorsMapping[itemName] || null;
+export function getColor(itemName) {
+  return FixedColorsMapping[itemName] || AVAILABLE_COLORS.Grey;
 }
 
 export const getSocialScoreColor = (value) => {
