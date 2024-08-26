@@ -7,9 +7,10 @@ import _ from "lodash";
 
 export function buildDepthByActor(actors, flows) {
   const { edges, nodes } = buildNodesAndEdges(actors, flows);
+  console.log(edges, nodes);
   const { childNodesByNode } = parseGraph(edges);
 
-  const sourceNodes = getProducersNodes(actors);
+  const sourceNodes = getSourceNodes(actors);
   const depthByNode = buildDepthForLinkedNodes(sourceNodes, { childNodesByNode });
   assignMaximumDepthToRemainingNodes(depthByNode, nodes);
   return depthByNode;
@@ -67,6 +68,10 @@ function parseGraph(edges) {
   }
 }
 
-function getProducersNodes(actors) {
-  return actors.filter(actor => actor.stage === "Producers").map(actor => actor.id);
+function getSourceNodes(actors) {
+  const producers = actors.filter(actor => actor.stage === "Producers");
+  
+  const sourceActors = producers.length ? producers : actors;
+
+  return sourceActors.map(actor => actor.id);
 }
