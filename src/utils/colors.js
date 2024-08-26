@@ -4,6 +4,7 @@ const AVAILABLE_COLORS = {
   StageProcessorRed : "#E06C78",
   StageWholesalerBlue : "#5874DC",
   StageRetailerDarkBlue : "#384E78",
+  StageEndUsePurple: "#9A6AB5",
   Grey : "#CACBCE",
   LightGrey : "#E1DFDF",
   Bronze : "#E5D08F",
@@ -20,6 +21,7 @@ var FixedColorsMapping = {
   Processors: AVAILABLE_COLORS["StageProcessorRed"],
   Wholesalers: AVAILABLE_COLORS["StageWholesalerBlue"],
   Retailers: AVAILABLE_COLORS["StageRetailerDarkBlue"],
+  "End use": AVAILABLE_COLORS["StageEndUsePurple"],
   landOwnersFees: AVAILABLE_COLORS["Bronze"],
   depreciation: AVAILABLE_COLORS["LightBronze"],
   employeeWages:AVAILABLE_COLORS["Grey"],
@@ -40,6 +42,10 @@ export const getColor = (itemName) => {
   console.log("Dynamically added color to item", itemName, pickedColorName)
   DynamicColorsMapping[itemName] = AVAILABLE_COLORS[pickedColorName]
   return DynamicColorsMapping[itemName]
+}
+
+export function getFixedColor(itemName) {
+  return FixedColorsMapping[itemName] || null;
 }
 
 export const getSocialScoreColor = (value) => {
