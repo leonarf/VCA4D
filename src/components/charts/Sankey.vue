@@ -27,6 +27,7 @@ import { getSankeyData } from '@/charts/sankey.js';
 
 import SankeyChart from '../SankeyChart.vue'
 import { getFixedColor } from '@utils/colors.js'
+import { STAGES } from '@utils/stages'
 
 const props = defineProps({
   studyData: Object
@@ -56,7 +57,8 @@ const populatedActors = computed(() => {
 });
 
 const legendItems = computed(() => {
-  const stages = _.uniq(populatedActors.value.map(actor => actor.stage));
+  const stages = _.uniq(populatedActors.value.map(actor => actor.stage))
+    .sort(sortOnEarlierStage)
   
   const stagesByColor = {};
   stages.forEach(stage => {
@@ -69,6 +71,17 @@ const legendItems = computed(() => {
   })
   return Object.entries(stagesByColor).map(([color, stages]) => ({ color, stages }));
 });
+
+function sortOnEarlierStage(stage1, stage2) {
+  return getStageOrder(stage1) - getStageOrder(stage2);
+
+  function getStageOrder(stage) {
+    const index = STAGES.indexOf(stage);
+    if (index === -1) { return STAGES.length; }
+
+    return index;
+  }
+}
 
 function getSankeyColor(stage) {
   return getFixedColor(stage) || "#CACBCE";
