@@ -2,21 +2,6 @@ import _ from "lodash";
 import { useCurrencyUtils } from '@utils/format.js'
 import { buildDepthByActor } from "./sankeyDepth";
 
-const getNodeGap = (flows) => {
-    // First we look at number of flows we have. We force it in the range [10, 40]
-    const nbFlows  = flows.length
-    const MIN_NB_FLOWS = 10
-    const MAX_NB_FLOWS = 40
-    const normalizedNbFlows = Math.max(Math.min(nbFlows, MAX_NB_FLOWS), MIN_NB_FLOWS)
-
-    // Based on the number of flows, we set a "Node gap".
-    // Node gap will be between 50 and 200. The more flows, the smallest node gap
-    const percent = (normalizedNbFlows - MIN_NB_FLOWS) / (MAX_NB_FLOWS - MIN_NB_FLOWS)
-    const MIN_NODE_GAP = 50
-    const MAX_NODE_GAP = 200
-    return Math.floor(MIN_NODE_GAP + (1.0 - percent) * (MAX_NODE_GAP - MIN_NODE_GAP))
-}
-
 export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurrency }) => {
     const { prettyAmount } = useCurrencyUtils({currency: monetaryCurrency});
     
@@ -31,8 +16,7 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
             emphasis: {
                 focus: 'adjacency'
             },
-            nodeWidth: 20,
-            nodeGap: getNodeGap(flows)
+            nodeWidth: 20
         }
     };
     const depthByActor = buildDepthByActor(actors, flows);
