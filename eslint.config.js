@@ -4,10 +4,12 @@
 import js from "@eslint/js";
 import pluginVue from 'eslint-plugin-vue';
 import vueParser from 'vue-eslint-parser';
+import tseslint from 'typescript-eslint';
 
 export default [
   js.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
+  ...tseslint.configs.recommended,
   {
     files: ["**/*.vue", "**/*.js"],
     rules: {
@@ -16,14 +18,18 @@ export default [
       "no-undef": "off",
       "no-case-declarations": "off",
       "no-redeclare": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-unused-expressions": "off",
     }
   },
   {
     files: ["**/*.vue"],
-    plugins: {
-      vue: pluginVue,
+    languageOptions: {
+      parser: vueParser,
+      parserOptions: {
+        parser: "@typescript-eslint/parser"
+      }
     },
-    languageOptions: { parser: vueParser },
     rules: {
       // Will fix in a few commits
       "vue/no-v-html": "off",
