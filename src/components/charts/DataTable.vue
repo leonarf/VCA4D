@@ -34,7 +34,7 @@
     selectable: Boolean,
     selectedIds: {
       type: Array,
-      default: []
+      default: () => []
     },
     pageSize: { 
       type: Number,

@@ -40,14 +40,11 @@ export default [
       "vue/custom-event-name-casing": ["warn", "kebab-case"],
 
       "vue/singleline-html-element-content-newline": "off",
+      "vue/require-default-prop": "off",
+      "vue/multi-word-component-names":"off",
 
       // WIP: To fix in #97
       "vue/no-v-html": "off",
-      
-      // Will fix in a few commits
-      "vue/require-valid-default-prop": "off",
-      "vue/multi-word-component-names":"off",
-      "vue/require-default-prop": "off",
     }
   }
 ]
