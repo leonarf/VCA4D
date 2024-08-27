@@ -1,19 +1,3 @@
-<style scoped lang="scss">
-.corps-page-import{
-    max-width: 800px;
-    margin: auto;
-}
-ol{
-    list-style: decimal;
-    margin-left: 1.5rem;
-}
-.corps{
-    max-width: 800px;
-    margin: auto;
-    align-items: left;
-}
-</style>
-
 <template>
   <Skeleton :skipFooter="true">
     <div class="corps-page-import">
@@ -40,7 +24,7 @@ ol{
     </div>
   </Skeleton>
 </template>
-  
+
 <script setup>
 import { computed, onMounted, ref } from 'vue';
 
@@ -111,3 +95,19 @@ onMounted(() => {
     }
 })
 </script>
+  
+<style scoped lang="scss">
+.corps-page-import{
+    max-width: 800px;
+    margin: auto;
+}
+ol{
+    list-style: decimal;
+    margin-left: 1.5rem;
+}
+.corps{
+    max-width: 800px;
+    margin: auto;
+    align-items: left;
+}
+</style>

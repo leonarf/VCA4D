@@ -1,6 +1,3 @@
-<style scoped lang="scss">
-</style>
-
 <template>
   <div>
     <h2>Step 2 : Check that all data is there.</h2>
@@ -187,3 +184,6 @@ const errorsBySpreadsheet = computed(() => {
   return result
 })
 </script>
+
+<style scoped lang="scss">
+</style>

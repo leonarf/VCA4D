@@ -1,6 +1,3 @@
-<style scoped lang="scss">
-</style>
-
 <template>
   <div class="my-4">
     <h2>Step 3 : Add study to repo</h2>
@@ -136,3 +133,6 @@ const downloadDataJson = () => {
   downloadFile(dataFile.value, 'data.json')
 }
 </script>
+
+<style scoped lang="scss">
+</style>

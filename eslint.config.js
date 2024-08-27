@@ -42,7 +42,6 @@ export default [
       "vue/no-v-html": "off",
       "vue/require-explicit-emits": "off",
       "vue/attribute-hyphenation": "off",
-      "vue/component-tags-order": "off",
       "vue/v-on-event-hyphenation": "off",
       "vue/v-slot-style": "off",
       "vue/v-bind-style": "off",
