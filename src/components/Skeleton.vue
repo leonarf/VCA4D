@@ -44,7 +44,7 @@ const props = defineProps({
     <ul>
       <li><a target="_blank" class="hover:underline" href="https://github.com/leonarf/VCA4D">Code source sur Github</a></li>
       <li>
-        <RouterLink class="hover:underline"to="/admin-import">Import a study</RouterLink>
+        <RouterLink class="hover:underline" to="/admin-import">Import a study</RouterLink>
       </li>
       <li>
         <a target="_blank" class="hover:underline" href="https://capacity4dev.europa.eu/projects/value-chain-analysis-for-development-vca4d_en">VCA4D's website project</a>

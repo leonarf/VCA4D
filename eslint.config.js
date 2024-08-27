@@ -45,7 +45,6 @@ export default [
       "vue/no-v-html": "off",
       "vue/v-slot-style": "off",
       "vue/v-bind-style": "off",
-      "vue/no-parsing-error": "off",
       "vue/valid-v-for": "off",
       "vue/require-valid-default-prop": "off",
       "vue/multi-word-component-names":"off",

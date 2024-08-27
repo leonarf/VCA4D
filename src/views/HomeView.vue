@@ -115,13 +115,14 @@ function toggleFilter(filterKey) {
             <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')" />
             <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')" />
           </div>
-          <p /><div>
-            Number of studies: {{ filteredStudies.length }}
-          </div>
           <div>
-            You can also <RouterLink class="link" :to="{ name: 'comparison' }">compare studies</RouterLink> based on key indicators
+            <div>
+              Number of studies: {{ filteredStudies.length }}
+            </div>
+            <div>
+              You can also <RouterLink class="link" :to="{ name: 'comparison' }">compare studies</RouterLink> based on key indicators
+            </div>
           </div>
-          </p>
         </div>
       </section>
       <ByCategories
