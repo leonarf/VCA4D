@@ -58,7 +58,7 @@ const detailBarChartOptions = computed(() => {
   props.impact.values.filter(item => item.valuechain_name == selectedValueChain.value)
   .forEach(item => {
     labels.push(item.actor_name)
-    var color = getColor(item.actor_name)
+    var color = getColor(item.valuechain_name, true)
     values.push({
         value: item.value,
         itemStyle: {
