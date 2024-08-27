@@ -1,7 +1,7 @@
 <template>
-    <div class="sankey-chart">
-      <v-chart class="chart" :option="options" />
-    </div>
+  <div class="sankey-chart">
+    <v-chart class="chart" :option="options" />
+  </div>
 </template>
 
 <script setup>

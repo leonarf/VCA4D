@@ -15,30 +15,30 @@ ol{
 </style>
 
 <template>
-    <Skeleton :skipFooter="true" >
-        <div class="corps-page-import">
-            <h1>Add a study to the VCA4D website</h1>
-            <h2>Step 1 : Import a study file</h2>
+  <Skeleton :skipFooter="true" >
+    <div class="corps-page-import">
+      <h1>Add a study to the VCA4D website</h1>
+      <h2>Step 1 : Import a study file</h2>
 
-            <div>
-                <div v-if="isStudyObjectNotEmpty">
-                    <div>You have imported this study: <b>{{ studyData['id'] }}</b></div>
-                    <div class="ml-4">
-                        Press 
-                        <a class="cursor-pointer text-blue-600" @click="clearData">Remove</a> or
-                    </div>
-                </div>
-                <p v-else>Upload the file to the platform</p>
-                <br>
-                <input type="file" @change="handleFileUpload" />
-            </div>
-
-            <div v-if="isStudyObjectNotEmpty">
-                <CheckImportedDataStep :studyData="studyData"/>
-                <SaveOnGithubStep :studyData="studyData"/>
-            </div>
+      <div>
+        <div v-if="isStudyObjectNotEmpty">
+          <div>You have imported this study: <b>{{ studyData['id'] }}</b></div>
+          <div class="ml-4">
+            Press 
+            <a class="cursor-pointer text-blue-600" @click="clearData">Remove</a> or
+          </div>
         </div>
-    </Skeleton>
+        <p v-else>Upload the file to the platform</p>
+        <br>
+        <input type="file" @change="handleFileUpload" />
+      </div>
+
+      <div v-if="isStudyObjectNotEmpty">
+        <CheckImportedDataStep :studyData="studyData"/>
+        <SaveOnGithubStep :studyData="studyData"/>
+      </div>
+    </div>
+  </Skeleton>
 </template>
   
 <script setup>

@@ -1,7 +1,7 @@
 <template>
-    <div class="bar-chart">
-      <v-chart class="chart" :option="options" @click="$emit('chartSeriesClick', $event)"/>
-    </div>
+  <div class="bar-chart">
+    <v-chart class="chart" :option="options" @click="$emit('chartSeriesClick', $event)"/>
+  </div>
 </template>
 
 <script setup>

@@ -5,12 +5,12 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="card-footer">
-        <div class="logo">
-            <slot name="logo"></slot>
-        </div>
-        <span class="text">{{ text }}</span>
+  <div class="card-footer">
+    <div class="logo">
+      <slot name="logo"></slot>
     </div>
+    <span class="text">{{ text }}</span>
+  </div>
 </template>
 
 <style scoped lang="scss">

@@ -1,21 +1,21 @@
 <template>
-    <table class="w-full">
-        <tbody>
-            <ComparisonHeader
-                :studies="studies"
-                @select-studies="emit('select-studies',$event)"
-            />
-            <ComparisonEconomics :studies="studies" />
+  <table class="w-full">
+    <tbody>
+      <ComparisonHeader
+        :studies="studies"
+        @select-studies="emit('select-studies',$event)"
+      />
+      <ComparisonEconomics :studies="studies" />
             
-            <ComparisonSeparator :studies="studies" />
+      <ComparisonSeparator :studies="studies" />
 
-            <ComparisonSocial :studies="studies" />
+      <ComparisonSocial :studies="studies" />
             
-            <ComparisonSeparator :studies="studies" />
+      <ComparisonSeparator :studies="studies" />
             
-            <ComparisonEnvironment :studies="studies" />
-        </tbody>
-    </table>
+      <ComparisonEnvironment :studies="studies" />
+    </tbody>
+  </table>
 </template>
 
 <script setup>

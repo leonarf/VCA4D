@@ -1,21 +1,21 @@
 <template>
-    <div class="social-details-group flex flex-row items-center rounded-3xl px-3 py-2 max-w-[650px] my-8 cursor-pointer"
-        @click="isOpen = !isOpen"
-        :style="{ '--color': getSocialScoreColor(group.averageValue) + '81', '--color-hover': getSocialScoreColor(group.averageValue) }">
-        <div class="tag-number">{{ getNumberInTitle(group.title) }}
-        </div>
-        <div class="font-bold flex-grow">{{ removeNumberFromTitle(group.title) }}</div>
-        <Tag :scale="parseFloat(group.averageValue)" :appreciation="group.averageText" />
+  <div class="social-details-group flex flex-row items-center rounded-3xl px-3 py-2 max-w-[650px] my-8 cursor-pointer"
+       @click="isOpen = !isOpen"
+       :style="{ '--color': getSocialScoreColor(group.averageValue) + '81', '--color-hover': getSocialScoreColor(group.averageValue) }">
+    <div class="tag-number">{{ getNumberInTitle(group.title) }}
     </div>
-    <template v-if="isOpen">
-        <div  v-for="question in group.questions" :key="question.text.split(' ')[0]"
-            class="flex flex-row items-start w-full my-3 pl-10 w-full md:w-4/5">
-            <div class="tag-number">{{ getNumberInTitle(question.text) }}
-            </div>
-            <div class="flex-grow">{{ removeNumberFromTitle(question.text) }}</div>
-            <Tag :scale="parseFloat(question.scoreValue)" :appreciation="question.scoreText" />
-        </div>
-    </template> 
+    <div class="font-bold flex-grow">{{ removeNumberFromTitle(group.title) }}</div>
+    <Tag :scale="parseFloat(group.averageValue)" :appreciation="group.averageText" />
+  </div>
+  <template v-if="isOpen">
+    <div v-for="question in group.questions" :key="question.text.split(' ')[0]"
+         class="flex flex-row items-start w-full my-3 pl-10 w-full md:w-4/5">
+      <div class="tag-number">{{ getNumberInTitle(question.text) }}
+      </div>
+      <div class="flex-grow">{{ removeNumberFromTitle(question.text) }}</div>
+      <Tag :scale="parseFloat(question.scoreValue)" :appreciation="question.scoreText" />
+    </div>
+  </template> 
 </template>
 
 <script setup>

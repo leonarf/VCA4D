@@ -1,13 +1,13 @@
 <template>
-    <div class="rounded-lg p-4 max-w-[500px]" :style="bgColor">
-        <div class="uppercase font-bold ">
-            {{ title }}
+  <div class="rounded-lg p-4 max-w-[500px]" :style="bgColor">
+    <div class="uppercase font-bold ">
+      {{ title }}
     </div>
-        <slot></slot>
-        <div class="browsable-radar-chart__item__more-info">
-            <a class="cursor-pointer font-bold text-[#2e6bad]" @click="slideTo(anchorLink)">Explore {{ title.toLowerCase() }} &rarr;</a>
-        </div>
+    <slot></slot>
+    <div class="browsable-radar-chart__item__more-info">
+      <a class="cursor-pointer font-bold text-[#2e6bad]" @click="slideTo(anchorLink)">Explore {{ title.toLowerCase() }} &rarr;</a>
     </div>
+  </div>
 </template>
 
 <script setup>

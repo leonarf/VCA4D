@@ -1,6 +1,6 @@
 <template>
   <QuestionTitle
-    >Is the value chain <strong>viable in the international economy</strong>?</QuestionTitle
+  >Is the value chain <strong>viable in the international economy</strong>?</QuestionTitle
   >
   <p>
     The VCA4D methodology assesses for each value chain its dependency on international exports as

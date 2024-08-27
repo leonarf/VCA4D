@@ -1,15 +1,15 @@
 <template>
-    <tr>
-        <td class="comparison-title">
-            <div>
-              {{ title }}
-            </div>
-        </td>
-        <td v-for="study in studies" :key="`${study.id}`">
+  <tr>
+    <td class="comparison-title">
+      <div>
+        {{ title }}
+      </div>
+    </td>
+    <td v-for="study in studies" :key="`${study.id}`">
             
-        </td>
-        <td></td>
-    </tr>
+    </td>
+    <td></td>
+  </tr>
 </template>
 
 <script setup>

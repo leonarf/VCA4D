@@ -38,7 +38,6 @@ export default [
       "vue/max-attributes-per-line": "off",
       "vue/first-attribute-linebreak": "off",
       "vue/attributes-order": "off",
-      "vue/no-multi-spaces": "off",
       "vue/singleline-html-element-content-newline": "off",
       "vue/html-self-closing": "off",
       "vue/html-closing-bracket-spacing": "off",
@@ -54,8 +53,6 @@ export default [
       "vue/no-parsing-error": "off",
       "vue/valid-v-for": "off",
       "vue/require-valid-default-prop": "off",
-      "vue/html-indent": "off",
-      "no-mixed-spaces-and-tabs": "off",
       "vue/multi-word-component-names":"off",
       "vue/require-default-prop": "off",
     }

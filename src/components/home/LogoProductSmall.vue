@@ -11,11 +11,11 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="logo">
-        <Svg 
-            :svg="getProductLogo(productName)" 
-        />
-    </div>
+  <div class="logo">
+    <Svg 
+      :svg="getProductLogo(productName)" 
+    />
+  </div>
 </template>
 
 <style scoped lang="scss">

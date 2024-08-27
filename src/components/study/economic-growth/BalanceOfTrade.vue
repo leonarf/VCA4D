@@ -1,6 +1,6 @@
 <template >
   <QuestionTitle
-    >What is the contribution of the value chain to the
+  >What is the contribution of the value chain to the
     <strong>balance of trade</strong>?</QuestionTitle
   >
   <div v-if="hasData" class="ml-4 md:ml-12 mt-8">

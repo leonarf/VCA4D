@@ -7,12 +7,12 @@ const props = defineProps({
 </script>
 
 <template>
-    <section class="section">
-        <h4 :style="`color: ${textColor};`">{{ title }}</h4>
-        <div class="border-t-[13px] pt-4" :style="`border-color: ${borderColor};`">
-        <slot></slot>
-        </div>  
-    </section>
+  <section class="section">
+    <h4 :style="`color: ${textColor};`">{{ title }}</h4>
+    <div class="border-t-[13px] pt-4" :style="`border-color: ${borderColor};`">
+      <slot></slot>
+    </div>  
+  </section>
 </template>
 
 <style scoped lang="scss">

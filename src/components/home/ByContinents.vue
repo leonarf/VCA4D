@@ -19,12 +19,12 @@ const getStudiesByContinent = (continent) => {
 </script>
 
 <template>
-    <section>
-        <QuestionTitle>By <strong>country</strong></QuestionTitle>
-        <template v-for="continent in continents" :key="continent">
-            <ByContinent class="continent" :continent="continent" :studies="getStudiesByContinent(continent)" :countries="countries"/>
-        </template>
-    </section>
+  <section>
+    <QuestionTitle>By <strong>country</strong></QuestionTitle>
+    <template v-for="continent in continents" :key="continent">
+      <ByContinent class="continent" :continent="continent" :studies="getStudiesByContinent(continent)" :countries="countries"/>
+    </template>
+  </section>
 </template>
 
 <style scoped lang="scss">

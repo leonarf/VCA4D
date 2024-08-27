@@ -1,6 +1,6 @@
 <template>
   <QuestionTitle
-    >What is the contribution of the value chain to the
+  >What is the contribution of the value chain to the
     <strong>public finances</strong>?</QuestionTitle
   >
   <div class="flex flex-row flex-wrap items-center ml-4 md:ml-12 -mt-8 -mb-8">

@@ -1,6 +1,6 @@
 <template>
   <QuestionTitle
-    >How <strong>profitable</strong> and sustainable are the value chain activities for the actors
+  >How <strong>profitable</strong> and sustainable are the value chain activities for the actors
     involved?</QuestionTitle
   >
   <InfoTitle

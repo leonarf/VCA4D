@@ -1,16 +1,16 @@
 <template>
   <tr class="row" :class="{ expandable }" @click="emits('toggle-expand')">
-      <td class="row-header">
-        <div class="row-title">
-          {{ title }}
-          <span v-if="expandable" class="expand-arrow">{{ expanded ? "▲" : "▼" }}</span>
-        </div>
-        <div v-if="subtitle" class="definition">{{ subtitle }}</div>
-      </td>
-      <td v-for="(study, index) in studies" :key="`value_added__${study.id}`">
-        <slot :value="values[index]"></slot>
-      </td>
-      <td></td>
+    <td class="row-header">
+      <div class="row-title">
+        {{ title }}
+        <span v-if="expandable" class="expand-arrow">{{ expanded ? "▲" : "▼" }}</span>
+      </div>
+      <div v-if="subtitle" class="definition">{{ subtitle }}</div>
+    </td>
+    <td v-for="(study, index) in studies" :key="`value_added__${study.id}`">
+      <slot :value="values[index]"></slot>
+    </td>
+    <td></td>
   </tr>
 </template>
 

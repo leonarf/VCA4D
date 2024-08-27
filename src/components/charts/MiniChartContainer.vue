@@ -21,12 +21,12 @@ const divStyle = computed(() => {
 </script>
 
 <template>
-    <div :style="divStyle" class="rounded-2xl px-12 py-12 w-full">
-        <template v-if="currentStage !== ''">
-            <span class="text-[#303030] text-xl"><strong>{{ title }}</strong> in {{ currentStage }}</span>
-            <slot></slot>
-        </template>
-    </div>
+  <div :style="divStyle" class="rounded-2xl px-12 py-12 w-full">
+    <template v-if="currentStage !== ''">
+      <span class="text-[#303030] text-xl"><strong>{{ title }}</strong> in {{ currentStage }}</span>
+      <slot></slot>
+    </template>
+  </div>
 </template>
 
 <style scoped lang="scss">

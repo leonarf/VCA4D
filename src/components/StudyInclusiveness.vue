@@ -20,7 +20,7 @@
     </p>
 
     <QuestionTitle
-      >How is <strong>income</strong> distributed across actors of the value chain?</QuestionTitle
+    >How is <strong>income</strong> distributed across actors of the value chain?</QuestionTitle
     >
     <p>
       Income distribution is a tangible indicator of how households and businesses take advantage of
@@ -42,7 +42,7 @@
     </div>
 
     <QuestionTitle class="mt-8"
-      >How is <strong>employment</strong> distributed across the value chain?</QuestionTitle
+    >How is <strong>employment</strong> distributed across the value chain?</QuestionTitle
     >
     <p>
       Employment data only relate to waged Full Time Equivalent (FTE) jobs for this specific value chain.
@@ -56,7 +56,7 @@
     <br />
 
     <QuestionTitle
-      >What is the impact of the <strong>governance system</strong> on the income
+    >What is the impact of the <strong>governance system</strong> on the income
       distribution?</QuestionTitle
     >
     <InfoTitle

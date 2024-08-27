@@ -1,38 +1,38 @@
 <template>
-    <tr>
-        <td></td>
-        <td v-for="(study) in studiesWithDetails" :key="`${study.id}`">
-            <div class="study-box">
-                <div class="card-box">
-                    <Card
-                        :link="getLink(study)"
-                        :is-local="false"
-                        :is-open="false"
-                        :title="study.product.prettyName">
-                        <template v-slot:logo>
-                            <LogoProductLarge :product-name="study.product.id"/>
-                        </template>
-                    </Card>
-                    <a class="remove-button" @click="removeStudy(study.id)">
-                        <Svg :svg="CrossLogo"/>
-                    </a>
-                </div>
-                <div v-if="study.id" class="footer">
-                    <CardFooter :text="study.country_name">
-                        <template v-slot:logo>
-                            <LogoCountrySmall :iso-code="study['country_iso_code'] || 'gr'" />
-                        </template>
-                    </CardFooter>
-                </div>
-            </div>
-        </td>
-        <td class="add-studies">
-            <AddStudiesButton
-                :currentStudySelection="studiesWithDetails.map(study => study.id)"
-                @select-studies="emits('select-studies', $event)"
-            />
-        </td>
-    </tr>
+  <tr>
+    <td></td>
+    <td v-for="(study) in studiesWithDetails" :key="`${study.id}`">
+      <div class="study-box">
+        <div class="card-box">
+          <Card
+            :link="getLink(study)"
+            :is-local="false"
+            :is-open="false"
+            :title="study.product.prettyName">
+            <template v-slot:logo>
+              <LogoProductLarge :product-name="study.product.id"/>
+            </template>
+          </Card>
+          <a class="remove-button" @click="removeStudy(study.id)">
+            <Svg :svg="CrossLogo"/>
+          </a>
+        </div>
+        <div v-if="study.id" class="footer">
+          <CardFooter :text="study.country_name">
+            <template v-slot:logo>
+              <LogoCountrySmall :iso-code="study['country_iso_code'] || 'gr'" />
+            </template>
+          </CardFooter>
+        </div>
+      </div>
+    </td>
+    <td class="add-studies">
+      <AddStudiesButton
+        :currentStudySelection="studiesWithDetails.map(study => study.id)"
+        @select-studies="emits('select-studies', $event)"
+      />
+    </td>
+  </tr>
 </template>
 
 <script setup>

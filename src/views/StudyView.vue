@@ -1,40 +1,40 @@
 <template>
-    <Skeleton>
-        <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 max-w-[90%]">
-            <header>
-                <div v-if="! isDataLoaded && !error" class="loading">Loading...</div>
+  <Skeleton>
+    <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 max-w-[90%]">
+      <header>
+        <div v-if="! isDataLoaded && !error" class="loading">Loading...</div>
 
-                <div v-if="error" class="error">{{ error }}</div>
+        <div v-if="error" class="error">{{ error }}</div>
 
-                <div v-if="isDataLoaded">
-                    <StudyHeader
-                      :studyData="studyData"
-                      :localCurrency="studyData.targetCurrency" 
-                      :currency="$route.query.currency || 'LOCAL'"
-                      @update:currency="updateCurrency"
-                    />
-                </div>
-            </header>
-            <div class="w-full text-left my-16">
-                <StudyMenu 
-                  v-if="isDataLoaded"
-                  :views="views"
-                  :selectedViewKey="view"
-                  :fullReportPdfUrl="studyPdfUrls.fullReportPdfUrl"
-                  @select="selectView($event)"
-                />
-            </div>
-             <template v-if="isDataLoaded">
-                <component
-                  :is="viewComponent"
-                  :studyData="studyData"
-                  :studyPdfUrls="studyPdfUrls"
-                  :currency="currencySymbol"
-                  @select-view="selectView($event)"
-                />
-            </template>
+        <div v-if="isDataLoaded">
+          <StudyHeader
+            :studyData="studyData"
+            :localCurrency="studyData.targetCurrency" 
+            :currency="$route.query.currency || 'LOCAL'"
+            @update:currency="updateCurrency"
+          />
         </div>
-    </Skeleton>
+      </header>
+      <div class="w-full text-left my-16">
+        <StudyMenu 
+          v-if="isDataLoaded"
+          :views="views"
+          :selectedViewKey="view"
+          :fullReportPdfUrl="studyPdfUrls.fullReportPdfUrl"
+          @select="selectView($event)"
+        />
+      </div>
+      <template v-if="isDataLoaded">
+        <component
+          :is="viewComponent"
+          :studyData="studyData"
+          :studyPdfUrls="studyPdfUrls"
+          :currency="currencySymbol"
+          @select-view="selectView($event)"
+        />
+      </template>
+    </div>
+  </Skeleton>
 </template>
 
 <script setup>
