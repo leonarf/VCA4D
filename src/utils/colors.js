@@ -4,6 +4,7 @@ const AVAILABLE_COLORS = {
   StageProcessorRed : "#E06C78",
   StageWholesalerBlue : "#5874DC",
   StageRetailerDarkBlue : "#384E78",
+  StageEndUsePurple: "#9A6AB5",
   Grey : "#CACBCE",
   LightGrey : "#E1DFDF",
   Bronze : "#E5D08F",
@@ -14,12 +15,13 @@ const AVAILABLE_COLORS = {
   HighScoreGreen : "#94D99D",
 }
 
-var FixedColorsMapping = {
+const FixedColorsMapping = {
   Producers: AVAILABLE_COLORS["StageProducerGreen"],
   Collectors: AVAILABLE_COLORS["StageCollectorSalmon"],
   Processors: AVAILABLE_COLORS["StageProcessorRed"],
   Wholesalers: AVAILABLE_COLORS["StageWholesalerBlue"],
   Retailers: AVAILABLE_COLORS["StageRetailerDarkBlue"],
+  "End use": AVAILABLE_COLORS["StageEndUsePurple"],
   landOwnersFees: AVAILABLE_COLORS["Bronze"],
   depreciation: AVAILABLE_COLORS["LightBronze"],
   employeeWages:AVAILABLE_COLORS["Grey"],
@@ -27,19 +29,24 @@ var FixedColorsMapping = {
   government: AVAILABLE_COLORS["SubstantialScoreYellow"]
 }
 
-var DynamicColorsMapping = {}
+const DynamicColorsMapping = {};
 
-export const getColor = (itemName) => {
-  if (itemName in FixedColorsMapping) {
-    return FixedColorsMapping[itemName]
+export function getColor(itemName, isEnvironment) {
+  if (isEnvironment) {
+    return getEnvironmentDynamicColor(itemName);
   }
-  if (itemName in DynamicColorsMapping) {
+  return FixedColorsMapping[itemName] || AVAILABLE_COLORS.Grey;  
+}
+
+function getEnvironmentDynamicColor(itemName) {
+  return DynamicColorsMapping[itemName] || findNewColor();
+
+  function findNewColor() {
+    const nextColorCode = Object.keys(DynamicColorsMapping).length % Object.keys(AVAILABLE_COLORS).length;
+    var pickedColorName = Object.keys(AVAILABLE_COLORS)[nextColorCode]
+    DynamicColorsMapping[itemName] = AVAILABLE_COLORS[pickedColorName]
     return DynamicColorsMapping[itemName]
   }
-  var pickedColorName = Object.keys(AVAILABLE_COLORS)[Object.keys(DynamicColorsMapping).length % Object.keys(AVAILABLE_COLORS).length]
-  console.log("Dynamically added color to item", itemName, pickedColorName)
-  DynamicColorsMapping[itemName] = AVAILABLE_COLORS[pickedColorName]
-  return DynamicColorsMapping[itemName]
 }
 
 export const getSocialScoreColor = (value) => {

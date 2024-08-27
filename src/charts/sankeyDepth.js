@@ -1,16 +1,21 @@
 import _ from "lodash";
 
+// This is similar to what echarts does if we don't provide `depth`.
+// However there's a few tweaks that help our case here
+// - This allows us to define `series.maxDepth` to better scale the sankey, since we know the maximum depth
+// - This allows us to force Producers to be on the left (if there's any loop, echarts might decide otherwise)
+
 export function buildDepthByActor(actors, flows) {
   const { edges, nodes } = buildNodesAndEdges(actors, flows);
   const { childNodesByNode } = parseGraph(edges);
 
-  const sourceNodes = getProducersNodes(actors);
+  const sourceNodes = getSourceNodes(actors);
   const depthByNode = buildDepthForLinkedNodes(sourceNodes, { childNodesByNode });
   assignMaximumDepthToRemainingNodes(depthByNode, nodes);
   return depthByNode;
 }
 
-function buildDepthForLinkedNodes(sourceNodes, { childNodesByNode, parentNodesByNode }) {
+function buildDepthForLinkedNodes(sourceNodes, { childNodesByNode }) {
   const depthByNode = {};
   sourceNodes.forEach(sourceNode => markNodeDepthAsMinimum(sourceNode, 0, []));
   return depthByNode;
@@ -62,6 +67,10 @@ function parseGraph(edges) {
   }
 }
 
-function getProducersNodes(actors) {
-  return actors.filter(actor => actor.stage === "Producers").map(actor => actor.id);
+function getSourceNodes(actors) {
+  const producers = actors.filter(actor => actor.stage === "Producers");
+  
+  const sourceActors = producers.length ? producers : actors;
+
+  return sourceActors.map(actor => actor.id);
 }
