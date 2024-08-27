@@ -15,7 +15,7 @@
       @row-clicked="onClickRow"
       @do-search="updateSortOnSearch"
     >
-      <template v-if="selectable" v-slot:checkbox="{ value: rowData }">
+      <template v-if="selectable" #checkbox="{ value: rowData }">
         <input
           type="checkbox"
           :checked="isSelected(rowData.id)"

@@ -10,7 +10,7 @@
             :isOpen="false"
             :title="study.product.prettyName"
           >
-            <template v-slot:logo>
+            <template #logo>
               <LogoProductLarge :productName="study.product.id" />
             </template>
           </Card>
@@ -20,7 +20,7 @@
         </div>
         <div v-if="study.id" class="footer">
           <CardFooter :text="study.country_name">
-            <template v-slot:logo>
+            <template #logo>
               <LogoCountrySmall :isoCode="study['country_iso_code'] || 'gr'" />
             </template>
           </CardFooter>

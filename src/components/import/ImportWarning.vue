@@ -1,7 +1,7 @@
 <template>
   <div class="contents-of-the-file">
     <div
-      v-bind:class="{
+      :class="{
         tab_ok: errors.length == 0,
         tab_in_error: errors.length > 0,
       }"

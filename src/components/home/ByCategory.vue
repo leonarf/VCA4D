@@ -55,12 +55,12 @@ const getStudiesByProduct = () => {
               :isLocal="item.studies[0].local"
               :title="getProduct(item.product).prettyName"
             >
-              <template v-slot:logo>
+              <template #logo>
                 <LogoProductLarge :productName="item.product" />
               </template>
-              <template v-slot:footer>
+              <template #footer>
                 <CardFooter :text="getCountry(item.studies[0].country).prettyName">
-                  <template v-slot:logo>
+                  <template #logo>
                     <LogoCountrySmall :isoCode="getCountry(item.studies[0].country)?.iso || 'gr'" />
                   </template>
                 </CardFooter>
@@ -74,10 +74,10 @@ const getStudiesByProduct = () => {
               :title="getProduct(item.product).prettyName"
               @click.stop="openedProduct === item.product ? openedProduct = null : openedProduct = item.product"
             >
-              <template v-slot:logo>
+              <template #logo>
                 <LogoProductLarge :productName="item.product" />
               </template>
-              <template v-slot:footer>
+              <template #footer>
                 <SubCardsList
                   v-if="openedProduct === item.product" 
                   :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
@@ -90,13 +90,13 @@ const getStudiesByProduct = () => {
                     :isLocal="study.local"
                     :title="getCountry(study.country)?.prettyName"
                   >
-                    <template v-slot:logo>
+                    <template #logo>
                       <LogoCountryLarge :isoCode="getCountry(study.country)?.iso || 'gr'" />
                     </template>
                   </Card>
                 </SubCardsList>
                 <CardFooter v-else text="countries">
-                  <template v-slot:logo>
+                  <template #logo>
                     <NumberBadge :value="item.studies.length" />
                   </template>
                 </CardFooter>

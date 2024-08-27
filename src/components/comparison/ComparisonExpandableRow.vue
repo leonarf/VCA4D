@@ -15,6 +15,7 @@
   </ComparisonRow>
   <ComparisonRow
     v-for="(subKey, index) in subKeys"
+    :key="index"
     :studies="studies"
     class="sub-row"
     :class="{ expanded, 'last-sub-row': index === subKeys.length - 1 }"

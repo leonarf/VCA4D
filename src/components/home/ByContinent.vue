@@ -65,12 +65,12 @@ const getStudiesByCountry = () => {
             :isLocal="item.studies[0].local"
             :title="getCountry(item.country).prettyName"
           >
-            <template v-slot:logo>
+            <template #logo>
               <LogoCountryLarge :isoCode="getCountry(item.country).iso || 'gr'" />
             </template>
-            <template v-slot:footer>
+            <template #footer>
               <CardFooter class="" :text="getProduct(item.studies[0].product).prettyName">
-                <template v-slot:logo>
+                <template #logo>
                   <LogoProductSmall :productName="item.studies[0].product" />
                 </template>
               </CardFooter>
@@ -84,10 +84,10 @@ const getStudiesByCountry = () => {
             :title="getCountry(item.country).prettyName"
             @click.stop="openedCountry === item.country ? openedCountry = null : openedCountry = item.country"
           >
-            <template v-slot:logo>
+            <template #logo>
               <LogoCountryLarge :isoCode="getCountry(item.country).iso || 'gr'" />
             </template>
-            <template v-slot:footer>
+            <template #footer>
               <SubCardsList
                 v-if="openedCountry === item.country"
                 :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
@@ -100,13 +100,13 @@ const getStudiesByCountry = () => {
                   :isLocal="study.local"
                   :title="getProduct(study.product).prettyName"
                 >
-                  <template v-slot:logo>
+                  <template #logo>
                     <LogoProductLarge :productName="study.product" />
                   </template>
                 </Card>
               </SubCardsList>
               <CardFooter v-else text="studies">
-                <template v-slot:logo>
+                <template #logo>
                   <NumberBadge :value="item.studies.length" />
                 </template>
               </CardFooter>

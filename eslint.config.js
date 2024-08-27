@@ -43,9 +43,6 @@ export default [
 
       // Will fix in a few commits
       "vue/no-v-html": "off",
-      "vue/v-slot-style": "off",
-      "vue/v-bind-style": "off",
-      "vue/valid-v-for": "off",
       "vue/require-valid-default-prop": "off",
       "vue/multi-word-component-names":"off",
       "vue/require-default-prop": "off",
