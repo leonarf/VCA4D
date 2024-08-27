@@ -1,7 +1,7 @@
 <template>
   <div style="width: 100%" :class="{ selectable }">
     <TableLite
-      :is-slot-mode="true"
+      :isSlotMode="true"
       :columns="columnsWithCheckbox"
       :rows="sortedRows"
       :total="sortedRows.length"
@@ -11,7 +11,7 @@
       }"
       :max-height="maxHeight"
       :pageSize="pageSize"
-      :is-hide-paging="sortedRows.length <= pageSize"
+      :isHidePaging="sortedRows.length <= pageSize"
       @row-clicked="onClickRow"
       @do-search="updateSortOnSearch"
     >

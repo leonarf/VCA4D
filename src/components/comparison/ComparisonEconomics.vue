@@ -4,7 +4,7 @@
     :studies="studies" 
     title="Value added" 
     subtitle="Definition of total value added" 
-    :get-value="getTotalAddedValue"
+    :getValue="getTotalAddedValue"
   >
     <template #default="{ value }">
       <ComparisonDefaultCell :value="value" valueType="number" />
@@ -15,7 +15,7 @@
     :studies="studies" 
     title="Benefit/Cost ratio" 
     subtitle="-" 
-    :get-value="study => study.metrics.eco?.benefitCostRatio.benefitCostRatio"
+    :getValue="study => study.metrics.eco?.benefitCostRatio.benefitCostRatio"
     :getSubValues="getBenefitCostRatioByStage"
   >
     <template #default="{ value }">
@@ -27,7 +27,7 @@
     :studies="studies" 
     title="Share of agricultural GDP" 
     subtitle="Value chain GDP divided by agricultural GDP" 
-    :get-value="(study) => study.ecoData?.macroData?.valueAddedShareAgriculturalGdp"
+    :getValue="(study) => study.ecoData?.macroData?.valueAddedShareAgriculturalGdp"
   >
     <template #default="{ value }">
       <ComparisonDefaultCell :value="value" valueType="percent" />
@@ -38,7 +38,7 @@
     :studies="studies" 
     title="Share of national GDP" 
     subtitle="Value chain GDP divided by national GDP" 
-    :get-value="(study) => study.ecoData?.macroData?.valueAddedShareNationalGdp"
+    :getValue="(study) => study.ecoData?.macroData?.valueAddedShareNationalGdp"
   >
     <template #default="{ value }">
       <ComparisonDefaultCell :value="value" valueType="percent" />
@@ -49,7 +49,7 @@
     :studies="studies" 
     title="Gini Index" 
     subtitle="-" 
-    :get-value="(study) => study.ecoData?.macroData?.giniIndex"
+    :getValue="(study) => study.ecoData?.macroData?.giniIndex"
   >
     <template #default="{ value }">
       <ComparisonDefaultCell :value="value" valueType="percent" />
@@ -60,7 +60,7 @@
     :studies="studies" 
     title="Rate Of Integration" 
     subtitle="-" 
-    :get-value="(study) => study.ecoData?.macroData?.rateOfIntegration"
+    :getValue="(study) => study.ecoData?.macroData?.rateOfIntegration"
   >
     <template #default="{ value }">
       <ComparisonDefaultCell :value="value" valueType="percent" />
@@ -71,7 +71,7 @@
     :studies="studies" 
     title="Nominal Protection Coefficient" 
     subtitle="-" 
-    :get-value="(study) => study.ecoData?.macroData?.nominalProtectionCoefficient"
+    :getValue="(study) => study.ecoData?.macroData?.nominalProtectionCoefficient"
   >
     <template #default="{ value }">
       <ComparisonDefaultCell :value="value" valueType="percent" />

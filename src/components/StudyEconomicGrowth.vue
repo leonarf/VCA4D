@@ -15,7 +15,7 @@
     <AddedValue :studyData="studyData" :currency="currency" />
     <PublicFinances :studyData="studyData" :currency="currency" />
       
-    <BalanceOfTrade :study-data="studyData" :currency="currency" />
+    <BalanceOfTrade :studyData="studyData" :currency="currency" />
 
     <AbroadSelling :studyData="studyData" />
     <AttachmentLink :studyId="studyData.id" attachmentType="eco.xlsx" />

@@ -35,13 +35,13 @@ export default [
       "vue/max-attributes-per-line": ["warn", {
         singleline: { max: 3 }
       }],
+      "vue/attribute-hyphenation": ["error", "never"],
 
       "vue/singleline-html-element-content-newline": "off",
 
       // Will fix in a few commits
       "vue/no-v-html": "off",
       "vue/require-explicit-emits": "off",
-      "vue/attribute-hyphenation": "off",
       "vue/v-on-event-hyphenation": "off",
       "vue/v-slot-style": "off",
       "vue/v-bind-style": "off",

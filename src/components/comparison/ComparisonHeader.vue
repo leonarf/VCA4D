@@ -6,12 +6,12 @@
         <div class="card-box">
           <Card
             :link="getLink(study)"
-            :is-local="false"
-            :is-open="false"
+            :isLocal="false"
+            :isOpen="false"
             :title="study.product.prettyName"
           >
             <template v-slot:logo>
-              <LogoProductLarge :product-name="study.product.id" />
+              <LogoProductLarge :productName="study.product.id" />
             </template>
           </Card>
           <a class="remove-button" @click="removeStudy(study.id)">
@@ -21,7 +21,7 @@
         <div v-if="study.id" class="footer">
           <CardFooter :text="study.country_name">
             <template v-slot:logo>
-              <LogoCountrySmall :iso-code="study['country_iso_code'] || 'gr'" />
+              <LogoCountrySmall :isoCode="study['country_iso_code'] || 'gr'" />
             </template>
           </CardFooter>
         </div>

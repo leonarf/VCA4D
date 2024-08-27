@@ -57,7 +57,7 @@
 
     <PdfSection
       v-if="studyPdfUrls.briefReportPdfUrl"
-      :study-brief-url="studyPdfUrls.briefReportPdfUrl"
+      :studyBriefUrl="studyPdfUrls.briefReportPdfUrl"
     />
     <a
       v-if="studyPdfUrls.fullReportPdfUrl"

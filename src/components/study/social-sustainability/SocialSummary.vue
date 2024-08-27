@@ -26,7 +26,7 @@
         <SummaryBlock
           title="Living conditions"
           :anchor="6"
-          :average-value="getSocialAverageGroup(studyData.socialData[5])"
+          :averageValue="getSocialAverageGroup(studyData.socialData[5])"
         >
           <SummaryBlockQuestion :question="questionLivingHealth" />
           <SummaryBlockQuestion :question="questionLivingEducation" />
@@ -36,7 +36,7 @@
         <SummaryBlock
           title="Working conditions"
           :anchor="1"
-          :average-value="getSocialAverageGroup(studyData.socialData[0])"
+          :averageValue="getSocialAverageGroup(studyData.socialData[0])"
         >
           <SummaryBlockQuestion :question="workingConditionsHighlightQuestion1" />
           <SummaryBlockQuestion :question="workingConditionsHighlightQuestion2" />
@@ -46,7 +46,7 @@
         <SummaryBlock
           title="Land &amp; water rights"
           :anchor="2"
-          :average-value="getSocialAverageGroup(studyData.socialData[1])"
+          :averageValue="getSocialAverageGroup(studyData.socialData[1])"
         >
           <SummaryBlockQuestion :question="questionVGGT" />
           <SummaryBlockQuestion :question="questionParticipation" />
@@ -54,14 +54,14 @@
       </div>
       <div class="row-span-2">
         <div class="w-full h-[400px]">
-          <SocialRadar :study-data="studyData" />
+          <SocialRadar :studyData="studyData" />
         </div>
       </div>
       <div class="row-span-2 self-end xl:self-start">
         <SummaryBlock
           title="Social capital"
           :anchor="5"
-          :average-value="getSocialAverageGroup(studyData.socialData[4])"
+          :averageValue="getSocialAverageGroup(studyData.socialData[4])"
         >
           <SummaryBlockQuestion :question="questionFarmerParticipation" />
           <SummaryBlockQuestion :question="questionFarmerInformation" />
@@ -71,7 +71,7 @@
         <SummaryBlock
           title="Gender equality"
           :anchor="3"
-          :average-value="getSocialAverageGroup(studyData.socialData[2])"
+          :averageValue="getSocialAverageGroup(studyData.socialData[2])"
         >
           <SummaryBlockQuestion :question="questionWomenRights" />
           <SummaryBlockQuestion :question="questionWomenIncome" />
@@ -81,7 +81,7 @@
         <SummaryBlock
           title="Food &amp; nutrition security"
           :anchor="4"
-          :average-value="getSocialAverageGroup(studyData.socialData[3])"
+          :averageValue="getSocialAverageGroup(studyData.socialData[3])"
         >
           <SummaryBlockQuestion :question="questionFoodIncrease" />
           <SummaryBlockQuestion :question="questionFoodIncome" />

@@ -51,7 +51,7 @@
     </div>
     <template v-if="studyData">
       <div v-for="impact in allBarChartsData" :key="impact.name">
-        <ImpactDataviz :impact="impact" :per-unit="selectedPerUnit" :volumes="yearlyVolumes" />
+        <ImpactDataviz :impact="impact" :perUnit="selectedPerUnit" :volumes="yearlyVolumes" />
       </div>
     </template>
     <AttachmentLink :studyId="studyData.id" attachmentType="acv.xlsx" />

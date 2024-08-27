@@ -56,13 +56,13 @@ const getStudiesByCountry = () => {
 </script>
 
 <template>
-  <Section :title="continent" :text-color="CONTINENT_TEXT_COLORS[continent]" :border-color="CONTINENT_BG_COLORS[continent]">
+  <Section :title="continent" :textColor="CONTINENT_TEXT_COLORS[continent]" :borderColor="CONTINENT_BG_COLORS[continent]">
     <CardList>
       <li v-for="item in getStudiesByCountry()" :key="item.country">
         <template v-if="item.studies.length === 1">
           <Card 
             :link="getLink(item.studies[0])"
-            :is-local="item.studies[0].local"
+            :isLocal="item.studies[0].local"
             :title="getCountry(item.country).prettyName"
           >
             <template v-slot:logo>
@@ -71,7 +71,7 @@ const getStudiesByCountry = () => {
             <template v-slot:footer>
               <CardFooter class="" :text="getProduct(item.studies[0].product).prettyName">
                 <template v-slot:logo>
-                  <LogoProductSmall :product-name="item.studies[0].product" />
+                  <LogoProductSmall :productName="item.studies[0].product" />
                 </template>
               </CardFooter>
             </template>
@@ -79,13 +79,13 @@ const getStudiesByCountry = () => {
         </template>
         <template v-else>
           <Card
-            :is-local="false"
-            :is-open="openedCountry === item.country"
+            :isLocal="false"
+            :isOpen="openedCountry === item.country"
             :title="getCountry(item.country).prettyName"
             @click.stop="openedCountry === item.country ? openedCountry = null : openedCountry = item.country"
           >
             <template v-slot:logo>
-              <LogoCountryLarge :iso-code="getCountry(item.country).iso || 'gr'" />
+              <LogoCountryLarge :isoCode="getCountry(item.country).iso || 'gr'" />
             </template>
             <template v-slot:footer>
               <SubCardsList
@@ -97,11 +97,11 @@ const getStudiesByCountry = () => {
                   v-for="study in item.studies"
                   :key="study.id"
                   :link="getLink(study)"
-                  :is-local="study.local"
+                  :isLocal="study.local"
                   :title="getProduct(study.product).prettyName"
                 >
                   <template v-slot:logo>
-                    <LogoProductLarge :product-name="study.product" />
+                    <LogoProductLarge :productName="study.product" />
                   </template>
                 </Card>
               </SubCardsList>
