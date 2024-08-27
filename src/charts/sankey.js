@@ -89,7 +89,7 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
                   "Remark": params.data['Remark'],
                 });
               default:
-                return "";
+                console.error("Unrecognized dataType");
             }
         }
     };
