@@ -23,7 +23,7 @@
       <BarChart
         v-if="studyData"
         :options="publicFinancesBarData"
-        @chartSeriesClick="handleDataChartSeriesClick"
+        @chart-series-click="handleDataChartSeriesClick"
       />
     </div>
   </div>

@@ -9,7 +9,7 @@
         <BarChart
           v-if="studyData"
           :options="netOperatingProfitByNumberActorsData"
-          @chartSeriesClick="handleDataChartSeriesClick"
+          @chart-series-click="handleDataChartSeriesClick"
         />
         <MiniChartContainer
           v-if="selectedStage"

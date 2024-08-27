@@ -7,7 +7,7 @@
     :pageSize="50"
     :rows="studies"
     :columns="columns"
-    @update:selectedIds="newSelectedStudies = $event"
+    @update:selected-ids="newSelectedStudies = $event"
   />
   <div class="footer">
     <button class="confirm-button" @click="emits('select-studies', newSelectedStudies)">Show comparison</button>

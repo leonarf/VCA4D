@@ -8,7 +8,7 @@
     information="To do"
   />
   <template v-if="studyData">
-    <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
+    <BarChart :options="populatedBarChartData" @chart-series-click="handleDataChartSeriesClick" />
     <div v-if="selectedStage">
       <MiniChartContainer :currentStage="selectedStage" title="Benefit/Cost Ratio (%)">
         <div class="flex flex-row w-full justify-evenly mt-6">

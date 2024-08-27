@@ -16,7 +16,7 @@
           <BarChart
             v-if="studyData"
             :options="numberOfActorsData"
-            @chartSeriesClick="handleDataChartSeriesClick"
+            @chart-series-click="handleDataChartSeriesClick"
           />
         </div>
       </div>

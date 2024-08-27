@@ -9,7 +9,7 @@
         <BarChart
           v-if="studyData"
           :options="netOperatingProfitData"
-          @chartSeriesClick="handleDataChartSeriesClick"
+          @chart-series-click="handleDataChartSeriesClick"
         />
         <MiniChartContainer v-if="selectedStage" :currentStage="selectedStage" title="Net Operating Profit">
           <div class="flex flex-row w-full justify-evenly mt-6">

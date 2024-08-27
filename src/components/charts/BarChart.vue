@@ -1,6 +1,6 @@
 <template>
   <div class="bar-chart">
-    <v-chart class="chart" :option="options" @click="$emit('chartSeriesClick', $event)" />
+    <v-chart class="chart" :option="options" @click="$emit('chart-series-click', $event)" />
   </div>
 </template>
 
@@ -29,6 +29,7 @@ use([
   GridComponent
 ]);
 
+defineEmits(["chart-series-click"]);
 </script>
 
 <style scoped lang="scss">
