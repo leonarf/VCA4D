@@ -7,7 +7,7 @@
     :get-value="getTotalAddedValue"
   >
     <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="number"/>
+      <ComparisonDefaultCell :value="value" valueType="number" />
     </template>
   </ComparisonRow>
 
@@ -19,7 +19,7 @@
     :getSubValues="getBenefitCostRatioByStage"
   >
     <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent"/>
+      <ComparisonDefaultCell :value="value" valueType="percent" />
     </template>
   </ComparisonExpandableRow>
   
@@ -30,7 +30,7 @@
     :get-value="(study) => study.ecoData?.macroData?.valueAddedShareAgriculturalGdp"
   >
     <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent"/>
+      <ComparisonDefaultCell :value="value" valueType="percent" />
     </template>
   </ComparisonRow>
   
@@ -41,7 +41,7 @@
     :get-value="(study) => study.ecoData?.macroData?.valueAddedShareNationalGdp"
   >
     <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent"/>
+      <ComparisonDefaultCell :value="value" valueType="percent" />
     </template>
   </ComparisonRow>
   
@@ -52,7 +52,7 @@
     :get-value="(study) => study.ecoData?.macroData?.giniIndex"
   >
     <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent"/>
+      <ComparisonDefaultCell :value="value" valueType="percent" />
     </template>
   </ComparisonRow>
   
@@ -63,7 +63,7 @@
     :get-value="(study) => study.ecoData?.macroData?.rateOfIntegration"
   >
     <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent"/>
+      <ComparisonDefaultCell :value="value" valueType="percent" />
     </template>
   </ComparisonRow>
   
@@ -74,7 +74,7 @@
     :get-value="(study) => study.ecoData?.macroData?.nominalProtectionCoefficient"
   >
     <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent"/>
+      <ComparisonDefaultCell :value="value" valueType="percent" />
     </template>
   </ComparisonRow>
 </template>

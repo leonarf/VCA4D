@@ -1,4 +1,4 @@
-<template >
+<template>
   <div class="flex flex-col w-4/5 lg:w-3/4 xl:w-1/2 ml-4 lg:ml-18 xl:ml-36 relative mt-8">
     <div class="bg-gradient-to-r from-green-300 via-yellow-200 to-red-300 w-full h-[40px] mt-10"></div>
     <div class="absolute top-20 transform -translate-x-1/2 -translate-y-full flex flex-col items-center" :style="{ left: leftPosition }">
@@ -10,7 +10,12 @@
         <div v-for="tick in ticks" :key="`tick_${tick}`">{{ tick }}</div>
       </div>
       <div class="w-full flex flex-row text-left">
-        <div class="mt-2 px-2 w-full" v-for="(text, index) in texts" :key="index" v-html="text" />
+        <div
+          v-for="(text, index) in texts"
+          :key="index"
+          class="mt-2 px-2 w-full"
+          v-html="text"
+        />
       </div>
     </div>
   </div>

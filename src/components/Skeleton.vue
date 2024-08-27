@@ -15,9 +15,24 @@ const props = defineProps({
     <RouterLink to="/">VCA4D Information System</RouterLink>
 
     <div class="flex flex-row gap-6 items-center">
-      <img src="../images/logo/agrinatura.png" height="60" width="116" alt="agrinatura network logo">
-      <img src="../images/logo/vca4d.jpg" height="62" width="153" alt="VCA4D logo">
-      <img src="../images/logo/european_commission.jpg" height="81" width="117" alt="european commission logo">
+      <img
+        src="../images/logo/agrinatura.png"
+        height="60"
+        width="116"
+        alt="agrinatura network logo"
+      >
+      <img
+        src="../images/logo/vca4d.jpg"
+        height="62"
+        width="153"
+        alt="VCA4D logo"
+      >
+      <img
+        src="../images/logo/european_commission.jpg"
+        height="81"
+        width="117"
+        alt="european commission logo"
+      >
     </div>
   </header>
 

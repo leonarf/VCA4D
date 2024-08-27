@@ -10,7 +10,7 @@
       :getValue="(study) => getImpactValue(impact, study)"
     >
       <template #default="{ value }">
-        <ComparisonDefaultCell :value="value" valueType="number" reverseColors/>
+        <ComparisonDefaultCell :value="value" valueType="number" reverseColors />
       </template>
     </ComparisonRow>
   </template>

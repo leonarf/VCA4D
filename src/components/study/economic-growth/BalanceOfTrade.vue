@@ -1,8 +1,6 @@
-<template >
-  <QuestionTitle
-  >What is the contribution of the value chain to the
-    <strong>balance of trade</strong>?</QuestionTitle
-  >
+<template>
+  <QuestionTitle>What is the contribution of the value chain to the
+    <strong>balance of trade</strong>?</QuestionTitle>
   <div v-if="hasData" class="ml-4 md:ml-12 mt-8">
     <InfoTitle
       title="Balance of trade of the value chain"
@@ -125,4 +123,4 @@ const optionsExported = computed(() => {
 })
 </script>
 
-<style ></style>
+<style></style>

@@ -13,8 +13,11 @@
           <NiceMetric label="Number of actors" :value="totalNumberOfActors" />
         </div>
         <div class="w-full md:w-4/5">
-          <BarChart v-if="studyData" :options="numberOfActorsData"
-                    @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
+          <BarChart
+            v-if="studyData"
+            :options="numberOfActorsData"
+            @chartSeriesClick="handleDataChartSeriesClick"
+          ></BarChart>
         </div>
       </div>
       <div v-if="selectedStage">

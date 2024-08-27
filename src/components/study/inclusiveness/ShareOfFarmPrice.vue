@@ -1,4 +1,4 @@
-<template >
+<template>
   <div class="mt-8">
     <DataTable
       :rows="rowsWithRatio"

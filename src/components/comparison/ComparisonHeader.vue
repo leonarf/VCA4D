@@ -8,13 +8,14 @@
             :link="getLink(study)"
             :is-local="false"
             :is-open="false"
-            :title="study.product.prettyName">
+            :title="study.product.prettyName"
+          >
             <template v-slot:logo>
-              <LogoProductLarge :product-name="study.product.id"/>
+              <LogoProductLarge :product-name="study.product.id" />
             </template>
           </Card>
           <a class="remove-button" @click="removeStudy(study.id)">
-            <Svg :svg="CrossLogo"/>
+            <Svg :svg="CrossLogo" />
           </a>
         </div>
         <div v-if="study.id" class="footer">

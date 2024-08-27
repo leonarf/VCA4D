@@ -5,7 +5,7 @@
       <div class="bg-slate-100 w-8 h-6 text-center select-none">{{ currentPage }}</div>
       <div class="bg-slate-200 rounded w-6 h-6 text-center cursor-pointer select-none" :onclick="pageUp">+</div>
     </div>
-    <vue-pdf-embed :source="path" width="900" :page="currentPage"/>
+    <vue-pdf-embed :source="path" width="900" :page="currentPage" />
   </div>
 </template>
 

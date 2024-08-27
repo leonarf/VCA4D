@@ -14,8 +14,11 @@
           <NiceMetric label="% female employment" :value="percentFemaleEmployment" />
         </div>
         <div class="w-full md:w-4/5">
-          <BarChart v-if="studyData" :options="numberOfJobsData"
-                    @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
+          <BarChart
+            v-if="studyData"
+            :options="numberOfJobsData"
+            @chartSeriesClick="handleDataChartSeriesClick"
+          ></BarChart>
         </div>
       </div>
       <div v-if="selectedStage">
@@ -24,14 +27,19 @@
             <template v-if="studyData">
               <template v-if="currentStageEmploymentByTypeOfActorData">
                 <div class="w-1/3 aspect-w-1 aspect-h-1">
-                  <Ring :options="currentStageEmploymentByTypeOfActorData"
-                        style="height: 300px;"></Ring>
+                  <Ring
+                    :options="currentStageEmploymentByTypeOfActorData"
+                    style="height: 300px;"
+                  ></Ring>
                 </div>
               </template>
               <template v-if="currentStageEmploymentByQualificationData">
                 <div class="w-1/3 aspect-w-1 aspect-h-1">
-                  <Ring v-if="studyData" :options="currentStageEmploymentByQualificationData"
-                        style="height: 300px;"></Ring>
+                  <Ring
+                    v-if="studyData"
+                    :options="currentStageEmploymentByQualificationData"
+                    style="height: 300px;"
+                  ></Ring>
                 </div>
               </template>
               <template v-else>

@@ -34,7 +34,7 @@ const filterStudiesByCategory = (category) => {
   <section>
     <QuestionTitle>By <strong>product</strong></QuestionTitle>
     <template v-for="(category) in categories" :key="category.id">
-      <ByCategory :studies="filterStudiesByCategory(category.id)" :countries="countries" :category="category"/>
+      <ByCategory :studies="filterStudiesByCategory(category.id)" :countries="countries" :category="category" />
     </template>
   </section>
 </template>

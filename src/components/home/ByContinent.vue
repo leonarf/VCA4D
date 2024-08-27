@@ -63,14 +63,15 @@ const getStudiesByCountry = () => {
           <Card 
             :link="getLink(item.studies[0])"
             :is-local="item.studies[0].local"
-            :title="getCountry(item.country).prettyName">
+            :title="getCountry(item.country).prettyName"
+          >
             <template v-slot:logo>
               <LogoCountryLarge :isoCode="getCountry(item.country).iso || 'gr'" />
             </template>
             <template v-slot:footer>
               <CardFooter class="" :text="getProduct(item.studies[0].product).prettyName">
                 <template v-slot:logo>
-                  <LogoProductSmall :product-name="item.studies[0].product"/>
+                  <LogoProductSmall :product-name="item.studies[0].product" />
                 </template>
               </CardFooter>
             </template>
@@ -78,24 +79,29 @@ const getStudiesByCountry = () => {
         </template>
         <template v-else>
           <Card
-            @click.stop="openedCountry === item.country ? openedCountry = null : openedCountry = item.country"
             :is-local="false"
             :is-open="openedCountry === item.country"
             :title="getCountry(item.country).prettyName"
+            @click.stop="openedCountry === item.country ? openedCountry = null : openedCountry = item.country"
           >
             <template v-slot:logo>
               <LogoCountryLarge :iso-code="getCountry(item.country).iso || 'gr'" />
             </template>
             <template v-slot:footer>
-              <SubCardsList v-if="openedCountry === item.country"
-                            :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
-                            :linkTitle="`Compare all ${item.country} studies`">
-                <Card v-for="study in item.studies" :key="study.id"
-                      :link="getLink(study)"
-                      :is-local="study.local"
-                      :title="getProduct(study.product).prettyName">
+              <SubCardsList
+                v-if="openedCountry === item.country"
+                :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
+                :linkTitle="`Compare all ${item.country} studies`"
+              >
+                <Card
+                  v-for="study in item.studies"
+                  :key="study.id"
+                  :link="getLink(study)"
+                  :is-local="study.local"
+                  :title="getProduct(study.product).prettyName"
+                >
                   <template v-slot:logo>
-                    <LogoProductLarge :product-name="study.product"/>
+                    <LogoProductLarge :product-name="study.product" />
                   </template>
                 </Card>
               </SubCardsList>

@@ -1,4 +1,4 @@
-<template >
+<template>
 
   <div class="flex flex-col w-[90%] lg:w-2/3 xl:w-1/2 ml-4 md:ml-12 relative mt-12">
     <div class="relative">

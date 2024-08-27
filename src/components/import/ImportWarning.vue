@@ -38,10 +38,12 @@
 
 <template>
   <div class="contents-of-the-file">
-    <div v-bind:class="{
-      tab_ok: errors.length == 0,
-      tab_in_error: errors.length > 0,
-    }">
+    <div
+      v-bind:class="{
+        tab_ok: errors.length == 0,
+        tab_in_error: errors.length > 0,
+      }"
+    >
       <h3>Tab: {{ spreadsheetName }}</h3>
       <p v-if="!spreadsheetMissing" class="tab-present">Tab present in the file</p>
       <div v-for="(error, index) in errors" :key="index">

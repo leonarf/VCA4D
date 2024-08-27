@@ -2,8 +2,8 @@
   <ComparisonTitle title="Social Sustainability" :studies="studies" />
   <ComparisonExpandableRow
     v-for="(part, index) in SOCIAL_PARTS"
-    :studies="studies"
     :key="`part_${index}`"
+    :studies="studies"
     :title="part"
     :getValue="(study) => getOptionalSocialAverageGroup(study.socialData?.[index])"
     :getSubValues="(study) => getSocialAverageSubGroups(study.socialData?.[index])"

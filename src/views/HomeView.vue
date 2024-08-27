@@ -111,9 +111,9 @@ function toggleFilter(filterKey) {
         <div class="filter-section">
           <p>Filter the studies on this page based on the topics addressed.</p>
           <div>
-            <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')"/>
-            <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')"/>
-            <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')"/>
+            <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')" />
+            <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')" />
+            <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')" />
           </div>
           <p>
           <div>

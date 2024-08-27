@@ -1,6 +1,6 @@
 <template>
   <div class="bar-chart">
-    <v-chart class="chart" :option="options" @click="$emit('chartSeriesClick', $event)"/>
+    <v-chart class="chart" :option="options" @click="$emit('chartSeriesClick', $event)" />
   </div>
 </template>
 

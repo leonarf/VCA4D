@@ -4,7 +4,7 @@
       <div class="modal">
         <slot></slot>
         <a class="exit-button" @click="emits('close')">
-          <Svg :svg="Cross"/>
+          <Svg :svg="Cross" />
         </a>
       </div>
     </div>

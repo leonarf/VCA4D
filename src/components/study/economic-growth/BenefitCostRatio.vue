@@ -1,8 +1,6 @@
 <template>
-  <QuestionTitle
-  >How <strong>profitable</strong> and sustainable are the value chain activities for the actors
-    involved?</QuestionTitle
-  >
+  <QuestionTitle>How <strong>profitable</strong> and sustainable are the value chain activities for the actors
+    involved?</QuestionTitle>
   <InfoTitle
     title="Benefit/Cost Ratio (%)"
     information="To do"

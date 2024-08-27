@@ -1,6 +1,6 @@
 <template>
   <div class="radar-chart">
-    <v-chart class="" :option="options" auto-resize/>
+    <v-chart class="" :option="options" auto-resize />
   </div>
 </template>
 

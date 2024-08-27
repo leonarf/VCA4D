@@ -1,4 +1,4 @@
-<template >
+<template>
   <Gauge
     :value="value"
     :minValue="0"

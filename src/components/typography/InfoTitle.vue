@@ -13,7 +13,7 @@ const props = defineProps({
   <div class="bg-[#EDEDED] py-2 px-4 inline-block">
     <div class="flex flex-row space-x-4">
       <h3 class="text-lg uppercase text-[#6B6B6B] font-semibold mb-0">{{ title }}</h3>
-      <Svg v-if="information" :svg="QuestionMark" class="svg"/>
+      <Svg v-if="information" :svg="QuestionMark" class="svg" />
     </div>
     <Tooltip
       v-if="information"

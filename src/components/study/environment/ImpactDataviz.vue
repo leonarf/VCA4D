@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>What are the impacts of this value chain on {{detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name}}?</h3>
-    <InfoTitle :title="detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name" :information="detailsToDisplay.helpBoxText" class="my-4"/>
+    <InfoTitle :title="detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name" :information="detailsToDisplay.helpBoxText" class="my-4" />
     <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
     <div v-if="selectedValueChain">
       <MiniChartContainer

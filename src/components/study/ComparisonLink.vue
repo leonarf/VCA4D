@@ -4,7 +4,7 @@
     :to="route"
     :title="title"
   >
-    <Svg :svg="ArrowsLogo" height="23px"/>
+    <Svg :svg="ArrowsLogo" height="23px" />
     {{ hasOtherStudies ? allStudies.length : "" }}
   </RouterLink>
 </template>

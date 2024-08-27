@@ -31,17 +31,17 @@ export default [
       }
     },
     rules: {
+      // there can only be 3 vue attributes per line: after that we must unfold
+      "vue/max-attributes-per-line": ["warn", {
+        singleline: { max: 3 }
+      }],
+      
       // Will fix in a few commits
       "vue/no-v-html": "off",
       "vue/require-explicit-emits": "off",
       "vue/attribute-hyphenation": "off",
-      "vue/max-attributes-per-line": "off",
-      "vue/first-attribute-linebreak": "off",
-      "vue/attributes-order": "off",
       "vue/singleline-html-element-content-newline": "off",
       "vue/html-self-closing": "off",
-      "vue/html-closing-bracket-spacing": "off",
-      "vue/html-closing-bracket-newline": "off",
       "vue/component-tags-order": "off",
       "vue/multiline-html-element-content-newline": "off",
       "vue/v-on-event-hyphenation": "off",

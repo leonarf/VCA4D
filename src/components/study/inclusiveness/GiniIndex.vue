@@ -1,4 +1,4 @@
-<template >
+<template>
   <HorizontalSlider 
     :value="value" 
     :min="0.0" 

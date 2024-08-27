@@ -6,13 +6,18 @@
     />
     <div class="flex flex-row items-center mt-4 mb-4">
       <div class="w-full">
-        <BarChart v-if="studyData" :options="netOperatingProfitData"
-                  @chartSeriesClick="handleDataChartSeriesClick"></BarChart>
+        <BarChart
+          v-if="studyData"
+          :options="netOperatingProfitData"
+          @chartSeriesClick="handleDataChartSeriesClick"
+        ></BarChart>
         <MiniChartContainer v-if="selectedStage" :currentStage="selectedStage" title="Net Operating Profit">
           <div class="flex flex-row w-full justify-evenly mt-6">
             <div class="w-full flex flex-row justify-center">
-              <Ring :options="currentStageNetOperatingProfitByTypeOfActorData"
-                    style="height: 300px; width: 450px"></Ring>
+              <Ring
+                :options="currentStageNetOperatingProfitByTypeOfActorData"
+                style="height: 300px; width: 450px"
+              ></Ring>
             </div>
           </div>
         </MiniChartContainer>

@@ -14,7 +14,12 @@ const emits = defineEmits(["toggle"])
 
 <template>
   <div class="flex gap-1">
-    <input type="checkbox" :value="value" :id="uniqueId" @change="emits('toggle')"/>
+    <input
+      :id="uniqueId"
+      type="checkbox"
+      :value="value"
+      @change="emits('toggle')"
+    />
     <label :for="uniqueId">{{ label }}</label>
   </div>
 </template>

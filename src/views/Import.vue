@@ -15,7 +15,7 @@ ol{
 </style>
 
 <template>
-  <Skeleton :skipFooter="true" >
+  <Skeleton :skipFooter="true">
     <div class="corps-page-import">
       <h1>Add a study to the VCA4D website</h1>
       <h2>Step 1 : Import a study file</h2>
@@ -34,8 +34,8 @@ ol{
       </div>
 
       <div v-if="isStudyObjectNotEmpty">
-        <CheckImportedDataStep :studyData="studyData"/>
-        <SaveOnGithubStep :studyData="studyData"/>
+        <CheckImportedDataStep :studyData="studyData" />
+        <SaveOnGithubStep :studyData="studyData" />
       </div>
     </div>
   </Skeleton>
