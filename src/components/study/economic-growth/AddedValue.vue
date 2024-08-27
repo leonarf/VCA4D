@@ -61,7 +61,7 @@
         v-if="studyData"
         :options="addedValueCreatorsRingChartData"
         style="height: 400px; width: 520px"
-      ></Ring>
+      />
       <div class="font-semibold">{{ totalAddedValueCreators }}</div>
     </div>
     <div class="flex flex-col items-center">
@@ -69,7 +69,7 @@
         v-if="studyData"
         :options="addedValueReceiversRingChartData"
         style="height: 400px; width: 520px"
-      ></Ring>
+      />
       <div class="font-semibold">{{ totalAddedValueReceivers }}</div>
     </div>
   </div>

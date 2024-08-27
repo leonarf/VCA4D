@@ -115,8 +115,7 @@ function toggleFilter(filterKey) {
             <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')" />
             <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')" />
           </div>
-          <p>
-          <div>
+          <p /><div>
             Number of studies: {{ filteredStudies.length }}
           </div>
           <div>
@@ -124,7 +123,6 @@ function toggleFilter(filterKey) {
           </div>
           </p>
         </div>
-        
       </section>
       <ByCategories
         :categories="categories"

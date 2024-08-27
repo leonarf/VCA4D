@@ -17,14 +17,14 @@
             v-if="studyData"
             :options="numberOfActorsData"
             @chartSeriesClick="handleDataChartSeriesClick"
-          ></BarChart>
+          />
         </div>
       </div>
       <div v-if="selectedStage">
         <MiniChartContainer :currentStage="selectedStage" title="Number of actors">
           <div class="flex flex-row w-full justify-evenly mt-6">
             <div class="w-full flex flex-row justify-center">
-              <Ring :options="currentStageNumberOfActorsByTypeOfActorData"></Ring>
+              <Ring :options="currentStageNumberOfActorsByTypeOfActorData" />
             </div>
           </div>
         </MiniChartContainer>

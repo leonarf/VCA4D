@@ -28,8 +28,8 @@
           :anchor="6"
           :average-value="getSocialAverageGroup(studyData.socialData[5])"
         >
-          <SummaryBlockQuestion :question="questionLivingHealth"> </SummaryBlockQuestion>
-          <SummaryBlockQuestion :question="questionLivingEducation"> </SummaryBlockQuestion>
+          <SummaryBlockQuestion :question="questionLivingHealth" />
+          <SummaryBlockQuestion :question="questionLivingEducation" />
         </SummaryBlock>
       </div>
       <div>
@@ -38,8 +38,8 @@
           :anchor="1"
           :average-value="getSocialAverageGroup(studyData.socialData[0])"
         >
-          <SummaryBlockQuestion :question="workingConditionsHighlightQuestion1"> </SummaryBlockQuestion>
-          <SummaryBlockQuestion :question="workingConditionsHighlightQuestion2"> </SummaryBlockQuestion>
+          <SummaryBlockQuestion :question="workingConditionsHighlightQuestion1" />
+          <SummaryBlockQuestion :question="workingConditionsHighlightQuestion2" />
         </SummaryBlock>
       </div>
       <div class="row-span-2 self-start xl:self-end">
@@ -48,8 +48,8 @@
           :anchor="2"
           :average-value="getSocialAverageGroup(studyData.socialData[1])"
         >
-          <SummaryBlockQuestion :question="questionVGGT"> </SummaryBlockQuestion>
-          <SummaryBlockQuestion :question="questionParticipation"> </SummaryBlockQuestion>
+          <SummaryBlockQuestion :question="questionVGGT" />
+          <SummaryBlockQuestion :question="questionParticipation" />
         </SummaryBlock>
       </div>
       <div class="row-span-2">
@@ -63,8 +63,8 @@
           :anchor="5"
           :average-value="getSocialAverageGroup(studyData.socialData[4])"
         >
-          <SummaryBlockQuestion :question="questionFarmerParticipation"> </SummaryBlockQuestion>
-          <SummaryBlockQuestion :question="questionFarmerInformation"> </SummaryBlockQuestion>
+          <SummaryBlockQuestion :question="questionFarmerParticipation" />
+          <SummaryBlockQuestion :question="questionFarmerInformation" />
         </SummaryBlock>
       </div>
       <div class="row-span-2 self-end xl:self-start">
@@ -73,8 +73,8 @@
           :anchor="3"
           :average-value="getSocialAverageGroup(studyData.socialData[2])"
         >
-          <SummaryBlockQuestion :question="questionWomenRights"> </SummaryBlockQuestion>
-          <SummaryBlockQuestion :question="questionWomenIncome"> </SummaryBlockQuestion>
+          <SummaryBlockQuestion :question="questionWomenRights" />
+          <SummaryBlockQuestion :question="questionWomenIncome" />
         </SummaryBlock>
       </div>
       <div class="">
@@ -83,8 +83,8 @@
           :anchor="4"
           :average-value="getSocialAverageGroup(studyData.socialData[3])"
         >
-          <SummaryBlockQuestion :question="questionFoodIncrease"> </SummaryBlockQuestion>
-          <SummaryBlockQuestion :question="questionFoodIncome"> </SummaryBlockQuestion>
+          <SummaryBlockQuestion :question="questionFoodIncrease" />
+          <SummaryBlockQuestion :question="questionFoodIncome" />
         </SummaryBlock>
       </div>
     </div>

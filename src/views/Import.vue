@@ -30,7 +30,7 @@ ol{
         </div>
         <p v-else>Upload the file to the platform</p>
         <br>
-        <input type="file" @change="handleFileUpload" />
+        <input type="file" @change="handleFileUpload">
       </div>
 
       <div v-if="isStudyObjectNotEmpty">

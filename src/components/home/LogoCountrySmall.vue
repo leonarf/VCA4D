@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div :class="`fib fi-${isoCode} bg-cover rounded-full logo-country-small`"></div>
+  <div :class="`fib fi-${isoCode} bg-cover rounded-full logo-country-small`" />
 </template>
 
 <style scoped lang="scss">

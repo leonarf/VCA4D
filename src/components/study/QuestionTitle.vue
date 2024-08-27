@@ -1,6 +1,6 @@
 <template>
   <h2 class="mt-12">
-    <slot></slot>
+    <slot />
   </h2>
 </template>
 

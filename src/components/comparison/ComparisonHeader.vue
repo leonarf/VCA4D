@@ -1,6 +1,6 @@
 <template>
   <tr>
-    <td></td>
+    <td />
     <td v-for="(study) in studiesWithDetails" :key="`${study.id}`">
       <div class="study-box">
         <div class="card-box">

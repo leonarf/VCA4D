@@ -8,7 +8,7 @@
         :value="option.value"
         :checked="selected === option.value"
         @input="emits('update:selected', option.value)"
-      />
+      >
       <span class="label">
         <span>{{ option.label }}</span>
         <span class="subtitle">{{ option.subtitle }}</span>

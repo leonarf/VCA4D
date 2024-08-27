@@ -51,7 +51,7 @@ onUnmounted(destroyTooltip);
 </script>
 
 <template>
-  <span ref="tooltipRef"></span>
+  <span ref="tooltipRef" />
 </template>
 
 <style></style>

@@ -10,7 +10,7 @@ const props = defineProps({
   <section class="section">
     <h4 :style="`color: ${textColor};`">{{ title }}</h4>
     <div class="border-t-[13px] pt-4" :style="`border-color: ${borderColor};`">
-      <slot></slot>
+      <slot />
     </div>  
   </section>
 </template>

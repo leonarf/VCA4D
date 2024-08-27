@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>What are the impacts of this value chain on {{detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name}}?</h3>
+    <h3>What are the impacts of this value chain on {{ detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name }}?</h3>
     <InfoTitle :title="detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name" :information="detailsToDisplay.helpBoxText" class="my-4" />
     <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
     <div v-if="selectedValueChain">
@@ -11,7 +11,7 @@
       >
         <div class="flex flex-row w-full justify-evenly mt-6">
           <div class="w-full flex flex-row justify-center">
-            <BarChart :options="detailBarChartOptions"></BarChart>
+            <BarChart :options="detailBarChartOptions" />
           </div>
         </div>
       </MiniChartContainer>

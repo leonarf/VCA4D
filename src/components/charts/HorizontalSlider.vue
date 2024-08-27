@@ -1,9 +1,8 @@
 <template>
-
   <div class="flex flex-col w-[90%] lg:w-2/3 xl:w-1/2 ml-4 md:ml-12 relative mt-12">
     <div class="relative">
-      <div class="bg-gray-200 w-full h-[40px]"></div>
-      <div class="bg-yellow-300 absolute top-0 h-[40px]" :style="{ width: leftPosition }"></div>
+      <div class="bg-gray-200 w-full h-[40px]" />
+      <div class="bg-yellow-300 absolute top-0 h-[40px]" :style="{ width: leftPosition }" />
     </div>
     <div class="absolute top-10 transform -translate-x-1/2 -translate-y-full flex flex-col items-center" :style="{ left: leftPosition }">
       <div class="bg-[#EDEDED] text-black text-2xl font-bold p-2 rounded shadow">{{ label }}</div>

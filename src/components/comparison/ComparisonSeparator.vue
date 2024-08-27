@@ -1,8 +1,8 @@
 <template>
   <tr class="h-12">
-    <td></td>
-    <td v-for="study in studies" :key="`${study.id}`"></td>
-    <td></td>
+    <td />
+    <td v-for="study in studies" :key="`${study.id}`" />
+    <td />
   </tr>
 </template>
 

@@ -55,7 +55,7 @@
           </div>
           <div v-else class="text-red-600">
             Unknown country: <b>{{ studyData['country'] }}</b>
-            <br />
+            <br>
             Known countries are:
             <b>{{
               knownCountries
@@ -78,7 +78,7 @@
           </div>
           <div v-else class="text-red-600">
             Unknown commodity: <b>{{ slugify(studyData['commodity']) }}</b>
-            <br />
+            <br>
             Known commodities are:
             <b>{{ knownProducts.sort((a, b) => a.localeCompare(b)).join(', ') }}</b>
           </div>
@@ -97,7 +97,7 @@
             <span v-else class="text-red-600">
               <b>{{ HOME_LABELS.LocalCcy }}</b> not found in uploaded file.
             </span>
-            <br />
+            <br>
             Find all valid currencies code by visiting
             <a
               class="font-semibold underline"

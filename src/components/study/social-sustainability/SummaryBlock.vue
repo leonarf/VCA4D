@@ -3,7 +3,7 @@
     <div class="uppercase font-bold ">
       {{ title }}
     </div>
-    <slot></slot>
+    <slot />
     <div class="browsable-radar-chart__item__more-info">
       <a class="cursor-pointer font-bold text-[#2e6bad]" @click="slideTo(anchorLink)">Explore {{ title.toLowerCase() }} &rarr;</a>
     </div>

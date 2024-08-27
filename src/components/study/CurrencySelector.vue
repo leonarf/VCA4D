@@ -6,7 +6,6 @@
       @change="emits('update:currency', $event.target.value)"
     >
       <template v-if="! isGeneric(localCurrency)">
-        
         <option v-if="isCurrencySupported(localCurrency)" value="LOCAL">
           {{ getCurrencyName(localCurrency) }} ({{ getCurrencySymbol(localCurrency) }})
         </option>

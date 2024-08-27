@@ -49,7 +49,7 @@
       <div v-for="(error, index) in errors" :key="index">
         <div class="property">
           <p class="error-title"><span class="checkmark">✕</span> {{ error.level }}</p>
-          <p :innerHTML="error.message"></p>
+          <p :innerHTML="error.message" />
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@
     well as its capacity to export on international markets with competitive price or on the
     contrary a higher remuneration of the actors supported by protection policies.
   </p>
-  <br />
+  <br>
   <h3>Is the value chain able to compete within the international market?</h3>
 
   <InfoTitle
@@ -24,7 +24,7 @@
     />
     <NoDataBadge v-else />
   </div>
-  <br />
+  <br>
   <InfoTitle
     title="Nominal Protection Coefficient (NPC)"
     information="

@@ -7,7 +7,7 @@ const props = defineProps({
 <template>
   <div class="card-footer">
     <div class="logo">
-      <slot name="logo"></slot>
+      <slot name="logo" />
     </div>
     <span class="text">{{ text }}</span>
   </div>

@@ -20,7 +20,7 @@
           type="checkbox"
           :checked="isSelected(rowData.id)"
           @click.stop="toggleRowSelection(rowData.id)"
-        />
+        >
       </template>
     </TableLite>
   </div>

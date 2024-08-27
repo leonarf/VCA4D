@@ -19,7 +19,7 @@ const emits = defineEmits(["toggle"])
       type="checkbox"
       :value="value"
       @change="emits('toggle')"
-    />
+    >
     <label :for="uniqueId">{{ label }}</label>
   </div>
 </template>

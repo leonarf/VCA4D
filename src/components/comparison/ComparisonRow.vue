@@ -8,9 +8,9 @@
       <div v-if="subtitle" class="definition">{{ subtitle }}</div>
     </td>
     <td v-for="(study, index) in studies" :key="`value_added__${study.id}`">
-      <slot :value="values[index]"></slot>
+      <slot :value="values[index]" />
     </td>
-    <td></td>
+    <td />
   </tr>
 </template>
 

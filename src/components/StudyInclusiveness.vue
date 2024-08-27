@@ -49,10 +49,12 @@
       <EmploymentDistributionJobs :studyData="studyData" />
     </div>
 
-    <br />
+    <br>
 
-    <QuestionTitle>What is the impact of the <strong>governance system</strong> on the income
-      distribution?</QuestionTitle>
+    <QuestionTitle>
+      What is the impact of the <strong>governance system</strong> on the income
+      distribution?
+    </QuestionTitle>
     <InfoTitle
       title="Share of farm gate price in final price"
       information="It is the share of domestic consumer price or FOB export price, in the case of export, in the final consumer price abroad (if possible)."
@@ -67,7 +69,7 @@
       />
       <NoDataBadge v-else />
     </div>
-    <br />
+    <br>
     <InfoTitle
       title="Gini index"
       information="

@@ -10,7 +10,7 @@
     @toggle-expand="toggleExpand()"
   >
     <template #default="{ value }">
-      <slot :value="value"></slot>
+      <slot :value="value" />
     </template>
   </ComparisonRow>
   <ComparisonRow
@@ -22,7 +22,7 @@
     :getValue="study => getSubValues(study)[subKey]"
   >
     <template #default="{ value }">
-      <slot :value="value"></slot>
+      <slot :value="value" />
     </template>
   </ComparisonRow>
 </template>

@@ -37,7 +37,7 @@ const props = defineProps({
   </header>
 
   <main class="corps">
-    <slot></slot>
+    <slot />
   </main>
 
   <footer v-if="!skipFooter">

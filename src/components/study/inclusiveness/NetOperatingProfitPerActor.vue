@@ -10,7 +10,7 @@
           v-if="studyData"
           :options="netOperatingProfitByNumberActorsData"
           @chartSeriesClick="handleDataChartSeriesClick"
-        ></BarChart>
+        />
         <MiniChartContainer
           v-if="selectedStage"
           :currentStage="selectedStage"
@@ -18,7 +18,7 @@
         >
           <div class="flex flex-row w-full justify-evenly mt-6">
             <div class="w-full flex flex-row justify-center">
-              <Ring :options="currentStageSplitData"></Ring>
+              <Ring :options="currentStageSplitData" />
             </div>
           </div>
         </MiniChartContainer>

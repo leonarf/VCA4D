@@ -5,7 +5,7 @@ const props = defineProps({
 
 <template>
   <ul class="flex flex-row flex-wrap gap-y-4 gap-x-6">
-    <slot></slot>
+    <slot />
   </ul>
 </template>
 

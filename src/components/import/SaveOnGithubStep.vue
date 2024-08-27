@@ -13,9 +13,9 @@
     <p>Step 2 : Go to https://github.com/leonarf/VCA4D/tree/main/data</p>
     <p>Step 3 : Login to a VCA4D authorised github account</p>
     <p>Step 4 : Click on "Add file" and then "Create new file"</p>
-    <img :src="upload_files_screenshot" alt="github screenshot" />
+    <img :src="upload_files_screenshot" alt="github screenshot">
     <p>Step 5 : Upload both previously downloaded files, and click on "Commit changes"</p>
-    <img :src="commit_creation_screenshot" alt="github screenshot" />
+    <img :src="commit_creation_screenshot" alt="github screenshot">
     <p>
       Step optional : rename your Excel file to {{ `${studyFileName}.ods` }} before saving it into
       github

@@ -18,7 +18,7 @@
             v-if="studyData"
             :options="numberOfJobsData"
             @chartSeriesClick="handleDataChartSeriesClick"
-          ></BarChart>
+          />
         </div>
       </div>
       <div v-if="selectedStage">
@@ -30,7 +30,7 @@
                   <Ring
                     :options="currentStageEmploymentByTypeOfActorData"
                     style="height: 300px;"
-                  ></Ring>
+                  />
                 </div>
               </template>
               <template v-if="currentStageEmploymentByQualificationData">
@@ -39,7 +39,7 @@
                     v-if="studyData"
                     :options="currentStageEmploymentByQualificationData"
                     style="height: 300px;"
-                  ></Ring>
+                  />
                 </div>
               </template>
               <template v-else>
@@ -47,15 +47,13 @@
               </template>
               <template v-if="currentStageEmploymentByGenderData">
                 <div class="w-1/3 aspect-w-1 aspect-h-1">
-                  <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px;">
-                  </Ring>
+                  <Ring v-if="studyData" :options="currentStageEmploymentByGenderData" style="height: 300px;" />
                 </div>
               </template>
               <template v-else>
                 <p>No data about job's gender</p>
               </template>
             </template>
-                        
           </div>
         </MiniChartContainer>
       </div>
