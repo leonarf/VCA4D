@@ -15,7 +15,7 @@ const AVAILABLE_COLORS = {
   HighScoreGreen : "#94D99D",
 }
 
-var FixedColorsMapping = {
+const FixedColorsMapping = {
   Producers: AVAILABLE_COLORS["StageProducerGreen"],
   Collectors: AVAILABLE_COLORS["StageCollectorSalmon"],
   Processors: AVAILABLE_COLORS["StageProcessorRed"],
@@ -29,8 +29,24 @@ var FixedColorsMapping = {
   government: AVAILABLE_COLORS["SubstantialScoreYellow"]
 }
 
-export function getColor(itemName) {
-  return FixedColorsMapping[itemName] || AVAILABLE_COLORS.Grey;
+const DynamicColorsMapping = {};
+
+export function getColor(itemName, isEnvironment) {
+  if (isEnvironment) {
+    return getEnvironmentDynamicColor(itemName);
+  }
+  return FixedColorsMapping[itemName] || AVAILABLE_COLORS.Grey;  
+}
+
+function getEnvironmentDynamicColor(itemName) {
+  return DynamicColorsMapping[itemName] || findNewColor();
+
+  function findNewColor() {
+    const nextColorCode = Object.keys(DynamicColorsMapping).length % Object.keys(AVAILABLE_COLORS).length;
+    var pickedColorName = Object.keys(AVAILABLE_COLORS)[nextColorCode]
+    DynamicColorsMapping[itemName] = AVAILABLE_COLORS[pickedColorName]
+    return DynamicColorsMapping[itemName]
+  }
 }
 
 export const getSocialScoreColor = (value) => {
