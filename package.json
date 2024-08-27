@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build --base=/VCA4D/dist/",
     "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "lint": "eslint . --ignore-pattern .gitignore",
     "format": "prettier --write src/"
   },
   "dependencies": {
@@ -26,12 +26,13 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@eslint/js": "^9.9.1",
     "@rushstack/eslint-patch": "^1.2.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.1.0",
     "autoprefixer": "^10.4.14",
-    "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.24.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-vue": "^9.27.0",
     "postcss": "^8.4.25",
     "prettier": "^3.2.5",
     "sass": "^1.58.3",
