@@ -11,9 +11,6 @@
         >
           <div class="flex flex-row w-full justify-evenly mt-6">
               <div class="w-full flex flex-row justify-center">
-<!--
-  <Ring :options="populatedRingChartData"></Ring>
--->
                 <BarChart :options="detailBarChartOptions"></BarChart>
               </div>
           </div>
@@ -53,31 +50,6 @@ const handleDataChartSeriesClick = (event) => {
     selectedValueChain.value = event.name
   }
 }
-
-const populatedRingChartData = computed(() => {
-  var tooltip = {}
-  var items = props.impact.values.filter(item => item.valuechain_name == selectedValueChain.value)
-  .map(item => {
-    tooltip[item.actor_name] = `${formatNumber(item.value)} per functional unit`
-    return {
-      name: item.actor_name,
-      value: item.value,
-      label: {
-          width: 250,
-          overflow: 'break',
-          color: "#e2e0e0",
-          fontSize: 16
-      },
-      labelLine: {
-          length: 40,
-          length2: 10,
-          smooth: true,
-      },
-    }
-  })
-  var series = getRingChart(items, tooltip, "")
-  return series
-})
 
 const detailBarChartOptions = computed(() => {
   var tooltip = {}
