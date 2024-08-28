@@ -1,6 +1,7 @@
 <script setup>
 import _ from 'lodash';
 import Skeleton from '@components/Skeleton.vue'
+import { RouterLink } from 'vue-router'
 import { computed, onMounted, ref } from 'vue'
 import ByCategories from '@components/home/ByCategories.vue'
 import ByContinents from '@components/home/ByContinents.vue'

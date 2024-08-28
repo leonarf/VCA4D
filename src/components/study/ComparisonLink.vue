@@ -14,6 +14,7 @@
   import { computed } from "vue";
   import ArrowsLogo from "../../images/icons/left-right-arrows.svg"
   import Svg from "@components/Svg.vue"
+  import { RouterLink } from 'vue-router'
   import { getStudy, getProduct, getCountry, getProductStudies, getCountryStudies } from "@utils/data";
   import { getStudyListQueryString } from "@utils/router";
 

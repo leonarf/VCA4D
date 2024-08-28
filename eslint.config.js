@@ -31,6 +31,7 @@ export default [
       "vue/require-default-prop": "off",
       "vue/multi-word-component-names":"off",
 
+      "vue/no-undef-components": ["error", {}],
       // WIP: To fix in #97
       "vue/no-v-html": "off",
     }
