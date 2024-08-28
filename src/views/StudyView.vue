@@ -20,7 +20,7 @@
           v-if="isDataLoaded"
           :views="views"
           :selectedViewKey="view"
-          :fullReportPdfUrl="studyPdfUrls.fullReportPdfUrl"
+          :fullReportPdfUrl="studyUrls.fullPdf"
           @select="selectView($event)"
         />
       </div>
@@ -28,7 +28,7 @@
         <component
           :is="viewComponent"
           :studyData="studyData"
-          :studyPdfUrls="studyPdfUrls"
+          :studyUrls="studyUrls"
           :currency="currencySymbol"
           @select-view="selectView($event)"
         />
@@ -49,14 +49,14 @@ import StudySocialSustainability from '@components/StudySocialSustainability.vue
 import StudyHeader from '@components/study/StudyHeader.vue'
 import StudyMenu from '@components/study/StudyMenu.vue'
 import { getStudyData } from '@utils/data'
-import { getStudyPdfUrls } from '../utils/data'
+import { getStudyUploadUrls } from '../utils/data'
 import { isCurrencySupported } from '@utils/currency.js'
 
 const route = useRoute();
 const router = useRouter()
 
 const studyData = ref(null)
-const studyPdfUrls = ref({})
+const studyUrls = ref({})
 const error = ref(undefined)
 
 function updateCurrency(newCurrency) {
@@ -139,7 +139,7 @@ onMounted(async () => {
   try {
     studyData.value = await getStudyData(route.query.id);
     setupCurrency();
-    studyPdfUrls.value = await getStudyPdfUrls(route.query.id);
+    studyUrls.value = await getStudyUploadUrls(route.query.id);
   } catch(err) {
     error.value = err;
   }
@@ -154,7 +154,7 @@ function setupCurrency() {
 }
 
 const isDataLoaded = computed(() => {
-  return !! studyData.value && !! studyPdfUrls.value;
+  return !! studyData.value && !! studyUrls.value;
 });
 </script>
 

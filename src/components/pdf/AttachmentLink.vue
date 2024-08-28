@@ -11,7 +11,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { getStudyFileAttachmentUrl } from '@/utils/data/pdf.js'
+import { getStudyFileAttachmentUrl } from '@/utils/data'
 
 const props = defineProps({
   studyId: String,

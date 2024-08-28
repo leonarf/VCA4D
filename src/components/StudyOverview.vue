@@ -56,14 +56,14 @@
     </section>
 
     <PdfSection
-      v-if="studyPdfUrls.briefReportPdfUrl"
-      :studyBriefUrl="studyPdfUrls.briefReportPdfUrl"
+      v-if="studyUrls.briefPdf"
+      :studyBriefUrl="studyUrls.briefPdf"
     />
     <a
-      v-if="studyPdfUrls.fullReportPdfUrl"
+      v-if="studyUrls.fullPdf"
       target="_blank"
       class="text-blue-600"
-      :href="studyPdfUrls.fullReportPdfUrl"
+      :href="studyUrls.fullPdf"
     >Download study full report</a>
     <section v-if="studyData && studyData.ecoData">
       <Sankey :studyData="studyData" />
@@ -82,7 +82,7 @@ import AttachmentLink from '@components/pdf/AttachmentLink.vue'
 
 defineProps({
   studyData: Object,
-  studyPdfUrls: Object
+  studyUrls: Object
 });
 const emits = defineEmits(["select-view"]);
 </script>

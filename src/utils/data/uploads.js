@@ -17,9 +17,9 @@ export async function getStudyFileAttachmentUrl(studyId, attachementType) {
   return studiesAttachment[studyId][attachementType]
 }
 
-export async function getStudyPdfUrls(studyId) {
+export async function getStudyUploadUrls(studyId) {
   return {
-    fullReportPdfUrl: await getStudyFileAttachmentUrl(studyId, 'full-report.pdf'),
-    briefReportPdfUrl: await getStudyFileAttachmentUrl(studyId, 'brief-report.pdf'),
+    fullPdf: await getStudyFileAttachmentUrl(studyId, 'full-report.pdf'),
+    briefPdf: await getStudyFileAttachmentUrl(studyId, 'brief-report.pdf'),
   }
 }
