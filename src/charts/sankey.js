@@ -56,7 +56,7 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
                 show: true,
                 formatter: () => {
                     return product;
-                }
+                },
             },
             "Monetary value": monetaryValue,
             "Volume exchanged (kg Of product)": volumeExchanged,
@@ -72,12 +72,12 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
         formatter: (params) => {
             switch (params?.dataType) {
               case "node":
-                return formatTooltip({
+                return formatTooltip("Name", {
                   "Name": params.data.name,
                   "Stage": findActorStage(actors, params.data.name)
                 });
               case "edge":
-                return formatTooltip({
+                return formatTooltip("Products", {
                   "Source": params.data.source,
                   "Target": params.data.target,
                   "Monetary value": prettyAmount.value(params.data["Monetary value"], monetaryCurrency),
@@ -101,12 +101,23 @@ function findActorStage(actors, actorName) {
   return actor ? actor.stage : undefined;
 }
 
-function formatTooltip(items) {
-  const tooltipItems = Object.entries(items)
-    .map(([itemLabel, itemValue]) => formatTooltipItem(itemLabel, itemValue));
+function formatTooltip(titleKey, items) {
+  let listKeys = Object.keys(items);
+  let title = null;
+  if (listKeys.includes(titleKey)) {
+    title = items[titleKey];
+    listKeys = listKeys.filter(key => key !== titleKey);
+  }
+  const tooltipItems = listKeys
+    .map((itemLabel) => formatTooltipItem(itemLabel, items[itemLabel]));
 
   return `
     <div style='max-width: 400px; white-space: normal;'>
+      ${title ? `
+        <div style='font-size: 16px; margin-bottom: 10px'>
+          <strong>${title}</strong>
+        </div>
+      ` : ``}
       <ul style='list-style: initial; margin: 0 10px; padding: initial;'>
         ${tooltipItems.join('')}
       </ul>
