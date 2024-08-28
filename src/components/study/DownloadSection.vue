@@ -1,13 +1,20 @@
 <template>
   <div class="download-section">
     <h3 class="download-title">Available for download</h3>
-    <div
-      v-for="(url, urlKey) in studyUrls"
-      :key="urlKey"
-      class="url-item"
-    >
-      <a class="url-title" :href="url">{{ buildTitle(urlKey) }}</a>
-      <span class="url-subtitle">{{ buildSubTitle(urlKey) }}</span>
+    <div class="links">
+      <div
+        v-for="(keyList, index) in urlKeysLists"
+        :key="index"
+      >
+        <div
+          v-for="urlKey in keyList"
+          :key="urlKey"
+          class="url-item"
+        >
+          <a class="url-title" :href="studyUrls[urlKey]">{{ buildTitle(urlKey) }}</a>
+          <span class="url-subtitle">{{ buildSubTitle(urlKey) }}</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -17,6 +24,10 @@ defineProps({
   studyUrls: Object
 });
 
+const urlKeysLists = [
+  ["briefPdf", "fullPdf"],
+  ["ecoXlsx", "socialXlsx", "acvXlsx"]
+];
 function buildTitle(urlKey) {
   switch (urlKey) {
     case "briefPdf":
@@ -60,11 +71,23 @@ function buildSubTitle(urlKey) {
       font-weight: 600;
       font-size: 1.125rem;
       line-height: 1.75rem;
+      margin-bottom: 16px;
+    }
+
+    .links {
+      display: flex;
+
+      > * {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
     }
 
     .url-item {
       width: 50%;
-      margin: 8px 0;
+      width: 100%;
 
       .url-title {
         cursor: pointer;
