@@ -9,7 +9,7 @@
     "clean": "rm -rf node_modules/",
     "preview": "vite preview",
     "lint": "eslint . --ignore-pattern .gitignore",
-    "pre-commit-lint": "git diff HEAD --name-only  | xargs eslint --ignore-pattern .gitignore --quiet",
+    "pre-commit-lint": "git diff HEAD --name-only  | xargs --no-run-if-empty eslint --quiet",
     "lint-fix": "eslint . --ignore-pattern .gitignore --fix",
     "format": "prettier --write src/",
     "prepare": "husky"
@@ -30,6 +30,7 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.1.1",
     "@eslint/js": "^9.9.1",
     "@rushstack/eslint-patch": "^1.2.0",
     "@vitejs/plugin-vue": "^4.0.0",
