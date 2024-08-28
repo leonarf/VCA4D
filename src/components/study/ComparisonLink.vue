@@ -4,7 +4,7 @@
     :to="route"
     :title="title"
   >
-    <Svg :svg="ArrowsLogo" height="23px"/>
+    <Svg :svg="ArrowsLogo" height="23px" />
     {{ hasOtherStudies ? allStudies.length : "" }}
   </RouterLink>
 </template>
@@ -14,6 +14,7 @@
   import { computed } from "vue";
   import ArrowsLogo from "../../images/icons/left-right-arrows.svg"
   import Svg from "@components/Svg.vue"
+  import { RouterLink } from 'vue-router'
   import { getStudy, getProduct, getCountry, getProductStudies, getCountryStudies } from "@utils/data";
   import { getStudyListQueryString } from "@utils/router";
 
@@ -50,11 +51,13 @@
 
     switch(props.type) {
       case "product":
-        const product = _.lowerCase(getProduct(getStudy(props.studyId).product).prettyName);
-        return `Compare the ${allStudies.value.length} ${product} studies`;
+        return `Compare the ${allStudies.value.length} ${
+          _.lowerCase(getProduct(getStudy(props.studyId).product).prettyName)
+        } studies`;
       case "country":
-        const country = getCountry(getStudy(props.studyId).country).prettyName;
-        return `Compare the ${allStudies.value.length} ${country} studies`;
+        return `Compare the ${allStudies.value.length} ${
+          getCountry(getStudy(props.studyId).country).prettyName
+        } studies`;
       default:
         return "";
     }

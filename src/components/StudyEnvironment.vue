@@ -25,7 +25,6 @@
       LCA refers to the effects as <strong>“impacts”</strong> (the “midpoints” level). The consequences of these impacts 
       on Natural Resources, Ecosystem Quality and Human Health are referred to as <strong>“damage”</strong>. 
       LCA also enables to measure the contribution of the value chain to climate change through its <strong>carbon footprint</strong>.
-
     </p>
 
     <QuestionTitle>Which sub-chain contributes the most to environmental damages?</QuestionTitle>
@@ -52,7 +51,7 @@
     </div>
     <template v-if="studyData">
       <div v-for="impact in allBarChartsData" :key="impact.name">
-        <ImpactDataviz :impact="impact" :per-unit="selectedPerUnit" :volumes="yearlyVolumes"/>
+        <ImpactDataviz :impact="impact" :perUnit="selectedPerUnit" :volumes="yearlyVolumes" />
       </div>
     </template>
     <AttachmentLink :studyId="studyData.id" attachmentType="acv.xlsx" />

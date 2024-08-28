@@ -1,17 +1,17 @@
+<template>
+  <div class="card-footer">
+    <div class="logo">
+      <slot name="logo" />
+    </div>
+    <span class="text">{{ text }}</span>
+  </div>
+</template>
+
 <script setup>
-const props = defineProps({
+defineProps({
     text: String
 })
 </script>
-
-<template>
-    <div class="card-footer">
-        <div class="logo">
-            <slot name="logo"></slot>
-        </div>
-        <span class="text">{{ text }}</span>
-    </div>
-</template>
 
 <style scoped lang="scss">
 .card-footer {

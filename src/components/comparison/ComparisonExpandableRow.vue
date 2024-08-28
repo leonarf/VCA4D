@@ -10,11 +10,12 @@
     @toggle-expand="toggleExpand()"
   >
     <template #default="{ value }">
-      <slot :value="value"></slot>
+      <slot :value="value" />
     </template>
   </ComparisonRow>
   <ComparisonRow
     v-for="(subKey, index) in subKeys"
+    :key="index"
     :studies="studies"
     class="sub-row"
     :class="{ expanded, 'last-sub-row': index === subKeys.length - 1 }"
@@ -22,7 +23,7 @@
     :getValue="study => getSubValues(study)[subKey]"
   >
     <template #default="{ value }">
-      <slot :value="value"></slot>
+      <slot :value="value" />
     </template>
   </ComparisonRow>
 </template>

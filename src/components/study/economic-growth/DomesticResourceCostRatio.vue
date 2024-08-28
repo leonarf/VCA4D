@@ -1,4 +1,4 @@
-<template >
+<template>
   <Gauge
     :value="value"
     :minValue="0"
@@ -14,7 +14,7 @@
 
 <script setup>
 import Gauge from '@charts/Gauge.vue'
-const props = defineProps({
+defineProps({
   value: Number
 })
 </script>

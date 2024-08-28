@@ -1,13 +1,12 @@
-<style scoped lang="scss">
-</style>
-
 <template>
   <div>
     <h2>Step 2 : Check that all data is there.</h2>
     <p>Complete the file for missing data, then re-upload the file (back to step 1).</p>
-    <a class="text-blue-600" href="https://github.com/leonarf/VCA4D/tree/main/data/xls" target="_blank"
-      >Here you can find example blank file to help you upload your study</a
-    >
+    <a
+      class="text-blue-600"
+      href="https://github.com/leonarf/VCA4D/tree/main/data/xls"
+      target="_blank"
+    >Here you can find example blank file to help you upload your study</a>
 
     <h4>Contents of the file</h4>
     <div v-for="(errors, spreadsheet, index) in errorsBySpreadsheet" :key="index">
@@ -48,12 +47,12 @@
           <h3 class="table-cell">Country</h3>
         </div>
         <div class="w-3/4">
-          <div class="text-2xl" v-if="knownCountry">
+          <div v-if="knownCountry" class="text-2xl">
             {{ knownCountry.prettyName }}
           </div>
           <div v-else class="text-red-600">
             Unknown country: <b>{{ studyData['country'] }}</b>
-            <br />
+            <br>
             Known countries are:
             <b>{{
               knownCountries
@@ -71,12 +70,12 @@
           <h3 class="table-cell">Product</h3>
         </div>
         <div class="w-3/4">
-          <div class="text-2xl" v-if="isKnownProduct">
+          <div v-if="isKnownProduct" class="text-2xl">
             {{ studyData['commodity'] }}
           </div>
           <div v-else class="text-red-600">
             Unknown commodity: <b>{{ slugify(studyData['commodity']) }}</b>
-            <br />
+            <br>
             Known commodities are:
             <b>{{ knownProducts.sort((a, b) => a.localeCompare(b)).join(', ') }}</b>
           </div>
@@ -95,14 +94,13 @@
             <span v-else class="text-red-600">
               <b>{{ HOME_LABELS.LocalCcy }}</b> not found in uploaded file.
             </span>
-            <br />
+            <br>
             Find all valid currencies code by visiting
             <a
               class="font-semibold underline"
               href="https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes"
               target="_blank"
-              >this wiki page.</a
-            >
+            >this wiki page.</a>
           </div>
           <div v-else>
             <div v-if="!isCurrencySupported(studyData.targetCurrency, studyData.year)">
@@ -125,7 +123,7 @@
 import { computed, onMounted, ref } from 'vue'
 
 import ImportWarning from '@components/import/ImportWarning.vue'
-
+import { RouterLink } from 'vue-router'
 import { isCurrencySupported, isValidCurrency } from '@utils/currency.js'
 import { getCountries, getAllKnownProducts } from '@utils/data'
 import { slugify } from '@utils/format.js'
@@ -186,3 +184,6 @@ const errorsBySpreadsheet = computed(() => {
   return result
 })
 </script>
+
+<style scoped lang="scss">
+</style>

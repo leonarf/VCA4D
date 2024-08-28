@@ -11,7 +11,7 @@ import SocialSummary from './study/social-sustainability/SocialSummary.vue'
 import SocialDetails from './study/social-sustainability/SocialDetails.vue'
 import AttachmentLink from '@components/pdf/AttachmentLink.vue'
 
-const props = defineProps({
+defineProps({
   studyData: Object
 })
 </script>

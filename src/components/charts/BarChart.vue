@@ -1,7 +1,7 @@
 <template>
-    <div class="bar-chart">
-      <v-chart class="chart" :option="options" @click="$emit('chartSeriesClick', $event)"/>
-    </div>
+  <div class="bar-chart">
+    <v-chart class="chart" :option="options" @click="$emit('chart-series-click', $event)" />
+  </div>
 </template>
 
 <script setup>
@@ -16,7 +16,7 @@ import {
 } from "echarts/components";
 import VChart from "vue-echarts";
 
-const props = defineProps({
+defineProps({
   options: Object
 }); // Question: It looks like if I use use "ref" or "reactive" to declare options, it does not get updated afer data is retrieved from network. Why?
 
@@ -29,6 +29,7 @@ use([
   GridComponent
 ]);
 
+defineEmits(["chart-series-click"]);
 </script>
 
 <style scoped lang="scss">

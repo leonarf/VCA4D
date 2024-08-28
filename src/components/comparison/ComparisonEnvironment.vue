@@ -1,19 +1,19 @@
 <template>
-    <template v-if="impacts.length > 0">
-        <ComparisonTitle title="Environmental Indicators" :studies="studies" />
-        <ComparisonRow
-          v-for="impact in impacts"
-          :key="`impact_${impact.name}`"
-          :studies="studies"
-          :title="impact.name"
-          :subtitle="`in ${getUnitImpact(impact.name)}`"
-          :getValue="(study) => getImpactValue(impact, study)"
-        >
-          <template #default="{ value }">
-            <ComparisonDefaultCell :value="value" valueType="number" reverseColors/>
-          </template>
-        </ComparisonRow>
-    </template>
+  <template v-if="impacts.length > 0">
+    <ComparisonTitle title="Environmental Indicators" :studies="studies" />
+    <ComparisonRow
+      v-for="impact in impacts"
+      :key="`impact_${impact.name}`"
+      :studies="studies"
+      :title="impact.name"
+      :subtitle="`in ${getUnitImpact(impact.name)}`"
+      :getValue="(study) => getImpactValue(impact, study)"
+    >
+      <template #default="{ value }">
+        <ComparisonDefaultCell :value="value" valueType="number" reverseColors />
+      </template>
+    </ComparisonRow>
+  </template>
 </template>
 
 <script setup>

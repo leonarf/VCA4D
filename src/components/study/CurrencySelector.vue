@@ -1,12 +1,11 @@
 <template>
   <div class="select-wrapper">
     <select
-      class="selector"
       v-model="selectedCurrency"
+      class="selector"
       @change="emits('update:currency', $event.target.value)"
     >
       <template v-if="! isGeneric(localCurrency)">
-        
         <option v-if="isCurrencySupported(localCurrency)" value="LOCAL">
           {{ getCurrencyName(localCurrency) }} ({{ getCurrencySymbol(localCurrency) }})
         </option>

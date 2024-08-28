@@ -12,11 +12,11 @@
       :key="index"
       class="legend-item"
     >
-      <div class="legend-color" :style="{ 'background-color': legendItem.color }"></div>
+      <div class="legend-color" :style="{ 'background-color': legendItem.color }" />
       {{ legendItem.stages.join(", ") }}
     </div>
   </div>
-  <SankeyChart :options="populatedSankeyChartData"></SankeyChart>
+  <SankeyChart :options="populatedSankeyChartData" />
 </template>
 
 <script setup>

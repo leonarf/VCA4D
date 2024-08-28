@@ -1,6 +1,6 @@
 <template>
   <div class="radar-chart">
-    <v-chart class="" :option="options" auto-resize/>
+    <v-chart class="" :option="options" autoResize />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ import {
 } from "echarts/components";
 import VChart from "vue-echarts";
 
-const props = defineProps({
+defineProps({
   options: Object
 });
 

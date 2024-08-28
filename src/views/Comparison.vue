@@ -2,13 +2,13 @@
   <Skeleton>
     <div>
       <h1 class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48">Compare VCA4D value chain studies</h1>
-      <div class="py-1 pb-16 px-4 sm:px-8 md:px-12 lg:px-40 xl:px-48 studies-wrapper" v-if="studies.length > 0">
+      <div v-if="studies.length > 0" class="py-1 pb-16 px-4 sm:px-8 md:px-12 lg:px-40 xl:px-48 studies-wrapper">
         <StudiesComparison
           :studies="studies"
           @select-studies="selectStudies($event)"
         />
       </div>
-      <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 no-study" v-else-if="loading === false">
+      <div v-else-if="loading === false" class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 no-study">
         No study is selected
         <AddStudiesButton
           class="mt-4"

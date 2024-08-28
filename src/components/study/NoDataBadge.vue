@@ -1,12 +1,12 @@
 <template>
-	<div class="wrapper">
-	    <div class="badge bg-[#EDEDED]">
-	      <EmptyDocumentLogo
-					style="height: 20px; width: 20px;"
-				/>
-	      <span>No data for this study</span>
-	    </div>
-	  </div>
+  <div class="wrapper">
+    <div class="badge bg-[#EDEDED]">
+      <EmptyDocumentLogo
+        style="height: 20px; width: 20px;"
+      />
+      <span>No data for this study</span>
+    </div>
+  </div>
 </template>
 
 <script setup>

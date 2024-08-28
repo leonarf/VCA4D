@@ -2,8 +2,6 @@ import { formatNumber, formatPercent } from '@utils/format.js'
 import { getColor } from '@utils/colors.js'
 const RADIUSES_MINI_PIE = ['20%', '40%']
 const RIADUSES_PIE = ['50%', '75%']
-const SELECTED_COLOR = "#F7E9EB"
-const SELECTED_COLOR_HOVER = "#f7d9de"
 
 /*
 * RING CHART

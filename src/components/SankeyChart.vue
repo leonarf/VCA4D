@@ -1,7 +1,7 @@
 <template>
-    <div class="sankey-chart">
-      <v-chart class="chart" :option="options" />
-    </div>
+  <div class="sankey-chart">
+    <v-chart class="chart" :option="options" />
+  </div>
 </template>
 
 <script setup>
@@ -16,9 +16,9 @@ import {
 } from "echarts/components";
 import VChart from "vue-echarts";
 
-const props = defineProps({
+defineProps({
   options: Object
-}); // Question: It looks like if I use use "ref" or "reactive" to declare options, it does not get updated afer data is retrieved from network. Why?
+});
 
 use([
   CanvasRenderer,

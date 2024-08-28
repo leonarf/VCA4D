@@ -1,60 +1,3 @@
-<script setup>
-import _ from 'lodash';
-import Skeleton from '@components/Skeleton.vue'
-import { computed, onMounted, ref, watch } from 'vue'
-import ByCategories from '@components/home/ByCategories.vue'
-import ByContinents from '@components/home/ByContinents.vue'
-import FilterInput from '@components/home/FilterInput.vue'
-import { getAllJsonData, getStudyData, logMissingData } from '@utils/data'
-
-const countries = ref([])
-const studies = ref([])
-const continents = ref([])
-const categories = ref([])
-const mandatoryStudiesFilter = ref({
-  ecoData: false,
-  acvData: false,
-  socialData: false
-});
-
-onMounted(async () => {
-  const allJsonData = getAllJsonData()
-  countries.value = allJsonData.countries
-  studies.value = await populateStudiesData(allJsonData.studies);
-  continents.value = [...new Set(countries.value.map((country) => country.continent))]
-  categories.value = allJsonData.categories
-})
-
-async function populateStudiesData(jsonStudies) {
-  const studiesData = await Promise.all(jsonStudies.map(populateStudyData));
-  logMissingData(studiesData);
-  return studiesData;
-
-  async function populateStudyData(jsonStudy) {
-    const studyData = await getStudyData(jsonStudy.id);
-    return {
-      ...jsonStudy,
-      ..._.pick(studyData, ["ecoData", "acvData", "socialData"])
-    };
-  }
-}
-
-const filteredStudies = computed(() => {
-  return studies.value.filter(hasMandatoryParts);
-
-  function hasMandatoryParts(study) {
-    for (var studyPart in mandatoryStudiesFilter.value) {
-      if (mandatoryStudiesFilter.value[studyPart] && !study[studyPart]) { return false; }
-    }
-    return true;
-  }
-})
-
-function toggleFilter(filterKey) {
-  mandatoryStudiesFilter.value[filterKey] = !mandatoryStudiesFilter.value[filterKey];
-}
-</script>
-
 <template>
   <Skeleton>
     <section class="banner">
@@ -111,20 +54,19 @@ function toggleFilter(filterKey) {
         <div class="filter-section">
           <p>Filter the studies on this page based on the topics addressed.</p>
           <div>
-            <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')"/>
-            <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')"/>
-            <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')"/>
+            <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')" />
+            <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')" />
+            <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')" />
           </div>
-          <p>
+          <div>
             <div>
               Number of studies: {{ filteredStudies.length }}
             </div>
             <div>
               You can also <RouterLink class="link" :to="{ name: 'comparison' }">compare studies</RouterLink> based on key indicators
             </div>
-          </p>
+          </div>
         </div>
-        
       </section>
       <ByCategories
         :categories="categories"
@@ -136,6 +78,64 @@ function toggleFilter(filterKey) {
     </section>
   </Skeleton>
 </template>
+
+<script setup>
+import _ from 'lodash';
+import Skeleton from '@components/Skeleton.vue'
+import { RouterLink } from 'vue-router'
+import { computed, onMounted, ref } from 'vue'
+import ByCategories from '@components/home/ByCategories.vue'
+import ByContinents from '@components/home/ByContinents.vue'
+import FilterInput from '@components/home/FilterInput.vue'
+import { getAllJsonData, getStudyData, logMissingData } from '@utils/data'
+
+const countries = ref([])
+const studies = ref([])
+const continents = ref([])
+const categories = ref([])
+const mandatoryStudiesFilter = ref({
+  ecoData: false,
+  acvData: false,
+  socialData: false
+});
+
+onMounted(async () => {
+  const allJsonData = getAllJsonData()
+  countries.value = allJsonData.countries
+  studies.value = await populateStudiesData(allJsonData.studies);
+  continents.value = [...new Set(countries.value.map((country) => country.continent))]
+  categories.value = allJsonData.categories
+})
+
+async function populateStudiesData(jsonStudies) {
+  const studiesData = await Promise.all(jsonStudies.map(populateStudyData));
+  logMissingData(studiesData);
+  return studiesData;
+
+  async function populateStudyData(jsonStudy) {
+    const studyData = await getStudyData(jsonStudy.id);
+    return {
+      ...jsonStudy,
+      ..._.pick(studyData, ["ecoData", "acvData", "socialData"])
+    };
+  }
+}
+
+const filteredStudies = computed(() => {
+  return studies.value.filter(hasMandatoryParts);
+
+  function hasMandatoryParts(study) {
+    for (var studyPart in mandatoryStudiesFilter.value) {
+      if (mandatoryStudiesFilter.value[studyPart] && !study[studyPart]) { return false; }
+    }
+    return true;
+  }
+})
+
+function toggleFilter(filterKey) {
+  mandatoryStudiesFilter.value[filterKey] = !mandatoryStudiesFilter.value[filterKey];
+}
+</script>
 
 <style scoped lang="scss">
 section {

@@ -1,14 +1,14 @@
 <template>
   <div class="radio-input">
     <span class="title">{{ title }}</span>
-    <label class="option" v-for="option in options" :key="option.value">
+    <label v-for="option in options" :key="option.value" class="option">
       <input
-        type="radio"
         :id="uniqueId"
+        type="radio"
         :value="option.value"
         :checked="selected === option.value"
         @input="emits('update:selected', option.value)"
-      />
+      >
       <span class="label">
         <span>{{ option.label }}</span>
         <span class="subtitle">{{ option.subtitle }}</span>

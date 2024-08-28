@@ -1,7 +1,7 @@
 <template>
   <div>
     <a class="add-studies-button" @click="opened = true">
-      <Svg class="plus" :svg="PlusLogo"/>
+      <Svg class="plus" :svg="PlusLogo" />
       <div>Add studies</div>
     </a>
     <Modal

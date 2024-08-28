@@ -1,3 +1,17 @@
+<template>
+  <section>
+    <QuestionTitle>By <strong>country</strong></QuestionTitle>
+    <template v-for="continent in continents" :key="continent">
+      <ByContinent
+        class="continent"
+        :continent="continent"
+        :studies="getStudiesByContinent(continent)"
+        :countries="countries"
+      />
+    </template>
+  </section>
+</template>
+
 <script setup>
 import { computed } from 'vue';
 import ByContinent from './ByContinent.vue';
@@ -17,15 +31,6 @@ const getStudiesByContinent = (continent) => {
     return props.studies.filter(study => countries.includes(study.country))
 }
 </script>
-
-<template>
-    <section>
-        <QuestionTitle>By <strong>country</strong></QuestionTitle>
-        <template v-for="continent in continents" :key="continent">
-            <ByContinent class="continent" :continent="continent" :studies="getStudiesByContinent(continent)" :countries="countries"/>
-        </template>
-    </section>
-</template>
 
 <style scoped lang="scss">
 .continent:not(:first-child) {

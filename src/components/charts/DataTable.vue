@@ -1,7 +1,7 @@
 <template>
   <div style="width: 100%" :class="{ selectable }">
     <TableLite
-      :is-slot-mode="true"
+      :isSlotMode="true"
       :columns="columnsWithCheckbox"
       :rows="sortedRows"
       :total="sortedRows.length"
@@ -11,16 +11,16 @@
       }"
       :max-height="maxHeight"
       :pageSize="pageSize"
-      :is-hide-paging="sortedRows.length <= pageSize"
+      :isHidePaging="sortedRows.length <= pageSize"
       @row-clicked="onClickRow"
       @do-search="updateSortOnSearch"
     >
-      <template v-if="selectable" v-slot:checkbox="{ value: rowData }">
+      <template v-if="selectable" #checkbox="{ value: rowData }">
         <input
           type="checkbox"
           :checked="isSelected(rowData.id)"
           @click.stop="toggleRowSelection(rowData.id)"
-        />
+        >
       </template>
     </TableLite>
   </div>
@@ -34,7 +34,7 @@
     selectable: Boolean,
     selectedIds: {
       type: Array,
-      default: []
+      default: () => []
     },
     pageSize: { 
       type: Number,

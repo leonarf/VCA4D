@@ -11,13 +11,13 @@
       It also assesses its <strong>viability</strong> within the global economy.  
     </p>
 
-    <BenefitCostRatio :studyData="studyData" :currency="currency"/>
-    <AddedValue :studyData="studyData" :currency="currency"/>
-    <PublicFinances :studyData="studyData" :currency="currency"/>
+    <BenefitCostRatio :studyData="studyData" :currency="currency" />
+    <AddedValue :studyData="studyData" :currency="currency" />
+    <PublicFinances :studyData="studyData" :currency="currency" />
       
-    <BalanceOfTrade :study-data="studyData" :currency="currency" />
+    <BalanceOfTrade :studyData="studyData" :currency="currency" />
 
-    <AbroadSelling :studyData="studyData"/>
+    <AbroadSelling :studyData="studyData" />
     <AttachmentLink :studyId="studyData.id" attachmentType="eco.xlsx" />
   </article>
 </template>
@@ -31,7 +31,7 @@ import BalanceOfTrade from './study/economic-growth/BalanceOfTrade.vue'
 import AbroadSelling from './study/economic-growth/AbroadSelling.vue'
 import AttachmentLink from '@components/pdf/AttachmentLink.vue'
 
-const props = defineProps({
+defineProps({
   studyData: Object,
   currency: String
 })

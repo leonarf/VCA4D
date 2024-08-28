@@ -1,18 +1,18 @@
 <template>
-    <div class="flex flex-col max-w-[300px]">
-        <div class="value">
-          {{ displayedValue }}
-        </div>
-        <div class="title">
-          <div class="label">
-            {{ label }}
-          </div>
-          <InfoTooltip
-            v-if="description"
-            :text="description"
-          />
-        </div>
+  <div class="flex flex-col max-w-[300px]">
+    <div class="value">
+      {{ displayedValue }}
     </div>
+    <div class="title">
+      <div class="label">
+        {{ label }}
+      </div>
+      <InfoTooltip
+        v-if="description"
+        :text="description"
+      />
+    </div>
+  </div>
 </template>
 
 <script setup>

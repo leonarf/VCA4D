@@ -9,8 +9,8 @@
         <BarChart
           v-if="studyData"
           :options="netOperatingProfitByNumberActorsData"
-          @chartSeriesClick="handleDataChartSeriesClick"
-        ></BarChart>
+          @chart-series-click="handleDataChartSeriesClick"
+        />
         <MiniChartContainer
           v-if="selectedStage"
           :currentStage="selectedStage"
@@ -18,7 +18,7 @@
         >
           <div class="flex flex-row w-full justify-evenly mt-6">
             <div class="w-full flex flex-row justify-center">
-              <Ring :options="currentStageSplitData"></Ring>
+              <Ring :options="currentStageSplitData" />
             </div>
           </div>
         </MiniChartContainer>
@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
 import { getNetOperatingProfitByNumberActorsData, getMiniBarChart } from '@/charts/charts'
@@ -85,8 +85,6 @@ const currentStageSplitData = computed(() => {
     .filter((item) => !!item && item.value > 0)
   return getMiniBarChart(items, tooltip, prettyAmount.value, getColor(selectedStage.value))
 })
-
-const availableStages = computed(() => netOperatingProfitByNumberActorsData.value.xAxis.data)
 </script>
 
 <style scoped lang="scss"></style>

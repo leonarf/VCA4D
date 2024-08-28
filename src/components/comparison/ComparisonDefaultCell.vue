@@ -1,6 +1,6 @@
 <template>
   <div class="default-comparison-cell" :class="valueClass">
-      {{ formatedValue }}
+    {{ formatedValue }}
   </div>
 </template>
 

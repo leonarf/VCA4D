@@ -1,5 +1,10 @@
 <template>
-  <a target="_blank" class="text-blue-600" v-if="attachmentUrl" :href="attachmentUrl">
+  <a
+    v-if="attachmentUrl"
+    target="_blank"
+    class="text-blue-600"
+    :href="attachmentUrl"
+  >
     {{ textDisplayed }}
   </a>
 </template>

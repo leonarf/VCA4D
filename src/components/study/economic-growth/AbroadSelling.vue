@@ -1,13 +1,11 @@
 <template>
-  <QuestionTitle
-    >Is the value chain <strong>viable in the international economy</strong>?</QuestionTitle
-  >
+  <QuestionTitle>Is the value chain <strong>viable in the international economy</strong>?</QuestionTitle>
   <p>
     The VCA4D methodology assesses for each value chain its dependency on international exports as
     well as its capacity to export on international markets with competitive price or on the
     contrary a higher remuneration of the actors supported by protection policies.
   </p>
-  <br />
+  <br>
   <h3>Is the value chain able to compete within the international market?</h3>
 
   <InfoTitle
@@ -26,7 +24,7 @@
     />
     <NoDataBadge v-else />
   </div>
-  <br />
+  <br>
   <InfoTitle
     title="Nominal Protection Coefficient (NPC)"
     information="

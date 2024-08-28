@@ -1,19 +1,19 @@
 <template>
-  <QuestionTitle
-    >How <strong>profitable</strong> and sustainable are the value chain activities for the actors
-    involved?</QuestionTitle
-  >
+  <QuestionTitle>
+    How <strong>profitable</strong> and sustainable are the value chain activities for the actors
+    involved?
+  </QuestionTitle>
   <InfoTitle
     title="Benefit/Cost Ratio (%)"
     information="To do"
   />
   <template v-if="studyData">
-    <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
+    <BarChart :options="populatedBarChartData" @chart-series-click="handleDataChartSeriesClick" />
     <div v-if="selectedStage">
       <MiniChartContainer :currentStage="selectedStage" title="Benefit/Cost Ratio (%)">
         <div class="flex flex-row w-full justify-evenly mt-6">
           <div class="w-full flex flex-row justify-center">
-            <Ring :options="currentStageBenefitCostRatioData"></Ring>
+            <Ring :options="currentStageBenefitCostRatioData" />
           </div>
         </div>
       </MiniChartContainer>
@@ -25,7 +25,6 @@
 </template>
 
 <script setup>
-import _ from "lodash";
 import { computed, ref } from 'vue'
 import { getSelectableBarChart, getMiniBarChart } from '@/charts/charts'
 import InfoTitle from '@typography/InfoTitle.vue'

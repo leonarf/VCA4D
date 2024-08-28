@@ -1,21 +1,21 @@
 <template>
-    <table class="w-full">
-        <tbody>
-            <ComparisonHeader
-                :studies="studies"
-                @select-studies="emit('select-studies',$event)"
-            />
-            <ComparisonEconomics :studies="studies" />
+  <table class="w-full">
+    <tbody>
+      <ComparisonHeader
+        :studies="studies"
+        @select-studies="emit('select-studies',$event)"
+      />
+      <ComparisonEconomics :studies="studies" />
             
-            <ComparisonSeparator :studies="studies" />
+      <ComparisonSeparator :studies="studies" />
 
-            <ComparisonSocial :studies="studies" />
+      <ComparisonSocial :studies="studies" />
             
-            <ComparisonSeparator :studies="studies" />
+      <ComparisonSeparator :studies="studies" />
             
-            <ComparisonEnvironment :studies="studies" />
-        </tbody>
-    </table>
+      <ComparisonEnvironment :studies="studies" />
+    </tbody>
+  </table>
 </template>
 
 <script setup>
@@ -24,7 +24,7 @@ import ComparisonSocial from '@components/comparison/ComparisonSocial.vue'
 import ComparisonSeparator from '@components/comparison/ComparisonSeparator.vue'
 import ComparisonEnvironment from './comparison/ComparisonEnvironment.vue'
 import ComparisonEconomics from './comparison/ComparisonEconomics.vue'
-const props = defineProps({
+defineProps({
     studies: Array,
 })
 const emit = defineEmits(["select-studies"]);

@@ -1,6 +1,18 @@
+<template>
+  <div class="flex gap-1">
+    <input
+      :id="uniqueId"
+      type="checkbox"
+      :value="value"
+      @change="emits('toggle')"
+    >
+    <label :for="uniqueId">{{ label }}</label>
+  </div>
+</template>
+
 <script setup>
 import { computed, getCurrentInstance } from 'vue';
-const props = defineProps({
+defineProps({
     label: String,
     value: Boolean
 });
@@ -11,13 +23,6 @@ const uniqueId = computed(() => {
 const emits = defineEmits(["toggle"])
 
 </script>
-
-<template>
-  <div class="flex gap-1">
-    <input type="checkbox" :value="value" :id="uniqueId" @change="emits('toggle')"/>
-    <label :for="uniqueId">{{ label }}</label>
-  </div>
-</template>
 
 <style scoped lang="scss">
 </style>

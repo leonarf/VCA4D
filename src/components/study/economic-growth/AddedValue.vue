@@ -42,7 +42,7 @@
     :labels="['0%', '100%']"
     textLeft="<b>Total value added / value of production  &lt; 70 % :</b><br>The chain depends on imports and is not well integrated into the local economy"
     textRight="<b>> 70% :</b><br> Only few goods need to be imported"
-    :is-percent="true"
+    :isPercent="true"
   />
   <div v-else class="mt-4">
     <NoDataBadge />
@@ -61,7 +61,7 @@
         v-if="studyData"
         :options="addedValueCreatorsRingChartData"
         style="height: 400px; width: 520px"
-      ></Ring>
+      />
       <div class="font-semibold">{{ totalAddedValueCreators }}</div>
     </div>
     <div class="flex flex-col items-center">
@@ -69,7 +69,7 @@
         v-if="studyData"
         :options="addedValueReceiversRingChartData"
         style="height: 400px; width: 520px"
-      ></Ring>
+      />
       <div class="font-semibold">{{ totalAddedValueReceivers }}</div>
     </div>
   </div>

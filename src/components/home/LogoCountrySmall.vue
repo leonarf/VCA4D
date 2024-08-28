@@ -1,13 +1,13 @@
+<template>
+  <div :class="`fib fi-${isoCode} bg-cover rounded-full logo-country-small`" />
+</template>
+
 <script setup>
-const props = defineProps({
+defineProps({
     isoCode: String,
 })
 
 </script>
-
-<template>
-    <div :class="`fib fi-${isoCode} bg-cover rounded-full logo-country-small`"></div>
-</template>
 
 <style scoped lang="scss">
 .logo-country-small{

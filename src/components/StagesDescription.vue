@@ -3,9 +3,9 @@
     <h3>Main steps in the value chain</h3>
     <div class="flex flex-row flex-wrap gap-y-8 justify-evenly mt-4 mb-8">
       <div
-        class="text-[#303030] text-center flex flex-col space-y-2 items-center max-w-[200px]"
         v-for="step in populatedSteps"
         :key="step.name"
+        class="text-[#303030] text-center flex flex-col space-y-2 items-center max-w-[200px]"
       >
         <Svg
           class="stage-picto"

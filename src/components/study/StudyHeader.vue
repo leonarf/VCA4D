@@ -1,47 +1,47 @@
 <template>
-    <div class="header">
-        <div>
-            <div class="header-title">
-              {{ commodityName }}
-              <ComparisonLink
-                class="link"
-                type="product"
-                :studyId="studyData.id"
-              />
-            </div>
-            <div class="subtitle">Commodity</div>
-        </div>
-        <div>
-            <div class="header-title">
-              {{ dataToDisplay.country }}
-              <ComparisonLink
-                class="link"
-                type="country"
-                :studyId="studyData.id"
-              />
-            </div>
-            <div class="subtitle">Country</div>
-        </div>
-        <div v-if="localCurrency">
-          <CurrencySelector
-            class="header-title"
-            :currency="currency"
-            :localCurrency="localCurrency"
-            @update:currency="emits('update:currency', $event)"
-          />
-          <div class="subtitle">
-            {{ currencySubtitle }}
-            <InfoTooltip
-              v-if="! isLocalCurrencyDisplayed"
-              text="Using the World Bank's currency rates for the reference year"
-            />
-          </div>
-        </div>
-        <div>
-            <div class="header-title">{{ studyData.year }}</div>
-            <div class="subtitle">Reference year</div>
-        </div>
+  <div class="header">
+    <div>
+      <div class="header-title">
+        {{ commodityName }}
+        <ComparisonLink
+          class="link"
+          type="product"
+          :studyId="studyData.id"
+        />
+      </div>
+      <div class="subtitle">Commodity</div>
     </div>
+    <div>
+      <div class="header-title">
+        {{ dataToDisplay.country }}
+        <ComparisonLink
+          class="link"
+          type="country"
+          :studyId="studyData.id"
+        />
+      </div>
+      <div class="subtitle">Country</div>
+    </div>
+    <div v-if="localCurrency">
+      <CurrencySelector
+        class="header-title"
+        :currency="currency"
+        :localCurrency="localCurrency"
+        @update:currency="emits('update:currency', $event)"
+      />
+      <div class="subtitle">
+        {{ currencySubtitle }}
+        <InfoTooltip
+          v-if="! isLocalCurrencyDisplayed"
+          text="Using the World Bank's currency rates for the reference year"
+        />
+      </div>
+    </div>
+    <div>
+      <div class="header-title">{{ studyData.year }}</div>
+      <div class="subtitle">Reference year</div>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -62,14 +62,6 @@ const props = defineProps({
 })
 
 const emits = defineEmits(["update:currency"]);
-
-const commodityId = computed(() => {
-    return getStudy(props.studyData.id).product;
-});
-
-const countryId = computed(() => {
-    return getStudy(props.studyData.id).product;
-});
 
 const commodityName = computed(() => {
     return getProduct(getStudy(props.studyData.id).product).prettyName;

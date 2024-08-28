@@ -1,24 +1,24 @@
 <template>
-    <ComparisonTitle title="Social Sustainability" :studies="studies" />
-    <ComparisonExpandableRow
-      v-for="(part, index) in SOCIAL_PARTS"
-      :studies="studies"
-      :key="`part_${index}`"
-      :title="part"
-      :getValue="(study) => getOptionalSocialAverageGroup(study.socialData?.[index])"
-      :getSubValues="(study) => getSocialAverageSubGroups(study.socialData?.[index])"
-    >
-      <template #default="{ value }">
-        <div class="tag-container mx-auto my-2">
-          <Tag
-              v-if="value"
-              class="tag"
-              :scale="value"
-              :appreciation="getAppreciation(value)"
-          />
-        </div>
-      </template>
-    </ComparisonExpandableRow>
+  <ComparisonTitle title="Social Sustainability" :studies="studies" />
+  <ComparisonExpandableRow
+    v-for="(part, index) in SOCIAL_PARTS"
+    :key="`part_${index}`"
+    :studies="studies"
+    :title="part"
+    :getValue="(study) => getOptionalSocialAverageGroup(study.socialData?.[index])"
+    :getSubValues="(study) => getSocialAverageSubGroups(study.socialData?.[index])"
+  >
+    <template #default="{ value }">
+      <div class="tag-container mx-auto my-2">
+        <Tag
+          v-if="value"
+          class="tag"
+          :scale="value"
+          :appreciation="getAppreciation(value)"
+        />
+      </div>
+    </template>
+  </ComparisonExpandableRow>
 </template>
 
 <script setup>
@@ -27,7 +27,7 @@ import { getSocialAverageGroup } from '@utils/misc.js'
 import Tag from '@components/study/social-sustainability/Tag.vue';
 import ComparisonTitle from './ComparisonTitle.vue';
 import ComparisonExpandableRow from './ComparisonExpandableRow.vue';
-const props = defineProps({
+defineProps({
     studies: Array,
 })
 

@@ -1,7 +1,17 @@
-<script setup>
-import { RouterLink } from 'vue-router';
+<template>
+  <div class="card relative">
+    <component :is="link ? 'RouterLink' : 'v-fragment'" :to="link" class="w-[150px]">
+      <div :class="`cursor-pointer card-icon ${isLocal ? 'bg-[#868686]' : (isOpen ? 'bg-[#9B9B9B]' : 'bg-[#DFDFDF]')} hover:bg-[#CFCFCF]`">
+        <slot name="logo" />
+        <p class="font-semibold text-center">{{ title }}</p>
+      </div>  
+    </component>
+    <slot name="footer" />   
+  </div>
+</template>
 
-const props = defineProps({
+<script setup>
+defineProps({
     link: {
         required: false,
         type: String
@@ -11,18 +21,6 @@ const props = defineProps({
     title: String
 })
 </script>
-
-<template>
-    <div class="card relative">
-        <component :is="link ? 'RouterLink' : 'v-fragment'" :to="link" class="w-[150px]">
-            <div :class="`cursor-pointer card-icon ${isLocal ? 'bg-[#868686]' : (isOpen ? 'bg-[#9B9B9B]' :  'bg-[#DFDFDF]')} hover:bg-[#CFCFCF]`">
-                <slot name="logo"></slot>
-                <p class="font-semibold text-center">{{ title }}</p>
-            </div>  
-        </component>
-        <slot name="footer"></slot>   
-    </div>
-</template>
 
 <style scoped lang="scss">
 .card {

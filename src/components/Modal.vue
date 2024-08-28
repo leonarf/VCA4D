@@ -2,9 +2,9 @@
   <Teleport to="body">
     <div v-if="opened" class="modal-overlay">
       <div class="modal">
-        <slot></slot>
+        <slot />
         <a class="exit-button" @click="emits('close')">
-          <Svg :svg="Cross"/>
+          <Svg :svg="Cross" />
         </a>
       </div>
     </div>

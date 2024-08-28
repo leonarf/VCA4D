@@ -1,7 +1,15 @@
+<template>
+  <Svg 
+    :svg="getProductLogo(productName)" 
+    class="logo"
+    style="height: 50px; width: 50px"
+  />
+</template>
+
 <script setup>
 import { getProductLogo } from '@utils/logos';
 import Svg from '@components/Svg.vue';
-const props = defineProps({
+defineProps({
     productName: String,
     alt: {
         required: false,
@@ -9,14 +17,6 @@ const props = defineProps({
     }
 })
 </script>
-
-<template>
-    <Svg 
-        :svg="getProductLogo(productName)" 
-        class="logo"
-        style="height: 50px; width: 50px"
-    />
-</template>
 
 <style scoped lang="scss">
 </style>

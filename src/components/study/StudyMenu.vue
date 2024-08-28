@@ -32,7 +32,7 @@
 <script setup>
 import { defineEmits } from 'vue'
 
-const props = defineProps({
+defineProps({
   views: Array,
   selectedViewKey: String,
   fullReportPdfUrl: String

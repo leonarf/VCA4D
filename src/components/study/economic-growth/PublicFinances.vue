@@ -1,15 +1,15 @@
 <template>
-  <QuestionTitle
-    >What is the contribution of the value chain to the
-    <strong>public finances</strong>?</QuestionTitle
-  >
+  <QuestionTitle>
+    What is the contribution of the value chain to the
+    <strong>public finances</strong>?
+  </QuestionTitle>
   <div class="flex flex-row flex-wrap items-center ml-4 md:ml-12 -mt-8 -mb-8">
     <div class="w-full lg:w-1/4">
       <InfoTitle
         title="Public Funds Balance"
         information="The public funds balance is given by the amount of taxes received by the State minus the subsidies."
       />
-      <div class="uppercase font-semibold text-[#303030] text-xl"></div>
+      <div class="uppercase font-semibold text-[#303030] text-xl" />
       <div class="font-semibold text-2xl text-[#C1C1C1]">{{ publicFundsBalance }}</div>
       <div class="uppercase font-semibold text-[#C1C1C1] text-2xl mt-4">
         {{ formatPercent(parseFloat(studyData.ecoData.macroData?.publicFundsBalance)) }}
@@ -23,7 +23,7 @@
       <BarChart
         v-if="studyData"
         :options="publicFinancesBarData"
-        @chartSeriesClick="handleDataChartSeriesClick"
+        @chart-series-click="handleDataChartSeriesClick"
       />
     </div>
   </div>
@@ -31,7 +31,7 @@
     <MiniChartContainer :currentStage="selectedStage" title="Contribution to the public finances">
       <div class="flex flex-row w-full justify-evenly mt-6">
         <div class="w-full flex flex-row justify-center">
-          <Ring :options="currentStagePublicFinancesData"></Ring>
+          <Ring :options="currentStagePublicFinancesData" />
         </div>
       </div>
     </MiniChartContainer>
@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
 import { getPublicFinancesData, getMiniBarChart } from '@/charts/charts'

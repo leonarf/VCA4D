@@ -1,30 +1,29 @@
 <template>
   <div>
-    <h3>What are the impacts of this value chain on {{detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name}}?</h3>
-      <InfoTitle :title="detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name" :information="detailsToDisplay.helpBoxText" class="my-4"/>
-      <BarChart :options="populatedBarChartData" @chartSeriesClick="handleDataChartSeriesClick" />
-      <div v-if="selectedValueChain">
-        <MiniChartContainer
-          :currentStage="selectedValueChain"
-          :title="`${detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name} (${impact.unit})`"
-          :isEnvironment="true"
-        >
-          <div class="flex flex-row w-full justify-evenly mt-6">
-              <div class="w-full flex flex-row justify-center">
-                <BarChart :options="detailBarChartOptions"></BarChart>
-              </div>
+    <h3>What are the impacts of this value chain on {{ detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name }}?</h3>
+    <InfoTitle :title="detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name" :information="detailsToDisplay.helpBoxText" class="my-4" />
+    <BarChart :options="populatedBarChartData" @chart-series-click="handleDataChartSeriesClick" />
+    <div v-if="selectedValueChain">
+      <MiniChartContainer
+        :currentStage="selectedValueChain"
+        :title="`${detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name} (${impact.unit})`"
+        :isEnvironment="true"
+      >
+        <div class="flex flex-row w-full justify-evenly mt-6">
+          <div class="w-full flex flex-row justify-center">
+            <BarChart :options="detailBarChartOptions" />
           </div>
-        </MiniChartContainer>
-      </div>
+        </div>
+      </MiniChartContainer>
     </div>
+  </div>
 </template>
 
 <script setup>
 import { computed, ref } from 'vue'
-import { getSelectableBarChart, getRingChart } from '@/charts/charts'
+import { getSelectableBarChart } from '@/charts/charts'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 import BarChart from '@charts/BarChart.vue'
-import Ring from '@charts/Ring.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 import { formatNumber } from '@utils/format.js'
 import { getColor } from '@utils/colors.js'
