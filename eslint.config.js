@@ -1,5 +1,12 @@
 /* eslint-env node */
 // import '@rushstack/eslint-patch/modern-module-resolution.js';
+import { includeIgnoreFile } from "@eslint/compat";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const gitignorePath = path.resolve(__dirname, ".gitignore");
 
 import js from "@eslint/js";
 import pluginVue from 'eslint-plugin-vue';
@@ -7,6 +14,7 @@ import vueParser from 'vue-eslint-parser';
 import tseslint from 'typescript-eslint';
 
 export default [
+  includeIgnoreFile(gitignorePath),
   js.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
   ...tseslint.configs.recommended,
