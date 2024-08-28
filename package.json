@@ -9,8 +9,10 @@
     "clean": "rm -rf node_modules/",
     "preview": "vite preview",
     "lint": "eslint . --ignore-pattern .gitignore",
+    "pre-commit-lint": "git diff HEAD --name-only  | xargs eslint --ignore-pattern .gitignore --quiet",
     "lint-fix": "eslint . --ignore-pattern .gitignore --fix",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "prepare": "husky"
   },
   "dependencies": {
     "axios": "^1.6.8",
@@ -35,6 +37,7 @@
     "autoprefixer": "^10.4.14",
     "eslint": "^9.0.0",
     "eslint-plugin-vue": "^9.27.0",
+    "husky": "^9.1.5",
     "postcss": "^8.4.25",
     "prettier": "^3.2.5",
     "sass": "^1.58.3",
