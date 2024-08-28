@@ -11,12 +11,6 @@ export default [
   ...pluginVue.configs['flat/recommended'],
   ...tseslint.configs.recommended,
   {
-    files: ["**/*.vue", "**/*.js"],
-    rules: {
-      "no-extra-boolean-cast":"off",
-    }
-  },
-  {
     files: ["**/*.vue"],
     languageOptions: {
       parser: vueParser,

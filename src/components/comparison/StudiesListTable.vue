@@ -71,7 +71,7 @@
   }];
 
   function isAvailable(studyData, dataKey) {
-    return !! studyData[dataKey] ? "Available" : "-"
+    return studyData[dataKey] ? "Available" : "-"
   }
 </script>
 
