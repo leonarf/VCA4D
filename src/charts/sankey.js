@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { useCurrencyUtils } from '@utils/format.js'
+import { useCurrencyUtils, formatNumber } from '@utils/format.js'
 import { buildDepthByActor } from "./sankeyDepth";
 
 export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurrency }) => {
@@ -58,10 +58,10 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
                     return product;
                 },
             },
-            "Monetary value": monetaryValue,
-            "Volume exchanged (kg Of product)": volumeExchanged,
+            "Monetary value": prettyAmount.value(monetaryValue, monetaryCurrency),
+            "Volume exchanged (kg Of product)": formatNumber(volumeExchanged),
             "Products": product,
-            "Unitary price (local curency)": unitPrice,
+            "Unitary price (local curency)": prettyAmount.value(unitPrice, monetaryCurrency),
             "Volume Unit": volumeUnit,
             "Remark": ''
         };
@@ -80,9 +80,9 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
                 return formatTooltip("Products", {
                   "Source": params.data.source,
                   "Target": params.data.target,
-                  "Monetary value": prettyAmount.value(params.data["Monetary value"], monetaryCurrency),
+                  "Monetary value": params.data["Monetary value"],
                   "Products": params.data['Products'],
-                  "Unitary price (local curency)": prettyAmount.value(params.data['Unitary price (local curency)'], monetaryCurrency),
+                  "Unitary price (local curency)": params.data['Unitary price (local curency)'],
                   "Volume exchanged (kg Of product)": params.data['Volume exchanged (kg Of product)'],
                   "Volume unit": params.data['Volume unit'],
                   "Remark": params.data['Remark'],
