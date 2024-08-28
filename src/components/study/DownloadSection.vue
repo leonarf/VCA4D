@@ -1,14 +1,19 @@
 <template>
   <div class="download-section">
     <h3 class="download-title">Available for download</h3>
-    <!-- WIP -->
-    {{ studyId }}
+    <div
+      v-for="urlKey in studyUrls"
+      :key="urlKey"
+    >
+      <!-- WIP: Display explanation text -->
+      {{ urlKey }}
+    </div>
   </div>
 </template>
 
 <script setup>
 defineProps({
-  studyId: String
+  studyUrls: Object
 });
 </script>
 

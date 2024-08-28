@@ -21,5 +21,8 @@ export async function getStudyUploadUrls(studyId) {
   return {
     fullPdf: await getStudyFileAttachmentUrl(studyId, 'full-report.pdf'),
     briefPdf: await getStudyFileAttachmentUrl(studyId, 'brief-report.pdf'),
+    ecoXlsx: await getStudyFileAttachmentUrl(studyId, 'eco.xlsx'),
+    socialXlsx: await getStudyFileAttachmentUrl(studyId, 'social.xlsx'),
+    acvXlsx: await getStudyFileAttachmentUrl(studyId, 'acv.xlsx'),
   }
 }

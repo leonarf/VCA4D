@@ -34,7 +34,7 @@
         />
       </template>
       <section v-if="isDataLoaded" class="my-16">
-        <DownloadSection :studyId="studyData.id" />
+        <DownloadSection :studyUrls="studyUrls" />
       </section>
     </div>
   </Skeleton>
