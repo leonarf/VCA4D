@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/VCA4D/dist/",
+    "clean": "rm -rf node_modules/",
     "preview": "vite preview",
     "lint": "eslint . --ignore-pattern .gitignore",
+    "lint-fix": "eslint . --ignore-pattern .gitignore --fix",
     "format": "prettier --write src/"
   },
   "dependencies": {
