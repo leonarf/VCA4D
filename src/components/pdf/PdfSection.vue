@@ -20,7 +20,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import PdfReader from './PdfReader.vue'
 
 const props = defineProps({

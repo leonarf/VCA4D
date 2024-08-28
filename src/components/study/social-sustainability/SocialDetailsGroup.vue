@@ -30,7 +30,7 @@ import { ref } from 'vue';
 import Tag from './Tag.vue'
 import { getSocialScoreColor } from '@utils/colors.js'
 
-const props = defineProps({
+defineProps({
     group: Object
 })
 

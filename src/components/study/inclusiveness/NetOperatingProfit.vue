@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
 import { 
     getNetOperatingProfitData,
@@ -58,8 +58,6 @@ const { prettyAmount, convertAmount } = useCurrencyUtils(props);
 const { stages, actors } = useActorsAndStages(props);
 
 const netOperatingProfitData = computed(() => getNetOperatingProfitData(stages, actors, convertAmount, prettyAmount, selectedStage))
-
-const availableStages = computed(() => netOperatingProfitData.value.xAxis.data)
 
 const currentStageNetOperatingProfitByTypeOfActorData = computed(() => {
     const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)

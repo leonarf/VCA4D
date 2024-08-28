@@ -11,7 +11,7 @@
 import SocialDetailsGroup from './SocialDetailsGroup.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 
-const props = defineProps({
+defineProps({
   studyData: Object
 })
 

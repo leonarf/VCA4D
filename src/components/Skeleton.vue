@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 
-const props = defineProps({
+defineProps({
     skipFooter: {
         type: Boolean,
         default: false,

@@ -31,7 +31,7 @@ import BalanceOfTrade from './study/economic-growth/BalanceOfTrade.vue'
 import AbroadSelling from './study/economic-growth/AbroadSelling.vue'
 import AttachmentLink from '@components/pdf/AttachmentLink.vue'
 
-const props = defineProps({
+defineProps({
   studyData: Object,
   currency: String
 })

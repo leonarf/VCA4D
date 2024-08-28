@@ -21,10 +21,9 @@
 
 <script setup>
 import { computed, ref } from 'vue'
-import { getSelectableBarChart, getRingChart } from '@/charts/charts'
+import { getSelectableBarChart } from '@/charts/charts'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 import BarChart from '@charts/BarChart.vue'
-import Ring from '@charts/Ring.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 import { formatNumber } from '@utils/format.js'
 import { getColor } from '@utils/colors.js'

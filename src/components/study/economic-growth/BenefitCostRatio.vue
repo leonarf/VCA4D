@@ -25,7 +25,6 @@
 </template>
 
 <script setup>
-import _ from "lodash";
 import { computed, ref } from 'vue'
 import { getSelectableBarChart, getMiniBarChart } from '@/charts/charts'
 import InfoTitle from '@typography/InfoTitle.vue'

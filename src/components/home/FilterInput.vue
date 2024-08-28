@@ -1,6 +1,6 @@
 <script setup>
 import { computed, getCurrentInstance } from 'vue';
-const props = defineProps({
+defineProps({
     label: String,
     value: Boolean
 });

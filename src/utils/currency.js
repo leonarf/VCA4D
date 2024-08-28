@@ -54,7 +54,7 @@ export const isValidCurrency = (ccy) => {
       style: "currency",
       currency: ccy
     })
-  } catch (err) {
+  } catch {
     console.log(`Given currency is not standard: ${ccy}`)
     return false
   }

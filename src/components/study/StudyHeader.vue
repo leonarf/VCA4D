@@ -63,14 +63,6 @@ const props = defineProps({
 
 const emits = defineEmits(["update:currency"]);
 
-const commodityId = computed(() => {
-    return getStudy(props.studyData.id).product;
-});
-
-const countryId = computed(() => {
-    return getStudy(props.studyData.id).product;
-});
-
 const commodityName = computed(() => {
     return getProduct(getStudy(props.studyData.id).product).prettyName;
 });

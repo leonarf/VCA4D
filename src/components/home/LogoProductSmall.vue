@@ -1,7 +1,7 @@
 <script setup>
 import { getProductLogo } from '@utils/logos';
 import Svg from '@components/Svg.vue';
-const props = defineProps({
+defineProps({
     productName: String,
     alt: {
         required: false,

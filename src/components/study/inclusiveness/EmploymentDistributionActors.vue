@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
 import { 
     getNumberOfActorsData,
@@ -67,8 +67,6 @@ const { stages, actors } = useActorsAndStages(props);
 const numberOfActorsData = computed(() => {
     return getNumberOfActorsData(stages, actors, selectedStage)
 })
-
-const availableStages = computed(() => numberOfActorsData.value.xAxis.data)
 
 
 const totalNumberOfActors = computed(() => {

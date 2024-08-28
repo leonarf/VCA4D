@@ -80,7 +80,7 @@ import PdfSection from './pdf/PdfSection.vue';
 import Sankey from './charts/Sankey.vue'
 import AttachmentLink from '@components/pdf/AttachmentLink.vue'
 
-const props = defineProps({
+defineProps({
   studyData: Object,
   studyPdfUrls: Object
 });

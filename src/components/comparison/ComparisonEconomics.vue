@@ -85,7 +85,7 @@ import ComparisonTitle from './ComparisonTitle.vue';
 import ComparisonRow from './ComparisonRow.vue';
 import ComparisonExpandableRow from './ComparisonExpandableRow.vue';
 import ComparisonDefaultCell from './ComparisonDefaultCell.vue';
-const props = defineProps({
+defineProps({
     studies: Array,
 })
 

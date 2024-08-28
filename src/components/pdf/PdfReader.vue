@@ -12,7 +12,7 @@
 <script setup>
 import { defineAsyncComponent, ref } from 'vue';
 const VuePdfEmbed = defineAsyncComponent(() => import('vue-pdf-embed'))
-const props = defineProps({
+defineProps({
   path: String
 });
 const currentPage = ref(1)

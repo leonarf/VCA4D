@@ -16,7 +16,7 @@ import {
 } from "echarts/components";
 import VChart from "vue-echarts";
 
-const props = defineProps({
+defineProps({
   options: Object
 });
 

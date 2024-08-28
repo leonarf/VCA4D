@@ -63,7 +63,7 @@
 
 <script setup>
 import _ from "lodash";
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
 import { 
     getNumberOfJobsData, 
@@ -96,8 +96,6 @@ const handleDataChartSeriesClick = (event) => {
 const { stages, actors } = useActorsAndStages(props);
 
 const numberOfJobsData = computed(() => getNumberOfJobsData(stages, actors, selectedStage))
-
-const availableStages = computed(() => numberOfJobsData.value.xAxis.data)
 
 const totalNumberOfJobs = computed(() => {
     return formatNumber(numberOfJobsData.value.series[0].data.map(itemData => itemData.value).reduce((res, item) => res + item, 0))

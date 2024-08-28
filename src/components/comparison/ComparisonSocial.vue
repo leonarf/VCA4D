@@ -27,7 +27,7 @@ import { getSocialAverageGroup } from '@utils/misc.js'
 import Tag from '@components/study/social-sustainability/Tag.vue';
 import ComparisonTitle from './ComparisonTitle.vue';
 import ComparisonExpandableRow from './ComparisonExpandableRow.vue';
-const props = defineProps({
+defineProps({
     studies: Array,
 })
 

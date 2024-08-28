@@ -417,11 +417,11 @@ const parseImportExportSheet = (json) => {
   }
 
   var acceptableImportKeyWord = ["IMPORT", "Imported"]
-  for (var keyword of acceptableImportKeyWord) {
+  for (let keyword of acceptableImportKeyWord) {
     importExport.import.push(...importExportItems.filter(item => item.importExport?.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
   }
   var acceptableExportKeyWord = ["EXPORT", "Exported"]
-  for (var keyword of acceptableExportKeyWord) {
+  for (let keyword of acceptableExportKeyWord) {
     importExport.export.push(...importExportItems.filter(item => item.importExport?.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
   }
 
@@ -461,10 +461,11 @@ const parseFarmGatePriceSheet = (json, currencyRatio) => {
   })
   if (currencyRatio && currencyRatio != 1) {
     result = result.map(item => {
-      var newItem = { ...item }
-      newItem.farmPrice = item.farmPrice / currencyRatio,
-        newItem.endPrice = item.endPrice / currencyRatio
-      return newItem
+      return {
+        ...item,
+        farmPrice: item.farmPrice / currencyRatio,
+        endPrice: item.endPrice / currencyRatio
+      };
     })
   }
   return result

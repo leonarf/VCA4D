@@ -3,7 +3,7 @@ import Tooltip from "@components/Tooltip.vue";
 import QuestionMark from '../../images/icons/info-question.svg'
 import Svg from '@components/Svg.vue';
 
-const props = defineProps({
+defineProps({
     title: String,
     information: String
 });

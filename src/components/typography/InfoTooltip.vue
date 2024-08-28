@@ -16,7 +16,7 @@ import Tooltip from "@components/Tooltip.vue";
 import Svg from "@components/Svg.vue";
 import QuestionMark from '../../images/icons/info-question.svg'
 
-const props = defineProps({
+defineProps({
   text: String,
 })
 </script>

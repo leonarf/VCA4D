@@ -1,7 +1,5 @@
 <script setup>
-import { RouterLink } from 'vue-router';
-
-const props = defineProps({
+defineProps({
     link: {
         required: false,
         type: String

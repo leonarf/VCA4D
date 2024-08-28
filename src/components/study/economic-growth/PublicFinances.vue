@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
 import { getPublicFinancesData, getMiniBarChart } from '@/charts/charts'

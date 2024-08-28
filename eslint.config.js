@@ -14,12 +14,7 @@ export default [
     files: ["**/*.vue", "**/*.js"],
     rules: {
       "no-extra-boolean-cast":"off",
-      "no-unused-vars": "off",
-      "no-undef": "off",
       "no-case-declarations": "off",
-      "no-redeclare": "off",
-      "@typescript-eslint/no-unused-vars": "off",
-      "@typescript-eslint/no-unused-expressions": "off",
     }
   },
   {

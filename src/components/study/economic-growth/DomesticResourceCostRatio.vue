@@ -14,7 +14,7 @@
 
 <script setup>
 import Gauge from '@charts/Gauge.vue'
-const props = defineProps({
+defineProps({
   value: Number
 })
 </script>

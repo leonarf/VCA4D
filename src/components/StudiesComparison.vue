@@ -24,7 +24,7 @@ import ComparisonSocial from '@components/comparison/ComparisonSocial.vue'
 import ComparisonSeparator from '@components/comparison/ComparisonSeparator.vue'
 import ComparisonEnvironment from './comparison/ComparisonEnvironment.vue'
 import ComparisonEconomics from './comparison/ComparisonEconomics.vue'
-const props = defineProps({
+defineProps({
     studies: Array,
 })
 const emit = defineEmits(["select-studies"]);

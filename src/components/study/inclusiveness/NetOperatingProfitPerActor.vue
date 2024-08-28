@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
 import { getNetOperatingProfitByNumberActorsData, getMiniBarChart } from '@/charts/charts'
@@ -85,8 +85,6 @@ const currentStageSplitData = computed(() => {
     .filter((item) => !!item && item.value > 0)
   return getMiniBarChart(items, tooltip, prettyAmount.value, getColor(selectedStage.value))
 })
-
-const availableStages = computed(() => netOperatingProfitByNumberActorsData.value.xAxis.data)
 </script>
 
 <style scoped lang="scss"></style>

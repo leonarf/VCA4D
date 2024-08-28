@@ -11,7 +11,7 @@
 
 <script setup>
 import HorizontalSlider from '../../charts/HorizontalSlider.vue';
-const props = defineProps({
+defineProps({
   value: Number,
 })
 

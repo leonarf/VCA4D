@@ -1,3 +1,4 @@
+/* global __dirname */
 import { fileURLToPath, URL } from 'node:url'
 import { resolve } from 'node:path'
 

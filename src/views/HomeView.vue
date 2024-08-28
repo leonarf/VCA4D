@@ -1,7 +1,7 @@
 <script setup>
 import _ from 'lodash';
 import Skeleton from '@components/Skeleton.vue'
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import ByCategories from '@components/home/ByCategories.vue'
 import ByContinents from '@components/home/ByContinents.vue'
 import FilterInput from '@components/home/FilterInput.vue'
