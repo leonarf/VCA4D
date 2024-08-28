@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { useCurrencyUtils } from '@utils/format.js'
+import { useCurrencyUtils, formatNumber } from '@utils/format.js'
 import { buildDepthByActor } from "./sankeyDepth";
 
 export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurrency }) => {
@@ -56,12 +56,12 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
                 show: true,
                 formatter: () => {
                     return product;
-                }
+                },
             },
-            "Monetary value": monetaryValue,
-            "Volume exchanged (kg Of product)": volumeExchanged,
+            "Monetary value": prettyAmount.value(monetaryValue, monetaryCurrency),
+            "Volume exchanged (kg Of product)": formatNumber(volumeExchanged),
             "Products": product,
-            "Unitary price (local curency)": unitPrice,
+            "Unitary price (local curency)": prettyAmount.value(unitPrice, monetaryCurrency),
             "Volume Unit": volumeUnit,
             "Remark": ''
         };
@@ -72,17 +72,17 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
         formatter: (params) => {
             switch (params?.dataType) {
               case "node":
-                return formatTooltip({
+                return formatTooltip("Name", {
                   "Name": params.data.name,
                   "Stage": findActorStage(actors, params.data.name)
                 });
               case "edge":
-                return formatTooltip({
+                return formatTooltip("Products", {
                   "Source": params.data.source,
                   "Target": params.data.target,
-                  "Monetary value": prettyAmount.value(params.data["Monetary value"], monetaryCurrency),
+                  "Monetary value": params.data["Monetary value"],
                   "Products": params.data['Products'],
-                  "Unitary price (local curency)": prettyAmount.value(params.data['Unitary price (local curency)'], monetaryCurrency),
+                  "Unitary price (local curency)": params.data['Unitary price (local curency)'],
                   "Volume exchanged (kg Of product)": params.data['Volume exchanged (kg Of product)'],
                   "Volume unit": params.data['Volume unit'],
                   "Remark": params.data['Remark'],
@@ -101,12 +101,23 @@ function findActorStage(actors, actorName) {
   return actor ? actor.stage : undefined;
 }
 
-function formatTooltip(items) {
-  const tooltipItems = Object.entries(items)
-    .map(([itemLabel, itemValue]) => formatTooltipItem(itemLabel, itemValue));
+function formatTooltip(titleKey, items) {
+  let listKeys = Object.keys(items);
+  let title = null;
+  if (listKeys.includes(titleKey)) {
+    title = items[titleKey];
+    listKeys = listKeys.filter(key => key !== titleKey);
+  }
+  const tooltipItems = listKeys
+    .map((itemLabel) => formatTooltipItem(itemLabel, items[itemLabel]));
 
   return `
     <div style='max-width: 400px; white-space: normal;'>
+      ${title ? `
+        <div style='font-size: 16px; margin-bottom: 10px'>
+          <strong>${title}</strong>
+        </div>
+      ` : ``}
       <ul style='list-style: initial; margin: 0 10px; padding: initial;'>
         ${tooltipItems.join('')}
       </ul>

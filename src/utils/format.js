@@ -45,7 +45,7 @@ export const formatPercent = (amount) => {
 
 export function useCurrencyUtils(props) {
   const prettyAmount = computed(() => (amount) =>
-    `${formatNumber(amount)}${getCurrencySymbol(props.currency)}`
+    `${formatNumber(amount)} ${getCurrencySymbol(props.currency)}`
   );
 
   const convertAmount = computed(() => (amount) =>
