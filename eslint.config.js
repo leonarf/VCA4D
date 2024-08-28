@@ -19,6 +19,8 @@ export default [
       }
     },
     rules: {
+      "vue/block-order": ["error", { order: ["template", "script", "style"] }],
+
       // there can only be 3 vue attributes per line: after that we must unfold
       "vue/max-attributes-per-line": ["warn", {
         singleline: { max: 3 }

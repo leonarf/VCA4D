@@ -1,3 +1,11 @@
+<template>
+  <div class="logo">
+    <Svg 
+      :svg="getProductLogo(productName)" 
+    />
+  </div>
+</template>
+
 <script setup>
 import { getProductLogo } from '@utils/logos';
 import Svg from '@components/Svg.vue';
@@ -9,14 +17,6 @@ defineProps({
     }
 })
 </script>
-
-<template>
-  <div class="logo">
-    <Svg 
-      :svg="getProductLogo(productName)" 
-    />
-  </div>
-</template>
 
 <style scoped lang="scss">
     .logo {

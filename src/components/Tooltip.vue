@@ -1,3 +1,7 @@
+<template>
+  <span ref="tooltipRef" />
+</template>
+
 <script setup lang="ts">
 import { computed } from "vue";
 import tippy from "tippy.js";
@@ -49,9 +53,5 @@ onMounted(initTooltip);
 onUpdated(initTooltip);
 onUnmounted(destroyTooltip);
 </script>
-
-<template>
-  <span ref="tooltipRef" />
-</template>
 
 <style></style>

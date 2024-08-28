@@ -1,9 +1,3 @@
-<script setup>
-defineProps({
-    text: String
-})
-</script>
-
 <template>
   <div class="card-footer">
     <div class="logo">
@@ -12,6 +6,12 @@ defineProps({
     <span class="text">{{ text }}</span>
   </div>
 </template>
+
+<script setup>
+defineProps({
+    text: String
+})
+</script>
 
 <style scoped lang="scss">
 .card-footer {

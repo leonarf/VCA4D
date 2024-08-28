@@ -1,49 +1,3 @@
-<script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
-import { getLink } from '@utils/router'
-import { getCountry, getProduct } from '@utils/data'
-import { getStudyListQueryString } from '@utils/router.js'
-import LogoCountrySmall from './LogoCountrySmall.vue';
-import LogoCountryLarge from './LogoCountryLarge.vue';
-import LogoProductLarge from './LogoProductLarge.vue';
-import CardList from './CardList.vue'
-import Section from './Section.vue';
-import CardFooter from './CardFooter.vue';
-import NumberBadge from './NumberBadge.vue';
-import Card from './Card.vue';
-import SubCardsList from './SubCardsList.vue'
-
-const props = defineProps({
-    studies: Array,
-    countries: Array,
-    category: Object
-})
-
-const openedProduct = ref(null)
-
-const closeProduct = () => {
-    openedProduct.value = null
-}
-onMounted(() => {
-    document.addEventListener('click', closeProduct);
-});
-
-onBeforeUnmount(() => {
-    document.removeEventListener('click', closeProduct);
-})
-
-const getStudiesByProduct = () => {
-    const products = [... new Set(props.studies.map(study => study.product))]
-    return products.map(product => ({
-        product,
-        studies: props.studies.filter(study => study.product === product)
-    }))
-}
-
-
-
-</script>
-
 <template>
   <template v-if="studies.length > 0">
     <Section :title="category.prettyName" :textColor="category.textColor" :borderColor="category.color">
@@ -108,5 +62,51 @@ const getStudiesByProduct = () => {
     </Section>
   </template>
 </template>
+
+<script setup>
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { getLink } from '@utils/router'
+import { getCountry, getProduct } from '@utils/data'
+import { getStudyListQueryString } from '@utils/router.js'
+import LogoCountrySmall from './LogoCountrySmall.vue';
+import LogoCountryLarge from './LogoCountryLarge.vue';
+import LogoProductLarge from './LogoProductLarge.vue';
+import CardList from './CardList.vue'
+import Section from './Section.vue';
+import CardFooter from './CardFooter.vue';
+import NumberBadge from './NumberBadge.vue';
+import Card from './Card.vue';
+import SubCardsList from './SubCardsList.vue'
+
+const props = defineProps({
+    studies: Array,
+    countries: Array,
+    category: Object
+})
+
+const openedProduct = ref(null)
+
+const closeProduct = () => {
+    openedProduct.value = null
+}
+onMounted(() => {
+    document.addEventListener('click', closeProduct);
+});
+
+onBeforeUnmount(() => {
+    document.removeEventListener('click', closeProduct);
+})
+
+const getStudiesByProduct = () => {
+    const products = [... new Set(props.studies.map(study => study.product))]
+    return products.map(product => ({
+        product,
+        studies: props.studies.filter(study => study.product === product)
+    }))
+}
+
+
+
+</script>
 
 <style scoped lang="scss"></style>

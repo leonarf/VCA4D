@@ -1,3 +1,16 @@
+<template>
+  <div class="absolute top-[120px] bg-[#F0F0F0] p-4 rounded-lg text-white z-50 sub-cards-list">
+    <div class="flex flex-row gap-x-4">
+      <slot />
+    </div>
+    <div v-if="link" class="text-center w-full">
+      <RouterLink :to="link" class="text-[#2E6BAD] underline">
+        {{ linkTitle }}
+      </RouterLink>   
+    </div>
+  </div>
+</template>
+
 <script setup>
 import { RouterLink } from 'vue-router';
 
@@ -12,19 +25,6 @@ defineProps({
     }
 })
 </script>
-
-<template>
-  <div class="absolute top-[120px] bg-[#F0F0F0] p-4 rounded-lg text-white z-50 sub-cards-list">
-    <div class="flex flex-row gap-x-4">
-      <slot />
-    </div>
-    <div v-if="link" class="text-center w-full">
-      <RouterLink :to="link" class="text-[#2E6BAD] underline">
-        {{ linkTitle }}
-      </RouterLink>   
-    </div>
-  </div>
-</template>
 
 <style scoped lang="scss">
 .sub-cards-list{

@@ -1,11 +1,3 @@
-<script setup>
-defineProps({
-    title: String,
-    textColor: String,
-    borderColor:String
-})
-</script>
-
 <template>
   <section class="section">
     <h4 :style="`color: ${textColor};`">{{ title }}</h4>
@@ -14,6 +6,14 @@ defineProps({
     </div>  
   </section>
 </template>
+
+<script setup>
+defineProps({
+    title: String,
+    textColor: String,
+    borderColor:String
+})
+</script>
 
 <style scoped lang="scss">
   .section {

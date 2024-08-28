@@ -1,14 +1,3 @@
-<script setup>
-import Tooltip from "@components/Tooltip.vue";
-import QuestionMark from '../../images/icons/info-question.svg'
-import Svg from '@components/Svg.vue';
-
-defineProps({
-    title: String,
-    information: String
-});
-</script>
-
 <template>
   <div class="bg-[#EDEDED] py-2 px-4 inline-block">
     <div class="flex flex-row space-x-4">
@@ -22,6 +11,17 @@ defineProps({
     />
   </div>
 </template>
+
+<script setup>
+import Tooltip from "@components/Tooltip.vue";
+import QuestionMark from '../../images/icons/info-question.svg'
+import Svg from '@components/Svg.vue';
+
+defineProps({
+    title: String,
+    information: String
+});
+</script>
 
 <style scoped lang="scss">
     .svg {

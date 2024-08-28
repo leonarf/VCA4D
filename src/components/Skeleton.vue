@@ -1,15 +1,3 @@
-<script setup>
-import { RouterLink } from 'vue-router'
-
-defineProps({
-    skipFooter: {
-        type: Boolean,
-        default: false,
-    },
-});
-
-</script>
-
 <template>
   <header>
     <RouterLink to="/">VCA4D Information System</RouterLink>
@@ -55,6 +43,18 @@ defineProps({
     </ul>
   </footer>
 </template>
+
+<script setup>
+import { RouterLink } from 'vue-router'
+
+defineProps({
+    skipFooter: {
+        type: Boolean,
+        default: false,
+    },
+});
+
+</script>
 
 <style scoped lang="scss">
 header {

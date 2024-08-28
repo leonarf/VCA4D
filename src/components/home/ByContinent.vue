@@ -1,60 +1,3 @@
-<script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue';
-import { getLink } from '@utils/router'
-import { getCountry, getProduct } from '@utils/data'
-import { getStudyListQueryString } from '@utils/router.js'
-import LogoProductLarge from './LogoProductLarge.vue';
-import LogoProductSmall from './LogoProductSmall.vue';
-import LogoCountryLarge from './LogoCountryLarge.vue';
-import Section from './Section.vue';
-import CardList from './CardList.vue';
-import CardFooter from './CardFooter.vue';
-import NumberBadge from './NumberBadge.vue';
-import Card from './Card.vue';
-import SubCardsList from './SubCardsList.vue';
-const props = defineProps({
-    continent: String,
-    studies: Array,
-    countries: Array,
-})
-
-const CONTINENT_BG_COLORS = {
-    "Europe": "#0073CF",
-    "Africa": "#5F8A64",
-    "America": "#C46D4D",
-    "Asia - Pacific": "#F6E065"
-}
-const CONTINENT_TEXT_COLORS = {
-    "Europe": "#0073CF",
-    "Africa": "#5F8A64",
-    "America": "#C46D4D",
-    "Asia - Pacific": "#806C00"
-}
-
-const openedCountry = ref(null)
-
-const closeCountry = () => {
-    openedCountry.value = null
-}
-onMounted(() => {
-    document.addEventListener('click', closeCountry);
-});
-
-onBeforeUnmount(() => {
-    document.removeEventListener('click', closeCountry);
-})
-
-const getStudiesByCountry = () => {
-    const countries = [...new Set(props.studies.map(study => study.country))]
-    countries.sort((a, b) => a.localeCompare(b))
-    return countries.map(country => ({
-        country,
-        studies: props.studies.filter(study => study.country === country)
-    }))
-}
-
-</script>
-
 <template>
   <Section :title="continent" :textColor="CONTINENT_TEXT_COLORS[continent]" :borderColor="CONTINENT_BG_COLORS[continent]">
     <CardList>
@@ -117,5 +60,62 @@ const getStudiesByCountry = () => {
     </CardList>
   </Section>
 </template>
+
+<script setup>
+import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { getLink } from '@utils/router'
+import { getCountry, getProduct } from '@utils/data'
+import { getStudyListQueryString } from '@utils/router.js'
+import LogoProductLarge from './LogoProductLarge.vue';
+import LogoProductSmall from './LogoProductSmall.vue';
+import LogoCountryLarge from './LogoCountryLarge.vue';
+import Section from './Section.vue';
+import CardList from './CardList.vue';
+import CardFooter from './CardFooter.vue';
+import NumberBadge from './NumberBadge.vue';
+import Card from './Card.vue';
+import SubCardsList from './SubCardsList.vue';
+const props = defineProps({
+    continent: String,
+    studies: Array,
+    countries: Array,
+})
+
+const CONTINENT_BG_COLORS = {
+    "Europe": "#0073CF",
+    "Africa": "#5F8A64",
+    "America": "#C46D4D",
+    "Asia - Pacific": "#F6E065"
+}
+const CONTINENT_TEXT_COLORS = {
+    "Europe": "#0073CF",
+    "Africa": "#5F8A64",
+    "America": "#C46D4D",
+    "Asia - Pacific": "#806C00"
+}
+
+const openedCountry = ref(null)
+
+const closeCountry = () => {
+    openedCountry.value = null
+}
+onMounted(() => {
+    document.addEventListener('click', closeCountry);
+});
+
+onBeforeUnmount(() => {
+    document.removeEventListener('click', closeCountry);
+})
+
+const getStudiesByCountry = () => {
+    const countries = [...new Set(props.studies.map(study => study.country))]
+    countries.sort((a, b) => a.localeCompare(b))
+    return countries.map(country => ({
+        country,
+        studies: props.studies.filter(study => study.country === country)
+    }))
+}
+
+</script>
 
 <style scoped lang="scss"></style>

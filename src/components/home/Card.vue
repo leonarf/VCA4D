@@ -1,15 +1,3 @@
-<script setup>
-defineProps({
-    link: {
-        required: false,
-        type: String
-    },
-    isLocal: Boolean,
-    isOpen: Boolean,
-    title: String
-})
-</script>
-
 <template>
   <div class="card relative">
     <component :is="link ? 'RouterLink' : 'v-fragment'" :to="link" class="w-[150px]">
@@ -21,6 +9,18 @@ defineProps({
     <slot name="footer" />   
   </div>
 </template>
+
+<script setup>
+defineProps({
+    link: {
+        required: false,
+        type: String
+    },
+    isLocal: Boolean,
+    isOpen: Boolean,
+    title: String
+})
+</script>
 
 <style scoped lang="scss">
 .card {

@@ -1,3 +1,12 @@
+<template>
+  <section>
+    <QuestionTitle>By <strong>product</strong></QuestionTitle>
+    <template v-for="(category) in categories" :key="category.id">
+      <ByCategory :studies="filterStudiesByCategory(category.id)" :countries="countries" :category="category" />
+    </template>
+  </section>
+</template>
+
 <script setup>
 import QuestionTitle from '@components/study/QuestionTitle.vue';
 import ByCategory from './ByCategory.vue'
@@ -29,15 +38,6 @@ const filterStudiesByCategory = (category) => {
 };
 
 </script>
-
-<template>
-  <section>
-    <QuestionTitle>By <strong>product</strong></QuestionTitle>
-    <template v-for="(category) in categories" :key="category.id">
-      <ByCategory :studies="filterStudiesByCategory(category.id)" :countries="countries" :category="category" />
-    </template>
-  </section>
-</template>
 
 <style scoped lang="scss">
 </style>
