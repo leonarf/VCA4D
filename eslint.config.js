@@ -14,7 +14,6 @@ export default [
     files: ["**/*.vue", "**/*.js"],
     rules: {
       "no-extra-boolean-cast":"off",
-      "no-case-declarations": "off",
     }
   },
   {

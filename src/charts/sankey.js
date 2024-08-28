@@ -72,10 +72,9 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
         formatter: (params) => {
             switch (params?.dataType) {
               case "node":
-                const actor = actors.find((actor) => actor.name === params.data.name);
                 return formatTooltip({
                   "Name": params.data.name,
-                  "Stage": actor ? actor.stage : undefined
+                  "Stage": findActorStage(actors, params.data.name)
                 });
               case "edge":
                 return formatTooltip({
@@ -95,6 +94,11 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
     };
     console.log("sankey chart options:", result)
     return result;
+}
+
+function findActorStage(actors, actorName) {
+  const actor = actors.find((actor) => actor.name === actorName);
+  return actor ? actor.stage : undefined;
 }
 
 function formatTooltip(items) {

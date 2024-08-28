@@ -50,11 +50,13 @@
 
     switch(props.type) {
       case "product":
-        const product = _.lowerCase(getProduct(getStudy(props.studyId).product).prettyName);
-        return `Compare the ${allStudies.value.length} ${product} studies`;
+        return `Compare the ${allStudies.value.length} ${
+          _.lowerCase(getProduct(getStudy(props.studyId).product).prettyName)
+        } studies`;
       case "country":
-        const country = getCountry(getStudy(props.studyId).country).prettyName;
-        return `Compare the ${allStudies.value.length} ${country} studies`;
+        return `Compare the ${allStudies.value.length} ${
+          getCountry(getStudy(props.studyId).country).prettyName
+        } studies`;
       default:
         return "";
     }
