@@ -120,7 +120,6 @@ const parseImpacts = (json, valueChains, actors) => {
   if (sheetAsJson == null) {
     return null
   }
-  console.log("plan de travail pour les impacts", sheetAsJson)
   var rowCount = 0
   var dictionnaire_chain_actors_props = {}
   var firstRow = null
@@ -170,15 +169,12 @@ const parseImpacts = (json, valueChains, actors) => {
 
 export const parseEnvironmentJson = (json) => {
   let valuechains = parseValueChainsDescriptions(json)
-  console.log("value chains:", valuechains)
   
   let actors = parseActorTypes(json)
-  console.log("actors:", actors)
 
   parseActorsAndChainsMatrix(json, valuechains, actors)
 
   var impacts = parseImpacts(json, valuechains, actors)
-  console.log("impacts:", impacts)
   return {
     valuechains,
     actors,

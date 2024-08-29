@@ -25,7 +25,6 @@ export const ErrorLevels = Object.freeze({
 })
 
 export const setImportErrors = (spreadsheet, level, message) => {
-  console.log("Following error during import :", message)
   ImportErrors.push({
     level: level,
     spreadsheet: spreadsheet,
@@ -158,7 +157,6 @@ export const processUploadedExcelFile = (workbook) => {
 
   let excelData = {}
   workbook.SheetNames.forEach((workSheet) => {
-    console.log("Converting to JSON sheet", workSheet)
     const rowObject = XLSX.utils.sheet_to_json(
       workbook.Sheets[workSheet]
     )

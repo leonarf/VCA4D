@@ -338,8 +338,6 @@ const parseEmploymentSheet = (json, actors) => {
     return result
   })
 
-  console.log("voici les données d'emplois", employments)
-
   actors = actors.map(actor => {
     let employment = employments.filter(employment => employment.actorName === actor.name)
     if (employment && employment.length === 1) {
