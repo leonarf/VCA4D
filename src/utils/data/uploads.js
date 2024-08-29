@@ -1,5 +1,16 @@
 let studiesAttachment = {}
-export async function getStudyFileAttachmentUrl(studyId, attachementType) {
+
+export async function getStudyUploadUrls(studyId) {
+  return {
+    fullPdf: await getStudyFileAttachmentUrl(studyId, 'full-report.pdf'),
+    briefPdf: await getStudyFileAttachmentUrl(studyId, 'brief-report.pdf'),
+    ecoXlsx: await getStudyFileAttachmentUrl(studyId, 'eco.xlsx'),
+    socialXlsx: await getStudyFileAttachmentUrl(studyId, 'social.xlsx'),
+    acvXlsx: await getStudyFileAttachmentUrl(studyId, 'acv.xlsx'),
+  }
+}
+
+async function getStudyFileAttachmentUrl(studyId, attachementType) {
   if (studiesAttachment[studyId] == undefined) {
     studiesAttachment[studyId] = {}
   }
@@ -15,14 +26,4 @@ export async function getStudyFileAttachmentUrl(studyId, attachementType) {
     }
   }
   return studiesAttachment[studyId][attachementType]
-}
-
-export async function getStudyUploadUrls(studyId) {
-  return {
-    fullPdf: await getStudyFileAttachmentUrl(studyId, 'full-report.pdf'),
-    briefPdf: await getStudyFileAttachmentUrl(studyId, 'brief-report.pdf'),
-    ecoXlsx: await getStudyFileAttachmentUrl(studyId, 'eco.xlsx'),
-    socialXlsx: await getStudyFileAttachmentUrl(studyId, 'social.xlsx'),
-    acvXlsx: await getStudyFileAttachmentUrl(studyId, 'acv.xlsx'),
-  }
 }
