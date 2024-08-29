@@ -18,7 +18,6 @@
     <BalanceOfTrade :studyData="studyData" :currency="currency" />
 
     <AbroadSelling :studyData="studyData" />
-    <AttachmentLink :studyId="studyData.id" attachmentType="eco.xlsx" />
   </article>
 </template>
 
@@ -29,7 +28,6 @@ import PublicFinances from './study/economic-growth/PublicFinances.vue'
 import SectionTitle from '@typography/SectionTitle.vue'
 import BalanceOfTrade from './study/economic-growth/BalanceOfTrade.vue'
 import AbroadSelling from './study/economic-growth/AbroadSelling.vue'
-import AttachmentLink from '@components/pdf/AttachmentLink.vue'
 
 defineProps({
   studyData: Object,
