@@ -542,34 +542,39 @@ export const parseEconomicsJson = (json, currencyRatio) => {
     studyData = applyTranslation(studyData, translationDictionnary)
     checkDataConsistencyAfterTranslation(studyData)
   }
+  checksActorsAreKnown(studyData);
   return studyData
 }
 
-export const getErrors = (study) => {
+
+export const checksActorsAreKnown = (ecoData) => {
   let errors = getImportErrors()
 
-  const actorNames = study.ecoData.actors.map(actor => actor.name)
+  const actorNames = ecoData.actors.map(actor => actor.name)
   let unknownActorsInFlows = []
-  unknownActorsInFlows = unknownActorsInFlows.concat(study.ecoData.flows.filter(flow => !actorNames.includes(flow.buyerActorName)).reduce((arr, flow) => arr.concat(flow.buyerActorName), []))
-  unknownActorsInFlows = unknownActorsInFlows.concat(study.ecoData.flows.filter(flow => !actorNames.includes(flow.sellerActorName)).reduce((arr, flow) => arr.concat(flow.buyerActorName), []))
+  console.log(ecoData.flows, actorNames);
+  unknownActorsInFlows = unknownActorsInFlows.concat(ecoData.flows.filter(flow => !actorNames.includes(flow.buyerActorName)).reduce((arr, flow) => arr.concat(flow.buyerActorName), []))
+  unknownActorsInFlows = unknownActorsInFlows.concat(ecoData.flows.filter(flow => !actorNames.includes(flow.sellerActorName)).reduce((arr, flow) => arr.concat(flow.buyerActorName), []))
   unknownActorsInFlows.map(actor => {
-    errors.push({
-      level: 'error',
-      message: `Actor named <b>${actor}</b> in sheet <b>${ECO_SHEET_NAMES.Flows}</b> is not defined in sheet <b>${ECO_SHEET_NAMES.ActorTypes}</b>`
-    })
+    setImportErrors(
+      ECO_SHEET_NAMES.Flows,
+      'error',
+      `Actor named <b>${actor}</b> in sheet <b>${ECO_SHEET_NAMES.Flows}</b> is not defined in sheet <b>${ECO_SHEET_NAMES.ActorTypes}</b>`
+    )
   })
 
-  const totalCreatedAddedValue = getTotalAddedValue(study)
-  let totalReceivedAddedValue = study.ecoData.actors.map(actor => actor.receivedAddedValue).reduce((res, curr) => res + curr, 0)
-  for (const key in study.ecoData.addedValue) {
-    totalReceivedAddedValue += study.ecoData.addedValue[key]
+  const totalCreatedAddedValue = getTotalAddedValue({ ecoData })
+  let totalReceivedAddedValue = ecoData.actors.map(actor => actor.receivedAddedValue).reduce((res, curr) => res + curr, 0)
+  for (const key in ecoData.addedValue) {
+    totalReceivedAddedValue += ecoData.addedValue[key]
   }
   const diff = Math.round(Math.abs(totalCreatedAddedValue - totalReceivedAddedValue))
   if (diff > 0) {
-    errors.push({
-      level: 'error',
-      message: `Total added value created found in spreadsheet '${ECO_SHEET_NAMES.Indicators}' is ${totalCreatedAddedValue}. And total added value received found in spreadsheet '${ECO_SHEET_NAMES.ValueAddedReceivers}' is ${totalReceivedAddedValue}. But both should be equal`
-    })
+    setImportErrors(
+      ECO_SHEET_NAMES.Indicators,
+      'error',
+      `Total added value created found in spreadsheet '${ECO_SHEET_NAMES.Indicators}' is ${totalCreatedAddedValue}. And total added value received found in spreadsheet '${ECO_SHEET_NAMES.ValueAddedReceivers}' is ${totalReceivedAddedValue}. But both should be equal`
+    )
   }
   return errors
 }

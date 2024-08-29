@@ -130,7 +130,7 @@ import { slugify } from '@utils/format.js'
 
 import { ACV_SHEET_NAMES } from '@utils/import/environment.js'
 import { getImportErrors } from '@utils/import/generic.js'
-import { ECO_SHEET_NAMES, HOME_LABELS, getErrors } from '@utils/import/eco.js'
+import { ECO_SHEET_NAMES, HOME_LABELS } from '@utils/import/eco.js'
 
 const props = defineProps({
   studyData: Object
@@ -160,9 +160,7 @@ const isKnownProduct = computed(() =>
 const errorsBySpreadsheet = computed(() => {
   console.log('errorsBySpreadsheet computation trigger')
   let result = {}
-  let rawErrors = null
   if (props.studyData.type === 'eco') {
-    rawErrors = getErrors(props.studyData)
     Object.keys(ECO_SHEET_NAMES).forEach((spreadsheetName) => {
       result[ECO_SHEET_NAMES[spreadsheetName]] = []
     })
@@ -172,9 +170,8 @@ const errorsBySpreadsheet = computed(() => {
         result[ACV_SHEET_NAMES[spreadsheetName]] = []
       })
     }
-    rawErrors = getImportErrors()
   }
-  rawErrors.forEach((error) => {
+  getImportErrors().forEach((error) => {
     if (!result[error.spreadsheet]) {
       result[error.spreadsheet] = []
     }
