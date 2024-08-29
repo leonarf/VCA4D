@@ -3,15 +3,15 @@
     <h3 class="download-title">Available for download</h3>
     <div class="links">
       <div
-        v-for="(keyList, index) in urlKeysLists"
+        v-for="(linkColumn, index) in displayedLinksColumns"
         :key="index"
       >
         <div
-          v-for="urlKey in keyList"
+          v-for="({ urlKey, url }) in linkColumn"
           :key="urlKey"
           class="url-item"
         >
-          <a class="url-title" :href="studyUrls[urlKey]">{{ buildTitle(urlKey) }}</a>
+          <a class="url-title" :href="url">{{ buildTitle(urlKey) }}</a>
           <span class="url-subtitle">{{ buildSubTitle(urlKey) }}</span>
         </div>
       </div>
@@ -20,14 +20,24 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue';
+const props = defineProps({
   studyUrls: Object
 });
 
-const urlKeysLists = [
-  ["briefPdf", "fullPdf"],
-  ["ecoXlsx", "socialXlsx", "acvXlsx"]
-];
+
+const displayedLinksColumns = computed(() => {
+  const firstColumn = ["briefPdf", "fullPdf"]
+    .map(urlKey => ({ urlKey, url: props.studyUrls[urlKey] }))
+    .filter(({ url }) => !! url);
+
+  const secondColumn = ["ecoXlsx", "socialXlsx", "acvXlsx"]
+    .map(urlKey => ({ urlKey, url: props.studyUrls[urlKey] }))
+    .filter(({ url }) => !! url);
+
+  return [firstColumn, secondColumn].filter(column => column.length !== 0)
+})
+
 function buildTitle(urlKey) {
   switch (urlKey) {
     case "briefPdf":
