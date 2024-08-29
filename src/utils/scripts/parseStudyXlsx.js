@@ -7,14 +7,19 @@ parseStudyXlsx(process.argv[2]);
 
 function parseStudyXlsx(xlsxPath) {
   const xlsx = findFile(xlsxPath);
-  // WIP
-  processFile(xlsx);
+  const jsonData = processFile(xlsx);
+
+  fs.writeFileSync(buildJsonPath(xlsxPath), stringifyJson(jsonData));
 }
 
-function processFile(xlsx) {
-  const { data, errors } = processUploadedExcelFile(xlsx);
+function processFile(xlsxPath) {
+  const { data, errors } = processUploadedExcelFile(xlsxPath);
   logErrors(errors);
   return data;
+}
+
+function buildJsonPath(xlsxPath) {
+  return xlsxPath.replace(/\.xlsx$/, ".json");
 }
 
 function logErrors(errors) {
@@ -23,6 +28,10 @@ function logErrors(errors) {
     console.log(error.message);
     console.log("");
   })
+}
+
+function stringifyJson(jsonData) {
+  return JSON.stringify(jsonData, null, 2);
 }
 function findFile(xlsxPath) {
   const file = fs.readFileSync(xlsxPath);
