@@ -552,7 +552,6 @@ export const checksActorsAreKnown = (ecoData) => {
 
   const actorNames = ecoData.actors.map(actor => actor.name)
   let unknownActorsInFlows = []
-  console.log(ecoData.flows, actorNames);
   unknownActorsInFlows = unknownActorsInFlows.concat(ecoData.flows.filter(flow => !actorNames.includes(flow.buyerActorName)).reduce((arr, flow) => arr.concat(flow.buyerActorName), []))
   unknownActorsInFlows = unknownActorsInFlows.concat(ecoData.flows.filter(flow => !actorNames.includes(flow.sellerActorName)).reduce((arr, flow) => arr.concat(flow.buyerActorName), []))
   unknownActorsInFlows.map(actor => {
