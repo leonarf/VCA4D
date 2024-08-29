@@ -3,18 +3,47 @@ import { processUploadedExcelFile } from "@utils/import/generic.js";
 import * as XLSX from 'xlsx';
 import fs from "fs";
 
-parseStudyXlsx(process.argv[2]);
+parseStudyXlsx(...process.argv.slice(2));
 
-function parseStudyXlsx(xlsxPath) {
-  const xlsx = findFile(xlsxPath);
-  const jsonData = processFile(xlsx);
+function parseStudyXlsx(...args) {
+  if (args[0] === "--all") {
+    processAllFiles(args[1])
+  } else {
+    processFile(args[0]);
+  }
+}
+
+
+function processAllFiles(dirPath) {
+  const filePaths = findAllFilesPaths(dirPath);
+
+  filePaths.forEach(filePath => processFile(`${dirPath}/${filePath}`));
+}
+
+function findAllFilesPaths(rootPath) {
+  return fs.readdirSync(rootPath, { recursive: true }).filter(isStudyDataName);
+
+  function isStudyDataName(fileName) {
+    const fileNameSuffix = fileName.split("-").slice(-1)[0];
+    return [
+      "eco.xlsx",
+      "social.xlsx",
+      "acv.xlsx"
+    ].includes(fileNameSuffix);
+  }
+}
+
+function processFile(xlsxPath) {
+  const file = findFile(xlsxPath);
+  const jsonData = computeJsonData(file);
 
   fs.writeFileSync(buildJsonPath(xlsxPath), stringifyJson(jsonData));
 }
 
-function processFile(xlsxPath) {
-  const { data, errors } = processUploadedExcelFile(xlsxPath);
+function computeJsonData(file) {
+  const { data, errors } = processUploadedExcelFile(file);
   logErrors(errors);
+
   return data;
 }
 
