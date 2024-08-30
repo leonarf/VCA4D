@@ -9,15 +9,19 @@ function parseStudyXlsx(...args) {
   if (args[0] === "--all") {
     processAllFiles(args[1])
   } else {
-    processFile(args[0]);
+    processSingleFile(args[0]);
   }
 }
-
 
 function processAllFiles(dirPath) {
   const filePaths = findAllFilesPaths(dirPath);
 
-  filePaths.forEach(filePath => processFile(`${dirPath}/${filePath}`));
+  filePaths.forEach(filePath => {
+    const { errors } = processFile(`${dirPath}/${filePath}`);
+    if (errors.length !== 0) {
+      console.log(`${errors.length} errors on ${filePath}`);
+    }
+  });
 }
 
 function findAllFilesPaths(rootPath) {
@@ -33,18 +37,18 @@ function findAllFilesPaths(rootPath) {
   }
 }
 
-function processFile(xlsxPath) {
-  const file = findFile(xlsxPath);
-  const jsonData = computeJsonData(file);
-
-  fs.writeFileSync(buildJsonPath(xlsxPath), stringifyJson(jsonData));
+function processSingleFile(xlsxPath) {
+  const { errors } = processFile(xlsxPath);
+  logErrors(errors);
 }
 
-function computeJsonData(file) {
-  const { data, errors } = processUploadedExcelFile(file);
-  logErrors(errors);
+function processFile(xlsxPath) {
+  const file = findFile(xlsxPath);
+  const { data: jsonData, errors } = processUploadedExcelFile(file);
 
-  return data;
+  fs.writeFileSync(buildJsonPath(xlsxPath), stringifyJson(jsonData));
+
+  return { errors };
 }
 
 function buildJsonPath(xlsxPath) {
