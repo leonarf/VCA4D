@@ -1,7 +1,11 @@
-/* global process */
+/* global process __dirname */
 import { processUploadedExcelFile } from "@utils/import/generic.js";
 import * as XLSX from 'xlsx';
 import fs from "fs";
+import { amendDataFile } from "../import/generic";
+import jsonData from "../../../data/data.json";
+
+const DATA_JSON_PATH = `${__dirname}/../../../data/data.json`;
 
 parseStudyXlsx(...process.argv.slice(2));
 
@@ -44,9 +48,11 @@ function processSingleFile(xlsxPath) {
 
 function processFile(xlsxPath) {
   const file = findFile(xlsxPath);
-  const { data: jsonData, errors } = processUploadedExcelFile(file);
+  const { data: studyData, errors } = processUploadedExcelFile(file);
+  const newDataJson = amendDataFile(jsonData, studyData)
 
-  fs.writeFileSync(buildJsonPath(xlsxPath), stringifyJson(jsonData));
+  fs.writeFileSync(buildJsonPath(xlsxPath), stringifyJson(studyData));
+  fs.writeFileSync(DATA_JSON_PATH, newDataJson);
 
   return { errors };
 }
