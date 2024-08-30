@@ -231,12 +231,13 @@ export function amendDataFile(jsonData, studyData) {
     }
     jsonData.countries.sort(sortFunctionByProperties(["id"]));
 
-    const existingCommodities = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
+    const existingCommoditiesInCategories = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
     const slugifiedCommodity = slugify(studyData.commodity)
-    if (!existingCommodities.includes(slugifiedCommodity)) {
+    if (!existingCommoditiesInCategories.includes(slugifiedCommodity)) {
         jsonData.categories.find(category => category.id === 'unknown').commodities.push(slugifiedCommodity)
     }
 
+    const existingCommodities = _.uniq(jsonData.studies.map(study => study.product));
     jsonData.products = updateProductList(jsonData.products, existingCommodities);
 
     return JSON.stringify(
