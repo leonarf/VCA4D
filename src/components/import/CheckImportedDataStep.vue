@@ -129,11 +129,11 @@ import { getCountries, getAllKnownProducts } from '@utils/data'
 import { slugify } from '@utils/format.js'
 
 import { ACV_SHEET_NAMES } from '@utils/import/environment.js'
-import { getImportErrors } from '@utils/import/generic.js'
 import { ECO_SHEET_NAMES, HOME_LABELS } from '@utils/import/eco.js'
 
 const props = defineProps({
-  studyData: Object
+  studyData: Object,
+  importErrors: Array,
 })
 
 const TypesOfFile = {
@@ -171,7 +171,7 @@ const errorsBySpreadsheet = computed(() => {
       })
     }
   }
-  getImportErrors().forEach((error) => {
+  props.importErrors.forEach((error) => {
     if (!result[error.spreadsheet]) {
       result[error.spreadsheet] = []
     }

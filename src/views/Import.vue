@@ -18,7 +18,7 @@
       </div>
 
       <div v-if="isStudyObjectNotEmpty">
-        <CheckImportedDataStep :studyData="studyData" />
+        <CheckImportedDataStep :studyData="studyData" :importErrors="importErrors" />
         <SaveOnGithubStep :studyData="studyData" />
       </div>
     </div>
@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue';
+import { computed, watch, onMounted, ref } from 'vue';
 
 import * as XLSX from 'xlsx'
 
@@ -35,7 +35,7 @@ import SaveOnGithubStep from '@components/import/SaveOnGithubStep.vue'
 import CheckImportedDataStep from '@components/import/CheckImportedDataStep.vue'
 
 import { getAllJsonData } from '@utils/data';
-import { processUploadedExcelFile, clearImportErrors } from '@utils/import/generic.js'
+import { processUploadedExcelFile } from '@utils/import/generic.js'
 
 const workbook = ref(null)
 
@@ -44,7 +44,6 @@ const clearData = () => {
     localStorage.removeItem('localWorkbook')
     localStorage.removeItem('localStudyData')
     workbook.value = null
-    clearImportErrors()
 }
 
 const knownProducts = ref([])
@@ -75,22 +74,27 @@ const handleFileUpload = (event) => {
     }
 }
 
-const studyData = computed(() => {
+const importErrors = ref([]);
+const studyData = ref(null);
+
+watch(() => workbook.value, () => {
     console.log("studyData computation trigger")
     if (!workbook.value) {
-        return null
+        studyData.value = null;
+        importErrors.value = [];
+        return;
     }
 
-    let result = processUploadedExcelFile(workbook.value)
-    console.log("studyData new value", result)
-    localStorage.setItem('localStudyData', JSON.stringify(result))
-    return result
+    let { data, errors } = processUploadedExcelFile(workbook.value)
+    console.log("studyData new value", data)
+    localStorage.setItem('localStudyData', JSON.stringify(data))
+    studyData.value = data;
+    importErrors.value = errors;
 })
 
 onMounted(() => {
     const localStorageWorkbook = localStorage.getItem('localWorkbook')
     if (localStorageWorkbook) {
-        clearImportErrors()
         workbook.value = JSON.parse(localStorageWorkbook)
     }
 })

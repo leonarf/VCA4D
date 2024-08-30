@@ -31,7 +31,7 @@ import upload_files_screenshot from '@images/tuto_upload/upload_files_on_github.
 import commit_creation_screenshot from '@images/tuto_upload/commit_creation_screenshot.png'
 
 const props = defineProps({
-  studyData: Object
+  studyData: Object,
 })
 
 const jsonFile = computed(() => {

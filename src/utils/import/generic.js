@@ -12,7 +12,7 @@ import { slugify } from '@utils/format.js'
 
 let ImportErrors = []
 
-export const clearImportErrors = () => {
+const clearImportErrors = () => {
   ImportErrors = []
 }
 
@@ -148,10 +148,12 @@ const readingOfCurrencies = (excelData) => {
 }
 
 export const processUploadedExcelFile = (workbook) => {
+  clearImportErrors();
   let typeOfFile = getTypeOfExcelFile(workbook)
 
+  let result = {};
   if (typeOfFile === TypesOfFile.Sustainability) {
-    return processSocialExcelFile(workbook)
+    result = processSocialExcelFile(workbook)
   }
 
   let excelData = {}
@@ -163,28 +165,14 @@ export const processUploadedExcelFile = (workbook) => {
     excelData[workSheet] = rowObject
   })
 
-  const country = slugify(getValueChainProperty(excelData, HOME_LABELS.Country))
-  const commodity = getValueChainProperty(excelData, HOME_LABELS.Commodity)
-
-  let knownProducts = getAllKnownProducts()
-  if (!knownProducts.includes(slugify(commodity))) {
-    setImportErrors(
-      ECO_SHEET_NAMES.Home,
-      ErrorLevels.BreaksALot,
-      `Commodity <b>${slugify(commodity)}</b> is not recognized.`)
-  }
-
-  var result = {
-    id: slugify(commodity + "-" + country),
-    country,
-    commodity
-  }
-
   if (typeOfFile === TypesOfFile.Economics) {
     const year = getValueChainProperty(excelData, "Reference Year");
     const currencies = readingOfCurrencies(excelData)
     result = {
-      ...result,
+      ...buildIdentifiers(
+        getValueChainProperty(excelData, HOME_LABELS.Commodity),
+        slugify(getValueChainProperty(excelData, HOME_LABELS.Country))
+      ),
       year,
       ...currencies,
       type: 'eco',
@@ -192,8 +180,34 @@ export const processUploadedExcelFile = (workbook) => {
     }
   }
   else if (typeOfFile === TypesOfFile.Environment) {
-    result.type = "ACV"
-    result.acvData = parseEnvironmentJson(excelData)
+    result = {
+      ...buildIdentifiers(
+        getValueChainProperty(excelData, HOME_LABELS.Commodity),
+        slugify(getValueChainProperty(excelData, HOME_LABELS.Country))
+      ),
+      type: "ACV",
+      acvData: parseEnvironmentJson(excelData),
+    }
   }
-  return result
+
+  let knownProducts = getAllKnownProducts()
+  if (!knownProducts.includes(slugify(result.commodity))) {
+    setImportErrors(
+      ECO_SHEET_NAMES.Home,
+      ErrorLevels.BreaksALot,
+      `Commodity <b>${slugify(result.commodity)}</b> is not recognized.`)
+  }
+
+  return {
+    data: result,
+    errors: getImportErrors()
+  }
+}
+
+function buildIdentifiers(commodity, country) {
+  return {
+    id: slugify(commodity + "-" + country),
+    country,
+    commodity
+  };
 }
