@@ -21,11 +21,10 @@
 </template>
 
 <script setup>
-import _ from "lodash";
 import { computed } from 'vue';
 
 import jsonData from '@data/data.json'
-import { slugify } from '@utils/format.js'
+import { amendDataFile } from "@utils/import/generic";
 
 import upload_files_screenshot from '@images/tuto_upload/upload_files_on_github.png'
 import commit_creation_screenshot from '@images/tuto_upload/commit_creation_screenshot.png'
@@ -52,66 +51,8 @@ const studyFileName = computed(() => {
 })
 
 const dataFile = computed(() => {
-    if (!jsonData.studies.find(study => study.id === props.studyData.id)) {
-        jsonData.studies.push({
-            id: `${props.studyData.id}`,
-            title: `${props.studyData.country} ${props.studyData.commodity}`,
-            year: props.studyData.year,
-            country: props.studyData.country.toLowerCase(),
-            product: props.studyData.commodity.toLowerCase()
-        })
-    }
-    jsonData.studies.sort(sortFunctionByProperties(["country", "product"]));
-  
-    const slugifiedCountry = slugify(props.studyData.country)
-    if (!jsonData.countries.find(country => country.id === slugifiedCountry)) {
-        jsonData.countries.push({
-            id: slugifiedCountry,
-            prettyName: props.studyData.country
-        })
-    }
-    jsonData.countries.sort(sortFunctionByProperties(["id"]));
-
-    const existingCommodities = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
-    const slugifiedCommodity = slugify(props.studyData.commodity)
-    if (!existingCommodities.includes(slugifiedCommodity)) {
-        jsonData.categories.find(category => category.id === 'unknown').commodities.push(slugifiedCommodity)
-    }
-
-    jsonData.products = updateProductList(jsonData.products, existingCommodities);
-
-    return JSON.stringify(
-        jsonData
-        , null, 2)
+    return amendDataFile(jsonData, props.studyData)
 })
-
-function sortFunctionByProperties(propertyKeys) {
-  return function(itemA, itemB) {
-    for (var key of propertyKeys) {
-      if (itemA[key] < itemB[key]) {
-          return -1
-      }
-      else if (itemA[key] > itemB[key]) {
-          return 1
-      }
-    }
-    return 0;
-  }
-}
-
-function updateProductList(products = [], existingProductKeys) {
-  const newProducts = [...products];
-  existingProductKeys.forEach(productKey => {
-    if (!products.find(product => product.id === productKey)) {
-      newProducts.push({
-        id: productKey,
-        prettyName: _.capitalize(productKey) 
-      });
-    }
-  });
-  newProducts.sort(sortFunctionByProperties("id"));
-  return newProducts;
-}
 
 const downloadFile = (data, fileName) => {
   const blob = new Blob([data], { type: 'application/json' })

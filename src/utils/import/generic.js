@@ -1,5 +1,5 @@
 import * as XLSX from 'xlsx'
-
+import _ from "lodash";
 import { HOME_LABELS, ECO_SHEET_NAMES, getValueChainProperty, parseEconomicsJson } from "./eco.js"
 import { parseEnvironmentJson } from './environment.js'
 
@@ -208,4 +208,66 @@ function buildIdentifiers(commodity, country) {
     country,
     commodity
   };
+}
+
+export function amendDataFile(jsonData, studyData) {
+  if (!jsonData.studies.find(study => study.id === studyData.id)) {
+        jsonData.studies.push({
+            id: `${studyData.id}`,
+            title: `${studyData.country} ${studyData.commodity}`,
+            year: studyData.year,
+            country: studyData.country.toLowerCase(),
+            product: studyData.commodity.toLowerCase()
+        })
+    }
+    jsonData.studies.sort(sortFunctionByProperties(["country", "product"]));
+  
+    const slugifiedCountry = slugify(studyData.country)
+    if (!jsonData.countries.find(country => country.id === slugifiedCountry)) {
+        jsonData.countries.push({
+            id: slugifiedCountry,
+            prettyName: studyData.country
+        })
+    }
+    jsonData.countries.sort(sortFunctionByProperties(["id"]));
+
+    const existingCommodities = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
+    const slugifiedCommodity = slugify(studyData.commodity)
+    if (!existingCommodities.includes(slugifiedCommodity)) {
+        jsonData.categories.find(category => category.id === 'unknown').commodities.push(slugifiedCommodity)
+    }
+
+    jsonData.products = updateProductList(jsonData.products, existingCommodities);
+
+    return JSON.stringify(
+        jsonData
+        , null, 2)
+}
+
+function updateProductList(products = [], existingProductKeys) {
+  const newProducts = [...products];
+  existingProductKeys.forEach(productKey => {
+    if (!products.find(product => product.id === productKey)) {
+      newProducts.push({
+        id: productKey,
+        prettyName: _.capitalize(productKey) 
+      });
+    }
+  });
+  newProducts.sort(sortFunctionByProperties("id"));
+  return newProducts;
+}
+
+function sortFunctionByProperties(propertyKeys) {
+  return function(itemA, itemB) {
+    for (var key of propertyKeys) {
+      if (itemA[key] < itemB[key]) {
+          return -1
+      }
+      else if (itemA[key] > itemB[key]) {
+          return 1
+      }
+    }
+    return 0;
+  }
 }
