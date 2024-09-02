@@ -5,12 +5,29 @@ const getQuestionsGroup = (ws, firstRow, lastRow) => {
     title: ws[`A${firstRow}`]?.v,
     averageValue: ws[`E${lastRow}`]?.v,
     averageText: ws[`D${lastRow}`]?.v,
-    questions: Array.from(Array(lastRow - 1 - (firstRow + 1) + 1).keys(), (num) => num + firstRow + 1).map(index => ({
-      text: ws[`A${index}`]?.v,
+    questions: Array.from(Array(lastRow - 1 - (firstRow + 1) + 1)
+      .keys(), (num) => num + firstRow + 1)
+      .map(getQuestion)
+  }
+
+  function getQuestion(index) {
+    return {
+      text: getQuestionText(),
       scoreValue: ws[`E${index}`]?.v,
       scoreText: ws[`D${index}`]?.v,
       comment: ws[`F${index}`]?.v
-    }))
+    };
+
+    function getQuestionText() {
+      const QUESTION_WITHOUT_INTEROGATION = "1.1.3 To what extent do workers benefit from enforceable and fair contracts ";
+      const text = ws[`A${index}`]?.v;
+
+      // Client asked us to manually correct this question from their social data xlsx template
+      if (text === QUESTION_WITHOUT_INTEROGATION) {
+        return text.replace(/ $/, "?");
+      }
+      return text;
+    }
   }
 }
 
