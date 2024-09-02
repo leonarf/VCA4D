@@ -332,11 +332,11 @@ function parseActorEmployment(employment) {
   const skilledMale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.SkilledMale])
   const skilledFemale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.SkilledFemale])
 
-  const totalMale = (tempMale || 0) + (unskilledMale || 0) + (skilledMale || 0)
-  const totalFemale = (tempFemale || 0) + (unskilledFemale || 0) + (skilledFemale || 0)
-  const totalTemp = tempMale + (tempFemale || 0)
-  const totalSkilled = skilledMale + (skilledFemale || 0)
-  const totalUnskilled = unskilledMale + (unskilledFemale || 0)
+  const totalMale = sumEmployments([tempMale, unskilledMale, skilledMale]);
+  const totalFemale = sumEmployments([tempFemale, unskilledFemale, skilledFemale]);
+  const totalTemp = sumEmployments([tempMale, tempFemale]);
+  const totalSkilled = sumEmployments([skilledMale, skilledFemale]);
+  const totalUnskilled = sumEmployments([unskilledMale, unskilledFemale]);
 
   const result = {
     actorName,
@@ -352,7 +352,7 @@ function parseActorEmployment(employment) {
       totalTemp,
       totalSkilled,
       totalUnskilled,
-      total: totalMale + (totalFemale || 0)
+      total: sumEmployments([totalMale, totalFemale])
     }
   }
   return result
@@ -361,6 +361,12 @@ function parseActorEmployment(employment) {
     if (_.isUndefined(employmentCell)) { return null; }
 
     return parseFloat(employmentCell);
+  }
+  function sumEmployments(employments) {
+    if (employments.every(employment => _.isNull(employment))) {
+      return null;
+    }
+    return  _.sumBy(employments, employment => employment || 0);
   }
 }
 
