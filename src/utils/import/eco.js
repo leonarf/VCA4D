@@ -1,3 +1,4 @@
+import _ from "lodash";
 import { ErrorLevels, setImportErrors, getImportErrors, getSheetNameContent, parseActorTypes, checkColumnsExistence } from '@/utils/import/generic.js'
 import { getTotalAddedValue } from '../economics'
 
@@ -324,12 +325,12 @@ const parseEmploymentSheet = (json, actors) => {
 
 function parseActorEmployment(employment) {
   const actorName = employment[EMPLOYMENT_COLUMNS.ActorType]
-  const tempMale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempMale])
-  const tempFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempFemale])
-  const unskilledMale = parseFloat(employment[EMPLOYMENT_COLUMNS.UnskilledMale])
-  const unskilledFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.UnskilledFemale])
-  const skilledMale = parseFloat(employment[EMPLOYMENT_COLUMNS.SkilledMale])
-  const skilledFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.SkilledFemale])
+  const tempMale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.TempMale])
+  const tempFemale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.TempFemale])
+  const unskilledMale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.UnskilledMale])
+  const unskilledFemale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.UnskilledFemale])
+  const skilledMale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.SkilledMale])
+  const skilledFemale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.SkilledFemale])
 
   const totalMale = (tempMale || 0) + (unskilledMale || 0) + (skilledMale || 0)
   const totalFemale = (tempFemale || 0) + (unskilledFemale || 0) + (skilledFemale || 0)
@@ -355,7 +356,14 @@ function parseActorEmployment(employment) {
     }
   }
   return result
+
+  function parseEmploymentCell(employmentCell) {
+    if (_.isUndefined(employmentCell)) { return null; }
+
+    return parseFloat(employmentCell);
+  }
 }
+
 const parseAccountByActorSheet = (json, actors, stages) => {
   var sheetname = ECO_SHEET_NAMES.AccountByActor
   var sheetAsJson = getSheetNameContent(json, sheetname)
