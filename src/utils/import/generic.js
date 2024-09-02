@@ -1,5 +1,5 @@
 import * as XLSX from 'xlsx'
-
+import _ from "lodash";
 import { HOME_LABELS, ECO_SHEET_NAMES, getValueChainProperty, parseEconomicsJson } from "./eco.js"
 import { parseEnvironmentJson } from './environment.js'
 
@@ -12,7 +12,7 @@ import { slugify } from '@utils/format.js'
 
 let ImportErrors = []
 
-export const clearImportErrors = () => {
+const clearImportErrors = () => {
   ImportErrors = []
 }
 
@@ -25,7 +25,6 @@ export const ErrorLevels = Object.freeze({
 })
 
 export const setImportErrors = (spreadsheet, level, message) => {
-  console.log("Following error during import :", message)
   ImportErrors.push({
     level: level,
     spreadsheet: spreadsheet,
@@ -148,43 +147,30 @@ const readingOfCurrencies = (excelData) => {
 }
 
 export const processUploadedExcelFile = (workbook) => {
+  clearImportErrors();
   let typeOfFile = getTypeOfExcelFile(workbook)
 
+  let result = {};
   if (typeOfFile === TypesOfFile.Sustainability) {
-    return processSocialExcelFile(workbook)
+    result = processSocialExcelFile(workbook)
   }
 
   let excelData = {}
   workbook.SheetNames.forEach((workSheet) => {
-    console.log("Converting to JSON sheet", workSheet)
     const rowObject = XLSX.utils.sheet_to_json(
       workbook.Sheets[workSheet]
     )
     excelData[workSheet] = rowObject
   })
 
-  const country = slugify(getValueChainProperty(excelData, HOME_LABELS.Country))
-  const commodity = getValueChainProperty(excelData, HOME_LABELS.Commodity)
-
-  let knownProducts = getAllKnownProducts()
-  if (!knownProducts.includes(slugify(commodity))) {
-    setImportErrors(
-      ECO_SHEET_NAMES.Home,
-      ErrorLevels.BreaksALot,
-      `Commodity <b>${slugify(commodity)}</b> is not recognized.`)
-  }
-
-  var result = {
-    id: slugify(commodity + "-" + country),
-    country,
-    commodity
-  }
-
   if (typeOfFile === TypesOfFile.Economics) {
     const year = getValueChainProperty(excelData, "Reference Year");
     const currencies = readingOfCurrencies(excelData)
     result = {
-      ...result,
+      ...buildIdentifiers(
+        getValueChainProperty(excelData, HOME_LABELS.Commodity),
+        slugify(getValueChainProperty(excelData, HOME_LABELS.Country))
+      ),
       year,
       ...currencies,
       type: 'eco',
@@ -192,8 +178,97 @@ export const processUploadedExcelFile = (workbook) => {
     }
   }
   else if (typeOfFile === TypesOfFile.Environment) {
-    result.type = "ACV"
-    result.acvData = parseEnvironmentJson(excelData)
+    result = {
+      ...buildIdentifiers(
+        getValueChainProperty(excelData, HOME_LABELS.Commodity),
+        slugify(getValueChainProperty(excelData, HOME_LABELS.Country))
+      ),
+      type: "ACV",
+      acvData: parseEnvironmentJson(excelData),
+    }
   }
-  return result
+
+  let knownProducts = getAllKnownProducts()
+  if (!knownProducts.includes(slugify(result.commodity))) {
+    setImportErrors(
+      ECO_SHEET_NAMES.Home,
+      ErrorLevels.BreaksALot,
+      `Commodity <b>${slugify(result.commodity)}</b> is not recognized.`)
+  }
+
+  return {
+    data: result,
+    errors: getImportErrors()
+  }
+}
+
+function buildIdentifiers(commodity, country) {
+  return {
+    id: slugify(commodity + "-" + country),
+    country,
+    commodity
+  };
+}
+
+export function amendDataFile(jsonData, studyData) {
+  if (!jsonData.studies.find(study => study.id === studyData.id)) {
+        jsonData.studies.push({
+            id: `${studyData.id}`,
+            title: `${studyData.country} ${studyData.commodity}`,
+            year: studyData.year,
+            country: studyData.country.toLowerCase(),
+            product: studyData.commodity.toLowerCase()
+        })
+    }
+    jsonData.studies.sort(sortFunctionByProperties(["country", "product"]));
+  
+    const slugifiedCountry = slugify(studyData.country)
+    if (!jsonData.countries.find(country => country.id === slugifiedCountry)) {
+        jsonData.countries.push({
+            id: slugifiedCountry,
+            prettyName: studyData.country
+        })
+    }
+    jsonData.countries.sort(sortFunctionByProperties(["id"]));
+
+    const existingCommoditiesInCategories = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
+    const slugifiedCommodity = slugify(studyData.commodity)
+    if (!existingCommoditiesInCategories.includes(slugifiedCommodity)) {
+        jsonData.categories.find(category => category.id === 'unknown').commodities.push(slugifiedCommodity)
+    }
+
+    const existingCommodities = _.uniq(jsonData.studies.map(study => study.product));
+    jsonData.products = updateProductList(jsonData.products, existingCommodities);
+
+    return JSON.stringify(
+        jsonData
+        , null, 2)
+}
+
+function updateProductList(products = [], existingProductKeys) {
+  const newProducts = [...products];
+  existingProductKeys.forEach(productKey => {
+    if (!products.find(product => product.id === productKey)) {
+      newProducts.push({
+        id: productKey,
+        prettyName: _.capitalize(productKey) 
+      });
+    }
+  });
+  newProducts.sort(sortFunctionByProperties("id"));
+  return newProducts;
+}
+
+function sortFunctionByProperties(propertyKeys) {
+  return function(itemA, itemB) {
+    for (var key of propertyKeys) {
+      if (itemA[key] < itemB[key]) {
+          return -1
+      }
+      else if (itemA[key] > itemB[key]) {
+          return 1
+      }
+    }
+    return 0;
+  }
 }
