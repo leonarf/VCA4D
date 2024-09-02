@@ -364,7 +364,7 @@ function parseActorEmployment(employment) {
   }
 }
 export function sumEmployments(employments) {
-  if (employments.every(employment => _.isNull(employment))) {
+  if (employments.every(employment => _.isNull(employment) || _.isUndefined(employment))) {
     return null;
   }
   return  _.sumBy(employments, employment => employment || 0);
