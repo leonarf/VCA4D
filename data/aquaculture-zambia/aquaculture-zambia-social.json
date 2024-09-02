@@ -335,13 +335,13 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "text": "4.1.1 Does the local production of food increase?\n",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "In most rural areas visited, it was believed that local food production has increased over the past 5 years."
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "The increase in production has resulted in an increase in food supplies, although fish production has not increased and there is still a \"hungry\" season during Dec-March in rural areas."
@@ -373,7 +373,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "It appears people are growing more diverse foods."
@@ -498,7 +498,7 @@
       "groups": [
         {
           "title": "6.1 Health services",
-          "averageValue": 2.3333333333333335,
+          "averageValue": 2.33333333333333,
           "averageText": "Moderate",
           "questions": [
             {
@@ -558,7 +558,7 @@
               "comment": "While more children are attending secondary school, some still cannot afford.  Vocation training in aquaculture is non-existent for rural people and instead for people who wish to work in the sector at private/public institutions."
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "While each companies develops their employees capacities to do fish farming, explicit vocational training likely low. Yalelo is developing a training institution on-farm."

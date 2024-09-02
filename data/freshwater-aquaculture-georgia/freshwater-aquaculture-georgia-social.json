@@ -1,7 +1,7 @@
 {
   "id": "freshwater-aquaculture-georgia",
   "country": "georgia",
-  "commodity": "freshwater-aquaculture",
+  "commodity": "Freshwater Aquaculture",
   "year": null,
   "type": "social",
   "socialData": [
@@ -35,7 +35,7 @@
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "There were no cases observed  on the forced labour In the value chain. \r\n"
+              "comment": "There were no cases observed  on the forced labour In the value chain. \n"
             },
             {
               "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
@@ -92,7 +92,7 @@
               "text": "1.4.2 Are conditions of activities attractive for youth?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "The work in the aquaculture farms is considered hard. Workers have limited time for social life. Youth prefer to find a job in the cities. The renumeration is also relatively low. Therefore, not many young people choose to work in aquaculture.\r\n\r\n"
+              "comment": "The work in the aquaculture farms is considered hard. Workers have limited time for social life. Youth prefer to find a job in the cities. The renumeration is also relatively low. Therefore, not many young people choose to work in aquaculture.\n\n"
             }
           ]
         }
@@ -147,7 +147,7 @@
               "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "There is the need to involve farmers and associations in the development of policy on aquaculture.\r\n"
+              "comment": "There is the need to involve farmers and associations in the development of policy on aquaculture.\n"
             }
           ]
         },
@@ -160,7 +160,7 @@
               "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "\r\nThere are no obstacles observed related to the land rights.\r\n"
+              "comment": "\nThere are no obstacles observed related to the land rights.\n"
             },
             {
               "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
@@ -239,14 +239,14 @@
         },
         {
           "title": "3.3 Decision making",
-          "averageValue": 2.3333333333333335,
+          "averageValue": 2.33333333333333,
           "averageText": "Moderate",
           "questions": [
             {
               "text": "3.3.1 To what extent do women take part in the decisions related to production?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "The women are relatively less involved in the decision-making process on the farm level in aquaculture. However, women’s roles increase in the agricultural markets where they sell the fish and are one of main decision makers. Moreover, women’s roles are significant in the restaurant where they are employed. \r\n"
+              "comment": "The women are relatively less involved in the decision-making process on the farm level in aquaculture. However, women’s roles increase in the agricultural markets where they sell the fish and are one of main decision makers. Moreover, women’s roles are significant in the restaurant where they are employed. \n"
             },
             {
               "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
@@ -257,7 +257,7 @@
               "text": "3.3.3 Do women have control over income?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Based on the consultation with farmers, decisions of how to spend household income is negotiated between women and men. Decisions about expenses related to the aquaculture farm is mostly made by the men. \r\n"
+              "comment": "Based on the consultation with farmers, decisions of how to spend household income is negotiated between women and men. Decisions about expenses related to the aquaculture farm is mostly made by the men. \n"
             },
             {
               "text": "3.3.4 Do women earn independent income?",
@@ -333,13 +333,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "text": "4.1.1 Does the local production of food increase?\n",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "According to the data of MEPA, local productions of food has increased. However, the country depends on the export of different types of food.\r\n"
+              "comment": "According to the data of MEPA, local productions of food has increased. However, the country depends on the export of different types of food.\n"
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "The local fish production gradually increases. However, there is a large amount of exported fish in Georgia."
@@ -371,7 +371,7 @@
           "averageText": "n/a",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
               "scoreValue": "n/a",
               "scoreText": "n/a"
             },
@@ -492,7 +492,7 @@
       "groups": [
         {
           "title": "6.1 Health services",
-          "averageValue": 2.6666666666666665,
+          "averageValue": 2.66666666666667,
           "averageText": "Substantial",
           "questions": [
             {
@@ -552,7 +552,7 @@
               "comment": "Two VET colleges provide courses related to aquaculture. Although, the number of the students is relatively low. Furthermore, the farmers do not apply to get this VET education in aquaculture. "
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "There are very rare trainings when different institutions provide trainings for farmers in aquaculture. Exceptionally, when some farmers receive the funding for the trout farms from international organizations, they receive the training as well. In general, it is observed that there is the lack of trainers in the field of aquaculture as well. "
