@@ -62,7 +62,6 @@
 </template>
 
 <script setup>
-import _ from "lodash";
 import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
 import { 
@@ -102,15 +101,11 @@ const totalNumberOfJobs = computed(() => {
 })
 
 const percentFemaleEmployment = computed(() => {
-    const totalFemale = _.sumBy(actors.value, actor =>
-      actor.employment ? actor.employment.totalFemale : 0
-    )
+    const totalFemale = props.studyData.metrics.eco.employment?.totalFemale;
     if (isNaN(totalFemale)) {
         return null;
     }
-    const total = _.sumBy(actors.value, actor =>
-      actor.employment ? actor.employment.total : 0
-    )
+    const total = props.studyData.metrics.eco.employment?.total;
     return formatPercent(totalFemale / total)
 })
 

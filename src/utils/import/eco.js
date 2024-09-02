@@ -362,12 +362,12 @@ function parseActorEmployment(employment) {
 
     return parseFloat(employmentCell);
   }
-  function sumEmployments(employments) {
-    if (employments.every(employment => _.isNull(employment))) {
-      return null;
-    }
-    return  _.sumBy(employments, employment => employment || 0);
+}
+export function sumEmployments(employments) {
+  if (employments.every(employment => _.isNull(employment))) {
+    return null;
   }
+  return  _.sumBy(employments, employment => employment || 0);
 }
 
 const parseAccountByActorSheet = (json, actors, stages) => {
