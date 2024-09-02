@@ -303,40 +303,7 @@ const parseEmploymentSheet = (json, actors) => {
   }
   checkColumnsExistence(sheetAsJson, EMPLOYMENT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const employments = sheetAsJson.map(employment => {
-    const actorName = employment[EMPLOYMENT_COLUMNS.ActorType]
-    const tempMale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempMale])
-    const tempFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempFemale])
-    const unskilledMale = parseFloat(employment[EMPLOYMENT_COLUMNS.UnskilledMale])
-    const unskilledFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.UnskilledFemale])
-    const skilledMale = parseFloat(employment[EMPLOYMENT_COLUMNS.SkilledMale])
-    const skilledFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.SkilledFemale])
-
-    const totalMale = (tempMale || 0) + (unskilledMale || 0) + (skilledMale || 0)
-    const totalFemale = (tempFemale || 0) + (unskilledFemale || 0) + (skilledFemale || 0)
-    const totalTemp = tempMale + (tempFemale || 0)
-    const totalSkilled = skilledMale + (skilledFemale || 0)
-    const totalUnskilled = unskilledMale + (unskilledFemale || 0)
-
-    const result = {
-      actorName,
-      data: {
-        tempMale,
-        tempFemale,
-        unskilledMale,
-        unskilledFemale,
-        skilledMale,
-        skilledFemale,
-        totalMale,
-        totalFemale,
-        totalTemp,
-        totalSkilled,
-        totalUnskilled,
-        total: totalMale + (totalFemale || 0)
-      }
-    }
-    return result
-  })
+  const employments = sheetAsJson.map(parseActorEmployment);
 
   actors = actors.map(actor => {
     let employment = employments.filter(employment => employment.actorName === actor.name)
@@ -355,6 +322,40 @@ const parseEmploymentSheet = (json, actors) => {
   return actors
 }
 
+function parseActorEmployment(employment) {
+  const actorName = employment[EMPLOYMENT_COLUMNS.ActorType]
+  const tempMale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempMale])
+  const tempFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempFemale])
+  const unskilledMale = parseFloat(employment[EMPLOYMENT_COLUMNS.UnskilledMale])
+  const unskilledFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.UnskilledFemale])
+  const skilledMale = parseFloat(employment[EMPLOYMENT_COLUMNS.SkilledMale])
+  const skilledFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.SkilledFemale])
+
+  const totalMale = (tempMale || 0) + (unskilledMale || 0) + (skilledMale || 0)
+  const totalFemale = (tempFemale || 0) + (unskilledFemale || 0) + (skilledFemale || 0)
+  const totalTemp = tempMale + (tempFemale || 0)
+  const totalSkilled = skilledMale + (skilledFemale || 0)
+  const totalUnskilled = unskilledMale + (unskilledFemale || 0)
+
+  const result = {
+    actorName,
+    data: {
+      tempMale,
+      tempFemale,
+      unskilledMale,
+      unskilledFemale,
+      skilledMale,
+      skilledFemale,
+      totalMale,
+      totalFemale,
+      totalTemp,
+      totalSkilled,
+      totalUnskilled,
+      total: totalMale + (totalFemale || 0)
+    }
+  }
+  return result
+}
 const parseAccountByActorSheet = (json, actors, stages) => {
   var sheetname = ECO_SHEET_NAMES.AccountByActor
   var sheetAsJson = getSheetNameContent(json, sheetname)
