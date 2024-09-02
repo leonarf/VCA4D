@@ -120,16 +120,16 @@
       "iso": "do"
     },
     {
+      "id": "e-swatini",
+      "prettyName": "e-Swatini",
+      "continent": "Africa",
+      "iso": "sz"
+    },
+    {
       "id": "ecuador",
       "prettyName": "Ecuador",
       "continent": "America",
       "iso": "ec"
-    },
-    {
-      "id": "eswatini",
-      "prettyName": "e-Swatini",
-      "continent": "Africa",
-      "iso": "sz"
     },
     {
       "id": "ethiopia",
@@ -332,6 +332,13 @@
       "product": "mango"
     },
     {
+      "id": "beef-e-swatini",
+      "title": "e-swatini Beef",
+      "year": null,
+      "country": "e-swatini",
+      "product": "beef"
+    },
+    {
       "id": "cocoa-ecuador",
       "title": "Cocoa",
       "year": 2020,
@@ -344,13 +351,6 @@
       "year": 2020,
       "country": "ecuador",
       "product": "coffee"
-    },
-    {
-      "id": "beef-eswatini",
-      "title": "Beef",
-      "year": 2020,
-      "country": "eswatini",
-      "product": "beef"
     },
     {
       "id": "cotton-ethiopia",
