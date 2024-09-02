@@ -1,6 +1,6 @@
 {
-  "id": "beef-eswatini",
-  "country": "e-Swatini",
+  "id": "beef-e-swatini",
+  "country": "e-swatini",
   "commodity": "Beef",
   "year": null,
   "type": "social",
@@ -335,13 +335,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "text": "4.1.1 Does the local production of food increase?\n",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Food security in rural Swaziland is generally good, and there is reason to believe that it is marginally better for cattle-owners than for non-cattle owners (because of availability of dairy products, use of manure as fertilser, and use of cattle sales to buffer shocks)"
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "No strong trend"
@@ -373,7 +373,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "A significant proportion of FGD participants stated that cattle-owning households had better dietary quality and diversity than non-cattle-owning households, because of availability of dairy products and use of manure as a fertilzer, specifically on vegetable gardens"
@@ -468,7 +468,7 @@
         },
         {
           "title": "5.3 Social involvement",
-          "averageValue": 2.3333333333333335,
+          "averageValue": 2.33333333333333,
           "averageText": "Moderate",
           "questions": [
             {
@@ -558,7 +558,7 @@
               "comment": "School is compulsory to 16: there is some evidence of a differential between cattle-owing and non-cattle-owning households in ability to afford secondary, further and higher education"
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Very little evidence except for in-house on- the-job training"
