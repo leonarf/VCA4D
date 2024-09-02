@@ -1,7 +1,7 @@
 {
-  "id": "oil-palm-sierra-leone",
-  "country": "Sierra Leone",
-  "commodity": "Oil Palm",
+  "id": "palm-oil-sierra-leone",
+  "country": "sierra-leone",
+  "commodity": "Palm Oil",
   "year": null,
   "type": "social",
   "socialData": [
@@ -335,13 +335,13 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "text": "4.1.1 Does the local production of food increase?\n",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Oil palm value chain is important in a context of decline in absolute availability of staple food over the years as palm oil is an important source of dietary fat and income for smallholder producers. However, the FAO data shows that oil palm production and productivity have been stagnant over the years "
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "In the palm growing areas, the study team met a group of farmers whose Boli rice crop have failed this year. Main months of food-scarcity are June-September as during this time reserve food stocks are finished, and rain prevent palm harvesting and processing activities.Incomes from oil palm provides a safety net in this situation. "
@@ -373,7 +373,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Main family diet in Malen chiefdom, where study team visited, is rice and cassava. Bush meat (which comes from another chiefdom) is eaten sometimes. Goat is eaten on very special occasions. Fish is eaten sometimes (getting healthful omega-3 fats, nutrients such as vitamin D and selenium, protein etc.). In this chiefdom, people do not eat chickens, occasionally eat fruits. Most just eat rice with palm oil. The diet clearly lacks proteins and vitamins."
@@ -468,7 +468,7 @@
         },
         {
           "title": "5.3 Social involvement",
-          "averageValue": 2.6666666666666665,
+          "averageValue": 2.66666666666667,
           "averageText": "Substantial",
           "questions": [
             {
@@ -498,7 +498,7 @@
       "groups": [
         {
           "title": "6.1 Health services",
-          "averageValue": 1.6666666666666667,
+          "averageValue": 1.66666666666667,
           "averageText": "Moderate",
           "questions": [
             {
@@ -542,7 +542,7 @@
         },
         {
           "title": "6.3 Education and training",
-          "averageValue": 2.3333333333333335,
+          "averageValue": 2.33333333333333,
           "averageText": "Moderate",
           "questions": [
             {
@@ -558,7 +558,7 @@
               "comment": "Drop-out rates (after primary) continue to be higher due to lack of schooling infrastructure and very high fees. The cost of education for a child is (as estimated during a FGD) around 400,000 to 500,000 Le; 50 to 70 USD per year, which is steep and unaffordable for majority of people and is one of cause of indebtedness for palm producers and processors. "
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Many areas of education and training for palm producers and processors are not being adequately addressed by the government agencies or by the private sector companies."

@@ -1,7 +1,7 @@
 {
-  "id": "french-beans-kenya",
+  "id": "green-beans-kenya",
   "country": "kenya",
-  "commodity": "French Beans",
+  "commodity": "Green Beans",
   "year": null,
   "type": "social",
   "socialData": [
@@ -333,13 +333,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "text": "4.1.1 Does the local production of food increase?\n",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Although FB are not considered a food crop for consumption within most Kenyan households, the money that is earned by producing FB at the SHF level is often invested back into the farm through the purchase of livestock, equipment or inputs.  As a result, growing FB can have an indirect positive impact on overall food production at the household level, by enabiling improvements/changes in the home farming system that can lead to increased production."
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "text": "4.1.2 Are food supplies increasing on local markets? \n",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Although it was not possible to gain first hand how much change there has been in local markets, the income from FB production and through paid employment in the FBVC will increase spending power in the market. "
@@ -371,7 +371,7 @@
           "averageText": "n/a",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "No data available.  One area of concern is the standards to which food is being produced for local consumption.  For example, FB rejected for export are often sold in the local market which might potentially expose people to harmful levels of MRLs"
@@ -496,7 +496,7 @@
       "groups": [
         {
           "title": "6.1 Health services",
-          "averageValue": 2.6666666666666665,
+          "averageValue": 2.66666666666667,
           "averageText": "Substantial",
           "questions": [
             {
@@ -556,7 +556,7 @@
               "comment": "Most of the SHF involved in the study cite 'investing in their children's education' as one of the main befits from growing French Beans.  They are able to keep their children in school for longer, allowing them to gain a greater level of educational attainment and increase their employment potential.   For workers on commercial farms, packhouses and processors, the impact on children's education is less clear and it was not possible to ascertain this first hand.  The standard of education will depend on the families ability to pay school fees, and availability/quality of educational establihshments in their area.  Where workers have migrated away from their home, and into urban areas (e.g. Nairobi), tthis may increase the range of education options available, but at a cost (see earlier section on wages)."
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Companies involved in FB production offer training to their farm workers in the jobs they expect them to carry out.  The majority of tasks do not require skill, but there are a small number of more technical tasks (e.g. pest management/spraying, or use of machinary) where an employer will either look for someone who has already been trained, or will provide training in-service.  These roles will come with an element of greater job secruity.    Where companies work with SHF, they will provide a certain amount of extension support to farmers.  This will depend on whether they expect the farmers to deal with pest and disease management themselves, or if this is done through an extension team.  They will also train the farmer on grading, quality control, etc.  All training is at cost to the SHF, since it will be factored into the price the buyer will give the farmer at the gate.  There is evidence to suggest that the quality of extension support staff may be declining, as companies reduce their costs by hiring fewer and less well qualified staff.  All farmers SHF who took part in the study, who had interacted with technical staff were very appreciative of this input and requested more.  At the packhouse/processing end of the value chain, employers will provide in-service training on the tasks employees are expected to carry out.  It is likely that an employer will give preference to an employee with previous experience, or train up an existing and reliable employee in a new task.  Very little training is being provided on group formation and management, financial management, running a business, etc. but more would be welcomed."

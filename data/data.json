@@ -13,7 +13,7 @@
         "mango",
         "mango|lime",
         "vanilla",
-        "oil palm"
+        "palm oil"
       ]
     },
     {
@@ -37,7 +37,7 @@
         "cotton",
         "groundnut",
         "cowpea",
-        "french beans",
+        "green beans",
         "maize",
         "sorghum",
         "pineapple"
@@ -49,7 +49,7 @@
       "color": "#0073CF",
       "textColor": "#0073CF",
       "commodities": [
-        "freshwater-aquaculture",
+        "freshwater aquaculture",
         "aquaculture",
         "coastal fisheries",
         "inland fisheries",
@@ -371,7 +371,7 @@
       "title": "Freshwater Aquaculture",
       "year": 2020,
       "country": "georgia",
-      "product": "freshwater-aquaculture"
+      "product": "freshwater aquaculture"
     },
     {
       "id": "groundnut-ghana",
@@ -416,11 +416,11 @@
       "product": "cassava"
     },
     {
-      "id": "french-beans-kenya",
-      "title": "French Beans",
-      "year": 2020,
+      "id": "green-beans-kenya",
+      "title": "kenya Green Beans",
+      "year": null,
       "country": "kenya",
-      "product": "french beans"
+      "product": "green beans"
     },
     {
       "id": "cashew-mali",
@@ -493,11 +493,11 @@
       "product": "cashew"
     },
     {
-      "id": "oil-palm-sierra-leone",
-      "title": "Oil Palm",
-      "year": 2020,
+      "id": "palm-oil-sierra-leone",
+      "title": "sierra-leone Palm Oil",
+      "year": null,
       "country": "sierra-leone",
-      "product": "oil palm"
+      "product": "palm oil"
     },
     {
       "id": "coastal-fisheries-tanzania",
@@ -583,7 +583,7 @@
       "prettyName": "Vanilla"
     },
     {
-      "id": "oil palm",
+      "id": "palm oil",
       "prettyName": "Palm oil"
     },
     {
@@ -615,7 +615,7 @@
       "prettyName": "Cowpea"
     },
     {
-      "id": "french beans",
+      "id": "green beans",
       "prettyName": "Green beans"
     },
     {
@@ -631,7 +631,7 @@
       "prettyName": "Pineapple"
     },
     {
-      "id": "freshwater-aquaculture",
+      "id": "freshwater aquaculture",
       "prettyName": "Freshwater aquaculture"
     },
     {

@@ -27,7 +27,7 @@ export const getProductLogo = (product) => {
         case 'coffee':
             return CoffeeLogo
         case 'cowpea':
-        case 'french beans':
+        case 'green beans':
             return BeansLogo;
         case 'mango':
         case 'mango|lime':
@@ -50,13 +50,13 @@ export const getProductLogo = (product) => {
             return PeanutLogo
         case 'pineapple':
             return PineappleLogo
-        case 'oil palm':
+        case 'palm oil':
             return PalmOilLogo
         case 'sorghum':
             return WheatLogo
         case 'cassava':
             return CassavaLogo
-        case 'freshwater-aquaculture':
+        case 'freshwater aquaculture':
         case 'aquaculture':
         case "coastal fisheries":
         case "inland fisheries":

@@ -232,9 +232,9 @@ export function amendDataFile(jsonData, studyData) {
     jsonData.countries.sort(sortFunctionByProperties(["id"]));
 
     const existingCommoditiesInCategories = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
-    const slugifiedCommodity = slugify(studyData.commodity)
-    if (!existingCommoditiesInCategories.includes(slugifiedCommodity)) {
-        jsonData.categories.find(category => category.id === 'unknown').commodities.push(slugifiedCommodity)
+    const lowercaseCommodity = studyData.commodity.toLowerCase();
+    if (!existingCommoditiesInCategories.includes(lowercaseCommodity)) {
+        jsonData.categories.find(category => category.id === 'unknown').commodities.push(lowercaseCommodity)
     }
 
     const existingCommodities = _.uniq(jsonData.studies.map(study => study.product));
