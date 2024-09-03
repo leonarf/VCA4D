@@ -1,8 +1,8 @@
 {
   "id": "coffee-angola",
-  "country": "Angola",
+  "country": "angola",
   "commodity": "coffee",
-  "year": 2020,
+  "year": null,
   "type": "social",
   "socialData": [
     {
@@ -38,7 +38,7 @@
               "comment": "Não existe trabalho forçado."
             },
             {
-              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Ao nível dos pequenos e médios produtores as mulheres são contratadas apenas de forma eventual na altura das colheitas. Algumas agro-indústrias contratam mulheres a tempo inteiro.Na gestão das empresas não figuram mulheres."
@@ -51,7 +51,7 @@
           "averageText": "Moderate/Low",
           "questions": [
             {
-              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "O primeiro ciclo é frequentado pela maioria das crianças, mas o abandono escolar aumenta bastante a partir deste nível de escolaridade. O trabalho infantil em actividades agrícolas ou domésticas é entendido com naturalidade."
@@ -138,13 +138,13 @@
               "comment": "A situação da posse legal da terra condiciona o acesso a políticas de intervenção e financiamento, situação ainda longe de estar regularizada."
             },
             {
-              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Os representantes locais e regionais  e o INCA têm uma relação próxima com as populações, mas não é garantido que o mesmo aconteça a níveis hierárquicos superiores na administração pública."
             },
             {
-              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "O poder da autoridades tradicionais (soba) é reconhecido, e estas são envolvidas enquanto intermediárias nas diversas situações relacionadas com a posse da terra. No entanto, há referências a que o processo nem sepre resulta em benefício das populações."
@@ -169,7 +169,7 @@
               "comment": "Não são conhecidos quaisquer projectos de investimento que impliquem expropriação de terras com consequências para as populações rurais."
             },
             {
-              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "Ver 2.3.2"
@@ -199,7 +199,7 @@
               "comment": "Com um acesso à terra muito dificultado, e sendo o café uma cultura consideradas \"dos homens\", o papel da mulher na CV permanece muito limitado, com uma intervenção normalmente limitada a períodos de picos de actividade, sendo raras as situações em que é proprietária e produtora de café."
             },
             {
-              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "As mulheres limitam-se a participar no processo produtivo. Não se encontram mulheres nas outras actvidades da CV"
@@ -230,7 +230,7 @@
               "comment": "O acesso ao crédito está muito dependente da posse da terra o que, sendo mais difícil para a mulher, dificulta ainda mais o acesso da mulher ao crédito."
             },
             {
-              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "O acesso a serviços de extensão está muito dependente da posse da terra o que, sendo mais difícil para a mulher, dificulta ainda mais o acesso da mulher ao crédito."
@@ -286,13 +286,13 @@
               "comment": "Please add justification."
             },
             {
-              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "As posições de liderança nos grupos de produtores ou entidades associativas são normalmente ocupadas por homens, embora as mulheres possam igualmente assumir essas posições (caso da Cooperativa Cesa Copa, em Gabela)."
             },
             {
-              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Please add justification."
@@ -335,13 +335,13 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\n",
+              "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "O aumento de alimentos disponíveis só ocorrerá na medida em que os rendimentos do café foram investidos nas culturas de subsistência (adubos, equipamento, mão de obra)."
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Se houver uma maior procura em consequência de uma maior disponibilidade financeira dos agregados familiares, é expectável que se verifique um aumento da oferta nos mercados locais, em termos de quantidade e diversidade de alimentos."
@@ -354,13 +354,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Sendo uma cultura de rendimento, por definição o incremento da cultura do café irá aumentar o rendimento dos produtores, e consequentemente o valor alocado à aquisição de alimentos."
             },
             {
-              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "Não há evidência sobre a influência da cultura do café no preço de mercado dos produtos alimentares."
@@ -373,7 +373,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "A qualidade nutricional é deficiente, sobretudo ao nível das crianças, em parte pela escassez de alimentos disponíveis, em parte consequência da sobrecaga de trabalho das mães, que as impede de se dedicarem de um modo adequado ao provimento das necessidades alimentares do agegado familiar. O aumento das disponibilidades financeiras provenientes da cultura do café deverá contribuir para uma melhoria da qualidade nutricional da alimentação."
@@ -404,7 +404,7 @@
               "comment": "Uma maior disponibilidade de aquisição de alimentos irá reduzir o risco de períodos de carência."
             },
             {
-              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "Não há evidência sobre a influência da cultura do café no preço de mercado dos produtos alimentares."
@@ -434,7 +434,7 @@
               "comment": "A presença de mulheres nas entidades associativas reflecte a estrutura social do meio, com uma participação reduzida nas mesmas, embora não exista nenhum impedimento formal para essa participação."
             },
             {
-              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "As lideranças das actuais organizações associativas/cooperativas são sobretudo formais, e não são referidas pelos produtores como tendo uma actuação efectiva que beneficie os seus associados."
@@ -453,7 +453,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Os pequenos produtores têm acesso limitado a práticas e políticas agrícolas, e quase sempre através da entidade governamental para o sector (INCA). Quanto a preços de mercado, são-lhes apresentados apenas os preços locais e no momento da venda."
@@ -472,7 +472,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "As comunidades com impacto na vida social assentam sobretudo em grupos/relações familiares."
@@ -484,7 +484,7 @@
               "comment": "As autoridades tradicionais asseguram o respeito pelos direitos tradicionais no acesso ao direito à terra e na situação desigual das mulheres."
             },
             {
-              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "Não foram observadas acções comunitárias de caracter social"
@@ -533,7 +533,7 @@
               "comment": "Habitações precárias sem saneamente básico, de acordo com as estatísticas disponíveis referidas no relatório."
             },
             {
-              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Habitções precárias sem saneamento básico, de acordo com as estatísticas disponíveis referidas no relatório."
@@ -558,7 +558,7 @@
               "comment": "O acesso ao nível secundário e vocacional apresenta alguma dificulade para a maioria dos agregados, não só pelo preço das propinas e obrigação de deslocação dos estudantes para fora do agregado familiar, como pelas solicitações de trabalho dentro do agregado familiar.."
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Há agro-indústrias a dar formação técnica aos seus trabalhadores."

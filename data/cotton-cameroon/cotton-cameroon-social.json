@@ -1,8 +1,8 @@
 {
   "id": "cotton-cameroon",
-  "country": "Cameroon",
+  "country": "cameroon",
   "commodity": "Cotton",
-  "year": 2020,
+  "year": null,
   "type": "social",
   "socialData": [
     {
@@ -29,7 +29,7 @@
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
               "scoreValue": 4,
               "scoreText": "High",
-              "comment": "Employment by the cotton society (SNCC) is considered as a privilege in a society with scares formal jobs "
+              "comment": "Employment by the cotton society (SNCC) is considered as a privilege in a society with scares formal jobs"
             },
             {
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
@@ -38,7 +38,7 @@
               "comment": "It is difficult to make any statement on the situation of women obliged to work for their men against their will (due to lack of data). The adherence to CmiA by SNCC enhances the chances that forced labor is minimised."
             },
             {
-              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "see above"
@@ -51,7 +51,7 @@
           "averageText": "High",
           "questions": [
             {
-              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 4,
               "scoreText": "High",
               "comment": "The chance of school attendance by children of cotton farmers is enhanced, as the cotton farmers even invest in classes  building and hiring teachers. Education of the children is a high priority for the parents. They often produce cotton in order to increase the chances by education. Also, the main peak month of labour is December, when the children are for 1 month on holiday. See again CmiA requirements."
@@ -116,7 +116,7 @@
               "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
               "scoreValue": 4,
               "scoreText": "High",
-              "comment": "large scale investment is currently not an option. The biggest farms reach 40 ha cotton, and less than 5% of farms have >20 ha cotton. There would not be land available for large scale land acquisitions. "
+              "comment": "large scale investment is currently not an option. The biggest farms reach 40 ha cotton, and less than 5% of farms have >20 ha cotton. There would not be land available for large scale land acquisitions."
             }
           ]
         },
@@ -129,7 +129,7 @@
               "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "The already involved cotton farmers are well informed by CNPCC channels.This sub-sector is above avarage provided with information, maybe less related to new projects. As SODECOTON channels are used and not the (public) radio, the information level is moderate for the peasants. In principle there are rules for involving stakeholders at villlage level, orgnaized through inter-ministerial commissions through a cascade (national-regional-departmental-comunal/village). "
+              "comment": "The already involved cotton farmers are well informed by CNPCC channels.This sub-sector is above avarage provided with information, maybe less related to new projects. As SODECOTON channels are used and not the (public) radio, the information level is moderate for the peasants. In principle there are rules for involving stakeholders at villlage level, orgnaized through inter-ministerial commissions through a cascade (national-regional-departmental-comunal/village)."
             },
             {
               "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
@@ -138,13 +138,13 @@
               "comment": "Generally, the communication is not very strong at village level and the cotton system uses normally the hierarchical cascade of information rather than the official radio."
             },
             {
-              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Strong CPNCC, well organized from village to regional level and coordinaing closely with Sodecoton. The information flow is however dominated from top-down. In most cases, the lack of human resources below the regional level and the reduced use of radio reduces the chances for effective consultation."
             },
             {
-              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "It is asssumed that at village level, the level of discussion among the cotton producers is high, due to the many institutions and rules organized  within the producer groups (GP, GIC). These groups are systematically promoted since over 30 years. No prio consent is foreseen when villagers are confronted with land distributed to migrants competing with their ancentral land."
@@ -169,7 +169,7 @@
               "comment": "The farmers have no problem to quit cotton and continue livelihood with alternative crops like maize, sorgho, peanuts etc. However, at community and socio-economy level, the \"dependence\" on cotton is rather high as it is convenient due to ist embeddedness (from production training to input provision to marketing). The bureaucratic apparatus around cotton (Ministries, SDCC, CNPCC) and its relative closeness to the public do not facilitate discussions on alternatrive strategies or even limits of the cotton extension. Often, farmers having abondend cotton return back after 3-4 years."
             },
             {
-              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "The expropriation process is defined in detail by law (see: procedure governing expropriation for public purposesand conditions for compensation)(accessible on the web). But in practice, only assets on the land are compensated, not the value of the land itself, except if formal land titles are available, which is rarely the case. As the application of the rule is not known, I score moderate."
@@ -199,10 +199,10 @@
               "comment": "A risk is that in larger farmers the women have to fully work for the husbands cotton farm, as he needs every possible hand. This would exclude her from earning her own money with cotton and having money for education of her children. This trend has become real since the focus of Sodecoton to priorize large farms (>5 ha cotton). Women are however not allowed to create women groups (GIC) for cotton. The 2 out of 10 board members of CNPCC representing the women farmer (1 per region; north and South) could hardly be of help on this issue. Within SODECOTON as an employer, 5% of its staff are women in positions wher the hands of women are preferred (f.ex. bottling) now, with no risks of exclusion."
             },
             {
-              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "About 5% of Sodecoton staff are women, 3 times more than 10 years ago, but still at low level. No women in management possition. The situation is slightly better at the producer level. Between 10 and 15% of the producer are women, mainly in the type of small (<1ha) and medium size (1-5 ha). The women play a very active role in using the cotton money for social and educational investments.Very active in the transformation sector (fillature, tissage, confection), but here the industry has shrunk considerably over the last 20 years. In fact, considering the important role women played in this sector before the 20th Cent, it has basically disappeared. "
+              "comment": "About 5% of Sodecoton staff are women, 3 times more than 10 years ago, but still at low level. No women in management possition. The situation is slightly better at the producer level. Between 10 and 15% of the producer are women, mainly in the type of small (<1ha) and medium size (1-5 ha). The women play a very active role in using the cotton money for social and educational investments.Very active in the transformation sector (fillature, tissage, confection), but here the industry has shrunk considerably over the last 20 years. In fact, considering the important role women played in this sector before the 20th Cent, it has basically disappeared."
             }
           ]
         },
@@ -227,10 +227,10 @@
               "text": "3.2.3 Do women have access to credit?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "\"Crédit coton\". Les femmes sont representé entre 10 et 15%. This representation diminishes, the bigger the farms become. Apart from the cotton credit, no access probable as they lack of garanties. "
+              "comment": "\"Crédit coton\". Les femmes sont representé entre 10 et 15%. This representation diminishes, the bigger the farms become. Apart from the cotton credit, no access probable as they lack of garanties."
             },
             {
-              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Women are in principle welcommed as cotton producers by the company and they constitue about 15% of the cotton credit takers (sometimes also on behalf of their men who lost credibility within the SDCC due to non-respecting the eligibility criteria). The resistance might come more from within the men-led households.It is rare to find women in leadership positions within the GP (we met one who was tresurer)."
@@ -286,13 +286,13 @@
               "comment": "Often in cotton producer groups (in our context), but also in other VC and other ventures (s. above). But mainly limited to the village level. Two women represent women interests within the board of CNPCC."
             },
             {
-              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Rarely in mixed groups; mainly within women groups at village level"
             },
             {
-              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Still emerging and at a low but steadily growing level. Different is the situation of women emerging from the elite. Here, they have similar chances to influence decisions than men."
@@ -320,7 +320,7 @@
               "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Women do not need to make the danageros work (for them) of pesticide application. "
+              "comment": "Women do not need to make the danageros work (for them) of pesticide application."
             }
           ]
         }
@@ -335,13 +335,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\n",
+              "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Thanks to the cotton credit, more can be produced thanks to the increased inputs and advice by the cotton partners. Cotton credit and so cotton production should in principle increase the overall production, as in average less than 40% of the availbale land is used for cotton, but the cotton money is still available to purchase in case of need (mainly May to August). As the cotton farmers are rather part of the better-off housholds, a larger involvement of more small-scale farmers in well orgnaised VC would increase food production."
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "A majority of the food production goes for the markets, sometimes also because of the need for cash for daily needs (education, health etc). Cotton farmers contribute to increase local food markets (mainly millet, sorghum, cow pea,  in the Extreme-North)."
@@ -354,13 +354,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Income is increased through cotton money, and more cereal production is possible thanks to the cotton credit and to the possibility to increase in diversificationat farm level. A problem may however rise if the cotton money comes with delay (of months) obliging selling the food at a bad moment (when the price is low). The months June to August are often tough as only one dish per day may be on the table- even for cotton households. An important variable is the behaviour of the head of household. It is observed and shown by data, that the more cotton a household farms, the more children it has. This means that a certain category of cotton farmers are more interested in the number of children (and women) as in their respective food security. "
+              "comment": "Income is increased through cotton money, and more cereal production is possible thanks to the cotton credit and to the possibility to increase in diversificationat farm level. A problem may however rise if the cotton money comes with delay (of months) obliging selling the food at a bad moment (when the price is low). The months June to August are often tough as only one dish per day may be on the table- even for cotton households. An important variable is the behaviour of the head of household. It is observed and shown by data, that the more cotton a household farms, the more children it has. This means that a certain category of cotton farmers are more interested in the number of children (and women) as in their respective food security."
             },
             {
-              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "The huge markets in Nigeria are heaviliy influencing the prices (more than the local production). If the maize prize f.ex. Is low, than farmers tend to increase the surface of cotton (and viceversa). The boarder with Nigeria is rather open (if if officially closed due to Boko Harem). The excahnge rate of the Naira and the proice situation of staple food like maize co-determine prices in Cameroon."
@@ -373,7 +373,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "The relatively high mineral fertilizer applications and the low biodiversity in the soil (low carbon means low biodiversity) together with the pesticides applied suggest that the trend in food and nutrition quality decreases. But the positive impact of having more food outbalances this factor: non-cotton farmers have less nutrition."
@@ -404,10 +404,10 @@
               "comment": "In principle, the regular annual income of the cotton money as well  the intensification of cereals through cotton credit (fertilizer mainly) decrease the  probability of food shortages. The problem lies in the strategy of men to invest the cotton money first about in the increase of the cotton area (often through an additional wife). Then it depends on the economic structure of the houshold: a HH with over 5 ha and max 40% of cotton should definitevely have better chances to overcome a food crises than a HH with only half the available land. Again, it is the habitus of the family (and here as well of the head of HH) and the infliuence of the mother towards food security which is decisive."
             },
             {
-              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "The relative price stabilization mechanism installed for cotton in Cameroon provides a certain protection to loss due to abrupt price falls on the global level. Hence the cotton producers are indirecly protected against price variations, as an importnat part of the expected income (cotton money after harvest) could be used to purchase food. "
+              "comment": "The relative price stabilization mechanism installed for cotton in Cameroon provides a certain protection to loss due to abrupt price falls on the global level. Hence the cotton producers are indirecly protected against price variations, as an importnat part of the expected income (cotton money after harvest) could be used to purchase food."
             }
           ]
         }
@@ -434,7 +434,7 @@
               "comment": "Their is one criteria of exclusion: a threshold of productivity (f.ex. 900 kg/ha) for cotton has to be reached, if not the producer would be excluded in the next year (except there is a reason beyond his/her fault like inondation). So indirectly, families not affording the credit will be excluded. This sysetm made cameroon one of the most productive cotton countries, but at a price of exclsuion of the poorer half of the farmer population. But considering that everybody can manage the risk by the surface under production, the exclusion may be mor on the social pressure level."
             },
             {
-              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "The leader are elected regularly at all levels (village to Intraregional level). Difficult to assess the accountability and the fairness/openness of this process. But the atmosphere at the meetings (organised for this assessment) was quite relaxed and free of tension, so we can assume that the leadership is not a problem at village level. The  distance between GP and Unions (zone/sector) and between unions and federation might be large."
@@ -453,7 +453,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Rather limited, as most information circulates top-down through the cotton channel (rather then through rado etc). There is no promotion to facilitate free access to information and knowledge. Certain villages have no access to radio waves."
@@ -472,7 +472,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "As important decisions are taken at the higher level, communities are less involved in shaping their organisations. But within sub-communities, like women groups, youth groups etc, activities are run to a growing degree.  The chieftancyship reduces certain dynamics, on the other sides it provides identity and stability."
@@ -484,7 +484,7 @@
               "comment": "The embedding of all relations and economic activities in the local culture tends to recognize and value local knowledge. The rather technical inputs based on the cotton campaigns objective limits the use of local knowledge"
             },
             {
-              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "\"Credit coton\" allows social projects realized with cotton money: school classes, employment of teachers, water points, cerael banks, office buildings, soil and water conservation measures. A case (I48): a community build a health post in 1980, and since it was never equipped with health staff. But the villagers keep the hope to get this staff and still purchases medications (without (refrigerator). This exemplifies the absence of public services in rural areas."
@@ -533,7 +533,7 @@
               "comment": "average to above average. The poverty level does not yet allow \"good\" housing, but it prevents \"miserable\" housing conditions."
             },
             {
-              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Similar situation as in health: when water is critical, the cotton group invests in water points. The government is often absent  and seems to hope that the cotton players develop the infrastructure and services. Not clear if the neighboring herders (Mbororo) will benefit from it. Sodecoton reports that 254 wells and 201 water wholes have been done in the last years through the cootton group money. Some villages report very critical water conditions (I45), other have no problem with water accessability, but suffer from inondation due to sealed soils due to land degradation (I48)."
@@ -549,7 +549,7 @@
               "text": "6.3.1 Is primary education accessible to households?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Often only thanks to the cotton money, which then is invested in building classes and hiring a local teacher for about 15'000 F/month. "
+              "comment": "Often only thanks to the cotton money, which then is invested in building classes and hiring a local teacher for about 15'000 F/month."
             },
             {
               "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
@@ -558,7 +558,7 @@
               "comment": "When women can keep their influnece on the cotton money, they do all to send their kids into further education, men however prefere having an additional wife and more children."
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Training in sustainable production-the CmiA standard- as well as in Business farming school is initiated and done. The quality of the training is hard to assess (lack of data)"

@@ -38,7 +38,7 @@
       </div>
     </div>
     <div>
-      <div class="header-title">{{ studyData.year }}</div>
+      <div class="header-title">{{ studyData.year || '-' }}</div>
       <div class="subtitle">Reference year</div>
     </div>
   </div>

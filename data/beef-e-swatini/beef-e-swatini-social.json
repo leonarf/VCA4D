@@ -1,8 +1,8 @@
 {
-  "id": "beef-eswatini",
-  "country": "e-Swatini",
+  "id": "beef-e-swatini",
+  "country": "e-swatini",
   "commodity": "Beef",
-  "year": 2020,
+  "year": null,
   "type": "social",
   "socialData": [
     {
@@ -23,7 +23,7 @@
               "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Laws allow formation of staff associations or recognition of trade unions in formal sector enterprises employing more than 25 people.  The three largest enterprises interviewed recognise and have collective agreements with unions (one seen by the researchers).  Some dissent from trade union leaders who stated that there is harrassment of thos joing unions. This question is not applicable to SNL production systems or to small or informal enterprises such as butcheries. "
+              "comment": "Laws allow formation of staff associations or recognition of trade unions in formal sector enterprises employing more than 25 people.  The three largest enterprises interviewed recognise and have collective agreements with unions (one seen by the researchers).  Some dissent from trade union leaders who stated that there is harrassment of thos joing unions. This question is not applicable to SNL production systems or to small or informal enterprises such as butcheries."
             },
             {
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
@@ -38,7 +38,7 @@
               "comment": "We found no evidence of forced labour, which is contrary to the Constitution"
             },
             {
-              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Outside the question of gender inequality, Swaziland is a fairly homogeneous society and the question is of limited applicability.  There were several suggestions that Mozambican migrants were being hired for herding labour within the SNL at low wages, but wages are low also for community members"
@@ -51,7 +51,7 @@
           "averageText": "High",
           "questions": [
             {
-              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 4,
               "scoreText": "High",
               "comment": "Employment of children under 15 is illegal except in training contexts. Employment law relating to 15-18 year olds is complex. FGDs showed that children and young people do work on cattle production tasks (especially bringing cattle to the kraals in the evening) but for relatively short periods of the day before and after school"
@@ -92,7 +92,7 @@
               "text": "1.4.2 Are conditions of activities attractive for youth?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Cattle production on the SNL (like SNL agriculture in general) is not particualrly attractive for youth, and there is a trend for rural youth to migrate to urbanised areas.  Employment in the more formal parts of the value chain (e.g in abattoirs or feed mills) is attractive because it consists of salaried employment which is in high demand, not because of any specific aspects of cattle-related work.   "
+              "comment": "Cattle production on the SNL (like SNL agriculture in general) is not particualrly attractive for youth, and there is a trend for rural youth to migrate to urbanised areas.  Employment in the more formal parts of the value chain (e.g in abattoirs or feed mills) is attractive because it consists of salaried employment which is in high demand, not because of any specific aspects of cattle-related work."
             }
           ]
         }
@@ -129,7 +129,7 @@
               "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Overall note on Sections 2.2 and 2.3: we did not find examples of actual or planned acquisition of areas in the SNL for commercial ranching or related activities, so it is difficult to draw conclusions for this section.  It was suggested that acquisition of SNL through the local chiefs could be less than transparent.  Acquisition of SNL for other agricultural activities, e.g. irrigation, has been a complex process with attempts at providing benefits for local farmers, but imperfect transparency.   "
+              "comment": "Overall note on Sections 2.2 and 2.3: we did not find examples of actual or planned acquisition of areas in the SNL for commercial ranching or related activities, so it is difficult to draw conclusions for this section.  It was suggested that acquisition of SNL through the local chiefs could be less than transparent.  Acquisition of SNL for other agricultural activities, e.g. irrigation, has been a complex process with attempts at providing benefits for local farmers, but imperfect transparency."
             },
             {
               "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
@@ -138,13 +138,13 @@
               "comment": "See 2.2.1"
             },
             {
-              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "See 2.2.1"
             },
             {
-              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "See 2.2.1"
@@ -169,7 +169,7 @@
               "comment": "See 2.2.1"
             },
             {
-              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "See 2.2.1"
@@ -199,7 +199,7 @@
               "comment": "We saw no evidence of active programmes or policies to increase involvement of women in the value chain"
             },
             {
-              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Women's involvement in cattle production on the SNL is increasing for a number of reasons, though it is still limited by traditional role expectations.  Women's involvement in the rest of the value chain is very low (though there are examples of women in senior positions)"
@@ -230,7 +230,7 @@
               "comment": "There appears to be no credit available to cattle producers on the SNL, either women or men"
             },
             {
-              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Service provision is generally low, and given patterns of household division of labour, it is likely that women are further disadvantaged in this respect"
@@ -283,16 +283,16 @@
               "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Farmer groups and organisations are few.  Women are members of trade unions.  "
+              "comment": "Farmer groups and organisations are few.  Women are members of trade unions."
             },
             {
-              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "We saw little evidence of female leadership in organisations. We met various female Veterinary Assistants which is a key support role in cattle production"
             },
             {
-              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Both women and men in FGDs expressed satisfaction with official local development planning"
@@ -335,13 +335,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Food security in rural Swaziland is generally good, and there is reason to believe that it is marginally better for cattle-owners than for non-cattle owners (because of availability of dairy products, use of manure as fertilser, and use of cattle sales to buffer shocks)"
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "No strong trend"
@@ -354,13 +354,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "It was generally stated that cattle-owing households were no more likely to have higher income than non-cattle owners (who might have e.g. non-farm businesses or remittance)s"
             },
             {
-              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "No trend of decreasing prices"
@@ -373,7 +373,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "A significant proportion of FGD participants stated that cattle-owning households had better dietary quality and diversity than non-cattle-owning households, because of availability of dairy products and use of manure as a fertilzer, specifically on vegetable gardens"
@@ -404,7 +404,7 @@
               "comment": "Drought is a major risk factor in rural Swaziland, but there is some evidence that cattle-owners can use cattle sales as a coping mechanism"
             },
             {
-              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 1,
               "scoreText": "Not at all",
               "comment": "There is no mechanism to reduce food price variation during droughts"
@@ -434,7 +434,7 @@
               "comment": "Please add justification."
             },
             {
-              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "Please add justification."
@@ -453,7 +453,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Information on livestock health and production, through Veterinary Assistants and informally, little information on policies.  Information on timing and location of cattle markets and other selling opportunities, but no price information"
@@ -468,11 +468,11 @@
         },
         {
           "title": "5.3 Social involvement",
-          "averageValue": 2.3333333333333335,
+          "averageValue": 2.33333333333333,
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Communities express satisfaction with official local development planning, though little enthusiasm.  Secondary literature suggests problems of equity in local planning processes"
@@ -484,7 +484,7 @@
               "comment": "Little evidence of any positive action for this"
             },
             {
-              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Several mentions from communities of collective action, including jointly raising local contributions to infrastructure development"
@@ -533,7 +533,7 @@
               "comment": "Standards of rural housing are generally high: no evidence of any differential between cattle-owing and non-cattle-owning households"
             },
             {
-              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 4,
               "scoreText": "High",
               "comment": "Well-constructed outside latrines for individual households appear to be the norm: no evidence of any differential between cattle-owing and non-cattle-owning households"
@@ -558,7 +558,7 @@
               "comment": "School is compulsory to 16: there is some evidence of a differential between cattle-owing and non-cattle-owning households in ability to afford secondary, further and higher education"
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Very little evidence except for in-house on- the-job training"

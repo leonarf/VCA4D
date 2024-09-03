@@ -1,8 +1,8 @@
 {
   "id": "pineapple-togo",
-  "country": "Togo",
+  "country": "togo",
   "commodity": "Pineapple",
-  "year": 2020,
+  "year": null,
   "type": "social",
   "socialData": [
     {
@@ -23,25 +23,25 @@
               "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "La liberté d'association est autorisée. Des délégués de personnels existent et syndicats des travailleurs aussi. Mais ces associations ne sembles pas efficaces en face des patrons d'entreprise. "
+              "comment": "La liberté d'association est autorisée. Des délégués de personnels existent et syndicats des travailleurs aussi. Mais ces associations ne sembles pas efficaces en face des patrons d'entreprise."
             },
             {
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Au niveau des producteurs, les contrats sont appliqués selon les règles coutumières. Au niveau des entreprises de transformation ou d’exportation, les employés permanents bénéficient de contrats. Mais certains se plaignent de la non régularité des salaires. En plus, il y a plus des ouvriers (temporaires, saisonniers, journaliers, etc.) qui n’ont pas un salaires fixe. Certains parmi eux y travaillent avec ce statut depuis plusieurs années. Dans la pratique, les employés travaillent plus de 8 heures par jour. "
+              "comment": "Au niveau des producteurs, les contrats sont appliqués selon les règles coutumières. Au niveau des entreprises de transformation ou d’exportation, les employés permanents bénéficient de contrats. Mais certains se plaignent de la non régularité des salaires. En plus, il y a plus des ouvriers (temporaires, saisonniers, journaliers, etc.) qui n’ont pas un salaires fixe. Certains parmi eux y travaillent avec ce statut depuis plusieurs années. Dans la pratique, les employés travaillent plus de 8 heures par jour."
             },
             {
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
               "scoreValue": 4,
               "scoreText": "High",
-              "comment": "Il n’y a pas de risque de travail forcé. Dans les exploitations, les coutumes ne l’admettent pas. Au niveau des entreprises, non plus.  "
+              "comment": "Il n’y a pas de risque de travail forcé. Dans les exploitations, les coutumes ne l’admettent pas. Au niveau des entreprises, non plus."
             },
             {
-              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Les employés sont recrutés selon leur capacités et leur compétence sans discrimination préalable. "
+              "comment": "Les employés sont recrutés selon leur capacités et leur compétence sans discrimination préalable."
             }
           ]
         },
@@ -51,16 +51,16 @@
           "averageText": "Moderate/Low",
           "questions": [
             {
-              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Les enfants scolarisés aident souvent leurs parents au champ (weekends, jours fériés, vacances, etc.). Ceux qui ne sont pas scolarisés (peu) ou qui abandonnent l’école travaillent avec leurs parents dans les champs. Au niveau des entreprises, il n’y a pas de travail des enfants. "
+              "comment": "Les enfants scolarisés aident souvent leurs parents au champ (weekends, jours fériés, vacances, etc.). Ceux qui ne sont pas scolarisés (peu) ou qui abandonnent l’école travaillent avec leurs parents dans les champs. Au niveau des entreprises, il n’y a pas de travail des enfants."
             },
             {
               "text": "1.2.2 Are children protected from exposure to harmful jobs?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Dans les champs, les enfants sont peu protégés du travail pénible, la culture de l’ananas est un travail difficile. "
+              "comment": "Dans les champs, les enfants sont peu protégés du travail pénible, la culture de l’ananas est un travail difficile."
             }
           ]
         },
@@ -73,7 +73,7 @@
               "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Au niveau de la production, des formations et des sensibilisations sont organisées à l’intention des paysans (port de gans, de tenue spéciale contre les piquants, de lunettes solaires, de bottes, etc.). Au niveau des entreprises de transformation ou d’exportation, des dispositions sont théoriquement prises (port de casques, de cache-nez, de blouse, de bottes, etc.). Mais dans l’ensemble, ces mesures ne sont pas rigoureusement respectées.  "
+              "comment": "Au niveau de la production, des formations et des sensibilisations sont organisées à l’intention des paysans (port de gans, de tenue spéciale contre les piquants, de lunettes solaires, de bottes, etc.). Au niveau des entreprises de transformation ou d’exportation, des dispositions sont théoriquement prises (port de casques, de cache-nez, de blouse, de bottes, etc.). Mais dans l’ensemble, ces mesures ne sont pas rigoureusement respectées."
             }
           ]
         },
@@ -86,13 +86,13 @@
               "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "La plupart des entreprises de transformation et d’exportation respectent le SMIG pour les salariés permanents. Les non permanents ont une rémunération jugée dérisoire. En plus les heures de travail ne sont pas respectées (souvent plus de 8 heures par jour). "
+              "comment": "La plupart des entreprises de transformation et d’exportation respectent le SMIG pour les salariés permanents. Les non permanents ont une rémunération jugée dérisoire. En plus les heures de travail ne sont pas respectées (souvent plus de 8 heures par jour)."
             },
             {
               "text": "1.4.2 Are conditions of activities attractive for youth?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Les conditions de travail sont peu attractives pour les jeunes. Pour démarrer une plantation d’ananas, il faut un fond relativement important. Tout le travail (défrichement, dessouchage, sarclage, récolte, etc.) se fait manuellement avec des outils rudimentaires (pioches, dabas, machettes, etc.). Il y a aussi le manque d’accompagnement financier pour la production ou la transformation. Les salaires et les conditions de travail sont peu attractifs au niveau des entreprises. "
+              "comment": "Les conditions de travail sont peu attractives pour les jeunes. Pour démarrer une plantation d’ananas, il faut un fond relativement important. Tout le travail (défrichement, dessouchage, sarclage, récolte, etc.) se fait manuellement avec des outils rudimentaires (pioches, dabas, machettes, etc.). Il y a aussi le manque d’accompagnement financier pour la production ou la transformation. Les salaires et les conditions de travail sont peu attractifs au niveau des entreprises."
             }
           ]
         }
@@ -129,25 +129,25 @@
               "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Il n’y a pas un projet de l’Etat spécifiquement dédié à la promotion de la filière ananas au Togo. L’appui technique aux producteurs est assuré par l’Institut de Conseil et d’Appui Technique (ICAT). L’information, la sensibilisation et la formation sont aussi assurées par des ONG, la GIZ et les entreprises. "
+              "comment": "Il n’y a pas un projet de l’Etat spécifiquement dédié à la promotion de la filière ananas au Togo. L’appui technique aux producteurs est assuré par l’Institut de Conseil et d’Appui Technique (ICAT). L’information, la sensibilisation et la formation sont aussi assurées par des ONG, la GIZ et les entreprises."
             },
             {
               "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Les acteurs sont informés par rapport aux objectifs de développement des filières (surtout, à ce stade, par l’appui de la GIZ) et par rapport aux actions des entreprises. Pour le moment la filière est peu organisée ; les acteurs évoluent presqu’en rang dispersé. Les actions visant à structurer la filière sont en cours surtout avec le projet de la GIZ. "
+              "comment": "Les acteurs sont informés par rapport aux objectifs de développement des filières (surtout, à ce stade, par l’appui de la GIZ) et par rapport aux actions des entreprises. Pour le moment la filière est peu organisée ; les acteurs évoluent presqu’en rang dispersé. Les actions visant à structurer la filière sont en cours surtout avec le projet de la GIZ."
             },
             {
-              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "La participation et la consultation se font surtout entre les transformateurs et les producteurs en termes de respects des normes (surtout concernant l’ananas bio) et en termes de fixation des prix d’achat aux producteurs. Il n’y a quasiment pas de décisions ou de consultation à grande échelle comme au niveau national par exemple. La Coopérative Nationale des Acteurs de la Filière Ananas au Togo (COONAAFAT) a été mis en place depuis 2011. Mais cette association n’est pas encore assez solide pour mener les prises de décisions de grande envergure comme la fixation des prix par exemple."
             },
             {
-              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
-              "comment": "Cette situation ne s’est pas présentée "
+              "comment": "Cette situation ne s’est pas présentée"
             }
           ]
         },
@@ -169,10 +169,10 @@
               "comment": "La loi prévoit des mesures ou des stratégies alternatives en cas de perturbation des moyens d'existence d’un individu ou d’un groupe d’individus."
             },
             {
-              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
-              "comment": "Il n’y a pas de cas d’expropriation. Il s’agit des petits producteurs et de petites et moyennes unités de transformation. "
+              "comment": "Il n’y a pas de cas d’expropriation. Il s’agit des petits producteurs et de petites et moyennes unités de transformation."
             },
             {
               "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
@@ -199,10 +199,10 @@
               "comment": "Les femmes sont présentes à tous segments de la chaîne de valeur"
             },
             {
-              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Les femmes sont actives dans la production (membres de groupements, propriétaires de parcelles, etc.), dans la transformation (quelques femmes chefs d’entreprises de transformation) et dans la commercialisation (les semi-grossistes sont quasiment des femmes). Elles sont plus employées dans les entreprises de transformation ou d’exportation que les hommes. Seulement, elles sont moins nombreuses à des postes de responsabilité et à des tâches qui nécessitent beaucoup de force physique. "
+              "comment": "Les femmes sont actives dans la production (membres de groupements, propriétaires de parcelles, etc.), dans la transformation (quelques femmes chefs d’entreprises de transformation) et dans la commercialisation (les semi-grossistes sont quasiment des femmes). Elles sont plus employées dans les entreprises de transformation ou d’exportation que les hommes. Seulement, elles sont moins nombreuses à des postes de responsabilité et à des tâches qui nécessitent beaucoup de force physique."
             }
           ]
         },
@@ -215,25 +215,25 @@
               "text": "3.2.1 Do women have ownership of assets (other than land)?",
               "scoreValue": 4,
               "scoreText": "High",
-              "comment": "Les femmes sont propriétaires des biens autres que la terre tels que l’immobilier, les animaux, les boutiques (commerce), etc. "
+              "comment": "Les femmes sont propriétaires des biens autres que la terre tels que l’immobilier, les animaux, les boutiques (commerce), etc."
             },
             {
               "text": "3.2.2 Do women have equal land rights as men?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Les coutumes privilégient les hommes en matière d’héritage de biens fonciers. Toutefois ces dernières années, les actions des ONG et les mutations sociales font changer la situation. Au niveau de la location ou de l’achat de terre, pour la production de l’ananas, il n’y a pas de distinction de sexe. "
+              "comment": "Les coutumes privilégient les hommes en matière d’héritage de biens fonciers. Toutefois ces dernières années, les actions des ONG et les mutations sociales font changer la situation. Au niveau de la location ou de l’achat de terre, pour la production de l’ananas, il n’y a pas de distinction de sexe."
             },
             {
               "text": "3.2.3 Do women have access to credit?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Il n’y a pas de distinction de sexe dans l’accès au crédit. Mais les crédits agricoles sont généralement difficiles à obtenir. "
+              "comment": "Il n’y a pas de distinction de sexe dans l’accès au crédit. Mais les crédits agricoles sont généralement difficiles à obtenir."
             },
             {
-              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Les femmes ont accès aux autres services tels que les conseils agricoles, les formations, etc. Mais elles sont limitées par leur niveau d’instruction et le manque de disponibilité dû à leur maternité, à la prise en charge des enfants et aux travaux domestiques. "
+              "comment": "Les femmes ont accès aux autres services tels que les conseils agricoles, les formations, etc. Mais elles sont limitées par leur niveau d’instruction et le manque de disponibilité dû à leur maternité, à la prise en charge des enfants et aux travaux domestiques."
             }
           ]
         },
@@ -246,13 +246,13 @@
               "text": "3.3.1 To what extent do women take part in the decisions related to production?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Les femmes sont membres des coopératives de base ou des unions de coopératives où se discutent les sujets relatifs à la production et où les décisions sont prises. "
+              "comment": "Les femmes sont membres des coopératives de base ou des unions de coopératives où se discutent les sujets relatifs à la production et où les décisions sont prises."
             },
             {
               "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Dans la cellule familiale, surtout en milieu rural, l’organisation du travail est faite selon le sexe. Il y a des travaux d’homme et des travaux de femme pour les collectives. Concernant la production d’ananas, la femme est autonome dans la gestion de sa parcelle si elle en dispose. "
+              "comment": "Dans la cellule familiale, surtout en milieu rural, l’organisation du travail est faite selon le sexe. Il y a des travaux d’homme et des travaux de femme pour les collectives. Concernant la production d’ananas, la femme est autonome dans la gestion de sa parcelle si elle en dispose."
             },
             {
               "text": "3.3.3 Do women have control over income?",
@@ -270,7 +270,7 @@
               "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Généralement, s’il s’agit d’un bien considéré comme appartenant à la famille, l’homme étant le chef de famille, il impose son autorité. Mais s’il s’agit d’un bien appartenant à la femme, la décision lui revient, même si elle demande souvent le conseil ou le soutien de son époux. Au niveau communautaire tel que dans les coopératives de base, il n’y a pas de distinction de sexe. "
+              "comment": "Généralement, s’il s’agit d’un bien considéré comme appartenant à la famille, l’homme étant le chef de famille, il impose son autorité. Mais s’il s’agit d’un bien appartenant à la femme, la décision lui revient, même si elle demande souvent le conseil ou le soutien de son époux. Au niveau communautaire tel que dans les coopératives de base, il n’y a pas de distinction de sexe."
             }
           ]
         },
@@ -283,25 +283,25 @@
               "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
               "scoreValue": 4,
               "scoreText": "High",
-              "comment": "Les femmes sont membres des coopératives de base, des syndicats de personnels, et autres groupes ou associations. Il y a des groupements de producteurs d’ananas où il y a autant de femmes que d’hommes. "
+              "comment": "Les femmes sont membres des coopératives de base, des syndicats de personnels, et autres groupes ou associations. Il y a des groupements de producteurs d’ananas où il y a autant de femmes que d’hommes."
             },
             {
-              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Il y a très peu de femmes présidentes de coopérative de base. Il y en a qui occupent des postes de secrétaire ou de trésorière. Au niveau des entreprises elles ne sont pas nombreuses aux postes de responsabilité.  "
+              "comment": "Il y a très peu de femmes présidentes de coopérative de base. Il y en a qui occupent des postes de secrétaire ou de trésorière. Au niveau des entreprises elles ne sont pas nombreuses aux postes de responsabilité."
             },
             {
-              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Le pouvoir d’influence des services, du pouvoir territorial et de la prise de décision politique est limité. "
+              "comment": "Le pouvoir d’influence des services, du pouvoir territorial et de la prise de décision politique est limité."
             },
             {
               "text": "3.4.4 Do women speak in public?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Il y a des femmes qui s’exprime en public et d’autres qui sont timides ou discrètes. "
+              "comment": "Il y a des femmes qui s’exprime en public et d’autres qui sont timides ou discrètes."
             }
           ]
         },
@@ -314,13 +314,13 @@
               "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Les femmes sont pratiquement les seules à s’occuper des tâches domestiques et de la gestion des enfants. Elles ont plus de charges de travail que les hommes.  "
+              "comment": "Les femmes sont pratiquement les seules à s’occuper des tâches domestiques et de la gestion des enfants. Elles ont plus de charges de travail que les hommes."
             },
             {
               "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Le travail de l’ananas (au champ) est jugé globalement pénible ; donc plus pénible pour les femmes. Au niveau de la transformation, les femmes sont généralement à des postes où le travail est moins pénible.  "
+              "comment": "Le travail de l’ananas (au champ) est jugé globalement pénible ; donc plus pénible pour les femmes. Au niveau de la transformation, les femmes sont généralement à des postes où le travail est moins pénible."
             }
           ]
         }
@@ -335,13 +335,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\n",
+              "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "La campagne agricole 2017/2018 a permis d’enregistrer un excédent alimentaire d’environ 21%. Le taux de couverture des besoins en produits céréaliers est passé de 105,9% en 2015 à 106,35% en 2017. Sur la même période, la satisfaction des besoins en produits carnés a connu une progression de 55% en 2015 à 58% en 2017. En ce qui concerne la satisfaction des besoins en produits halieutiques, le taux a bondi de 24% à 35% au Togo"
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "La présence des produits alimentaire s’accroit sur le marché. L’Etat a mis en place des programmes, politiques et projets de promotion de l’agriculture et de la consommation locale dans le pays en particulier les 5 dernières années. L’augmentation de la production des ananas y contribue aussi (voir la réponse à la question précédente)"
@@ -354,16 +354,16 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Les producteurs d’ananas ont plus de revenu à allouer à l’achat de la nourriture s’ils n’en produisent pas eux-mêmes suffisamment. Les employés des unités de transformation aussi ont des revenus minimums à allouer à l’achat de la nourriture. Mais la non régularité des salaires affecte le pouvoir d’achat de certains travailleurs. Les ouvriers temporaires ont des difficultés pour acheter la nourriture ; ils s’endettent parfois. "
+              "comment": "Les producteurs d’ananas ont plus de revenu à allouer à l’achat de la nourriture s’ils n’en produisent pas eux-mêmes suffisamment. Les employés des unités de transformation aussi ont des revenus minimums à allouer à l’achat de la nourriture. Mais la non régularité des salaires affecte le pouvoir d’achat de certains travailleurs. Les ouvriers temporaires ont des difficultés pour acheter la nourriture ; ils s’endettent parfois."
             },
             {
-              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "C’est relatif. Les prix varient en fonction des spéculations et en fonction des saisons. Mais ces 5 dernières années il n’y a pas eu une très forte augmentation des prix du maïs (première céréale utilisée dans l’alimentation) par exemple.  "
+              "comment": "C’est relatif. Les prix varient en fonction des spéculations et en fonction des saisons. Mais ces 5 dernières années il n’y a pas eu une très forte augmentation des prix du maïs (première céréale utilisée dans l’alimentation) par exemple."
             }
           ]
         },
@@ -373,7 +373,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Le nombre de repas pris par jour, aussi bien en milieu rural qu’en milieu urbain est d’environ 3 repas journalier en moyenne. La profondeur du déficit alimentaire s’est considérablement réduite. Elle est passée de 145 kcal/pers/jour en 2008-2010 à 75 kcal/pers/jour en 2014-2016."
@@ -382,13 +382,13 @@
               "text": "4.3.2 Are nutritional practices being improved?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Les pratiques nutritionnelles s’améliorent. Il y a des projets de promotion de l’élevage (volailles et petits ruminants) de même que des fruits. Ces différents produits sont en partie consommés localement. "
+              "comment": "Les pratiques nutritionnelles s’améliorent. Il y a des projets de promotion de l’élevage (volailles et petits ruminants) de même que des fruits. Ces différents produits sont en partie consommés localement."
             },
             {
               "text": "4.3.3 Is dietary diversity increased?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "La diversité alimentaire s’est accrue (mêmes arguments que la réponse à la question précédente). "
+              "comment": "La diversité alimentaire s’est accrue (mêmes arguments que la réponse à la question précédente)."
             }
           ]
         },
@@ -401,13 +401,13 @@
               "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Dans les zones de production des ananas, les risques de pénurie alimentaire périodique des ménages sont réduits parce que les producteurs font une planification de la récolte et ont la possibilité de disposer de revenus à toutes les périodes de l’année. Globalement, avec plus de disponibilité des aliments, les risques de pénuries alimentaires sont réduits. "
+              "comment": "Dans les zones de production des ananas, les risques de pénurie alimentaire périodique des ménages sont réduits parce que les producteurs font une planification de la récolte et ont la possibilité de disposer de revenus à toutes les périodes de l’année. Globalement, avec plus de disponibilité des aliments, les risques de pénuries alimentaires sont réduits."
             },
             {
-              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Avec la disponibilité de la production, les variations excessives des prix des denrées alimentaires ont été réduites. "
+              "comment": "Avec la disponibilité de la production, les variations excessives des prix des denrées alimentaires ont été réduites."
             }
           ]
         }
@@ -431,19 +431,19 @@
               "text": "5.1.2 How inclusive is group/cooperative membership?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Les critères d’adhésion à une coopérative sont propres à chaque groupe, pourvues qu’ils soient conforment à la loi de l’OHADA relative aux sociétés coopératives. En général, on observe des groupements de femmes, des groupements d’hommes et des groupements mixtes (hommes et femmes qui sont les plus nombreux) "
+              "comment": "Les critères d’adhésion à une coopérative sont propres à chaque groupe, pourvues qu’ils soient conforment à la loi de l’OHADA relative aux sociétés coopératives. En général, on observe des groupements de femmes, des groupements d’hommes et des groupements mixtes (hommes et femmes qui sont les plus nombreux)"
             },
             {
-              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Toutes les coopératives ont un bureau exécutif et les unions de coopérative un conseil d’administration. Mais leur leadership reste à renforcer. "
+              "comment": "Toutes les coopératives ont un bureau exécutif et les unions de coopérative un conseil d’administration. Mais leur leadership reste à renforcer."
             },
             {
               "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Ils négocient à leur manière mais leur capacité de conviction est faible puisqu’ils sont généralement portés par les transformateurs qui assurent leur certification. "
+              "comment": "Ils négocient à leur manière mais leur capacité de conviction est faible puisqu’ils sont généralement portés par les transformateurs qui assurent leur certification."
             }
           ]
         },
@@ -453,7 +453,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Des formations/informations/sensibilisations sont organisées par l’ICAT, les entreprises de transformation ou d’exportation, de même que la GIZ. Les producteurs ont accès aux pratiques agricoles à tous les niveaux de la production. Mais ils ont difficilement accès à des informations relatives aux prix d’ananas sur le marché international."
@@ -462,7 +462,7 @@
               "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "L’exigence du respect des procédures de production biologique nécessite des relations de confiance entre les acteurs. Cette confiance est établie à travers la constante collaboration entre les différents acteurs. Par exemple, les transformateurs/exportateurs ont des encadreurs qui travaillent avec les paysans dans les zones de production. Aussi, en production biologique, des contrats sont signés entre les entreprises de transformation / exportation. Mais le respect de ces engagements contractuels n’est pas souvent absolu. Dans le conventionnel, les producteurs évoluent individuellement. "
+              "comment": "L’exigence du respect des procédures de production biologique nécessite des relations de confiance entre les acteurs. Cette confiance est établie à travers la constante collaboration entre les différents acteurs. Par exemple, les transformateurs/exportateurs ont des encadreurs qui travaillent avec les paysans dans les zones de production. Aussi, en production biologique, des contrats sont signés entre les entreprises de transformation / exportation. Mais le respect de ces engagements contractuels n’est pas souvent absolu. Dans le conventionnel, les producteurs évoluent individuellement."
             }
           ]
         },
@@ -472,10 +472,10 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Les autorités locales (chefs, CVD, responsables de coopératives, etc.) participent à la prise de décisions qui influencent leurs moyens d’existence. "
+              "comment": "Les autorités locales (chefs, CVD, responsables de coopératives, etc.) participent à la prise de décisions qui influencent leurs moyens d’existence."
             },
             {
               "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
@@ -484,7 +484,7 @@
               "comment": "En matière de production d’ananas bio les cahiers de charges sont  enseignés aux paysans. Mais cela cadre parfois avec les pratiques locales. Par exemple, le non usage des engrais chimiques ou un nombre minimum arbres à laisser dans les champs d’ananas."
             },
             {
-              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Il y a un début de participation aux activités communautaires volontaires au bénéfice de la communauté. Les entreprises participent à la formation des paysans. Par ailleurs, certaines coopératives touchent déjà des primes de développement communautaire de leur localité. Il s’agit des primes de la participation au développement local octroyés par les entreprises engagées dans le commerce équitable (Fair For Life)."
@@ -505,7 +505,7 @@
               "text": "6.1.1 Do households have access to health facilities?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Les ménages ont relativement accès aux soins de santé. Certaines coopératives ont initié des boites à pharmacies pour les premiers soins.  "
+              "comment": "Les ménages ont relativement accès aux soins de santé. Certaines coopératives ont initié des boites à pharmacies pour les premiers soins."
             },
             {
               "text": "6.1.2 Do households have access to health services?",
@@ -530,13 +530,13 @@
               "text": "6.2.1 Do households have access to good quality accomodations?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Selon nos enquêtés, après au moins 3 années successives de productions d’ananas le paysan est en mesure de construire un bâtiment d’habitation couvert de tôle. Ceci est un indicateur d’un logement relativement décent dans les milieux ruraux au Togo.  "
+              "comment": "Selon nos enquêtés, après au moins 3 années successives de productions d’ananas le paysan est en mesure de construire un bâtiment d’habitation couvert de tôle. Ceci est un indicateur d’un logement relativement décent dans les milieux ruraux au Togo."
             },
             {
-              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Il y a des localités qui manquent d’eau potable. "
+              "comment": "Il y a des localités qui manquent d’eau potable."
             }
           ]
         },
@@ -549,19 +549,19 @@
               "text": "6.3.1 Is primary education accessible to households?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Il y a une école primaire publique dans tous les villages des régions maritime et des Plateaux. Mais dans les Plateaux par exemple, le relief accidenté rend le déplacement difficile pour les enfants sur des distances relativement longues. "
+              "comment": "Il y a une école primaire publique dans tous les villages des régions maritime et des Plateaux. Mais dans les Plateaux par exemple, le relief accidenté rend le déplacement difficile pour les enfants sur des distances relativement longues."
             },
             {
               "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Il y a des Collèges d’enseignement général (CEG) et des lycées publics en milieu rural, même si la distance est parfois relativement grande pour certaines localités. Mais il manque de centres de formation professionnel qu’on ne peut trouver que, dans la capitale (Lomé) dans les chefs-lieux de régions (Tsévié, Atakpamé) et certains chefs-lieux de préfecture (Kpalimé, Badou, Aneho, Tabligbo, etc.). "
+              "comment": "Il y a des Collèges d’enseignement général (CEG) et des lycées publics en milieu rural, même si la distance est parfois relativement grande pour certaines localités. Mais il manque de centres de formation professionnel qu’on ne peut trouver que, dans la capitale (Lomé) dans les chefs-lieux de régions (Tsévié, Atakpamé) et certains chefs-lieux de préfecture (Kpalimé, Badou, Aneho, Tabligbo, etc.)."
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 1,
               "scoreText": "Not at all",
-              "comment": "Seuls les producteurs sont formés aux bonnes pratiques culturales et aux techniques de production biologique par les entreprises qui font la transformation ou l’exportation. On ne constate aucune autre formation professionnelle soutenue par ces entreprises. "
+              "comment": "Seuls les producteurs sont formés aux bonnes pratiques culturales et aux techniques de production biologique par les entreprises qui font la transformation ou l’exportation. On ne constate aucune autre formation professionnelle soutenue par ces entreprises."
             }
           ]
         }

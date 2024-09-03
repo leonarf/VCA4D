@@ -2,7 +2,7 @@
   "id": "cocoa-colombia",
   "country": "colombia",
   "commodity": "Cocoa",
-  "year": 2020,
+  "year": null,
   "type": "social",
   "socialData": [
     {
@@ -17,7 +17,7 @@
               "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Colombia como país ha ratificado tratados internacionales sobre la igualdad del hombre y la mujer, los derechos humanos, y los derechos al trabajo. Existe un marco legal regulatorio para que las compañias dentro de su contratación apliquen lo que ordena la ley. Lo anterior solo aplica para empresas grandes como Luker y CNCh que transforman por fuera de los dos territorios; en el caso del trabajo familiar informal a nivel de finca no aplica y no se observaron diferencias significativas entre ambos territorios. A pesar que estas convenciones no aplican al trabajo informal, no se observaron violaciones a estos estandares.\n\nColombia ha ratificado los ocho convenios fundamentales de la OIT:\n    Libertad sindical.\n    Negociación colectiva.\n    Trabajo forzoso.\n    Trabajo infantil.\n    Igualdad de oportunidades y de trato.\n    Consulta tripartita.\n    Administración del trabajo.\n    Inspección del trabajo.\n(https://www.ilo.org/lima/paises/colombia/lang--es/index.htms)\n\nICESCR; ICCPR:\n(https://tbinternet.ohchr.org/_layouts/15/TreatyBodyExternal/Treaty.aspx?CountryID=37&Lang=EN)\n"
+              "comment": "Colombia como país ha ratificado tratados internacionales sobre la igualdad del hombre y la mujer, los derechos humanos, y los derechos al trabajo. Existe un marco legal regulatorio para que las compañias dentro de su contratación apliquen lo que ordena la ley. Lo anterior solo aplica para empresas grandes como Luker y CNCh que transforman por fuera de los dos territorios; en el caso del trabajo familiar informal a nivel de finca no aplica y no se observaron diferencias significativas entre ambos territorios. A pesar que estas convenciones no aplican al trabajo informal, no se observaron violaciones a estos estandares.\n\nColombia ha ratificado los ocho convenios fundamentales de la OIT:\n    Libertad sindical.\n    Negociación colectiva.\n    Trabajo forzoso.\n    Trabajo infantil.\n    Igualdad de oportunidades y de trato.\n    Consulta tripartita.\n    Administración del trabajo.\n    Inspección del trabajo.\n(https://www.ilo.org/lima/paises/colombia/lang--es/index.htms)\n\nICESCR; ICCPR:\n(https://tbinternet.ohchr.org/_layouts/15/TreatyBodyExternal/Treaty.aspx?CountryID=37&Lang=EN)"
             },
             {
               "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
@@ -38,10 +38,10 @@
               "comment": "No hay registro de practias de trabajo forzado en la zona ni en Colombia"
             },
             {
-              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 1,
               "scoreText": "Not at all",
-              "comment": "Las condiciones sociales y de poblacion son homogeneas. Dicifilmente habra discriminacion para el trabajo de minorias. En Tumaco producen cacao minorias de etnias indigenas y afro. Por otra parte, la disponibilidad de mano de obra es escaza, hay trabajo para toda la poblacion. "
+              "comment": "Las condiciones sociales y de poblacion son homogeneas. Dicifilmente habra discriminacion para el trabajo de minorias. En Tumaco producen cacao minorias de etnias indigenas y afro. Por otra parte, la disponibilidad de mano de obra es escaza, hay trabajo para toda la poblacion."
             }
           ]
         },
@@ -51,7 +51,7 @@
           "averageText": "High",
           "questions": [
             {
-              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "NO HAY TRABAJO INFANTIL EN NINGUN ESLABÓN DE LA CADENA. Los niños atienden a la escuela. En época de cosecha, los niños son llevados al campo y relativamente se involucran ayudando a cosechar pero no es su responsabilidad."
@@ -138,13 +138,13 @@
               "comment": "Solo aplica al eslabon de produccion primaria"
             },
             {
-              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Las organizaciones de productores de cacao realizan asambleas para tomar las decisiones de la organización. Las decisiones se toman por consenso. Hay espacios de participación para mujeres y jóvenes, aunque las mujeres participan activamente, pero los jóvenes muestran poco interés de participar. Los agricultores son tomadores de precios, no inciden en la formacion de precios, tampoco inciden en decisiones en los otros eslabones de la cadena. En las organizaciones si influyen y si participan en la toma de decisiones."
             },
             {
-              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Hay discusion dentro de las organizaciones de productores, hay consulta prebia."
@@ -166,10 +166,10 @@
               "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "No hay un mecanismo práctico para mitigar un posible daño a los medios de vida, aunque existe el mecanismo legal de la \"Acción de Tutela\" (https://www.canalinstitucional.tv/te-interesa/para-que-sirve-y-como-puedo-hacer-una-accion-de-tutela.) cuando es vulnerado un derecho fundamental.\nSin embargo, hay el riesgo de desplazamiento forzado a causa de grupos armados que tienen presencia en las dos regiones. "
+              "comment": "No hay un mecanismo práctico para mitigar un posible daño a los medios de vida, aunque existe el mecanismo legal de la \"Acción de Tutela\" (https://www.canalinstitucional.tv/te-interesa/para-que-sirve-y-como-puedo-hacer-una-accion-de-tutela.) cuando es vulnerado un derecho fundamental.\nSin embargo, hay el riesgo de desplazamiento forzado a causa de grupos armados que tienen presencia en las dos regiones."
             },
             {
-              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "No aplica porque los territorios comunitarios no se pueden expropiar. En las fincas privadas si existe un esquema de compensación por daños y perjuicios."
@@ -178,7 +178,7 @@
               "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
-              "comment": "Las posibles inversiones de la cadena de valor en los territorios de Putumayo y Tumaco sería en el eslabón de producción primaria y estas inversiones las harían los productores de cacao o las instituciones de la cooperación, o las instituciones del Estado, pero siempre en beneficio del productor de cacao. "
+              "comment": "Las posibles inversiones de la cadena de valor en los territorios de Putumayo y Tumaco sería en el eslabón de producción primaria y estas inversiones las harían los productores de cacao o las instituciones de la cooperación, o las instituciones del Estado, pero siempre en beneficio del productor de cacao."
             }
           ]
         }
@@ -199,7 +199,7 @@
               "comment": "La cooperacion al desarrollo ha incidido en temas de género y mujer en Putumayo y Tumaco, en la actualidad se ven los resultados de esta incidencia. A nivel nacional, existe la ley 581 de 2000, sobre la participación de la mujer en los niveles decisorios de las diferentes ramas y órganos del poder público, (https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=5367)."
             },
             {
-              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Hay una alta participacion de las mujeres en las organizaciones de productores,  están presentes en todos los eslabones de la cadena de valor e instituciones oficiales, e incluso ocupan cargos de dirección y de toma de decisiones."
@@ -230,7 +230,7 @@
               "comment": "De acuerdo al Banco Agrario de Tumaco, en 2021, en Tumaco se registró el mayor índice de préstamos subsidiado por el Estado en Colombia para mujeres productoras de cacao. Existe una línea de crédito subsidiado específica para mujeres y jóvenes cacaoteros."
             },
             {
-              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 4,
               "scoreText": "High",
               "comment": "Tienen acceso a los mismos servicios que los hombres, más aún se benefician de estrategias de discriminación positiva a favor de las mujeres."
@@ -258,13 +258,13 @@
               "text": "3.3.3 Do women have control over income?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Las mujeres tienen control sobre los ingresos de la familia; son ellas quienes distribuyen los recursos para los diferentes gastos del cultivo y necesidades familiares en concertacion con sus parejas. Las mujeres son mejores administradoras de los recursos. "
+              "comment": "Las mujeres tienen control sobre los ingresos de la familia; son ellas quienes distribuyen los recursos para los diferentes gastos del cultivo y necesidades familiares en concertacion con sus parejas. Las mujeres son mejores administradoras de los recursos."
             },
             {
               "text": "3.3.4 Do women earn independent income?",
               "scoreValue": 4,
               "scoreText": "High",
-              "comment": "Las mujeres tienen ingresos propios y compartidos con sus parejas. "
+              "comment": "Las mujeres tienen ingresos propios y compartidos con sus parejas."
             },
             {
               "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
@@ -286,13 +286,13 @@
               "comment": "Si, hay una participación estimada de 45% mujeres y 55% hombres en las organizaciones de productores de cacao. Incluso, hay organizaciones de solo mujeres en Tumaco y Putumayo."
             },
             {
-              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Si. En su gran mayoría, las organizaciones de productores de cacao y de procesadores de chocolate artesanal tienen en sus cuadros directivos mujeres, en cargos como Fiscales, Representates legales, Tesoreros y Vocales.No encontramos mujeres presidentes de organizaciones a excepción de las organizaciones de solo mujeres."
             },
             {
-              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Si, pero en el ambito de las organizaciones locales y de productores."
@@ -335,13 +335,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\n",
+              "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Para seguridad alimentaria y nutrición, el análisis tendrá en cuenta al cacao dentro de un sistema agroforestal (SAF); no se analizará el cacao como cultivo aislado.\nEl cacao no es un rubro importante dentro de la dieta de los agricultores y sus comunidades, pero otros rubros que se encuentran en la SAF como musaceas, yuca, chontaduro y frutales, si lo son."
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "La producción de cacao no incide en el suministro de alimentos para la familia cacaotera, más allá de los ingresos que genera para la compra de alimentos que no se producen en finca. Sin embargo, el sistema de producción agroforestal (SAF), el cacao está asociado con otros rubros como musaceas, yuca y citricos, entre otros, que si hacen parte de la dieta familiar. El cacao en SAF moderadamente mejora la oferta de citricos, yuca y plátano en los mercados locales."
@@ -354,16 +354,16 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Los ingresos generados por el cacao permiten comprar otros rubros de la canasta familiar como aceite, azucar, sal, arroz, etc. Se estimó que el Cacao representa el 30% de los ingresos familiares. \nHay que tener encuenta los dos picos de cosecha en el año (Nov-Dic-Ene; mayor volumen) y (May-Jun-Jul; menor volumen). Eso hace que el flujo de caja sea menor frente a otras fuentes de ingreso como produccion de platano. El SAF permite venta ocacional de los otros rubros diferentes al cacao."
             },
             {
-              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 1,
               "scoreText": "Not at all",
-              "comment": "El cacao no tiene incidencia en la formación de los precios de los productos de la canasta familiar. El cacao en SAF podría tener incidencia en reducir precios de rubros de la canasta familiar, pero actualmente no tienen el volúmen suficiente de plátanos, citricos, yuca, etc. para tener tal influencia. "
+              "comment": "El cacao no tiene incidencia en la formación de los precios de los productos de la canasta familiar. El cacao en SAF podría tener incidencia en reducir precios de rubros de la canasta familiar, pero actualmente no tienen el volúmen suficiente de plátanos, citricos, yuca, etc. para tener tal influencia."
             }
           ]
         },
@@ -373,7 +373,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "La comida producida en finca (Plátano, yuca, chontaduro, citricos, huevos, leche, pescado, etc.) les permite tener disponibilidad de 2 a 3 comidas/día, de una dieta relativamente balanceada. En Tumaco hay buena disponibilidad y acceso de pescado de rio y de mar como fuente de proteína, en Putumayo los huevos y la leche producida en finca, y ocasionalmente pescado de rio son la principal fuente de proteína."
@@ -404,7 +404,7 @@
               "comment": "El cacao en SAF permite tener una diversidad de rubros de la canasta familiar que reduce riesgos en disponibilidad durante el año, al tener cosechas en tiempos diferentes. Es común en Tumaco que los productores tengan 2 y 3 parcelas en sitios diferentes con cultivos diferentes; esta estrategia reduce el riesgo de presentarse escaez de comida debido a eventos naturales o biologicos. En Putumayo los productores normalmente tienen sus parcelas en una sola finca"
             },
             {
-              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "Como se dijo arriba, el cacao no tiene incidencia en la formación de precios en productos de la canasta familiar, por consiguiente, no incide en la reducción de la variación de los precios en productos de la canasta familiar.Con respecto al cacao en SAF, no se pudo observar evidencias en la reducción en la variación de precios de rubros de la canasta familiar."
@@ -434,7 +434,7 @@
               "comment": "Son incluyentes porque en muchas de ellas participan grupos vulnerables como desplazados por la violencia, reinsertados de grupos armados, mujeres y en menor medida jóvenes. Además, participan minorías étnicas como indígenas y comunidades afro. La inclusion de mujeres y jóvenes ha sido impulsada por proyectos del gobierno nacional y de la cooperación internacional para el desarrollo."
             },
             {
-              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Los agricultores si se sienten representados por los líderes de sus organizaciones y confian en ellos medianamente. Sin embargo, los agricultores no son leales en con sus organizaciones, ya que es frecuente que un agricultor haga parte de más de una organización y/o se cambie de organización para recibir beneficios de proyectos de la cooperación e instituciones del Estado"
@@ -453,7 +453,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Los productores de cacao normalmente son informados de asuntos relacionados con la CdeV de cacao en asambleas generales e informativas de las organizaciones de base. Sin embargo, las reuniones no son muy frecuentes"
@@ -472,7 +472,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Participan en la medida que las intervenciones sean de instituciones del Estado, ya que existe el mecanismo de la Consulta Previa; por ley hay que hacer Consulta Previa (https://dapre.presidencia.gov.co/normativa/normativa/DECRETO%202353%20%20DEL%2026%20DICIEMBRE%20DE%202019.pdf)."
@@ -484,7 +484,7 @@
               "comment": "El accionar de los operadores de la cooperación internacional históricamente ha sido con respeto a las culturas y conocimientos ancestrales de las comunidades de los 2 territorios, aunque han existido intervenciones que han promovido cultivos nuevos (En Putumayo cacao, palmito, caucho y en Tumaco vainilla. pimienta, por ejemplo) con tecnologiás agrícolas no necesariamente adaptadas a los agroecosistemas de las 2 regiones."
             },
             {
-              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Se acostumbra en algunos proyectos que los agricultores participen de manera voluntaria aportando en especie, como mano de obra y material vegetal."
@@ -511,7 +511,7 @@
               "text": "6.1.2 Do households have access to health services?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Existe en Colombia el servicio de salud subsidiado al que la mayoría de productores tienen acceso, sin embargo, la calidad del servicio prestado en estos 2 territorios no es de óptima calidad. (https://www.minsalud.gov.co/salud/Paginas/R%C3%A9gimenSubsidiado.aspx.). "
+              "comment": "Existe en Colombia el servicio de salud subsidiado al que la mayoría de productores tienen acceso, sin embargo, la calidad del servicio prestado en estos 2 territorios no es de óptima calidad. (https://www.minsalud.gov.co/salud/Paginas/R%C3%A9gimenSubsidiado.aspx.)."
             },
             {
               "text": "6.1.3  Are health services affordable for households?",
@@ -533,7 +533,7 @@
               "comment": "Todos los productores cuentan con viviendas dignas construidas con materiales de la región. Las casas son construcciones de diseño palafítico para prevenir inundaciones y alejar la vivienda de la excesiva humedad del suelo. Las casas tienen paredes de madera o bloque en cemento, pisos de madera o cemento y techos de zinc."
             },
             {
-              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "El acceso al agua es por cosecha de agua lluvia o proveninte de pozos artesanales; en los centros poblados se cuenta con acueductos, pero rara vez acceden a agua tratada. No hay alecantarillado, pero las viviendas cuentan con pozas sépticas o letrinas."
@@ -558,7 +558,7 @@
               "comment": "En centros poblados de mayor población o en las cabeceras municipales hay escuelas públicas de educación secundaria al que tienen acceso los adolescentes y jóvenes, sin embargo, hay unas tasas de deserción escolar mayor en la educación media y secundaria que en la primaria. (https://www.educacion-tumaco.gov.co/getfile.php?id_documento=155)"
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Los proyectos de la cooperación al desarrollo y de las instituciones estatales, con frecuencia incluyen procesos de capacitación específica para el rubro cacao. El SENA tiene servicios vocacionales de capacitación en cacao y lo ofrecen en Tumaco y Putumayo"

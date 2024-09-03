@@ -1,8 +1,8 @@
 {
   "id": "maize-zambia",
-  "country": "Zambia",
+  "country": "zambia",
   "commodity": "Maize",
-  "year": 2020,
+  "year": null,
   "type": "social",
   "socialData": [
     {
@@ -23,7 +23,7 @@
               "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "This is allowed/encouraged under Zambian law.  In larger companies some employees are members of trade unions, but this is not widespread in most of the companies involved in the maize VC, but is not explicitly discouraged by the larger companies who encourage employee representation.   "
+              "comment": "This is allowed/encouraged under Zambian law.  In larger companies some employees are members of trade unions, but this is not widespread in most of the companies involved in the maize VC, but is not explicitly discouraged by the larger companies who encourage employee representation."
             },
             {
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
@@ -38,10 +38,10 @@
               "comment": "No evidence of this was found.  Prohibition of forced labour and child labour is recognised under domestic labour law.  Field evidence collected of awareness and changes being made."
             },
             {
-              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Zambia is bound by the ILO convention on Discrimination and by the Industrial and Labour Relations Act Chapter 269 which provides protection for employees discriminated against on grounds of \"race, sex, marital status, religion, political opinion or affiliation, tribal extraction or status of the employee”.  The extent to which this is enforced, and employees awareness of this and access to support in case they wish to present a case is probably limited in practice.  . \t\t\t\t\t\n"
+              "comment": "Zambia is bound by the ILO convention on Discrimination and by the Industrial and Labour Relations Act Chapter 269 which provides protection for employees discriminated against on grounds of \"race, sex, marital status, religion, political opinion or affiliation, tribal extraction or status of the employee”.  The extent to which this is enforced, and employees awareness of this and access to support in case they wish to present a case is probably limited in practice.  ."
             }
           ]
         },
@@ -51,16 +51,16 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Average primary school enrollment rate nationally of 88% - Unicef w.  No cases of children working in companies head of.  Children work on family farms during school holidays. In urban areas some children are involved in hawking cooked maize cobs.  \t\t\t\t\t\n"
+              "comment": "Average primary school enrollment rate nationally of 88% - Unicef w.  No cases of children working in companies head of.  Children work on family farms during school holidays. In urban areas some children are involved in hawking cooked maize cobs."
             },
             {
               "text": "1.2.2 Are children protected from exposure to harmful jobs?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "in large companies in the maize VC children are not allowed into the work areas for and health and safety reasons.  On family farms where pesticides and herbicides are used children are excluded from tasks relating to use of these.  Where children are involved in selling cooked maize on the street they might be exposed to poor sanitory conditions and possible exploitation by adults.\t\t\t\t\t\n"
+              "comment": "in large companies in the maize VC children are not allowed into the work areas for and health and safety reasons.  On family farms where pesticides and herbicides are used children are excluded from tasks relating to use of these.  Where children are involved in selling cooked maize on the street they might be exposed to poor sanitory conditions and possible exploitation by adults."
             }
           ]
         },
@@ -73,7 +73,7 @@
               "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "The risks are lower than mining.  The more dangerous work is on the grain trading and milling side due to heavy lifiting and transport related risks, and also use of heavy machinery on commercial farms.  For small-scale maize  producers, there are potential risks from exposure to agro-chemicals use of which is on the increase.\t\t\t\t\t_x000D_\n"
+              "comment": "The risks are lower than mining.  The more dangerous work is on the grain trading and milling side due to heavy lifiting and transport related risks, and also use of heavy machinery on commercial farms.  For small-scale maize  producers, there are potential risks from exposure to agro-chemicals use of which is on the increase.\t\t\t\t\t_x000D_"
             }
           ]
         },
@@ -86,13 +86,13 @@
               "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "For the milling and trading companies operating in the urban areas, remuneration rates are generally similar to similar catetories of employment.   Millers are generally well paid, and there is potential for enterprising individuals to make significant income from grain trading.  Small-scale producers operate under uncertain market conditions. \t\t\t\t\t_x000D_\n"
+              "comment": "For the milling and trading companies operating in the urban areas, remuneration rates are generally similar to similar catetories of employment.   Millers are generally well paid, and there is potential for enterprising individuals to make significant income from grain trading.  Small-scale producers operate under uncertain market conditions. \t\t\t\t\t_x000D_"
             },
             {
               "text": "1.4.2 Are conditions of activities attractive for youth?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "The employers we spoke to did not have specific policies regarding youth employment.  There are opportunities in the comrcial farming trading and milling sectors for young men with limited education and qualifications to enter employment and be promoted to management positions.  Youth are not well placed to participate strongly in small-scale maize production, which in any event is not commercially attractive for them.\t\t\t\t_x000D_\n"
+              "comment": "The employers we spoke to did not have specific policies regarding youth employment.  There are opportunities in the comrcial farming trading and milling sectors for young men with limited education and qualifications to enter employment and be promoted to management positions.  Youth are not well placed to participate strongly in small-scale maize production, which in any event is not commercially attractive for them.\t\t\t\t_x000D_"
             }
           ]
         }
@@ -110,13 +110,13 @@
               "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
-              "comment": "The main milling and trading companies are based on peri-urban land reserved for industrial use, while commercial farming sector largely occupies land previously reserved for large-scale agriculture, including commercial farm blocks hence the VGGT does not apply.  "
+              "comment": "The main milling and trading companies are based on peri-urban land reserved for industrial use, while commercial farming sector largely occupies land previously reserved for large-scale agriculture, including commercial farm blocks hence the VGGT does not apply."
             },
             {
               "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
-              "comment": "As noted above, current  large scale agricltural land use does not involve aquisition of land occupied by communities.  Large scale commercial prodction of maize for the food and stockfeed markets is currently not profitable, but this could change if government rules and practice around grain export control are changed to favour large-scale export of maize.  from =for "
+              "comment": "As noted above, current  large scale agricltural land use does not involve aquisition of land occupied by communities.  Large scale commercial prodction of maize for the food and stockfeed markets is currently not profitable, but this could change if government rules and practice around grain export control are changed to favour large-scale export of maize.  from =for"
             }
           ]
         },
@@ -138,13 +138,13 @@
               "comment": "See above, this does not apply at present"
             },
             {
-              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "See above, this does not apply at present"
             },
             {
-              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "See above, this does not apply at present"
@@ -160,7 +160,7 @@
               "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "The customary systems of land tenure, based on membership of a local community and family held land, do provide security for community members.  The risk of land shortage for small-scale maize production is increasing with population increase.  Risks of increase land shortage arising from \"land-grabbing\" and \"sale\" of land in communal areas is increasing, while Chiefs's are strongly asserting their role, through the House of Chiefs, in protecting local communities from risks of sale of  family land to investors and preserving enough land for their subjects.  "
+              "comment": "The customary systems of land tenure, based on membership of a local community and family held land, do provide security for community members.  The risk of land shortage for small-scale maize production is increasing with population increase.  Risks of increase land shortage arising from \"land-grabbing\" and \"sale\" of land in communal areas is increasing, while Chiefs's are strongly asserting their role, through the House of Chiefs, in protecting local communities from risks of sale of  family land to investors and preserving enough land for their subjects."
             },
             {
               "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
@@ -169,7 +169,7 @@
               "comment": "See above, this does not apply at present"
             },
             {
-              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "See above, this does not apply at present"
@@ -196,13 +196,13 @@
               "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "The legal and policy framework in Zambia is broadly supportive of inclusion of women in economic acticities, including agriculture. Gender inclusiveness is reflected in the policies of government  some larger companies and agricultural training institutions have lower entry requirements for females, which potentially supports inclusion of women in salaried employment and provides opportunities for promotion.  However, various cultural and structural factors in the maize VC mitigate against strong female representation in both salaried and casual employment in the trading, milling and commercial farming segments.  "
+              "comment": "The legal and policy framework in Zambia is broadly supportive of inclusion of women in economic acticities, including agriculture. Gender inclusiveness is reflected in the policies of government  some larger companies and agricultural training institutions have lower entry requirements for females, which potentially supports inclusion of women in salaried employment and provides opportunities for promotion.  However, various cultural and structural factors in the maize VC mitigate against strong female representation in both salaried and casual employment in the trading, milling and commercial farming segments."
             },
             {
-              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Women are very active as small-scale producers, although not so much as decision makers.  Women's involvement as processors, traders and casual workers is mainly at the household and micro level, to supplement family income.   "
+              "comment": "Women are very active as small-scale producers, although not so much as decision makers.  Women's involvement as processors, traders and casual workers is mainly at the household and micro level, to supplement family income."
             }
           ]
         },
@@ -215,13 +215,13 @@
               "text": "3.2.1 Do women have ownership of assets (other than land)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "The situation varies somewhat between areas.  Women are able to own assets such as livestock, farm equipment, buildings and household items in their own right, either through inheritence or purchase.  However, men are more likely than women to own large livestock (cattle), farm equipment, bicycles and motor vehicles.  "
+              "comment": "The situation varies somewhat between areas.  Women are able to own assets such as livestock, farm equipment, buildings and household items in their own right, either through inheritence or purchase.  However, men are more likely than women to own large livestock (cattle), farm equipment, bicycles and motor vehicles."
             },
             {
               "text": "3.2.2 Do women have equal land rights as men?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Women who are not married, or who are married uxurilocally, have equal claim to land to cultivate the family land where they live.  If they are married virilocally, which is more common, then their rights to cultivate are through their husbands. If they stay a long time in their husbands village they may acquire rights to cultivate their own area of land, independent from their husband. "
+              "comment": "Women who are not married, or who are married uxurilocally, have equal claim to land to cultivate the family land where they live.  If they are married virilocally, which is more common, then their rights to cultivate are through their husbands. If they stay a long time in their husbands village they may acquire rights to cultivate their own area of land, independent from their husband."
             },
             {
               "text": "3.2.3 Do women have access to credit?",
@@ -230,10 +230,10 @@
               "comment": "While in law women have equal access to credit, they do not usually use credit, mainly because there are very few sources of credit available for people living in the areas where customary land tenure operates.  Men are more likely than women to aquire credit because men are more likely to access it by virtue of having title deeds, or belonging to a cooperative."
             },
             {
-              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "In law and in policy women do have equal access to extension services and to subsidised inputs (e.g. FISP), and in practice women do access public and private extension services and  inputs via FISP and FSP.  They are less likely than men to receive FISP, which is the main source of subsidised inputs, because they are less likely to belong to cooperatives which are generally male dominated in terms of leadership and membership.  "
+              "comment": "In law and in policy women do have equal access to extension services and to subsidised inputs (e.g. FISP), and in practice women do access public and private extension services and  inputs via FISP and FSP.  They are less likely than men to receive FISP, which is the main source of subsidised inputs, because they are less likely to belong to cooperatives which are generally male dominated in terms of leadership and membership."
             }
           ]
         },
@@ -258,19 +258,19 @@
               "text": "3.3.3 Do women have control over income?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "As household heads women are usually in full control of how they use their income, including income from sale of maize.  As spouses women have much more limited control over any income from sale of maize, in some cases they are involved in decisions while in other cases the decision is made soley by their husband. "
+              "comment": "As household heads women are usually in full control of how they use their income, including income from sale of maize.  As spouses women have much more limited control over any income from sale of maize, in some cases they are involved in decisions while in other cases the decision is made soley by their husband."
             },
             {
               "text": "3.3.4 Do women earn independent income?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "As household heads women usually earn independent income.  This can be from sale of maize grain, and/or sale of maize products (e.g. sweet beer).   As spouses women may have independent income sources, but not usually from sale of maize, possibly from sale of maize products such as sweet beer..   "
+              "comment": "As household heads women usually earn independent income.  This can be from sale of maize grain, and/or sale of maize products (e.g. sweet beer).   As spouses women may have independent income sources, but not usually from sale of maize, possibly from sale of maize products such as sweet beer.."
             },
             {
               "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "As household heads women take the final decision on purchase, sale or transfer of assets, usually after consultation with other family members.   As spouses women may be consulted in these decisions, but men make the final decision, usually also after consultation with close family - but in some households wives are not consulted.    "
+              "comment": "As household heads women take the final decision on purchase, sale or transfer of assets, usually after consultation with other family members.   As spouses women may be consulted in these decisions, but men make the final decision, usually also after consultation with close family - but in some households wives are not consulted."
             }
           ]
         },
@@ -283,25 +283,25 @@
               "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "It is common for women maize producers to belong to local women's groups for savings, but less common for them to belong to producer cooperatives where the membership is mainly male.  Trade unions are not strong in other parts of the value chain, which in any event are male dominated.  "
+              "comment": "It is common for women maize producers to belong to local women's groups for savings, but less common for them to belong to producer cooperatives where the membership is mainly male.  Trade unions are not strong in other parts of the value chain, which in any event are male dominated."
             },
             {
-              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Women do hold leadership positions on the local savings groups which are mainly run by women. They also have leadership positions in local producter cooperatives but this is largely because of a policy in some areas that 30% of the leadership positions are occupied by women.  "
+              "comment": "Women do hold leadership positions on the local savings groups which are mainly run by women. They also have leadership positions in local producter cooperatives but this is largely because of a policy in some areas that 30% of the leadership positions are occupied by women."
             },
             {
-              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "In some areas women exercise territorial power as chieftainesses or as village heads or as elected ward councillors or MPs.  These women do potentially have power to influence services and policy decision making.  However, in rural areas both women and men have very little power to influence services and policy decisions relating to the maize value chain which are highly centralised.  For this reason I have rate this as substantial, rather than moderate/Low because legislation and policies do provide opportunities for increasing women's participation in decision making at this level.  "
+              "comment": "In some areas women exercise territorial power as chieftainesses or as village heads or as elected ward councillors or MPs.  These women do potentially have power to influence services and policy decision making.  However, in rural areas both women and men have very little power to influence services and policy decisions relating to the maize value chain which are highly centralised.  For this reason I have rate this as substantial, rather than moderate/Low because legislation and policies do provide opportunities for increasing women's participation in decision making at this level."
             },
             {
               "text": "3.4.4 Do women speak in public?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "As noted above, women who occupy hereditary or elected leadership positions in their community do speak in public with authority.  However, most leadership positions are occupied by men, which means that most public gatherings of relevance to the maize value chain are addressed by men.  In most rural areas women can speak out, though dialogue is male dominated for cultural reasons relating to gender roles. "
+              "comment": "As noted above, women who occupy hereditary or elected leadership positions in their community do speak in public with authority.  However, most leadership positions are occupied by men, which means that most public gatherings of relevance to the maize value chain are addressed by men.  In most rural areas women can speak out, though dialogue is male dominated for cultural reasons relating to gender roles."
             }
           ]
         },
@@ -314,13 +314,13 @@
               "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Many tasks are gender linked, including tasks in smallholder maize production, while domestic work and childcare is predominantly work undertaken by women and children.   There is limited up to date data on the overall workloads in rural areas, so this assessment is to some extent based on historical assessments made during in depth studies of labour and workloads.  The gender assignment of tasks varies from on area to another, and in many areas tasks are not strictly gender linked, and assigned to both genders and also children.  Evidence suggests that the majority of paid labour in maize production is undertaken by women and youth. "
+              "comment": "Many tasks are gender linked, including tasks in smallholder maize production, while domestic work and childcare is predominantly work undertaken by women and children.   There is limited up to date data on the overall workloads in rural areas, so this assessment is to some extent based on historical assessments made during in depth studies of labour and workloads.  The gender assignment of tasks varies from on area to another, and in many areas tasks are not strictly gender linked, and assigned to both genders and also children.  Evidence suggests that the majority of paid labour in maize production is undertaken by women and youth."
             },
             {
               "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "There are a number of labour saving technologies in use in smallholder maize production,  which do reduce the risks of women being subjected to strenuous work including land preparation (oxen and implements), weeding (herbicides and interrow weeders) and shelling (mechanical shellers). However, these tecnhologies are not available to a large proportion of households growing maize due to issues relating to affordability or availability.  "
+              "comment": "There are a number of labour saving technologies in use in smallholder maize production,  which do reduce the risks of women being subjected to strenuous work including land preparation (oxen and implements), weeding (herbicides and interrow weeders) and shelling (mechanical shellers). However, these tecnhologies are not available to a large proportion of households growing maize due to issues relating to affordability or availability."
             }
           ]
         }
@@ -335,16 +335,16 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\n",
+              "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "The overall trend for the previous ten years has been increasing levels of smallholder maize production in nearly all districts of Zambia. Because most of the smallholder maize is grown with hybrid seed and fertilizer, much of which is subsidised, this encourages higher levels of production, and the majority of households growing maize store enough for their household needs before they sell any surplus."
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "The overall trend of increasing smallholder maize production means that there is more maize available locally for purchase by households who do not produce a surplus.  Households regularly selling substantial surplus of their maize are in the minority, but they do use some of the income from sale of maize to purchase food items (e.g. cooking oil, salt, dried fish, groundnuts, beans, eggs) which tends to stimulate local food markets.    "
+              "comment": "The overall trend of increasing smallholder maize production means that there is more maize available locally for purchase by households who do not produce a surplus.  Households regularly selling substantial surplus of their maize are in the minority, but they do use some of the income from sale of maize to purchase food items (e.g. cooking oil, salt, dried fish, groundnuts, beans, eggs) which tends to stimulate local food markets."
             }
           ]
         },
@@ -354,16 +354,16 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "A minority (#%)of rural households sell maize. These households, if they are efficient producers using subsidised inputs, will have more income which they could allocate to food.  The majority of households growing maize who donts sell any don’t have income from maize to to allocate to food, and if they dont access subsidised inputs the money they use to purchase hybrid seed and fertilizer potentially reduces the money they have available for buy food."
             },
             {
-              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Research indicates that over the past decade, consumer food prices have generally declined in dollar terms.   This has mainly benefitted urban consumers, more than rural households, the majority of whom aim to produce most of their own food, including maize.  Rural households generally do not receive high prices for their produce, including their maize, and so generally have not benefitted from decreasing food prices. "
+              "comment": "Research indicates that over the past decade, consumer food prices have generally declined in dollar terms.   This has mainly benefitted urban consumers, more than rural households, the majority of whom aim to produce most of their own food, including maize.  Rural households generally do not receive high prices for their produce, including their maize, and so generally have not benefitted from decreasing food prices."
             }
           ]
         },
@@ -373,10 +373,10 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "The general trend of increasing smallholder maize production in the higher rainfall areas where cassava was the main traditional staple means a modest improvement in the quality of nsima, the main meal.  However, in most districts increasing maize production is associated with declining production of small-grained cereals (sorghum, and various millets) which have nutritional benefits (mainly minerals) not found in maize.  Maize has the advantage of being comparatively easy to process and cook in various ways compared to cassava and small-grains, which could means that more maize could result in improved cooked food availability because it takes less time to prepare .    "
+              "comment": "The general trend of increasing smallholder maize production in the higher rainfall areas where cassava was the main traditional staple means a modest improvement in the quality of nsima, the main meal.  However, in most districts increasing maize production is associated with declining production of small-grained cereals (sorghum, and various millets) which have nutritional benefits (mainly minerals) not found in maize.  Maize has the advantage of being comparatively easy to process and cook in various ways compared to cassava and small-grains, which could means that more maize could result in improved cooked food availability because it takes less time to prepare ."
             },
             {
               "text": "4.3.2 Are nutritional practices being improved?",
@@ -388,7 +388,7 @@
               "text": "4.3.3 Is dietary diversity increased?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "For the majority of rural households dietry diversity is not increased through increased maize production, because nearly all households are growing some maize before they increase maize production.  The only situation in which dietary diversity is increased is with households who efficiently produce a regular surplus of maize for sale and at the same time grow some other food crops as part of the rotation, and use some of the maize from sales to purchase food items. "
+              "comment": "For the majority of rural households dietry diversity is not increased through increased maize production, because nearly all households are growing some maize before they increase maize production.  The only situation in which dietary diversity is increased is with households who efficiently produce a regular surplus of maize for sale and at the same time grow some other food crops as part of the rotation, and use some of the maize from sales to purchase food items."
             }
           ]
         },
@@ -401,13 +401,13 @@
               "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
               "scoreValue": 1,
               "scoreText": "Not at all",
-              "comment": " Increasing reliance on maize as the primary staple for the majority of rural and urban households, generally  increased the risk of food shortage for rural households.  In years of unfavourable weather for maize the risk of household food shortage is high.  For resource poor households access to improved maize inputs (seed and fertilizer) and/or fertile land is severely limited placing them as high risk of food shortage and steering them into relations of dependence on households able to produce a surplus of maize. "
+              "comment": "Increasing reliance on maize as the primary staple for the majority of rural and urban households, generally  increased the risk of food shortage for rural households.  In years of unfavourable weather for maize the risk of household food shortage is high.  For resource poor households access to improved maize inputs (seed and fertilizer) and/or fertile land is severely limited placing them as high risk of food shortage and steering them into relations of dependence on households able to produce a surplus of maize."
             },
             {
-              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "  The price of maize grain in rural areas fluctuates to a greater extent than the price of maize meal in urban areas.  This difference disadvantages poorer households in rural areas.  It is largely due to government price control of maize meal in urban areas, and the effects of supply and demand on maize grain prices in rural areas.     "
+              "comment": "The price of maize grain in rural areas fluctuates to a greater extent than the price of maize meal in urban areas.  This difference disadvantages poorer households in rural areas.  It is largely due to government price control of maize meal in urban areas, and the effects of supply and demand on maize grain prices in rural areas."
             }
           ]
         }
@@ -425,19 +425,19 @@
               "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Up to 30-40% of rural households receive subsidised maize inputs via rural cooperative groups.   However, the participation of these cooperatives is largely passive, functioning as conduits for subsidies, rather than as active producer groups with bargaining power.  For example they are not able to articulate their input requirements for maize but have to accept whatever is decided upon centrally. "
+              "comment": "Up to 30-40% of rural households receive subsidised maize inputs via rural cooperative groups.   However, the participation of these cooperatives is largely passive, functioning as conduits for subsidies, rather than as active producer groups with bargaining power.  For example they are not able to articulate their input requirements for maize but have to accept whatever is decided upon centrally."
             },
             {
               "text": "5.1.2 How inclusive is group/cooperative membership?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Membership is fairly inclusive, in that in principle any adult can join a producer cooperative, regardless of age, gender, ethnicity or disability.  The main barrier to entry is having enough cash to pay the local joining fee and to put up the money required as a contribution to FISP.  Actual membership of cooperative is biased towards males.  "
+              "comment": "Membership is fairly inclusive, in that in principle any adult can join a producer cooperative, regardless of age, gender, ethnicity or disability.  The main barrier to entry is having enough cash to pay the local joining fee and to put up the money required as a contribution to FISP.  Actual membership of cooperative is biased towards males."
             },
             {
-              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Leadership positions in producer cooperatives are occupied by more males than females.   In many areas there is a general policy to have 30% of these leadership positions occupied by women.  In womens groups women are the leaders, although some womens groups also have male members.  There is limited scope for accountability in producer cooperatives formed around FISP, due to the top down arrangements which govern these.      "
+              "comment": "Leadership positions in producer cooperatives are occupied by more males than females.   In many areas there is a general policy to have 30% of these leadership positions occupied by women.  In womens groups women are the leaders, although some womens groups also have male members.  There is limited scope for accountability in producer cooperatives formed around FISP, due to the top down arrangements which govern these."
             },
             {
               "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
@@ -453,16 +453,16 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Improvements in communication technology over the past two decades, and also developments in private sector input supply,  have improved the access of small-scale farmers to a range of relevant information.  Maize production technology has been the main focus of public and private sector extension advice, agricultural policy information is accessible via mass media and public extension services, and market price data can be, and is, accessed via a variety of sources.    "
+              "comment": "Improvements in communication technology over the past two decades, and also developments in private sector input supply,  have improved the access of small-scale farmers to a range of relevant information.  Maize production technology has been the main focus of public and private sector extension advice, agricultural policy information is accessible via mass media and public extension services, and market price data can be, and is, accessed via a variety of sources."
             },
             {
               "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Generally the levels of trust are low between small-scale farmers and other actors, including local agro-dealers selling maize inputs and buyers of maize grain.  Agro-dealers do not usually extend credit to small-scale farmers whereas this is commonly extended to larger commercial farmers.  Small-scale farmers do not usually sell their grain to the same buyers each season, and are often suspicious of private grain traders.  Relations between small-scale farmers and public extension workers are generally trust-worthy, as is their relationship with local hammer mill owners where they take their grain for milling for household food. "
+              "comment": "Generally the levels of trust are low between small-scale farmers and other actors, including local agro-dealers selling maize inputs and buyers of maize grain.  Agro-dealers do not usually extend credit to small-scale farmers whereas this is commonly extended to larger commercial farmers.  Small-scale farmers do not usually sell their grain to the same buyers each season, and are often suspicious of private grain traders.  Relations between small-scale farmers and public extension workers are generally trust-worthy, as is their relationship with local hammer mill owners where they take their grain for milling for household food."
             }
           ]
         },
@@ -472,19 +472,19 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Local community structures are generally weak in rural areas, due to the legacy of a largely centralised administrative and political system.  There is some scope for community action, and in some communities which are well established there are examples of individuals and groups taking development initiatives leading to local improvements of services, particularly where linkages have been established with organisations or individuals of influence based elsewhere.  However the decisions that relate to the maize VC are predominantly taken by goverment and private sector actors, without any involvement of local communities. "
+              "comment": "Local community structures are generally weak in rural areas, due to the legacy of a largely centralised administrative and political system.  There is some scope for community action, and in some communities which are well established there are examples of individuals and groups taking development initiatives leading to local improvements of services, particularly where linkages have been established with organisations or individuals of influence based elsewhere.  However the decisions that relate to the maize VC are predominantly taken by goverment and private sector actors, without any involvement of local communities."
             },
             {
               "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "The focus of agricultural extension advice does respect local knowledge relating to aspects of climate smart and conservation agriculture.  However, the predominant focus in policy and service delivery is on maize production based on use of external inputs (hybrid seed, chemical fertiliser, herbicides and pesticides, mechanical shelling and grinding), and this tends to greatly reduce respect of traditional knowledge relating to maize production, processing and storage "
+              "comment": "The focus of agricultural extension advice does respect local knowledge relating to aspects of climate smart and conservation agriculture.  However, the predominant focus in policy and service delivery is on maize production based on use of external inputs (hybrid seed, chemical fertiliser, herbicides and pesticides, mechanical shelling and grinding), and this tends to greatly reduce respect of traditional knowledge relating to maize production, processing and storage"
             },
             {
-              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "Judged not applicable because while participation in voluntary communal activities does take place to some extent, the activities in recent years have very little impact on the operation of the maize VC - the exception would be repair to roads or bridges in remoter areas initiated by local leaders using voluntary labour."
@@ -517,7 +517,7 @@
               "text": "6.1.3  Are health services affordable for households?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Health services provided in commercial farming areas provide basic healthcare services which are generally affordable for employees, who are usually only charged for medicines, the cost of which is often subsidised.  Maternal health services are provided free of charge throughout Zambia. Public health services in urban areas accessible to employees in the value chain at no charge, but they are often required to purchase medicines sold at commercial rates., which may or may not be affordable, depending on which medicine is prescribed. "
+              "comment": "Health services provided in commercial farming areas provide basic healthcare services which are generally affordable for employees, who are usually only charged for medicines, the cost of which is often subsidised.  Maternal health services are provided free of charge throughout Zambia. Public health services in urban areas accessible to employees in the value chain at no charge, but they are often required to purchase medicines sold at commercial rates., which may or may not be affordable, depending on which medicine is prescribed."
             }
           ]
         },
@@ -533,7 +533,7 @@
               "comment": "On commercial farms employees are typically provided with accomodation which is of a good standard relative to what they have have had when living in their village.  Employees of milling companies and grain storage warehouses tend to stay in higher density locatiions in the urban areas.   In these areas the standard of household is very variable, but is generally improving."
             },
             {
-              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "On commercial farms employees usually have access to good quality water and also reasonable quality sanitation facilities provided by their employer as part of the housing complex.  Employees of milling companies and warehouses in urban areas largely have access to good quality water.   Their access to good quality sanitation facilities is very variable, depending on where they live, but overall the quality of sanitation is improving due to investment in improvements in many higher density areas of Lusaka, the Copperbelt and other urban areas.."
@@ -549,16 +549,16 @@
               "text": "6.3.1 Is primary education accessible to households?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Primary education in Zambia is free of charge in principle, although individual schools do usually require parents to buy uniforms, books, and in some cases to contribute towards improvement projects. On commercial farms employees are typically able to access primary education easilly as owners build schools and teacher housing while the government provides teachers.  The main maize milling companies and grain storage warehouses are located in urban areas were primary education is easilly accessible. "
+              "comment": "Primary education in Zambia is free of charge in principle, although individual schools do usually require parents to buy uniforms, books, and in some cases to contribute towards improvement projects. On commercial farms employees are typically able to access primary education easilly as owners build schools and teacher housing while the government provides teachers.  The main maize milling companies and grain storage warehouses are located in urban areas were primary education is easilly accessible."
             },
             {
               "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "On commercial farms secondary and vocational education is not easilly accessible, due to remoteness from the urban areas where these are typically located.  In contrast, households with employees of milling and warehouse companies can usually access secondary and to a lesser extent vocational education, provided they can affort the school fees. These are be affordable to the salaried employees of these companies, but not the seasonal workers. "
+              "comment": "On commercial farms secondary and vocational education is not easilly accessible, due to remoteness from the urban areas where these are typically located.  In contrast, households with employees of milling and warehouse companies can usually access secondary and to a lesser extent vocational education, provided they can affort the school fees. These are be affordable to the salaried employees of these companies, but not the seasonal workers."
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "On commercial farms employees typically are inducted and trained \"on the job\", by more experienced employees, and this is an informal process with very little investment by commercial farm owners.  In a few cases employees may be sent on courses to learn specific skills by the commercial farm owners where these skills are seen as essential and in short supply.  The situation is very similar for the milling and warehouse owners, who may send their more technical staff, primarilly millers, on courses, most of which are outside of the country, although some of these can be done by distance learning."

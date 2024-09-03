@@ -2,7 +2,7 @@
   "id": "inland-fisheries-mali",
   "country": "mali",
   "commodity": "inland fisheries",
-  "year": 2020,
+  "year": null,
   "type": "social",
   "socialData": [
     {
@@ -38,7 +38,7 @@
               "comment": "Dans la grande région de pêche,notamment dans la région de Mopti dans le DIN, l'absence de l'etat accentuée dû au conflit laisse craindre une détoriation de la situation. Les garçons à partir de 10 ans aident durant les 3 mois de décrue leurs père sur lea pirogue. Il manque alors ce temps à l'école. Pas d'information sur les enfants hors leurs familles qui sont forcé de travailler."
             },
             {
-              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Please add justification."
@@ -51,7 +51,7 @@
           "averageText": "Moderate/Low",
           "questions": [
             {
-              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Géneralement, les garçons aides pendent au moins 3 mois leurs pères avec la pêche, et les filles aux mamans. La scolarisation est donc réduite à cause de la technique du travail exigent un aide pour naviguer la pirogue. En plus, comme beaucuop de petits villages et campement de pêcheurs sont un peu loin des villages équipé d'écoles, la scolarisation est sous la moyenne, dans un pays avec un taux de scoloarisation déjà très faible (sous 70%)."
@@ -73,7 +73,7 @@
               "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Les empoyés les plus importants émanent de la DNP. Accident et mauvaise santé ne sont pas des enjeux, mais plutot la morosité et le manque d'actions, de perspectives et le niveaux de frustration dans le rôle comme policiers de la pêche sans moyens de sensibilsation, formation et encadrement. "
+              "comment": "Les empoyés les plus importants émanent de la DNP. Accident et mauvaise santé ne sont pas des enjeux, mais plutot la morosité et le manque d'actions, de perspectives et le niveaux de frustration dans le rôle comme policiers de la pêche sans moyens de sensibilsation, formation et encadrement."
             }
           ]
         },
@@ -138,16 +138,16 @@
               "comment": "La liberté de la presse, d'association et le réseaux sociale permettent une bonne accessibilitéde l'information. Mais elle reste théorique. Dans la pratique, l'information n'est pas disséminé. Par contre, tout le monde (parmi les jeunes au moins) dispose des mobiles. Mais ceci ne garantie pas encore la reception de l'information utile."
             },
             {
-              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "D'après la loi, la participation devrait etre correcte. Mais en pratique la consulation ne permette pas une participation satsifaisante et constructive. En plus, les budget réduit de la DNP ne permet pas des consultations rélles."
             },
             {
-              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "L'elaboration des conventions et le processus plus décisives pour les acteurs, notamment les pêcheurs. Rarement sont les cas ou ses conventions fonctionnent. Il y a un problème que celles-ci sont souvent imposé et qu'il manque la competence de les faire d'une façon inclusive. "
+              "comment": "L'elaboration des conventions et le processus plus décisives pour les acteurs, notamment les pêcheurs. Rarement sont les cas ou ses conventions fonctionnent. Il y a un problème que celles-ci sont souvent imposé et qu'il manque la competence de les faire d'une façon inclusive."
             }
           ]
         },
@@ -169,7 +169,7 @@
               "comment": "La stratégie majeure de l'état est l'appui de la pisciculture, permettant d'amélioer les condtions économiques des pêcheurs. La migration geographique (hors du DIN) est dans des autres secteurs- agriculture, commerce en ville, reste la stratégie additionel des acteurs. Mais le gouvernement et les acteurs puissants (Office du Niger), ne semblent pas reconnaitre la pêche comme facteur significative pour le développement et la sécurité alimenatire. La priorité est donné à l'agriculture (riz, sucre). A niveau des pêcheurs, les strartégies alternatives sont en place depuis longtemps: femmes et jeunes dans le maraichage, migration temporelle/saisonnière, agriculture par les jeunes."
             },
             {
-              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "Please add justification."
@@ -199,7 +199,7 @@
               "comment": "Le risque n'est pas grand, car les femmes sont plutot dominant dans cette CV (sauf dans la pêche), notamment comparé avec l'elevage et l'agriculture."
             },
             {
-              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 4,
               "scoreText": "High",
               "comment": "Production: 15%; transformation: 90% , commerce: 78%, Total: 52%. Les femmes sont très actives, sur tous les maillon de la chaine. (sauf il ne pêche pas la nuit)"
@@ -230,7 +230,7 @@
               "comment": "On principe possible, mais il faut des femmes très forte pour s'imposer. Généralement, prendre un crédit au Mali rural (pris apart le crédit coton), ne touche que 4 % de la population. Et pour une femme pêcheurs, c'est extrèmement rare, notamment dans le rural. A Bamako sa peut se passer."
             },
             {
-              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "voir en haut. Mais les femmes ont toujours mins d'acces que les hommes."
@@ -252,7 +252,7 @@
               "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Elle jouent leurs rôle. Mais autonomie? Elle font ce que le marie et la communaté attend d'elles. Elle travaillent trop, ne dispose pas de temps libre, font les 6 à 8 enfants, et c'est ça. Mai il y surememt les espaces et moments, ou les femmes parmi elles arrive de respirer, de rigoler, de caresser les enfants. "
+              "comment": "Elle jouent leurs rôle. Mais autonomie? Elle font ce que le marie et la communaté attend d'elles. Elle travaillent trop, ne dispose pas de temps libre, font les 6 à 8 enfants, et c'est ça. Mai il y surememt les espaces et moments, ou les femmes parmi elles arrive de respirer, de rigoler, de caresser les enfants."
             },
             {
               "text": "3.3.3 Do women have control over income?",
@@ -286,13 +286,13 @@
               "comment": "Les mareyeuses (souvent les femmes des chef de campement) sont les mieux organnisées, beaucoup mieux les transformatrices et les femmes comme telle. Souvent, les OP dépendent des leader charismatique dans le local."
             },
             {
-              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Rarement dans les organsiations mixtes.  Le plus souvent à Bamako, ou il y a plus de 20 campements/villages."
             },
             {
-              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Le pouvoir d'influencer reste petit."
@@ -335,13 +335,13 @@
           "averageText": "High",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\n",
+              "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Le poisson constitue le protein animale dominat au Mali, et la grande partie est toujours produit dans le pays. Les pêcheurs sont aussi actifs dans l'agriculture. Il semble que depuis plus de 20 ans, des familles non-pêcheurs entre de plus en plus dans la pêche et augment ainsi la production alimentaire locale (agri-pêcheurs). \"Tout le monde fait tout\". Une intensification est observé avec la baisse des pluies et de crues, surment pour compenser la perte de revenue et de sécurité alimentaire (D17). \"Sans pêche, ce sera une catastrophe (dans le DIN)\"."
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 4,
               "scoreText": "High",
               "comment": "L'utilisation de la resource eaux- au fleuve, dans les mares, dans les lacs et barrages, et davantage avec les étangs et des bacs (pisciculture) contribuent fortment à la production d'aliments. La souce de poisson et une nutrition nationale et journalière 8basö sur le posson fumé, accesssible dans tous les villages du Mali, même loin des villages de pêcheurs."
@@ -354,13 +354,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Les baisses des rendements réduisent aussi le pouvoir d'achat pour l'alimentaion. Les pêcheurs sont considérés de ses jours comme \"le paysan le plus pauvre au Mali\". De l'autre côté: \"Le poisson coute moins cher que la viande. C'est donc le proteine des pauvres\". Une exception sont quelque milliers pêcheurs professionnels migrants, qui utilse des engins et techniques à point (comme le \"Golfe\"), qui permet des captures de plus de 50 à 100 kg même aujourd'hui. "
+              "comment": "Les baisses des rendements réduisent aussi le pouvoir d'achat pour l'alimentaion. Les pêcheurs sont considérés de ses jours comme \"le paysan le plus pauvre au Mali\". De l'autre côté: \"Le poisson coute moins cher que la viande. C'est donc le proteine des pauvres\". Une exception sont quelque milliers pêcheurs professionnels migrants, qui utilse des engins et techniques à point (comme le \"Golfe\"), qui permet des captures de plus de 50 à 100 kg même aujourd'hui."
             },
             {
-              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Malgré les prix très bas du poisson importé (de la Chine, du Sénegal etc), le poisson reste moins cher que la viande. Par contre, dans le DIN à Mopti ou se pratique le troc, pour 1 kg de poisson seulement 2 kg de riz sont rendu. Ceci correspons à une prix de moins de 800 F/kg pour le poisson."
@@ -373,7 +373,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 4,
               "scoreText": "High",
               "comment": "La qualité serait encore mieux, s'il n'y aurait pas de problème de toxication (stockage et fumage avec des pesticides, p.ex. de la production du coton). Mais generalement, la valeur nutritionnelle des repas de pêcheurs est plus haut que celles des agriculteurs. I30 estime que l'esperance de vie des pêcheurs soit 4-5 ans plus haut que les agriculteurs, grace à la nutrition journalière de poisson."
@@ -404,7 +404,7 @@
               "comment": "Les investissments dans le secteur ne sont pas suffisant et les problèmes qui sont connu depuis 30 ans pas addressé d'une façon acceptable. Les pêcheurs ne souffrent pas de problèmes alimentaires, mais souvent d'acces de services de santé, de scolarisation et d'accès aux crédits aux differentes besoins."
             },
             {
-              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "L'importation réduit les fluctuations, mais réduit aussi les marchés/affaires des producteurs du Mali avec des pressions de prix"
@@ -434,7 +434,7 @@
               "comment": "Il n'ya pas de restriction directe (sauf qu'il manque souvent les moyens de l'Etat d'avertir sur les avantage d'une organisation)."
             },
             {
-              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "La reputation des OP indique plutot la dominance d'un autoritarisme. En plus, les structures des Bozos reste souvent restraints dans le circle du daga (campement).  C'est toujour la communauté de campement qui domine, et pas l'organisation \"moderne\" au sein de la communauté. le rôle clef reste donc avec le chef."
@@ -453,7 +453,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Manque de moyens de l'Etat. Seulemment là ou des ONG sont operationel, mais c'est très rare. Depuis le coup d'Etat /crise dans le DIN (2012), tous les ONG et bailleurs/partenaires ont fui la région, laissant un grand vide. Ceci constitue de l'autre côté une chance pour une relance de la pêche, basé sur les institutions nationales et une stratégies et des programmes bien ciblé."
@@ -462,7 +462,7 @@
               "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Voir les conflits avec les acteurs de l'Etat et la mauvaise gestion des conventions de pêche. Une autre source de problème est à l'interieur des commaunautés et lié à la corruption du chef (notamment mentionné pour la région de Mopti). La difficulté d'obtenir des crédits indique un manque de confiance parmi les acteurs. La non-structuration des rapports économique intra-villageois rende un lobby impossible parmi les pêcheurs. Même au sein des Bozo, il n'y a pas de rapport de travail entre les migrants-saisonniers (Février-Juillet) et les pêcheurs des campements. Au contraire: les conflits semblent dominer et ainsi contribuer à réduire les populations de poisson et/ou réduire sur les années les captures annuelles. "
+              "comment": "Voir les conflits avec les acteurs de l'Etat et la mauvaise gestion des conventions de pêche. Une autre source de problème est à l'interieur des commaunautés et lié à la corruption du chef (notamment mentionné pour la région de Mopti). La difficulté d'obtenir des crédits indique un manque de confiance parmi les acteurs. La non-structuration des rapports économique intra-villageois rende un lobby impossible parmi les pêcheurs. Même au sein des Bozo, il n'y a pas de rapport de travail entre les migrants-saisonniers (Février-Juillet) et les pêcheurs des campements. Au contraire: les conflits semblent dominer et ainsi contribuer à réduire les populations de poisson et/ou réduire sur les années les captures annuelles."
             }
           ]
         },
@@ -472,7 +472,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "C'est plutot le chef (de la communauté villageoise/campement) qui participe, mais pas en titre de chef, plutot comme individu. Il ne doit pas rendre compte, et surment pas au jeunes (jeune veut dire moins de 30 ans, souvent les meilleurs pêcheurs, car dynamique et les plus actives, marié à partir de 20 ans)."
@@ -484,7 +484,7 @@
               "comment": "Rôle et respects des differents savoir traditionnels sont rarement mis en question. Souvent c'est un problème, notamment s'il s'agit des affaires sociales. Aussi, le traditionalisme peut empecher l'adoption d'une nouvelles stratégie de survie, comme l'agriculture, le maraichage pour les jeunes ou une technique de la pisciculture pour l'intensification de la pêche."
             },
             {
-              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "La communauté vie encore très fort, et chacun y participe. Bonne cohésion sociale avec les 4 groupes dominants: Homme agé de plus de 35-40 ans, femmes agés, jeunes (de 15/18 à 35) enfants et petits enfants. Ces catégories d'ages et de  sexes formes la structure de la communauté, ensemble et autour avec la famille du chef (fondateur)."
@@ -533,7 +533,7 @@
               "comment": "Pénible avant tout pour les pêcheurs migrants et les campements de Bamako. Mais généralemet les maisons dans les petits villages semble dans un état pénible. D'après I30, les pêcheurs du lac Sélingué vivent dans des meilleurs maisons que dans le DIN dans les petits villages/hameux/campement. A noter que depuis une génération, la population des pêcheurs au Mali a doublé et les rendements de poisson est au moins 4 fois plus petites depuis 30 ans."
             },
             {
-              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "En dessous de la moyenne, car les ménages sont souvent dans les villages ou campement loins des services étatiques.les toxieques (mercure etc) dû à l'exploitation de l'or ne permets souvent plus de boir l'eau des lacs/cours d'eau (Sélingué)."
@@ -558,7 +558,7 @@
               "comment": "Rare sont les ressortisant de ce type d'education au milieu rural."
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Très peu d'opportunité."
