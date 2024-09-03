@@ -29,7 +29,7 @@
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "En la fase agrícola, los trabajadores estacionales y permanentes sólo disponen de contratos orales, sin beneficios sociales, a diferencia de los trabajadores empleados en la fase agroindustrial y en el sector exportador. "
+              "comment": "En la fase agrícola, los trabajadores estacionales y permanentes sólo disponen de contratos orales, sin beneficios sociales, a diferencia de los trabajadores empleados en la fase agroindustrial y en el sector exportador."
             },
             {
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
@@ -38,7 +38,7 @@
               "comment": "Los riesgos de trabajo forzado están minimizados por el dispositivo legal y reglamentario de Honduras. Las infracciones están penadas por ley."
             },
             {
-              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "No existen evidencias de discriminación al empleo en la cadena por motivos religiosos o de género. Las poblaciones indígenas participan en la cadena, pero en condiciones difíciles."
@@ -51,7 +51,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "El trabajo infantil es frecuente durante la cosecha, cuyo pico coincide con el período de vacaciones escolares. Afecta la asistencia escolar el inicio y al final del ciclo lectivo."
@@ -138,13 +138,13 @@
               "comment": "El acceso a la información relativa al otorgamiento de concesiones es tardío"
             },
             {
-              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "El proceso de participación y de consulta es truncado"
             },
             {
-              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "En el caso de concesiones mineras no se da el consentimiento de los afectados, sino que se recurre a la fuerza y la violencia para el desalojo de las poblaciones"
@@ -169,7 +169,7 @@
               "comment": "La estrategia implementada ha sido de desplazar las poblaciones que viven en las tierras concesionadas"
             },
             {
-              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": "n/a",
               "scoreText": "n/a",
               "comment": "La compensación no alcanza un nivel justo"
@@ -199,7 +199,7 @@
               "comment": "No existe riesgo específico de exclusión de las mujeres"
             },
             {
-              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Las mujeres participan en todos los eslabones de la cadena"
@@ -230,7 +230,7 @@
               "comment": "El acceso de las mujeres al crédito bancario está limitado por la falta de propiedad de la tierra"
             },
             {
-              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "El acceso a servicios se da en igualdad de condiciones"
@@ -286,13 +286,13 @@
               "comment": "Las mujeres son miembros de las distintas organizaciones, sin que exista paridad entre hombres y mujeres"
             },
             {
-              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Existe liderrazgo de de mujeres pero en una proporción lejos de la paridad"
             },
             {
-              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Participación de las mujeres a nivel municipal y en sus mesas temáticas"
@@ -335,13 +335,13 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\r\n",
+              "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Muy baja producción de alimentos en las zonas cafetaleras (especialización marcada en café"
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \r\n",
+              "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "El abastecimiento se los mercados depende fuertemente de las importaciones"
@@ -354,13 +354,13 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "El acceso a los alimentos es el principal factor de la inseguridad alimentaria, en particular para los grupos vulnerables (jornaleros, corteros, minifundistas)"
             },
             {
-              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "En los tres últimos años el aumento del precio de los alimentos ha sido moderado"
@@ -373,7 +373,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \r\n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Algunos alimentos comerciales están fortificados"
@@ -404,7 +404,7 @@
               "comment": "Sigue produciendose escasez de alimentos en los meses previos a la cosecha"
             },
             {
-              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Existen supermercados con precios populares"
@@ -434,7 +434,7 @@
               "comment": "Membresía abierta a las organizaciones"
             },
             {
-              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "La representatividad de las gremiales es cuestionable. Existe poca rendición de cuentas en las gremiales. El movimiento de comercio justo y de producción orgánica es más transparente y participativo, pero no goza de representación en las instancias cafetaleras"
@@ -453,7 +453,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Los productores tienen un acceso amplio a precios de mercado mediante diferentes fuentes. El acceso a información sobre prácticas agrícolas y políticas agrarias es más selectivo."
@@ -472,7 +472,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Las mesas temáticas a nivel municipal son el principal espacio para participar a las decisiones que tienen consecuencias sobre sus medios de vida"
@@ -484,7 +484,7 @@
               "comment": "Resulta poco pertinente hablar de conocimientos tradicionales en café"
             },
             {
-              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "La participación voluntaria a acciones comunitarias se da sobretodo para apoyar obras colectivas de infraestructura (aducción de agua, electrificación)"
@@ -533,7 +533,7 @@
               "comment": "La calidad de la vivienda depende mucho del estrato social. El acceso a la electricidad sigue presentando debilidades"
             },
             {
-              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "En el área rural persisten problemas de acceso al agua potable y a instalaciones sanitarias"
@@ -549,7 +549,7 @@
               "text": "6.3.1 Is primary education accessible to households?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "La educación primaria es accesible pero los grupos vulnerables enfrentan dificultades para cubrir los costos de uniformes, útiles escolares y materiales didácticos. "
+              "comment": "La educación primaria es accesible pero los grupos vulnerables enfrentan dificultades para cubrir los costos de uniformes, útiles escolares y materiales didácticos."
             },
             {
               "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
@@ -558,7 +558,7 @@
               "comment": "El acceso a la educación secundaria es más difícil. Una gran mayoría de alumnos sale del sistema educativo a la edad de 12 años."
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\r\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "El sistema de educación técnica tiene un alcance limitado"

@@ -35,10 +35,10 @@
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "On ne note pas de risque de travail forcé, seulement l'utilisation d'une main d'œuvre familiale dans les exploitations agricoles avec l'ulisation des enfants de moins de 14 ans parfois sans leur avis. Chez les femmes transformatrices de niébé ou les meuniers, l'emploi des enfants est très fréquents. Il est difficile de minimiser les risques car aucun controle par les puissances publiques n'est oppéré (Ministère en charge d'action sociale) "
+              "comment": "On ne note pas de risque de travail forcé, seulement l'utilisation d'une main d'œuvre familiale dans les exploitations agricoles avec l'ulisation des enfants de moins de 14 ans parfois sans leur avis. Chez les femmes transformatrices de niébé ou les meuniers, l'emploi des enfants est très fréquents. Il est difficile de minimiser les risques car aucun controle par les puissances publiques n'est oppéré (Ministère en charge d'action sociale)"
             },
             {
-              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Dans la chaine de valeur, de la production à la consommation, les travailleurs sont employer de manière informelle, ils temporaires donc ce qui minise le risque de discrimination dans l'embauche. Le savoir faire et l'expérience fait la défférence"
@@ -51,7 +51,7 @@
           "averageText": "Moderate/Low",
           "questions": [
             {
-              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Au niveau de la production notamment dans  les exploitations familiales, les enfants qui trvaillent ont le niveau primaire,  ensuite au niveau de la transformation, les jeunes filles du niveau primaire et du sécondaire sont employées pour la vente des sous produits comme (beroua, Kossé, etc)"
@@ -110,7 +110,7 @@
               "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
               "scoreValue": 4,
               "scoreText": "High",
-              "comment": "La réunion du CNCR d’octobre 2014 a entériné ces constats et a pris la décision d’engager un processus d’amendements des textes à travers notamment la formLa réunion du CNCR d’octobre 2014 a entériné ces constats et a pris la décision d’engager un processus d’amendements des textes à travers notamment la formulation d’une Politique Foncière Rurale (PFR). Ce processus de formulation de la PFR amorcé en février 2018 avec l’organisation des Etats Généraux du Foncier Rural. Il est fortement inspiré et orienté par les Directives Volontaire pour une Gouvernance Responsable élaboré par la FAO et les Cadres et Lignes Directrices de l’UA pour les Politiques Foncières en Afrique. Ce processus a aboutit à la formulation de la Politique Foncière Rurale du Niger et adopté en 2021. "
+              "comment": "La réunion du CNCR d’octobre 2014 a entériné ces constats et a pris la décision d’engager un processus d’amendements des textes à travers notamment la formLa réunion du CNCR d’octobre 2014 a entériné ces constats et a pris la décision d’engager un processus d’amendements des textes à travers notamment la formulation d’une Politique Foncière Rurale (PFR). Ce processus de formulation de la PFR amorcé en février 2018 avec l’organisation des Etats Généraux du Foncier Rural. Il est fortement inspiré et orienté par les Directives Volontaire pour une Gouvernance Responsable élaboré par la FAO et les Cadres et Lignes Directrices de l’UA pour les Politiques Foncières en Afrique. Ce processus a aboutit à la formulation de la Politique Foncière Rurale du Niger et adopté en 2021."
             },
             {
               "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
@@ -138,16 +138,16 @@
               "comment": "les initutions de l'Etat au niveau central, régional , départemental, et communales sont les principaux centres de décisions. Les acteurs de la chaine notamment les producteurs, les colleceturs, transporteurs, transformateurs et consomateurs ont une faible connaiassances des lois et les différentes interventions politiques du fait parfois de la faible vulgarisation des textes mais aussi de l'anaphabétisme"
             },
             {
-              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "La réunion du CNCR d’octobre 2014 a entériné ces constats et a pris la décision d’engager un processus d’amendements des textes à travers notamment la formLa réunion du CNCR d’octobre 2014 a entériné ces constats et a pris la décision d’engager un processus d’amendements des textes à travers notamment la formulation d’une Politique Foncière Rurale (PFR). Ce processus de formulation de la PFR amorcé en février 2018 avec l’organisation des Etats Généraux du Foncier Rural. Il est fortement inspiré et orienté par les Directives Volontaire pour une Gouvernance Responsable élaboré par la FAO et les Cadres et Lignes Directrices de l’UA pour les Politiques Foncières en Afrique. Ce processus a aboutit à la formulation de la Politique Foncière Rurale du Niger et adopté en 2021.Mais le problème les acteurs à la base sont toujours faiblement consultés et informés"
             },
             {
-              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Le niveau de participation des parties prénates s'obtient parl a médiation et la  négaocition et obtention des accords sociaux "
+              "comment": "Le niveau de participation des parties prénates s'obtient parl a médiation et la  négaocition et obtention des accords sociaux"
             }
           ]
         },
@@ -169,7 +169,7 @@
               "comment": "En cas de perturbations, il y a des mécanismes traditionnels d'entraide, mais aussi les systèmes d'alerte precoce et de gestion des crises et catastrophes mis en ouevre par l'Etat et ses demembrement aux différents échelons du territoire national"
             },
             {
-              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "En cas d'expropriation les textes de lois sont clairs, il y a un expropriation pour cause d'utlité publique et une indemisation du prropriétaire qui est juste et préalable, toujours la pratique sur le terrain reste difficile à mettre en ouvre"
@@ -199,7 +199,7 @@
               "comment": "populations et des opérateurs ruraux et dans l’axe stratégique N°3 favoriser l’accès à la terre et la sécurisation foncière des femmes, des jeunes et des personnes en situation d’handicap. Dans les mesures  à prendre, il est spécifier l’octroi à ces acteurs un minimum de 35% aménagés par l’Etat et les collectivités aux femmes, jeunes et les personnes en situation de handicap. Par ailleurs, encourager la désignation ou le recrutent des femmes dans les organismes de gestion  et l’administration foncière avec notamment un objectif de 25% des femmes dans les commissions foncières et leur positionnement aux différents postes stratégiques. Dans la pratique, les femmes possèdent des petites parcelles de cultures (moins d’un ha) qu’elles cultivent pour elles-mêmes, mais ces lopins de terre ne sont pas leurs propriétés individuelles, c’est le gérant de l’exploitation qui l’affecte chaque année, donc pas de sécurité foncière. Il reste toujours la question de l'application des dispositions des textes de lois sur le terrain"
             },
             {
-              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Les femmes plus actives dans la transformation dans la CV niébé. Une proportion importante des jeunes femmes comme employées. Par contre, dans certaines régions elles sont absentes dans la production et la commercialisation"
@@ -221,7 +221,7 @@
               "text": "3.2.2 Do women have equal land rights as men?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Pour l'accès aux ressources entre les femmes et les hommes , on applique le regime coutumier ou musulman. Pour ce dernier la femme a toujour le 1/3 de la part "
+              "comment": "Pour l'accès aux ressources entre les femmes et les hommes , on applique le regime coutumier ou musulman. Pour ce dernier la femme a toujour le 1/3 de la part"
             },
             {
               "text": "3.2.3 Do women have access to credit?",
@@ -230,7 +230,7 @@
               "comment": "L'accès au crédit est rare nous avons pas rencontrés des femmes ayant bénéficiées, seulement elles se constituées en groupement et élaborer des dossiers pour etre appuyerappuis formations auprès de certaines ONG. Dans la chaine de valeur on a pas rencontré des femmes ayant bénéficiées des crédits"
             },
             {
-              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "les femmes organisées en groupements (fabrication du couscous de niébé Béroua bénéficient des appuis formations auprès de certaines ONG"
@@ -286,13 +286,13 @@
               "comment": "les femmes sont généralement des groupement féminins, de production ou des transformatrices"
             },
             {
-              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 4,
               "scoreText": "High",
               "comment": "Certaines femmes occupent des position des leaders surtout dans la composition du bureau du groupement ou dans les Champs écoles payasans, les Clubs Dimitra"
             },
             {
-              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Très rarement pour les femmes rurales,  mais celles qui sont des élues locales (conseils régionaux, ou municipaux ) peuevent influencer les services, le pouvoir territorial et les prises de décision"
@@ -314,13 +314,13 @@
               "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "Les femmes s'occuent généralement le travail de reprodcution au sein des manages et les hommes la production et les aspects politiques. Il arrive aussi que certaines femmes en fonction des localités font les deux, dans ces condition, les charges de travail des femmes dépassent celles des hommes "
+              "comment": "Les femmes s'occuent généralement le travail de reprodcution au sein des manages et les hommes la production et les aspects politiques. Il arrive aussi que certaines femmes en fonction des localités font les deux, dans ces condition, les charges de travail des femmes dépassent celles des hommes"
             },
             {
               "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
               "scoreValue": 4,
               "scoreText": "High",
-              "comment": "dans ce cadre de travail des femmes beaucoup reste à faire, car, elles sont soumises à la corvée d'eau quise fait à pied avec un recipient porté sur la tête et le pillage des graines au mortier, là où les moulins n'existent "
+              "comment": "dans ce cadre de travail des femmes beaucoup reste à faire, car, elles sont soumises à la corvée d'eau quise fait à pied avec un recipient porté sur la tête et le pillage des graines au mortier, là où les moulins n'existent"
             }
           ]
         }
@@ -335,13 +335,13 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\n",
+              "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "La Valeur nutritive du  niébé est bien connue et il permet de lutter contre l’insécurité alimentaire en ecourtant la période de sudure \nLe niébé contribut à lutter contre la mal nutrition et augmenter la production locale de nouture\n\nLes fanes et les cosses contribut à un niveau signaficatif à l’alimentation du bétail. a vente du niébé et les fanes permettent aussi au ménages d'acheter de la nourrirure"
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Le développement de la chaine de valeur va permettre à l'augmentation de la production donc de l'offre du produit sur les marchés et avec une baisse des prix et accessible aux ménages vulnérables"
@@ -354,13 +354,13 @@
           "averageText": "High",
           "questions": [
             {
-              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "En milieu rural nigérien, 90% des revenus des ménages servent à l'achat de nourriture"
             },
             {
-              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 4,
               "scoreText": "High",
               "comment": "Les prix des produits alimentaires fluentuent en fonction des saisons dans l'année. En période des récoltes les prix des produits alimentaires sont toujours au bas. Par contre en période de soudure Mai, Juin, juillet les prix grimpent et le prix est fonction de la nature de la campagne précédente"
@@ -373,7 +373,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 4,
               "scoreText": "High",
               "comment": "la qualité nutritionnelle des aliments s'est améliorée par l'introduction du niébé dans l'alimentation des ménages. Il y a un certain nombre d'années le niébé n'est pas consommé, aujourd'hui il fait parti des habitudes alimentaires des ménages tant ville qu'en camapagne"
@@ -404,7 +404,7 @@
               "comment": "réduit avec la diversité des produits, les ménages ont un grand choix et une accessibilité"
             },
             {
-              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "les variations excessives des prix des denrées alimentaires sont réduites par la vente des prix modérés organisée chaque année en période de soudure par l'Etat dans toute l'étendue du teritroire national"
@@ -434,7 +434,7 @@
               "comment": "c'est surtout au niveau des fetières qui peuvent regrouper plusieurs groupements ou assocations dont la fonctionnalité est souvent difficile pour atteindre les vrais acteurs sur le terrain"
             },
             {
-              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "On note des groupes des fetières des organisations paysannes composés de plusieurs groupement avec un leadership représentatif dans tout le pays avec des responsables qui agissent au nom des dites organisations"
@@ -453,7 +453,7 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "les producteurs agricoles ont accès aux information via le SIMA et aussi les services d'agriculture, les ONG, les champs écoles payasans et les radios rurales. Ce système est renforcé aujourd'hui par les reseaux sociaux et les NTIC"
@@ -472,7 +472,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "les décisions sont souvent prises au niveau des échelles  supérieurs, il y a souvent des consultations à la base, mais très superficiellespour faire comprendre les enjeux par les acteurs de terrain"
@@ -484,10 +484,10 @@
               "comment": "les pratiques et les connaissances locales sur les itinéraires techniques des cultures, les systèmes des cultures sont transmises de génération en générations à travers les connaissances traditionnelles qui perpétuent les reproduction sociale"
             },
             {
-              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Les activités communuautaires se résume aux trvaux colletifs (Gayya) au niveau des petites exploitations familiales pour aider certaines personnes qui manquent de main d'œuvre "
+              "comment": "Les activités communuautaires se résume aux trvaux colletifs (Gayya) au niveau des petites exploitations familiales pour aider certaines personnes qui manquent de main d'œuvre"
             }
           ]
         }
@@ -533,7 +533,7 @@
               "comment": "Dans les gros villages des habitations sont faites en banco et les hameaux en les cases en paillotes, où on ne trouve pas des lattrines, donc la qualité des habitations en milieu rural reste à désirée"
             },
             {
-              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Dans les villages administratifs on trouve des mini Adduction d'eau potable, mais en mileu rural bon nombre des populations consomment l'eau des puits voire des mares dont la qualité n'est bonne. Très peu des villages ont des latrines suffisantes avec des risques de contamination"
@@ -558,7 +558,7 @@
               "comment": "L'enseignements secondaire et ou professionnel reste encore difficilement accessibles en raison de l'éloignement des rares centres qui existent des centres urbains et de certains ménages ruraux"
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Actuellement tous les chefs lieux de département du Niger et certaines communes sont dotés des centres de formations professionnelles , il reste à évaluer la qualité et comment les bénéficiaires s'investissent dans la chaine de valeur niébé"

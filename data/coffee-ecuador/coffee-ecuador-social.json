@@ -38,10 +38,10 @@
               "comment": "El trabajo forzoso no existe en la CV. Está prohibido y castigado según el Código Orgánico Penal."
             },
             {
-              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised? ",
+              "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 4,
               "scoreText": "High",
-              "comment": "El riesgo de discriminación está contemplado por la normativa del Ministerio de Trabajo, la cual define los mecanismos de denuncia. El Código de procesamiento Penal prevee una pena privativa de libertad para quienes practiquen cualquier forma de discriminación en el trabajo. "
+              "comment": "El riesgo de discriminación está contemplado por la normativa del Ministerio de Trabajo, la cual define los mecanismos de denuncia. El Código de procesamiento Penal prevee una pena privativa de libertad para quienes practiquen cualquier forma de discriminación en el trabajo."
             }
           ]
         },
@@ -51,10 +51,10 @@
           "averageText": "Substantial",
           "questions": [
             {
-              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)? ",
+              "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "No se encontraron evidencias de ausentismo de niños en la escuela. El trabajo infantil solía ser más frecuente cuando la superficie plantada en café era más importante. "
+              "comment": "No se encontraron evidencias de ausentismo de niños en la escuela. El trabajo infantil solía ser más frecuente cuando la superficie plantada en café era más importante."
             },
             {
               "text": "1.2.2 Are children protected from exposure to harmful jobs?",
@@ -138,13 +138,13 @@
               "comment": "Please add justification."
             },
             {
-              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process? ",
+              "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Id."
             },
             {
-              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached? ",
+              "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Id."
@@ -169,7 +169,7 @@
               "comment": "La degradación de acceso a los medios de subsistencia está relacionada con la actividad minera y petrolera, afectando principalmente la calidad del agua, sin que estrategias alternas se hayan implementado."
             },
             {
-              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?  ",
+              "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Las expropriaciones no están relacionadas con proyectos de agrobusiness sino a la industria extractiva. Los mecanismos de reubicación están sustendados por el Fondo de Tierras; su implementación es limitada."
@@ -199,7 +199,7 @@
               "comment": "Los riesgos de exclusión de las mujeres de los distintos eslabones de la CV son bajos, al existir disposiciones al respecto en la Constitución."
             },
             {
-              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)? ",
+              "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Las mujeres están activas en todos los eslabones de la cadena aunque no se haya logrado la paridad."
@@ -230,7 +230,7 @@
               "comment": "El acceso y el uso del crédito están limitados en la CV. Para obtener un crédito se requiere la firma del conyugue (en ambas vías)."
             },
             {
-              "text": "3.2.4 Do women have access to other services (extension services, inputs…)? ",
+              "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "El acceso a los servicios está limitado más por la oferta de servicios que por dificultades específicas de las mujeres para usarlos."
@@ -258,7 +258,7 @@
               "text": "3.3.3 Do women have control over income?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "El control sobre el ingreso está generalmente compartido entre hombres y mujeres. "
+              "comment": "El control sobre el ingreso está generalmente compartido entre hombres y mujeres."
             },
             {
               "text": "3.3.4 Do women earn independent income?",
@@ -283,16 +283,16 @@
               "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "Las mujeres representan entre 20 y 30% de los productores asociados. "
+              "comment": "Las mujeres representan entre 20 y 30% de los productores asociados."
             },
             {
-              "text": "3.4.2 Do women have leadership positions within the organisations they are part of? ",
+              "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "La participación de las mujeres en las juntas directivas de las organizaciones es bastante limitada."
             },
             {
-              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making? ",
+              "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "La influencia de las mujeres en las instancias de poder territorial y la toma de decisiones políticas es bastante limitada."
@@ -335,13 +335,13 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.1.1 Does the local production of food increase?\n",
+              "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "La CV no contribuye directamente al aumento en la disponibilidad de alimentos, caracterizada por una dependencia creciente de las importaciones. En Manabí y la Amazonía Norte, el café se cultiva de forma asociada con un alto número de especies alimentacias. El sombrío de las plantaciones incluye casi siempre musáceas."
             },
             {
-              "text": "4.1.2 Are food supplies increasing on local markets? \n",
+              "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "El desarrollo de pequeñas y medianas empresas en la industria del tostado y molido aumenta su disponibilidad en los mercados locales y está impulsando un cambio de consumo en el cual este café desplaza (en una proporción menor) el consumo de café soluble."
@@ -354,13 +354,13 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.2.1 Do people have more income to allocate to food?  ",
+              "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "El ingreso generado por el café en las sub-cadenas de café convencional (dominantes en términos del número de productores involucrados) genera menos del 12% de la canasta familiar vital. Sin embargo este ingreso es de suma importancia para poder comprar alimentos básicos (como sal, grasa, azúcar). La pobreza por consumo afecta fuertemente la población de las regiones cafetaleras (a excepción de las provincias de Pichincha y Galápagos)."
             },
             {
-              "text": "4.2.2 Are (relative) consumers food prices decreasing? ",
+              "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Los precios de los alimentos han permanecido estables en los últimos 3 años, independientemente de la CV del café."
@@ -373,10 +373,10 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "4.3.1 Is the nutritional quality of available food improving?  \n",
+              "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
-              "comment": "No hay un efecto directo de la CV sobre la utilización y adecuación nutricional. "
+              "comment": "No hay un efecto directo de la CV sobre la utilización y adecuación nutricional."
             },
             {
               "text": "4.3.2 Are nutritional practices being improved?",
@@ -404,7 +404,7 @@
               "comment": "La prevalencia de la inseguridad alimentaria moderada o grave es alta (32.7% de la población ecuatoriana en 2019)."
             },
             {
-              "text": "4.4.2 Is excessive food price variation reduced? ",
+              "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 3,
               "scoreText": "Substantial",
               "comment": "Los precios de los alimentos han permanecido estables en los últimos 3 años, independientemente de la CV del café."
@@ -431,10 +431,10 @@
               "text": "5.1.2 How inclusive is group/cooperative membership?",
               "scoreValue": 3,
               "scoreText": "Substantial",
-              "comment": "La membresía es abierta, de costo reducido y con requisitos que los productores están en capacidad de cumplir. "
+              "comment": "La membresía es abierta, de costo reducido y con requisitos que los productores están en capacidad de cumplir."
             },
             {
-              "text": "5.1.3 Do groups have representative and accountable leadership? ",
+              "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "El liderazgo carece de liderazgo en la mayoría de las organizaciones. La rendición de cuentas no es sistemática e impera la falta de transparencia, con excepciones notables, en particular en la sub-cadena de café orgánico."
@@ -453,7 +453,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices? ",
+              "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "El acceso a información sobre prácticas agrícolas y  políticas agropecuarias  es deficiente. Pero existen varios canales de información de precios."
@@ -472,7 +472,7 @@
           "averageText": "Moderate",
           "questions": [
             {
-              "text": "5.3.1 Do communities participate in decisions that impact their livelihood? ",
+              "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "Existe un nivel limitado de participación en las juntas parroquiales y en los GAD cantonales."
@@ -484,7 +484,7 @@
               "comment": "En la Amazonía Norte existe la preocupación de preservar los conocimientos tradicionales indígenas."
             },
             {
-              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community ",
+              "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "No existe una participación significativa en actividades voluntarias en beneficio de la comunidad."
@@ -533,7 +533,7 @@
               "comment": "La calidad de la vivienda es muy variable en función del nivel de pobreza. El nivel de Necesidades Básicas Insatisfechas (que incluye la vivienda) supera el 25% (excepto en Pichincha y Galápagos). Supera el 50% en las provincias donde predominan las sub-cadenas de café convencional (Manabí, Sucumbíos, Orellana)."
             },
             {
-              "text": "6.2.2 Do households have access to good quality water and sanitation facilities? ",
+              "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 2,
               "scoreText": "Moderate/Low",
               "comment": "El acceso a la red pública de agua es limitado. La calidad del agua es deficiente, al igual que las redes de alcantarillado."
@@ -558,7 +558,7 @@
               "comment": "La educación secundaria pública es gratuita, pero con niveles medios de asistencia."
             },
             {
-              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?\n",
+              "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 1,
               "scoreText": "Not at all",
               "comment": "No existe aun un sistema establecido de entrenamiento vocacional articulado con la CV del café"
