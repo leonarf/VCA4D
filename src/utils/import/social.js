@@ -15,7 +15,7 @@ const getQuestionsGroup = (ws, firstRow, lastRow) => {
       text: getQuestionText(),
       scoreValue: ws[`E${index}`]?.v,
       scoreText: ws[`D${index}`]?.v,
-      comment: ws[`F${index}`]?.v
+      comment: ws[`F${index}`]?.v.trim()
     };
 
     function getQuestionText() {
