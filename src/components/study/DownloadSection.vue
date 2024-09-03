@@ -7,12 +7,12 @@
         :key="index"
       >
         <div
-          v-for="({ urlKey, url }) in linkColumn"
+          v-for="({ urlKey, title, subtitle, link }) in linkColumn"
           :key="urlKey"
           class="url-item"
         >
-          <a class="url-title" :href="url">{{ buildTitle(urlKey) }}</a>
-          <span class="url-subtitle">{{ buildSubTitle(urlKey) }}</span>
+          <a class="url-title" :href="link">{{ title }}</a>
+          <span v-if="subtitle" class="url-subtitle">{{ subtitle }}</span>
         </div>
       </div>
     </div>
@@ -25,48 +25,33 @@ const props = defineProps({
   studyUrls: Object
 });
 
+const linkColumns = [
+  [
+    { title: "Study 6 page snapshot (pdf)", urlKey: "briefPdf" },
+    { title: "Study full report (pdf)", urlKey: "fullPdf" },
+  ],
+  [
+    { title: "Economic data (xlsx)", subtitle: "Contribution to economic growth and Inclusiveness", urlKey: "ecoXlsx" },
+    { title: "Social sustainability data (xlsx)", urlKey: "socialXlsx" },
+    { title: "Environmental data (xlsx)", urlKey: "acvXlsx" },
+  ]
+]
 
 const displayedLinksColumns = computed(() => {
-  const firstColumn = ["briefPdf", "fullPdf"]
-    .map(urlKey => ({ urlKey, url: props.studyUrls[urlKey] }))
-    .filter(({ url }) => !! url);
+  return linkColumns
+    .map(column => column.map(populateLink).filter(hasLink))
+    .filter(column => column.length !== 0);
 
-  const secondColumn = ["ecoXlsx", "socialXlsx", "acvXlsx"]
-    .map(urlKey => ({ urlKey, url: props.studyUrls[urlKey] }))
-    .filter(({ url }) => !! url);
-
-  return [firstColumn, secondColumn].filter(column => column.length !== 0)
+  function populateLink(columnItem) {
+    return {
+      ...columnItem,
+      link: props.studyUrls[columnItem.urlKey]
+    };
+  }
+  function hasLink(columnItem) {
+    return !! columnItem.link;
+  }
 })
-
-function buildTitle(urlKey) {
-  switch (urlKey) {
-    case "briefPdf":
-      return "Study 6 page snapshot (pdf)";
-    case "fullPdf":
-      return "Study full report (pdf)";
-    case "ecoXlsx":
-      return "Economic data (xlsx)";
-    case "socialXlsx":
-      return "Social sustainability data (xlsx)";
-    case "acvXlsx":
-      return "Environmental data (xlsx)";
-    default:
-      console.error("Unrecognized url type");
-  }
-}
-function buildSubTitle(urlKey) {
-  switch (urlKey) {
-    case "ecoXlsx":
-      return "Contribution to economic growth and Inclusiveness";
-    case "briefPdf":
-    case "fullPdf":
-    case "socialXlsx":
-    case "acvXlsx":
-      return "";
-    default:
-      console.error("Unrecognized url type")
-  }
-}
 </script>
 
 <style lang="scss" scoped>
