@@ -59,12 +59,6 @@
       v-if="studyUrls.briefPdf"
       :studyBriefUrl="studyUrls.briefPdf"
     />
-    <a
-      v-if="studyUrls.fullPdf"
-      target="_blank"
-      class="text-blue-600"
-      :href="studyUrls.fullPdf"
-    >Download study full report</a>
     <section v-if="studyData && studyData.ecoData">
       <Sankey :studyData="studyData" />
     </section>
