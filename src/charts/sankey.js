@@ -51,7 +51,7 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
         return {
             "source": sourceActor.name,
             "target": targetActor? targetActor.name : buyerActorName,
-            "value": Math.log(flow[sankeyDisplayMode]),
+            "value": flow[sankeyDisplayMode],
             "edgeLabel": {
                 show: true,
                 formatter: () => {
