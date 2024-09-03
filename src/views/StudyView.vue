@@ -20,7 +20,7 @@
           v-if="isDataLoaded"
           :views="views"
           :selectedViewKey="view"
-          :fullReportPdfUrl="studyPdfUrls.fullReportPdfUrl"
+          :fullReportPdfUrl="studyUrls.fullPdf"
           @select="selectView($event)"
         />
       </div>
@@ -28,11 +28,14 @@
         <component
           :is="viewComponent"
           :studyData="studyData"
-          :studyPdfUrls="studyPdfUrls"
+          :studyUrls="studyUrls"
           :currency="currencySymbol"
           @select-view="selectView($event)"
         />
       </template>
+      <section v-if="isDataLoaded" class="my-16">
+        <DownloadSection :studyUrls="studyUrls" />
+      </section>
     </div>
   </Skeleton>
 </template>
@@ -44,19 +47,20 @@ import Skeleton from '@components/Skeleton.vue'
 import StudyOverview from '@components/StudyOverview.vue'
 import StudyEnvironment from '@components/StudyEnvironment.vue'
 import StudyEconomicGrowth from '@components/StudyEconomicGrowth.vue'
+import DownloadSection from '@components/study/DownloadSection.vue'
 import StudyInclusiveness from '@components/StudyInclusiveness.vue'
 import StudySocialSustainability from '@components/StudySocialSustainability.vue'
 import StudyHeader from '@components/study/StudyHeader.vue'
 import StudyMenu from '@components/study/StudyMenu.vue'
 import { getStudyData } from '@utils/data'
-import { getStudyPdfUrls } from '../utils/data'
+import { getStudyUploadUrls } from '../utils/data'
 import { isCurrencySupported } from '@utils/currency.js'
 
 const route = useRoute();
 const router = useRouter()
 
 const studyData = ref(null)
-const studyPdfUrls = ref({})
+const studyUrls = ref({})
 const error = ref(undefined)
 
 function updateCurrency(newCurrency) {
@@ -139,7 +143,7 @@ onMounted(async () => {
   try {
     studyData.value = await getStudyData(route.query.id);
     setupCurrency();
-    studyPdfUrls.value = await getStudyPdfUrls(route.query.id);
+    studyUrls.value = await getStudyUploadUrls(route.query.id);
   } catch(err) {
     error.value = err;
   }
@@ -154,7 +158,7 @@ function setupCurrency() {
 }
 
 const isDataLoaded = computed(() => {
-  return !! studyData.value && !! studyPdfUrls.value;
+  return !! studyData.value && !! studyUrls.value;
 });
 </script>
 

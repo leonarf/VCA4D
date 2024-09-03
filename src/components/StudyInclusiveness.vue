@@ -86,7 +86,6 @@
       />
       <NoDataBadge v-else />
     </div>
-    <AttachmentLink :studyId="studyData.id" attachmentType="eco.xlsx" />
   </article>
 </template>
 
@@ -103,7 +102,6 @@ import GiniIndex from './study/inclusiveness/GiniIndex.vue'
 import ShareOfFarmPrice from './study/inclusiveness/ShareOfFarmPrice.vue'
 import NoDataBadge from '@components/study/NoDataBadge.vue'
 import QuestionTitle from '@components/study/QuestionTitle.vue'
-import AttachmentLink from '@components/pdf/AttachmentLink.vue'
 
 const props = defineProps({
   studyData: Object,
