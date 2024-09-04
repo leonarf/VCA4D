@@ -374,9 +374,8 @@ export function sumEmployments(employments) {
 function checkEmploymentTypeConsistency(employments) {
   const columnsToCheck = ["tempMale", "tempFemale", "unskilledMale", "unskilledFemale", "skilledMale", "skilledFemale"];
 
-  // WIP
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const columnsCompletions = checkAndBuildFullColumnsCompletion(columnsToCheck);
+  checkWeHaveTheRightColumnsForAnalyses(columnsCompletions);
 
   function checkAndBuildFullColumnsCompletion(columns) {
     const completionByColumn = {};
@@ -401,6 +400,39 @@ function isAllNull(employments, column) {
 }
 function isAllNonNull(employments, column) {
   return employments.every(employment => ! _.isNull(employment.data[column]))
+}
+
+function checkWeHaveTheRightColumnsForAnalyses(completionByColumn) {
+  const femaleCompletionsByContract = [completionByColumn.tempFemale, completionByColumn.unskilledFemale, completionByColumn.skilledFemale];
+  const maleCompletionsByContract = [completionByColumn.tempMale, completionByColumn.unskilledMale, completionByColumn.skilledMale];
+
+  if (femaleCompletionsByContract === maleCompletionsByContract) {
+    // WIP: We can compare male/female ratio, because the data filled the same type of contracts for both genders
+  } else if (isAllEmpty(femaleCompletionsByContract) || isAllEmpty(maleCompletionsByContract)) {
+    // WIP: We cannot compare male/female ratio, because the data only filled one gender
+  } else {
+    // WIP: Throw error, we cannot compare the ratio because the data is inconsistent
+  }
+
+  const tempCompletionsByGender = [completionByColumn.tempFemale, completionByColumn.tempMale];
+  const unskiledCompletionsByGender = [completionByColumn.unskiledFemale, completionByColumn.unskiledMale];
+  const skilledCompletionsByGender = [completionByColumn.skilledFemale, completionByColumn.skilledMale];
+
+  if (tempCompletionsByGender === unskiledCompletionsByGender === skilledCompletionsByGender) {
+    // WIP: We can compare contract types, because the data filled the same genders for the 3 type of contracts
+  } else if (
+    (isAllEmpty(tempCompletionsByGender) && isAllEmpty(unskiledCompletionsByGender)) ||
+    (isAllEmpty(unskiledCompletionsByGender) && isAllEmpty(skilledCompletionsByGender)) ||
+    (isAllEmpty(skilledCompletionsByGender) && isAllEmpty(tempCompletionsByGender))
+  ) {
+    // WIP: We cannot compare contract types, because the study  only filled one type of contract
+  } else {
+    // WIP: Throw error, we cannot compare the ratio because the data is inconsistent
+  }
+
+  function isAllEmpty(completions) {
+    return completions.every(completion => ! completion);
+  }
 }
 
 const parseAccountByActorSheet = (json, actors, stages) => {
