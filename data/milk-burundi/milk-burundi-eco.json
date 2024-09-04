@@ -369,6 +369,12 @@
         }
       }
     ],
+    "consistencyDisplay": {
+      "employment": {
+        "contractRatio": true,
+        "genderRatio": true
+      }
+    },
     "flows": [
       {
         "sellerActorName": "Agropastoral Divagation",

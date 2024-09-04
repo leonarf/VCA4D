@@ -349,6 +349,12 @@
         "receivedAddedValue": 0
       }
     ],
+    "consistencyDisplay": {
+      "employment": {
+        "contractRatio": false,
+        "genderRatio": false
+      }
+    },
     "flows": [
       {
         "sellerActorName": "Producer Subsistence",

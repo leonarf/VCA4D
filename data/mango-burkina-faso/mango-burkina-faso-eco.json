@@ -381,6 +381,12 @@
         }
       }
     ],
+    "consistencyDisplay": {
+      "employment": {
+        "contractRatio": true,
+        "genderRatio": true
+      }
+    },
     "flows": [
       {
         "sellerActorName": "Producteur Certifié",

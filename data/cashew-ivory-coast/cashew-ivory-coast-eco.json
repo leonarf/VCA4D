@@ -233,6 +233,12 @@
         "receivedAddedValue": 0
       }
     ],
+    "consistencyDisplay": {
+      "employment": {
+        "contractRatio": true,
+        "genderRatio": false
+      }
+    },
     "flows": [
       {
         "sellerActorName": "Traditional producer High density",

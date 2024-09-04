@@ -426,6 +426,12 @@
         "receivedAddedValue": 0
       }
     ],
+    "consistencyDisplay": {
+      "employment": {
+        "contractRatio": false,
+        "genderRatio": false
+      }
+    },
     "flows": [
       {
         "sellerActorName": "Small Producer North East",
