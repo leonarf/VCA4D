@@ -393,7 +393,7 @@ function checkEmploymentTypeConsistency(employments) {
 
     setImportErrors(
       ECO_SHEET_NAMES.Employment,
-      ErrorLevels.BreaksDataviz,
+      ErrorLevels.BreaksALot,
       `Column '${EMPLOYMENT_COLUMNS[column]}' of sheet '${ECO_SHEET_NAMES.Employment}' is missing some values`
     )
     return false;
@@ -421,8 +421,11 @@ function checkWeHaveTheRightColumnsForAnalyses(completionByColumn) {
   } else {
     // We cannot compare the ratio because the data is inconsistent
     displayGenderRatio = false;
-    // WIP: Find error message
-    // setImportErrors()
+    setImportErrors(
+      ECO_SHEET_NAMES.Employment,
+      ErrorLevels.BreaksALot,
+      "Impossible to compare gender employment: Please fill out every gender employment column for the study's types of contract"
+    )
   }
 
   const tempCompletionsByGender = [completionByColumn.tempFemale, completionByColumn.tempMale];
@@ -442,8 +445,11 @@ function checkWeHaveTheRightColumnsForAnalyses(completionByColumn) {
   } else {
     // Throw error, we cannot compare the ratio because the data is inconsistent
     displayContractRatio = false;
-    // WIP: Find error message
-    // setImportErrors()
+    setImportErrors(
+      ECO_SHEET_NAMES.Employment,
+      ErrorLevels.BreaksALot,
+      "Impossible to compare contract types: Please fill out every contract type column for the studied gender"
+    )
   }
 
   return { displayContractRatio, displayGenderRatio };
