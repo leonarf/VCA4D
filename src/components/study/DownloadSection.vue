@@ -11,7 +11,7 @@
           :key="urlKey"
           class="url-item"
         >
-          <a class="url-title" :href="link">{{ title }}</a>
+          <a class="url-title" target="_blank" :href="link">{{ title }}</a>
           <span v-if="subtitle" class="url-subtitle">{{ subtitle }}</span>
         </div>
       </div>
