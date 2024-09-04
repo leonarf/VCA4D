@@ -407,6 +407,9 @@ function isAllNonNull(employments, column) {
 }
 
 function checkWeHaveTheRightColumnsForAnalyses(completionByColumn) {
+  if (isAllEmpty(Object.values(completionByColumn))) {
+    return { displayContractRatio: false, displayGenderRatio: false };
+  }
   let displayGenderRatio, displayContractRatio = null;
 
   const femaleCompletionsByContract = [completionByColumn.tempFemale, completionByColumn.unskilledFemale, completionByColumn.skilledFemale];
