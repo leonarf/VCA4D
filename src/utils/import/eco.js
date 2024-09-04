@@ -1,3 +1,4 @@
+import _ from "lodash";
 import { ErrorLevels, setImportErrors, getImportErrors, getSheetNameContent, parseActorTypes, checkColumnsExistence } from '@/utils/import/generic.js'
 import { getTotalAddedValue } from '../economics'
 
@@ -69,13 +70,13 @@ const VALUE_ADDED_COLUMNS = {
 }
 
 const EMPLOYMENT_COLUMNS = {
-  ActorType: "Actor type Name",
-  TempMale: "Temporary Male",
-  TempFemale: "Temporary Female",
-  UnskilledMale: "Permanent Unskilled Male",
-  UnskilledFemale: "Permanent Unskilled Female",
-  SkilledMale: "Permanent Skilled Male",
-  SkilledFemale: "Permanent Skilled Female",
+  actorType: "Actor type Name",
+  tempMale: "Temporary Male",
+  tempFemale: "Temporary Female",
+  unskilledMale: "Permanent Unskilled Male",
+  unskilledFemale: "Permanent Unskilled Female",
+  skilledMale: "Permanent Skilled Male",
+  skilledFemale: "Permanent Skilled Female",
 }
 
 const ACCOUNT_COLUMNS = {
@@ -303,40 +304,8 @@ const parseEmploymentSheet = (json, actors) => {
   }
   checkColumnsExistence(sheetAsJson, EMPLOYMENT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const employments = sheetAsJson.map(employment => {
-    const actorName = employment[EMPLOYMENT_COLUMNS.ActorType]
-    const tempMale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempMale])
-    const tempFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.TempFemale])
-    const unskilledMale = parseFloat(employment[EMPLOYMENT_COLUMNS.UnskilledMale])
-    const unskilledFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.UnskilledFemale])
-    const skilledMale = parseFloat(employment[EMPLOYMENT_COLUMNS.SkilledMale])
-    const skilledFemale = parseFloat(employment[EMPLOYMENT_COLUMNS.SkilledFemale])
-
-    const totalMale = (tempMale || 0) + (unskilledMale || 0) + (skilledMale || 0)
-    const totalFemale = (tempFemale || 0) + (unskilledFemale || 0) + (skilledFemale || 0)
-    const totalTemp = tempMale + (tempFemale || 0)
-    const totalSkilled = skilledMale + (skilledFemale || 0)
-    const totalUnskilled = unskilledMale + (unskilledFemale || 0)
-
-    const result = {
-      actorName,
-      data: {
-        tempMale,
-        tempFemale,
-        unskilledMale,
-        unskilledFemale,
-        skilledMale,
-        skilledFemale,
-        totalMale,
-        totalFemale,
-        totalTemp,
-        totalSkilled,
-        totalUnskilled,
-        total: totalMale + (totalFemale || 0)
-      }
-    }
-    return result
-  })
+  const employments = sheetAsJson.map(parseActorEmployment);
+  checkEmploymentTypeConsistency(employments);
 
   actors = actors.map(actor => {
     let employment = employments.filter(employment => employment.actorName === actor.name)
@@ -353,6 +322,74 @@ const parseEmploymentSheet = (json, actors) => {
   })
 
   return actors
+}
+
+function parseActorEmployment(employment) {
+  const actorName = employment[EMPLOYMENT_COLUMNS.actorType]
+  const tempMale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.tempMale])
+  const tempFemale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.tempFemale])
+  const unskilledMale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.unskilledMale])
+  const unskilledFemale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.unskilledFemale])
+  const skilledMale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.skilledMale])
+  const skilledFemale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.skilledFemale])
+
+  const totalMale = sumEmployments([tempMale, unskilledMale, skilledMale]);
+  const totalFemale = sumEmployments([tempFemale, unskilledFemale, skilledFemale]);
+  const totalTemp = sumEmployments([tempMale, tempFemale]);
+  const totalSkilled = sumEmployments([skilledMale, skilledFemale]);
+  const totalUnskilled = sumEmployments([unskilledMale, unskilledFemale]);
+
+  const result = {
+    actorName,
+    data: {
+      tempMale,
+      tempFemale,
+      unskilledMale,
+      unskilledFemale,
+      skilledMale,
+      skilledFemale,
+      totalMale,
+      totalFemale,
+      totalTemp,
+      totalSkilled,
+      totalUnskilled,
+      total: sumEmployments([totalMale, totalFemale])
+    }
+  }
+  return result
+
+  function parseEmploymentCell(employmentCell) {
+    if (_.isUndefined(employmentCell)) { return null; }
+
+    return parseFloat(employmentCell);
+  }
+}
+export function sumEmployments(employments) {
+  if (employments.every(employment => _.isNull(employment) || _.isUndefined(employment))) {
+    return null;
+  }
+  return  _.sumBy(employments, employment => employment || 0);
+}
+
+function checkEmploymentTypeConsistency(employments) {
+  const columnsToCheck = ["tempMale", "tempFemale", "unskilledMale", "unskilledFemale", "skilledMale", "skilledFemale"];
+
+  columnsToCheck.forEach(column => {
+    if (isAllNull(employments, column)) { return; }
+    if (isAllNonNull(employments, column)) { return; }
+
+    setImportErrors(
+      ECO_SHEET_NAMES.Employment,
+      ErrorLevels.BreaksDataviz,
+      `Column '${EMPLOYMENT_COLUMNS[column]}' of sheet '${ECO_SHEET_NAMES.Employment}' is missing some values`
+    )
+  })
+}
+function isAllNull(employments, column) {
+  return employments.every(employment => _.isNull(employment.data[column]))
+}
+function isAllNonNull(employments, column) {
+  return employments.every(employment => ! _.isNull(employment.data[column]))
 }
 
 const parseAccountByActorSheet = (json, actors, stages) => {

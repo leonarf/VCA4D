@@ -1,4 +1,5 @@
-import { buildBenefitCostRatioData } from "./eco/benefitCostRatio";
+import { buildBenefitCostRatioData } from "./eco/benefitCostRatio.js";
+import { buildGlobalEmploymentData } from "./eco/employment.js";
 
 export function computeMetrics(studyData) {
   return {
@@ -10,6 +11,7 @@ function buildEcoMetrics(studyData) {
   if (! studyData.ecoData) { return null; }
 
   return {
-    benefitCostRatio: buildBenefitCostRatioData(studyData.ecoData)
+    benefitCostRatio: buildBenefitCostRatioData(studyData.ecoData),
+    employment: buildGlobalEmploymentData(studyData.ecoData)
   };
 }

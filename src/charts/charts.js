@@ -1,4 +1,7 @@
+import _ from "lodash";
 import { formatNumber, formatPercent } from '@utils/format.js'
+import { sumEmployments } from "@utils/import/eco.js";
+
 import { getColor } from '@utils/colors.js'
 const RADIUSES_MINI_PIE = ['20%', '40%']
 const RIADUSES_PIE = ['50%', '75%']
@@ -440,19 +443,20 @@ export const getNetOperatingProfitByTypeOfActorData = (actors, convertAmount, pr
 export const getEmploymentByQualificationData = (actors) => {
     let data = [
         {
-            value: actors.map(actor => actor.employment?.totalSkilled).reduce((res, curr) => res + curr, 0),
+            value: sumEmployments(actors.map(actor => actor.employment?.totalSkilled)),
             name: 'Permanent qualified'
         },
         {
-            value: actors.map(actor => actor.employment?.totalUnskilled).reduce((res, curr) => res + curr, 0),
+            value: sumEmployments(actors.map(actor => actor.employment?.totalUnskiled)),
             name: 'Permanent unqualified'
         },
         {
-            value: actors.map(actor => actor.employment?.totalTemp).reduce((res, curr) => res + curr, 0),
+            value: sumEmployments(actors.map(actor => actor.employment?.totalTemp)),
             name: 'Temporary'
         }
     ]
-    if (data.some(item => !item.value)) {
+
+    if (data.some(item => _.isNull(item.value))) {
         return null
     }
     return getMiniPieChart(data, 'By qualification')
@@ -461,15 +465,16 @@ export const getEmploymentByQualificationData = (actors) => {
 export const getEmploymentByGenderData = (actors) => {
     let data = [
         {
-            value: actors.map(actor => actor.employment?.totalMale).reduce((res, curr) => res + curr, 0),
+            value: sumEmployments(actors.map(actor => actor.employment?.totalMale)),
             name: 'Male'
         },
         {
-            value: actors.map(actor => actor.employment?.totalFemale).reduce((res, curr) => res + curr, 0),
+            value: sumEmployments(actors.map(actor => actor.employment?.totalFemale)),
             name: 'Female'
         }
     ]
-    if (data.some(item => !item.value)) {
+    console.log(data);
+    if (data.some(item => _.isNull(item.value))) {
         return null
     }
     return getMiniPieChart(data, 'By gender')

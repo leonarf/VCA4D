@@ -102,15 +102,12 @@ const totalNumberOfJobs = computed(() => {
 })
 
 const percentFemaleEmployment = computed(() => {
-    const totalFemale = _.sumBy(actors.value, actor =>
-      actor.employment ? actor.employment.totalFemale : 0
-    )
-    if (isNaN(totalFemale)) {
+    const totalFemale = props.studyData.metrics.eco.employment?.totalFemale;
+    const totalMale = props.studyData.metrics.eco.employment?.totalMale;
+    if (_.isNull(totalFemale) || _.isNull(totalMale)) {
         return null;
     }
-    const total = _.sumBy(actors.value, actor =>
-      actor.employment ? actor.employment.total : 0
-    )
+    const total = props.studyData.metrics.eco.employment?.total;
     return formatPercent(totalFemale / total)
 })
 
