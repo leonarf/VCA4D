@@ -374,16 +374,27 @@ export function sumEmployments(employments) {
 function checkEmploymentTypeConsistency(employments) {
   const columnsToCheck = ["tempMale", "tempFemale", "unskilledMale", "unskilledFemale", "skilledMale", "skilledFemale"];
 
-  columnsToCheck.forEach(column => {
-    if (isAllNull(employments, column)) { return; }
-    if (isAllNonNull(employments, column)) { return; }
+  // WIP
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const columnsCompletions = checkAndBuildFullColumnsCompletion(columnsToCheck);
+
+  function checkAndBuildFullColumnsCompletion(columns) {
+    const completionByColumn = {};
+    columns.forEach(column => completionByColumn[column] = checkIsComplete(column))
+    return completionByColumn;
+  }
+
+  function checkIsComplete(column) {
+    if (isAllNull(employments, column)) { return false; }
+    if (isAllNonNull(employments, column)) { return true; }
 
     setImportErrors(
       ECO_SHEET_NAMES.Employment,
       ErrorLevels.BreaksDataviz,
       `Column '${EMPLOYMENT_COLUMNS[column]}' of sheet '${ECO_SHEET_NAMES.Employment}' is missing some values`
     )
-  })
+    return false;
+  }
 }
 function isAllNull(employments, column) {
   return employments.every(employment => _.isNull(employment.data[column]))
