@@ -305,7 +305,7 @@ const parseEmploymentSheet = (json, actors) => {
   checkColumnsExistence(sheetAsJson, EMPLOYMENT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
   const employments = sheetAsJson.map(parseActorEmployment);
-  checkEmploymentTypeConsistency(employments);
+  const { displayContractRatio, displayGenderRatio } = checkEmploymentTypeConsistency(employments);
 
   actors = actors.map(actor => {
     let employment = employments.filter(employment => employment.actorName === actor.name)
@@ -321,7 +321,11 @@ const parseEmploymentSheet = (json, actors) => {
     return actor
   })
 
-  return actors
+  return {
+    actors,
+    displayContractRatio,
+    displayGenderRatio
+  }
 }
 
 function parseActorEmployment(employment) {
@@ -375,7 +379,7 @@ function checkEmploymentTypeConsistency(employments) {
   const columnsToCheck = ["tempMale", "tempFemale", "unskilledMale", "unskilledFemale", "skilledMale", "skilledFemale"];
 
   const columnsCompletions = checkAndBuildFullColumnsCompletion(columnsToCheck);
-  checkWeHaveTheRightColumnsForAnalyses(columnsCompletions);
+  return checkWeHaveTheRightColumnsForAnalyses(columnsCompletions);
 
   function checkAndBuildFullColumnsCompletion(columns) {
     const completionByColumn = {};
@@ -403,32 +407,46 @@ function isAllNonNull(employments, column) {
 }
 
 function checkWeHaveTheRightColumnsForAnalyses(completionByColumn) {
+  let displayGenderRatio, displayContractRatio = null;
+
   const femaleCompletionsByContract = [completionByColumn.tempFemale, completionByColumn.unskilledFemale, completionByColumn.skilledFemale];
   const maleCompletionsByContract = [completionByColumn.tempMale, completionByColumn.unskilledMale, completionByColumn.skilledMale];
 
-  if (femaleCompletionsByContract === maleCompletionsByContract) {
-    // WIP: We can compare male/female ratio, because the data filled the same type of contracts for both genders
+  if (_.isEqual(femaleCompletionsByContract, maleCompletionsByContract)) {
+    // We can compare male/female ratio, because the data filled the same type of contracts for both genders
+    displayGenderRatio = true;
   } else if (isAllEmpty(femaleCompletionsByContract) || isAllEmpty(maleCompletionsByContract)) {
-    // WIP: We cannot compare male/female ratio, because the data only filled one gender
+    // We cannot compare male/female ratio, because the data only filled one gender
+    displayGenderRatio = false;
   } else {
-    // WIP: Throw error, we cannot compare the ratio because the data is inconsistent
+    // We cannot compare the ratio because the data is inconsistent
+    displayGenderRatio = false;
+    // WIP: Find error message
+    // setImportErrors()
   }
 
   const tempCompletionsByGender = [completionByColumn.tempFemale, completionByColumn.tempMale];
-  const unskiledCompletionsByGender = [completionByColumn.unskiledFemale, completionByColumn.unskiledMale];
+  const unskiledCompletionsByGender = [completionByColumn.unskilledFemale, completionByColumn.unskilledMale];
   const skilledCompletionsByGender = [completionByColumn.skilledFemale, completionByColumn.skilledMale];
 
-  if (tempCompletionsByGender === unskiledCompletionsByGender === skilledCompletionsByGender) {
-    // WIP: We can compare contract types, because the data filled the same genders for the 3 type of contracts
+  if (_.isEqual(tempCompletionsByGender, unskiledCompletionsByGender) && _.isEqual(unskiledCompletionsByGender, skilledCompletionsByGender)) {
+    // We can compare contract types, because the data filled the same genders for the 3 type of contracts
+    displayContractRatio = true;
   } else if (
     (isAllEmpty(tempCompletionsByGender) && isAllEmpty(unskiledCompletionsByGender)) ||
     (isAllEmpty(unskiledCompletionsByGender) && isAllEmpty(skilledCompletionsByGender)) ||
     (isAllEmpty(skilledCompletionsByGender) && isAllEmpty(tempCompletionsByGender))
   ) {
-    // WIP: We cannot compare contract types, because the study  only filled one type of contract
+    // We cannot compare contract types, because the study  only filled one type of contract
+    displayContractRatio = false;
   } else {
-    // WIP: Throw error, we cannot compare the ratio because the data is inconsistent
+    // Throw error, we cannot compare the ratio because the data is inconsistent
+    displayContractRatio = false;
+    // WIP: Find error message
+    // setImportErrors()
   }
+
+  return { displayContractRatio, displayGenderRatio };
 
   function isAllEmpty(completions) {
     return completions.every(completion => ! completion);
@@ -587,7 +605,14 @@ export const parseEconomicsJson = (json, currencyRatio) => {
   actors = result.actors
   var addedValue = result.addedValue
 
-  actors = parseEmploymentSheet(json, actors)
+  let employmentResult = parseEmploymentSheet(json, actors);
+  actors = employmentResult.actors;
+  const consistencyDisplay = {
+    employment: {
+      contractRatio: employmentResult.displayContractRatio,
+      genderRatio: employmentResult.displayGenderRatio,
+    }
+  };
 
   actors = parseAccountByActorSheet(json, actors, stages)
 
@@ -610,6 +635,7 @@ export const parseEconomicsJson = (json, currencyRatio) => {
     macroData,
     stages,
     actors,
+    consistencyDisplay,
     flows,
     addedValue,
     importExport,
