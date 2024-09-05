@@ -53,6 +53,7 @@ export function logMissingData(studiesData) {
     .map(inventoryMissingData)
     .filter(hasMissingData);
   
+  // eslint-disable-next-line no-console
   console.log(formatReport(studiesWithMissingData));
 }
 function inventoryMissingData(studyData) {

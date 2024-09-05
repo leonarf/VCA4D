@@ -57,8 +57,7 @@ const chartData = computed(() => {
       },
       axisName: {
         show: false,
-        formatter: function (value, param) {
-            console.log("value", value, param)
+        formatter: function (value) {
           return value
         },
         fontWeight: 'bold',

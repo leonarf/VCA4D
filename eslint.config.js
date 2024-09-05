@@ -19,6 +19,12 @@ export default [
   ...pluginVue.configs['flat/recommended'],
   ...tseslint.configs.recommended,
   {
+    files: ["**/*.vue", "**/*.js"],
+    rules: {
+      "no-console": ["error", { allow: ["warn", "error"] }]
+    }
+  },
+  {
     files: ["**/*.vue"],
     languageOptions: {
       parser: vueParser,

@@ -44,7 +44,6 @@ let tooltipTexts = {
 }
 
 function getTooltipText(partName) {
-    console.log(partName)
     return tooltipTexts[partName]
 }
 </script>

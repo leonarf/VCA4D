@@ -21,7 +21,6 @@ async function getStudyFileAttachmentUrl(studyId, attachementType) {
       studiesAttachment[studyId][attachementType] = attachmentUrl;
     }
     else {
-      console.log("got status", res.status, "for attachment", attachmentUrl)
       studiesAttachment[studyId][attachementType] = null;
     }
   }
