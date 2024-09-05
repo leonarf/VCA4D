@@ -15,13 +15,13 @@ export function buildGlobalEmploymentData(ecoData) {
 }
 
 function sumActorsEmployments(actors, employmentTypes) {
-  return _.sumBy(actors, sumActorEmployment);
+  return _.sumBy(actors, actor => sumActorEmployment(actor, employmentTypes));
+}
 
-  function sumActorEmployment(actor) {
-    if (! actor.employment) { return 0; }
+function sumActorEmployment(actor, employmentTypes) {
+  if (! actor.employment) { return 0; }
 
-    return _.sumBy(employmentTypes, type => actor.employment[type] || 0);
-  }
+  return _.sumBy(employmentTypes, type => actor.employment[type] || 0);
 }
 
 function buildEmploymentByStage(actors) {
@@ -42,6 +42,17 @@ function sumActorsEmploymentByType(actors) {
     unskilledFemale: sumActorsEmployments(actors, ["unskilledFemale"]),
     unskilledMale: sumActorsEmployments(actors, ["unskilledMale"]),
     skilledFemale: sumActorsEmployments(actors, ["skilledFemale"]),
-    skilledMale: sumActorsEmployments(actors, ["skilledMale"])
+    skilledMale: sumActorsEmployments(actors, ["skilledMale"]),
+    employmentActorDistribution: getEmploymentActorDistribution(actors),
   }
+}
+function getEmploymentActorDistribution(actors) {
+  const actorsEmploymentDistribution = actors.map(actor => ({
+    name: actor.name,
+    total: sumActorEmployment(actor, ALL_EMPLOYMENT_TYPES)
+  }));
+
+  if (actorsEmploymentDistribution.some(actor => actor.total === 0)) { return null; }
+
+  return actorsEmploymentDistribution;
 }

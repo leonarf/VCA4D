@@ -381,20 +381,6 @@ export const getMiniPieChart = (data, title, valueFormatter) => {
     };
 }
 
-export const getEmploymentByTypeOfActorData = (actors) => {
-
-    if (actors.some(actor => !actor.employment?.total)) {
-        return null
-    }
-    let data = actors.map(actor => {
-        return {
-            value: actor.employment.total,
-            name: actor.name
-        }
-    })
-    return getMiniPieChart(data, 'By type of actor')
-}
-
 export const getNetOperatingProfitByTypeOfActorData = (actors, convertAmount, prettyAmount) => {
     let data = actors.map(actor => {
         return {

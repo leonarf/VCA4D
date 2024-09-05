@@ -33,6 +33,9 @@
                   />
                 </div>
               </template>
+              <template v-else>
+                <p>No data about number of jobs</p>
+              </template>
               <template v-if="currentStageEmploymentByQualificationData">
                 <div class="w-1/3 aspect-w-1 aspect-h-1">
                   <Ring
@@ -66,7 +69,6 @@ import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
 import { 
     getSelectableBarChart,
-    getEmploymentByTypeOfActorData, 
     getMiniPieChart,
 } from '@/charts/charts'
 import { formatNumber, formatPercent } from '@utils/format.js'
@@ -91,7 +93,7 @@ const handleDataChartSeriesClick = (event) => {
   }
 }
 
-const { stages, actors } = useActorsAndStages(props);
+const { stages } = useActorsAndStages(props);
 
 const numberOfJobsData = computed(() => {
   let tooltip = {}
@@ -120,7 +122,6 @@ const numberOfJobsData = computed(() => {
             return getSelectableBarChart(items, selectedStage.value, tooltip)
 
   function sumAllEmployments(employment) {
-    console.log(employment);
     return employment.tempFemale +
       employment.tempMale +
       employment.unskilledFemale +
@@ -149,8 +150,17 @@ const fteDefinition = computed(() => {
 })
 
 const currentStageEmploymentByTypeOfActorData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
-    return getEmploymentByTypeOfActorData(currentStageActors) 
+  if (! selectedStageEmployment.value) { return null; }
+  
+  const employmentActorDistribution = selectedStageEmployment.value?.employmentActorDistribution;
+  if (! employmentActorDistribution) { return null;}
+
+
+  let data = employmentActorDistribution.map(actor => ({
+    value: actor.total,
+    name: actor.name
+  }))
+  return getMiniPieChart(data, 'By type of actor');
 })
 
 const selectedStageEmployment = computed(() => {
