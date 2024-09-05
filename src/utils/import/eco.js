@@ -356,12 +356,6 @@ function parseActorEmployment(employment) {
     return parseFloat(employmentCell);
   }
 }
-export function sumEmployments(employments) {
-  if (employments.every(employment => _.isNull(employment) || _.isUndefined(employment))) {
-    return null;
-  }
-  return  _.sumBy(employments, employment => employment || 0);
-}
 
 function checkEmploymentTypeConsistency(employments) {
   const columnsToCheck = ["tempMale", "tempFemale", "unskilledMale", "unskilledFemale", "skilledMale", "skilledFemale"];
