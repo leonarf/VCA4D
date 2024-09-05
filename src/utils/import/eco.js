@@ -337,12 +337,6 @@ function parseActorEmployment(employment) {
   const skilledMale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.skilledMale])
   const skilledFemale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.skilledFemale])
 
-  const totalMale = sumEmployments([tempMale, unskilledMale, skilledMale]);
-  const totalFemale = sumEmployments([tempFemale, unskilledFemale, skilledFemale]);
-  const totalTemp = sumEmployments([tempMale, tempFemale]);
-  const totalSkilled = sumEmployments([skilledMale, skilledFemale]);
-  const totalUnskilled = sumEmployments([unskilledMale, unskilledFemale]);
-
   const result = {
     actorName,
     data: {
@@ -351,13 +345,7 @@ function parseActorEmployment(employment) {
       unskilledMale,
       unskilledFemale,
       skilledMale,
-      skilledFemale,
-      totalMale,
-      totalFemale,
-      totalTemp,
-      totalSkilled,
-      totalUnskilled,
-      total: sumEmployments([totalMale, totalFemale])
+      skilledFemale
     }
   }
   return result
