@@ -60,13 +60,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 767135.966288091,
-          "totalFemale": 221289.221044642,
-          "totalTemp": 988425.1873327331,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 988425.1873327331
+          "skilledFemale": 0
         }
       },
       {
@@ -85,13 +79,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 752885.310891548,
-          "totalFemale": 217178.45506487,
-          "totalTemp": 970063.7659564181,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 970063.7659564181
+          "skilledFemale": 0
         }
       },
       {
@@ -110,13 +98,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 1806989.5428543,
-          "totalFemale": 521246.983515662,
-          "totalTemp": 2328236.526369962,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 2328236.526369962
+          "skilledFemale": 0
         }
       },
       {
@@ -135,13 +117,7 @@
           "unskilledMale": 607298.251305831,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 607298.251305831,
-          "totalFemale": 0,
-          "totalTemp": 0,
-          "totalSkilled": 0,
-          "totalUnskilled": 607298.251305831,
-          "total": 607298.251305831
+          "skilledFemale": 0
         }
       },
       {
@@ -160,13 +136,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 117734.640866035,
-          "totalFemale": 90565.1061092797,
-          "totalTemp": 208299.7469753147,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 208299.7469753147
+          "skilledFemale": 0
         }
       },
       {
@@ -209,13 +179,7 @@
           "unskilledMale": 36215.6573452961,
           "unskilledFemale": 19315.0172508246,
           "skilledMale": 1241.67968041015,
-          "skilledFemale": 1448.62629381185,
-          "totalMale": 385127.65617503424,
-          "totalFemale": 20763.64354463645,
-          "totalTemp": 347670.319149328,
-          "totalSkilled": 2690.3059742220003,
-          "totalUnskilled": 55530.674596120705,
-          "total": 405891.2997196707
+          "skilledFemale": 1448.62629381185
         }
       },
       {
@@ -234,13 +198,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 0,
-          "totalFemale": 0,
-          "totalTemp": 0,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 0
+          "skilledFemale": 0
         }
       },
       {
@@ -259,13 +217,7 @@
           "unskilledMale": 39290.0395350325,
           "unskilledFemale": 7619.8864036676,
           "skilledMale": 1959.3993609431,
-          "skilledFemale": 1714.47448340464,
-          "totalMale": 41249.438895975596,
-          "totalFemale": 9334.36088707224,
-          "totalTemp": 0,
-          "totalSkilled": 3673.87384434774,
-          "totalUnskilled": 46909.9259387001,
-          "total": 50583.799783047834
+          "skilledFemale": 1714.47448340464
         }
       },
       {
@@ -284,13 +236,7 @@
           "unskilledMale": 21654.9243282192,
           "unskilledFemale": 5774.64648752512,
           "skilledMale": 3341.04532948945,
-          "skilledFemale": 433.098486564384,
-          "totalMale": 24995.96965770865,
-          "totalFemale": 6207.7449740895045,
-          "totalTemp": 0,
-          "totalSkilled": 3774.143816053834,
-          "totalUnskilled": 27429.570815744322,
-          "total": 31203.714631798153
+          "skilledFemale": 433.098486564384
         }
       },
       {
@@ -309,13 +255,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 11965.0222586716,
-          "totalFemale": 0,
-          "totalTemp": 11965.0222586716,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 11965.0222586716
+          "skilledFemale": 0
         }
       },
       {
@@ -334,13 +274,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 7480.60000943869,
-          "totalFemale": 77683.1507287011,
-          "totalTemp": 85163.75073813979,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 85163.75073813979
+          "skilledFemale": 0
         }
       },
       {
@@ -359,16 +293,16 @@
           "unskilledMale": 474752.445504823,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 474752.445504823,
-          "totalFemale": 0,
-          "totalTemp": 0,
-          "totalSkilled": 0,
-          "totalUnskilled": 474752.445504823,
-          "total": 474752.445504823
+          "skilledFemale": 0
         }
       }
     ],
+    "consistencyDisplay": {
+      "employment": {
+        "contractRatio": true,
+        "genderRatio": true
+      }
+    },
     "flows": [
       {
         "sellerActorName": "Agropastoral Divagation",

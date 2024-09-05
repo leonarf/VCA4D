@@ -33,6 +33,9 @@
                   />
                 </div>
               </template>
+              <template v-else>
+                <p>No data about number of jobs</p>
+              </template>
               <template v-if="currentStageEmploymentByQualificationData">
                 <div class="w-1/3 aspect-w-1 aspect-h-1">
                   <Ring
@@ -62,14 +65,11 @@
 </template>
 
 <script setup>
-import _ from "lodash";
 import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
 import { 
-    getNumberOfJobsData, 
-    getEmploymentByTypeOfActorData, 
-    getEmploymentByQualificationData, 
-    getEmploymentByGenderData,
+    getSelectableBarChart,
+    getMiniPieChart,
 } from '@/charts/charts'
 import { formatNumber, formatPercent } from '@utils/format.js'
 import { useActorsAndStages } from '@utils/misc.js'
@@ -93,22 +93,52 @@ const handleDataChartSeriesClick = (event) => {
   }
 }
 
-const { stages, actors } = useActorsAndStages(props);
+const { stages } = useActorsAndStages(props);
 
-const numberOfJobsData = computed(() => getNumberOfJobsData(stages, actors, selectedStage))
+const numberOfJobsData = computed(() => {
+  let tooltip = {}
+  const items = stages.value.map(stage => {
+    const stageEmployment = props.studyData.metrics.eco.employment?.employmentByStage[stage.name];
+    if (!stageEmployment) { return; }
+
+    const subTotal = sumAllEmployments(stageEmployment);
+    if (subTotal === 0) { return; }
+
+    let toolTipValue = "";
+    toolTipValue += `<b>Male temporary</b>: ${formatNumber(stageEmployment.tempMale)}<br>`
+    toolTipValue += `<b>Female temporary</b>: ${formatNumber(stageEmployment.tempFemale)}<br>`
+    toolTipValue += `<b>Male unskilled</b>: ${formatNumber(stageEmployment.unskilledMale)}<br>`
+    toolTipValue += `<b>Female unskilled</b>: ${formatNumber(stageEmployment.unskilledFemale)}<br>`
+    toolTipValue += `<b>Male skilled</b>: ${formatNumber(stageEmployment.skilledMale)}<br>`
+    toolTipValue += `<b>Female skilled</b>: ${formatNumber(stageEmployment.skilledFemale)}<br>`
+    tooltip[stage.name] = toolTipValue
+    return {
+        name: stage.name,
+        value: subTotal
+    };
+  })
+  .filter(item => !!item)
+
+            return getSelectableBarChart(items, selectedStage.value, tooltip)
+
+  function sumAllEmployments(employment) {
+    return employment.tempFemale +
+      employment.tempMale +
+      employment.unskilledFemale +
+      employment.unskilledMale +
+      employment.skilledFemale +
+      employment.skilledMale;
+  }
+})
 
 const totalNumberOfJobs = computed(() => {
     return formatNumber(numberOfJobsData.value.series[0].data.map(itemData => itemData.value).reduce((res, item) => res + item, 0))
 })
 
 const percentFemaleEmployment = computed(() => {
-    const totalFemale = props.studyData.metrics.eco.employment?.totalFemale;
-    const totalMale = props.studyData.metrics.eco.employment?.totalMale;
-    if (_.isNull(totalFemale) || _.isNull(totalMale)) {
-        return null;
-    }
-    const total = props.studyData.metrics.eco.employment?.total;
-    return formatPercent(totalFemale / total)
+  if (! props.studyData.ecoData.consistencyDisplay.employment.genderRatio) { return null; }
+
+  return formatPercent(props.studyData.metrics.eco.employment.femaleRatio);
 })
 
 const fteDefinition = computed(() => {
@@ -120,20 +150,64 @@ const fteDefinition = computed(() => {
 })
 
 const currentStageEmploymentByTypeOfActorData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
-    return getEmploymentByTypeOfActorData(currentStageActors) 
+  if (! selectedStageEmployment.value) { return null; }
+  
+  const employmentActorDistribution = selectedStageEmployment.value?.employmentActorDistribution;
+  if (! employmentActorDistribution) { return null;}
+
+
+  let data = employmentActorDistribution.map(actor => ({
+    value: actor.total,
+    name: actor.name
+  }))
+  return getMiniPieChart(data, 'By type of actor');
 })
 
+const selectedStageEmployment = computed(() => {
+  if (! selectedStage.value) { return; }
+
+  return props.studyData.metrics.eco.employment?.employmentByStage[selectedStage.value];
+})
 
 const currentStageEmploymentByQualificationData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
-    return getEmploymentByQualificationData(currentStageActors)
-})
+  if (! props.studyData.ecoData.consistencyDisplay.employment.contractRatio) { return null; }
+  if (! selectedStageEmployment.value) { return null; }
 
+  const { tempFemale, tempMale, unskilledFemale, unskilledMale, skilledFemale, skilledMale } = selectedStageEmployment.value;
+
+  let data = [
+      {
+          value: skilledFemale + skilledMale,
+          name: 'Permanent qualified'
+      },
+      {
+          value: unskilledFemale + unskilledMale,
+          name: 'Permanent unqualified'
+      },
+      {
+        value: tempFemale + tempMale,
+          name: 'Temporary'
+      }
+  ];
+  return getMiniPieChart(data, 'By qualification');
+});
 
 const currentStageEmploymentByGenderData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
-    return getEmploymentByGenderData(currentStageActors)
+  if (! props.studyData.ecoData.consistencyDisplay.employment.genderRatio) { return null; }
+  if (! selectedStageEmployment.value) { return null; }
+
+  const { tempFemale, tempMale, unskilledFemale, unskilledMale, skilledFemale, skilledMale } = selectedStageEmployment.value;
+  let data = [
+      {
+          value: tempMale + unskilledMale + skilledMale,
+          name: 'Male'
+      },
+      {
+          value: tempFemale + unskilledFemale + skilledFemale,
+          name: 'Female'
+      }
+  ]
+  return getMiniPieChart(data, 'By gender');
 })
 </script>
 

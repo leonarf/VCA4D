@@ -305,7 +305,7 @@ const parseEmploymentSheet = (json, actors) => {
   checkColumnsExistence(sheetAsJson, EMPLOYMENT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
   const employments = sheetAsJson.map(parseActorEmployment);
-  checkEmploymentTypeConsistency(employments);
+  const { displayContractRatio, displayGenderRatio } = checkEmploymentTypeConsistency(employments);
 
   actors = actors.map(actor => {
     let employment = employments.filter(employment => employment.actorName === actor.name)
@@ -321,7 +321,11 @@ const parseEmploymentSheet = (json, actors) => {
     return actor
   })
 
-  return actors
+  return {
+    actors,
+    displayContractRatio,
+    displayGenderRatio
+  }
 }
 
 function parseActorEmployment(employment) {
@@ -333,12 +337,6 @@ function parseActorEmployment(employment) {
   const skilledMale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.skilledMale])
   const skilledFemale = parseEmploymentCell(employment[EMPLOYMENT_COLUMNS.skilledFemale])
 
-  const totalMale = sumEmployments([tempMale, unskilledMale, skilledMale]);
-  const totalFemale = sumEmployments([tempFemale, unskilledFemale, skilledFemale]);
-  const totalTemp = sumEmployments([tempMale, tempFemale]);
-  const totalSkilled = sumEmployments([skilledMale, skilledFemale]);
-  const totalUnskilled = sumEmployments([unskilledMale, unskilledFemale]);
-
   const result = {
     actorName,
     data: {
@@ -347,13 +345,7 @@ function parseActorEmployment(employment) {
       unskilledMale,
       unskilledFemale,
       skilledMale,
-      skilledFemale,
-      totalMale,
-      totalFemale,
-      totalTemp,
-      totalSkilled,
-      totalUnskilled,
-      total: sumEmployments([totalMale, totalFemale])
+      skilledFemale
     }
   }
   return result
@@ -364,32 +356,92 @@ function parseActorEmployment(employment) {
     return parseFloat(employmentCell);
   }
 }
-export function sumEmployments(employments) {
-  if (employments.every(employment => _.isNull(employment) || _.isUndefined(employment))) {
-    return null;
-  }
-  return  _.sumBy(employments, employment => employment || 0);
-}
 
 function checkEmploymentTypeConsistency(employments) {
   const columnsToCheck = ["tempMale", "tempFemale", "unskilledMale", "unskilledFemale", "skilledMale", "skilledFemale"];
 
-  columnsToCheck.forEach(column => {
-    if (isAllNull(employments, column)) { return; }
-    if (isAllNonNull(employments, column)) { return; }
+  const columnsCompletions = checkAndBuildFullColumnsCompletion(columnsToCheck);
+  return checkWeHaveTheRightColumnsForAnalyses(columnsCompletions);
+
+  function checkAndBuildFullColumnsCompletion(columns) {
+    const completionByColumn = {};
+    columns.forEach(column => completionByColumn[column] = checkIsComplete(column))
+    return completionByColumn;
+  }
+
+  function checkIsComplete(column) {
+    if (isAllNull(employments, column)) { return false; }
+    if (isAllNonNull(employments, column)) { return true; }
 
     setImportErrors(
       ECO_SHEET_NAMES.Employment,
-      ErrorLevels.BreaksDataviz,
+      ErrorLevels.BreaksALot,
       `Column '${EMPLOYMENT_COLUMNS[column]}' of sheet '${ECO_SHEET_NAMES.Employment}' is missing some values`
     )
-  })
+    return false;
+  }
 }
 function isAllNull(employments, column) {
   return employments.every(employment => _.isNull(employment.data[column]))
 }
 function isAllNonNull(employments, column) {
   return employments.every(employment => ! _.isNull(employment.data[column]))
+}
+
+function checkWeHaveTheRightColumnsForAnalyses(completionByColumn) {
+  if (isAllEmpty(Object.values(completionByColumn))) {
+    return { displayContractRatio: false, displayGenderRatio: false };
+  }
+  let displayGenderRatio, displayContractRatio = null;
+
+  const femaleCompletionsByContract = [completionByColumn.tempFemale, completionByColumn.unskilledFemale, completionByColumn.skilledFemale];
+  const maleCompletionsByContract = [completionByColumn.tempMale, completionByColumn.unskilledMale, completionByColumn.skilledMale];
+
+  if (_.isEqual(femaleCompletionsByContract, maleCompletionsByContract)) {
+    // We can compare male/female ratio, because the data filled the same type of contracts for both genders
+    displayGenderRatio = true;
+  } else if (isAllEmpty(femaleCompletionsByContract) || isAllEmpty(maleCompletionsByContract)) {
+    // We cannot compare male/female ratio, because the data only filled one gender
+    displayGenderRatio = false;
+  } else {
+    // We cannot compare the ratio because the data is inconsistent
+    displayGenderRatio = false;
+    setImportErrors(
+      ECO_SHEET_NAMES.Employment,
+      ErrorLevels.BreaksALot,
+      "Impossible to compare gender employment: Please fill out every gender employment column for the study's types of contract"
+    )
+  }
+
+  const tempCompletionsByGender = [completionByColumn.tempFemale, completionByColumn.tempMale];
+  const unskiledCompletionsByGender = [completionByColumn.unskilledFemale, completionByColumn.unskilledMale];
+  const skilledCompletionsByGender = [completionByColumn.skilledFemale, completionByColumn.skilledMale];
+
+  if (_.isEqual(tempCompletionsByGender, unskiledCompletionsByGender) && _.isEqual(unskiledCompletionsByGender, skilledCompletionsByGender)) {
+    // We can compare contract types, because the data filled the same genders for the 3 type of contracts
+    displayContractRatio = true;
+  } else if (
+    (isAllEmpty(tempCompletionsByGender) && isAllEmpty(unskiledCompletionsByGender)) ||
+    (isAllEmpty(unskiledCompletionsByGender) && isAllEmpty(skilledCompletionsByGender)) ||
+    (isAllEmpty(skilledCompletionsByGender) && isAllEmpty(tempCompletionsByGender))
+  ) {
+    // We cannot compare contract types, because the study  only filled one type of contract
+    displayContractRatio = false;
+  } else {
+    // Throw error, we cannot compare the ratio because the data is inconsistent
+    displayContractRatio = false;
+    setImportErrors(
+      ECO_SHEET_NAMES.Employment,
+      ErrorLevels.BreaksALot,
+      "Impossible to compare contract types: Please fill out every contract type column for the studied gender"
+    )
+  }
+
+  return { displayContractRatio, displayGenderRatio };
+
+  function isAllEmpty(completions) {
+    return completions.every(completion => ! completion);
+  }
 }
 
 const parseAccountByActorSheet = (json, actors, stages) => {
@@ -544,7 +596,14 @@ export const parseEconomicsJson = (json, currencyRatio) => {
   actors = result.actors
   var addedValue = result.addedValue
 
-  actors = parseEmploymentSheet(json, actors)
+  let employmentResult = parseEmploymentSheet(json, actors);
+  actors = employmentResult.actors;
+  const consistencyDisplay = {
+    employment: {
+      contractRatio: employmentResult.displayContractRatio,
+      genderRatio: employmentResult.displayGenderRatio,
+    }
+  };
 
   actors = parseAccountByActorSheet(json, actors, stages)
 
@@ -567,6 +626,7 @@ export const parseEconomicsJson = (json, currencyRatio) => {
     macroData,
     stages,
     actors,
+    consistencyDisplay,
     flows,
     addedValue,
     importExport,

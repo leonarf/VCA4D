@@ -67,13 +67,7 @@
           "unskilledMale": 0,
           "unskilledFemale": null,
           "skilledMale": null,
-          "skilledFemale": null,
-          "totalMale": 0,
-          "totalFemale": null,
-          "totalTemp": 0,
-          "totalSkilled": null,
-          "totalUnskilled": 0,
-          "total": 0
+          "skilledFemale": null
         }
       },
       {
@@ -98,13 +92,7 @@
           "unskilledMale": 0,
           "unskilledFemale": null,
           "skilledMale": null,
-          "skilledFemale": null,
-          "totalMale": 0,
-          "totalFemale": null,
-          "totalTemp": 0,
-          "totalSkilled": null,
-          "totalUnskilled": 0,
-          "total": 0
+          "skilledFemale": null
         }
       },
       {
@@ -129,13 +117,7 @@
           "unskilledMale": 0,
           "unskilledFemale": null,
           "skilledMale": null,
-          "skilledFemale": null,
-          "totalMale": 0,
-          "totalFemale": null,
-          "totalTemp": 0,
-          "totalSkilled": null,
-          "totalUnskilled": 0,
-          "total": 0
+          "skilledFemale": null
         }
       },
       {
@@ -166,13 +148,7 @@
           "unskilledMale": 0,
           "unskilledFemale": null,
           "skilledMale": null,
-          "skilledFemale": null,
-          "totalMale": 152.212275372031,
-          "totalFemale": null,
-          "totalTemp": 152.212275372031,
-          "totalSkilled": null,
-          "totalUnskilled": 0,
-          "total": 152.212275372031
+          "skilledFemale": null
         }
       },
       {
@@ -191,13 +167,7 @@
           "unskilledMale": 0,
           "unskilledFemale": null,
           "skilledMale": null,
-          "skilledFemale": null,
-          "totalMale": 21.4084507042254,
-          "totalFemale": null,
-          "totalTemp": 21.4084507042254,
-          "totalSkilled": null,
-          "totalUnskilled": 0,
-          "total": 21.4084507042254
+          "skilledFemale": null
         }
       },
       {
@@ -216,13 +186,7 @@
           "unskilledMale": 72.9696845159044,
           "unskilledFemale": null,
           "skilledMale": null,
-          "skilledFemale": null,
-          "totalMale": 462.1413352673944,
-          "totalFemale": null,
-          "totalTemp": 389.17165075149,
-          "totalSkilled": null,
-          "totalUnskilled": 72.9696845159044,
-          "total": 462.1413352673944
+          "skilledFemale": null
         }
       },
       {
@@ -241,13 +205,7 @@
           "unskilledMale": 0,
           "unskilledFemale": null,
           "skilledMale": null,
-          "skilledFemale": null,
-          "totalMale": 12.2791423001949,
-          "totalFemale": null,
-          "totalTemp": 12.2791423001949,
-          "totalSkilled": null,
-          "totalUnskilled": 0,
-          "total": 12.2791423001949
+          "skilledFemale": null
         }
       },
       {
@@ -266,13 +224,7 @@
           "unskilledMale": 9.23970680434903,
           "unskilledFemale": null,
           "skilledMale": null,
-          "skilledFemale": null,
-          "totalMale": 58.51814309421053,
-          "totalFemale": null,
-          "totalTemp": 49.2784362898615,
-          "totalSkilled": null,
-          "totalUnskilled": 9.23970680434903,
-          "total": 58.51814309421053
+          "skilledFemale": null
         }
       },
       {
@@ -291,13 +243,7 @@
           "unskilledMale": 347.534453339202,
           "unskilledFemale": null,
           "skilledMale": null,
-          "skilledFemale": null,
-          "totalMale": 2201.051537814942,
-          "totalFemale": null,
-          "totalTemp": 1853.51708447574,
-          "totalSkilled": null,
-          "totalUnskilled": 347.534453339202,
-          "total": 2201.051537814942
+          "skilledFemale": null
         }
       },
       {
@@ -322,13 +268,7 @@
           "unskilledMale": 14.2364470654456,
           "unskilledFemale": null,
           "skilledMale": null,
-          "skilledFemale": null,
-          "totalMale": 90.1641647478221,
-          "totalFemale": null,
-          "totalTemp": 75.9277176823765,
-          "totalSkilled": null,
-          "totalUnskilled": 14.2364470654456,
-          "total": 90.1641647478221
+          "skilledFemale": null
         }
       },
       {
@@ -347,16 +287,16 @@
           "unskilledMale": 49.8565051208285,
           "unskilledFemale": null,
           "skilledMale": null,
-          "skilledFemale": null,
-          "totalMale": 315.7578657652475,
-          "totalFemale": null,
-          "totalTemp": 265.901360644419,
-          "totalSkilled": null,
-          "totalUnskilled": 49.8565051208285,
-          "total": 315.7578657652475
+          "skilledFemale": null
         }
       }
     ],
+    "consistencyDisplay": {
+      "employment": {
+        "contractRatio": false,
+        "genderRatio": false
+      }
+    },
     "flows": [
       {
         "sellerActorName": "Producer arabica bola",

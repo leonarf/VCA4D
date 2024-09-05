@@ -10,8 +10,9 @@
   "ecoData": {
     "macroData": {
       "giniIndex": 0.7811,
+      "FTE_Definition": null,
       "rateOfIntegration": 0.593,
-      "publicFundsBalance": -0.0000013057045847365461,
+      "publicFundsBalance": -0.00000130570458473655,
       "valueAddedShareNationalGdp": 0.002,
       "valueAddedShareAgriculturalGdp": 0.063,
       "domesticResourceCostRatio": 0.44,
@@ -54,225 +55,171 @@
         "name": "Peq org FT",
         "stage": "Producers",
         "id": 78,
-        "numberOfActors": 1113.9865624503905,
-        "directAddedValue": 1041668708.5323479,
+        "numberOfActors": 1113.98656245039,
+        "directAddedValue": 1041668708.53235,
         "publicFundsBalance": 10027378.8150808,
-        "netOperatingProfit": 416562448.51600736,
-        "totalCosts": 1396144841.703953,
-        "receivedAddedValue": 416562448.51600736,
+        "netOperatingProfit": 416562448.516007,
+        "totalCosts": 1396144841.70395,
+        "receivedAddedValue": 416562448.516007,
         "employment": {
-          "tempMale": 2310.936867666169,
-          "tempFemale": 308.1249156888225,
+          "tempMale": 2310.93686766617,
+          "tempFemale": 308.124915688823,
           "unskilledMale": 0,
           "unskilledFemale": 91.4272290814375,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 2310.936867666169,
-          "totalFemale": 399.55214477026004,
-          "totalTemp": 2619.0617833549913,
-          "totalSkilled": 0,
-          "totalUnskilled": 91.4272290814375,
-          "total": 2710.4890124364288
+          "skilledFemale": 0
         }
       },
       {
         "name": "Med org",
         "stage": "Producers",
         "id": 79,
-        "numberOfActors": 186.5270935960591,
-        "directAddedValue": 951411023.4567776,
-        "publicFundsBalance": 9565437.849544287,
-        "netOperatingProfit": 378382682.6001573,
-        "totalCosts": 1300815520.3967152,
-        "receivedAddedValue": 378382682.6001573,
+        "numberOfActors": 186.527093596059,
+        "directAddedValue": 951411023.456778,
+        "publicFundsBalance": 9565437.84954429,
+        "netOperatingProfit": 378382682.600157,
+        "totalCosts": 1300815520.39672,
+        "receivedAddedValue": 378382682.600157,
         "employment": {
           "tempMale": 2072.0126760724,
-          "tempFemale": 306.96484089961467,
+          "tempFemale": 306.964840899615,
           "unskilledMale": 0,
-          "unskilledFemale": 113.85376271071782,
+          "unskilledFemale": 113.853762710718,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 2072.0126760724,
-          "totalFemale": 420.8186036103325,
-          "totalTemp": 2378.9775169720147,
-          "totalSkilled": 0,
-          "totalUnskilled": 113.85376271071782,
-          "total": 2492.8312796827327
+          "skilledFemale": 0
         }
       },
       {
         "name": "Grande org",
         "stage": "Producers",
         "id": 80,
-        "numberOfActors": 80.97377501725327,
-        "directAddedValue": 4144632194.1073318,
+        "numberOfActors": 80.9737750172533,
+        "directAddedValue": 4144632194.10733,
         "publicFundsBalance": 56611394.1288532,
-        "netOperatingProfit": 2172345092.124947,
-        "totalCosts": 3509178372.8961444,
-        "receivedAddedValue": 2172345092.124947,
+        "netOperatingProfit": 2172345092.12495,
+        "totalCosts": 3509178372.89614,
+        "receivedAddedValue": 2172345092.12495,
         "employment": {
-          "tempMale": 3786.9732951297183,
+          "tempMale": 3786.97329512972,
           "tempFemale": 522.341144155825,
           "unskilledMale": 0,
-          "unskilledFemale": 619.9589973259313,
+          "unskilledFemale": 619.958997325931,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 3786.9732951297183,
-          "totalFemale": 1142.3001414817563,
-          "totalTemp": 4309.314439285543,
-          "totalSkilled": 0,
-          "totalUnskilled": 619.9589973259313,
-          "total": 4929.273436611475
+          "skilledFemale": 0
         }
       },
       {
         "name": "Peq conv",
         "stage": "Producers",
         "id": 81,
-        "numberOfActors": 360.0168844202995,
+        "numberOfActors": 360.0168844203,
         "directAddedValue": 343653958.540848,
         "publicFundsBalance": 3379823.79746835,
-        "netOperatingProfit": 121830331.19907597,
-        "totalCosts": 508659159.49367005,
-        "receivedAddedValue": 121830331.19907597,
+        "netOperatingProfit": 121830331.199076,
+        "totalCosts": 508659159.49367,
+        "receivedAddedValue": 121830331.199076,
         "employment": {
-          "tempMale": 862.9865256311625,
-          "tempFemale": 155.6205210154556,
+          "tempMale": 862.986525631163,
+          "tempFemale": 155.620521015456,
           "unskilledMale": 0,
-          "unskilledFemale": 33.58249097323094,
+          "unskilledFemale": 33.5824909732309,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 862.9865256311625,
-          "totalFemale": 189.20301198868654,
-          "totalTemp": 1018.6070466466181,
-          "totalSkilled": 0,
-          "totalUnskilled": 33.58249097323094,
-          "total": 1052.189537619849
+          "skilledFemale": 0
         }
       },
       {
         "name": "Med conv",
         "stage": "Producers",
         "id": 82,
-        "numberOfActors": 56.965770171149146,
-        "directAddedValue": 217093712.33360124,
-        "publicFundsBalance": 1311227.2812925493,
-        "netOperatingProfit": 50482715.410500586,
-        "totalCosts": 379492441.31534916,
-        "receivedAddedValue": 50482715.410500586,
+        "numberOfActors": 56.9657701711491,
+        "directAddedValue": 217093712.333601,
+        "publicFundsBalance": 1311227.28129255,
+        "netOperatingProfit": 50482715.4105006,
+        "totalCosts": 379492441.315349,
+        "receivedAddedValue": 50482715.4105006,
         "employment": {
-          "tempMale": 633.4493337338531,
-          "tempFemale": 95.61499377114782,
+          "tempMale": 633.449333733853,
+          "tempFemale": 95.6149937711478,
           "unskilledMale": 0,
           "unskilledFemale": 35.46375793561,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 633.4493337338531,
-          "totalFemale": 131.07875170675783,
-          "totalTemp": 729.064327505001,
-          "totalSkilled": 0,
-          "totalUnskilled": 35.46375793561,
-          "total": 764.528085440611
+          "skilledFemale": 0
         }
       },
       {
         "name": "Grande conv",
         "stage": "Producers",
         "id": 83,
-        "numberOfActors": 17.001316366827556,
-        "directAddedValue": 452252574.2610606,
-        "publicFundsBalance": 1903527.6421128418,
-        "netOperatingProfit": 81242296.94010206,
-        "totalCosts": 641127667.4968038,
-        "receivedAddedValue": 81242296.94010206,
+        "numberOfActors": 17.0013163668276,
+        "directAddedValue": 452252574.261061,
+        "publicFundsBalance": 1903527.64211284,
+        "netOperatingProfit": 81242296.9401021,
+        "totalCosts": 641127667.496804,
+        "receivedAddedValue": 81242296.9401021,
         "employment": {
-          "tempMale": 581.9200910075845,
-          "tempFemale": 75.90262056620656,
+          "tempMale": 581.920091007585,
+          "tempFemale": 75.9026205662066,
           "unskilledMale": 0,
-          "unskilledFemale": 120.11693396706812,
+          "unskilledFemale": 120.116933967068,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 581.9200910075845,
-          "totalFemale": 196.0195545332747,
-          "totalTemp": 657.822711573791,
-          "totalSkilled": 0,
-          "totalUnskilled": 120.11693396706812,
-          "total": 777.9396455408591
+          "skilledFemale": 0
         }
       },
       {
         "name": "Camionero",
         "stage": "Collectors",
         "id": 85,
-        "numberOfActors": 3.9276960784313726,
-        "directAddedValue": 17873624.801562995,
-        "publicFundsBalance": -7816706.274163872,
-        "netOperatingProfit": 22036766.027532186,
+        "numberOfActors": 3.92769607843137,
+        "directAddedValue": 17873624.801563,
+        "publicFundsBalance": -7816706.27416387,
+        "netOperatingProfit": 22036766.0275322,
         "totalCosts": 114558493.55063,
-        "receivedAddedValue": 22036766.027532186,
+        "receivedAddedValue": 22036766.0275322,
         "employment": {
           "tempMale": 0,
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 0,
-          "totalFemale": 0,
-          "totalTemp": 0,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 0
+          "skilledFemale": 0
         }
       },
       {
         "name": "Maduradora",
         "stage": "Processors",
         "id": 84,
-        "numberOfActors": 25.985585585585586,
+        "numberOfActors": 25.9855855855856,
         "directAddedValue": 506557179.287328,
         "publicFundsBalance": 1201061.44627246,
-        "netOperatingProfit": 457677093.96211505,
-        "totalCosts": 1298745459.0228848,
-        "receivedAddedValue": 457677093.96211505,
+        "netOperatingProfit": 457677093.962115,
+        "totalCosts": 1298745459.02288,
+        "receivedAddedValue": 457677093.962115,
         "employment": {
           "tempMale": 0,
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 0,
-          "totalFemale": 0,
-          "totalTemp": 0,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 0
+          "skilledFemale": 0
         }
       },
       {
         "name": "Exportadora",
         "stage": "Wholesalers",
         "id": 86,
-        "numberOfActors": 24.09276743178865,
-        "directAddedValue": 637543814.9269142,
-        "publicFundsBalance": -179047651.2234299,
-        "netOperatingProfit": 477044440.4687035,
-        "totalCosts": 13978557458.28353,
-        "receivedAddedValue": 477044440.4687035,
+        "numberOfActors": 24.0927674317887,
+        "directAddedValue": 637543814.926914,
+        "publicFundsBalance": -179047651.22343,
+        "netOperatingProfit": 477044440.468704,
+        "totalCosts": 13978557458.2835,
+        "receivedAddedValue": 477044440.468704,
         "employment": {
           "tempMale": 0,
           "tempFemale": 0,
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 0,
-          "totalFemale": 0,
-          "totalTemp": 0,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 0
+          "skilledFemale": 0
         }
       },
       {
@@ -288,12 +235,18 @@
         "receivedAddedValue": 0
       }
     ],
+    "consistencyDisplay": {
+      "employment": {
+        "contractRatio": true,
+        "genderRatio": true
+      }
+    },
     "flows": [
       {
         "sellerActorName": "Peq org FT",
         "buyerActorName": "Maduradora",
         "volumeExchanged": 13356.4683421871,
-        "monetaryValue": 148737631.45859554,
+        "monetaryValue": 148737631.458596,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -302,7 +255,7 @@
         "sellerActorName": "Peq org FT",
         "buyerActorName": "Camionero",
         "volumeExchanged": 1484.05203802079,
-        "monetaryValue": 16526403.495399516,
+        "monetaryValue": 16526403.4953995,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -311,7 +264,7 @@
         "sellerActorName": "Peq org FT",
         "buyerActorName": "Exportadora",
         "volumeExchanged": 59629.4780259833,
-        "monetaryValue": 1647443218.9018667,
+        "monetaryValue": 1647443218.90187,
         "unitPrice": 27628,
         "volumeUnit": "Ton",
         "product": "Banane oft exp"
@@ -320,7 +273,7 @@
         "sellerActorName": "Med org",
         "buyerActorName": "Maduradora",
         "volumeExchanged": 11991.5949111616,
-        "monetaryValue": 133538400.93069556,
+        "monetaryValue": 133538400.930696,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -329,7 +282,7 @@
         "sellerActorName": "Med org",
         "buyerActorName": "Camionero",
         "volumeExchanged": 1332.39943457351,
-        "monetaryValue": 14837600.103410607,
+        "monetaryValue": 14837600.1034106,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -338,7 +291,7 @@
         "sellerActorName": "Med org",
         "buyerActorName": "Exportadora",
         "volumeExchanged": 53318.4088630404,
-        "monetaryValue": 1473081000.0680802,
+        "monetaryValue": 1473081000.06808,
         "unitPrice": 27628,
         "volumeUnit": "Ton",
         "product": "Banane oft exp"
@@ -347,7 +300,7 @@
         "sellerActorName": "Med org",
         "buyerActorName": "Maduradora",
         "volumeExchanged": 1634.8036529895,
-        "monetaryValue": 18205173.479691073,
+        "monetaryValue": 18205173.4796911,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -356,7 +309,7 @@
         "sellerActorName": "Med org",
         "buyerActorName": "Camionero",
         "volumeExchanged": 181.644850332167,
-        "monetaryValue": 2022797.053299012,
+        "monetaryValue": 2022797.05329901,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -365,7 +318,7 @@
         "sellerActorName": "Med org",
         "buyerActorName": "Exportadora",
         "volumeExchanged": 902.865937889258,
-        "monetaryValue": 20362335.497216437,
+        "monetaryValue": 20362335.4972164,
         "unitPrice": 22553,
         "volumeUnit": "Ton",
         "product": "Banane o exp"
@@ -374,7 +327,7 @@
         "sellerActorName": "Grande org",
         "buyerActorName": "Maduradora",
         "volumeExchanged": 37168.7026235086,
-        "monetaryValue": 413910672.4153918,
+        "monetaryValue": 413910672.415392,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -392,7 +345,7 @@
         "sellerActorName": "Grande org",
         "buyerActorName": "Exportadora",
         "volumeExchanged": 165203.994078903,
-        "monetaryValue": 4564255948.411932,
+        "monetaryValue": 4564255948.41193,
         "unitPrice": 27628,
         "volumeUnit": "Ton",
         "product": "Banane oft exp"
@@ -401,7 +354,7 @@
         "sellerActorName": "Grande org",
         "buyerActorName": "Maduradora",
         "volumeExchanged": 5067.00733906268,
-        "monetaryValue": 56426193.72780201,
+        "monetaryValue": 56426193.727802,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -410,7 +363,7 @@
         "sellerActorName": "Grande org",
         "buyerActorName": "Camionero",
         "volumeExchanged": 563.000815451409,
-        "monetaryValue": 6269577.080866891,
+        "monetaryValue": 6269577.08086689,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -419,7 +372,7 @@
         "sellerActorName": "Grande org",
         "buyerActorName": "Exportadora",
         "volumeExchanged": 22529.4318454859,
-        "monetaryValue": 508106276.4112435,
+        "monetaryValue": 508106276.411244,
         "unitPrice": 22553,
         "volumeUnit": "Ton",
         "product": "Banane o exp"
@@ -428,7 +381,7 @@
         "sellerActorName": "Peq conv",
         "buyerActorName": "Maduradora",
         "volumeExchanged": 6145.9200927406,
-        "monetaryValue": 68440966.15275933,
+        "monetaryValue": 68440966.1527593,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -437,7 +390,7 @@
         "sellerActorName": "Peq conv",
         "buyerActorName": "Camionero",
         "volumeExchanged": 682.880010304511,
-        "monetaryValue": 7604551.794751034,
+        "monetaryValue": 7604551.79475103,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -446,7 +399,7 @@
         "sellerActorName": "Peq conv",
         "buyerActorName": "Exportadora",
         "volumeExchanged": 27315.2004121804,
-        "monetaryValue": 554443937.9664377,
+        "monetaryValue": 554443937.966438,
         "unitPrice": 20298,
         "volumeUnit": "Ton",
         "product": "Banane cft exp"
@@ -455,7 +408,7 @@
         "sellerActorName": "Med conv",
         "buyerActorName": "Maduradora",
         "volumeExchanged": 3565.98521760237,
-        "monetaryValue": 39710811.383219995,
+        "monetaryValue": 39710811.38322,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -464,7 +417,7 @@
         "sellerActorName": "Med conv",
         "buyerActorName": "Camionero",
         "volumeExchanged": 396.220579733597,
-        "monetaryValue": 4412312.375913336,
+        "monetaryValue": 4412312.37591334,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -473,7 +426,7 @@
         "sellerActorName": "Med conv",
         "buyerActorName": "Exportadora",
         "volumeExchanged": 15841.944202664,
-        "monetaryValue": 321559783.4256739,
+        "monetaryValue": 321559783.425674,
         "unitPrice": 20298,
         "volumeUnit": "Ton",
         "product": "Banane cft exp"
@@ -482,7 +435,7 @@
         "sellerActorName": "Med conv",
         "buyerActorName": "Maduradora",
         "volumeExchanged": 626.685599994381,
-        "monetaryValue": 6978770.841537427,
+        "monetaryValue": 6978770.84153743,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -491,7 +444,7 @@
         "sellerActorName": "Med conv",
         "buyerActorName": "Camionero",
         "volumeExchanged": 69.631733332709,
-        "monetaryValue": 775418.9823930474,
+        "monetaryValue": 775418.982393047,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -500,7 +453,7 @@
         "sellerActorName": "Med conv",
         "buyerActorName": "Exportadora",
         "volumeExchanged": 2798.53250856339,
-        "monetaryValue": 51283108.21942412,
+        "monetaryValue": 51283108.2194241,
         "unitPrice": 18325,
         "volumeUnit": "Ton",
         "product": "Banane c exp"
@@ -536,7 +489,7 @@
         "sellerActorName": "Grande conv",
         "buyerActorName": "Maduradora",
         "volumeExchanged": 1046.49799378492,
-        "monetaryValue": 11653801.65878887,
+        "monetaryValue": 11653801.6587889,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -545,7 +498,7 @@
         "sellerActorName": "Grande conv",
         "buyerActorName": "Camionero",
         "volumeExchanged": 116.277554864992,
-        "monetaryValue": 1294866.850976551,
+        "monetaryValue": 1294866.85097655,
         "unitPrice": 11136,
         "volumeUnit": "Ton",
         "product": "Banane rej"
@@ -554,7 +507,7 @@
         "sellerActorName": "Grande conv",
         "buyerActorName": "Exportadora",
         "volumeExchanged": 4649.12463994008,
-        "monetaryValue": 85195209.02690196,
+        "monetaryValue": 85195209.026902,
         "unitPrice": 18325,
         "volumeUnit": "Ton",
         "product": "Banane c exp"
@@ -563,7 +516,7 @@
         "sellerActorName": "Maduradora",
         "buyerActorName": "Consommateur1",
         "volumeExchanged": 86531.8037730318,
-        "monetaryValue": 1756422552.9849994,
+        "monetaryValue": 1756422552.985,
         "unitPrice": 20298,
         "volumeUnit": "Ton",
         "product": "Banane rejm"
@@ -572,7 +525,7 @@
         "sellerActorName": "Camionero",
         "buyerActorName": "Consommateur1",
         "volumeExchanged": 9614.6448636702,
-        "monetaryValue": 127942079.20085937,
+        "monetaryValue": 127942079.200859,
         "unitPrice": 13307,
         "volumeUnit": "Ton",
         "product": "Banane rejc"
@@ -581,7 +534,7 @@
         "sellerActorName": "Exportadora",
         "buyerActorName": "Consommateurexp",
         "volumeExchanged": 7447.65714850347,
-        "monetaryValue": 203663632.3829759,
+        "monetaryValue": 203663632.382976,
         "unitPrice": 27346,
         "volumeUnit": "Ton",
         "product": "Banane c exp"
@@ -590,7 +543,7 @@
         "sellerActorName": "Exportadora",
         "buyerActorName": "Consommateurexp",
         "volumeExchanged": 69504.4246148444,
-        "monetaryValue": 2233802702.6964846,
+        "monetaryValue": 2233802702.69648,
         "unitPrice": 32139,
         "volumeUnit": "Ton",
         "product": "Banane cft exp"
@@ -599,7 +552,7 @@
         "sellerActorName": "Exportadora",
         "buyerActorName": "Consommateurexp",
         "volumeExchanged": 23432.2977833752,
-        "monetaryValue": 772890910.0868477,
+        "monetaryValue": 772890910.086848,
         "unitPrice": 32984,
         "volumeUnit": "Ton",
         "product": "Banane o exp"
@@ -608,7 +561,7 @@
         "sellerActorName": "Exportadora",
         "buyerActorName": "Consommateurexp",
         "volumeExchanged": 278151.880967927,
-        "monetaryValue": 10978376589.923111,
+        "monetaryValue": 10978376589.9231,
         "unitPrice": 39469,
         "volumeUnit": "Ton",
         "product": "Banane oft exp"
@@ -616,39 +569,39 @@
     ],
     "addedValue": {
       "landOwnersFees": 0,
-      "depreciation": 387213352.87117237,
-      "employeeWages": 3325606587.1571465,
-      "financialInstitutionsInterests": 525127489.5072822,
-      "government": -102864506.53696927
+      "depreciation": 387213352.871172,
+      "employeeWages": 3325606587.15715,
+      "financialInstitutionsInterests": 525127489.507282,
+      "government": -102864506.536969
     },
     "importExport": {
       "import": [
         {
           "label": "Packaging",
           "importExport": "Import",
-          "amount": 1909942508.8000002
+          "amount": 1909942508.8
         },
         {
           "label": "Agri input",
           "importExport": "Import",
-          "amount": 877541492.4160001
+          "amount": 877541492.416
         },
         {
           "label": "Energy",
           "importExport": "Import",
-          "amount": 555352275.1450001
+          "amount": 555352275.145
         },
         {
           "label": "Other",
           "importExport": "Import",
-          "amount": 15084163.011831999
+          "amount": 15084163.011832
         }
       ],
       "export": [
         {
           "label": "Banana",
           "importExport": "Export",
-          "amount": 14188733835.08942
+          "amount": 14188733835.0894
         }
       ]
     },

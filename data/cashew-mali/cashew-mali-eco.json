@@ -60,13 +60,7 @@
           "unskilledMale": 1578034.68208093,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 1578034.68208093,
-          "totalFemale": 0,
-          "totalTemp": 0,
-          "totalSkilled": 0,
-          "totalUnskilled": 1578034.68208093,
-          "total": 1578034.68208093
+          "skilledFemale": 0
         }
       },
       {
@@ -103,13 +97,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 241920,
-          "totalFemale": 0,
-          "totalTemp": 241920,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 241920
+          "skilledFemale": 0
         }
       },
       {
@@ -128,13 +116,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 27452.25,
-          "totalFemale": 0,
-          "totalTemp": 27452.25,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 27452.25
+          "skilledFemale": 0
         }
       },
       {
@@ -153,13 +135,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 10857.7292413088,
-          "skilledFemale": 0,
-          "totalMale": 549072.1433038088,
-          "totalFemale": 0,
-          "totalTemp": 538214.4140625,
-          "totalSkilled": 10857.7292413088,
-          "totalUnskilled": 0,
-          "total": 549072.1433038088
+          "skilledFemale": 0
         }
       },
       {
@@ -178,13 +154,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 16000,
-          "totalFemale": 0,
-          "totalTemp": 16000,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 16000
+          "skilledFemale": 0
         }
       },
       {
@@ -203,13 +173,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 966470.4,
-          "totalFemale": 0,
-          "totalTemp": 966470.4,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 966470.4
+          "skilledFemale": 0
         }
       },
       {
@@ -219,6 +183,12 @@
         "receivedAddedValue": 0
       }
     ],
+    "consistencyDisplay": {
+      "employment": {
+        "contractRatio": true,
+        "genderRatio": true
+      }
+    },
     "flows": [
       {
         "sellerActorName": "Producteur",
