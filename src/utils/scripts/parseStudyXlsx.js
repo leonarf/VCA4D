@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* global process __dirname */
 import { processUploadedExcelFile } from "@utils/import/generic.js";
 import * as XLSX from 'xlsx';
