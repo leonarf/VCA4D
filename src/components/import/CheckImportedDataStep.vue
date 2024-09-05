@@ -158,7 +158,6 @@ const isKnownProduct = computed(() =>
 )
 
 const errorsBySpreadsheet = computed(() => {
-  console.log('errorsBySpreadsheet computation trigger')
   let result = {}
   if (props.studyData.type === 'eco') {
     Object.keys(ECO_SHEET_NAMES).forEach((spreadsheetName) => {
@@ -177,7 +176,6 @@ const errorsBySpreadsheet = computed(() => {
     }
     result[error.spreadsheet].push(error)
   })
-  console.log('error to display', result)
   return result
 })
 </script>

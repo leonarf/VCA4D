@@ -103,7 +103,6 @@ const optionsImported = computed(() => {
     prettyAmount.value,
     convertAmount.value
   )
-  console.log('option pour iported', result)
   return result
 })
 const optionsExported = computed(() => {

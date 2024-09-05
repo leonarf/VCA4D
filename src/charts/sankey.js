@@ -92,7 +92,6 @@ export const getSankeyData = (actors, flows, { sankeyDisplayMode, monetaryCurren
             }
         }
     };
-    console.log("sankey chart options:", result)
     return result;
 }
 

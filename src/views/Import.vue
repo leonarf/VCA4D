@@ -40,7 +40,6 @@ import { processUploadedExcelFile } from '@utils/import/generic.js'
 const workbook = ref(null)
 
 const clearData = () => {
-    console.log("clearing all data")
     localStorage.removeItem('localWorkbook')
     localStorage.removeItem('localStudyData')
     workbook.value = null
@@ -78,7 +77,6 @@ const importErrors = ref([]);
 const studyData = ref(null);
 
 watch(() => workbook.value, () => {
-    console.log("studyData computation trigger")
     if (!workbook.value) {
         studyData.value = null;
         importErrors.value = [];
@@ -86,7 +84,6 @@ watch(() => workbook.value, () => {
     }
 
     let { data, errors } = processUploadedExcelFile(workbook.value)
-    console.log("studyData new value", data)
     localStorage.setItem('localStudyData', JSON.stringify(data))
     studyData.value = data;
     importErrors.value = errors;
