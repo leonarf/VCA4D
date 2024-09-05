@@ -1,6 +1,4 @@
-import _ from "lodash";
 import { formatNumber, formatPercent } from '@utils/format.js'
-import { sumEmployments } from "@utils/import/eco.js";
 
 import { getColor } from '@utils/colors.js'
 const RADIUSES_MINI_PIE = ['20%', '40%']
@@ -206,39 +204,6 @@ export const getNumberOfActorsData = (stages, actors, currentStage) => {
     return getSelectableBarChart(items, currentStage.value, tooltip)
 }
 
-export const getNumberOfJobsData = (stages, actors, currentStage) => {
-    let tooltip = {}
-    const items = stages.value.map(stage => {
-        const stageActors = actors.value.filter(actor => actor.stage === stage.name && actor.employment)
-        const subTotal = stageActors.map(actor => actor.employment.total)
-            .reduce((res, curr) => res + curr, 0)
-
-        if (subTotal !== 0) {
-            let toolTipValue = "";
-            toolTipValue += `<b>Male temporary</b>: ${formatNumber(stageActors.map(actor => actor.employment?.tempMale || 0)
-                .reduce((res, curr) => res + curr, 0))}<br>`
-            toolTipValue += `<b>Female temporary</b>: ${formatNumber(stageActors.map(actor => actor.employment?.tempFemale || 0)
-                .reduce((res, curr) => res + curr, 0))}<br>`
-            toolTipValue += `<b>Male unskilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.unskilledMale || 0)
-                .reduce((res, curr) => res + curr, 0))}<br>`
-            toolTipValue += `<b>Female unskilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.unskilledFemale || 0)
-                .reduce((res, curr) => res + curr, 0))}<br>`
-            toolTipValue += `<b>Male skilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.skilledMale || 0)
-                .reduce((res, curr) => res + curr, 0))}<br>`
-            toolTipValue += `<b>Female skilled</b>: ${formatNumber(stageActors.map(actor => actor.employment?.skilledFemale || 0)
-                .reduce((res, curr) => res + curr, 0))}<br>`
-            tooltip[stage.name] = toolTipValue
-            return {
-                name: stage.name,
-                value: subTotal
-            }
-        }
-    })
-    .filter(item => !!item)
-
-    return getSelectableBarChart(items, currentStage.value, tooltip)
-}
-
 export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyAmount, currentStage) => {
     let tooltip = {}
 
@@ -377,7 +342,7 @@ export const getMiniBarChart = (items, tooltip, formatLabel, color) => {
 /*
 *  MINI PIE CHART
 */
-const getMiniPieChart = (data, title, valueFormatter) => {
+export const getMiniPieChart = (data, title, valueFormatter) => {
     const titleItem = {
         text: title,
         left: 'center',
@@ -438,46 +403,6 @@ export const getNetOperatingProfitByTypeOfActorData = (actors, convertAmount, pr
         }
     })
     return getMiniPieChart(data, 'By type of actor', prettyAmount)
-}
-
-export const getEmploymentByQualificationData = (actors) => {
-    let data = [
-        {
-            value: sumEmployments(actors.map(actor => actor.employment?.totalSkilled)),
-            name: 'Permanent qualified'
-        },
-        {
-            value: sumEmployments(actors.map(actor => actor.employment?.totalUnskiled)),
-            name: 'Permanent unqualified'
-        },
-        {
-            value: sumEmployments(actors.map(actor => actor.employment?.totalTemp)),
-            name: 'Temporary'
-        }
-    ]
-
-    if (data.some(item => _.isNull(item.value))) {
-        return null
-    }
-    return getMiniPieChart(data, 'By qualification')
-}
-
-export const getEmploymentByGenderData = (actors) => {
-    let data = [
-        {
-            value: sumEmployments(actors.map(actor => actor.employment?.totalMale)),
-            name: 'Male'
-        },
-        {
-            value: sumEmployments(actors.map(actor => actor.employment?.totalFemale)),
-            name: 'Female'
-        }
-    ]
-    console.log(data);
-    if (data.some(item => _.isNull(item.value))) {
-        return null
-    }
-    return getMiniPieChart(data, 'By gender')
 }
 
 export const getNumberOfActorsByTypeOfActorData = (actors) => {
