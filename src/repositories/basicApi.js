@@ -18,7 +18,7 @@ async function serverCall(url) {
   try {
     var results = await apiClient.get(url);
   } catch (error) {
-    console.log("serverCall Error", error, "on url", url);
+    console.error("serverCall Error", error, "on url", url);
     return null
   }
   Homemade_Cache[url] = results ? results.data : null;
