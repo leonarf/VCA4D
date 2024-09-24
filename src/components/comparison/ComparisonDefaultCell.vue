@@ -7,12 +7,15 @@
 <script setup>
 import { computed } from 'vue';
 import { formatNumber, formatPercent } from '@utils/format.js'
+import { useCurrencyUtils } from '../../utils/format';
 
 const props = defineProps({
     value: Number,
+    studyData: Object,
+    currency: String,
     valueType: {
       type: String,
-      validator: (valueType) => ["percent", "number"].includes(valueType)
+      validator: (valueType) => ["amount", "percent", "number"].includes(valueType)
     }
 })
 
@@ -22,6 +25,8 @@ const valueClass = computed(() => {
   }
   return "blue";
 });
+
+const { prettyAmount, convertAmount } = useCurrencyUtils(props)
 
 const formatedValue = computed(() => {
   if (! props.value && typeof props.value !== "number") {
@@ -33,6 +38,8 @@ const formatedValue = computed(() => {
       return formatPercent(props.value);
     case "number":
       return formatNumber(props.value);
+    case "amount":
+      return prettyAmount.value(convertAmount.value(props.value));
     default:
       throw new Error("Unrecognized valueType");
   }
