@@ -43,6 +43,7 @@ function sumActorsEmploymentByType(actors) {
     unskilledMale: sumActorsEmployments(actors, ["unskilledMale"]),
     skilledFemale: sumActorsEmployments(actors, ["skilledFemale"]),
     skilledMale: sumActorsEmployments(actors, ["skilledMale"]),
+    total: sumActorsEmployments(actors, ALL_EMPLOYMENT_TYPES),
     employmentActorDistribution: getEmploymentActorDistribution(actors),
   }
 }
