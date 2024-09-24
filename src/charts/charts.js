@@ -234,8 +234,8 @@ export const getNetOperatingProfitByNumberActorsData = (stages, actors, convertA
 
     const items = stages.value.map(stage => {
         const stageActors = actors.value.filter(actor => actor.stage === stage.name)
-        const subTotalOperatingProfit = convertAmount.value(stageActors
-            .reduce((res, actor) => res + actor.netOperatingProfit || 0, 0))
+        const subTotalOperatingProfit = stageActors
+            .reduce((res, actor) => res + actor.netOperatingProfit || 0, 0)
         const subTotalNumberOfActors = stageActors
             .reduce((res, actor) => res + actor.numberOfActors || 0, 0)
         if (subTotalOperatingProfit !== 0 && subTotalNumberOfActors !== 0) {
@@ -246,7 +246,7 @@ export const getNetOperatingProfitByNumberActorsData = (stages, actors, convertA
             tooltip[stage.name] = toolTipValue
             return {
                 name: stage.name,
-                value: subTotalOperatingProfit / subTotalNumberOfActors
+                value: convertAmount.value(subTotalOperatingProfit) / subTotalNumberOfActors
             }
         }
     }).filter(item => !!item)
