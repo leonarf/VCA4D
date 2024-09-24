@@ -1,5 +1,4 @@
 import { formatNumber, formatPercent } from '@utils/format.js'
-import _ from "lodash";
 import { getColor } from '@utils/colors.js'
 const RADIUSES_MINI_PIE = ['20%', '40%']
 const RIADUSES_PIE = ['50%', '75%']
@@ -227,42 +226,6 @@ export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyA
         }
     }).filter(item => !!item)
     return getSelectableBarChart(items, currentStage.value, tooltip, (value) => `${prettyAmount.value(value)} (${formatPercent(value / total)})`)
-}
-
-export const getNetOperatingProfitByNumberActorsData = (stages, actors, convertAmount, prettyAmount, currentStage) => {
-    const netOperatingProfitPerActorByStage = {};
-    stages.value.forEach(stage => {
-      const stageActors = actors.value.filter(actor => actor.stage === stage.name)
-      const subTotalOperatingProfit = _.sumBy(stageActors, actor => actor.netOperatingProfit || 0);
-      const subTotalNumberOfActors = _.sumBy(stageActors, actor => actor.numberOfActors || 0);
-      const partialStageActors = stageActors.map(actor => ({
-        name: actor.name,
-        netOperatingProfit: actor.netOperatingProfit,
-        numberOfActors: actor.numberOfActors,
-      }));
-
-      if (subTotalOperatingProfit !== 0 && subTotalNumberOfActors !== 0) {
-        netOperatingProfitPerActorByStage[stage.name] = {
-          profitPerActor: subTotalOperatingProfit / subTotalNumberOfActors,
-          stageActors: partialStageActors
-        }
-      }
-    });
-    let tooltip = {}
-
-    const items = Object.entries(netOperatingProfitPerActorByStage).map(([stageName, { profitPerActor, stageActors }]) => {
-      let toolTipValue = ""
-      for (const actor of stageActors) {
-          toolTipValue += `${actor.name}: net operating profit= ${prettyAmount.value(convertAmount.value(actor.netOperatingProfit))} -- #actors= ${formatNumber(actor.numberOfActors)}<br>`
-      }
-      tooltip[stageName] = toolTipValue
-      return {
-          name: stageName,
-          value: convertAmount.value(profitPerActor)
-      }
-    });
-
-    return getSelectableBarChart(items, currentStage.value, tooltip, prettyAmount.value, currentStage)
 }
 
 export const getPublicFinancesData = (stages, actors, convertAmount, prettyAmount, currentStage) => {

@@ -31,7 +31,7 @@
 import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
 import Ring from '@charts/Ring.vue'
-import { getNetOperatingProfitByNumberActorsData, getMiniBarChart } from '@/charts/charts'
+import { getSelectableBarChart, getMiniBarChart } from '@/charts/charts'
 import InfoTitle from '@typography/InfoTitle.vue'
 import { getColor } from '@utils/colors.js'
 import { useCurrencyUtils, formatNumber } from '@utils/format.js'
@@ -53,17 +53,27 @@ const handleDataChartSeriesClick = (event) => {
 }
 
 const { prettyAmount, convertAmount } = useCurrencyUtils(props)
-const { stages, actors } = useActorsAndStages(props)
+const { actors } = useActorsAndStages(props)
 
-const netOperatingProfitByNumberActorsData = computed(() =>
-  getNetOperatingProfitByNumberActorsData(
-    stages,
-    actors,
-    convertAmount,
-    prettyAmount,
-    selectedStage
-  )
-)
+const netOperatingProfitByNumberActorsData = computed(() => {
+  if (! props.studyData.metrics.eco.netOperatingProfitPerActor) { return; }
+
+  let tooltip = {}
+
+  const items = Object.entries(props.studyData.metrics.eco.netOperatingProfitPerActor).map(([stageName, { profitPerActor, stageActors }]) => {
+    let toolTipValue = ""
+    for (const actor of stageActors) {
+        toolTipValue += `${actor.name}: net operating profit= ${prettyAmount.value(convertAmount.value(actor.netOperatingProfit))} -- #actors= ${formatNumber(actor.numberOfActors)}<br>`
+    }
+    tooltip[stageName] = toolTipValue
+    return {
+        name: stageName,
+        value: convertAmount.value(profitPerActor)
+    }
+  });
+
+  return getSelectableBarChart(items, selectedStage.value, tooltip, prettyAmount.value, selectedStage);
+});
 
 const currentStageSplitData = computed(() => {
   const currentStageActors = actors.value.filter((actor) => actor.stage === selectedStage.value)
