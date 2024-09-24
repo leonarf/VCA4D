@@ -10,23 +10,18 @@ import { formatNumber, formatPercent } from '@utils/format.js'
 
 const props = defineProps({
     value: Number,
-    reverseColors: Boolean,
     valueType: {
       type: String,
       validator: (valueType) => ["percent", "number"].includes(valueType)
     }
 })
 
-const valueClass = computed(() => getPositiveOrNegativeClass(props.reverseColors ? -props.value : props.value))
-function getPositiveOrNegativeClass(value) {
-  if (!value) {
+const valueClass = computed(() => {
+  if (! props.value) {
       return "gray"
   }
-  if (value < 0) {
-      return "negative"
-  }
-  return "positive"
-}
+  return "blue";
+});
 
 const formatedValue = computed(() => {
   if (! props.value && typeof props.value !== "number") {
@@ -48,10 +43,7 @@ const formatedValue = computed(() => {
     .gray {
       @apply bg-gray-300 text-gray-500
     }
-    .negative {
-        background-color: #ffac9e;
-    }
-    .positive {
-        background-color: #94d99d;
+    .blue {
+        background-color: #A4CAFE;
     }
 </style>
