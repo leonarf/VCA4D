@@ -1,9 +1,32 @@
 <template>
   <ComparisonTitle title="Macro-Economic Indicators" :studies="studies" />
+
+  <ComparisonRow 
+    :studies="studies" 
+    title="Share of national GDP" 
+    subtitle="Value chain GDP divided by national GDP" 
+    :getValue="(study) => study.ecoData?.macroData?.valueAddedShareNationalGdp"
+  >
+    <template #default="{ value }">
+      <ComparisonDefaultCell :value="value" valueType="percent" />
+    </template>
+  </ComparisonRow>
+
+  <ComparisonRow 
+    :studies="studies" 
+    title="Share of agricultural GDP" 
+    subtitle="Value chain GDP divided by agricultural GDP" 
+    :getValue="(study) => study.ecoData?.macroData?.valueAddedShareAgriculturalGdp"
+  >
+    <template #default="{ value }">
+      <ComparisonDefaultCell :value="value" valueType="percent" />
+    </template>
+  </ComparisonRow>
+
   <ComparisonRow 
     :studies="studies" 
     title="Value added" 
-    subtitle="Definition of total value added" 
+    subtitle="Total value added of value chain" 
     :getValue="getTotalAddedValue"
   >
     <template #default="{ value }">
@@ -11,6 +34,18 @@
     </template>
   </ComparisonRow>
 
+  <ComparisonRow 
+    :studies="studies" 
+    title="Rate of Integration" 
+    subtitle="Below 70%: depends on imports" 
+    :getValue="(study) => study.ecoData?.macroData?.rateOfIntegration"
+  >
+    <template #default="{ value }">
+      <ComparisonDefaultCell :value="value" valueType="percent" />
+    </template>
+  </ComparisonRow>
+
+  <!-- To replace by jobs and net operating profit per actor dropdown -->
   <ComparisonExpandableRow
     :studies="studies" 
     title="Benefit/Cost ratio" 
@@ -22,59 +57,15 @@
       <ComparisonDefaultCell :value="value" valueType="percent" />
     </template>
   </ComparisonExpandableRow>
-  
-  <ComparisonRow 
-    :studies="studies" 
-    title="Share of agricultural GDP" 
-    subtitle="Value chain GDP divided by agricultural GDP" 
-    :getValue="(study) => study.ecoData?.macroData?.valueAddedShareAgriculturalGdp"
-  >
-    <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent" />
-    </template>
-  </ComparisonRow>
-  
-  <ComparisonRow 
-    :studies="studies" 
-    title="Share of national GDP" 
-    subtitle="Value chain GDP divided by national GDP" 
-    :getValue="(study) => study.ecoData?.macroData?.valueAddedShareNationalGdp"
-  >
-    <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent" />
-    </template>
-  </ComparisonRow>
-  
+
   <ComparisonRow 
     :studies="studies" 
     title="Gini Index" 
-    subtitle="-" 
+    subtitle="Ranges from equality (0) to inequality (1)" 
     :getValue="(study) => study.ecoData?.macroData?.giniIndex"
   >
     <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent" />
-    </template>
-  </ComparisonRow>
-  
-  <ComparisonRow 
-    :studies="studies" 
-    title="Rate Of Integration" 
-    subtitle="-" 
-    :getValue="(study) => study.ecoData?.macroData?.rateOfIntegration"
-  >
-    <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent" />
-    </template>
-  </ComparisonRow>
-  
-  <ComparisonRow 
-    :studies="studies" 
-    title="Nominal Protection Coefficient" 
-    subtitle="-" 
-    :getValue="(study) => study.ecoData?.macroData?.nominalProtectionCoefficient"
-  >
-    <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent" />
+      <ComparisonDefaultCell :value="value" valueType="number" />
     </template>
   </ComparisonRow>
 </template>
