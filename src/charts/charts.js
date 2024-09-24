@@ -1,5 +1,5 @@
 import { formatNumber, formatPercent } from '@utils/format.js'
-
+import _ from "lodash";
 import { getColor } from '@utils/colors.js'
 const RADIUSES_MINI_PIE = ['20%', '40%']
 const RIADUSES_PIE = ['50%', '75%']
@@ -230,26 +230,38 @@ export const getNetOperatingProfitData = (stages, actors, convertAmount, prettyA
 }
 
 export const getNetOperatingProfitByNumberActorsData = (stages, actors, convertAmount, prettyAmount, currentStage) => {
+    const netOperatingProfitPerActorByStage = {};
+    stages.value.forEach(stage => {
+      const stageActors = actors.value.filter(actor => actor.stage === stage.name)
+      const subTotalOperatingProfit = _.sumBy(stageActors, actor => actor.netOperatingProfit || 0);
+      const subTotalNumberOfActors = _.sumBy(stageActors, actor => actor.numberOfActors || 0);
+      const partialStageActors = stageActors.map(actor => ({
+        name: actor.name,
+        netOperatingProfit: actor.netOperatingProfit,
+        numberOfActors: actor.numberOfActors,
+      }));
+
+      if (subTotalOperatingProfit !== 0 && subTotalNumberOfActors !== 0) {
+        netOperatingProfitPerActorByStage[stage.name] = {
+          profitPerActor: subTotalOperatingProfit / subTotalNumberOfActors,
+          stageActors: partialStageActors
+        }
+      }
+    });
     let tooltip = {}
 
-    const items = stages.value.map(stage => {
-        const stageActors = actors.value.filter(actor => actor.stage === stage.name)
-        const subTotalOperatingProfit = stageActors
-            .reduce((res, actor) => res + actor.netOperatingProfit || 0, 0)
-        const subTotalNumberOfActors = stageActors
-            .reduce((res, actor) => res + actor.numberOfActors || 0, 0)
-        if (subTotalOperatingProfit !== 0 && subTotalNumberOfActors !== 0) {
-            let toolTipValue = ""
-            for (const actor of stageActors) {
-                toolTipValue += `${actor.name}: net operating profit= ${prettyAmount.value(convertAmount.value(actor.netOperatingProfit))} -- #actors= ${formatNumber(actor.numberOfActors)}<br>`
-            }
-            tooltip[stage.name] = toolTipValue
-            return {
-                name: stage.name,
-                value: convertAmount.value(subTotalOperatingProfit) / subTotalNumberOfActors
-            }
-        }
-    }).filter(item => !!item)
+    const items = Object.entries(netOperatingProfitPerActorByStage).map(([stageName, { profitPerActor, stageActors }]) => {
+      let toolTipValue = ""
+      for (const actor of stageActors) {
+          toolTipValue += `${actor.name}: net operating profit= ${prettyAmount.value(convertAmount.value(actor.netOperatingProfit))} -- #actors= ${formatNumber(actor.numberOfActors)}<br>`
+      }
+      tooltip[stageName] = toolTipValue
+      return {
+          name: stageName,
+          value: convertAmount.value(profitPerActor)
+      }
+    });
+
     return getSelectableBarChart(items, currentStage.value, tooltip, prettyAmount.value, currentStage)
 }
 
