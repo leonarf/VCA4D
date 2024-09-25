@@ -1,39 +1,6 @@
 <template>
   <ComparisonTitle title="Macro-Economic Indicators" :studies="studies" />
-  <ComparisonRow 
-    :studies="studies" 
-    title="Value added" 
-    subtitle="Definition of total value added" 
-    :getValue="getTotalAddedValue"
-  >
-    <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="number" />
-    </template>
-  </ComparisonRow>
 
-  <ComparisonExpandableRow
-    :studies="studies" 
-    title="Benefit/Cost ratio" 
-    subtitle="-" 
-    :getValue="study => study.metrics.eco?.benefitCostRatio.benefitCostRatio"
-    :getSubValues="getBenefitCostRatioByStage"
-  >
-    <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent" />
-    </template>
-  </ComparisonExpandableRow>
-  
-  <ComparisonRow 
-    :studies="studies" 
-    title="Share of agricultural GDP" 
-    subtitle="Value chain GDP divided by agricultural GDP" 
-    :getValue="(study) => study.ecoData?.macroData?.valueAddedShareAgriculturalGdp"
-  >
-    <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent" />
-    </template>
-  </ComparisonRow>
-  
   <ComparisonRow 
     :studies="studies" 
     title="Share of national GDP" 
@@ -44,42 +11,89 @@
       <ComparisonDefaultCell :value="value" valueType="percent" />
     </template>
   </ComparisonRow>
-  
+
   <ComparisonRow 
     :studies="studies" 
-    title="Gini Index" 
-    subtitle="-" 
-    :getValue="(study) => study.ecoData?.macroData?.giniIndex"
+    title="Share of agricultural GDP" 
+    subtitle="Value chain GDP divided by agricultural GDP" 
+    :getValue="(study) => study.ecoData?.macroData?.valueAddedShareAgriculturalGdp"
   >
     <template #default="{ value }">
       <ComparisonDefaultCell :value="value" valueType="percent" />
     </template>
   </ComparisonRow>
-  
+
   <ComparisonRow 
     :studies="studies" 
-    title="Rate Of Integration" 
-    subtitle="-" 
+    title="Value added" 
+    subtitle="Total value added of value chain" 
+    :getValue="getTotalAddedValue"
+  >
+    <template #default="{ value, studyData }">
+      <ComparisonDefaultCell
+        :value="value"
+        :studyData="studyData"
+        valueType="amount"
+        preferredCurrency="USD"
+      />
+    </template>
+  </ComparisonRow>
+
+  <ComparisonRow 
+    :studies="studies" 
+    title="Rate of Integration" 
+    subtitle="Below 70%: depends on imports" 
     :getValue="(study) => study.ecoData?.macroData?.rateOfIntegration"
   >
     <template #default="{ value }">
       <ComparisonDefaultCell :value="value" valueType="percent" />
     </template>
   </ComparisonRow>
-  
-  <ComparisonRow 
+
+  <!-- To replace by jobs and net operating profit per actor dropdown -->
+  <ComparisonExpandableRow
     :studies="studies" 
-    title="Nominal Protection Coefficient" 
-    subtitle="-" 
-    :getValue="(study) => study.ecoData?.macroData?.nominalProtectionCoefficient"
+    title="Jobs" 
+    subtitle="Total waged employement, excluding family work" 
+    :getValue="getTotalJobs"
+    :getSubValues="getJobsByStage"
   >
     <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="percent" />
+      <ComparisonDefaultCell :value="value" valueType="number" />
+    </template>
+  </ComparisonExpandableRow>
+
+  <ComparisonExpandableRow
+    :studies="studies" 
+    title="Net operating profit per producer" 
+    subtitle="Average net operating profit per actor at each stage" 
+    :getValue="getNetOperatingProfitPerProducer"
+    :getSubValues="getNetOperatingProfitForOtherStages"
+  >
+    <template #default="{ value, studyData }">
+      <ComparisonDefaultCell
+        :value="value"
+        valueType="amount"
+        :studyData="studyData"
+        preferredCurrency="USD"
+      />
+    </template>
+  </ComparisonExpandableRow>
+
+  <ComparisonRow 
+    :studies="studies" 
+    title="Gini Index" 
+    subtitle="Ranges from equality (0) to inequality (1)" 
+    :getValue="(study) => study.ecoData?.macroData?.giniIndex"
+  >
+    <template #default="{ value }">
+      <ComparisonDefaultCell :value="value" valueType="number" />
     </template>
   </ComparisonRow>
 </template>
 
 <script setup>
+import _ from "lodash";
 import { getTotalAddedValue } from '@utils/economics.js'
 import ComparisonTitle from './ComparisonTitle.vue';
 import ComparisonRow from './ComparisonRow.vue';
@@ -89,18 +103,48 @@ defineProps({
     studies: Array,
 })
 
-function getBenefitCostRatioByStage(studyData) {
-  if (! studyData.metrics.eco) { return {}; }
-  const stagesWithBenefit = studyData.metrics.eco?.benefitCostRatio.stages
-    .filter(stage => stage.netOperatingProfits !== 0);
+function getTotalJobs(studyData) {
+  const jobByStage = getJobsByStage(studyData);
+  if (_.isEmpty(jobByStage)) { return; }
 
-  const benefitCostRatioByStage = {};
-  stagesWithBenefit.forEach(stage => {
-    benefitCostRatioByStage[stage.name] = stage.benefitCostRatio;
-  });
-  return benefitCostRatioByStage;
+  return _.sumBy(Object.values(jobByStage));
+}
+function getJobsByStage(studyData) {
+  if (! studyData.metrics.eco?.employment?.employmentByStage) { return {}; }
+
+  const employmentByStage = studyData.metrics.eco.employment?.employmentByStage;
+  if (! employmentByStage) { return {}; }
+
+  const jobsByStage = {};
+  Object.keys(employmentByStage).forEach(stage => {
+    if (! employmentByStage[stage].total) { return; }
+    jobsByStage[stage] = employmentByStage[stage].total;
+  })
+  return jobsByStage
 }
 
+function getNetOperatingProfitPerProducer(studyData) {
+  if (! studyData.metrics.eco?.netOperatingProfitPerActor) { return null; }
+
+  return studyData.metrics.eco.netOperatingProfitPerActor?.Producers?.profitPerActor;
+}
+
+function getNetOperatingProfitForOtherStages(studyData) {
+  if (! studyData.metrics.eco?.netOperatingProfitPerActor) { return {}; }
+
+  const netOperatingProfitForOtherStages = {};
+  const nonProducerStages = Object.keys(studyData.metrics.eco?.netOperatingProfitPerActor).filter(stageName => stageName !== "Producers");
+  nonProducerStages.forEach(stageName => {
+    netOperatingProfitForOtherStages[buildPerStageName(stageName)] = studyData.metrics.eco.netOperatingProfitPerActor?.[stageName]?.profitPerActor;
+  })
+  return netOperatingProfitForOtherStages;
+}
+
+function buildPerStageName(stageName) {
+  const lowercaseStageName = _.lowerCase(stageName);
+  const singularStageName = lowercaseStageName.replace(/s$/, "");
+  return `Per ${singularStageName}`;
+}
 </script>
 
 <style lang="scss">

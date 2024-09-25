@@ -6,27 +6,34 @@
 
 <script setup>
 import { computed } from 'vue';
-import { formatNumber, formatPercent } from '@utils/format.js'
+import { formatNumber, formatPercent, useCurrencyUtils } from '@utils/format.js'
+import { isCurrencySupported } from "@utils/currency";
 
 const props = defineProps({
     value: Number,
-    reverseColors: Boolean,
+    studyData: Object,
+    preferredCurrency: String,
     valueType: {
       type: String,
-      validator: (valueType) => ["percent", "number"].includes(valueType)
+      validator: (valueType) => ["amount", "percent", "number"].includes(valueType)
     }
 })
 
-const valueClass = computed(() => getPositiveOrNegativeClass(props.reverseColors ? -props.value : props.value))
-function getPositiveOrNegativeClass(value) {
-  if (!value) {
-      return "gray"
-  }
-  if (value < 0) {
-      return "negative"
-  }
-  return "positive"
-}
+const valueClass = computed(() => {
+  if (! props.value) { return "gray" }
+  return "blue";
+});
+
+const displayCurrency = computed(() => {
+  if(props.valueType !== "amount") { return null; }
+  
+  return isCurrencySupported(props.studyData.targetCurrency) ? props.preferredCurrency : props.studyData.targetCurrency;
+});
+
+const { prettyAmount, convertAmount } = useCurrencyUtils({
+  studyData: props.studyData,
+  currency: displayCurrency.value
+});
 
 const formatedValue = computed(() => {
   if (! props.value && typeof props.value !== "number") {
@@ -38,20 +45,21 @@ const formatedValue = computed(() => {
       return formatPercent(props.value);
     case "number":
       return formatNumber(props.value);
+    case "amount":
+      return prettyAmount.value(convertAmount.value(props.value));
     default:
       throw new Error("Unrecognized valueType");
   }
 });
+
+
 </script>
 
 <style scoped lang="scss">
     .gray {
       @apply bg-gray-300 text-gray-500
     }
-    .negative {
-        background-color: #ffac9e;
-    }
-    .positive {
-        background-color: #94d99d;
+    .blue {
+        background-color: #A4CAFE;
     }
 </style>

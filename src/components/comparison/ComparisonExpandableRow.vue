@@ -9,8 +9,8 @@
     :expanded="expanded"
     @toggle-expand="toggleExpand()"
   >
-    <template #default="{ value }">
-      <slot :value="value" />
+    <template #default="{ value, studyData }">
+      <slot :value="value" :studyData="studyData" />
     </template>
   </ComparisonRow>
   <ComparisonRow
@@ -22,8 +22,8 @@
     :title="subKey"
     :getValue="study => getSubValues(study)[subKey]"
   >
-    <template #default="{ value }">
-      <slot :value="value" />
+    <template #default="{ value, studyData }">
+      <slot :value="value" :studyData="studyData" />
     </template>
   </ComparisonRow>
 </template>
