@@ -29,8 +29,13 @@
     subtitle="Total value added of value chain" 
     :getValue="getTotalAddedValue"
   >
-    <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="number" />
+    <template #default="{ value, studyData }">
+      <ComparisonDefaultCell
+        :value="value"
+        :studyData="studyData"
+        valueType="amount"
+        currency="USD"
+      />
     </template>
   </ComparisonRow>
 
