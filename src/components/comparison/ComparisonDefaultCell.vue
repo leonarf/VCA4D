@@ -25,7 +25,7 @@ const valueClass = computed(() => {
 });
 
 const displayCurrency = computed(() => {
-  if(props.valueType !== "amount") { return "USD"; }
+  if(props.valueType !== "amount") { return null; }
   
   return isCurrencySupported(props.studyData.targetCurrency) ? props.preferredCurrency : props.studyData.targetCurrency;
 });
