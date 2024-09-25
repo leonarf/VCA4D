@@ -29,7 +29,7 @@ const props = defineProps({
 
 const availableImpacts = computed(() => props.studies.reduce((arr, study) => arr.concat(study.acvData?.impacts), [])
 .filter(item => !!item)
-.filter(item => item.unit !== 'Pt')
+.filter(item => item.unit === 'Pt')
 )
 
 const impacts = computed(() => ACVImpacts.filter(item => availableImpacts.value.map(availableImpact => availableImpact.name).includes(item.name)))
@@ -45,7 +45,7 @@ const getImpactValue = (impact, study) => {
     for (const { name, volume} of valueChains) {
         const totalChainPerT = study.acvData.impacts
             .filter(i => i.name === impact.name)
-            .filter(i => i.unit !== 'Pt')
+            .filter(i => i.unit === 'Pt')
             .reduce((arr, item) => arr.concat(item.values), [])
             .filter(val => val.valuechain_name === name)
             .map(val => val.value * volume).reduce((s, item) => s + item, 0)
