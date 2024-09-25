@@ -66,13 +66,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 10576245.9997262,
-          "totalFemale": 24677907.3326944,
-          "totalTemp": 35254153.3324206,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 35254153.3324206
+          "skilledFemale": 0
         }
       },
       {
@@ -91,13 +85,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 1102239.04230467,
-          "totalFemale": 2571891.09871091,
-          "totalTemp": 3674130.14101558,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 3674130.14101558
+          "skilledFemale": 0
         }
       },
       {
@@ -116,13 +104,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 0,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 152727.266775145,
-          "totalFemale": 356363.622475337,
-          "totalTemp": 509090.88925048197,
-          "totalSkilled": 0,
-          "totalUnskilled": 0,
-          "total": 509090.88925048197
+          "skilledFemale": 0
         }
       },
       {
@@ -141,13 +123,7 @@
           "unskilledMale": 80397.9840488223,
           "unskilledFemale": 0,
           "skilledMale": 40198.9920244112,
-          "skilledFemale": 0,
-          "totalMale": 401989.9202441115,
-          "totalFemale": 0,
-          "totalTemp": 281392.944170878,
-          "totalSkilled": 40198.9920244112,
-          "totalUnskilled": 80397.9840488223,
-          "total": 401989.9202441115
+          "skilledFemale": 0
         }
       },
       {
@@ -166,13 +142,7 @@
           "unskilledMale": 161863.896036709,
           "unskilledFemale": 161863.896036709,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 161863.896036709,
-          "totalFemale": 1456775.064330379,
-          "totalTemp": 1294911.16829367,
-          "totalSkilled": 0,
-          "totalUnskilled": 323727.792073418,
-          "total": 1618638.960367088
+          "skilledFemale": 0
         }
       },
       {
@@ -191,13 +161,7 @@
           "unskilledMale": 633920.626402347,
           "unskilledFemale": 633920.626402347,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 633920.626402347,
-          "totalFemale": 5705285.637621127,
-          "totalTemp": 5071365.01121878,
-          "totalSkilled": 0,
-          "totalUnskilled": 1267841.252804694,
-          "total": 6339206.264023474
+          "skilledFemale": 0
         }
       },
       {
@@ -216,13 +180,7 @@
           "unskilledMale": 15620.8039660076,
           "unskilledFemale": 15620.8039660076,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 15620.8039660076,
-          "totalFemale": 140587.2356940686,
-          "totalTemp": 124966.431728061,
-          "totalSkilled": 0,
-          "totalUnskilled": 31241.6079320152,
-          "total": 156208.0396600762
+          "skilledFemale": 0
         }
       },
       {
@@ -241,13 +199,7 @@
           "unskilledMale": 24993.2863456122,
           "unskilledFemale": 24993.2863456122,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 24993.2863456122,
-          "totalFemale": 224939.5771105102,
-          "totalTemp": 199946.290764898,
-          "totalSkilled": 0,
-          "totalUnskilled": 49986.5726912244,
-          "total": 249932.8634561224
+          "skilledFemale": 0
         }
       },
       {
@@ -266,13 +218,7 @@
           "unskilledMale": 52704.126172621,
           "unskilledFemale": 92232.2208020867,
           "skilledMale": 26352.0630863105,
-          "skilledFemale": 13176.0315431553,
-          "totalMale": 118584.2838883972,
-          "totalFemale": 144936.34697470767,
-          "totalTemp": 79056.1892589314,
-          "totalSkilled": 39528.0946294658,
-          "totalUnskilled": 144936.3469747077,
-          "total": 263520.6308631049
+          "skilledFemale": 13176.0315431553
         }
       },
       {
@@ -291,13 +237,7 @@
           "unskilledMale": 52704.1261726209,
           "unskilledFemale": 92232.2208020866,
           "skilledMale": 26352.0630863104,
-          "skilledFemale": 13176.0315431552,
-          "totalMale": 118584.283888397,
-          "totalFemale": 144936.3469747075,
-          "totalTemp": 79056.1892589314,
-          "totalSkilled": 39528.0946294656,
-          "totalUnskilled": 144936.3469747075,
-          "total": 263520.6308631045
+          "skilledFemale": 13176.0315431552
         }
       },
       {
@@ -316,13 +256,7 @@
           "unskilledMale": 90351.4568051323,
           "unskilledFemale": 0,
           "skilledMale": 45175.7284025662,
-          "skilledFemale": 0,
-          "totalMale": 451757.2840256615,
-          "totalFemale": 0,
-          "totalTemp": 316230.098817963,
-          "totalSkilled": 45175.7284025662,
-          "totalUnskilled": 90351.4568051323,
-          "total": 451757.2840256615
+          "skilledFemale": 0
         }
       },
       {
@@ -341,13 +275,7 @@
           "unskilledMale": 48208.7131190989,
           "unskilledFemale": 0,
           "skilledMale": 16069.5710396996,
-          "skilledFemale": 0,
-          "totalMale": 160695.7103969963,
-          "totalFemale": 0,
-          "totalTemp": 96417.4262381978,
-          "totalSkilled": 16069.5710396996,
-          "totalUnskilled": 48208.7131190989,
-          "total": 160695.7103969963
+          "skilledFemale": 0
         }
       },
       {
@@ -366,13 +294,7 @@
           "unskilledMale": 0,
           "unskilledFemale": 547880.325764578,
           "skilledMale": 0,
-          "skilledFemale": 0,
-          "totalMale": 0,
-          "totalFemale": 2739401.628822888,
-          "totalTemp": 2191521.30305831,
-          "totalSkilled": 0,
-          "totalUnskilled": 547880.325764578,
-          "total": 2739401.628822888
+          "skilledFemale": 0
         }
       },
       {
@@ -394,6 +316,12 @@
         "receivedAddedValue": 0
       }
     ],
+    "consistencyDisplay": {
+      "employment": {
+        "contractRatio": true,
+        "genderRatio": true
+      }
+    },
     "flows": [
       {
         "sellerActorName": "Small farm",
