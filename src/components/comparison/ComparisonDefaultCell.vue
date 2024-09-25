@@ -6,13 +6,13 @@
 
 <script setup>
 import { computed } from 'vue';
-import { formatNumber, formatPercent } from '@utils/format.js'
-import { useCurrencyUtils } from '../../utils/format';
+import { formatNumber, formatPercent, useCurrencyUtils } from '@utils/format.js'
+import { isCurrencySupported } from "@utils/currency";
 
 const props = defineProps({
     value: Number,
     studyData: Object,
-    currency: String,
+    preferredCurrency: String,
     valueType: {
       type: String,
       validator: (valueType) => ["amount", "percent", "number"].includes(valueType)
@@ -20,13 +20,20 @@ const props = defineProps({
 })
 
 const valueClass = computed(() => {
-  if (! props.value) {
-      return "gray"
-  }
+  if (! props.value) { return "gray" }
   return "blue";
 });
 
-const { prettyAmount, convertAmount } = useCurrencyUtils(props)
+const displayCurrency = computed(() => {
+  if(props.valueType !== "amount") { return "USD"; }
+  
+  return isCurrencySupported(props.studyData.targetCurrency) ? props.preferredCurrency : props.studyData.targetCurrency;
+});
+
+const { prettyAmount, convertAmount } = useCurrencyUtils({
+  studyData: props.studyData,
+  currency: displayCurrency.value
+});
 
 const formatedValue = computed(() => {
   if (! props.value && typeof props.value !== "number") {
@@ -44,6 +51,8 @@ const formatedValue = computed(() => {
       throw new Error("Unrecognized valueType");
   }
 });
+
+
 </script>
 
 <style scoped lang="scss">

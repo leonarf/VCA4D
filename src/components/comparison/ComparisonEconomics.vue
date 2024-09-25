@@ -34,7 +34,7 @@
         :value="value"
         :studyData="studyData"
         valueType="amount"
-        currency="USD"
+        preferredCurrency="USD"
       />
     </template>
   </ComparisonRow>
@@ -75,7 +75,7 @@
         :value="value"
         valueType="amount"
         :studyData="studyData"
-        currency="USD"
+        preferredCurrency="USD"
       />
     </template>
   </ComparisonExpandableRow>
