@@ -38,7 +38,7 @@ const getUnitImpact = (impactName) => availableImpacts.value.find(impact => impa
 
 const getImpactValue = (impact, study) => {
     if (!study.acvData) {
-        return 0
+        return null;
     }
     const valueChains = study.acvData.valuechains
     let total = 0
