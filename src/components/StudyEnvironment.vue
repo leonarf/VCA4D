@@ -99,8 +99,8 @@ const perUnits = [
   { label: "Impact per functional unit", value: "functional unit", subtitle: "Compare best performing production systems" }
 ]
 
-const selectedUnit = ref(units[0].value);
-const selectedPerUnit = ref(perUnits[0].value);
+const selectedUnit = ref(units[1].value);
+const selectedPerUnit = ref(perUnits[1].value);
 
 </script>
 

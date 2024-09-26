@@ -1,5 +1,5 @@
 import { computed } from 'vue';
-import { getCurrencySymbol, getValueInCurrency } from '@utils/currency.js'
+import { getCurrencySymbol, getValueInCurrency, USER_LOCALE } from '@utils/currency.js'
 
 export const formatNumber = (value) => {
   if (typeof value !== "number" || isNaN(value)) {
@@ -13,14 +13,18 @@ export const formatNumber = (value) => {
     numberDigits = 1
     divisor = 1e9
     textUnit = 'billion'
+  } else if (absoluteValue > 100e6) {
+    numberDigits = 0
+    divisor = 1e6
+    textUnit = 'million'
   } else if (absoluteValue > 1e6) {
     numberDigits = 1
     divisor = 1e6
     textUnit = 'million'
   } else if (absoluteValue > 1e3) {
-    numberDigits = 1
-    divisor = 1e3
-    textUnit = 'k'
+    numberDigits = 0
+    divisor = 1
+    textUnit = ''
   } else if (absoluteValue > 100) {
     numberDigits = 0
     divisor = 1
@@ -34,9 +38,9 @@ export const formatNumber = (value) => {
     divisor = 1
     textUnit = ''
   } else if (absoluteValue < 1) {
-    return `${(value).toLocaleString('en', { maximumSignificantDigits: 2 })}`
+    return `${(value).toLocaleString(USER_LOCALE, { maximumSignificantDigits: 2 })}`
   }
-  return `${(value / divisor).toLocaleString('en', { maximumFractionDigits: numberDigits })} ${textUnit}`
+  return `${(value / divisor).toLocaleString(USER_LOCALE, { maximumFractionDigits: numberDigits })} ${textUnit}`
 }
 
 export const formatPercent = (amount) => {
