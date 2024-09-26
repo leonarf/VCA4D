@@ -1,11 +1,23 @@
 import { CHANGE_RATES } from '@utils/rateChanges.js'
 
+const getUserLocale = () => {
+  if (navigator.languages && navigator.languages.length) {
+    console.warn("UserLocale is", navigator.languages[0])
+    return navigator.languages[0]
+  }
+  else {
+    console.error("UserLocale non défini parce que 'navigator.languages'=", navigator.languages)
+    return 'en'
+  }
+}
+export const USER_LOCALE = getUserLocale()
+
 export const KNOWN_CURRENCIES = ["USD", ...Object.keys(CHANGE_RATES)]
 
 let CurrencyFormatters = {}
 const getCurrencyFormatter = (currency) => {
   if (!(currency in CurrencyFormatters)) {
-    CurrencyFormatters[currency] = new Intl.NumberFormat(undefined, {
+    CurrencyFormatters[currency] = new Intl.NumberFormat(USER_LOCALE, {
       style: "currency",
       currency,
       minimumFractionDigits: 0,
@@ -14,7 +26,7 @@ const getCurrencyFormatter = (currency) => {
   return CurrencyFormatters[currency]
 }
 
-const currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
+const currencyNames = new Intl.DisplayNames([USER_LOCALE], { type: "currency" });
 export const getCurrencyName = (currencyISOCode) => {
   return currencyNames.of(currencyISOCode)
 }
