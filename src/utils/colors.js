@@ -9,10 +9,10 @@ const AVAILABLE_COLORS = {
   LightGrey : "#E1DFDF",
   Bronze : "#E5D08F",
   LightBronze : "#E3D4B6",
-  BadScoreRed: "#FFAC9E",
-  LowScoreOrange: "#FEC875",
-  SubstantialScoreYellow: "#D7E275",
-  HighScoreGreen : "#94D99D",
+  BadScoreRed: "#ff8c8c",
+  LowScoreOrange: "#ffdd75",
+  SubstantialScoreYellow: "#aee376",
+  HighScoreGreen : "#67db9c",
 }
 
 const FixedColorsMapping = {
