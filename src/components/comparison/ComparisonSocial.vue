@@ -8,11 +8,12 @@
     :getValue="(study) => getOptionalSocialAverageGroup(study.socialData?.[index])"
     :getSubValues="(study) => getSocialAverageSubGroups(study.socialData?.[index])"
   >
-    <template #default="{ value }">
+    <template #default="{ value, isSubRow }">
       <div class="tag-container mx-auto my-2">
         <Tag
           v-if="value"
           class="tag"
+          :lightVersion="isSubRow"
           :scale="value"
           :appreciation="getAppreciation(value)"
         />
@@ -75,7 +76,7 @@ function getSocialAverageSubGroups(socialImpact) {
 
 <style scoped lang="scss">
 .tag-container {
-    margin: 0.5rem auto;
+    margin: 0.25rem auto;
     min-width: 200px;
     .tag {
         max-width: 80%;
