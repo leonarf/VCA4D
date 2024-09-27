@@ -26,7 +26,7 @@ const getCurrencyFormatter = (currency) => {
   return CurrencyFormatters[currency]
 }
 
-const currencyNames = new Intl.DisplayNames([USER_LOCALE], { type: "currency" });
+const currencyNames = new Intl.DisplayNames(['en'], { type: "currency" });
 export const getCurrencyName = (currencyISOCode) => {
   return currencyNames.of(currencyISOCode)
 }
