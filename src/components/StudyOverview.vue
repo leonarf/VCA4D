@@ -28,7 +28,7 @@
       >
         <h3>Inclusiveness</h3>
         <p>
-          Learn more about: Employment, Profit distribution among actors and impact of governance on income distribution
+          Learn more about profit distribution among actors, jobs created and gender inclusiveness
         </p>
       </div>
       <div
@@ -38,9 +38,9 @@
       >
         <h3>Social sustainability</h3>
         <p>
-          Learn more about <em>Working conditions</em>, <em>Land and water rights</em>,
-          <em>Gender equality</em>, <em>Food & nutrition security</em>, <em>Social capital</em> and
-          <em>Living conditions</em>
+          Learn more about Working conditions, Land and water rights,
+          Gender equality, Food & nutrition security, Social capital and
+          Living conditions
         </p>
       </div>
       <div
@@ -54,29 +54,25 @@
         </p>
       </div>
     </section>
-
-    <PdfSection
-      v-if="studyUrls.briefPdf"
-      :studyBriefUrl="studyUrls.briefPdf"
-    />
     <section v-if="studyData && studyData.ecoData">
       <Sankey :studyData="studyData" />
     </section>
+    <PdfSection v-if="studyUrls.briefPdf" :studyBriefUrl="studyUrls.briefPdf" />
   </article>
 </template>
 
 <script setup>
-import { defineEmits } from "vue";
+import { defineEmits } from 'vue'
 import StagesDescription from '@/components/StagesDescription.vue'
 import SectionTitle from './typography/SectionTitle.vue'
-import PdfSection from './pdf/PdfSection.vue';
+import PdfSection from './pdf/PdfSection.vue'
 import Sankey from './charts/Sankey.vue'
 
 defineProps({
   studyData: Object,
   studyUrls: Object
-});
-const emits = defineEmits(["select-view"]);
+})
+const emits = defineEmits(['select-view'])
 </script>
 
 <style scoped lang="scss">

@@ -1,7 +1,7 @@
 <template>
   <Skeleton>
     <div>
-      <h1 class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48">Compare VCA4D value chain studies</h1>
+      <h1 class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48">Compare value chains</h1>
       <div v-if="studies.length > 0" class="py-1 pb-16 px-4 sm:px-8 md:px-12 lg:px-40 xl:px-48 studies-wrapper">
         <StudiesComparison
           :studies="studies"

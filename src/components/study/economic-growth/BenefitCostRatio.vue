@@ -5,7 +5,7 @@
   </QuestionTitle>
   <InfoTitle
     title="Benefit/Cost Ratio (%)"
-    information="To do"
+    information="The benefit-cost ratio is an indicator of profitability. It compares the benefits generated from an actor of the value chain with all of their costs. It therefore indicates if the actor generates incremental value."
   />
   <template v-if="studyData">
     <BarChart :options="populatedBarChartData" @chart-series-click="handleDataChartSeriesClick" />
@@ -54,17 +54,17 @@ const { prettyAmount, convertAmount } = useCurrencyUtils(props)
 
 const populatedBarChartData = computed(() => {
   let tooltip = {}
-  const items = props.studyData.metrics.eco.benefitCostRatio.stages 
-  .filter(stage => stage.netOperatingProfits !== 0)
-  .map((stage) => {
-    tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(stage.netOperatingProfits))}<br>
+  const items = props.studyData.metrics.eco.benefitCostRatio.stages
+    .filter((stage) => stage.netOperatingProfits !== 0)
+    .map((stage) => {
+      tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(stage.netOperatingProfits))}<br>
           Total costs = ${prettyAmount.value(convertAmount.value(stage.totalCosts))}<br>
           Benefit/Cost Ratio = ${formatPercent(stage.benefitCostRatio)}`
-    return {
-      name: stage.name,
-      value: stage.benefitCostRatio
-    }
-  })
+      return {
+        name: stage.name,
+        value: stage.benefitCostRatio
+      }
+    })
 
   const ret = getSelectableBarChart(items, selectedStage.value, tooltip, formatPercent)
   return {
@@ -94,7 +94,6 @@ const currentStageBenefitCostRatioData = computed(() => {
   })
   return getMiniBarChart(items, tooltip, formatPercent, getColor(selectedStage.value))
 })
-
 </script>
 
 <style scoped lang="scss">

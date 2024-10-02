@@ -1,8 +1,8 @@
 <template>
   <div>
     <a class="add-studies-button" @click="opened = true">
-      <Svg class="plus" :svg="PlusLogo" />
-      <div>Add studies</div>
+      <Svg class="plus" :svg="PlusLogo"></Svg>
+      <div>Compare value chains</div>
     </a>
     <Modal
       :opened="opened"
