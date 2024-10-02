@@ -19,7 +19,7 @@
       </RouterLink>
     </p>
 
-    <QuestionTitle>How is <strong>income</strong> distributed across actors of the value chain?</QuestionTitle>
+    <QuestionTitle>How is <strong>income</strong> distributed among actors in the value chain?</QuestionTitle>
     <p>
       Income distribution is a tangible indicator of how households and businesses take advantage of
       the value chain operations. The share of Net Operating Profits across value chain actors helps
@@ -49,12 +49,12 @@
       <EmploymentDistributionJobs :studyData="studyData" />
     </div>
 
-    <br>
+    <br />
 
     <QuestionTitle>
-      What is the impact of the <strong>governance system</strong> on the income
-      distribution?
+      What is the impact of the <strong>governance system</strong> on the income distribution?
     </QuestionTitle>
+    <QuestionTitle>What percentage of the final price does the producer get?</QuestionTitle>
     <InfoTitle
       title="Share of farm gate price in final price"
       information="It is the share of domestic consumer price or FOB export price, in the case of export, in the final consumer price abroad (if possible)."
@@ -69,7 +69,7 @@
       />
       <NoDataBadge v-else />
     </div>
-    <br>
+    <QuestionTitle>How equal is the income distribution along the value chain?</QuestionTitle>
     <InfoTitle
       title="Gini index"
       information="

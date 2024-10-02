@@ -1,13 +1,13 @@
 import { computed } from "vue";
 
 export function useActorsAndStages(props) {
-    const stages = computed(() => props.studyData.ecoData.stages);
-    const actors = computed(() => props.studyData.ecoData.actors);
+  const stages = computed(() => props.studyData.ecoData.stages);
+  const actors = computed(() => props.studyData.ecoData.actors);
 
-    return {
-        stages,
-        actors,
-    };
+  return {
+    stages,
+    actors,
+  };
 }
 
 const average = (array) => array.reduce((a, b) => a + b) / array.length
@@ -31,6 +31,7 @@ export const ACVImpacts = [
     },
     {
         name: "Human health",
+        label: "Human health hazard",
         children: ["Global warming, Human health",
             "Stratospheric ozone depletion",
             "Ionizing radiation",
@@ -44,7 +45,7 @@ export const ACVImpacts = [
     },
     {
         name: "Ecosystems",
-        label: "Ecosystem Quality",
+        label: "Ecosystem degradation",
         children: ["Global warming. Terrestrial ecosystems",
             "Global warming. Freshwater ecosystems",
             "Ozone formation. Terrestrial ecosystems",
@@ -62,7 +63,7 @@ export const ACVImpacts = [
     },
     {
         name: "Resources",
-        label: "Natural Resources",
+        label: "Resources depletion",
         children: ["Mineral resource scarcity",
             "Fossil resource scarcity"
         ],

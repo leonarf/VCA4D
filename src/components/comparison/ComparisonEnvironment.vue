@@ -56,8 +56,13 @@ function getValuesByImpact(study, sumTotalPerYear = false) {
   impacts.value.forEach((impact) => {
     const impactValue = getImpactValue(impact, study, sumTotalPerYear);
     if (_.isNull(impactValue)) { return; }
-
-    valuesByImpact[impact.name] = impactValue;
+    var label = ACVImpacts.find(item => item.name == impact.name).label
+    if (label) {
+      valuesByImpact[label] = impactValue;
+    }
+    else {
+      valuesByImpact[impact.name] = impactValue;
+    }
   });
   return valuesByImpact;
 }

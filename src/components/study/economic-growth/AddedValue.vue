@@ -24,7 +24,7 @@
     />
   </div>
 
-  <QuestionTitle>How dependent is the value chain on imports?</QuestionTitle>
+  <QuestionTitle>How independent from imports is the value chain?</QuestionTitle>
 
   <InfoTitle
     title="Rate of integration"
@@ -47,7 +47,7 @@
   <div v-else class="mt-4">
     <NoDataBadge />
   </div>
-  <QuestionTitle>Who <strong>creates and receives</strong> direct value added?</QuestionTitle>
+  <QuestionTitle>Who <strong>creates and receives</strong> the direct value added of the value chain?</QuestionTitle>
   <InfoTitle
     title="Direct Value Added"
     information="

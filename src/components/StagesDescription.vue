@@ -7,12 +7,10 @@
         :key="step.name"
         class="text-[#303030] text-center flex flex-col space-y-2 items-center max-w-[200px]"
       >
-        <Svg
-          class="stage-picto"
-          :svg="getStepLogo(step)"
-        />
+        <Svg class="stage-picto" :svg="getStepLogo(step)"></Svg>
         <div class="font-semibold">{{ getStageLabel(step.name) }}</div>
-        <p class="text-center">{{ step.description || 'Pas de description' }}</p>
+        <p v-if="step.description" class="text-center">{{ step.description }}</p>
+        <p v-else><em>No description available</em></p>
       </div>
     </div>
   </div>
@@ -32,7 +30,7 @@ import Svg from '@components/Svg.vue'
 import { STAGES as DISPLAY_STAGES, getStageLabel } from '@utils/stages'
 
 const props = defineProps({
-    stagesDescription: Object
+  stagesDescription: Object
 })
 
 const populatedSteps = computed(() => {
