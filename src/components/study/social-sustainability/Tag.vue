@@ -6,12 +6,11 @@
 
 <script setup>
 import { computed } from 'vue';
-import { getSocialScoreColor } from '@utils/social.js'
+import { getSocialScoreColor, getSocialScoreLabel } from '@utils/social.js'
 
 const props = defineProps({
   scale: Number,
-  lightVersion: Boolean,
-  appreciation: String
+  lightVersion: Boolean
 });
 
 const scaleColor = computed(() => getSocialScoreColor(props.scale))
@@ -22,6 +21,8 @@ const backgroundColor = computed(() => {
 const border = computed(() => {
   return props.lightVersion ? `${scaleColor.value} solid 2px` : "none"
 })
+
+const appreciation = computed(() => getSocialScoreLabel(props.scale))
 
 </script>
 

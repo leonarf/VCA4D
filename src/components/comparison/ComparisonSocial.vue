@@ -15,7 +15,6 @@
           class="tag"
           :lightVersion="isSubRow"
           :scale="value"
-          :appreciation="getAppreciation(value)"
         />
       </div>
     </template>
@@ -40,21 +39,6 @@ const SOCIAL_PARTS = [
     "Social capital",
     "Living conditions",
 ]
-
-const getAppreciation = (scale) => {
-    if (scale === 1) {
-        return 'Poor'
-    }
-    if (scale === 2) {
-        return 'Rather Poor'
-    }
-    if (scale === 3) {
-        return 'Rather Good'
-    }
-    if (scale === 4) {
-        return 'Good'
-    }
-}
 
 function getOptionalSocialAverageGroup(socialImpact) {
   if (! socialImpact) { return null; }
