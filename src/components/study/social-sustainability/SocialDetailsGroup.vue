@@ -28,7 +28,7 @@
 <script setup>
 import { ref } from 'vue';
 import Tag from './Tag.vue'
-import { getSocialScoreColor } from '@utils/colors.js'
+import { getSocialScoreColor } from '@utils/social.js'
 
 defineProps({
     group: Object

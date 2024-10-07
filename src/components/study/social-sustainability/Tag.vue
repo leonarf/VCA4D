@@ -6,7 +6,7 @@
 
 <script setup>
 import { computed } from 'vue';
-import { getSocialScoreColor } from '@utils/colors.js'
+import { getSocialScoreColor } from '@utils/social.js'
 
 const props = defineProps({
   scale: Number,

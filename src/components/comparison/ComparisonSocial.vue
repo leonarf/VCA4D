@@ -24,7 +24,7 @@
 
 <script setup>
 
-import { getSocialAverageGroup } from '@utils/misc.js'
+import { getSocialAverageGroup } from '@utils/social.js'
 import Tag from '@components/study/social-sustainability/Tag.vue';
 import ComparisonTitle from './ComparisonTitle.vue';
 import ComparisonExpandableRow from './ComparisonExpandableRow.vue';

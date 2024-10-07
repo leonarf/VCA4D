@@ -4,8 +4,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import { getSocialAverageGroup } from '@utils/misc.js'
-import { getSocialScoreColor } from '@utils/colors.js'
+import { getSocialAverageGroup, getSocialScoreColor } from '@utils/social.js'
 
 import Radar from '@charts/Radar.vue'
 const props = defineProps({

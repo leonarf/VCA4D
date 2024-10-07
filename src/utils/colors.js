@@ -9,10 +9,6 @@ const AVAILABLE_COLORS = {
   LightGrey : "#E1DFDF",
   Bronze : "#E5D08F",
   LightBronze : "#E3D4B6",
-  BadScoreRed: "#ff8c8c",
-  LowScoreOrange: "#ffdd75",
-  SubstantialScoreYellow: "#aee376",
-  HighScoreGreen : "#67db9c",
 }
 
 const FixedColorsMapping = {
@@ -46,21 +42,6 @@ function getEnvironmentDynamicColor(itemName) {
     var pickedColorName = Object.keys(AVAILABLE_COLORS)[nextColorCode]
     DynamicColorsMapping[itemName] = AVAILABLE_COLORS[pickedColorName]
     return DynamicColorsMapping[itemName]
-  }
-}
-
-export const getSocialScoreColor = (value) => {
-  if (value < 1.5) {
-    return AVAILABLE_COLORS["BadScoreRed"]
-  }
-  else if (value < 2.5) {
-    return AVAILABLE_COLORS["LowScoreOrange"]
-  }
-  else if (value < 3.5) {
-    return AVAILABLE_COLORS["SubstantialScoreYellow"]
-  }
-  else {
-    return AVAILABLE_COLORS["HighScoreGreen"]
   }
 }
 
