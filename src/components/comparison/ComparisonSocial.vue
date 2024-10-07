@@ -11,7 +11,6 @@
     <template #default="{ value, isSubRow }">
       <div class="tag-container mx-auto my-2">
         <Tag
-          v-if="value"
           class="tag"
           :lightVersion="isSubRow"
           :scale="value"
