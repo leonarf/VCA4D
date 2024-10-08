@@ -1,6 +1,6 @@
 <template>
   <section>
-    <QuestionTitle>By <strong>product</strong></QuestionTitle>
+    <h3 class="section-title">By <strong>product</strong></h3>
     <template v-for="(category) in categories" :key="category.id">
       <ByCategory :studies="filterStudiesByCategory(category.id)" :countries="countries" :category="category" />
     </template>
@@ -8,7 +8,6 @@
 </template>
 
 <script setup>
-import QuestionTitle from '@components/study/QuestionTitle.vue';
 import ByCategory from './ByCategory.vue'
 
 const props = defineProps({
@@ -40,4 +39,7 @@ const filterStudiesByCategory = (category) => {
 </script>
 
 <style scoped lang="scss">
+  .section-title {
+    font-size: 28px;
+  }
 </style>

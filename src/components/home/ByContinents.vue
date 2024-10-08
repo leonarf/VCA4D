@@ -1,6 +1,6 @@
 <template>
   <section>
-    <QuestionTitle>By <strong>country</strong></QuestionTitle>
+    <h3 class="section-title mt-12">By <strong>country</strong></h3>
     <template v-for="continent in continents" :key="continent">
       <ByContinent
         class="continent"
@@ -15,7 +15,6 @@
 <script setup>
 import { computed } from 'vue';
 import ByContinent from './ByContinent.vue';
-import QuestionTitle from '@components/study/QuestionTitle.vue';
 
 
 const props = defineProps({
@@ -35,5 +34,8 @@ const getStudiesByContinent = (continent) => {
 <style scoped lang="scss">
 .continent:not(:first-child) {
   margin-top: 48px;
+}
+.section-title {
+  font-size: 28px;
 }
 </style>
