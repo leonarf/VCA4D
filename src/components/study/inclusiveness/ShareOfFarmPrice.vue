@@ -34,22 +34,14 @@ const columns = [{
     field: "label",
     sortable: true,
   }, {
-    label: "Farm product",
-    field: "farmProduct",
-    sortable: true,
-  }, {
     label: "Farm gate price",
     field: "farmPrice",
-    display: (item) => `${prettyAmount.value(convertAmount.value(item.farmPrice))} per kg`,
-    sortable: true,
-  }, {
-    label: "End products",
-    field: "endProducts",
+    display: (item) => formatProductPriceCell(item.farmProduct, item.farmPrice),
     sortable: true,
   }, {
     label: "End products unit value",
     field: "endPrice",
-    display: (item) => `${prettyAmount.value(convertAmount.value(item.endPrice))} per kg`,
+    display: (item) => formatProductPriceCell(item.endProducts, item.endPrice),
     sortable: true,
   }, {
     label: "Farm value part",
@@ -58,6 +50,14 @@ const columns = [{
     sortable: true,
   }
 ]
+
+function formatProductPriceCell(productName, productPrice) {
+  const pricePrettyAmount = prettyAmount.value(convertAmount.value(productPrice))
+  return `
+    <b>${productName}</b><br>
+    ${pricePrettyAmount} per kg
+  `;
+}
 </script>
 
 <style>
