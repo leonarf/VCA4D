@@ -1,6 +1,9 @@
 import { CHANGE_RATES } from '@utils/rateChanges.js'
 
 const getUserLocale = () => {
+  // We need to not evaluate navigator at all (Reference error) when launching vite-node scripts from the terminal.
+  if (typeof navigator === "undefined") { return "en"; }
+
   if (navigator.languages && navigator.languages.length) {
     console.warn("UserLocale is", navigator.languages[0])
     return navigator.languages[0]
