@@ -33,5 +33,9 @@ defineProps({
     height:110px;
     margin-bottom: 0.5rem;
     color: #404040 ;
+
+    :deep(> svg) {
+      flex-shrink: 0
+    }
 }
 </style>
