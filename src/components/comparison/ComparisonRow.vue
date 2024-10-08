@@ -32,7 +32,7 @@ const values = computed(() => props.studies.map(study => props.getValue(study)))
 
 <style scoped lang="scss">
   .row-header {
-    min-width: 250px;
+    min-width: 278px;
     min-height: 50px;
     padding-right: 20px;
     display: flex;
