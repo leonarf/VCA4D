@@ -11,36 +11,30 @@
         {
           "title": "1.1 Respect of labour rights",
           "averageValue": 2.6,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Kenyan employment laws plus relevant elements of the mandatory and voluntary private/public standards that allow Kenyan companies to access export markets, create a good framework for respect of labour rights.  Contracts to supply FB come with the expectation of compliance to standards and guidelines, and this is regularly audited.  Compliance is potentially easier to monitor amongst larger, and more visible, companies. Smaller actors are still expected to comply, but are less visible. Kenyan Labour Law is comprehensive, although enforcement may not be as effective as it might be at present."
             },
             {
               "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Kenyan employees are free to join a union of their choice under the Kenyan constitution, although there are some restrictions in Kenyan law on the right to strike.  The Kenyan Plantation and Agricultural Workers Union is active in the horticulture sector, particularly for workers involved in floriculture, tea and coffee sectors.  The VC4D Study Team were not aware of any specific CBAs relating to the FBVC specifically.  However, some horticultural workers do benefit by association from CBAs negotiated within the floriculture sector.  Larger exporters, like Vegpro for example, grow flowers as well as fresh produce on their farms and all workers therefore benefit from CBAs.  It is not clear how much union membership there is amongst FBVC workers, but the larger proportion of women members amongst the horticulture/floriculture sectors does reflect the gender balance of the workforce.  There is such a high turnover/variablility amongst the FBVC workforce, with casual/temporary employment contracts, that this may make it difficult to recruit members.  Some companies are less supportive of union membership. Employers also have their own association, the Agricultural Employer Association, plus representations through FPEAK.  Smallholder farmers and informal workers do not have representation."
             },
             {
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Due to the variability in demand for labour at all stages of the value chain, the majority of the workforce within the FBVC are employed on an informal, casual or temporary basis.  This influences the level of job/income security and the terms and conditions of employment, plus the benefits an employee may be entitled to.  Although all employees are now expected to contribute to access/contribute towards National Social Security Fund/National Hospital Insurance Fund, this is still in a transition phase."
             },
             {
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "The VC4D Study Team did not find evidence of forced labour during the study.  The lower job and income security associated with informal/casual/temporary work may influence the conditions of employment that a worker is willing to accept (i.e. when there are no other options, people likely to accept lower standards of employment rather than nothing)."
             },
             {
               "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "The majority of the FBVC workforce are women (approx. 80%).  Many of the tasks associated with various stages of the FBVC require physical strenth and/or manual dexterity, making them inacessible to people who physical limitations.  The majority of the workforce that the VC4D Study Team observed at packhouses and processing factories were younger adults, while many of the SHF were older adults.  Migration for work seems to be common amongst elements of the FBVC workforce (e.g. large commercial farms, packhouses and processors), particularly in areas like Nairobi, Nakuru and Naivasha."
             }
           ]
@@ -48,18 +42,15 @@
         {
           "title": "1.2 Child Labour",
           "averageValue": 4,
-          "averageText": "High",
           "questions": [
             {
               "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "The VC4D Study Team did not come across evidence of child labour within the FBVC.  While SHF rely on family labour, which might sometimes include children (defined by Gov.of Kenya as <18) within the household, this was balanced by near universal feedback from farmers who said that they used the money earned from growing FB to pay school fees to allow their children to gain a better education. This was cited as one of the indicators of their improved situation as a result of engaging in the FBVC."
             },
             {
               "text": "1.2.2 Are children protected from exposure to harmful jobs?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "As child labour with the FBVC is not considered to be an issue, the risks of exposure are likely to be low."
             }
           ]
@@ -67,12 +58,10 @@
         {
           "title": "1.3 Job safety",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "The audited voluntary/mandatory standards associated with the FBVC mean employee wellfare and food safety and hygiene standards are relatively high amongst larger actors in the VC - e.g. employees wear protective clothing in processing factories and packhouses, and during application of agrochemicals.  Large farms and processing factories/packhouses often have some form of health care on site, or link to provision off-site.  Many exporters maintain trained spray teams to carry out treatment regimes on smallholder farms, rather than expecting the farmer to apply chemicals themselves.  Most at risk groups are likely to be smallholder farmers who carry out their own spraying."
             }
           ]
@@ -80,18 +69,15 @@
         {
           "title": "1.4 Attractiveness",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Remuneration in the FBVC currently falls under the Kenyan General Wage Order (for factory workers) or the Agricultural Industry Wage Order, which determins the conditions of employment.  Pay and conditions vary geographically (e.g. wages are higher in Nairobi) and by the level of skill required.  Workers are likely to be able to negotiate better terms during periods of high labour demand, and less so during quiet times.  At the more informal end of the labour market (e.g. SHF and smaller stakeholders) wages depend on the ability of the employee to negotiate.  The fluctuation in labour demand, and relative job/income insecurity make it likely that wages earned from the FBVC cannot provide a basic standard of living in urban centres like Nairobi, but this needs to be confirmed.  There is enthusiasm to create a separate Wage Order to cover fresh produce, in recognition of the challenges facing the sector."
             },
             {
               "text": "1.4.2 Are conditions of activities attractive for youth?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "The majority of smallholder farmers we met during the VC4D study were older adults, which is typical of the demographic for agriculture as a whole.  There are challenges in encouraging young people to take up FB production, and it is not certain what role SHF will have in fresh produce in future.  Currently, SHF invest in their children's education so that they can access better opportunities, mainly outside agriculture.  The FBVC offers flexible employment opportunities (particularly for women) for those willing to migrate to centres of employment, such as Nairobi."
             }
           ]
@@ -104,18 +90,15 @@
         {
           "title": "2.1 Adherence to VGGT ",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "The VC4D Study Team did not come across direct reference to VGGT or meet with companies that had recently aquired land in relation to FB production.  Very extensive farms and plantations are not a feature of FBVC.  FB is only one crop amongst several grown in a mixed horticultural system (greenhouse & field crops).  Properties range from 40acres - 400acres. Access to water is the main limitation for horticultural farms, as crops need to be irrigated regularly, and reliably.  Evidence suggest that commercial farms (either those directly controlled by companies, or commercial scale outgrowers) are using preexisting land holdings that may then have grown over time through consolidation of surrounding properties.  The terms under which these landholdings have been created are often historical.  Mix of leased/owned commercial properties..   Value of land means acquiring new properties through purchase or lease requires substantial investment, which often involves loans from institutions that will require due dilligence on their investment.  At the SHF level, the trend is towards increasing fragmentation as family farms are broken up through inheritence. In order to increase their land holding size, some are selling their inheritance in high value/potential areas in order to buy larger farms in less produtive areas.  The number of new large scale farms may increase if there is a move away from SHF producers.  Working through outgrowers minimises issues of land tenure."
             },
             {
               "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "See previous comment on 2.1.1.  Land values are high making speculative acquisition attractive.  Land ownership and acquisition are sensitive issues in Kenya.  Legal framework is progressive since the Constitution (2010) although application is lagging behind.  During the field visits, the VC4D Study Team observed large land holdings that were not being farmed (Note: not related to FB) due to a range of legal and financial issues."
             }
           ]
@@ -123,30 +106,25 @@
         {
           "title": "2.2 Transparency, participation and consultation",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Unable to evidence examples of prior disclosure linked to FB production."
             },
             {
               "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Although the Constitution (2010) has had a positive effect on reforming Kenyan legislation surrounding land tenure, their application is still evolving.  Cases of contentious transfer of legal and beneficial rights over land are regularly reported in the press, and a good proportion of land has yet to be registered/issued with a title deed. Transparency International, who operate a series of Advocacy and Legal Advisory Centres (ALAC) offering free and confidential advice, reported that land and succession issues represented 14% of all cases reported to them in 2013/2014.   They consider a lack of awareness and understanding of land legislation and citizen’s rights, inaccessibility of land related complaint mechanisms and the level of accountability from leaders and institutions to be contributory factors.  The acquisition of land for commercial horticultural production takes place in this milleu."
             },
             {
               "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "See 2.2.1/2.2.2.  County governments have made considerable progress in implementing constitutional and legal provisions for transparency and accountability, and set up structures (websites, communication frameworks and forums) to facilitate public participation."
             },
             {
               "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "See 2.2.1/2.2.2"
             }
           ]
@@ -154,29 +132,24 @@
         {
           "title": "2.3  Equity,compensation and justice",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Land ownership and acquisition are sensitive issues in Kenya.  Legal framework is progressive since the Constitution (2010) although application is lagging behind. Quite a lot of landholdings have yet to be registered.  Land values are high making speculative acquisition attractive.  Land ownerhship and inheritence is not  equitable.  Progressive property, marriage and succession legislation have the potential to address gender discrimination. Women still rarely inherit land, although the legal framework should encourage a change."
             },
             {
               "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
-              "scoreValue": "n/a",
-              "scoreText": "n/a"
+              "scoreValue": "n/a"
             },
             {
               "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Only the Kenyan Government is allowed to compulsorily purchase land, and this must be for public good.  The law governing compulsory acquisition is in Part VIII, Section 107 to 133 of the Land Act 2012. Preliminary Requirements, Sec. 107(2): NLC will require the acquiring body to provide a comprehensive list of the affected parcels of land and the respective owners, title search details, cadastral maps of the affected areas, a Resettlement Action Plan accompanied by a list of Persons Affected by Project. Compensation should address all the rights of affected persons in an equitable manner.  A notice is published in the Kenya Gazette and a full enquiry is carried out.  Commercial farms growing FB appear to be existing properties, and the VC4D Study Team did not encounter examples of new farms where land had to be acquired from 'scratch'."
             },
             {
               "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
-              "scoreValue": "n/a",
-              "scoreText": "n/a"
+              "scoreValue": "n/a"
             }
           ]
         }
@@ -188,18 +161,15 @@
         {
           "title": "3.1 Economic activities",
           "averageValue": 3.5,
-          "averageText": "High",
           "questions": [
             {
               "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Women are the mainstay of the FBVC, making up an estimated 80% of the workfroce from production to processing.  The majority of work is unskilled and carried out on an informal, casual or temporary basis due to the variability in demand for labour.  Employers actively seek out women for many of the key tasks along the value chain, which require dexterity, consistency and patience.  Women were also observed to be engaged in more skilled and technical roles, such as factory or farm supervisors, agronomists and sprayers.  Women are more likely to be represented in core business functions such as administration, HR and marketing, than in management.  However, FPEAK (which represents fresh produce exporters), has two female board members.  Where women's involvement in the value chain is often constrained is at the SHF household level, where more traditional roles in decision making, financial management and land tenure are still present."
             },
             {
               "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "See previous comment for 3.1.1"
             }
           ]
@@ -207,30 +177,25 @@
         {
           "title": "3.2 Access to resources and services",
           "averageValue": 2.75,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "3.2.1 Do women have ownership of assets (other than land)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "At smallholder farm level, the degree of equity related to access and control over assets varies according to local norms. The final decision about farm and household level investments is with the head of the household, with varying degrees of input from women.  Ownership of assets falls under the control of the Matrimonial Property Act (2013), and the Marriage Act (2014).  In practice assets are not often under the control of women.  In terms of business enterprises, women often own and run their own businesses whether at a small or commercial scale."
             },
             {
               "text": "3.2.2 Do women have equal land rights as men?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "As a result of the new Constitution in 2010, the legal framework for promoting women's land and property rights has improved significantly.  New laws that are intended to improve the rights of women include; the Land Laws (Amendment) Act 2016, the Land Registration Act, and National Land Commission Act, all approved in 2012, the Matrimonial Property Act (2013), and the Marriage Act (2014).  However, the application of these new laws is at an early stage, and women do not have equal rights in practice. Customary law still discriminates against women, and it is estimated that at least 65% of land in Kenya is governed by customary laws.  For example; the VC4D Study Team came across an  example of a widow SHF who was successfully managing FB production on their farm, but the land itself had been inherited by her sons, which gave them ultimate power over decisions on how to proceed."
             },
             {
               "text": "3.2.3 Do women have access to credit?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "There are limited options available for credit at SHF level.  Bank loans were not popular due to the perceived 'inflexibility' of repayment terms and previous negative experiences.  Criteria for security loandmakes it difficult for women to access bank loands, e.g. land title.  The widespread use of M-PESA allows women to have more financial control.  Small and micro loan services are becoming more prevelant, such as L-PESA, OneAcreFund and similar."
             },
             {
               "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "In many of the areas visited by the study team, women have good access to extension services and input suppliers.  However, this did not mean they had control over these interactions.  Decisions about farm production were often made by men."
             }
           ]
@@ -238,36 +203,30 @@
         {
           "title": "3.3 Decision making",
           "averageValue": 2.6,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "3.3.1 To what extent do women take part in the decisions related to production?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "The level of womens involvement in decision making at the farm level varies geographically according to local norms.  In some areas, such as Meru, women are more autonamous and may take responsibility for FB production, attend meetings, etc.  However, in other areas they are less active in decision making, while still taking responsibility for many of the field tasks."
             },
             {
               "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "See comment 3.3.1. for SHF production.  As a member of the production or processing workforce, women benefit from a degree of autonomy.  The decision to take up work may have been made at a household level, but once at work they have autonomy.  Women who have migrated away from home in search of employment will have greater autonomy, although they will be responsible for childcare and supporting family who have travelled with them, and back 'home'."
             },
             {
               "text": "3.3.3 Do women have control over income?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Please see comment 3.3.1 for SHF production.  Control over the income earned from FB production at SHF level will often be linked to which member of the family is present at the point the beans are collected.  Buyers will often pay directly to the person present.  As transporting beans to the colleciton point is predominantly done by men, this often means it is they that recieve payment rather than the woman who may have taken responsibility for the majority of the production process.  Women often have small petty trading initiatives which bring in small amounts of money that remain  under their control."
             },
             {
               "text": "3.3.4 Do women earn independent income?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "See comments 3.3.1. and 3.3.3.  Women benefit most from the employment opportunities available through the FBVC.  They make up the majority of the workforce (approx. 80%).  At SHF level, there are opportunities for informal employment during labour intensive tasks (weeding/harvesting) that will be paid in cash or kind on a daily basis.  The rate of pay will be agreed at the beginning of each day.  More formal employment on commercial farms, packhouses and processing factories often mean migrating for work, which removes women from their home area and gives the a degree of autonomy."
             },
             {
               "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "See comment 3.2.1, 3.2.2 and 3.3.1 for SHF level.  At a commercial business level, women are well represented as business owners and managers."
             }
           ]
@@ -275,30 +234,25 @@
         {
           "title": "3.4 Leadership and empowerment",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "See also comments in Section 3.3.  The VC4D Study Team met with women members of SHF SHG  and this is common, although membership and degree of activity is likely to vary geographically.  Women working in the horticulture industry are members of the KPAWU, although it has not been possible to establish how representative their membership is of the FBVC.  Women own/co-own companies, hold positions of responsibiltiy in FPEAK, and government agencies such as HDC.  Given the role women play in the FBVC, there is room for greater representation."
             },
             {
               "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "See comment 3.4.1"
             },
             {
               "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "See comment 3.4.1.  Through membership of organisations such as FPEAK, AEA and KPAWU, women can influence the FBVC."
             },
             {
               "text": "3.4.4 Do women speak in public?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "See comment 3.4.1.  Women are less likely to be heard in public at SHF level."
             }
           ]
@@ -306,18 +260,15 @@
         {
           "title": "3.5 Hardship and division of labour",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Women carry out the majority of tasks associated with production and processing of FB. Division of labour at the household level is skewed by traditional roles of childcare and domestic responsibilities.  Work carried out in association with FBVC is done against this background.  Working women have to balance the paid employment with childcare and domestic responsibilities, or if they have migrated; the loss of their contribution to the household labour capacity back home."
             },
             {
               "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Production and processing tasks that require physical strength are largely done by men (breaking ground, transporting beans, lifting packing crates, etc).  Most work carried out by women is repetitive and requires attention to detail."
             }
           ]
@@ -330,18 +281,15 @@
         {
           "title": "4.1 Availability of food ",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Although FB are not considered a food crop for consumption within most Kenyan households, the money that is earned by producing FB at the SHF level is often invested back into the farm through the purchase of livestock, equipment or inputs.  As a result, growing FB can have an indirect positive impact on overall food production at the household level, by enabiling improvements/changes in the home farming system that can lead to increased production."
             },
             {
               "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Although it was not possible to gain first hand how much change there has been in local markets, the income from FB production and through paid employment in the FBVC will increase spending power in the market."
             }
           ]
@@ -349,18 +297,15 @@
         {
           "title": "4.2 Accessibility of food ",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Yes but it does not appear to be keeping pace with prices in the market."
             },
             {
               "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Kenya is a net importer of staples such as maize, wheat and rice. On average, the country imports more than 50% of its rice and wheat and 7-10% of maize.  The interaction between drought, policy and markets has been the major cause of high commodity prices in Kenya.  Prices for staple and other foodstuffs have increased significantly.  The current food prices are the highest the country has experienced in five years and this is being felt across the country."
             }
           ]
@@ -368,24 +313,20 @@
         {
           "title": "4.3 Utilisation and nutritional adequacy ",
           "averageValue": "n/a",
-          "averageText": "n/a",
           "questions": [
             {
               "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "No data available.  One area of concern is the standards to which food is being produced for local consumption.  For example, FB rejected for export are often sold in the local market which might potentially expose people to harmful levels of MRLs"
             },
             {
               "text": "4.3.2 Are nutritional practices being improved?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "No data available although feedback from SHG interviews provide anecdotal evidence that increased income from FB production has improved nutrition at household level"
             },
             {
               "text": "4.3.3 Is dietary diversity increased?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "No data available.  See comment 4.3.2."
             }
           ]
@@ -393,18 +334,15 @@
         {
           "title": "4.4 Stability ",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Income from FB production was linked to improved nutrition during interviews with SHG and SHF producers.  Income from employment along the FBVC is likely to have a similar effect, with the caveat that food prices are rising in the market and migration for work to urban areas like Nairobi, to a high cost of living which may actually decrease the amount of money that can be allocated to food"
             },
             {
               "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "No comment possible.  See comment 4.2.2."
             }
           ]
@@ -417,30 +355,25 @@
         {
           "title": "5.1 Strength of producer organisations",
           "averageValue": 2.75,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Yes.  It is a requirement, under GLOBAL GAP, to involve farmer organisations.  The majority of SHF engage with the GBVC through registered Self Help Groups (SHG).  This is actively encouraged by buyers and companies, as it provides a way to minimise the transaction costs of a scattered farmer population, by giving a single focal point for engagement.  SHG have to renew their registration each year and have certain rights under Kenyan Law, but are not a legal entity in the same way that a coop or business would be.  The name of a SHG may remain unchanged from one year to the next, but the membership may differ."
             },
             {
               "text": "5.1.2 How inclusive is group/cooperative membership?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "The criteria for membership of SHG is usually dictated by production rather than any inclusive social criteria.  Buyers/companies look for farms that have the capacity to grow between 1-5 plots of FB, have access to good water resources for irrigation and are known to be reliable amongst their peers.  Members are therefore more likely to represent the higher socio-economic groups within their community as the household labour capacity and potential fo their farm is closely tied to this.  Both men and women participate in SHG, with the degree of participation varying across different parts of the country in relation to social norms (e.g. Meru County saw a higher degree of women's involvement in FB production and SHG, while this appeas to be the opposite in Machakos County)."
             },
             {
               "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "It is often the buyer/company who triggers the formation of a group and the group leader is often, be default, the buyers contact within the community (i.e. the buyer has had some prior dealings with this farmer, they become the main point of contact).  There does not seem to be any support or guidance offered to SHG to help make them develop an understanding of and capacity for good governance.  Leadership positions do not appear to be democratically elected (based on a very small sample), and when problems arise in relation to accountability/leadership, there do not appear to be clear ways in which this can be dealt with."
             },
             {
               "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "SHF potentially have a much stronger position to negotiating terms with a buyer/company as a group, rather than as individuals.  However, SHF/SHG are dependent on the level of communication and information exchange with buyers/companies (see comments on Section 5.2).  Often SHF have little or no choice over which buyers/companies they work with, as it depends who is operating in their area.  Miscommunication and mistrust are prevelant.  There are reports that some buyers who supply inputs to their producers, are recouping the costs at a higher rate than that agreed at the start of the contract, while other farmers report recieving less per kg for their beans without explanation."
             }
           ]
@@ -448,18 +381,15 @@
         {
           "title": "5.2 Information and confidence",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "There is currently an unequal flow of information within the FBVC.  SHF will mainly recieve extension advice from the technical staff employed by the company who buys their beans.  Information does appear in the press (frequent newspapre articles about FB production). In terms of market prices, SHF are reliant on the information that is given to them by their buyer, and the effectiveness of this communication depends on the person they are interacting with.  Many companies appear to be reducing the number of staff they employ in the field who act as liaison between the company and the farmer.  This reduces the capacity of staff to interact with farmers effectively, and increases the likelihood of miscommunication.  This will impact on the relationship between farmers and companies, and will almost certainly contribute to any decline in willingness to engage with SHF in future.  For example; the justification for decisions to reject FB, reduce payments based on quality, or reduce demand for beans, is often not well understood by SHF because it has not been communicated effectively.  Similarly, SHF are not in a position to make a well informed decision over which buyer to contract to, since there is often only one buyer operating in their area and they do not have sufficient informtion about the FBVC or contacts."
             },
             {
               "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "There is an amount of mistrust present at many stages in the FBVC.  The relationship between SHF and buyers is coloured by the quality of the frequency of contct and level of communication that takes place between them (see comments on Section 5.2.1 above).  SHF often percieve buyers as untrustworthy due to previous experiences of buyers who were unreliable in making payments for produce, who appeared to go back on agreements over input costs or payments, and were percieved as 'unsuportive'.  Companies, on the other hand, often percieve SHF as unrelaible through previous experiences of farmers taking their inputs but failing to produce beans or refusing to repay the costs, farmers selling outside the contract to brokers who offered a better price and farmer groups that broke down and disbanded.  Similarly, export companies expressed misgivings over the way in which GoK was implementing some of their regulatory duties, and how they (the export companies) could engage with their buyers to ensure that new standards and policies could be made to work in the Kenyan context."
             }
           ]
@@ -467,24 +397,20 @@
         {
           "title": "5.3 Social involvement",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "It was not possible to assess what role the surrounding communities played in the consolidation of land to form large properties. Their presence provides employment opportunities for local people, but the fact that they are fenced will also influence local transport routes, grazing and possibly also access to water.  At one site visited during the study, local communities were benefiting, to some degree, from access to water that passed close by in an irrigation off-take channel for a larger farm (not FB) nearby.  However, it was taking a sufficient amount of water from the from the local river to affect water levels, so that farmers own off-take channels were no longer able to capture flow.  The surrounding communities would need to engage/negotiate with the landowner.  Kenyan law is supportive of SHF, but the cost of pursuing a legal case is likely to be out of reach of most landowners."
             },
             {
               "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "The VC4D Study Team did not come across any examples of FB production coming into conflict with traditional knowledge and resources.  This will need further exploration.  On a general level, the drought did result in some incidences of friction between pastoralists and large farms/conservancies in Laikipia, as livestock herds were brought into areas of intensive commercial farming in search of grazing."
             },
             {
               "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Large companies involved in FB production are making some contribution to education and health care facilities in the local area as part of their corporate social responsibilities."
             }
           ]
@@ -497,24 +423,20 @@
         {
           "title": "6.1 Health services",
           "averageValue": 2.66666666666667,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "6.1.1 Do households have access to health facilities?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Health services and facilities are available in urban centres, and many commercial producers provide some degree of provision for their workforce either on site or through a local provider.  Processing employees have to pass an annual health check, in order to take up work in processing factories.  Otherwise, health care is privately funded (see next comment, 6.1.3) and a person's ability to access healthcare will be determined by whether they can afford it."
             },
             {
               "text": "6.1.2 Do households have access to health services?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "See previous comment for 6.1.1."
             },
             {
               "text": "6.1.3  Are health services affordable for households?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Affordability will depend on the level of income for the individual/household, who has control over how that income is spect and what other competing priorities there are for that money at the time.  Questions have been raised about whether the daily wage rate represents a living wage in Nairobi, where the cost of living is very high and job security is lowered by the variability in demand for labour.  Under these circumstances, quality healthcare may prove unaffordable and this would need further investigation.  The availability of healthcare in rural areas will vary, and it is likelyt hat some people may have to travel to the nearest urban centre for reliable care."
             }
           ]
@@ -522,18 +444,15 @@
         {
           "title": "6.2 Housing",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "6.2.1 Do households have access to good quality accomodations?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Workers who migrate for employment will need to rent accommodation in the area, most likely a room.  The cost (and quality) will be based on their financial capacity to pay for it.  Whether renting is done as an individual, or as a group (either as a group of friends or family), would need further investigation.The cost of accommodation will be higher in urban centres such as Nairobi.  Some of the large commercial farms provide accomodtion for some of their workers, along with facilities such as water and sanitation."
             },
             {
               "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "See previous comment for 6.2.1"
             }
           ]
@@ -541,24 +460,20 @@
         {
           "title": "6.3 Education and training",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "6.3.1 Is primary education accessible to households?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Most of the SHF involved in the study cite 'investing in their children's education' as one of the main befits from growing French Beans.  They are able to keep their children in school for longer, allowing them to gain a greater level of educational attainment and increase their employment potential.   For workers on commercial farms, packhouses and processors, the impact on children's education is less clear and it was not possible to ascertain this first hand.  The standard of education will depend on the families ability to pay school fees, and availability/quality of educational establihshments in their area.  Where workers have migrated away from their home, and into urban areas (e.g. Nairobi), tthis may increase the range of education options available, but at a cost (see earlier section on wages)"
             },
             {
               "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Most of the SHF involved in the study cite 'investing in their children's education' as one of the main befits from growing French Beans.  They are able to keep their children in school for longer, allowing them to gain a greater level of educational attainment and increase their employment potential.   For workers on commercial farms, packhouses and processors, the impact on children's education is less clear and it was not possible to ascertain this first hand.  The standard of education will depend on the families ability to pay school fees, and availability/quality of educational establihshments in their area.  Where workers have migrated away from their home, and into urban areas (e.g. Nairobi), tthis may increase the range of education options available, but at a cost (see earlier section on wages)."
             },
             {
               "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Companies involved in FB production offer training to their farm workers in the jobs they expect them to carry out.  The majority of tasks do not require skill, but there are a small number of more technical tasks (e.g. pest management/spraying, or use of machinary) where an employer will either look for someone who has already been trained, or will provide training in-service.  These roles will come with an element of greater job secruity.    Where companies work with SHF, they will provide a certain amount of extension support to farmers.  This will depend on whether they expect the farmers to deal with pest and disease management themselves, or if this is done through an extension team.  They will also train the farmer on grading, quality control, etc.  All training is at cost to the SHF, since it will be factored into the price the buyer will give the farmer at the gate.  There is evidence to suggest that the quality of extension support staff may be declining, as companies reduce their costs by hiring fewer and less well qualified staff.  All farmers SHF who took part in the study, who had interacted with technical staff were very appreciative of this input and requested more.  At the packhouse/processing end of the value chain, employers will provide in-service training on the tasks employees are expected to carry out.  It is likely that an employer will give preference to an employee with previous experience, or train up an existing and reliable employee in a new task.  Very little training is being provided on group formation and management, financial management, running a business, etc. but more would be welcomed."
             }
           ]

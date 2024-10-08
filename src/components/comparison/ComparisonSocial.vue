@@ -8,13 +8,12 @@
     :getValue="(study) => getOptionalSocialAverageGroup(study.socialData?.[index])"
     :getSubValues="(study) => getSocialAverageSubGroups(study.socialData?.[index])"
   >
-    <template #default="{ value }">
+    <template #default="{ value, isSubRow }">
       <div class="tag-container mx-auto my-2">
         <Tag
-          v-if="value"
           class="tag"
+          :lightVersion="isSubRow"
           :scale="value"
-          :appreciation="getAppreciation(value)"
         />
       </div>
     </template>
@@ -23,7 +22,7 @@
 
 <script setup>
 
-import { getSocialAverageGroup } from '@utils/misc.js'
+import { getSocialAverageGroup } from '@utils/social.js'
 import Tag from '@components/study/social-sustainability/Tag.vue';
 import ComparisonTitle from './ComparisonTitle.vue';
 import ComparisonExpandableRow from './ComparisonExpandableRow.vue';
@@ -39,21 +38,6 @@ const SOCIAL_PARTS = [
     "Social capital",
     "Living conditions",
 ]
-
-const getAppreciation = (scale) => {
-    if (scale === 1) {
-        return 'Poor'
-    }
-    if (scale === 2) {
-        return 'Rather Poor'
-    }
-    if (scale === 3) {
-        return 'Rather Good'
-    }
-    if (scale === 4) {
-        return 'Good'
-    }
-}
 
 function getOptionalSocialAverageGroup(socialImpact) {
   if (! socialImpact) { return null; }
@@ -75,7 +59,7 @@ function getSocialAverageSubGroups(socialImpact) {
 
 <style scoped lang="scss">
 .tag-container {
-    margin: 0.5rem auto;
+    margin: 0.25rem auto;
     min-width: 200px;
     .tag {
         max-width: 80%;

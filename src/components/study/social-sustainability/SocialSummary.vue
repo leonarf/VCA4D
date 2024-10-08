@@ -16,12 +16,12 @@
     </p>
     <p>
       The four levels of social sustainability are illustrated by different colours in the chart:
-      <b :style="{ backgroundColor: getSocialScoreColor(4) }">high (green)</b>,
-      <b :style="{ backgroundColor: getSocialScoreColor(3) }">substantial (yellow)</b>,
-      <b :style="{ backgroundColor: getSocialScoreColor(2) }">moderate/low (orange)</b>,
-      <b :style="{ backgroundColor: getSocialScoreColor(1) }">not at all (red)</b>.
+      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(4) }">high (green)</b>,
+      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(3) }">substantial (yellow)</b>,
+      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(2) }">moderate/low (orange)</b>,
+      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(1) }">not at all (red)</b>.
     </p>
-    <div class="grid grid-cols-3 w-full gap-2">
+    <div class="mt-4 grid grid-cols-3 w-full gap-2">
       <div class="row-span-2 self-start xl:self-end">
         <SummaryBlock
           title="Living conditions"
@@ -96,8 +96,7 @@ import { computed } from 'vue'
 import SocialRadar from './SocialRadar.vue'
 import SummaryBlock from './SummaryBlock.vue'
 import SummaryBlockQuestion from './SummaryBlockQuestion.vue'
-import { getSocialAverageGroup } from '@utils/misc.js'
-import { getSocialScoreColor } from '@utils/colors.js'
+import { getSocialAverageGroup, getSocialScoreColor } from '@utils/social.js'
 
 const props = defineProps({
   studyData: Object
@@ -126,5 +125,8 @@ const questionLivingHealth = computed(() => props.studyData.socialData[5].groups
 const questionLivingEducation = computed(() => props.studyData.socialData[5].groups[2].questions[0])
 </script>
 
-<style lang="">
+<style lang="scss" scoped>
+.highlight {
+  padding: 1px 3px;
+}
 </style>

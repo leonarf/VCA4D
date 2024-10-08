@@ -11,36 +11,30 @@
         {
           "title": "1.1 Respect of labour rights",
           "averageValue": 2.6,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Las grandes empresas productoras, compradoras y exportadoras respetan los derechos laborales de una manera conforma a las recomendaciones de los estandares de la ILO y de la legislacion vigente. Hay evidencia de controles del Ministerio de Trabajo para el respeto de estos derechos. Sin embargo, parece que se respetan estas condiciones, esencialmente para los trabajadores asalariados en la planilla (personal permanente), pero no necesariamente para los trabajadores temporales"
             },
             {
               "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "En Nicaragua, es facil organizarse en asociacion de productores agropecuarios y el pais cuenta con unas 60 cooperativas de prpoductores de cacao. Tambien, hay una historia de estructuracion de la cadena multi-actor y multi-nivel, aunque estos ultimos años es caotico, dado las relaciones deterioradas de los actores privados (sobre todo los representantes de las cooperativas) con el gobierno y las institutiones publicas. Sin embagro, no hay evidencia de organizacion gremial o sindical efectivas en ningun eslabon de la cadena de valor"
             },
             {
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "La mayoria de los trabajadores asalariados en el campo, a excepcion de los trabajadores permanentes de las empresas productoras medianas y grandes, no tienen contratos laborales escritos"
             },
             {
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "No hay evidencia de trabajo forzado en la cadena de cacao en Nicaragua"
             },
             {
               "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Aunque no hay datos cifrados, parece que muy pocos indigenas ,pocas mujeres y pocos jovenes estan realmente involucrados en la cadena de cacao, a pesar de los esfuerzos de varias cooperativas y de la cooperacion externa para promover su participacion"
             }
           ]
@@ -48,18 +42,15 @@
         {
           "title": "1.2 Child Labour",
           "averageValue": 2,
-          "averageText": "Moderate/Low",
           "questions": [
             {
               "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "La tasa de atencion escolar ha mejorado mucho en Nicaragua y en los territorios cacaoteros. Se puede asumir que una mayoria de niños y niñas atienden en la escuela, incluso cuando participan en las actividades de las fincas familiares"
             },
             {
               "text": "1.2.2 Are children protected from exposure to harmful jobs?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "No hay evidencia de mecanismos de proteccion de los niños (ni de los adultos) de trabajos peligrosos"
             }
           ]
@@ -67,12 +58,10 @@
         {
           "title": "1.3 Job safety",
           "averageValue": 2,
-          "averageText": "Moderate/Low",
           "questions": [
             {
               "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "En las bodegas de las grandes empresas compradoras y exportadoras, hay mecanismos establecidos para proteger a los empleados de accidentes laborales. Sin embargo, el nivel de proteccion de daños en la salud parece limitado, en particular si se toma el ejemplo de las medidas de lucha contra la pandemia de COVID-19"
             }
           ]
@@ -80,18 +69,15 @@
         {
           "title": "1.4 Attractiveness",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Los salarios de los trabajadores en la cadena de cacao estan generalmente bajos, y para los peones que se emplean en las fincas pequeñas, pueden ser por debajo del salario minimo. No es es caso en las grandes y medianas empresas productoras y compradoras-exportadoras que pagan sus trabajadores asalariados encima del salario minimo vigente en el sector. Los entrevistados piensan que la cadena es atractiva en termino de reluneracion"
             },
             {
               "text": "1.4.2 Are conditions of activities attractive for youth?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Las condiciones laborales son atractivas para los jovenes, a pesar de que muchos no tiene un facil acceso a la tierra y al credito, lo que es un factor limitante"
             }
           ]
@@ -104,18 +90,15 @@
         {
           "title": "2.1 Adherence to VGGT ",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             },
             {
               "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Hay varios proyectos de inversiones en tierra a gran escala en los territorios cacaoteros y la cadena es uno de los sector mas importante de este tipo de adquisicion en el sector agropecuario. Aunque no hay evidencia sobre la legalidad de estas adquisiciones, realizadas generalmente a traves de una agencia estatal (PRONICARAGUA), varios entrevistados mencionaron sus dudas ya que varios proyectos estan ubicados en territoriosindigenas demarcados"
             }
           ]
@@ -123,30 +106,25 @@
         {
           "title": "2.2 Transparency, participation and consultation",
           "averageValue": 1.33333333333333,
-          "averageText": "Low",
           "questions": [
             {
               "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Las entrevistas relevan que en el caso de varios proyectos de adquisicion a gran escala, hubieron intercambios de informacion antes de la instalacion de las plantaciones de cacao"
             },
             {
               "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             },
             {
               "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "No hay evidencia de concertacion en el caso de la instalacion de grandes plantaciones de cacao"
             },
             {
               "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "No hay evidencia de consentimiento previo a la instalacion de grandes plantaciones de cacao, aunque se mencionaron que en unos casos, hay arreglos (arrendimientos) entre las comunidades indigenas y las grandes empresas productoras de cacao"
             }
           ]
@@ -154,30 +132,25 @@
         {
           "title": "2.3  Equity,compensation and justice",
           "averageValue": 1.25,
-          "averageText": "Low",
           "questions": [
             {
               "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Hay un marco de politica que tiene  como objetivo garantizar los derechos sobre la tierra privala y comunal (en el caso de territorios indigenas), pero en la practica, no hay evidencia que estan seguros estos derechos, ya que se mencionaron casos de conflictos sobre la tierra y de invasion (por colonos/mestizos) y de expropiaciones"
             },
             {
               "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "No hay evidencia de estrategias alternativas en el caso de que las inversiones a gran escala intervienen de forma negativa para las comunidades locales"
             },
             {
               "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "No hay evidencia de compensacion en el caso de expropiaciones"
             },
             {
               "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "No hay evidencia de la existencia de mecanismos para atender a las quejas de las comunidades locales en el caso de inversiones a gran escala en la cadena"
             }
           ]
@@ -190,18 +163,15 @@
         {
           "title": "3.1 Economic activities",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Hay pocas mujeres productoras, en particular dado su poco acceso a la tierra (y al credito). Sin embargo, no se puede considerar que estan excluidas ya que unas de ellas participan activamente en la produccion y en la fabricacion de chocolates y derivados de cacao en particular, pero tambien como coyotes para el acopio del cacao rojo o en el procesamiento artesanal para el mercado domestico"
             },
             {
               "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Hay pocas mujeres que participan en la cadena (cf respuestas anteriores)"
             }
           ]
@@ -209,30 +179,25 @@
         {
           "title": "3.2 Access to resources and services",
           "averageValue": 1.5,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.2.1 Do women have ownership of assets (other than land)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "En pocos casos, los bienes (la propiedad) esta al nombre de la pareja, pero en la mayoria de los casos, solo esta a nombre del varon"
             },
             {
               "text": "3.2.2 Do women have equal land rights as men?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Las mujeres tienen poco acceso a la tierra por herencia y es una situacion problematica que no es especifica tampoco de la cadena de cacao"
             },
             {
               "text": "3.2.3 Do women have access to credit?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Los pequeños productores en general tienen poco acceso al credito, y aun menos las mujeres"
             },
             {
               "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Los pequeños productores en general tienen poco acceso a otros servicios, y aun menos las mujeres"
             }
           ]
@@ -240,36 +205,30 @@
         {
           "title": "3.3 Decision making",
           "averageValue": 2.2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.3.1 To what extent do women take part in the decisions related to production?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "En la mayoria de los casos en fincas pequeñas, los dueños hombres de las fincas toman las decisiones. Hay algunos casos en los cuales mujeres son gerentes de cooperativas, o incluso genrentes de grandes empresas exportadoras"
             },
             {
               "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "En general, a nivel de la produccion, las mujeres trabajan en pareja y no son autonomas en sus labores. En el caso de madres solteras o de mujeres con responsabilidades (hay pocas), son autonomas en su trabajo"
             },
             {
               "text": "3.3.3 Do women have control over income?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Como para la organizacion de sus labores, las mujeres tienen poco control sobre sus ingresos, salvo cuando son actividades asalarias propias o cuando son madres solteras o dueénas de los activos"
             },
             {
               "text": "3.3.4 Do women earn independent income?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "En el caso de los trabajos asalariados, las mujeres pueden ganar sus propîos ingresos, pero no es la norma"
             },
             {
               "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Cuando la propiedad de los bienes es a nivel de pareja, lo que no es lo general, forman parte de las tomadoras de decision, pero es comun que el hombre decide sobre los activos"
             }
           ]
@@ -277,30 +236,25 @@
         {
           "title": "3.4 Leadership and empowerment",
           "averageValue": 1.75,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Hay un porcentaje pequeño de mujeres que son socias de cooperativas, pero este porcentaje es muy variable segun las organizaciones"
             },
             {
               "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Pocas mujeres tienen una posicion de liderazgo en la cadena, pero hay algunas, en particular en la primera empresa exportadora del pais, asi como en una uniones de cooperativas de las mas grandes a nivel nacional"
             },
             {
               "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "No hay evidencia que las mujeres influencian la toma de decision en la cadena"
             },
             {
               "text": "3.4.4 Do women speak in public?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Las mujeres pueden hablar en publico en Nicaragua"
             }
           ]
@@ -308,18 +262,15 @@
         {
           "title": "3.5 Hardship and division of labour",
           "averageValue": 1,
-          "averageText": "Low",
           "questions": [
             {
               "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "En general, todas las labores de la esfera domestica es a cargo de las mujeres, con pocas excepciones en Nicaragua, e incluso cuando trabajan en la cadena de cacao"
             },
             {
               "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "No hay evidencia de mecanismos para disminuir lapenibilidad del trabajo en la cadena especificamente para las mujeres (ni tampoco para los hombres, son trabajos manuales y fisicos en lo general)"
             }
           ]
@@ -332,18 +283,15 @@
         {
           "title": "4.1 Availability of food ",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Los sistemas agroforestales de cacao permiten la produccion de rubros diversificados en la parcela, lo que implica un aumento de la produccion de alimentos a nivel local, disponibles para el consumo de las familias productoras"
             },
             {
               "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             }
           ]
@@ -351,18 +299,15 @@
         {
           "title": "4.2 Accessibility of food ",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "La generacion de ingresos permitido por el cacao es notable, pero el cacao no es el mayor rubro en los sistemas de produccion de las familias productoras en la mayoria"
             },
             {
               "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             }
           ]
@@ -370,24 +315,20 @@
         {
           "title": "4.3 Utilisation and nutritional adequacy ",
           "averageValue": 4,
-          "averageText": "High",
           "questions": [
             {
               "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Los rubros diversificados producidos con el cacao en las parcelas de SAF son de diferentes origines (frutas, vegetales, cereales, leguminosas, etc.) asi que indirectamente, el cacao permite aumentar la calidad nutricional de los alimentos disponibles para estas familias"
             },
             {
               "text": "4.3.2 Are nutritional practices being improved?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             },
             {
               "text": "4.3.3 Is dietary diversity increased?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "La diversidad de la alimentacion es permitida por los sistemas agroforestales diversificados"
             }
           ]
@@ -395,18 +336,15 @@
         {
           "title": "4.4 Stability ",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Gracias a una produccion todo el año, ademas en sistemas diversificados, el cacao permite una generacion de ingresos todo el año, lo que permite reducir la escasez de alimentos (compras)"
             },
             {
               "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "No hay evidencia de que el cacao incide sobre la variacion de los precios de los alimentos"
             }
           ]
@@ -419,30 +357,25 @@
         {
           "title": "5.1 Strength of producer organisations",
           "averageValue": 3.25,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Las cooperativas son los actores clave, hoy, del subsistema de cacao fermentado y seco (cacao fino de aroma). No intervienen o muy poco en el subsistema de cacao rojo. Sin embargo, dado la tendencia al aumento de la produccion de grandes plantaciones, su rol puede bajar en los proximos años"
             },
             {
               "text": "5.1.2 How inclusive is group/cooperative membership?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "La inclusividad es alta para la membresia en las cooperativas, y no hay evidencias de barreras significativas a la integracion de nuevos productores, si se conforman a las expectativas de las cooperativas"
             },
             {
               "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "El liderazgo en las cooperativas es representativo (el consejo ejecuitivo es electo cada 3 años, conformemente a la Ley). Sin embargo, unos entrevistados mencionan la falta de representatividad de los directivos"
             },
             {
               "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Los precios de compra del cacao se fijan en general por las empresas comrpadoras exportadoras, con bajo poder de negociacion de las cooperativas"
             }
           ]
@@ -450,18 +383,15 @@
         {
           "title": "5.2 Information and confidence",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Aunque APEN juega un rol importante para difundir informaciones a los actores de la cadena, los peuqeños productores, por falta de gremio productivo, no acceden afcilmente a la informacion"
             },
             {
               "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "A nivel de cadena, evaluamos que hay poca confianza entre los actores de la cadena, aunque bilateralmente, unos actores pueden trabajar de muy cercanos entre ellos"
             }
           ]
@@ -469,24 +399,20 @@
         {
           "title": "5.3 Social involvement",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Las comunidades participan poco a la toma de decision, aunque una de la linea politica del actual gobierno es la participacion ciudadana. En realidad, la participacion a la toma de decision es a menudo clientelista y partidaria"
             },
             {
               "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "No hay evidencia que se toma en cuenta los conocimientos tradicionales de las comunidades en la cadena de cacao, salvo tal vez en el procesamiento artesanal"
             },
             {
               "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Hay una participacion activa en Nicaragua a la vida en las comunidades"
             }
           ]
@@ -499,24 +425,20 @@
         {
           "title": "6.1 Health services",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "6.1.1 Do households have access to health facilities?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "En los territorios cacaoteros, como mas generalmente en Nicaragua, el acceso a las infraestructuras y a los servicios de salud son insuficientes. La situacion es aun mas critica en los territorios aislados y poco conectados a la red vial, como es el caso de unas de las zonas productoras de cacao. Sin embargo, la situacion se ha mejorado"
             },
             {
               "text": "6.1.2 Do households have access to health services?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "En los territorios cacaoteros, como mas generalmente en Nicaragua, el acceso a las infraestructuras y a los servicios de salud son insuficientes. La situacion es aun mas critica en los territorios aislados y poco conectados a la red vial, como es el caso de unas de las zonas productoras de cacao. Sin embargo, la situacion se ha mejorado"
             },
             {
               "text": "6.1.3  Are health services affordable for households?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "En los territorios cacaoteros, como mas generalmente en Nicaragua, los servicios de salud fuera de lo publico, es caro"
             }
           ]
@@ -524,18 +446,15 @@
         {
           "title": "6.2 Housing",
           "averageValue": 1.5,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "6.2.1 Do households have access to good quality accomodations?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Las familias productoras en los territorios cacaoteros viven en lo general en casas tradicionales humildes. Sin embargo, las entrevistas revelan que su calidad ha podido ser mejorada gracias a los aportes del cacao entre otros en los ultimos años"
             },
             {
               "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "La calidad del acceso al agua y al saneamiento en los territorios cacaoteros es insuficiente, aunque ha mejorado en los ultimpos años. En unos territorios, es problematico"
             }
           ]
@@ -543,24 +462,20 @@
         {
           "title": "6.3 Education and training",
           "averageValue": 2.33333333333333,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "6.3.1 Is primary education accessible to households?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "La educacion primaria ha evolucionado de una forma muy positiva en las ultiùmas decadas y hoy en dia, en Nicaraguaen general y en los territorios cacaoteros en particular, los niños y las niñas tienen generalmente acceso a la educacion primaria"
             },
             {
               "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "El acceso a la educacion segundaria es mas problematico en los territorios cacaoteros que son aislados y menos dotados de infraestructuras dado su aislamiento"
             },
             {
               "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Las grandes empresas, asi como la cooperacion internacional, han financiado inciativa de capacitaciones profesionales de calidad. Sin embargo, quedan insuficiente y a veces, no adecuan con las necesidades"
             }
           ]

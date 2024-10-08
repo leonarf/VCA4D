@@ -4,7 +4,6 @@ const getQuestionsGroup = (ws, firstRow, lastRow) => {
   return {
     title: ws[`A${firstRow}`]?.v,
     averageValue: ws[`E${lastRow}`]?.v,
-    averageText: ws[`D${lastRow}`]?.v,
     questions: Array.from(Array(lastRow - 1 - (firstRow + 1) + 1)
       .keys(), (num) => num + firstRow + 1)
       .map(getQuestion)
@@ -14,7 +13,6 @@ const getQuestionsGroup = (ws, firstRow, lastRow) => {
     return {
       text: getQuestionText().trim(),
       scoreValue: ws[`E${index}`]?.v,
-      scoreText: ws[`D${index}`]?.v,
       comment: ws[`F${index}`]?.v.trim()
     };
 

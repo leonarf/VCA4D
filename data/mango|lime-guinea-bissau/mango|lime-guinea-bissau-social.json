@@ -11,36 +11,30 @@
         {
           "title": "1.1 Respect of labour rights",
           "averageValue": 3.75,
-          "averageText": "High",
           "questions": [
             {
               "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "A empresa tem uma advogada responsável pelo cumprimentos das normas legais internacionais em vigor."
             },
             {
               "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "A empresa fomentou a criação da associação AGRIECO  que tem como associados proprietários da região a quem comprou manga em 2016."
             },
             {
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "A empresa tenta cumprir as regras de contratação do país ainda que surjam problemas com a falta de legalização dos trabalhadores o que os impede de ter acesso à segurança social. Só descontam para a segurança social a partir do 2º ano."
             },
             {
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Não há trabalho forçado na Guiné-Bissau"
             },
             {
               "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Os responsáveis da empresa referem não haver discriminação por género ainda que as mulheres refiram que existem categorias com salários diferenciados a que as mulheres não acedem"
             }
           ]
@@ -48,18 +42,15 @@
         {
           "title": "1.2 Child Labour",
           "averageValue": "n/a",
-          "averageText": "n/a",
           "questions": [
             {
               "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Não há trabalho efetuado por crianças."
             },
             {
               "text": "1.2.2 Are children protected from exposure to harmful jobs?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Não há trabalho efetuado por crianças."
             }
           ]
@@ -67,12 +58,10 @@
         {
           "title": "1.3 Job safety",
           "averageValue": 4,
-          "averageText": "High",
           "questions": [
             {
               "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "São feitas ações de sensibilização para as tarefas mais perigosas (por exemplo, uso de motosserra).\nAs próprias ferramentas de trabalho são menos agressivas do que as utilizadas pelas populações nas suas propriedades (não utilização de catanas)."
             }
           ]
@@ -80,18 +69,15 @@
         {
           "title": "1.4 Attractiveness",
           "averageValue": 2,
-          "averageText": "Moderate/Low",
           "questions": [
             {
               "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Os salários são pagos em numerário e em géneros alimentares de acordo com o que é usual no que se refere ao trabalho agrícola da Guiné-Bissau. Os valores pagos pela Frutas e Legumes são inferiores aos que são acordados informalmente na região para mesmas atividades. De acordo com populações locais inquiridas  esses valores justificam a sua não adesão à Frutas e Legumes."
             },
             {
               "text": "1.4.2 Are conditions of activities attractive for youth?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Os jovens preferem trabalhar de forma esporádica (à tarefa) conseguindo melhor pagamento. Quando está associada formação relacionada com acrividades específicas (i.e. controle de qualidade) já a F&L é atrativa para jovens"
             }
           ]
@@ -104,18 +90,15 @@
         {
           "title": "2.1 Adherence to VGGT ",
           "averageValue": "n/a",
-          "averageText": "n/a",
           "questions": [
             {
               "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Esta empresa adquiriu a propriedade da empresa AGRIBISSAU que por sua vez não ocupou ou comprou a sua propriedade, logo não há conflitos ligados à propriedade da terra."
             },
             {
               "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Esta empresa adquiriu a propriedade da empresa AGRIBISSAU que por sua vez não ocupou ou comprou a sua propriedade, logo não há conflitos ligados à propriedade da terra."
             }
           ]
@@ -123,30 +106,25 @@
         {
           "title": "2.2 Transparency, participation and consultation",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "A propriedade é privada e pertence aos investidores. No entanto no ano de 2016 a empresa comprou manga aos propietários da AGRIECO e a alguns ponteiros (proprietários de maior dimensão) de acordo com o seu próprio plano estratégico que escapa ao contolo dos produtores."
             },
             {
               "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "A propriedade é privada e pertence aos investidores. No entanto no ano de 2016 a empresa comprou manga aos propietários da AGRIECO e a alguns ponteiros (proprietários de maior dimensão) de acordo com o seu próprio plano estratégico que escapa ao contolo dos produtores."
             },
             {
               "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "A propriedade é privada e pertence aos investidores. No entanto no ano de 2016 a empresa comprou manga aos propietários da AGRIECO e a alguns ponteiros (proprietários de maior dimensão) de acordo com o seu próprio plano estratégico que escapa ao contolo dos produtores."
             },
             {
               "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "A associação AGRIECO foi consultada pela F&L para definir  as condições de aquisição dos frutos"
             }
           ]
@@ -154,30 +132,25 @@
         {
           "title": "2.3  Equity,compensation and justice",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "A propriedade é privada e pertence aos investidores."
             },
             {
               "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Quando confrontados com a possibilidade da empresa vir a tornar-se inviável e haver deslocalização, os investidores negam que tal possa acontecer. Não parece por isso haver alguma estratégia prevista para defesa das 150 famílias que vivem na propriedade e que ficarão numa situação de desproteção."
             },
             {
               "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Não está prevista qualquer expropriação. Uma parte da propriedade da empresa está por ocupar."
             },
             {
               "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Não está prevista qualquer expropriação. Uma parte da propriedade da empresa está por ocupar."
             }
           ]
@@ -190,18 +163,15 @@
         {
           "title": "3.1 Economic activities",
           "averageValue": 1,
-          "averageText": "Low",
           "questions": [
             {
               "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Na prática as mulheres sentem que existem categorias profissionais a que não têm acesso. \"Há várias categorias mas nós mulheres só temos acesso a uma categoria de trabalho\" (fg mulheres F&L). As mulheres veem o trabalho nesta empresa como uma forma de formação. \"Não queremos ficar aqui. É para adqurirmos formação\" (fg mulheres F&L)."
             },
             {
               "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "As mulheres guineenses trabalham sobretudo na produção e na embalagem, a comercialização destina-se à exportação. Não intervêm nas tomadas de decisão."
             }
           ]
@@ -209,30 +179,25 @@
         {
           "title": "3.2 Access to resources and services",
           "averageValue": "n/a",
-          "averageText": "n/a",
           "questions": [
             {
               "text": "3.2.1 Do women have ownership of assets (other than land)?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Na F&L são apenas trabalhadoras assalariadas."
             },
             {
               "text": "3.2.2 Do women have equal land rights as men?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Na F&L são apenas trabalhadoras assalariadas"
             },
             {
               "text": "3.2.3 Do women have access to credit?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Na F&L são apenas trabalhadoras assalariadas"
             },
             {
               "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Na F&L são apenas trabalhadoras assalariadas"
             }
           ]
@@ -240,36 +205,30 @@
         {
           "title": "3.3 Decision making",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "3.3.1 To what extent do women take part in the decisions related to production?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Ainda que sejam trabalhadoras assalariadas a realizar tarefas orientadas, haverá algum trabalho nos pomares que já saberiam executar antes de serem contratadas e que realizarão de forma minimamente autónoma. Por outro lado as mulheres dizem que quando têm alguma questão relacionada com o seu trabalho têm possibilidade de as colocar diretamente ao proprietário da F&L. As mulheres têm esperança de vir a aumentar os seus rendimentos. As mulheres sentem que os homens beneficiam mais do trabalho na empresa (não só em termos económicos mas em termos de formação)."
             },
             {
               "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "As mulheres dizem não ter sido iniciativa sua o trabalho na F&L. Foi iniciativa dos maridos. Ainda que sejam trabalhadoras assalariadas a realizar tarefas orientadas, haverá algum trabalho nos pomares que já saberiam executar antes de serem contratadas e que realizarão de forma minimamente autónoma."
             },
             {
               "text": "3.3.3 Do women have control over income?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Só as mulheres que gerem sozinhas o agregado têm controle sobre o seu rendimento. O salário é pago mensalmente (45.000CFA). O proprietário da F&L fez depender o aumento dos salários do aumento da produção. As mulheres tentam gerar algum rendimento extra vendo produtos das terras que o agregado possui nas suas aldeias de origem.A educação dos filhos é paga pelas mulheres.Na F&L cada criança paga 500CFA por mês na escola da empresa."
             },
             {
               "text": "3.3.4 Do women earn independent income?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "As mulheres têm um contrato individual de trabalho. Só descontam para a segurança social apartir do segundo ano."
             },
             {
               "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "As mulheres são apenas assalariadas."
             }
           ]
@@ -277,30 +236,25 @@
         {
           "title": "3.4 Leadership and empowerment",
           "averageValue": 2.75,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Entre as  mulheres produtoras (responsáveis pelo agregado) que forneceram mangas em 2016 algumas são proprietárias e são presentemente membros da AGRIECO."
             },
             {
               "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "As mulheres associadas estão em minoria na AGRIECO mas têm alguma possibilidade de participação. As mulheres que estão ma empresa F&L com os seus maridos dize, \"se os nossos homens se despedirem nós também nos despedimos, saímos com eles\" (fg mulheres F&L)."
             },
             {
               "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "As mulheres assocadas estão em minoria na AGRIECO mas têm alguma possibilidade de participação"
             },
             {
               "text": "3.4.4 Do women speak in public?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Não parece haver dificuldade de participação. Reunimos com as mulheres que trabalham na produção que se expressaram abertamente.O mesmo se passou na reunião com a AGRIECO."
             }
           ]
@@ -308,18 +262,15 @@
         {
           "title": "3.5 Hardship and division of labour",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "As mulheres acumulam o trabalho agrícola desempenhando tarefas identicas às dos homens com o trabalho doméstico que inclui tarefas muito exigentes como transporte de água e de lenha (caso das mulheres que vivem fora da propriedade da F&L). Para além destas tarefas têm a seu cargo cuidar dos fllhos. As mulheres dizem sentir-se sobrecarrehadas com a acumulação do trabalho doméstico."
             },
             {
               "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "O representante da F&L ficou chocado com o facto de as mulheres se apresentarem no trabalho com os filhos bebés às costas não aceitando esse esforço na sua empresa.Para a resolução deste problema criou uma creche/infantário."
             }
           ]
@@ -332,18 +283,15 @@
         {
           "title": "4.1 Availability of food ",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Há uma maior produção de produtos frutícolas mas estes destinam-se a mercados externos. Grande parte dos trabalhadores da empresa cultivam os seus terrenos nas suas aldeias (tabancas). Os principais cultivos são amendoim, feijão ainda que as produções anuais tendam a ser substituídas por caju e frutícolas."
             },
             {
               "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "A produção dos pequenos e médios proprietários da região para a F&L em 2016, melhorando algumas das práticas produtivas, poderá (por hipótese) ter tido efeitos positivos na produção para os mercados locais."
             }
           ]
@@ -351,18 +299,15 @@
         {
           "title": "4.2 Accessibility of food ",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Os trabalhadores assalariados  gozam de uma estabilidade económica que lhes garante uma maior sustentabilidade alimentar. Recebem parte do pagamento em géneros alimentares (arroz, azeite, caldos de sabores, cebola, sardinhas em lata). Vendem a produção das suas hortas nos mercados locais gerando algum rendimento extra que utilizam na compra de alimentos."
             },
             {
               "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Não temos possibilidade de o saber."
             }
           ]
@@ -370,24 +315,20 @@
         {
           "title": "4.3 Utilisation and nutritional adequacy ",
           "averageValue": 2.66666666666667,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Os trabalhadores assalariados  gozam de uma estabilidade económica que lhes garante uma maior qualidade nutricional."
             },
             {
               "text": "4.3.2 Are nutritional practices being improved?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Os trabalhadores assalariados gozam de uma estabilidade económica que lhes possibilita melhorar as suas práticas nutricionais."
             },
             {
               "text": "4.3.3 Is dietary diversity increased?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Os trabalhadores assalariados  gozam de uma estabilidade económica que lhes garante uma dieta mais variada. Por outro lado, as mulheres referem que gostariam de variar mais a alimentação mas o facto de estarem a viver dentro da propriedade limita o seu acesso aos mercados locais. \"A alimentação devia mudar. Um dia caldo de amendoim, noutro dia outro produto.Mais variedade. Aqui não há mercado. Só há estrada. Estamos longe de qualquer mercado. por vezes o patrão empresta o carro para irmos ao mercado que há às 4ªs feiras.\" (fg com mulheres da F&L)."
             }
           ]
@@ -395,18 +336,15 @@
         {
           "title": "4.4 Stability ",
           "averageValue": 4,
-          "averageText": "High",
           "questions": [
             {
               "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Sendo trabalhadores assalariados esse risco não existe."
             },
             {
               "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Não temos possibilidade de o saber."
             }
           ]
@@ -419,30 +357,25 @@
         {
           "title": "5.1 Strength of producer organisations",
           "averageValue": 2.75,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "A Associação AGRIECO foi criada pela F&L , em parte para obtenção de financiamentos,esta associação de produtores só têm um papel interveniente na produção, negociando o preço de venda dos frutos à empresa. O dirigente da F&L valoriza o processo associativo baseado na competitividade. \"Se não te associado não há qualidade e quantidade. Se não te associas não consegues entrar na cadeia de valor\" (entrevista Cristobal. proprietário F&L)."
             },
             {
               "text": "5.1.2 How inclusive is group/cooperative membership?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Os produtores são incentivados a fazer parte da AGRIECO (homens e mulheres)."
             },
             {
               "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "A AGRIECO tem um funcionamento associativo com uma estrutura de direção."
             },
             {
               "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Os produtores da região negociaram em 2016 a venda da manga"
             }
           ]
@@ -450,18 +383,15 @@
         {
           "title": "5.2 Information and confidence",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Os produtores locais têm participado em ações de formação sobre atividades ligadas ao tratamento dos pomares, não têm qualquer participação no que respeita a políticas agrícolas e preços de mercado praticados pela empresa"
             },
             {
               "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Os produtores locais não só têm assistido nas últimas duas décadas à falência (por desistência do projeto) de empresas com a F&L caso da própria AGRIBISSAU que é hoje a F&L , como a própria F&L ainda não tem um tempo suficiente de instalação que lhes dê confiança. Por outro lado se em 2016 a F&L comprou manga em quantidade aos produtores em 2017 não o fez, há alguma expetativa quanto a relação futura.  As mulheres inquiridas no focus group referem que estão na F&L para adquirirem formação e falam em deixar a empresa, um dia."
             }
           ]
@@ -469,24 +399,20 @@
         {
           "title": "5.3 Social involvement",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "A F&L vem substituir uma empresa do mesmo tipo. Não houve ocupação de terras habitadas ou cuja propriedade foi reclamada. Houve por isso pouco impacto sobre os modos de vida das comunidades locais."
             },
             {
               "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "O pagamento em géneros em complemento do salário insere-se nas tradições locais. A composição multi-étnica dos trabalhadores locais denota um ambiente culturalmente inclusivo."
             },
             {
               "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "A F&L fornece serviços (escola e saúde) mas não o faz voluntariamente, os utentes pagam por estes serviços. Na altura da visita estavam a iniciar atividades desportivas com os jovens."
             }
           ]
@@ -499,24 +425,20 @@
         {
           "title": "6.1 Health services",
           "averageValue": 2.33333333333333,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "6.1.1 Do households have access to health facilities?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Há um serviço de saúde básico (cuidados primários) e staff da empresa com formação em primeiros socorros.Nas situações mais sérias os trabalhadores são transportados ao hospital de Mansôa ou Bissau."
             },
             {
               "text": "6.1.2 Do households have access to health services?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Há um serviço de saúde básico (cuidados primários) e staff da empresa com formação em primeiros socorros.Nas situações mais sérias os trabalhadores são transportados ao hospital de Mansôa ou Bissau."
             },
             {
               "text": "6.1.3  Are health services affordable for households?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Nos hospitais só as crianças não pagam as consultas."
             }
           ]
@@ -524,18 +446,15 @@
         {
           "title": "6.2 Housing",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "6.2.1 Do households have access to good quality accomodations?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "As habitações são em geral um pouco melhores das das aldeias. Há eletricidade para metade das habitações ainda que só por alguns períodos do dia. Parte dos trabalhadores vivem nas suas aldeias."
             },
             {
               "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "A água é canalizada mas não potável. Existem algumas instalações sanitárias (latrinas e cercos) colectivas."
             }
           ]
@@ -543,24 +462,20 @@
         {
           "title": "6.3 Education and training",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "6.3.1 Is primary education accessible to households?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Existe uma escola dentro da empresa frequentada por todas as crianças e até por crianças que vêm de fora (os pais não trabalham na empresa).Pagam 500 CFA por cada criança. As mulheres no entanto queixam-se da inexistência de instalações escolares, dado ser aproveitado um edifício que já teve outra finalidade.\"Escola própria não existe aquilo é um refeitório usado para descasque de caju\" (fg mulheres da F&L)."
             },
             {
               "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Não existe escola secundária na propriedade da empresa, situando-se a mais próxima a cerca de 7 kms."
             },
             {
               "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "A empresa tem realizado formações tanto para os trabalhadores como para o exterior (práticas de produção).As mulheres referem-se à formação que adquirem na empresa enquanto executam o seu trabalho (i.e. técnicas de enxertia)."
             }
           ]

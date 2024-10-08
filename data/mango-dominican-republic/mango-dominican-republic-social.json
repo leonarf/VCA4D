@@ -11,78 +11,64 @@
         {
           "title": "1.1 Respect of labour rights",
           "averageValue": 1.8,
-          "averageText": "Moderate/Low",
           "questions": [
             {
               "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             },
             {
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             },
             {
               "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             }
           ]
         },
         {
           "title": "1.2 Child Labour",
           "averageValue": "n/a",
-          "averageText": "n/a",
           "questions": [
             {
               "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
-              "scoreValue": "n/a",
-              "scoreText": "n/a"
+              "scoreValue": "n/a"
             },
             {
               "text": "1.2.2 Are children protected from exposure to harmful jobs?",
-              "scoreValue": "n/a",
-              "scoreText": "n/a"
+              "scoreValue": "n/a"
             }
           ]
         },
         {
           "title": "1.3 Job safety",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             }
           ]
         },
         {
           "title": "1.4 Attractiveness",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "1.4.2 Are conditions of activities attractive for youth?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             }
           ]
         }
@@ -94,71 +80,58 @@
         {
           "title": "2.1 Adherence to VGGT ",
           "averageValue": 1,
-          "averageText": "Low",
           "questions": [
             {
               "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             },
             {
               "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             }
           ]
         },
         {
           "title": "2.2 Transparency, participation and consultation",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             }
           ]
         },
         {
           "title": "2.3  Equity,compensation and justice",
           "averageValue": 1.66666666666667,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             },
             {
               "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
-              "scoreValue": "n/a",
-              "scoreText": "n/a"
+              "scoreValue": "n/a"
             },
             {
               "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             }
           ]
         }
@@ -170,120 +143,98 @@
         {
           "title": "3.1 Economic activities",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             }
           ]
         },
         {
           "title": "3.2 Access to resources and services",
           "averageValue": 1.75,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.2.1 Do women have ownership of assets (other than land)?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "3.2.2 Do women have equal land rights as men?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             },
             {
               "text": "3.2.3 Do women have access to credit?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             }
           ]
         },
         {
           "title": "3.3 Decision making",
           "averageValue": 2.4,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.3.1 To what extent do women take part in the decisions related to production?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "3.3.3 Do women have control over income?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "3.3.4 Do women earn independent income?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             }
           ]
         },
         {
           "title": "3.4 Leadership and empowerment",
           "averageValue": 1.75,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             },
             {
               "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "3.4.4 Do women speak in public?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             }
           ]
         },
         {
           "title": "3.5 Hardship and division of labour",
           "averageValue": 1,
-          "averageText": "Low",
           "questions": [
             {
               "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             },
             {
               "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             }
           ]
         }
@@ -295,73 +246,60 @@
         {
           "title": "4.1 Availability of food ",
           "averageValue": 4,
-          "averageText": "High",
           "questions": [
             {
               "text": "4.1.1 Does the local production of food increase?",
-              "scoreValue": 4,
-              "scoreText": "High"
+              "scoreValue": 4
             },
             {
               "text": "4.1.2 Are food supplies increasing on local markets?",
-              "scoreValue": 4,
-              "scoreText": "High"
+              "scoreValue": 4
             }
           ]
         },
         {
           "title": "4.2 Accessibility of food ",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "4.2.1 Do people have more income to allocate to food?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "4.2.2 Are (relative) consumers food prices decreasing?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             }
           ]
         },
         {
           "title": "4.3 Utilisation and nutritional adequacy ",
           "averageValue": 3.5,
-          "averageText": "High",
           "questions": [
             {
               "text": "4.3.1 Is the nutritional quality of available food improving?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "4.3.2 Are nutritional practices being improved?",
-              "scoreValue": "n/a",
-              "scoreText": "n/a"
+              "scoreValue": "n/a"
             },
             {
               "text": "4.3.3 Is dietary diversity increased?",
-              "scoreValue": 4,
-              "scoreText": "High"
+              "scoreValue": 4
             }
           ]
         },
         {
           "title": "4.4 Stability ",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "4.4.2 Is excessive food price variation reduced?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             }
           ]
         }
@@ -373,66 +311,54 @@
         {
           "title": "5.1 Strength of producer organisations",
           "averageValue": 2.25,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "5.1.2 How inclusive is group/cooperative membership?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "5.1.3 Do groups have representative and accountable leadership?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
-              "scoreValue": 1,
-              "scoreText": "Not at all"
+              "scoreValue": 1
             }
           ]
         },
         {
           "title": "5.2 Information and confidence",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             }
           ]
         },
         {
           "title": "5.3 Social involvement",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
-              "scoreValue": "n/a",
-              "scoreText": "n/a"
+              "scoreValue": "n/a"
             },
             {
               "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             }
           ]
         }
@@ -444,61 +370,50 @@
         {
           "title": "6.1 Health services",
           "averageValue": 2.66666666666667,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "6.1.1 Do households have access to health facilities?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "6.1.2 Do households have access to health services?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "6.1.3  Are health services affordable for households?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             }
           ]
         },
         {
           "title": "6.2 Housing",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "6.2.1 Do households have access to good quality accomodations?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             },
             {
               "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             }
           ]
         },
         {
           "title": "6.3 Education and training",
           "averageValue": 2.66666666666667,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "6.3.1 Is primary education accessible to households?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
-              "scoreValue": 3,
-              "scoreText": "Substantial"
+              "scoreValue": 3
             },
             {
               "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
-              "scoreValue": 2,
-              "scoreText": "Moderate/Low"
+              "scoreValue": 2
             }
           ]
         }

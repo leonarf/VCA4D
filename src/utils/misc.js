@@ -10,11 +10,6 @@ export function useActorsAndStages(props) {
   };
 }
 
-const average = (array) => array.reduce((a, b) => a + b) / array.length
-
-export function getSocialAverageGroup(socialImpact) {
-  return Math.round(average(socialImpact.groups.map(group => Number(group.averageValue) || 0)), 2);
-}
 
 export const ACVImpacts = [
     {

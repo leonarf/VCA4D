@@ -11,36 +11,30 @@
         {
           "title": "1.1 Respect of labour rights",
           "averageValue": 2.6,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Labour rights potentially at stake for a significant part of the migrant workers. Because of illegality, they have limited access to social securities. Strong efforts have been made to document migrant workers. There has been a sensitization of worker rights in the sector but i awareness of worker rights is still limited. Paradoxically, increasing demands on worker rights causes market insecurity, especially for small producers. In sum, documentation of migrant workers remains a large challenge for the sector"
             },
             {
               "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Freedom of association is formally allowed in the Dominican Republic. However, while the sector is organised (see 5), collective bargaining is not common."
             },
             {
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "While many workers do not have formal written contracts compliance seems high. Wages in the banana sector are higher than in other agricultural sectors and secondary benefits increases the fairness of contracts as perceived by workers. However, fairness of contracts for day labourers on small farms is much lower"
             },
             {
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Forced labour does not seem to occur in the banana sector in the Dominican Republic."
             },
             {
               "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Discrimination in the banana VC takes place for migrant and female workers to a limited degree."
             }
           ]
@@ -48,18 +42,15 @@
         {
           "title": "1.2 Child Labour",
           "averageValue": 4,
-          "averageText": "High",
           "questions": [
             {
               "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Child labour does not seem to be major challenge in the banana sector. School attendance in the Dominican Republic is almost 100%."
             },
             {
               "text": "1.2.2 Are children protected from exposure to harmful jobs?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Child labour does not seem to be major challenge in the banana sector. The banana sector performs better in terms of zero child labour than other agricultural sectors."
             }
           ]
@@ -67,12 +58,10 @@
         {
           "title": "1.3 Job safety",
           "averageValue": 2,
-          "averageText": "Moderate/Low",
           "questions": [
             {
               "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Health and safety risks seem relatively low in the banana sector in Dominican Republic.Standards have greatly influenced the low risk to health and safety, but awareness remains low. In addition sexual harassment remains a risk to job safety for female wageworkers."
             }
           ]
@@ -80,18 +69,15 @@
         {
           "title": "1.4 Attractiveness",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "The banana sector is considered attractive compared to other agriculture sectors for workers and producers. Hardship, high market demands and vulnerability to climate change make other sectors more attractive to some"
             },
             {
               "text": "1.4.2 Are conditions of activities attractive for youth?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "The new generation seems to prefer to look for income in more attractive sectors. At the same time, a strong awareness of importance of youth involvement offers hope towards the future."
             }
           ]
@@ -104,18 +90,15 @@
         {
           "title": "2.1 Adherence to VGGT ",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "No recent cases of land expropriations are known in the banana sector. Smallholders are still predominant in the banana sector. Land transfer from small to medium and large producers could threaten the position of smallholders."
             },
             {
               "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "No recent cases of land expropriations are known in the banana sector."
             }
           ]
@@ -123,30 +106,25 @@
         {
           "title": "2.2 Transparency, participation and consultation",
           "averageValue": "n/a",
-          "averageText": "n/a",
           "questions": [
             {
               "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Transparency, participation and consultation is not analysed as it is not applicable."
             },
             {
               "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Transparency, participation and consultation is not analysed as it is not applicable."
             },
             {
               "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Transparency, participation and consultation is not analysed as it is not applicable."
             },
             {
               "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Transparency, participation and consultation is not analysed as it is not applicable."
             }
           ]
@@ -154,30 +132,25 @@
         {
           "title": "2.3  Equity,compensation and justice",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "There are many producers, especially smallholders, who do not have a land title.  Lack of property rights  is not seen as major challenge, but it does limit access to credit."
             },
             {
               "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Climate change and natural disasters have serious consequences for the livelihoods of banana producers. Many producers feel unable to adapt to climate change or cope with natural disasters. Insufficient measures seem  to be in place to cope with climate change and natural disasters.  Moreover, water scarcity is a potential threat to the livelihoods of producers if not well managed by the public and private sector."
             },
             {
               "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "No recent cases of land expropriations are known in the banana sector."
             },
             {
               "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "No recent cases of land expropriations are known in the banana sector."
             }
           ]
@@ -190,18 +163,15 @@
         {
           "title": "3.1 Economic activities",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "There are risks of exclusion from certain segments. Low participation is related to double burden and historical and cultural norms"
             },
             {
               "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Women are active in the banana sector as workers and producer. Participation of women is still very low and limited to certain segments of chain."
             }
           ]
@@ -209,30 +179,25 @@
         {
           "title": "3.2 Access to resources and services",
           "averageValue": 2.25,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.2.1 Do women have ownership of assets (other than land)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Female have relatively high decision making power in incom and control over asstes"
             },
             {
               "text": "3.2.2 Do women have equal land rights as men?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Women generally have less access to land titles; this also limit’s access to credit"
             },
             {
               "text": "3.2.3 Do women have access to credit?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Women generally have less access to land titles; this also limit’s access to credit"
             },
             {
               "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Strong efforts have been made to increase access to services for women in the V, but still challenges"
             }
           ]
@@ -240,36 +205,30 @@
         {
           "title": "3.3 Decision making",
           "averageValue": 2.8,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "3.3.1 To what extent do women take part in the decisions related to production?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Women have less decision making power on production decisions"
             },
             {
               "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Female workers seem quite autonomous in the organisation of their work"
             },
             {
               "text": "3.3.3 Do women have control over income?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Female have relatively high decision making power in income"
             },
             {
               "text": "3.3.4 Do women earn independent income?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Many women have own income and female have relatively high decision making power in income"
             },
             {
               "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Female have relatively high decision making power in income"
             }
           ]
@@ -277,30 +236,25 @@
         {
           "title": "3.4 Leadership and empowerment",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Many female producers are member of association. But limited due to limited number of female producers and workers."
             },
             {
               "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Increase in women in leadership positions, but still limited"
             },
             {
               "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Increase in women in leadership positions, but still limited. Alsi limited due to cultural norms."
             },
             {
               "text": "3.4.4 Do women speak in public?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "In general, women do speak in publi, but again limited  by certain cultural norms"
             }
           ]
@@ -308,18 +262,15 @@
         {
           "title": "3.5 Hardship and division of labour",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Please add justification."
             },
             {
               "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Female workers seem to be protected from the strenuous work in the field."
             }
           ]
@@ -332,18 +283,15 @@
         {
           "title": "4.1 Availability of food ",
           "averageValue": 4,
-          "averageText": "High",
           "questions": [
             {
               "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Local food production and supply is not a key challenge."
             },
             {
               "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Local food production and supply is not a key challenge..Availability of bananas seems secured for the local market despite more lucrative export market."
             }
           ]
@@ -351,18 +299,15 @@
         {
           "title": "4.2 Accessibility of food ",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Food accessibility is compromised by relatively low income. , especially for smallholders and workers.  Wageworkers on the bigger plantations usually have access to meals during working hours."
             },
             {
               "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Extreme food inflation is not common in the Dominican Republic, although is relatively high: averaging 9.52 percent from 2000 until 2018"
             }
           ]
@@ -370,24 +315,20 @@
         {
           "title": "4.3 Utilisation and nutritional adequacy ",
           "averageValue": 2.33333333333333,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Typical Dominican diet high in calories, but not in terms of nutritional value."
             },
             {
               "text": "4.3.2 Are nutritional practices being improved?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "No clear indication of changing nutritional practices"
             },
             {
               "text": "4.3.3 Is dietary diversity increased?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Undernourishment has decreased significantly over the last decades, obesity increased"
             }
           ]
@@ -395,18 +336,15 @@
         {
           "title": "4.4 Stability ",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Climate change and natural disasters pose challenges on food availabilit. Strong reliance on income in combinations with real risks in the VC are threats to food stability"
             },
             {
               "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Extreme food inflation is not common in the Dominican Republic, although is relatively high: averaging 9.52 percent from 2000 until 2018"
             }
           ]
@@ -419,30 +357,25 @@
         {
           "title": "5.1 Strength of producer organisations",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "The majority of the producers are organized in associations and an umbrella organizations. Small-scale producers are also informally represented through a Latin American FT network."
             },
             {
               "text": "5.1.2 How inclusive is group/cooperative membership?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "An estimated 20% of producers is not represented; characteristics of this group remain unclear. Worker unions do not exist, but workers are represented in various worker committees. Worker representation seems to be growing but is still weak"
             },
             {
               "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Representative and accountable leadership of producer representation is a challenge."
             },
             {
               "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Associations have limited negotiation capacity and power in input markets, but not in output markets"
             }
           ]
@@ -450,18 +383,15 @@
         {
           "title": "5.2 Information and confidence",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Producers have access to information on agricultural practices, policies and market prices."
             },
             {
               "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Producers have access to information on agricultural practices, policies and market prices."
             }
           ]
@@ -469,24 +399,20 @@
         {
           "title": "5.3 Social involvement",
           "averageValue": 3.5,
-          "averageText": "High",
           "questions": [
             {
               "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Most influences are positive. Also communities are often involved in  icommunity investmetn decision by producer associations. The exact extent could not be investigated in this study"
             },
             {
               "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "This topic did not seem relevant in the banana VC [elaborate]."
             },
             {
               "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "High quantities of Fairtrade premiums have increased the social impact at community level."
             }
           ]
@@ -499,24 +425,20 @@
         {
           "title": "6.1 Health services",
           "averageValue": 2.66666666666667,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "6.1.1 Do households have access to health facilities?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "In Dominican Republic health services are considered to be of reasonable quality, but with much room for improvement."
             },
             {
               "text": "6.1.2 Do households have access to health services?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "In Dominican Republic health services are considered to be of reasonable quality, but with much room for improvement."
             },
             {
               "text": "6.1.3  Are health services affordable for households?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "The banana sector is contributing to improved affordability of health care and workers and producers feel they are better off compared to the average. However, low levels of insurancw, climate change and low levels of savings pose risks."
             }
           ]
@@ -524,18 +446,15 @@
         {
           "title": "6.2 Housing",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "6.2.1 Do households have access to good quality accomodations?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Housing quality is considerably well and has improved a lot over the past decades. Risks do exits for migrant workers. The banana VC contributes to improved housing directly and indirectly."
             },
             {
               "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Access to water and proper sanitation is generally poor, especially for Haitian workers, while it is much better for producers."
             }
           ]
@@ -543,24 +462,20 @@
         {
           "title": "6.3 Education and training",
           "averageValue": 3.33333333333333,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "6.3.1 Is primary education accessible to households?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Almost all children go to primary school although the quality is disputable. While education level among producers is relatively high, it is still low for migrant workers."
             },
             {
               "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Enrolment in secondary school increasing, but a challenge for children of undocumented migrants. Producers indicate payment of scholarship from FT Premium is of large value in the banana VC."
             },
             {
               "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "The banana VC has contributed to capacity development of producers. Workers also feel the banana VC has enabled them to developed a broad range of skills. Investment in vocational training is however still considered a big challenge."
             }
           ]

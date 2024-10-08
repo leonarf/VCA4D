@@ -8,7 +8,7 @@
       {{ getNumberInTitle(group.title) }}
     </div>
     <div class="font-bold flex-grow">{{ removeNumberFromTitle(group.title) }}</div>
-    <Tag :scale="parseFloat(group.averageValue)" :appreciation="group.averageText" />
+    <Tag :scale="parseFloat(group.averageValue)" />
   </div>
   <template v-if="isOpen">
     <div
@@ -20,7 +20,7 @@
         {{ getNumberInTitle(question.text) }}
       </div>
       <div class="flex-grow">{{ removeNumberFromTitle(question.text) }}</div>
-      <Tag :scale="parseFloat(question.scoreValue)" :appreciation="question.scoreText" />
+      <Tag :scale="parseFloat(question.scoreValue)" />
     </div>
   </template> 
 </template>
@@ -28,7 +28,7 @@
 <script setup>
 import { ref } from 'vue';
 import Tag from './Tag.vue'
-import { getSocialScoreColor } from '@utils/colors.js'
+import { getSocialScoreColor } from '@utils/social.js'
 
 defineProps({
     group: Object

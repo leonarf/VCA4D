@@ -23,7 +23,7 @@
     :getValue="study => getSubValues(study)[subKey]"
   >
     <template #default="{ value, studyData }">
-      <slot :value="value" :studyData="studyData" />
+      <slot :value="value" :studyData="studyData" :isSubRow="true"/>
     </template>
   </ComparisonRow>
 </template>
