@@ -50,6 +50,11 @@
         </p>
       </section>
       <section>
+        <h2><strong>Compare study results</strong></h2>
+        <p class="mb-4">Draw comparisons between key indicators presented in VCA4D studies : economic growth, inclusiveness, social impacts and environmental indicators.</p>
+        <RouterLink class="button" :to="{ name: 'comparison' }">Compare studies</RouterLink>
+      </section>
+      <section>
         <h2><strong>Browse studies</strong></h2>
         <div class="filter-section">
           <p>Filter the studies on this page based on the topics addressed.</p>
@@ -61,9 +66,6 @@
           <div>
             <div>
               Number of studies: {{ filteredStudies.length }}
-            </div>
-            <div>
-              You can also <RouterLink class="link" :to="{ name: 'comparison' }">compare studies</RouterLink> based on key indicators
             </div>
           </div>
         </div>
@@ -203,6 +205,21 @@ section.banner {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+
+.button {
+  color:white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background-color: #3F83F8;
+  border-radius: 0.25rem;
+  right: 0px;
+  width: 200px;
+
+  &:hover {
+    background-color: #1A56DB;
+  }
 }
 
 .link {
