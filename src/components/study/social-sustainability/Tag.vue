@@ -1,5 +1,10 @@
 <template>
-  <div :title="`Rating: ${scale}`" class="min-w-[9rem] font-bold py-1 text-center tag" :style="{ backgroundColor, border }">
+  <div
+    :title="`Rating: ${scale}`"
+    class="min-w-[9rem] py-1 text-center tag"
+    :class="{ bold: ! lightVersion }"
+    :style="{ backgroundColor, border }"
+  >
     {{ appreciation }}
   </div>
 </template>
@@ -27,7 +32,11 @@ const appreciation = computed(() => getSocialScoreLabel(props.scale))
 </script>
 
 <style scoped lang="scss">
-.tag{
+.tag {
   border-radius: 1000px;
+
+  &.bold {
+    font-weight: 700;
+  }
 }
 </style>
