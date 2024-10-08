@@ -11,36 +11,30 @@
         {
           "title": "1.1 Respect of labour rights",
           "averageValue": 2.6,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Along the groundnut value chain, respect of labour rights is observably better in the formal enterprises found in industrial scale processing. Here workers are likely to have enforceable and fair contracts, which are absent across most parts of the value chain. Respect of 8 fundamental conventions of ILO are observably better at industrial segment than in any other segment of the value chain. Wages of workers are much higher than the minimum wages at the industrial segment of the VC."
             },
             {
               "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Even at industrial scale operations, freedom of association (ILO convention 087), collective bargaining (ILO convention 098) are not allowed.This is symptomatic of the context in Africa and more specifically in Ghana."
             },
             {
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Except workers at a industrial processing companies, most other workers in the value chain are ‘informal’ workers meaning that they neither have a contract nor any benefits (health, insurance, pension etc.)."
             },
             {
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "No forced labour /no bonded labour is observed in the value chain. Youth are involved in supporting farming and processing activities as part of a family or extended family network."
             },
             {
               "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "The discrimination in employment based on kinship, sex, other affiliations was not observed in the value chain."
             }
           ]
@@ -48,18 +42,15 @@
         {
           "title": "1.2 Child Labour",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "While the child labour prevalence is reported in other value chains (such as cocoa) in agriculture and other sectors of the economy, it does not seem the case in groundnut. Even though, the children of age 12-17 are commonly seen to be working on the groundnut farm but these are family farms. There is some likelihood that these children could be school dropouts especially when they belong to a family (generally migrants with low land holding and farm workers) with dire food insecurity situation. In these situation, young children are expected to earn something for contributing to family's food requirements, and are forced to work from a very early age."
             },
             {
               "text": "1.2.2 Are children protected from exposure to harmful jobs?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "A specific phenomenon is seen in the groundnut value chain at the roasting sites, where mothers are involved and where children are also around. As these roasting sites are emitting considerable smoke and heat, it is likely to be a health and safety risk for the children around. This is not child labour but can potentially create conditions similar to worst form of child labour with persistent exposure to heat and smoke on a daily basis."
             }
           ]
@@ -67,12 +58,10 @@
         {
           "title": "1.3 Job safety",
           "averageValue": 1,
-          "averageText": "Not at all",
           "questions": [
             {
               "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Main occupational health and safety risk in the value chain are observed at the processing segment. As women are the main workers at processing sites, they could be potential target for occupational harm due to excessive heat and smoke in the spaces where they work."
             }
           ]
@@ -80,18 +69,15 @@
         {
           "title": "1.4 Attractiveness",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Majority of workers across different part of the value chain are earning wages which are equal to or above the daily minimum wage. However, as data from sample investigations in the groundnut growing districts shows, majority of workers in the VC are not earning enough groundnut incomes equal to expected minimum wages on annual basis."
             },
             {
               "text": "1.4.2 Are conditions of activities attractive for youth?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "The owners of artisanal and industrial processing enterprises and also aggregators /wholesalers and retailers are probably able to earn 1.5 to 5 times living wage benchmark from their groundnut business. The conditions in the groundnut value chain are potentially attractive to youth (boys and girls) as there are higher-income earning opportunities in processing and trading segments of the VC."
             }
           ]
@@ -104,18 +90,15 @@
         {
           "title": "2.1 Adherence to VGGT ",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "The examples of large-scale land leases in other commodities in the country suggest history of violations and non-compliances with the principles of VGGT. This is not the case in groundnut value chain. This presents a clean slate to begin groundnut VC development – learning from experiences in other crops (e.g. Jatropha, Mango etc.) in Ghana and from other countries in Africa."
             },
             {
               "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Arrival of non-native investors and large-scale land investments in groundnut is not a very clear possibility given the nature of the value chain. However, commercial farms in groundnut could be a distinctly possible future scenario if the demand for groundnut continues to increase and if existing value chain constraints are addressed leading to higher realization of returns from the investments. The VC needs to capitalise on promising business models such as the ones being developed by MADE  (DFID funded) and MOAP  (GiZ and EU co-funded) projects which could potentially provide an alternative to large-scale land acquisition by ‘non-natives’"
             }
           ]
@@ -123,30 +106,25 @@
         {
           "title": "2.2 Transparency, participation and consultation",
           "averageValue": 2.75,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Secondary literature analysis on transparency, participation and consultation on large scale investments for land acquisitions in other commodities (not groundnut) present a dismal picture. Clearly, compromises on transparency, participation and consultation can happen in the groundnut sector as well. In the prevailing context, the process of transparency, participation and consultation in land acquisition can possibly be compromised if companies do not follow self-regulation and /or if VGGT framework is not applied."
             },
             {
               "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "The challenge in increasing transparency, participation and consultation lies in the existing legal and regulatory framework for land governance. The approach to build up a strong legal and regulatory framework for land governance is to have a longer term, broader vision for the country. There is no law regulating private company-smallholder partnerships. A National Land Bill was brought in 2018, which when passed into law, can potentially address the challenge related to the land acquisition"
             },
             {
               "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Same as 2.2.1"
             },
             {
               "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Same as 2.2.1"
             }
           ]
@@ -154,30 +132,25 @@
         {
           "title": "2.3  Equity,compensation and justice",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "In Ghana, ~80 percent of land is governed by customary law. In this dispensation, generally, it is seen that equity, compensation and justice have been hostage to the discretions of chieftains and other authorities which have led to compromises on legitimate tenure rights of individuals and communities. The groundnut value chain is too nascent to assess whether this can happen or not happen. However, if past experiences are any guide to the future and in the absence of proper awareness, capacities and bargaining power, the land-owners in groundnut value chain also could find themselves short-shrifted."
             },
             {
               "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Same as 2.3.1"
             },
             {
               "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Same as 2.3.1"
             },
             {
               "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Same as 2.3.1"
             }
           ]
@@ -190,18 +163,15 @@
         {
           "title": "3.1 Economic activities",
           "averageValue": 4,
-          "averageText": "High",
           "questions": [
             {
               "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "In Ghana, as in the rest of West Africa, groundnut is termed as the woman’s crop due to the major roles women play in its production, processing and trading. Women play main role in almost all agricultural operations for growing and harvesting groundnut."
             },
             {
               "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Women play main role in almost all agricultural operations for growing and harvesting groundnut.  Women have direct control over income earned from groundnut production. Most processing enterprises are run almost single-handedly by women that contribute average of 30% to total family income in processing families. 90 to 95% artisanal processing is done mainly by women while 50% industrial scale processing enterprises are run by women. Though men play dominant role as aggregators or wholesale traders in the groundnut VC, women also play significant role especially in the retail segment of the chain. While only 5 to 10% wholesale traders are women, the retail segment is dominated by women (80-90% women)."
             }
           ]
@@ -209,30 +179,25 @@
         {
           "title": "3.2 Access to resources and services",
           "averageValue": 1.75,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.2.1 Do women have ownership of assets (other than land)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Even though women play significant economic roles in groundnut value chain and, yet they have very limited access to resources and services."
             },
             {
               "text": "3.2.2 Do women have equal land rights as men?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Women’s access to resources and services generally and in the VC specifically are predisposed by the historical context, socio-cultural norms and systems of the Ghanaian society.  Land is inherited by men and women do not have any formal rights of their land."
             },
             {
               "text": "3.2.3 Do women have access to credit?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Financial inclusion of women is reduced due to lack of ownership of land. Her abilities and confidence are reduced in accessing agriculture extension, financial and other services from formal government and other institutions."
             },
             {
               "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Women processors are using very rudimentary equipment and technologies for processing. Groundnut value chain have many initiatives working on improving groundnut seed and agronomic practices. However, there has been limited emphasis on post-harvest technologies."
             }
           ]
@@ -240,36 +205,30 @@
         {
           "title": "3.3 Decision making",
           "averageValue": 2.6,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "3.3.1 To what extent do women take part in the decisions related to production?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Groundnut value chain offers a lesson in enhancing women empowerment. As women cultivate their own plot, do their own processing and engage in trading activities on their own, women have considerable control over incomes earned."
             },
             {
               "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Local trade and processing in cashew is mostly carried out by women (stretching from Kambia to Bambali to Waterloo). The lesson here is that the women running their own business will have a better chance of controlling their income than the women who are doing joint farming operations with their husbands."
             },
             {
               "text": "3.3.3 Do women have control over income?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Women have relatively more control over income when they are earning themseleves, e.g. in processing segment of the VC. Women have very little control over their income in 'production' segment of the VC."
             },
             {
               "text": "3.3.4 Do women earn independent income?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Groundnut provide self-esteem, and financial independence to women involved either as producers, processors or traders"
             },
             {
               "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Women have no decision-making authority related to sale, purchase or transfer of household assets, including land"
             }
           ]
@@ -277,30 +236,25 @@
         {
           "title": "3.4 Leadership and empowerment",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Given their economic and other contributions, the study team found that women have exhibited exemplary leadership qualities in various parts of the groundnut value chain on an individual level. However, women are still very limited in number as part of farmer based organisations."
             },
             {
               "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Though most of the existing groups have at least one women in their leadership role, overall only 8 percent of women members in the groups are playing leadership roles. So, while women are showing their strength in running their groundnut businesses almost singlehandedly, their contributions are less recognized at group/community /societal levels."
             },
             {
               "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "As highlighted above, women have limited presence, visibility and voice within the groups where they are members."
             },
             {
               "text": "3.4.4 Do women speak in public?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Women's ability to speak in public is dependent upon their abilities and on opportunities available to them. Participation in different type of groups enhances both their abilities and opportunities as is seen in the cases studied."
             }
           ]
@@ -308,18 +262,15 @@
         {
           "title": "3.5 Hardship and division of labour",
           "averageValue": 1,
-          "averageText": "Low",
           "questions": [
             {
               "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "women’ role is pervasive and dominant in many segments of the value chain. In our survey of 48 farmers, 98 percent reported that in their opinion, between men and women, women have more work load (including domestic work and child care)."
             },
             {
               "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "The strenuous activities in groundnut production, processing and trading are mostly carried out by women. ). The women in the groundnut value chain are subjected to strenuous working condition"
             }
           ]
@@ -332,18 +283,15 @@
         {
           "title": "4.1 Availability of food ",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Majority of groundnut farmers surveyed believe that their household food expenditure is on the upturn over last five years. 90 percent groundnut farmers believe that their food expenditure as a proportion of total household expenditure has increased over the last five years. This is indicative of reduced per capita local production of food and downward trend in food supplies in local markets."
             },
             {
               "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Ghana does not produce enough food for its requirement. Ghana is not a self-sufficient country when it comes to the cereal market, and various cereals are imported from other countries to satisfy domestic needs. The priorities of the GoG to support Maize, Rice, Soyabean and other crops have paid off in terms of increased production and better self-reliance. However area under production of highly nutritious food crops such as groundnut, millets and sorghum have gone down over the years.The area under groundnut production have also gone down by 9 percent, over last 10 years, the country is increasingly relying on groundnut imports from Burkina Faso, Nigeria and other neighboring countries, to meet its domestic demand."
             }
           ]
@@ -351,18 +299,15 @@
         {
           "title": "4.2 Accessibility of food ",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "In line with inflation, consumer food prices have been increasing as is confirmed by a survey of groundnut farmers. In the survey, 31 percent of farmers reported that they have faced economic deficit (income minus expenditure). Seen together with inflation, this status is indicative of increasing distress and reduced accessibility to food."
             },
             {
               "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Food inflation in Ghana averaged 7.55 percent from 2013 until 2019, reaching an all-time high of 9.70 percent in December of 2016 and a record low of 5 percent in July of 2014."
             }
           ]
@@ -370,24 +315,20 @@
         {
           "title": "4.3 Utilisation and nutritional adequacy ",
           "averageValue": 1.6666666666666667,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Several discussions with a range of key informants and consumers have confirmed that groundnut is a major ingredient for Northern diet, as in most households soups is taken almost daily. North Ghanaian diets include cereals, roots and tubers which are considered main commodities as on an average of 87 percent of households are consuming these, 7 times a week while vegetables and fruits are consumed by only 1 percent of households, 3 days in a week. With this pattern of diet, Ghana is confronted with the triple burden of malnutrition (i.e. Protein Energy Malnutrition, Macronutrient Malnutrition and Overweight & Obesity). Protein Energy Malnutrition and Macronutrient Malnutrition are still prevalent in rural areas, especially in the Northern, Upper East and Upper West regions."
             },
             {
               "text": "4.3.2 Are nutritional practices being improved?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "The study team observed many instances of aflatoxin contaminated groundnut being used in the making of  paste and contaminated groundnut being used in making of kuli kuli. As per a strategic review of zero hunger in Ghana, aflatoxin has been implicated in the occurrence of stunting and underweight among children (Beesabathuni 2014). Unsafe food may cause diseases which will inevitably affect food utilization and predispose an individual to under-nutrition (Matilda Steiner-Asiedu et al, 2018). Overall, a strong need has emerged for measuring aflatoxin levels across the value chain as this can guide design of appropriate responses – both regulatory (including policy enforcements) and market level. At the same time, nutritional outcomes need to be assessed more rigorously to provide more evidence of impact of aflatoxin contaminated food items. And finally, all development programme and initiatives in Ghana would need to measure and improve their nutrition sensitiveness."
             },
             {
               "text": "4.3.3 Is dietary diversity increased?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "The result of a survey of 48 groundnut farmers indicate that groundnut farmers dietary diversity is ‘medium’ with HDD score at 5.1. A small variability is noticed in the score of different category of farmers e.g. commercial farmers have a better HDDS at 5.4, followed by aggregator linked smallholders at 5.0 and lowest HDDS is for non-aggregator smallholders at 4.8. The dietary diversity may have done down over the years, given food inflation and in creasing household economic deficit especially in Northern Ghana."
             }
           ]
@@ -395,18 +336,15 @@
         {
           "title": "4.4 Stability ",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "The food shortages are commonplace especially during June-Sep, as not enough storage is left for the period. In the survey with 48 farmers, 31 percent reported to be experiencing economic deficit (outflows are more than inflows). Groundnut value chain development in Ghana have a potential to reduce food and nutrition insecurity. Groundnut can provide higher incomes than cereals. As per MADE, gross profits for groundnut production stand at GH¢2,449 / ha, making groundnuts second only to Yam in terms of returns per hectare in the North."
             },
             {
               "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "As indicated above, food price variations are increasing over last 5 years, putting additional pressures on household economy. Groundnut value chain development, in this context, have potential to increase stability of incomes and food security for groundnut producers and processors."
             }
           ]
@@ -419,30 +357,25 @@
         {
           "title": "5.1 Strength of producer organisations",
           "averageValue": 2.25,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "A large number of farmer based organisations are mobilised /promoted in Ghana, with very few of them actually working in the groundnut value chain. A survey of 48 groundnut farmers revealed that 42 percent are currently members of any FBO. In the same survey, only 8.3 percent reported to have used VSLA for taking credit for groundnut cultivation or processing. The study has noted some examples of successes, some examples of failures and some new alternative approaches to building social capital in the groundnut value chain."
             },
             {
               "text": "5.1.2 How inclusive is group/cooperative membership?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Women membership in FBOs is around 42 percent of total membership. Structures such as VSLAs are largely women-centric. Many producer and processing groups being promoted have women as their main members. Aggregator based out-grower model also include mainly women."
             },
             {
               "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "The main challenge FBOs and farmer apex networks face are the lack of accountable and transparent leadership."
             },
             {
               "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "FBOs providing support to groundnut farmers are currently limited in number. However an aggregator linked smallholder support mechanism has been developed well by MoAP and MADE projects. These mechanisms are working very well to support farmers to access input and output markets. Their coverage though is only about 5 percent of total groundnut farmers in the country. Rest of the farmers are facing serious challenges in getting certified seed, fertiliser (due to a policy constraint), and support for improved agronomy and marketing of their produce."
             }
           ]
@@ -450,18 +383,15 @@
         {
           "title": "5.2 Information and confidence",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Existing extension system in Ghana is weak, not able to effectively support uptake of new research innovations. In a survey of 48 farmers, 52 percent reported to have received assistance or participated in a rural development programme undertaken by an external organisation. Most of these received basic training related to groundnut production or processing. Even to train the groundnut farmers, knowledge of extension agent is also highlighted by key informants  a limiting factor. Extension agent lack logistics support. Policy is another constraint as subsidy is provide for seed and fertilizer for cereal crops and not for groundnut crop e.g. there is no subsidy on TSP fertilizer for groundnut crop."
             },
             {
               "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Aggregator linked smallholders are able to get information and effective support through the aggregator, demonstrating a very trustworthy relationship between farmers /out-growers and aggregator. However, aggregator linked smallholders are only about 5 percent of total groundnut farmers in the country."
             }
           ]
@@ -469,23 +399,19 @@
         {
           "title": "5.3 Social involvement",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "The agriculture system in Ghana is project based. Groundnut have also seen specific project investments (such as MoAP, MADE) recently which are emphasizing community involvement and participation in value chain development. The impact of these initiatives are already visible as captured in the above-sections. If the GoG policy and programme places more priority on the groundnut value chain, there is higher likelihoods of current constraints being addressed and increased community involvement in improving the value chain and livelihoods of the VC actors."
             },
             {
               "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
-              "scoreValue": "n/a",
-              "scoreText": "n/a"
+              "scoreValue": "n/a"
             },
             {
               "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": ""
             }
           ]
@@ -498,24 +424,20 @@
         {
           "title": "6.1 Health services",
           "averageValue": 1.6666666666666667,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "6.1.1 Do households have access to health facilities?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Basic health infrastructure in rural areas especially in North Ghana is limited. Community Health Intervention Planning and Services (CHIPS) is the basic unit of health delivery in Ghana for preventive care managed by a community health officer. As per a key informant, there are challenges and lot of factors that make health systems work improperly. Health care financing system and health insurance payment modalities are very weak, that tends to make the health care chain dysfunctional."
             },
             {
               "text": "6.1.2 Do households have access to health services?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Primary health centers are available approximately 2-3 miles from a village. The secondary hospitals are further away from villages. The first line of treatment in most cases is CHIPS or private doctors."
             },
             {
               "text": "6.1.3  Are health services affordable for households?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "The cost of local treatment is around 10 to 100 cedis ($1.8 to 18), depending on the disease. The health services are rudimentary and increasingly less affordable."
             }
           ]
@@ -523,18 +445,15 @@
         {
           "title": "6.2 Housing",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "6.2.1 Do households have access to good quality accomodations?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "In Ghana, majority of groundnut producers and processors live in compound houses. The three northern regions, Northern (23.2%), Upper East (17.6%) and Upper West (23.3%), recorded low proportions of households living in dwellings whose outer wall is constructed with cement."
             },
             {
               "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Access to safe water and improved sanitation is poor in Ghana. A Water.org report says that 5 million (~18 percent) in Ghana lack access to safe water and 23 million (~82 percent) people lack access to improved sanitation."
             }
           ]
@@ -542,24 +461,20 @@
         {
           "title": "6.3 Education and training",
           "averageValue": 2.3333333333333335,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "6.3.1 Is primary education accessible to households?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Most groundnut producers are illiterate and most groundnut processors are literate only up to Junior Secondary (JHS). The situation is changing now with children of groundnut farmers and processors. Several focus group discussions with groundnut farmers and processors revealed that most of the their children are now going to school. A survey of 48 groundnut farmers revealed that 73 percent of school age children are actually going to the school."
             },
             {
               "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "School enrolment data suggest dropout rate is high for children transitioning from primary to secondary schools. This is evident in primary school enrollment at 95.36 percent as per the data collected in many large-scale household surveys. However, it dramatically reduces at the secondary level, where enrolment is 59 percent."
             },
             {
               "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "No such instances observed in the value chain"
             }
           ]

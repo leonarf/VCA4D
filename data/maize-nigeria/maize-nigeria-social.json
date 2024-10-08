@@ -11,36 +11,30 @@
         {
           "title": "1.1 Respect of labour rights",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.1.1 To what extent do companies involved in the value chain respect the standards elaborated in the 8 fundamental ILO international labour conventions and in the ICESCR  and ICCPR?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Although Nigeria has ratified several regional and international treaties including ICESCR and ICCPR, the rule of law is weak and has not been able to prevent and/or contain systemic issues of ethnic, religious and gender based discrimination and violence affecting areas where smallholder maize producers are located. This has disrupted their access to basic services and markets. Enforcement of labour laws is weak."
             },
             {
               "text": "1.1.2 Is freedom of association allowed and effective (collective bargaining)?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Information not available"
             },
             {
               "text": "1.1.3 To what extent do workers benefit from enforceable and fair contracts?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Most contracts for agriculture are verbal - this makes the farm wage labourers vulnerable and liable to exploitation;  working conditions in industrial processing units"
             },
             {
               "text": "1.1.4 To what extent are risks of forced labour in any segment of the value chain minimised?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "Laws and regulations are in place however enforcement in states where religious laws are in place (Sharia) is weak; there is need for programs to provide services to children working in agriculture, mining, petty trading etc\nagriculture"
             },
             {
               "text": "1.1.5 To what extent are any risks of discrimination in employment for specific categories of the population minimised?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "laws are in place however enforcement in states is weak;"
             }
           ]
@@ -48,18 +42,15 @@
         {
           "title": "1.2 Child Labour",
           "averageValue": 2,
-          "averageText": "Moderate/Low",
           "questions": [
             {
               "text": "1.2.1 Degree of school attendance in case  children are working (in any segment of the value chain)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "States in the north-east and north-west have female primary net attendance rates of 47.7 percent and 47.3 percent (>50% dropout/ not enrolled); The primary school\nnet attendance rate increased significantly between 2007 and 2011, from\n62 per cent to 70 per cent, but has since declined to below the 2007 level."
             },
             {
               "text": "1.2.2 Are children protected from exposure to harmful jobs?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Laws and regulations are in place however enforcement in states where religious laws are in place (Sharia) is weak; there is need for programs to provide services to children working in agriculture, mining, petty trading etc"
             }
           ]
@@ -67,12 +58,10 @@
         {
           "title": "1.3 Job safety",
           "averageValue": 2,
-          "averageText": "Moderate/Low",
           "questions": [
             {
               "text": "1.3.1 Degree of protection from accidents and health damages (in any segment of the value chain)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Only in industrial processing/ milling factories; no protection measures in small and medium scale processing units"
             }
           ]
@@ -80,18 +69,15 @@
         {
           "title": "1.4 Attractiveness",
           "averageValue": 2.5,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "1.4.1 To what extent are remunerations in accordance with local standards?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "minimum wage does not apply to seasonal employment such as agriculture wage labour"
             },
             {
               "text": "1.4.2 Are conditions of activities attractive for youth?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "trading and small and medium scale processing activities can provide 25 ti 50% of the living wage"
             }
           ]
@@ -104,18 +90,15 @@
         {
           "title": "2.1 Adherence to VGGT ",
           "averageValue": "n/a",
-          "averageText": "n/a",
           "questions": [
             {
               "text": "2.1.1 Do the companies/institutions involved in the value chain declare adhering to the VGGT?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "no information available"
             },
             {
               "text": "2.1.2 If large scale investments for land aquisition are at stake, do the involved companies/institutions apply the 'Guide to due diligence of agribusiness projects that affect land and property rights'?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "no information available"
             }
           ]
@@ -123,30 +106,25 @@
         {
           "title": "2.2 Transparency, participation and consultation",
           "averageValue": "n/a",
-          "averageText": "n/a",
           "questions": [
             {
               "text": "2.2.1  Level of prior disclosure of project related information to local stakeholders?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "no information available"
             },
             {
               "text": "2.2.2 Level of accessibility of intervention policies, laws, procedures and decisions to all stakeholders of the value chain?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "no information available"
             },
             {
               "text": "2.2.3  Level of participation and consultation of all individuals and groups in the decision-making process?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "no information available"
             },
             {
               "text": "2.2.4 To what extent prior consent of those affected by the decisions was reached?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "no information available"
             }
           ]
@@ -154,30 +132,25 @@
         {
           "title": "2.3  Equity,compensation and justice",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "2.3.1  Do the locally applied rules promote secure and equitable tenure rights or access to land and water?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Nigeria has endorsed VGGT but land tenure is governed by customary law, and transactions in the land market are largely informal."
             },
             {
               "text": "2.3.2 In case disruption of livelihoods is expected, have alternative strategies been considered?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "govenrment policies exist but not translated into concerted action"
             },
             {
               "text": "2.3.3 Where expropriation is indispensable: is a system for ensuring fair and prompt compensation in place (in accordance with the national law and publically acknowledged as being fair)?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "no information available"
             },
             {
               "text": "2.3.4 Are there provisions foreseen to address stakeholder complains and for arbitration of possible conflicts caused by value chain investments?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "no information available"
             }
           ]
@@ -190,18 +163,15 @@
         {
           "title": "3.1 Economic activities",
           "averageValue": 4,
-          "averageText": "High",
           "questions": [
             {
               "text": "3.1.1 Are risks of women being excluded from certain segments of the value chain minimised?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             },
             {
               "text": "3.1.2 To what extent are women active in the value chain (as producers, processors, workers, traders…)?",
               "scoreValue": 4,
-              "scoreText": "High",
               "comment": "Please add justification."
             }
           ]
@@ -209,30 +179,25 @@
         {
           "title": "3.2 Access to resources and services",
           "averageValue": 2.25,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.2.1 Do women have ownership of assets (other than land)?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "only by inheritance"
             },
             {
               "text": "3.2.2 Do women have equal land rights as men?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "women have user rights in all states and can have title deeds in their names; cusotmary land rights do not confer woment the right to use, control or transfer land"
             },
             {
               "text": "3.2.3 Do women have access to credit?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "only through  government or NGO development programmes"
             },
             {
               "text": "3.2.4 Do women have access to other services (extension services, inputs…)?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "only through  government or NGO development programmes"
             }
           ]
@@ -240,36 +205,30 @@
         {
           "title": "3.3 Decision making",
           "averageValue": 1.6,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.3.1 To what extent do women take part in the decisions related to production?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "social cultural norms esp. in northern states hinder their decision-making"
             },
             {
               "text": "3.3.2 To what extent are women autonomous in the organisation of their work?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Please add justification."
             },
             {
               "text": "3.3.3 Do women have control over income?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Please add justification."
             },
             {
               "text": "3.3.4 Do women earn independent income?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Please add justification."
             },
             {
               "text": "3.2.5 Do women take part in decisions on the purchase, sale or transfer of assets?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Please add justification."
             }
           ]
@@ -277,30 +236,25 @@
         {
           "title": "3.4 Leadership and empowerment",
           "averageValue": 2.25,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "3.4.1 Are women members of groups, trade unions, farmers' organisations?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "there are few women-only membership associations"
             },
             {
               "text": "3.4.2 Do women have leadership positions within the organisations they are part of?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "facilitated by NGOs"
             },
             {
               "text": "3.4.3 Do women have the power to influence services, territorial power and policy decision making?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "more in southern states"
             },
             {
               "text": "3.4.4 Do women speak in public?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "certain influential women speak up"
             }
           ]
@@ -308,18 +262,15 @@
         {
           "title": "3.5 Hardship and division of labour",
           "averageValue": 1,
-          "averageText": "Low",
           "questions": [
             {
               "text": "3.5.1 To what extent are the overall work loads of men and women equal (including domestic work and child care)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "women still have to perform all reproductive roles"
             },
             {
               "text": "3.5.2 Are risks of women being subject to strenuous work minimised (e.g. using labour saving technologies…)?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "Please add justification."
             }
           ]
@@ -332,18 +283,15 @@
         {
           "title": "4.1 Availability of food ",
           "averageValue": 3,
-          "averageText": "Substantial",
           "questions": [
             {
               "text": "4.1.1 Does the local production of food increase?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             },
             {
               "text": "4.1.2 Are food supplies increasing on local markets?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "due to ban on importation, farmers are forced to sell produce in local markets"
             }
           ]
@@ -351,18 +299,15 @@
         {
           "title": "4.2 Accessibility of food ",
           "averageValue": 1,
-          "averageText": "Low",
           "questions": [
             {
               "text": "4.2.1 Do people have more income to allocate to food?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "producitivity is low; distress sale at the time of harvest when prices are low affects income + competing non-food needs"
             },
             {
               "text": "4.2.2 Are (relative) consumers food prices decreasing?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "off-season prices are high"
             }
           ]
@@ -370,24 +315,20 @@
         {
           "title": "4.3 Utilisation and nutritional adequacy ",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.3.1 Is the nutritional quality of available food improving?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "not significantly- stunting is still a major problem in maize-producing states"
             },
             {
               "text": "4.3.2 Are nutritional practices being improved?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "not significantly"
             },
             {
               "text": "4.3.3 Is dietary diversity increased?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Diets are primarily cereal-based, low in  food groups providing protein and micro nutrients"
             }
           ]
@@ -395,18 +336,15 @@
         {
           "title": "4.4 Stability ",
           "averageValue": 1.5,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "4.4.1 Is risk of periodic food shortage for household reduced?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "producitvity is low hence  there are seasonal food shortages"
             },
             {
               "text": "4.4.2 Is excessive food price variation reduced?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "the import ban has created shortages in supply and affected prices of locally produced maize"
             }
           ]
@@ -419,30 +357,25 @@
         {
           "title": "5.1 Strength of producer organisations",
           "averageValue": 2.33333333333333,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "5.1.1 Do formal and informal farmer organisations /cooperatives participate in the value chain?",
               "scoreValue": 3,
-              "scoreText": "Substantial",
               "comment": "there are several farmer producer organisations as well as professional associations of other service providers throughout the value chain"
             },
             {
               "text": "5.1.2 How inclusive is group/cooperative membership?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "membership is open to all who can afford to pay registration fees including women and smallholders; the latter are unlikely to be role-holders"
             },
             {
               "text": "5.1.3 Do groups have representative and accountable leadership?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             },
             {
               "text": "5.1.4 Are farmer groups, cooperatives and associations able to negotiate in input or output markets?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "in some cases inputs are purchase din bulk; marketing is mostly done individually"
             }
           ]
@@ -450,18 +383,15 @@
         {
           "title": "5.2 Information and confidence",
           "averageValue": 1.5,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "5.2.1 Do farmers in the value chain have access to information on agricultural practices, agricultural policies, and market prices?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Most smallholder farmers rely on their neighboring farmers; extension agents are more accessible to large scale farmers"
             },
             {
               "text": "5.2.2 To what extent is the relation between value chain actors perceived as trustworthy?",
               "scoreValue": 1,
-              "scoreText": "Not at all",
               "comment": "there are issues related to land boundaries/ tenure agreements, quality of inputs (seed germination), warehouse facilities in markets,"
             }
           ]
@@ -469,24 +399,20 @@
         {
           "title": "5.3 Social involvement",
           "averageValue": "n/a",
-          "averageText": "n/a",
           "questions": [
             {
               "text": "5.3.1 Do communities participate in decisions that impact their livelihood?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             },
             {
               "text": "5.3.2 Are there actions to ensure respect of traditional knowledge and resources?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             },
             {
               "text": "5.3.3 Is there participation in voluntary communal activities for benefit of the community",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             }
           ]
@@ -499,24 +425,20 @@
         {
           "title": "6.1 Health services",
           "averageValue": 2,
-          "averageText": "Moderate",
           "questions": [
             {
               "text": "6.1.1 Do households have access to health facilities?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "a large share of PHC facilities have limited (functioning) medical equipment, medical supplies including drugs and vaccines needed to offer basic health services. PHCs are understaffed@2 health workers available for every 1000 people"
             },
             {
               "text": "6.1.2 Do households have access to health services?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Household size, distance and cost of treatment are the main reasons for unequal access to healthcare facilities in rural areas. These factors seriously affect women and children’s access to basic healthcare, as a direct consequence of the patriarchal system"
             },
             {
               "text": "6.1.3  Are health services affordable for households?",
               "scoreValue": 2,
-              "scoreText": "Moderate/Low",
               "comment": "Private healthcare is expensive and not affordable by majority of smallholders in rural areas"
             }
           ]
@@ -524,18 +446,15 @@
         {
           "title": "6.2 Housing",
           "averageValue": "n/a",
-          "averageText": "n/a",
           "questions": [
             {
               "text": "6.2.1 Do households have access to good quality accomodations?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             },
             {
               "text": "6.2.2 Do households have access to good quality water and sanitation facilities?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             }
           ]
@@ -543,24 +462,20 @@
         {
           "title": "6.3 Education and training",
           "averageValue": "n/a",
-          "averageText": "n/a",
           "questions": [
             {
               "text": "6.3.1 Is primary education accessible to households?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             },
             {
               "text": "6.3.2 Are secondary and/or vocational education accessible to households?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             },
             {
               "text": "6.3.3 Existence and quality of in-service vocational training provided by the investors in the value chain?",
               "scoreValue": "n/a",
-              "scoreText": "n/a",
               "comment": "Please add justification."
             }
           ]
