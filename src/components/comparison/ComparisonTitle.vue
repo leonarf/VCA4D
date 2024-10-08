@@ -20,6 +20,6 @@ defineProps({
 
 <style lang="scss">
   .comparison-title {
-    @apply uppercase text-[#8A8A8A] font-bold text-sm pb-4;
+    @apply uppercase text-[#8A8A8A] font-bold pb-4;
   }
 </style>

@@ -8,6 +8,10 @@
       <StagesDescription :stagesDescription="studyData.ecoData.stages" />
     </section>
 
+    <section v-if="studyData && studyData.ecoData">
+      <Sankey :studyData="studyData" />
+    </section>
+
     <section v-if="studyData" class="explore">
       <h2>Explore up to 4 dimensions of the value chain</h2>
       <div
@@ -53,9 +57,6 @@
           Learn more about the value chain’s damages to Human Health, Ecosystem Quality, Natural Resources and Climate Change
         </p>
       </div>
-    </section>
-    <section v-if="studyData && studyData.ecoData">
-      <Sankey :studyData="studyData" />
     </section>
     <PdfSection v-if="studyUrls.briefPdf" :studyBriefUrl="studyUrls.briefPdf" />
   </article>
