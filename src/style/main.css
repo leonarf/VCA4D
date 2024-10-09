@@ -1,4 +1,5 @@
 @import './better-default.css';
+@import './tooltips-override.scss';
 
 @import 'tailwindcss/base';
 
