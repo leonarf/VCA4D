@@ -8,7 +8,7 @@
           @select-studies="selectStudies($event)"
         />
       </div>
-      <div v-else-if="loading === false" class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 no-study">
+      <div v-else-if="loading === false" class="mx-4 mb-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 no-study">
         No study is selected
         <AddStudiesButton
           class="mt-4"
