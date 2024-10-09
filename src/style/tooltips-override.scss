@@ -1,0 +1,13 @@
+.v-popper--theme-tooltip {
+  font-size: 16px;
+
+  .v-popper__inner {
+    color: #6B6B6B !important;
+    background: #EDEDED !important;
+    max-width: 400px;
+  }
+
+  .v-popper__arrow-outer {
+    border-color: #EDEDED !important;
+  }
+}

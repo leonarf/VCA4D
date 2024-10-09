@@ -1,6 +1,10 @@
 <template>
   <Svg
-    v-tooltip.right="{ content: sanitize(text), html: true }"
+    v-tooltip.right="{
+      content: sanitize(text),
+      html: true,
+      distance: 10
+    }"
     class="question-mark"
     :svg="QuestionMark"
   />
