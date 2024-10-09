@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 
 import './style/main.css'
+import 'floating-vue/dist/style.css'
 
 const app = createApp(App)
 

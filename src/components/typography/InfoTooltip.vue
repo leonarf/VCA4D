@@ -1,20 +1,16 @@
 <template>
-  <div>
-    <Svg
-      class="question-mark"
-      :svg="QuestionMark"
-    />
-    <Tooltip
-      :contenu="text"
-      :options="{ placement: 'right', maxWidth: 350 }"
-    />
-  </div>
+  <Svg
+    v-tooltip.right="{ content: sanitize(text), html: true }"
+    class="question-mark"
+    :svg="QuestionMark"
+  />
 </template>
 
 <script setup>
-import Tooltip from "@components/Tooltip.vue";
+import { vTooltip } from "floating-vue";
 import Svg from "@components/Svg.vue";
 import QuestionMark from '../../images/icons/info-question.svg'
+import sanitize from "sanitize-html";
 
 defineProps({
   text: String,
