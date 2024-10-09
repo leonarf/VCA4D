@@ -30,7 +30,7 @@
 
   <footer v-if="!skipFooter">
     <ul>
-      <li><a target="_blank" class="hover:underline" href="https://github.com/leonarf/VCA4D">Code source sur Github</a></li>
+      <li><a target="_blank" class="hover:underline" href="https://github.com/leonarf/VCA4D">Source code on Github</a></li>
       <li>
         <RouterLink class="hover:underline" to="/admin-import">Import a study</RouterLink>
       </li>
