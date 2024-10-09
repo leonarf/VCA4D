@@ -1,4 +1,5 @@
 <template>
+  <LocalStudyBanner v-if="isStudyObjectNotEmpty" />
   <Skeleton :skipFooter="true">
     <div class="corps-page-import">
       <h1>Add a study to the VCA4D website</h1>
@@ -33,6 +34,7 @@ import * as XLSX from 'xlsx'
 import Skeleton from '@components/Skeleton.vue'
 import SaveOnGithubStep from '@components/import/SaveOnGithubStep.vue'
 import CheckImportedDataStep from '@components/import/CheckImportedDataStep.vue'
+import LocalStudyBanner from '@components/study/LocalStudyBanner.vue'
 
 import { getAllJsonData } from '@utils/data';
 import { processUploadedExcelFile } from '@utils/import/generic.js'
