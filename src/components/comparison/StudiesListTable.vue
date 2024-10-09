@@ -3,7 +3,7 @@
     class="table"
     selectable
     :selectedIds="newSelectedStudies"
-    :maxHeight="500"
+    :maxHeight="400"
     :pageSize="50"
     :rows="studies"
     :columns="columns"

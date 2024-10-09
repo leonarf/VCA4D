@@ -22,6 +22,7 @@ const emits = defineEmits(["close"]);
 
 </script>
 
+
 <style scoped lang="scss">
 .modal-overlay {
   position: fixed;
@@ -39,6 +40,7 @@ const emits = defineEmits(["close"]);
   .modal {
     min-width: 300px;
     min-height: 100px;
+    max-height: 100vh;
     padding: 20px 50px;
     border-radius: 12px;
     background-color: white;
