@@ -22,16 +22,31 @@
             </Card>
           </template>
           <template v-else>
-            <Card
-              :isLocal="false"
-              :isOpen="openedProduct === item.product"
-              :title="getProduct(item.product).prettyName"
-              @click.stop="openedProduct === item.product ? openedProduct = null : openedProduct = item.product"
+            <Dropdown
+              :shown="openedProduct === item.product"
+              :triggers="[]"
+              :distance="-30"
+              :overflowPadding="20"
+              placement="bottom"
             >
-              <template #logo>
-                <LogoProductLarge :productName="item.product" />
-              </template>
-              <template #footer>
+              <Card
+                :isLocal="false"
+                :isOpen="openedProduct === item.product"
+                :title="getProduct(item.product).prettyName"
+                @click.stop="openedProduct === item.product ? openedProduct = null : openedProduct = item.product"
+              >
+                <template #logo>
+                  <LogoProductLarge :productName="item.product" />
+                </template>
+                <template #footer>
+                  <CardFooter text="countries">
+                    <template #logo>
+                      <NumberBadge :value="item.studies.length" />
+                    </template>
+                  </CardFooter>
+                </template>
+              </Card>
+              <template #popper>
                 <SubCardsList
                   v-if="openedProduct === item.product" 
                   :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
@@ -49,13 +64,8 @@
                     </template>
                   </Card>
                 </SubCardsList>
-                <CardFooter v-else text="countries">
-                  <template #logo>
-                    <NumberBadge :value="item.studies.length" />
-                  </template>
-                </CardFooter>
               </template>
-            </Card>
+            </Dropdown>
           </template>
         </li>
       </CardList>
@@ -77,6 +87,7 @@ import CardFooter from './CardFooter.vue';
 import NumberBadge from './NumberBadge.vue';
 import Card from './Card.vue';
 import SubCardsList from './SubCardsList.vue'
+import { Dropdown } from 'floating-vue';
 
 const props = defineProps({
     studies: Array,
