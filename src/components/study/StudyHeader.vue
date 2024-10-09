@@ -9,7 +9,7 @@
           :studyId="studyData.id"
         />
       </div>
-      <div class="subtitle">Commodity</div>
+      <div class="header-subtitle">Commodity</div>
     </div>
     <div>
       <div class="header-title">
@@ -20,7 +20,7 @@
           :studyId="studyData.id"
         />
       </div>
-      <div class="subtitle">Country</div>
+      <div class="header-subtitle">Country</div>
     </div>
     <div v-if="localCurrency">
       <CurrencySelector
@@ -29,7 +29,7 @@
         :localCurrency="localCurrency"
         @update:currency="emits('update:currency', $event)"
       />
-      <div class="subtitle">
+      <div class="header-subtitle">
         {{ currencySubtitle }}
         <InfoTooltip
           v-if="! isLocalCurrencyDisplayed"
@@ -39,7 +39,7 @@
     </div>
     <div>
       <div class="header-title">{{ studyData.year || '-' }}</div>
-      <div class="subtitle">Reference year</div>
+      <div class="header-subtitle">Reference year</div>
     </div>
   </div>
 </template>
@@ -102,8 +102,8 @@ const isLocalCurrencyDisplayed = computed(() => {
     background-color: #dcefbb;
     flex-wrap: wrap;
 
-    .subtitle {
-        @apply text-[#656565] text-xs;
+    .header-subtitle {
+        @apply text-[#656565] text-sm;
 
         display: flex;
         gap: 5px;
