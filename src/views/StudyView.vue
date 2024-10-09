@@ -11,6 +11,7 @@
             :studyData="studyData"
             :localCurrency="studyData.targetCurrency" 
             :currency="$route.query.currency || 'LOCAL'"
+            :studyUrls="studyUrls"
             @update:currency="updateCurrency"
           />
         </div>
@@ -33,9 +34,6 @@
           @select-view="selectView($event)"
         />
       </template>
-      <section v-if="isDataLoaded" class="my-16">
-        <DownloadSection :studyUrls="studyUrls" />
-      </section>
     </div>
   </Skeleton>
 </template>
@@ -47,7 +45,6 @@ import Skeleton from '@components/Skeleton.vue'
 import StudyOverview from '@components/StudyOverview.vue'
 import StudyEnvironment from '@components/StudyEnvironment.vue'
 import StudyEconomicGrowth from '@components/StudyEconomicGrowth.vue'
-import DownloadSection from '@components/study/DownloadSection.vue'
 import StudyInclusiveness from '@components/StudyInclusiveness.vue'
 import StudySocialSustainability from '@components/StudySocialSustainability.vue'
 import StudyHeader from '@components/study/StudyHeader.vue'

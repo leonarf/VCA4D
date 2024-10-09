@@ -41,10 +41,15 @@
       <div class="header-title">{{ studyData.year || '-' }}</div>
       <div class="header-subtitle">Reference year</div>
     </div>
-    <div class="download-section">
-      <div class="download-button">
-        <Svg :svg="DowloadLogo" />
-      </div>
+    <div class="download-title">
+      <Dropdown :distance="25" :overflowPadding="20">
+        <div class="download-button">
+          <Svg :svg="DowloadLogo" />
+        </div>
+        <template #popper>
+          <DownloadSection :studyUrls="studyUrls" />
+        </template>
+      </Dropdown>
       <div class="header-subtitle">Downloads</div>
     </div>
   </div>
@@ -59,12 +64,15 @@ import CurrencySelector from "./CurrencySelector.vue"
 import { getCurrencyName } from '@utils/currency.js'
 import DowloadLogo from '../../images/icons/download.svg'
 import Svg from "@components/Svg.vue";
+import { Dropdown } from "floating-vue";
+import DownloadSection from "@components/study/DownloadSection.vue"
 
 const props = defineProps({
     studyData: {
       type: Object,
       required: true,
     },
+    studyUrls: Object,
     currency: String,
     localCurrency: String
 })
@@ -129,7 +137,7 @@ const isLocalCurrencyDisplayed = computed(() => {
         }
     }
   }
-  .download-section {
+  .download-title {
     display: flex;
     flex-direction: column;
     align-items: center;
