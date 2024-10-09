@@ -41,6 +41,12 @@
       <div class="header-title">{{ studyData.year || '-' }}</div>
       <div class="header-subtitle">Reference year</div>
     </div>
+    <div class="download-section">
+      <div class="download-button">
+        <Svg :svg="DowloadLogo" />
+      </div>
+      <div class="header-subtitle">Downloads</div>
+    </div>
   </div>
 </template>
 
@@ -51,6 +57,8 @@ import ComparisonLink from '@components/study/ComparisonLink.vue';
 import InfoTooltip from '@components/typography/InfoTooltip.vue';
 import CurrencySelector from "./CurrencySelector.vue"
 import { getCurrencyName } from '@utils/currency.js'
+import DowloadLogo from '../../images/icons/download.svg'
+import Svg from "@components/Svg.vue";
 
 const props = defineProps({
     studyData: {
@@ -98,6 +106,7 @@ const isLocalCurrencyDisplayed = computed(() => {
     row-gap: 1rem;
     border-radius: 38px;
     justify-content: flex-start;
+    align-items: end;
     padding: 0.75rem 2rem;
     background-color: #dcefbb;
     flex-wrap: wrap;
@@ -118,6 +127,40 @@ const isLocalCurrencyDisplayed = computed(() => {
         .link {
           margin-bottom: 5px;
         }
+    }
+  }
+  .download-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .download-button {
+      margin: -8px -8px -4px;
+      padding: 8px;
+      color: #656565;
+      cursor: pointer;
+      border-radius: 1000px;
+      height: 46px;
+      width: 46px;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      > svg {
+        height: 28px;
+        width: 28px;
+      }
+    }
+    > svg {
+      height: 30px;
+      width: 30px;
+      color: gray;
+      cursor: pointer;
+
     }
   }
 </style>
