@@ -4,13 +4,13 @@
       ⚠️ <b>NOT PUBLISHED : </b>&nbsp;
       This study hasn’t been published to the web and is only available on your device. 
       Once ready, publish it by contacting BASIC or 
-      &nbsp;<a class="remove-action">click here to remove it from your device</a>
+      &nbsp;<a class="remove-action" @click="emits('click-clear')">click here to remove it from your device</a>
     </div>
   </Teleport>
 </template>
 
 <script setup>
-
+const emits = defineEmits(["click-clear"])
 </script>
 
 <style scoped lang="scss">

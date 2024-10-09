@@ -1,5 +1,5 @@
 <template>
-  <LocalStudyBanner v-if="route.query.id === LOCAL_STORAGE_ID" />
+  <LocalStudyBanner v-if="route.query.id === LOCAL_STORAGE_ID" @click-clear="removeLocalStudy" />
   <Skeleton>
     <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 max-w-[90%]">
       <header>
@@ -57,6 +57,7 @@ import { getStudyData } from '@utils/data'
 import { getStudyUploadUrls, LOCAL_STORAGE_ID } from '../utils/data'
 import { isCurrencySupported } from '@utils/currency.js'
 import LocalStudyBanner from '@components/study/LocalStudyBanner.vue'
+import { clearLocalStorage } from '@utils/misc'
 
 const route = useRoute();
 const router = useRouter()
@@ -162,6 +163,11 @@ function setupCurrency() {
 const isDataLoaded = computed(() => {
   return !! studyData.value && !! studyUrls.value;
 });
+
+function removeLocalStudy() {
+  clearLocalStorage();
+  router.replace({ name: "home" });
+}
 </script>
 
 <style scoped lang="scss">
