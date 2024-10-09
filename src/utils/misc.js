@@ -65,3 +65,8 @@ export const ACVImpacts = [
         helpBoxText: "LCA aims at capturing depletion of resources by focusing on the level of non-renewable stocks and the rate of use of renewable resources to their replacement. The indicator is the increased cost to continue extractions which is expressed by US $."
     }
 ]
+
+export function clearLocalStorage() {
+  localStorage.removeItem('localWorkbook')
+  localStorage.removeItem('localStudyData')
+}

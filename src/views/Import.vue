@@ -1,4 +1,5 @@
 <template>
+  <LocalStudyBanner v-if="isStudyObjectNotEmpty" @click-clear="clearData" />
   <Skeleton :skipFooter="true">
     <div class="corps-page-import">
       <h1>Add a study to the VCA4D website</h1>
@@ -33,16 +34,17 @@ import * as XLSX from 'xlsx'
 import Skeleton from '@components/Skeleton.vue'
 import SaveOnGithubStep from '@components/import/SaveOnGithubStep.vue'
 import CheckImportedDataStep from '@components/import/CheckImportedDataStep.vue'
+import LocalStudyBanner from '@components/study/LocalStudyBanner.vue'
 
+import { clearLocalStorage } from '@utils/misc';
 import { getAllJsonData } from '@utils/data';
 import { processUploadedExcelFile } from '@utils/import/generic.js'
 
 const workbook = ref(null)
 
 const clearData = () => {
-    localStorage.removeItem('localWorkbook')
-    localStorage.removeItem('localStudyData')
-    workbook.value = null
+  clearLocalStorage()
+  workbook.value = null
 }
 
 const knownProducts = ref([])
