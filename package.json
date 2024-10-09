@@ -21,7 +21,6 @@
     "echarts": "^5.5.0",
     "floating-vue": "^5.2.2",
     "sanitize-html": "^2.13.0",
-    "tippy.js": "^6.3.7",
     "vite-svg-loader": "^5.1.0",
     "vue": "^3.2.47",
     "vue-echarts": "^6.6.9",
