@@ -24,7 +24,6 @@
           <Dropdown
             :shown="openedCountry === item.country"
             :triggers="[]"
-            :distance="-30"
             :overflowPadding="20"
             placement="bottom"
           >
@@ -49,7 +48,7 @@
               <SubCardsList
                 v-if="openedCountry === item.country"
                 :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
-                :linkTitle="`Compare all ${item.country} studies`"
+                :linkTitle="`Compare all ${getCountry(item.country).prettyName} studies`"
               >
                 <Card
                   v-for="study in item.studies"

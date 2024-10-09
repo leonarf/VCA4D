@@ -25,7 +25,6 @@
             <Dropdown
               :shown="openedProduct === item.product"
               :triggers="[]"
-              :distance="-30"
               :overflowPadding="20"
               placement="bottom"
             >
@@ -50,7 +49,7 @@
                 <SubCardsList
                   v-if="openedProduct === item.product" 
                   :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
-                  :linkTitle="`Compare all ${item.product} studies`"
+                  :linkTitle="`Compare all ${getProduct(item.product).prettyName.toLowerCase()} studies`"
                 >
                   <Card
                     v-for="study in item.studies"
