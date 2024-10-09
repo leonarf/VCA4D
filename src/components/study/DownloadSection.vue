@@ -56,8 +56,7 @@ const displayedLinksColumns = computed(() => {
 
 <style lang="scss" scoped>
   .download-section {
-    background-color: #EFEFEF;
-    padding: 28px 33px;
+    padding: 39px 46px;
     border-radius: 15px;
 
     .download-title {
