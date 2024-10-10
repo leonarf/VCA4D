@@ -21,20 +21,34 @@
           </Card>
         </template>
         <template v-else>
-          <Card
-            :isLocal="false"
-            :isOpen="openedCountry === item.country"
-            :title="getCountry(item.country).prettyName"
-            @click.stop="openedCountry === item.country ? openedCountry = null : openedCountry = item.country"
+          <Dropdown
+            :shown="openedCountry === item.country"
+            :triggers="[]"
+            :overflowPadding="20"
+            placement="bottom"
           >
-            <template #logo>
-              <LogoCountryLarge :isoCode="getCountry(item.country).iso || 'gr'" />
-            </template>
-            <template #footer>
+            <Card
+              :isLocal="false"
+              :isOpen="openedCountry === item.country"
+              :title="getCountry(item.country).prettyName"
+              @click.stop="openedCountry === item.country ? openedCountry = null : openedCountry = item.country"
+            >
+              <template #logo>
+                <LogoCountryLarge :isoCode="getCountry(item.country).iso || 'gr'" />
+              </template>
+              <template #footer>
+                <CardFooter text="studies">
+                  <template #logo>
+                    <NumberBadge :value="item.studies.length" />
+                  </template>
+                </CardFooter>
+              </template>
+            </Card>
+            <template #popper>
               <SubCardsList
                 v-if="openedCountry === item.country"
                 :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
-                :linkTitle="`Compare all ${item.country} studies`"
+                :linkTitle="`Compare all ${getCountry(item.country).prettyName} studies`"
               >
                 <Card
                   v-for="study in item.studies"
@@ -48,13 +62,8 @@
                   </template>
                 </Card>
               </SubCardsList>
-              <CardFooter v-else text="studies">
-                <template #logo>
-                  <NumberBadge :value="item.studies.length" />
-                </template>
-              </CardFooter>
             </template>
-          </Card> 
+          </Dropdown>
         </template>
       </li>   
     </CardList>
@@ -75,6 +84,8 @@ import CardFooter from './CardFooter.vue';
 import NumberBadge from './NumberBadge.vue';
 import Card from './Card.vue';
 import SubCardsList from './SubCardsList.vue';
+import { Dropdown } from 'floating-vue';
+
 const props = defineProps({
     continent: String,
     studies: Array,

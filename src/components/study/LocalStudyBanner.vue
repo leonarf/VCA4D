@@ -1,10 +1,14 @@
 <template>
   <Teleport to="body">
     <div class="local-study-banner">
-      ⚠️ <b>NOT PUBLISHED : </b>&nbsp;
-      This study hasn’t been published to the web and is only available on your device. 
-      Once ready, publish it by contacting BASIC or 
-      &nbsp;<a class="remove-action" @click="emits('click-clear')">click here to remove it from your device</a>
+      <div class="warning">
+        ⚠️ <b>NOT PUBLISHED : </b>&nbsp;
+      </div>
+      <div>
+        This study hasn’t been published to the web and is only available on your device. 
+        Once ready, publish it by contacting BASIC or 
+        &nbsp;<a class="remove-action" @click="emits('click-clear')">click here to remove it from your device</a>
+      </div>
     </div>
   </Teleport>
 </template>
@@ -17,13 +21,18 @@ const emits = defineEmits(["click-clear"])
 .local-study-banner {
   background-color: #FFCE0B;
 
-  height: 50px;
+  min-height: 50px;
+  padding: 12px;
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: center;
   width: 100%;
   position: fixed;
   top: 0;
+
+  > .warning {
+    flex-shrink: 0;
+  }
 
   .remove-action {
     cursor: pointer;
