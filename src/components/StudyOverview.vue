@@ -58,7 +58,7 @@
         </p>
       </div>
     </section>
-    <PdfSection v-if="studyUrls.briefPdf" :studyBriefUrl="studyUrls.briefPdf" />
+    <PdfSection class="mt-8 mb-8" v-if="studyUrls.briefPdf" :studyBriefUrl="studyUrls.briefPdf" />
   </article>
 </template>
 

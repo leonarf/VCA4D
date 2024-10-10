@@ -42,7 +42,7 @@
       <div class="header-subtitle">Reference year</div>
     </div>
     <div class="download-title">
-      <Dropdown :distance="25" :overflowPadding="20" placement="bottom">
+      <Dropdown :distance="45" :overflowPadding="120" placement="bottom">
         <div class="download-button">
           <Svg :svg="DowloadLogo" />
         </div>
