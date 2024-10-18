@@ -58,8 +58,8 @@
     :getValue="getTotalJobs"
     :getSubValues="getJobsByStage"
   >
-    <template #default="{ value }">
-      <ComparisonDefaultCell :value="value" valueType="number" />
+    <template #default="{ value, isSubRow }">
+      <ComparisonDefaultCell :value="value" :lightVersion="isSubRow" valueType="number" />
     </template>
   </ComparisonExpandableRow>
 
@@ -70,12 +70,13 @@
     :getValue="getNetOperatingProfitPerProducer"
     :getSubValues="getNetOperatingProfitForOtherStages"
   >
-    <template #default="{ value, studyData }">
+    <template #default="{ value, studyData, isSubRow }">
       <ComparisonDefaultCell
         :value="value"
         valueType="amount"
         :studyData="studyData"
         preferredCurrency="USD"
+        :lightVersion="isSubRow"
       />
     </template>
   </ComparisonExpandableRow>
