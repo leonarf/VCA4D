@@ -1,5 +1,5 @@
 <template>
-  <div class="default-comparison-cell" :class="valueClass">
+  <div class="default-comparison-cell" :class="[valueClass, { 'light': lightVersion }]">
     {{ formatedValue }}
   </div>
 </template>
@@ -16,7 +16,8 @@ const props = defineProps({
     valueType: {
       type: String,
       validator: (valueType) => ["amount", "percent", "number"].includes(valueType)
-    }
+    },
+    lightVersion: Boolean
 })
 
 const valueClass = computed(() => {
@@ -56,10 +57,23 @@ const formatedValue = computed(() => {
 </script>
 
 <style scoped lang="scss">
-    .gray {
-      @apply bg-gray-300 text-gray-500
+.default-comparison-cell {
+  &.gray {
+    background-color: #D1D5DB;
+    color: #6B7280;
+    
+    &.light {
+      background-color: #D1D5DB20;
+      border: #D1D5DB solid 2px;
     }
-    .blue {
-        background-color: #A4CAFE;
+  }
+  &.blue {
+    background-color: #A4CAFE;
+
+    &.light {
+      border: #A4CAFE solid 2px;
+      background-color: #A4CAFE20;
     }
+  }
+}
 </style>

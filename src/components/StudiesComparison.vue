@@ -41,9 +41,18 @@ const emit = defineEmits(["select-studies"]);
         min-width: 20%;
     }
 
+    tr td:not(:first-child):not(:last-child):not(:nth-child(2)) {
+      .default-comparison-cell {
+        border-left: none;
+      }
+    }
     tr td:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
       @apply border-r-2;
       border-right-color: #D1D5DB;
+
+      .default-comparison-cell {
+        border-right: none;
+      }
     }
 
     tr td:first-child > * {
