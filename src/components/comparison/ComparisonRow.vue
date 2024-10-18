@@ -46,7 +46,7 @@ const values = computed(() => props.studies.map(study => props.getValue(study)))
   }
   
   tr td:not(:first-child) :deep(div.default-comparison-cell) {
-    @apply text-center text-sm py-1.5
+    @apply text-center py-1.5
   }
   tr td:nth-child(2) :deep(div.default-comparison-cell) {
     @apply rounded-l-full
