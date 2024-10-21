@@ -8,8 +8,8 @@
       :getValue="(study) => getTotalImpacts(study, true)"
       :getSubValues="(study) => getValuesByImpact(study, true)"
     >
-      <template #default="{ value }">
-        <ComparisonDefaultCell :value="value" valueType="number" />
+      <template #default="{ value, isSubRow }">
+        <ComparisonDefaultCell :value="value" valueType="number" :lightVersion="isSubRow" />
       </template>
     </ComparisonExpandableRow>
     <ComparisonExpandableRow
@@ -19,8 +19,8 @@
       :getValue="(study) => getTotalImpacts(study, false)"
       :getSubValues="(study) => getValuesByImpact(study, false)"
     >
-      <template #default="{ value }">
-        <ComparisonDefaultCell :value="value" valueType="number" />
+      <template #default="{ value, isSubRow }">
+        <ComparisonDefaultCell :value="value" valueType="number" :lightVersion="isSubRow" />
       </template>
     </ComparisonExpandableRow>
   </template>
