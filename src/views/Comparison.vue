@@ -2,7 +2,7 @@
   <Skeleton>
     <div>
       <h1 class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48">Compare value chains</h1>
-      <div v-if="studies.length > 0" class="py-1 pb-16 px-4 sm:px-8 md:px-12 lg:px-40 xl:px-48 studies-wrapper">
+      <div v-if="studies.length > 0" v-dragscroll class="py-1 pb-16 px-4 sm:px-8 md:px-12 lg:px-40 xl:px-48 studies-wrapper">
         <StudiesComparison
           :studies="studies"
           @select-studies="selectStudies($event)"
@@ -23,6 +23,7 @@
 <script setup>
 import Skeleton from '@components/Skeleton.vue';
 import { watch, ref, } from 'vue';
+import { dragscroll as vDragscroll } from "vue-dragscroll"
 import { useRoute, useRouter } from 'vue-router'
 import { getStudyData } from '@utils/data';
 import StudiesComparison from '../components/StudiesComparison.vue';
@@ -58,6 +59,13 @@ function selectStudies(studyIds) {
     align-items: flex-start;
     justify-content: flex-start;
     overflow-y: scroll;
+    user-select: none;
+
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
 }
 .no-study {
     display:flex;

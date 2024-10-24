@@ -23,6 +23,7 @@
     "sanitize-html": "^2.13.0",
     "vite-svg-loader": "^5.1.0",
     "vue": "^3.2.47",
+    "vue-dragscroll": "^4.0.6",
     "vue-echarts": "^6.6.9",
     "vue-pdf-embed": "^2.0.3",
     "vue-router": "^4.3.0",
