@@ -6,10 +6,7 @@
     v-for="(indicator, index) in indicators"
     :key="index"
     :studies="studies"
-    :title="indicator.title"
-    :subtitle="indicator.subtitle"
-    :getValue="indicator.getValue"
-    :getSubValues="indicator.getSubValues"
+    :indicator="indicator"
   >
     <template v-if="indicator.format === 'social'" #default="{ value, isSubRow }">
       <div class="tag-container mx-auto my-2">

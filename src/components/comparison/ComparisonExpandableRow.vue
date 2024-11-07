@@ -2,9 +2,7 @@
   <ComparisonRow
     :class="{ expanded, 'parent-row': hasSubKeys }"
     :studies="studies"
-    :title="title"
-    :subtitle="subtitle"
-    :getValue="getValue"
+    :indicator="indicator"
     :expandable="hasSubKeys"
     :expanded="expanded"
     @toggle-expand="toggleExpand()"
@@ -19,8 +17,10 @@
     :studies="studies"
     class="sub-row"
     :class="{ expanded, 'last-sub-row': index === subKeys.length - 1 }"
-    :title="subKey"
-    :getValue="(study, studies) => getSubValues(study, studies)[subKey]"
+    :indicator="{
+      title: subKey,
+      getValue: (study, studies) => indicator.getSubValues(study, studies)[subKey]
+    }"
   >
     <template #default="{ value, studyData }">
       <slot :value="value" :studyData="studyData" :isSubRow="true" />
@@ -35,10 +35,7 @@ import ComparisonRow from './ComparisonRow.vue'
 
 const props = defineProps({
   studies: Array,
-  title: String,
-  subtitle: String,
-  getValue: Function,
-  getSubValues: Function
+  indicator: Object
 })
 const expanded = ref(false)
 
@@ -47,7 +44,7 @@ function toggleExpand() {
 }
 
 const subKeys = computed(() => {
-  const subValues = props.studies.map((study) => props.getSubValues(study, props.studies))
+  const subValues = props.studies.map((study) => props.indicator.getSubValues(study, props.studies))
   return _.union(...subValues.map(Object.keys))
 })
 

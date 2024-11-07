@@ -2,10 +2,10 @@
   <tr class="row" :class="{ expandable }" @click="emits('toggle-expand')">
     <td class="row-header">
       <div class="row-title">
-        {{ title }}
+        {{ indicator.title }}
         <span v-if="expandable" class="expand-arrow">{{ expanded ? '▲' : '▼' }}</span>
       </div>
-      <div v-if="subtitle" class="definition">{{ subtitle }}</div>
+      <div v-if="indicator.subtitle" class="definition">{{ indicator.subtitle }}</div>
     </td>
     <td v-for="(study, index) in studies" :key="`value_added__${study.id}`">
       <slot :value="values[index]" :studyData="study" />
@@ -19,15 +19,15 @@ import { computed, defineEmits } from 'vue'
 
 const props = defineProps({
   studies: Array,
-  title: String,
-  subtitle: String,
-  getValue: Function,
+  indicator: Object,
   expandable: Boolean,
   expanded: Boolean
 })
 const emits = defineEmits(['toggle-expand'])
 
-const values = computed(() => props.studies.map((study) => props.getValue(study, props.studies)))
+const values = computed(() =>
+  props.studies.map((study) => props.indicator.getValue(study, props.studies))
+)
 </script>
 
 <style scoped lang="scss">
