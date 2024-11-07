@@ -1,57 +1,56 @@
 <template>
-  <template v-if="impacts.length > 0">
-    <ComparisonTitle title="Environmental Indicators" :studies="studies" />
-    <ComparisonExpandableRow
-      :studies="studies"
-      title="Total impact per year"
-      subtitle="Value chain total impact (in pt)"
-      :getValue="(study) => getTotalImpacts(study, true)"
-      :getSubValues="(study) => getValuesByImpact(study, true)"
-    >
-      <template #default="{ value, isSubRow }">
-        <ComparisonDefaultCell :value="value" valueType="number" :lightVersion="isSubRow" />
-      </template>
-    </ComparisonExpandableRow>
-    <ComparisonExpandableRow
-      :studies="studies"
-      title="Impact per functional unit"
-      subtitle="Value chain total impact / volume"
-      :getValue="(study) => getTotalImpacts(study, false)"
-      :getSubValues="(study) => getValuesByImpact(study, false)"
-    >
-      <template #default="{ value, isSubRow }">
-        <ComparisonDefaultCell :value="value" valueType="number" :lightVersion="isSubRow" />
-      </template>
-    </ComparisonExpandableRow>
-  </template>
+  <ComparisonTitle title="Environmental Indicators" :studies="studies" />
+  <ComparisonExpandableRow
+    :studies="studies"
+    title="Total impact per year"
+    subtitle="Value chain total impact (in pt)"
+    :getValue="(study, studies) => getTotalImpacts(study, studies, true)"
+    :getSubValues="(study, studies) => getValuesByImpact(study, studies, true)"
+  >
+    <template #default="{ value, isSubRow }">
+      <ComparisonDefaultCell :value="value" valueType="number" :lightVersion="isSubRow" />
+    </template>
+  </ComparisonExpandableRow>
+  <ComparisonExpandableRow
+    :studies="studies"
+    title="Impact per functional unit"
+    subtitle="Value chain total impact / volume"
+    :getValue="(study, studies) => getTotalImpacts(study, studies, false)"
+    :getSubValues="(study, studies) => getValuesByImpact(study, studies, false)"
+  >
+    <template #default="{ value, isSubRow }">
+      <ComparisonDefaultCell :value="value" valueType="number" :lightVersion="isSubRow" />
+    </template>
+  </ComparisonExpandableRow>
 </template>
 
 <script setup>
 import _ from 'lodash'
 import { ACVImpacts } from '@utils/misc.js'
-import { computed } from 'vue'
 import ComparisonTitle from './ComparisonTitle.vue'
 import ComparisonExpandableRow from './ComparisonExpandableRow.vue'
 import ComparisonDefaultCell from './ComparisonDefaultCell.vue'
-const props = defineProps({
+
+defineProps({
   studies: Array
 })
 
-const availableImpacts = computed(() =>
-  props.studies
+function getAvailableImpacts(studies) {
+  return studies
     .reduce((arr, study) => arr.concat(study.acvData?.impacts), [])
     .filter((item) => !!item)
     .filter((item) => item.unit === 'Pt')
-)
+}
 
-const impacts = computed(() =>
-  ACVImpacts.filter((item) =>
-    availableImpacts.value.map((availableImpact) => availableImpact.name).includes(item.name)
+function getImpacts(studies) {
+  const availableImpacts = getAvailableImpacts(studies)
+  return ACVImpacts.filter((item) =>
+    availableImpacts.map((availableImpact) => availableImpact.name).includes(item.name)
   )
-)
+}
 
-function getTotalImpacts(study, sumTotalPerYear = false) {
-  const valuesByImpact = getValuesByImpact(study, sumTotalPerYear)
+function getTotalImpacts(study, studies, sumTotalPerYear = false) {
+  const valuesByImpact = getValuesByImpact(study, studies, sumTotalPerYear)
   if (_.isEmpty(valuesByImpact)) {
     return null
   }
@@ -59,9 +58,10 @@ function getTotalImpacts(study, sumTotalPerYear = false) {
   return _.sumBy(Object.values(valuesByImpact))
 }
 
-function getValuesByImpact(study, sumTotalPerYear = false) {
+function getValuesByImpact(study, studies, sumTotalPerYear = false) {
   const valuesByImpact = {}
-  impacts.value.forEach((impact) => {
+  const impacts = getImpacts(studies)
+  impacts.forEach((impact) => {
     const impactValue = getImpactValue(impact, study, sumTotalPerYear)
     if (_.isNull(impactValue)) {
       return

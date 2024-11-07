@@ -20,7 +20,7 @@
     class="sub-row"
     :class="{ expanded, 'last-sub-row': index === subKeys.length - 1 }"
     :title="subKey"
-    :getValue="(study) => getSubValues(study)[subKey]"
+    :getValue="(study, studies) => getSubValues(study, studies)[subKey]"
   >
     <template #default="{ value, studyData }">
       <slot :value="value" :studyData="studyData" :isSubRow="true" />
@@ -47,7 +47,7 @@ function toggleExpand() {
 }
 
 const subKeys = computed(() => {
-  const subValues = props.studies.map(props.getSubValues)
+  const subValues = props.studies.map((study) => props.getSubValues(study, props.studies))
   return _.union(...subValues.map(Object.keys))
 })
 

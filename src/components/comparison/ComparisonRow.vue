@@ -27,7 +27,7 @@ const props = defineProps({
 })
 const emits = defineEmits(['toggle-expand'])
 
-const values = computed(() => props.studies.map((study) => props.getValue(study)))
+const values = computed(() => props.studies.map((study) => props.getValue(study, props.studies)))
 </script>
 
 <style scoped lang="scss">
