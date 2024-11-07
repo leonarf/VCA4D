@@ -29,9 +29,9 @@
 </template>
 
 <script setup>
-import _ from 'lodash'
 import { computed, ref } from 'vue'
 import ComparisonRow from './ComparisonRow.vue'
+import { getAllSubKeys } from './utils'
 
 const props = defineProps({
   studies: Array,
@@ -43,10 +43,7 @@ function toggleExpand() {
   expanded.value = !expanded.value
 }
 
-const subKeys = computed(() => {
-  const subValues = props.studies.map((study) => props.indicator.getSubValues(study, props.studies))
-  return _.union(...subValues.map(Object.keys))
-})
+const subKeys = computed(() => getAllSubKeys(props.studies, props.indicator.getSubValues))
 
 const hasSubKeys = computed(() => subKeys.value.length !== 0)
 </script>
