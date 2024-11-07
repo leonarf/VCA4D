@@ -2,26 +2,36 @@
   <table class="w-full">
     <tbody>
       <ComparisonHeader :studies="studies" @select-studies="emit('select-studies', $event)" />
-      <ComparisonEconomics :studies="studies" :indicators="comparisonConfig.economics" />
+      <ComparisonSection
+        :studies="studies"
+        :indicators="comparisonConfig.economics"
+        title="Macro-Economic Indicators"
+      />
 
       <ComparisonSeparator :studies="studies" />
 
-      <ComparisonSocial :studies="studies" :indicators="comparisonConfig.social" />
+      <ComparisonSection
+        :studies="studies"
+        :indicators="comparisonConfig.social"
+        title="Social Sustainability"
+      />
 
       <ComparisonSeparator :studies="studies" />
 
-      <ComparisonEnvironment :studies="studies" :indicators="comparisonConfig.environment" />
+      <ComparisonSection
+        :studies="studies"
+        :indicators="comparisonConfig.environment"
+        title="Environmental Indicators"
+      />
     </tbody>
   </table>
 </template>
 
 <script setup>
 import ComparisonHeader from '@components/comparison/ComparisonHeader.vue'
-import ComparisonSocial from '@components/comparison/ComparisonSocial.vue'
 import ComparisonSeparator from '@components/comparison/ComparisonSeparator.vue'
-import ComparisonEnvironment from './comparison/ComparisonEnvironment.vue'
-import ComparisonEconomics from './comparison/ComparisonEconomics.vue'
 import { comparisonConfig } from './comparison/comparisonConfig'
+import ComparisonSection from './comparison/ComparisonSection.vue'
 
 defineProps({
   studies: Array
