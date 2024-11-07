@@ -12,7 +12,6 @@ import { isCurrencySupported } from '@utils/currency'
 const props = defineProps({
   value: Number,
   studyData: Object,
-  preferredCurrency: String,
   valueType: {
     type: String,
     validator: (valueType) => ['amount', 'percent', 'number'].includes(valueType)
@@ -33,7 +32,7 @@ const displayCurrency = computed(() => {
   }
 
   return isCurrencySupported(props.studyData.targetCurrency)
-    ? props.preferredCurrency
+    ? 'USD'
     : props.studyData.targetCurrency
 })
 

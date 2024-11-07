@@ -30,12 +30,7 @@
     :getValue="getTotalAddedValue"
   >
     <template #default="{ value, studyData }">
-      <ComparisonDefaultCell
-        :value="value"
-        :studyData="studyData"
-        valueType="amount"
-        preferredCurrency="USD"
-      />
+      <ComparisonDefaultCell :value="value" :studyData="studyData" valueType="amount" />
     </template>
   </ComparisonRow>
 
@@ -75,7 +70,6 @@
         :value="value"
         valueType="amount"
         :studyData="studyData"
-        preferredCurrency="USD"
         :lightVersion="isSubRow"
       />
     </template>
