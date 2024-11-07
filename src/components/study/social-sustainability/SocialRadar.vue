@@ -31,19 +31,24 @@ const chartData = computed(() => {
   return {
     radar: {
       indicator: [
-          { name: 'Working conditions', max: 4 },
-          { name: 'Living conditions', max: 4 },
-          { name: 'Social capital', max: 4 },
-          { name: 'Food & nutrition security', max: 4 },
-          { name: 'Gender equality', max: 4 },
-          { name: 'Land & water rights', max: 4 },
+        { name: 'Working conditions', max: 4 },
+        { name: 'Living conditions', max: 4 },
+        { name: 'Social capital', max: 4 },
+        { name: 'Food & nutrition security', max: 4 },
+        { name: 'Gender equality', max: 4 },
+        { name: 'Land & water rights', max: 4 }
       ],
       center: ['50%', '50%'],
       radius: '100%',
       splitNumber: 4,
       splitArea: {
         areaStyle: {
-          color: [getSocialScoreColor(1), getSocialScoreColor(2), getSocialScoreColor(3), getSocialScoreColor(4)]
+          color: [
+            getSocialScoreColor(1),
+            getSocialScoreColor(2),
+            getSocialScoreColor(3),
+            getSocialScoreColor(4)
+          ]
         }
       },
       axisLine: {
@@ -80,7 +85,7 @@ const chartData = computed(() => {
       {
         type: 'radar',
         areaStyle: {
-          color: '#FFFFFF66'
+          color: 'transparent'
         },
         itemStyle: {
           color: '#941B33'
@@ -96,5 +101,4 @@ const chartData = computed(() => {
 })
 </script>
 
-<style lang="">
-</style>
+<style lang=""></style>
