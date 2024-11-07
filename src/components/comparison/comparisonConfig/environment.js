@@ -32,7 +32,7 @@ function getImpacts(studies) {
   )
 }
 
-export function getTotalImpacts(study, studies, sumTotalPerYear = false) {
+function getTotalImpacts(study, studies, sumTotalPerYear = false) {
   const valuesByImpact = getValuesByImpact(study, studies, sumTotalPerYear)
   if (_.isEmpty(valuesByImpact)) {
     return null
@@ -41,7 +41,7 @@ export function getTotalImpacts(study, studies, sumTotalPerYear = false) {
   return _.sumBy(Object.values(valuesByImpact))
 }
 
-export function getValuesByImpact(study, studies, sumTotalPerYear = false) {
+function getValuesByImpact(study, studies, sumTotalPerYear = false) {
   const valuesByImpact = {}
   const impacts = getImpacts(studies)
   impacts.forEach((impact) => {

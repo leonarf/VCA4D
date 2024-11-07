@@ -1,34 +1,39 @@
 <template>
   <ComparisonTitle title="Social Sustainability" :studies="studies" />
-  <ComparisonExpandableRow
-    v-for="(part, index) in SOCIAL_PARTS"
-    :key="`part_${index}`"
+
+  <component
+    :is="getRowComponent(indicator)"
+    v-for="(indicator, index) in indicators"
+    :key="index"
     :studies="studies"
-    :title="part"
-    :getValue="(study) => getOptionalSocialAverageGroup(study.socialData?.[index])"
-    :getSubValues="(study) => getSocialAverageSubGroups(study.socialData?.[index])"
+    :title="indicator.title"
+    :subtitle="indicator.subtitle"
+    :getValue="indicator.getValue"
+    :getSubValues="indicator.getSubValues"
   >
     <template #default="{ value, isSubRow }">
       <div class="tag-container mx-auto my-2">
         <Tag class="tag" :lightVersion="isSubRow" :scale="value" />
       </div>
     </template>
-  </ComparisonExpandableRow>
+  </component>
 </template>
 
 <script setup>
 import Tag from '@components/study/social-sustainability/Tag.vue'
 import ComparisonTitle from './ComparisonTitle.vue'
 import ComparisonExpandableRow from './ComparisonExpandableRow.vue'
-import {
-  SOCIAL_PARTS,
-  getOptionalSocialAverageGroup,
-  getSocialAverageSubGroups
-} from './comparisonConfig'
+// WIP for simplicity
+import ComparisonRow from './ComparisonRow.vue'
 
 defineProps({
-  studies: Array
+  studies: Array,
+  indicators: Array
 })
+
+function getRowComponent(indicator) {
+  return indicator.getSubValues ? ComparisonExpandableRow : ComparisonRow
+}
 </script>
 
 <style scoped lang="scss">

@@ -1,37 +1,40 @@
 <template>
   <ComparisonTitle title="Environmental Indicators" :studies="studies" />
-  <ComparisonExpandableRow
+  <component
+    :is="getRowComponent(indicator)"
+    v-for="(indicator, index) in indicators"
+    :key="index"
     :studies="studies"
-    title="Total impact per year"
-    subtitle="Value chain total impact (in pt)"
-    :getValue="(study, studies) => getTotalImpacts(study, studies, true)"
-    :getSubValues="(study, studies) => getValuesByImpact(study, studies, true)"
+    :title="indicator.title"
+    :subtitle="indicator.subtitle"
+    :getValue="indicator.getValue"
+    :getSubValues="indicator.getSubValues"
   >
-    <template #default="{ value, isSubRow }">
-      <ComparisonDefaultCell :value="value" valueType="number" :lightVersion="isSubRow" />
+    <template #default="{ value, studyData, isSubRow }">
+      <ComparisonDefaultCell
+        :value="value"
+        :studyData="studyData"
+        :lightVersion="isSubRow"
+        :valueType="indicator.format"
+      />
     </template>
-  </ComparisonExpandableRow>
-  <ComparisonExpandableRow
-    :studies="studies"
-    title="Impact per functional unit"
-    subtitle="Value chain total impact / volume"
-    :getValue="(study, studies) => getTotalImpacts(study, studies, false)"
-    :getSubValues="(study, studies) => getValuesByImpact(study, studies, false)"
-  >
-    <template #default="{ value, isSubRow }">
-      <ComparisonDefaultCell :value="value" valueType="number" :lightVersion="isSubRow" />
-    </template>
-  </ComparisonExpandableRow>
+  </component>
 </template>
 
 <script setup>
 import ComparisonTitle from './ComparisonTitle.vue'
 import ComparisonExpandableRow from './ComparisonExpandableRow.vue'
+// WIP for simplicity
+import ComparisonRow from './ComparisonRow.vue'
 import ComparisonDefaultCell from './ComparisonDefaultCell.vue'
-import { getTotalImpacts, getValuesByImpact } from './comparisonConfig'
 defineProps({
-  studies: Array
+  studies: Array,
+  indicators: Array
 })
+
+function getRowComponent(indicator) {
+  return indicator.getSubValues ? ComparisonExpandableRow : ComparisonRow
+}
 </script>
 
 <style scoped lang="scss">

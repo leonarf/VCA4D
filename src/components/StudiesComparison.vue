@@ -2,15 +2,15 @@
   <table class="w-full">
     <tbody>
       <ComparisonHeader :studies="studies" @select-studies="emit('select-studies', $event)" />
-      <ComparisonEconomics :studies="studies" />
+      <ComparisonEconomics :studies="studies" :indicators="comparisonConfig.economics" />
 
       <ComparisonSeparator :studies="studies" />
 
-      <ComparisonSocial :studies="studies" />
+      <ComparisonSocial :studies="studies" :indicators="comparisonConfig.social" />
 
       <ComparisonSeparator :studies="studies" />
 
-      <ComparisonEnvironment :studies="studies" />
+      <ComparisonEnvironment :studies="studies" :indicators="comparisonConfig.environment" />
     </tbody>
   </table>
 </template>
@@ -21,6 +21,7 @@ import ComparisonSocial from '@components/comparison/ComparisonSocial.vue'
 import ComparisonSeparator from '@components/comparison/ComparisonSeparator.vue'
 import ComparisonEnvironment from './comparison/ComparisonEnvironment.vue'
 import ComparisonEconomics from './comparison/ComparisonEconomics.vue'
+import { comparisonConfig } from './comparison/comparisonConfig'
 
 defineProps({
   studies: Array

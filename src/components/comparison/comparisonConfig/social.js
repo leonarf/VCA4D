@@ -1,6 +1,6 @@
 import { getSocialAverageGroup } from '@utils/social.js'
 
-export const SOCIAL_PARTS = [
+const SOCIAL_PARTS = [
   'Working conditions',
   'Land and water rights',
   'Gender equality',
@@ -16,7 +16,7 @@ export const socialConfig = SOCIAL_PARTS.map((part, index) => ({
   format: 'social'
 }))
 
-export function getOptionalSocialAverageGroup(socialImpact) {
+function getOptionalSocialAverageGroup(socialImpact) {
   if (!socialImpact) {
     return null
   }
@@ -24,7 +24,7 @@ export function getOptionalSocialAverageGroup(socialImpact) {
   return getSocialAverageGroup(socialImpact)
 }
 
-export function getSocialAverageSubGroups(socialImpact) {
+function getSocialAverageSubGroups(socialImpact) {
   if (!socialImpact) {
     return null
   }
