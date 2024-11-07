@@ -17,43 +17,18 @@
 </template>
 
 <script setup>
-import { getSocialAverageGroup } from '@utils/social.js'
 import Tag from '@components/study/social-sustainability/Tag.vue'
 import ComparisonTitle from './ComparisonTitle.vue'
 import ComparisonExpandableRow from './ComparisonExpandableRow.vue'
+import {
+  SOCIAL_PARTS,
+  getOptionalSocialAverageGroup,
+  getSocialAverageSubGroups
+} from './comparisonConfig'
+
 defineProps({
   studies: Array
 })
-
-const SOCIAL_PARTS = [
-  'Working conditions',
-  'Land and water rights',
-  'Gender equality',
-  'Food and nutrition security',
-  'Social capital',
-  'Living conditions'
-]
-
-function getOptionalSocialAverageGroup(socialImpact) {
-  if (!socialImpact) {
-    return null
-  }
-
-  return getSocialAverageGroup(socialImpact)
-}
-
-function getSocialAverageSubGroups(socialImpact) {
-  if (!socialImpact) {
-    return null
-  }
-
-  const socialAverageSubGroupsByName = {}
-  socialImpact.groups.forEach((group) => {
-    const groupTitleWithoutNumber = group.title.slice(4)
-    socialAverageSubGroupsByName[groupTitleWithoutNumber] = Math.round(group.averageValue)
-  })
-  return socialAverageSubGroupsByName
-}
 </script>
 
 <style scoped lang="scss">

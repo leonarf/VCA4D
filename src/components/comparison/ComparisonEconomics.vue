@@ -94,73 +94,19 @@
 </template>
 
 <script setup>
-import _ from 'lodash'
 import { getTotalAddedValue } from '@utils/economics.js'
 import ComparisonTitle from './ComparisonTitle.vue'
 import ComparisonRow from './ComparisonRow.vue'
 import ComparisonExpandableRow from './ComparisonExpandableRow.vue'
 import ComparisonDefaultCell from './ComparisonDefaultCell.vue'
+import {
+  getTotalJobs,
+  getJobsByStage,
+  getNetOperatingProfitForOtherStages,
+  getNetOperatingProfitPerProducer
+} from './comparisonConfig'
 defineProps({
-  studies: Array
+  studies: Array,
+  indicators: Object
 })
-
-function getTotalJobs(studyData) {
-  const jobByStage = getJobsByStage(studyData)
-  if (_.isEmpty(jobByStage)) {
-    return
-  }
-
-  return _.sumBy(Object.values(jobByStage))
-}
-function getJobsByStage(studyData) {
-  if (!studyData.metrics.eco?.employment?.employmentByStage) {
-    return {}
-  }
-
-  const employmentByStage = studyData.metrics.eco.employment?.employmentByStage
-  if (!employmentByStage) {
-    return {}
-  }
-
-  const jobsByStage = {}
-  Object.keys(employmentByStage).forEach((stage) => {
-    if (!employmentByStage[stage].total) {
-      return
-    }
-    jobsByStage[stage] = employmentByStage[stage].total
-  })
-  return jobsByStage
-}
-
-function getNetOperatingProfitPerProducer(studyData) {
-  if (!studyData.metrics.eco?.netOperatingProfitPerActor) {
-    return null
-  }
-
-  return studyData.metrics.eco.netOperatingProfitPerActor?.Producers?.profitPerActor
-}
-
-function getNetOperatingProfitForOtherStages(studyData) {
-  if (!studyData.metrics.eco?.netOperatingProfitPerActor) {
-    return {}
-  }
-
-  const netOperatingProfitForOtherStages = {}
-  const nonProducerStages = Object.keys(studyData.metrics.eco?.netOperatingProfitPerActor).filter(
-    (stageName) => stageName !== 'Producers'
-  )
-  nonProducerStages.forEach((stageName) => {
-    netOperatingProfitForOtherStages[buildPerStageName(stageName)] =
-      studyData.metrics.eco.netOperatingProfitPerActor?.[stageName]?.profitPerActor
-  })
-  return netOperatingProfitForOtherStages
-}
-
-function buildPerStageName(stageName) {
-  const lowercaseStageName = _.lowerCase(stageName)
-  const singularStageName = lowercaseStageName.replace(/s$/, '')
-  return `Per ${singularStageName}`
-}
 </script>
-
-<style lang="scss"></style>
