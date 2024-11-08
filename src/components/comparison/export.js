@@ -2,9 +2,10 @@ import { comparisonConfig } from './comparisonConfig'
 import { getAllSubKeys } from './utils'
 import { slugify } from '@utils/format.js'
 import { getCountry, getProduct } from '@utils/data'
+import * as XLSX from 'xlsx'
 
 export function downloadComparisonXlsx(studies) {
-  const csv = [
+  const dataTable = [
     ...getHeaderRows(studies),
     getSectionTitleRow('Macro-economic indicators'),
     ...unfoldIndicators(studies, comparisonConfig.economics),
@@ -14,8 +15,11 @@ export function downloadComparisonXlsx(studies) {
     ...unfoldIndicators(studies, comparisonConfig.environment)
   ]
 
-  // WIP
-  navigator.clipboard.writeText(csv.map((row) => row.join(',')).join('\n'))
+  const worksheet = XLSX.utils.aoa_to_sheet(dataTable)
+  worksheet['!cols'] = [{ wch: 40 }, ...studies.map(() => ({ wch: 20 }))]
+  const workbook = XLSX.utils.book_new()
+  XLSX.utils.book_append_sheet(workbook, worksheet, 'Comparison data')
+  XLSX.writeFile(workbook, 'Studies Comparison.xlsx', { compression: true })
 }
 
 function getHeaderRows(studies) {
