@@ -23,6 +23,16 @@
         :indicators="comparisonConfig.environment"
         title="Environmental Indicators"
       />
+      <tr>
+        <td>
+          <a class="download" @click="() => downloadComparisonXlsx(studies)">
+            <div class="download-logo">
+              <Svg :svg="DowloadLogo" />
+            </div>
+            Download comparison data as xlsx</a
+          >
+        </td>
+      </tr>
     </tbody>
   </table>
 </template>
@@ -32,6 +42,8 @@ import ComparisonHeader from '@components/comparison/ComparisonHeader.vue'
 import ComparisonSeparator from '@components/comparison/ComparisonSeparator.vue'
 import { comparisonConfig } from './comparison/comparisonConfig'
 import ComparisonSection from './comparison/ComparisonSection.vue'
+import Svg from '@components/Svg.vue'
+import DowloadLogo from '../images/icons/download.svg'
 
 defineProps({
   studies: Array
@@ -69,5 +81,22 @@ table {
   tr td:nth-last-child(2) > *:last-child {
     margin-right: 15px;
   }
+}
+
+.download {
+  margin-top: 30px;
+  display: flex;
+  gap: 3px;
+  cursor: pointer;
+  color: #3f83f8;
+  align-items: baseli;
+
+  &:hover {
+    color: #1c64f2;
+  }
+}
+.download-logo {
+  height: 20px;
+  width: 20px;
 }
 </style>
