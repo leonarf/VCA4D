@@ -4,6 +4,7 @@ import { slugify } from '@utils/format.js'
 import { getCountry, getProduct } from '@utils/data'
 import * as XLSX from 'xlsx'
 import _ from 'lodash'
+import { useCurrencyUtils } from '../../utils/format'
 
 export function downloadComparisonXlsx(studies) {
   const dataTable = [
@@ -52,10 +53,10 @@ function getFormat({ type = 'number', value }) {
       return '0'
     case 'percent':
       return '0.00%'
-    // WIP will fix next commit
     case 'amount':
+      return '"$"#,##0.00_);\\("$"#,##0.00\\)'
     default:
-      return '#,##0'
+      return ''
   }
 }
 
@@ -104,7 +105,9 @@ function unfoldIndicator(studies, indicator) {
 function getMainRow(studies, indicator) {
   return [
     getCell(indicator.title),
-    ...studies.map((study) => getCell(indicator.getValue(study, studies), indicator.format))
+    ...studies.map((study) =>
+      getDataCell(indicator.getValue(study, studies), indicator.format, study)
+    )
   ]
 }
 
@@ -117,9 +120,21 @@ function getSubRows(studies, indicator) {
   return subKeys.map((subKey) => [
     getCell(`---- ${subKey}`),
     ...studies.map((study) =>
-      getCell(indicator.getSubValues(study, studies)[subKey], indicator.format)
+      getDataCell(indicator.getSubValues(study, studies)[subKey], indicator.format, study)
     )
   ])
+}
+
+function getDataCell(value, format, study) {
+  if (format !== 'amount') {
+    return getCell(value, format)
+  }
+
+  const { convertAmount } = useCurrencyUtils({
+    studyData: study,
+    currency: 'USD'
+  })
+  return getCell(value ? convertAmount.value(value) : null, 'amount')
 }
 
 function getCell(value, type = 'string') {
