@@ -5,35 +5,67 @@ export const environmentConfig = [
   {
     title: 'Total impact per year',
     subtitle: 'Value chain total impact (in pt)',
-    getValue: (study, studies) => getTotalImpacts(study, studies, true),
-    getSubValues: (study, studies) => getValuesByImpact(study, studies, true),
+    getValue: (study, studies) => {
+      const impactNames = getPtImpactsNames(studies)
+      return getTotalImpacts(study, impactNames, true)
+    },
+    getSubValues: (study, studies) => {
+      const impactNames = getPtImpactsNames(studies)
+      return getPtValuesByImpact(study, impactNames, true)
+    },
     format: 'number'
   },
   {
     title: 'Impact per functional unit',
     subtitle: 'Value chain total impact / volume',
-    getValue: (study, studies) => getTotalImpacts(study, studies, false),
-    getSubValues: (study, studies) => getValuesByImpact(study, studies, false),
+    getValue: (study, studies) => {
+      const impactNames = getPtImpactsNames(studies)
+      return getTotalImpacts(study, impactNames, false)
+    },
+    getSubValues: (study, studies) => {
+      const impactNames = getPtImpactsNames(studies)
+      return getPtValuesByImpact(study, impactNames, false)
+    },
+    format: 'number'
+  },
+  {
+    title: 'Total impact per year on Global warming',
+    subtitle: 'Value chain total impact in kg eqCO2',
+    getValue: (study) =>
+      getImpactValue('Global warming', study, {
+        singleScore: false,
+        sumTotalPerYear: true
+      }),
+    format: 'number'
+  },
+  {
+    title: 'Impact per functional unit on Global warming',
+    subtitle: 'Value chain total impact / volume',
+    getValue: (study) =>
+      getImpactValue('Global warming', study, {
+        singleScore: false,
+        sumTotalPerYear: false
+      }),
     format: 'number'
   }
 ]
 
-function getAvailableImpacts(studies) {
+function getAvailablePtImpacts(studies) {
   return studies
     .reduce((arr, study) => arr.concat(study.acvData?.impacts), [])
     .filter((item) => !!item)
     .filter((item) => item.unit === 'Pt')
 }
 
-function getImpacts(studies) {
-  const availableImpacts = getAvailableImpacts(studies)
+function getPtImpactsNames(studies) {
+  const availableImpacts = getAvailablePtImpacts(studies)
   return ACVImpacts.filter((item) =>
     availableImpacts.map((availableImpact) => availableImpact.name).includes(item.name)
-  )
+  ).map((impact) => impact.name)
 }
 
-function getTotalImpacts(study, studies, sumTotalPerYear = false) {
-  const valuesByImpact = getValuesByImpact(study, studies, sumTotalPerYear)
+function getTotalImpacts(study, impactNames, sumTotalPerYear = false) {
+  const valuesByImpact = getPtValuesByImpact(study, impactNames, sumTotalPerYear)
   if (_.isEmpty(valuesByImpact)) {
     return null
   }
@@ -41,25 +73,27 @@ function getTotalImpacts(study, studies, sumTotalPerYear = false) {
   return _.sumBy(Object.values(valuesByImpact))
 }
 
-function getValuesByImpact(study, studies, sumTotalPerYear = false) {
+function getPtValuesByImpact(study, impactNames, sumTotalPerYear = false) {
   const valuesByImpact = {}
-  const impacts = getImpacts(studies)
-  impacts.forEach((impact) => {
-    const impactValue = getImpactValue(impact, study, sumTotalPerYear)
+  impactNames.forEach((impactName) => {
+    const impactValue = getImpactValue(impactName, study, {
+      singleScore: true,
+      sumTotalPerYear
+    })
     if (_.isNull(impactValue)) {
       return
     }
-    var label = ACVImpacts.find((item) => item.name == impact.name).label
+    var label = ACVImpacts.find((item) => item.name == impactName).label
     if (label) {
       valuesByImpact[label] = impactValue
     } else {
-      valuesByImpact[impact.name] = impactValue
+      valuesByImpact[impactName] = impactValue
     }
   })
   return valuesByImpact
 }
 
-function getImpactValue(impact, study, sumTotalPerYear = false) {
+function getImpactValue(impactName, study, { singleScore, sumTotalPerYear = false }) {
   if (!study.acvData) {
     return null
   }
@@ -68,8 +102,8 @@ function getImpactValue(impact, study, sumTotalPerYear = false) {
   let totalVolume = 0
   for (const { name, volume } of valueChains) {
     const totalChainPerYear = study.acvData.impacts
-      .filter((i) => i.name === impact.name)
-      .filter((i) => i.unit === 'Pt')
+      .filter((i) => i.name === impactName)
+      .filter((i) => (singleScore ? i.unit === 'Pt' : i.unit !== 'Pt'))
       .reduce((arr, item) => arr.concat(item.values), [])
       .filter((val) => val.valuechain_name === name)
       .map((val) => val.value * volume)
