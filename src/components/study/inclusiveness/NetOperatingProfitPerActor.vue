@@ -56,13 +56,13 @@ const { prettyAmount, convertAmount } = useCurrencyUtils(props)
 const { actors } = useActorsAndStages(props)
 
 const netOperatingProfitByNumberActorsData = computed(() => {
-  if (!props.studyData.metrics.eco.netOperatingProfitPerActor) {
+  if (!props.studyData.metrics.eco.netOperatingProfit) {
     return
   }
 
   let tooltip = {}
 
-  const items = Object.entries(props.studyData.metrics.eco.netOperatingProfitPerActor).map(
+  const items = Object.entries(props.studyData.metrics.eco.netOperatingProfit).map(
     ([stageName, { profitPerActor, stageActors }]) => {
       let toolTipValue = ''
       for (const actor of stageActors) {

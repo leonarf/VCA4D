@@ -78,25 +78,25 @@ function getJobsByStage(studyData) {
 }
 
 function getNetOperatingProfitPerProducer(studyData) {
-  if (!studyData.metrics.eco?.netOperatingProfitPerActor) {
+  if (!studyData.metrics.eco?.netOperatingProfit) {
     return null
   }
 
-  return studyData.metrics.eco.netOperatingProfitPerActor?.Producers?.profitPerActor
+  return studyData.metrics.eco.netOperatingProfit?.Producers?.profitPerActor
 }
 
 function getNetOperatingProfitForOtherStages(studyData) {
-  if (!studyData.metrics.eco?.netOperatingProfitPerActor) {
+  if (!studyData.metrics.eco?.netOperatingProfit) {
     return {}
   }
 
   const netOperatingProfitForOtherStages = {}
-  const nonProducerStages = Object.keys(studyData.metrics.eco?.netOperatingProfitPerActor).filter(
+  const nonProducerStages = Object.keys(studyData.metrics.eco?.netOperatingProfit).filter(
     (stageName) => stageName !== 'Producers'
   )
   nonProducerStages.forEach((stageName) => {
     netOperatingProfitForOtherStages[buildPerStageName(stageName)] =
-      studyData.metrics.eco.netOperatingProfitPerActor?.[stageName]?.profitPerActor
+      studyData.metrics.eco.netOperatingProfit?.[stageName]?.profitPerActor
   })
   return netOperatingProfitForOtherStages
 }

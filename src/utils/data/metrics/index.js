@@ -1,6 +1,6 @@
 import { buildBenefitCostRatioData } from './eco/benefitCostRatio.js'
 import { buildGlobalEmploymentData } from './eco/employment.js'
-import { buildNetOperatingProfitPerActor } from './eco/netOperatingProfitPerActor.js'
+import { buildNetOperatingProfit } from './eco/netOperatingProfit.js'
 
 export function computeMetrics(studyData) {
   return {
@@ -16,6 +16,6 @@ function buildEcoMetrics(studyData) {
   return {
     benefitCostRatio: buildBenefitCostRatioData(studyData.ecoData),
     employment: buildGlobalEmploymentData(studyData.ecoData),
-    netOperatingProfitPerActor: buildNetOperatingProfitPerActor(studyData.ecoData)
+    netOperatingProfit: buildNetOperatingProfit(studyData.ecoData)
   }
 }

@@ -33,12 +33,13 @@
 <script setup>
 import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
-import { getNetOperatingProfitData, getNetOperatingProfitByTypeOfActorData } from '@/charts/charts'
+import { getSelectableBarChart, getMiniPieChart } from '@/charts/charts'
 import Ring from '@charts/Ring.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 import { useCurrencyUtils } from '@utils/format.js'
 import { useActorsAndStages } from '@utils/misc.js'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
+import { formatPercent } from '@utils/format.js'
 
 const props = defineProps({
   studyData: Object,
@@ -55,19 +56,50 @@ const handleDataChartSeriesClick = (event) => {
 }
 
 const { prettyAmount, convertAmount } = useCurrencyUtils(props)
-const { stages, actors } = useActorsAndStages(props)
+const { actors } = useActorsAndStages(props)
 
-const netOperatingProfitData = computed(() =>
-  getNetOperatingProfitData(stages, actors, convertAmount, prettyAmount, selectedStage)
-)
+const netOperatingProfitData = computed(() => {
+  if (!props.studyData.metrics.eco.netOperatingProfit) {
+    return
+  }
+
+  let tooltip = {}
+
+  let total = 0
+
+  const items = Object.entries(props.studyData.metrics.eco.netOperatingProfit).map(
+    ([stageName, { stageActors, totalProfit: stageTotalProfit }]) => {
+      let toolTipValue = ''
+      for (const actor of stageActors) {
+        var convertedActorProfit = convertAmount.value(actor.netOperatingProfit)
+        toolTipValue += `${actor.name}: ${prettyAmount.value(convertedActorProfit)} (${formatPercent(convertedActorProfit / stageTotalProfit)})<br>`
+      }
+      total += stageTotalProfit
+      tooltip[stageName] = toolTipValue
+      return {
+        name: stageName,
+        value: convertAmount.value(stageTotalProfit)
+      }
+    }
+  )
+
+  return getSelectableBarChart(
+    items,
+    selectedStage.value,
+    tooltip,
+    (value) => `${prettyAmount.value(value)} (${formatPercent(value / total)})`
+  )
+})
 
 const currentStageNetOperatingProfitByTypeOfActorData = computed(() => {
   const currentStageActors = actors.value.filter((actor) => actor.stage === selectedStage.value)
-  return getNetOperatingProfitByTypeOfActorData(
-    currentStageActors,
-    convertAmount.value,
-    prettyAmount.value
-  )
+  let data = currentStageActors.map((actor) => {
+    return {
+      value: convertAmount.value(actor.netOperatingProfit || 0),
+      name: actor.name
+    }
+  })
+  return getMiniPieChart(data, 'By type of actor', prettyAmount.value)
 })
 </script>
 

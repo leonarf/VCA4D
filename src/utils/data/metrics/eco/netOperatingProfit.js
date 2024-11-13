@@ -1,13 +1,13 @@
 import _ from 'lodash'
 
-export function buildNetOperatingProfitPerActor(ecoData) {
+export function buildNetOperatingProfit(ecoData) {
   const actors = ecoData.actors
   if (!actors) {
     return null
   }
   const stages = _.uniq(actors.map((actor) => actor.stage))
 
-  const netOperatingProfitPerActorByStage = {}
+  const netOperatingProfitByStage = {}
 
   stages.forEach((stageName) => {
     const stageActors = actors.filter((actor) => actor.stage === stageName)
@@ -20,12 +20,13 @@ export function buildNetOperatingProfitPerActor(ecoData) {
     }))
 
     if (subTotalOperatingProfit !== 0 && subTotalNumberOfActors !== 0) {
-      netOperatingProfitPerActorByStage[stageName] = {
+      netOperatingProfitByStage[stageName] = {
+        totalProfit: subTotalOperatingProfit,
         profitPerActor: subTotalOperatingProfit / subTotalNumberOfActors,
         stageActors: partialStageActors
       }
     }
   })
 
-  return netOperatingProfitPerActorByStage
+  return netOperatingProfitByStage
 }
