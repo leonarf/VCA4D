@@ -3,6 +3,12 @@ import _ from 'lodash'
 
 export const economicsConfig = [
   {
+    title: 'Value added',
+    subtitle: 'Total value added of value chain',
+    getValue: getTotalAddedValue,
+    format: 'amount'
+  },
+  {
     title: 'Share of national GDP',
     subtitle: 'Value chain GDP divided by national GDP',
     getValue: (study) => study.ecoData?.macroData?.valueAddedShareNationalGdp,
@@ -13,12 +19,6 @@ export const economicsConfig = [
     subtitle: 'Value chain GDP divided by agricultural GDP',
     getValue: (study) => study.ecoData?.macroData?.valueAddedShareAgriculturalGdp,
     format: 'percent'
-  },
-  {
-    title: 'Value added',
-    subtitle: 'Total value added of value chain',
-    getValue: getTotalAddedValue,
-    format: 'amount'
   },
   {
     title: 'Rate of Integration',
