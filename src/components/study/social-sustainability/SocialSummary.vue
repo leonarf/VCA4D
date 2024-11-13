@@ -19,12 +19,13 @@
     </p>
     <p>
       The four levels of social sustainability are illustrated by different colours in the chart:
-      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(4) }">high (green)</b>,
+      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(4) }">high (dark green)</b
+      >,
       <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(3) }"
-        >substantial (yellow)</b
+        >substantial (light green)</b
       >,
       <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(2) }"
-        >moderate/low (orange)</b
+        >moderate/low (yellow)</b
       >,
       <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(1) }">not at all (red)</b
       >.
