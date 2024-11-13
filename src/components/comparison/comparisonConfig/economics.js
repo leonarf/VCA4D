@@ -3,6 +3,12 @@ import _ from 'lodash'
 
 export const economicsConfig = [
   {
+    title: 'Value added',
+    subtitle: 'Total value added of value chain',
+    getValue: getTotalAddedValue,
+    format: 'amount'
+  },
+  {
     title: 'Share of national GDP',
     subtitle: 'Value chain GDP divided by national GDP',
     getValue: (study) => study.ecoData?.macroData?.valueAddedShareNationalGdp,
@@ -13,12 +19,6 @@ export const economicsConfig = [
     subtitle: 'Value chain GDP divided by agricultural GDP',
     getValue: (study) => study.ecoData?.macroData?.valueAddedShareAgriculturalGdp,
     format: 'percent'
-  },
-  {
-    title: 'Value added',
-    subtitle: 'Total value added of value chain',
-    getValue: getTotalAddedValue,
-    format: 'amount'
   },
   {
     title: 'Rate of Integration',
@@ -34,10 +34,17 @@ export const economicsConfig = [
     format: 'number'
   },
   {
+    title: 'Total net operating profit at production stage',
+    subtitle: 'Total net operating profit per stage',
+    getValue: (studyData) => getNetOperatingProfitPerProducer(studyData, false),
+    getSubValues: (studyData) => getNetOperatingProfitForOtherStages(studyData, false),
+    format: 'amount'
+  },
+  {
     title: 'Net operating profit per producer',
     subtitle: 'Average net operating profit per actor at each stage',
-    getValue: getNetOperatingProfitPerProducer,
-    getSubValues: getNetOperatingProfitForOtherStages,
+    getValue: (studyData) => getNetOperatingProfitPerProducer(studyData, true),
+    getSubValues: (studyData) => getNetOperatingProfitForOtherStages(studyData, true),
     format: 'amount'
   },
   {
@@ -77,26 +84,30 @@ function getJobsByStage(studyData) {
   return jobsByStage
 }
 
-function getNetOperatingProfitPerProducer(studyData) {
-  if (!studyData.metrics.eco?.netOperatingProfitPerActor) {
+function getNetOperatingProfitPerProducer(studyData, perActor = false) {
+  if (!studyData.metrics.eco?.netOperatingProfit) {
     return null
   }
 
-  return studyData.metrics.eco.netOperatingProfitPerActor?.Producers?.profitPerActor
+  return studyData.metrics.eco.netOperatingProfit?.Producers?.[
+    perActor ? 'profitPerActor' : 'totalProfit'
+  ]
 }
 
-function getNetOperatingProfitForOtherStages(studyData) {
-  if (!studyData.metrics.eco?.netOperatingProfitPerActor) {
+function getNetOperatingProfitForOtherStages(studyData, perActor = false) {
+  if (!studyData.metrics.eco?.netOperatingProfit) {
     return {}
   }
 
   const netOperatingProfitForOtherStages = {}
-  const nonProducerStages = Object.keys(studyData.metrics.eco?.netOperatingProfitPerActor).filter(
+  const nonProducerStages = Object.keys(studyData.metrics.eco?.netOperatingProfit).filter(
     (stageName) => stageName !== 'Producers'
   )
   nonProducerStages.forEach((stageName) => {
     netOperatingProfitForOtherStages[buildPerStageName(stageName)] =
-      studyData.metrics.eco.netOperatingProfitPerActor?.[stageName]?.profitPerActor
+      studyData.metrics.eco.netOperatingProfit?.[stageName]?.[
+        perActor ? 'profitPerActor' : 'totalProfit'
+      ]
   })
   return netOperatingProfitForOtherStages
 }

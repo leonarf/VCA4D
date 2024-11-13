@@ -56,24 +56,34 @@ const { prettyAmount, convertAmount } = useCurrencyUtils(props)
 const { actors } = useActorsAndStages(props)
 
 const netOperatingProfitByNumberActorsData = computed(() => {
-  if (! props.studyData.metrics.eco.netOperatingProfitPerActor) { return; }
+  if (!props.studyData.metrics.eco.netOperatingProfit) {
+    return
+  }
 
   let tooltip = {}
 
-  const items = Object.entries(props.studyData.metrics.eco.netOperatingProfitPerActor).map(([stageName, { profitPerActor, stageActors }]) => {
-    let toolTipValue = ""
-    for (const actor of stageActors) {
+  const items = Object.entries(props.studyData.metrics.eco.netOperatingProfit).map(
+    ([stageName, { profitPerActor, stageActors }]) => {
+      let toolTipValue = ''
+      for (const actor of stageActors) {
         toolTipValue += `${actor.name}: net operating profit= ${prettyAmount.value(convertAmount.value(actor.netOperatingProfit))} -- #actors= ${formatNumber(actor.numberOfActors)}<br>`
-    }
-    tooltip[stageName] = toolTipValue
-    return {
+      }
+      tooltip[stageName] = toolTipValue
+      return {
         name: stageName,
         value: convertAmount.value(profitPerActor)
+      }
     }
-  });
+  )
 
-  return getSelectableBarChart(items, selectedStage.value, tooltip, prettyAmount.value, selectedStage);
-});
+  return getSelectableBarChart(
+    items,
+    selectedStage.value,
+    tooltip,
+    prettyAmount.value,
+    selectedStage
+  )
+})
 
 const currentStageSplitData = computed(() => {
   const currentStageActors = actors.value.filter((actor) => actor.stage === selectedStage.value)
