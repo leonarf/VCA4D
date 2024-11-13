@@ -34,10 +34,17 @@ export const economicsConfig = [
     format: 'number'
   },
   {
+    title: 'Total net operating profit at production stage',
+    subtitle: 'Total net operating profit per stage',
+    getValue: (studyData) => getNetOperatingProfitPerProducer(studyData, false),
+    getSubValues: (studyData) => getNetOperatingProfitForOtherStages(studyData, false),
+    format: 'amount'
+  },
+  {
     title: 'Net operating profit per producer',
     subtitle: 'Average net operating profit per actor at each stage',
-    getValue: getNetOperatingProfitPerProducer,
-    getSubValues: getNetOperatingProfitForOtherStages,
+    getValue: (studyData) => getNetOperatingProfitPerProducer(studyData, true),
+    getSubValues: (studyData) => getNetOperatingProfitForOtherStages(studyData, true),
     format: 'amount'
   },
   {
@@ -77,15 +84,17 @@ function getJobsByStage(studyData) {
   return jobsByStage
 }
 
-function getNetOperatingProfitPerProducer(studyData) {
+function getNetOperatingProfitPerProducer(studyData, perActor = false) {
   if (!studyData.metrics.eco?.netOperatingProfit) {
     return null
   }
 
-  return studyData.metrics.eco.netOperatingProfit?.Producers?.profitPerActor
+  return studyData.metrics.eco.netOperatingProfit?.Producers?.[
+    perActor ? 'profitPerActor' : 'totalProfit'
+  ]
 }
 
-function getNetOperatingProfitForOtherStages(studyData) {
+function getNetOperatingProfitForOtherStages(studyData, perActor = false) {
   if (!studyData.metrics.eco?.netOperatingProfit) {
     return {}
   }
@@ -96,7 +105,9 @@ function getNetOperatingProfitForOtherStages(studyData) {
   )
   nonProducerStages.forEach((stageName) => {
     netOperatingProfitForOtherStages[buildPerStageName(stageName)] =
-      studyData.metrics.eco.netOperatingProfit?.[stageName]?.profitPerActor
+      studyData.metrics.eco.netOperatingProfit?.[stageName]?.[
+        perActor ? 'profitPerActor' : 'totalProfit'
+      ]
   })
   return netOperatingProfitForOtherStages
 }
