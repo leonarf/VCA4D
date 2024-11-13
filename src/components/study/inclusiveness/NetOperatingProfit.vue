@@ -11,7 +11,11 @@
           :options="netOperatingProfitData"
           @chart-series-click="handleDataChartSeriesClick"
         />
-        <MiniChartContainer v-if="selectedStage" :currentStage="selectedStage" title="Net Operating Profit">
+        <MiniChartContainer
+          v-if="selectedStage"
+          :currentStage="selectedStage"
+          title="Net Operating Profit"
+        >
           <div class="flex flex-row w-full justify-evenly mt-6">
             <div class="w-full flex flex-row justify-center">
               <Ring
@@ -29,10 +33,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import BarChart from '@charts/BarChart.vue'
-import { 
-    getNetOperatingProfitData,
-    getNetOperatingProfitByTypeOfActorData
-} from '@/charts/charts'
+import { getNetOperatingProfitData, getNetOperatingProfitByTypeOfActorData } from '@/charts/charts'
 import Ring from '@charts/Ring.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 import { useCurrencyUtils } from '@utils/format.js'
@@ -40,28 +41,33 @@ import { useActorsAndStages } from '@utils/misc.js'
 import MiniChartContainer from '@charts/MiniChartContainer.vue'
 
 const props = defineProps({
-    studyData: Object,
-    currency: String
+  studyData: Object,
+  currency: String
 })
 
 const selectedStage = ref(null)
 const handleDataChartSeriesClick = (event) => {
   if (selectedStage.value == event.name) {
     selectedStage.value = null
-  }
-  else {
+  } else {
     selectedStage.value = event.name
   }
 }
 
-const { prettyAmount, convertAmount } = useCurrencyUtils(props);
-const { stages, actors } = useActorsAndStages(props);
+const { prettyAmount, convertAmount } = useCurrencyUtils(props)
+const { stages, actors } = useActorsAndStages(props)
 
-const netOperatingProfitData = computed(() => getNetOperatingProfitData(stages, actors, convertAmount, prettyAmount, selectedStage))
+const netOperatingProfitData = computed(() =>
+  getNetOperatingProfitData(stages, actors, convertAmount, prettyAmount, selectedStage)
+)
 
 const currentStageNetOperatingProfitByTypeOfActorData = computed(() => {
-    const currentStageActors = actors.value.filter(actor => actor.stage === selectedStage.value)
-    return getNetOperatingProfitByTypeOfActorData(currentStageActors, convertAmount.value, prettyAmount.value)
+  const currentStageActors = actors.value.filter((actor) => actor.stage === selectedStage.value)
+  return getNetOperatingProfitByTypeOfActorData(
+    currentStageActors,
+    convertAmount.value,
+    prettyAmount.value
+  )
 })
 </script>
 
