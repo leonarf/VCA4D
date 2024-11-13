@@ -1,7 +1,14 @@
 <template>
   <div>
-    <h3>What are the impacts of the different sub-chains on {{ detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name }}?</h3>
-    <InfoTitle :title="detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name" :information="detailsToDisplay.helpBoxText" class="my-4" />
+    <h3>
+      What are the impacts of the different sub-chains on
+      {{ detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name }}?
+    </h3>
+    <InfoTitle
+      :title="detailsToDisplay.label ? detailsToDisplay.label : detailsToDisplay.name"
+      :information="detailsToDisplay.helpBoxText"
+      class="my-4"
+    />
     <BarChart :options="populatedBarChartData" @chart-series-click="handleDataChartSeriesClick" />
     <div v-if="selectedValueChain">
       <MiniChartContainer
@@ -30,13 +37,13 @@ import { getColor } from '@utils/colors.js'
 import { ACVImpacts } from '@utils/misc.js'
 
 const props = defineProps({
-    impact: Object,
-    perUnit: String,
-    volumes: Object
+  impact: Object,
+  perUnit: String,
+  volumes: Object
 })
 
 const detailsToDisplay = computed(() => {
-  var details = ACVImpacts.find(item => item.name == props.impact.name)
+  var details = ACVImpacts.find((item) => item.name == props.impact.name)
   return details
 })
 
@@ -44,8 +51,7 @@ const selectedValueChain = ref(null)
 const handleDataChartSeriesClick = (event) => {
   if (selectedValueChain.value == event.name) {
     selectedValueChain.value = null
-  }
-  else {
+  } else {
     selectedValueChain.value = event.name
   }
 }
@@ -54,18 +60,19 @@ const detailBarChartOptions = computed(() => {
   var tooltip = {}
   var labels = []
   var values = []
-  props.impact.values.filter(item => item.valuechain_name == selectedValueChain.value)
-  .forEach(item => {
-    labels.push(item.actor_name)
-    var color = getColor(item.valuechain_name, true)
-    values.push({
+  props.impact.values
+    .filter((item) => item.valuechain_name == selectedValueChain.value)
+    .forEach((item) => {
+      labels.push(item.actor_name)
+      var color = getColor(item.valuechain_name, true)
+      values.push({
         value: item.value,
         itemStyle: {
           color
         }
+      })
+      tooltip[item.actor_name] = `${formatNumber(item.value)} per functional unit`
     })
-    tooltip[item.actor_name] = `${formatNumber(item.value)} per functional unit`
-  })
   let barChartExample = {
     title: {
       text: ''
@@ -132,10 +139,11 @@ const populatedBarChartData = computed(() => {
   for (var value of props.impact.values) {
     if (!(value.valuechain_name in valuesByChain)) {
       valuesByChain[value.valuechain_name] = 0
-      tooltip[value.valuechain_name] = ""
+      tooltip[value.valuechain_name] = ''
     }
     valuesByChain[value.valuechain_name] += value.value
-    tooltip[value.valuechain_name] += `<b>${value.actor_name}</b>: ${formatNumber(value.value)} per functional unit<br>`
+    tooltip[value.valuechain_name] +=
+      `<b>${value.actor_name}</b>: ${formatNumber(value.value)} per functional unit<br>`
   }
 
   const items = Object.keys(valuesByChain).map((chainName) => {
@@ -160,5 +168,4 @@ const populatedBarChartData = computed(() => {
 })
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
