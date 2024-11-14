@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-lg p-4 max-w-[500px]" :style="bgColor">
+  <div class="rounded-lg p-4 max-w-[100%]" :style="bgColor">
     <div class="uppercase font-bold">
       {{ title }}
     </div>

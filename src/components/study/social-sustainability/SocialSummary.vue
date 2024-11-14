@@ -30,8 +30,8 @@
       <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(1) }">not at all (red)</b
       >.
     </p>
-    <div class="mt-4 grid grid-cols-3 w-full gap-2">
-      <div class="row-span-2 self-start xl:self-end">
+    <div class="social-summary">
+      <div class="summary-block side-block block-top">
         <SummaryBlock
           title="Living conditions"
           :anchor="6"
@@ -41,7 +41,7 @@
           <SummaryBlockQuestion :question="questionLivingEducation" />
         </SummaryBlock>
       </div>
-      <div>
+      <div class="summary-block block-top">
         <SummaryBlock
           title="Working conditions"
           :anchor="1"
@@ -51,7 +51,7 @@
           <SummaryBlockQuestion :question="workingConditionsHighlightQuestion2" />
         </SummaryBlock>
       </div>
-      <div class="row-span-2 self-start xl:self-end">
+      <div class="summary-block side-block block-top">
         <SummaryBlock
           title="Land &amp; water rights"
           :anchor="2"
@@ -61,12 +61,10 @@
           <SummaryBlockQuestion :question="questionParticipation" />
         </SummaryBlock>
       </div>
-      <div class="row-span-2">
-        <div class="w-full h-[400px]">
-          <SocialRadar :studyData="studyData" />
-        </div>
+      <div class="radar-block w-full h-[400px]">
+        <SocialRadar :studyData="studyData" />
       </div>
-      <div class="row-span-2 self-end xl:self-start">
+      <div class="summary-block side-block block-bottom">
         <SummaryBlock
           title="Social capital"
           :anchor="5"
@@ -76,7 +74,7 @@
           <SummaryBlockQuestion :question="questionFarmerInformation" />
         </SummaryBlock>
       </div>
-      <div class="row-span-2 self-end xl:self-start">
+      <div class="summary-block side-block block-bottom">
         <SummaryBlock
           title="Gender equality"
           :anchor="3"
@@ -86,7 +84,7 @@
           <SummaryBlockQuestion :question="questionWomenIncome" />
         </SummaryBlock>
       </div>
-      <div class="">
+      <div class="summary-block block-bottom">
         <SummaryBlock
           title="Food &amp; nutrition security"
           :anchor="4"
@@ -141,5 +139,44 @@ const questionLivingEducation = computed(() => props.studyData.socialData[5].gro
 <style lang="scss" scoped>
 .highlight {
   padding: 1px 3px;
+}
+
+.social-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5em;
+  width: 100%;
+  margin-top: 1rem;
+
+  .radar-block {
+    height: 400px;
+    width: 100%;
+    grid-row: span 2 / span 2;
+    display: flex;
+    justify-content: center;
+  }
+  .summary-block {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+  }
+  .side-block {
+    grid-row: span 2 / span 2;
+  }
+  .block-top {
+    align-self: end;
+  }
+  .block-bottom {
+    align-self: start;
+  }
+
+  @media screen and (max-width: 1600px) {
+    .side-block {
+      grid-row: span 1 / span 1;
+    }
+    .radar-block {
+      grid-column: span 3 / span 3;
+    }
+  }
 }
 </style>
