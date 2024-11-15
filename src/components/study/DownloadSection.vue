@@ -2,11 +2,13 @@
   <div class="download-section">
     <h3 class="download-title">Available for download</h3>
     <div class="links">
-      <div v-for="(linkColumn, index) in displayedLinksColumns" :key="index">
-        <div v-for="{ urlKey, title, subtitle, link } in linkColumn" :key="urlKey" class="url-item">
-          <a class="url-title" target="_blank" :href="link">{{ title }}</a>
-          <span v-if="subtitle" class="url-subtitle">{{ subtitle }}</span>
-        </div>
+      <div
+        v-for="{ urlKey, title, subtitle, link } in displayedLinksColumns"
+        :key="urlKey"
+        class="url-item"
+      >
+        <a class="url-title" target="_blank" :href="link">{{ title }}</a>
+        <span v-if="subtitle" class="url-subtitle">{{ subtitle }}</span>
       </div>
     </div>
   </div>
@@ -19,19 +21,8 @@ const props = defineProps({
 })
 
 const linkColumns = [
-  [
-    { title: 'Study 6 page snapshot (pdf)', urlKey: 'briefPdf' },
-    { title: 'Study full report (pdf)', urlKey: 'fullPdf' }
-  ],
-  [
-    {
-      title: 'Economic data (xlsx)',
-      subtitle: 'Contribution to economic growth and Inclusiveness',
-      urlKey: 'ecoXlsx'
-    },
-    { title: 'Social sustainability data (xlsx)', urlKey: 'socialXlsx' },
-    { title: 'Environmental data (xlsx)', urlKey: 'acvXlsx' }
-  ]
+  { title: 'Study 6 page snapshot (pdf)', urlKey: 'briefPdf' },
+  { title: 'Study full report (pdf)', urlKey: 'fullPdf' }
 ]
 
 const displayedLinksColumns = computed(() => {
@@ -66,14 +57,10 @@ const displayedLinksColumns = computed(() => {
   }
 
   .links {
+    width: 100%;
     display: flex;
-
-    > * {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+    flex-direction: column;
+    gap: 16px;
   }
 
   .url-item {
