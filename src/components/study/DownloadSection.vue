@@ -10,6 +10,12 @@
         <a class="url-title" target="_blank" :href="link">{{ title }}</a>
         <span v-if="subtitle" class="url-subtitle">{{ subtitle }}</span>
       </div>
+      <div class="url-item contact">
+        To access full data, please
+        <a class="url-title" target="_blank" href="mailto:olimpia.orlandoni@agrinatura-eu.eu"
+          >contact our team</a
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -27,7 +33,8 @@ const linkColumns = [
 
 const displayedLinksColumns = computed(() => {
   return linkColumns
-    .map((column) => column.map(populateLink).filter(hasLink))
+    .map(populateLink)
+    .filter(hasLink)
     .filter((column) => column.length !== 0)
 
   function populateLink(columnItem) {
@@ -80,6 +87,10 @@ const displayedLinksColumns = computed(() => {
       margin-left: 5px;
       font-style: italic;
       color: #8a8a8a;
+    }
+
+    &.contact {
+      color: #383d46;
     }
   }
 }
