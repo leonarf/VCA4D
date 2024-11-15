@@ -10,16 +10,24 @@
       <strong>Social Capital</strong>, and <strong>Living Conditions</strong>.
     </p>
     <p>
-      The purpose of the social analysis is to inform on how the interaction between the value chain actors
-      and the general social environment contributes to
-      <strong>improving or degrading the situation of the various social groups and types of actors</strong>.
+      The purpose of the social analysis is to inform on how the interaction between the value chain
+      actors and the general social environment contributes to
+      <strong
+        >improving or degrading the situation of the various social groups and types of
+        actors</strong
+      >.
     </p>
     <p>
       The four levels of social sustainability are illustrated by different colours in the chart:
       <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(4) }">high (green)</b>,
-      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(3) }">substantial (yellow)</b>,
-      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(2) }">moderate/low (orange)</b>,
-      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(1) }">not at all (red)</b>.
+      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(3) }"
+        >substantial (yellow)</b
+      >,
+      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(2) }"
+        >moderate/low (orange)</b
+      >,
+      <b class="highlight" :style="{ backgroundColor: getSocialScoreColor(1) }">not at all (red)</b
+      >.
     </p>
     <div class="mt-4 grid grid-cols-3 w-full gap-2">
       <div class="row-span-2 self-start xl:self-end">
@@ -102,8 +110,12 @@ const props = defineProps({
   studyData: Object
 })
 
-const workingConditionsHighlightQuestion1 = computed(() => props.studyData.socialData[0].groups[1].questions[0])
-const workingConditionsHighlightQuestion2 = computed(() => props.studyData.socialData[0].groups[3].questions[0])
+const workingConditionsHighlightQuestion1 = computed(
+  () => props.studyData.socialData[0].groups[1].questions[0]
+)
+const workingConditionsHighlightQuestion2 = computed(
+  () => props.studyData.socialData[0].groups[3].questions[0]
+)
 
 const questionVGGT = computed(() => props.studyData.socialData[1].groups[0].questions[0])
 const questionParticipation = computed(() => props.studyData.socialData[1].groups[1].questions[2])

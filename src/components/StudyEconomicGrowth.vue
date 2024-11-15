@@ -4,17 +4,18 @@
       <h1>What is the contribution of the value chain to <strong>economic growth</strong>?</h1>
     </SectionTitle>
     <p>
-      The economic analysis aims at measuring and interpreting the <strong>profitability and economic sustainability</strong>
-      of the value chain operations for all the actors directly involved. Its purpose is to inform on the 
-      economic <strong>effects</strong> of the value chain within the national economy in terms of 
-      <strong>growth generation</strong> and <strong>distribution of incomes</strong>. 
-      It also assesses its <strong>viability</strong> within the global economy.  
+      The economic analysis aims at measuring and interpreting the
+      <strong>profitability and economic sustainability</strong> of the value chain operations for
+      all the actors directly involved. Its purpose is to inform on the economic
+      <strong>effects</strong> of the value chain within the national economy in terms of
+      <strong>growth generation</strong> and <strong>distribution of incomes</strong>. It also
+      assesses its <strong>viability</strong> within the global economy.
     </p>
 
     <BenefitCostRatio :studyData="studyData" :currency="currency" />
     <AddedValue :studyData="studyData" :currency="currency" />
     <PublicFinances :studyData="studyData" :currency="currency" />
-      
+
     <BalanceOfTrade :studyData="studyData" :currency="currency" />
 
     <AbroadSelling :studyData="studyData" />

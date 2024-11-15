@@ -5,31 +5,24 @@
 </template>
 
 <script setup>
-import { use } from "echarts/core";
-import { CanvasRenderer } from "echarts/renderers";
-import { BarChart } from "echarts/charts";
+import { use } from 'echarts/core'
+import { CanvasRenderer } from 'echarts/renderers'
+import { BarChart } from 'echarts/charts'
 import {
   TitleComponent,
   TooltipComponent,
   LegendComponent,
   GridComponent
-} from "echarts/components";
-import VChart from "vue-echarts";
+} from 'echarts/components'
+import VChart from 'vue-echarts'
 
 defineProps({
   options: Object
-}); // Question: It looks like if I use use "ref" or "reactive" to declare options, it does not get updated afer data is retrieved from network. Why?
+}) // Question: It looks like if I use use "ref" or "reactive" to declare options, it does not get updated afer data is retrieved from network. Why?
 
-use([
-  CanvasRenderer,
-  BarChart,
-  TitleComponent,
-  TooltipComponent,
-  LegendComponent,
-  GridComponent
-]);
+use([CanvasRenderer, BarChart, TitleComponent, TooltipComponent, LegendComponent, GridComponent])
 
-defineEmits(["chart-series-click"]);
+defineEmits(['chart-series-click'])
 </script>
 
 <style scoped lang="scss">

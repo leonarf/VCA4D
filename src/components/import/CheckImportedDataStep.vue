@@ -6,7 +6,8 @@
       class="text-blue-600"
       href="https://github.com/leonarf/VCA4D/tree/main/data/xls"
       target="_blank"
-    >Here you can find example blank file to help you upload your study</a>
+      >Here you can find example blank file to help you upload your study</a
+    >
 
     <h4>Contents of the file</h4>
     <div v-for="(errors, spreadsheet, index) in errorsBySpreadsheet" :key="index">
@@ -17,11 +18,15 @@
       <div class="mt-4 flex flex-row gap-x-4">
         Check the study appears on the front page, and at the right place
         <RouterLink to="/">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Find your study on the home page</button>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Find your study on the home page
+          </button>
         </RouterLink>
         Check the study's data are well transformed into graphic on dedicated page(s)
         <RouterLink :to="'/study?id=localStorage'">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Browse this study</button>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Browse this study
+          </button>
         </RouterLink>
       </div>
     </div>
@@ -52,7 +57,7 @@
           </div>
           <div v-else class="text-red-600">
             Unknown country: <b>{{ studyData['country'] }}</b>
-            <br>
+            <br />
             Known countries are:
             <b>{{
               knownCountries
@@ -75,7 +80,7 @@
           </div>
           <div v-else class="text-red-600">
             Unknown commodity: <b>{{ slugify(studyData['commodity']) }}</b>
-            <br>
+            <br />
             Known commodities are:
             <b>{{ knownProducts.sort((a, b) => a.localeCompare(b)).join(', ') }}</b>
           </div>
@@ -94,18 +99,19 @@
             <span v-else class="text-red-600">
               <b>{{ HOME_LABELS.LocalCcy }}</b> not found in uploaded file.
             </span>
-            <br>
+            <br />
             Find all valid currencies code by visiting
             <a
               class="font-semibold underline"
               href="https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes"
               target="_blank"
-            >this wiki page.</a>
+              >this wiki page.</a
+            >
           </div>
           <div v-else>
             <div v-if="!isCurrencySupported(studyData.targetCurrency, studyData.year)">
-              Currency <b>{{ studyData.targetCurrency }}</b> is valid but we do not have it's
-              rate change to USD for the year's study ({{ studyData.year }}).
+              Currency <b>{{ studyData.targetCurrency }}</b> is valid but we do not have it's rate
+              change to USD for the year's study ({{ studyData.year }}).
             </div>
             <div v-else>
               This study is in {{ studyData.localCurrency }} and will be converted to
@@ -133,7 +139,7 @@ import { ECO_SHEET_NAMES, HOME_LABELS } from '@utils/import/eco.js'
 
 const props = defineProps({
   studyData: Object,
-  importErrors: Array,
+  importErrors: Array
 })
 
 const TypesOfFile = {
@@ -180,5 +186,4 @@ const errorsBySpreadsheet = computed(() => {
 })
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

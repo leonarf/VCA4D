@@ -1,8 +1,8 @@
-import { computed } from 'vue';
+import { computed } from 'vue'
 import { getCurrencySymbol, getValueInCurrency, USER_LOCALE } from '@utils/currency.js'
 
 export const formatNumber = (value) => {
-  if (typeof value !== "number" || isNaN(value)) {
+  if (typeof value !== 'number' || isNaN(value)) {
     return '-'
   }
   let numberDigits = 0
@@ -38,7 +38,7 @@ export const formatNumber = (value) => {
     divisor = 1
     textUnit = ''
   } else if (absoluteValue < 1) {
-    return `${(value).toLocaleString(USER_LOCALE, { maximumSignificantDigits: 2 })}`
+    return `${value.toLocaleString(USER_LOCALE, { maximumSignificantDigits: 2 })}`
   }
   return `${(value / divisor).toLocaleString(USER_LOCALE, { maximumFractionDigits: numberDigits })} ${textUnit}`
 }
@@ -48,28 +48,29 @@ export const formatPercent = (amount) => {
 }
 
 export function useCurrencyUtils(props) {
-  const prettyAmount = computed(() => (amount) =>
-    `${formatNumber(amount)} ${getCurrencySymbol(props.currency)}`
-  );
+  const prettyAmount = computed(
+    () => (amount) => `${formatNumber(amount)} ${getCurrencySymbol(props.currency)}`
+  )
 
-  const convertAmount = computed(() => (amount) =>
-    getValueInCurrency(
-      amount * props.studyData.currencyRatio,
-      props.studyData.targetCurrency,
-      props.currency,
-      props.studyData.year,
-    )
-  );
+  const convertAmount = computed(
+    () => (amount) =>
+      getValueInCurrency(
+        amount * props.studyData.currencyRatio,
+        props.studyData.targetCurrency,
+        props.currency,
+        props.studyData.year
+      )
+  )
 
   return {
     prettyAmount,
-    convertAmount,
-  };
+    convertAmount
+  }
 }
-export const slugify = (str) => str?.toLowerCase()
-  .trim()
-  .replace(/[^\w|\s-]/g, '')
-  .replace(/[\s_-]+/g, '-')
-  .replace(/^-+|-+$/g, '');
-
-
+export const slugify = (str) =>
+  str
+    ?.toLowerCase()
+    .trim()
+    .replace(/[^\w|\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '')

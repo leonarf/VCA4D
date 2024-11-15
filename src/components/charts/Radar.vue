@@ -5,29 +5,22 @@
 </template>
 
 <script setup>
-import { use } from "echarts/core";
-import { CanvasRenderer } from "echarts/renderers";
-import { RadarChart } from "echarts/charts";
+import { use } from 'echarts/core'
+import { CanvasRenderer } from 'echarts/renderers'
+import { RadarChart } from 'echarts/charts'
 import {
   TitleComponent,
   TooltipComponent,
   LegendComponent,
   GridComponent
-} from "echarts/components";
-import VChart from "vue-echarts";
+} from 'echarts/components'
+import VChart from 'vue-echarts'
 
 defineProps({
   options: Object
-});
+})
 
-use([
-  CanvasRenderer,
-  RadarChart,
-  TitleComponent,
-  TooltipComponent,
-  LegendComponent,
-  GridComponent
-]);
+use([CanvasRenderer, RadarChart, TitleComponent, TooltipComponent, LegendComponent, GridComponent])
 </script>
 
 <style scoped lang="scss">

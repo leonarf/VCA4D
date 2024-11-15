@@ -1,7 +1,10 @@
 <template>
   <div
     class="social-details-group flex flex-row items-center rounded-3xl px-3 py-2 max-w-[650px] my-8 cursor-pointer"
-    :style="{ '--color': getSocialScoreColor(group.averageValue) + '81', '--color-hover': getSocialScoreColor(group.averageValue) }"
+    :style="{
+      '--color': getSocialScoreColor(group.averageValue) + '81',
+      '--color-hover': getSocialScoreColor(group.averageValue)
+    }"
     @click="isOpen = !isOpen"
   >
     <div class="tag-number">
@@ -22,33 +25,32 @@
       <div class="flex-grow">{{ removeNumberFromTitle(question.text) }}</div>
       <Tag :scale="parseFloat(question.scoreValue)" />
     </div>
-  </template> 
+  </template>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 import Tag from './Tag.vue'
 import { getSocialScoreColor } from '@utils/social.js'
 
 defineProps({
-    group: Object
+  group: Object
 })
 
 const isOpen = ref(false)
 
 const getNumberInTitle = (title) => title.split(' ')[0]
 const removeNumberFromTitle = (title) => title.split(' ').slice(1).join(' ')
-
 </script>
 
 <style scoped lang="scss">
 .tag-number {
-    @apply bg-[#8a8a8a] text-white py-0 px-3 mr-3 font-bold rounded-2xl
+  @apply bg-[#8a8a8a] text-white py-0 px-3 mr-3 font-bold rounded-2xl;
 }
-.social-details-group{
-    background-color: var(--color);   
+.social-details-group {
+  background-color: var(--color);
 }
-.social-details-group:hover{
-    background-color: var(--color-hover);   
+.social-details-group:hover {
+  background-color: var(--color-hover);
 }
 </style>

@@ -3,7 +3,7 @@
     <div
       :class="{
         tab_ok: errors.length == 0,
-        tab_in_error: errors.length > 0,
+        tab_in_error: errors.length > 0
       }"
     >
       <h3>Tab: {{ spreadsheetName }}</h3>
@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed } from 'vue'
 
 const props = defineProps({
   errors: Object,
@@ -29,9 +29,9 @@ const props = defineProps({
 const spreadsheetMissing = computed(() => {
   if (props.errors.length == 0) {
     return true
-  }
-  else if (props.errors.length == 1
-    && props.errors[0].message == `Sheet '${props.spreadsheetName}' is missing.`
+  } else if (
+    props.errors.length == 1 &&
+    props.errors[0].message == `Sheet '${props.spreadsheetName}' is missing.`
   ) {
     return true
   }
@@ -40,39 +40,39 @@ const spreadsheetMissing = computed(() => {
 </script>
 
 <style scoped lang="scss">
-.contents-of-the-file{
-    background-color: rgb(236, 236, 236);
-    border-radius: 1rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
+.contents-of-the-file {
+  background-color: rgb(236, 236, 236);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
-.tab_in_error{
-    border-left: 10px solid #FF9280;
-    padding: 1rem;
+.tab_in_error {
+  border-left: 10px solid #ff9280;
+  padding: 1rem;
 }
-.tab_ok{
-    border-left: 10px solid #02AA18;
-    padding: 1rem;
+.tab_ok {
+  border-left: 10px solid #02aa18;
+  padding: 1rem;
 }
-.tab-present{
-    color:#02AA18
+.tab-present {
+  color: #02aa18;
 }
-.property{
-    margin-top: 2rem;
+.property {
+  margin-top: 2rem;
 }
-.checkmark{
-    background-color: #FF9280;
-    border-radius: 100%;
-    color: white;
-    width: 26px;
-    height: 26px;
-    display: inline-block;
-    text-align: center;
-    font-weight: 900;
-    vertical-align: center;
-    margin-right: 5px;
+.checkmark {
+  background-color: #ff9280;
+  border-radius: 100%;
+  color: white;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 900;
+  vertical-align: center;
+  margin-right: 5px;
 }
-.error-title{
-    color: #FF9280;
+.error-title {
+  color: #ff9280;
 }
 </style>

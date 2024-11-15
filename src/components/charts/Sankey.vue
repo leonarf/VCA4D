@@ -4,26 +4,22 @@
     title="Unit selection"
     :options="sankeyGraphPossibleDisplayModesList"
     :selected="sankeyDisplayMode"
-    @update:selected="$event => sankeyDisplayMode = $event"
+    @update:selected="($event) => (sankeyDisplayMode = $event)"
   />
   <div class="legend">
-    <div
-      v-for="(legendItem, index) in legendItems"
-      :key="index"
-      class="legend-item"
-    >
+    <div v-for="(legendItem, index) in legendItems" :key="index" class="legend-item">
       <div class="legend-color" :style="{ 'background-color': legendItem.color }" />
-      {{ legendItem.stages.join(", ") }}
+      {{ legendItem.stages.join(', ') }}
     </div>
   </div>
   <SankeyChart :options="populatedSankeyChartData" />
 </template>
 
 <script setup>
-import _ from "lodash"
+import _ from 'lodash'
 import { computed, ref } from 'vue'
-import RadioInput from '@components/study/RadioInput.vue';
-import { getSankeyData } from '@/charts/sankey.js';
+import RadioInput from '@components/study/RadioInput.vue'
+import { getSankeyData } from '@/charts/sankey.js'
 
 import SankeyChart from '../SankeyChart.vue'
 import { getColor } from '@utils/colors.js'
@@ -34,55 +30,60 @@ const props = defineProps({
 })
 
 const sankeyGraphPossibleDisplayModesList = [
-  { label: "Volumes exchanged", value: "volumeExchanged", subtitle: "From left to right, the flow of goods in the value chain in kilograms" },
-  { label: "Monetary flow", value: "monetaryValue", subtitle: "From right to left, the transfer of value from consumers to producers" },
+  {
+    label: 'Volumes exchanged',
+    value: 'volumeExchanged',
+    subtitle: 'From left to right, the flow of goods in the value chain in kilograms'
+  },
+  {
+    label: 'Monetary flow',
+    value: 'monetaryValue',
+    subtitle: 'From right to left, the transfer of value from consumers to producers'
+  }
 ]
-const sankeyDisplayMode = ref(sankeyGraphPossibleDisplayModesList[0].value);
+const sankeyDisplayMode = ref(sankeyGraphPossibleDisplayModesList[0].value)
 
 const populatedSankeyChartData = computed(() => {
-  return getSankeyData(
-    populatedActors.value,
-    props.studyData.ecoData.flows,
-    {
-      sankeyDisplayMode: sankeyDisplayMode.value,
-      monetaryCurrency: props.studyData.targetCurrency,
+  return getSankeyData(populatedActors.value, props.studyData.ecoData.flows, {
+    sankeyDisplayMode: sankeyDisplayMode.value,
+    monetaryCurrency: props.studyData.targetCurrency
   })
 })
 
 const populatedActors = computed(() => {
-  return props.studyData.ecoData.actors.map(actor => ({
+  return props.studyData.ecoData.actors.map((actor) => ({
     ...actor,
     color: getColor(actor.stage)
-  }));
-});
+  }))
+})
 
 const legendItems = computed(() => {
-  const stages = _.uniq(populatedActors.value.map(actor => actor.stage))
-    .sort(sortOnEarlierStage)
-  
-  const stagesByColor = {};
-  stages.forEach(stage => {
-    const color = getColor(stage);
-    if (! stagesByColor[color]) {
-      stagesByColor[color] = [];
+  const stages = _.uniq(populatedActors.value.map((actor) => actor.stage)).sort(sortOnEarlierStage)
+
+  const stagesByColor = {}
+  stages.forEach((stage) => {
+    const color = getColor(stage)
+    if (!stagesByColor[color]) {
+      stagesByColor[color] = []
     }
 
-    stagesByColor[color].push(stage);
+    stagesByColor[color].push(stage)
   })
-  return Object.entries(stagesByColor).map(([color, stages]) => ({ color, stages }));
-});
+  return Object.entries(stagesByColor).map(([color, stages]) => ({ color, stages }))
+})
 
 function sortOnEarlierStage(stage1, stage2) {
-  return getStageOrder(stage1) - getStageOrder(stage2);
+  return getStageOrder(stage1) - getStageOrder(stage2)
 
   function getStageOrder(stage) {
-    const index = STAGES.indexOf(stage);
-    if (index === -1) { return STAGES.length; }
+    const index = STAGES.indexOf(stage)
+    if (index === -1) {
+      return STAGES.length
+    }
 
-    return index;
+    return index
   }
 }
-
 </script>
 
 <style scoped lang="scss">

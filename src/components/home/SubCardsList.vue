@@ -6,23 +6,23 @@
     <div v-if="link" class="text-center w-full">
       <RouterLink :to="link" class="text-[#2E6BAD] underline">
         {{ linkTitle }}
-      </RouterLink>   
+      </RouterLink>
     </div>
   </div>
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router';
+import { RouterLink } from 'vue-router'
 
 defineProps({
-    link: {
-        type: Object,
-        required: false
-    },
-    linkTitle: {
-        type: String,
-        required: false
-    }
+  link: {
+    type: Object,
+    required: false
+  },
+  linkTitle: {
+    type: String,
+    required: false
+  }
 })
 </script>
 

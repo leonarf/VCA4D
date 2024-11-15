@@ -42,9 +42,8 @@
       >
         <h3>Social sustainability</h3>
         <p>
-          Learn more about Working conditions, Land and water rights,
-          Gender equality, Food & nutrition security, Social capital and
-          Living conditions
+          Learn more about Working conditions, Land and water rights, Gender equality, Food &
+          nutrition security, Social capital and Living conditions
         </p>
       </div>
       <div
@@ -54,7 +53,8 @@
       >
         <h3>Environmental sustainability</h3>
         <p>
-          Learn more about the value chain’s damages to Human Health, Ecosystem Quality, Natural Resources and Climate Change
+          Learn more about the value chain’s damages to Human Health, Ecosystem Quality, Natural
+          Resources and Climate Change
         </p>
       </div>
     </section>

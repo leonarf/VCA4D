@@ -1,14 +1,12 @@
 import * as XLSX from 'xlsx'
-import _ from "lodash";
-import { HOME_LABELS, ECO_SHEET_NAMES, getValueChainProperty, parseEconomicsJson } from "./eco.js"
+import _ from 'lodash'
+import { HOME_LABELS, ECO_SHEET_NAMES, getValueChainProperty, parseEconomicsJson } from './eco.js'
 import { parseEnvironmentJson } from './environment.js'
 
-import { processSocialExcelFile } from "./social.js"
+import { processSocialExcelFile } from './social.js'
 import { isValidCurrency, isCurrencySupported } from '@utils/currency.js'
-import { getAllKnownProducts } from '@utils/data';
+import { getAllKnownProducts } from '@utils/data'
 import { slugify } from '@utils/format.js'
-
-
 
 let ImportErrors = []
 
@@ -38,11 +36,7 @@ export const getImportErrors = () => {
 
 export const getSheetNameContent = (json, sheetname) => {
   if (!Object.keys(json).includes(sheetname)) {
-    setImportErrors(
-      sheetname,
-      ErrorLevels.BreaksALot,
-      `Sheet '${sheetname}' is missing.`
-    )
+    setImportErrors(sheetname, ErrorLevels.BreaksALot, `Sheet '${sheetname}' is missing.`)
     return null
   }
   return json[sheetname]
@@ -57,25 +51,33 @@ export const parseActorTypes = (json) => {
   var sheetAsJson = json[ECO_SHEET_NAMES.ActorTypes]
   checkColumnsExistence(sheetAsJson, ACTORS_SHEET_COLUMNS, sheetname, ErrorLevels.BreaksALot)
 
-  return sheetAsJson.filter(row => row['Actor type name'] != undefined).map(actor => ({
-    name: actor['Actor type name'],
-    stage: actor['Stage'] || '',
-    id: actor['Actor type code']
-  }))
+  return sheetAsJson
+    .filter((row) => row['Actor type name'] != undefined)
+    .map((actor) => ({
+      name: actor['Actor type name'],
+      stage: actor['Stage'] || '',
+      id: actor['Actor type code']
+    }))
 }
 
 export const doColumnExist = (excelDataAsJson, columnName) => {
-  var filteredItems = excelDataAsJson.find(row => row[columnName] != undefined)
+  var filteredItems = excelDataAsJson.find((row) => row[columnName] != undefined)
   return !!filteredItems
 }
 
-export const checkColumnsExistence = (excelSheetAsJson, columnsDescription, sheetname, errorLevel) => {
+export const checkColumnsExistence = (
+  excelSheetAsJson,
+  columnsDescription,
+  sheetname,
+  errorLevel
+) => {
   for (var column in columnsDescription) {
     if (!doColumnExist(excelSheetAsJson, columnsDescription[column])) {
       setImportErrors(
         sheetname,
         errorLevel,
-        `In spreadsheet '${sheetname}', column '${columnsDescription[column]}' is missing or empty`)
+        `In spreadsheet '${sheetname}', column '${columnsDescription[column]}' is missing or empty`
+      )
     }
   }
 }
@@ -83,13 +85,13 @@ export const checkColumnsExistence = (excelSheetAsJson, columnsDescription, shee
 const TypesOfFile = {
   Sustainability: 'Sustainability',
   Environment: 'Environment',
-  Economics: 'Economics',
-};
+  Economics: 'Economics'
+}
 
 export const getTypeOfExcelFile = (workbook) => {
-  const sheetNameForSustainabilityData = "Questionnaire"
-  const sheetsNameForEnvironmentalData = ["Value chains description"]
-  const sheetsNameForEconomicData = ["Stages description"]
+  const sheetNameForSustainabilityData = 'Questionnaire'
+  const sheetsNameForEnvironmentalData = ['Value chains description']
+  const sheetsNameForEconomicData = ['Stages description']
 
   if (workbook.Sheets[sheetNameForSustainabilityData]) {
     return TypesOfFile.Sustainability
@@ -103,7 +105,8 @@ export const getTypeOfExcelFile = (workbook) => {
   setImportErrors(
     sheetNameForSustainabilityData,
     ErrorLevels.BreaksALot,
-    `Missing sheet. At least one of the following should be in the file: '${sheetNameForSustainabilityData}', '${sheetsNameForEnvironmentalData[0]}' or '${sheetsNameForEconomicData[0]}' depending of the excel type, ${Object.keys(TypesOfFile)}`)
+    `Missing sheet. At least one of the following should be in the file: '${sheetNameForSustainabilityData}', '${sheetsNameForEnvironmentalData[0]}' or '${sheetsNameForEconomicData[0]}' depending of the excel type, ${Object.keys(TypesOfFile)}`
+  )
   return null
 }
 
@@ -121,15 +124,16 @@ const readingOfCurrencies = (excelData) => {
     currencyRatio = getValueChainProperty(excelData, HOME_LABELS.RatioCcy)
   }
   // Aucune n'est valide, on met un message d'erreur
-  else if (!isValidCurrency(localCurrency)){
+  else if (!isValidCurrency(localCurrency)) {
     setImportErrors(
       ECO_SHEET_NAMES.Home,
       ErrorLevels.BreaksFunctionalities,
-      `Either currencies defined by '${HOME_LABELS.LocalCcy}' or '${HOME_LABELS.TargetCcy}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`)
+      `Either currencies defined by '${HOME_LABELS.LocalCcy}' or '${HOME_LABELS.TargetCcy}' should be an ISO currency code. Find all valid currency code by visiting https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes`
+    )
     return {
       localCurrency: null,
       targetCurrency: null,
-      currencyRatio: null,
+      currencyRatio: null
     }
   }
   // vérification qu'on a le taux de change vers USD
@@ -137,7 +141,8 @@ const readingOfCurrencies = (excelData) => {
     setImportErrors(
       ECO_SHEET_NAMES.Home,
       ErrorLevels.BreaksFunctionalities,
-      `We don't have the rate change to USD for currency '${targetCurrency}'. Please send an e-mail with it to the administrator`)
+      `We don't have the rate change to USD for currency '${targetCurrency}'. Please send an e-mail with it to the administrator`
+    )
   }
   return {
     localCurrency,
@@ -147,24 +152,22 @@ const readingOfCurrencies = (excelData) => {
 }
 
 export const processUploadedExcelFile = (workbook) => {
-  clearImportErrors();
+  clearImportErrors()
   let typeOfFile = getTypeOfExcelFile(workbook)
 
-  let result = {};
+  let result = {}
   if (typeOfFile === TypesOfFile.Sustainability) {
     result = processSocialExcelFile(workbook)
   }
 
   let excelData = {}
   workbook.SheetNames.forEach((workSheet) => {
-    const rowObject = XLSX.utils.sheet_to_json(
-      workbook.Sheets[workSheet]
-    )
+    const rowObject = XLSX.utils.sheet_to_json(workbook.Sheets[workSheet])
     excelData[workSheet] = rowObject
   })
 
   if (typeOfFile === TypesOfFile.Economics) {
-    const year = getValueChainProperty(excelData, "Reference Year");
+    const year = getValueChainProperty(excelData, 'Reference Year')
     const currencies = readingOfCurrencies(excelData)
     result = {
       ...buildIdentifiers(
@@ -176,15 +179,14 @@ export const processUploadedExcelFile = (workbook) => {
       type: 'eco',
       ecoData: parseEconomicsJson(excelData, currencies.currencyRatio)
     }
-  }
-  else if (typeOfFile === TypesOfFile.Environment) {
+  } else if (typeOfFile === TypesOfFile.Environment) {
     result = {
       ...buildIdentifiers(
         getValueChainProperty(excelData, HOME_LABELS.Commodity),
         slugify(getValueChainProperty(excelData, HOME_LABELS.Country))
       ),
-      type: "ACV",
-      acvData: parseEnvironmentJson(excelData),
+      type: 'ACV',
+      acvData: parseEnvironmentJson(excelData)
     }
   }
 
@@ -193,7 +195,8 @@ export const processUploadedExcelFile = (workbook) => {
     setImportErrors(
       ECO_SHEET_NAMES.Home,
       ErrorLevels.BreaksALot,
-      `Commodity <b>${slugify(result.commodity)}</b> is not recognized.`)
+      `Commodity <b>${slugify(result.commodity)}</b> is not recognized.`
+    )
   }
 
   return {
@@ -204,71 +207,73 @@ export const processUploadedExcelFile = (workbook) => {
 
 function buildIdentifiers(commodity, country) {
   return {
-    id: slugify(commodity + "-" + country),
+    id: slugify(commodity + '-' + country),
     country,
     commodity
-  };
+  }
 }
 
 export function amendDataFile(jsonData, studyData) {
-  if (!jsonData.studies.find(study => study.id === studyData.id)) {
-        jsonData.studies.push({
-            id: `${studyData.id}`,
-            title: `${studyData.country} ${studyData.commodity}`,
-            year: studyData.year,
-            country: studyData.country.toLowerCase(),
-            product: studyData.commodity.toLowerCase()
-        })
-    }
-    jsonData.studies.sort(sortFunctionByProperties(["country", "product"]));
-  
-    const slugifiedCountry = slugify(studyData.country)
-    if (!jsonData.countries.find(country => country.id === slugifiedCountry)) {
-        jsonData.countries.push({
-            id: slugifiedCountry,
-            prettyName: studyData.country
-        })
-    }
-    jsonData.countries.sort(sortFunctionByProperties(["id"]));
+  if (!jsonData.studies.find((study) => study.id === studyData.id)) {
+    jsonData.studies.push({
+      id: `${studyData.id}`,
+      title: `${studyData.country} ${studyData.commodity}`,
+      year: studyData.year,
+      country: studyData.country.toLowerCase(),
+      product: studyData.commodity.toLowerCase()
+    })
+  }
+  jsonData.studies.sort(sortFunctionByProperties(['country', 'product']))
 
-    const existingCommoditiesInCategories = jsonData.categories.reduce((arr, current) => arr.concat(current.commodities), [])
-    const lowercaseCommodity = studyData.commodity.toLowerCase();
-    if (!existingCommoditiesInCategories.includes(lowercaseCommodity)) {
-        jsonData.categories.find(category => category.id === 'unknown').commodities.push(lowercaseCommodity)
-    }
+  const slugifiedCountry = slugify(studyData.country)
+  if (!jsonData.countries.find((country) => country.id === slugifiedCountry)) {
+    jsonData.countries.push({
+      id: slugifiedCountry,
+      prettyName: studyData.country
+    })
+  }
+  jsonData.countries.sort(sortFunctionByProperties(['id']))
 
-    const existingCommodities = _.uniq(jsonData.studies.map(study => study.product));
-    jsonData.products = updateProductList(jsonData.products, existingCommodities);
+  const existingCommoditiesInCategories = jsonData.categories.reduce(
+    (arr, current) => arr.concat(current.commodities),
+    []
+  )
+  const lowercaseCommodity = studyData.commodity.toLowerCase()
+  if (!existingCommoditiesInCategories.includes(lowercaseCommodity)) {
+    jsonData.categories
+      .find((category) => category.id === 'unknown')
+      .commodities.push(lowercaseCommodity)
+  }
 
-    return JSON.stringify(
-        jsonData
-        , null, 2)
+  const existingCommodities = _.uniq(jsonData.studies.map((study) => study.product))
+  jsonData.products = updateProductList(jsonData.products, existingCommodities)
+
+  return JSON.stringify(jsonData, null, 2)
 }
 
 function updateProductList(products = [], existingProductKeys) {
-  const newProducts = [...products];
-  existingProductKeys.forEach(productKey => {
-    if (!products.find(product => product.id === productKey)) {
+  const newProducts = [...products]
+  existingProductKeys.forEach((productKey) => {
+    if (!products.find((product) => product.id === productKey)) {
       newProducts.push({
         id: productKey,
-        prettyName: _.capitalize(productKey) 
-      });
+        prettyName: _.capitalize(productKey)
+      })
     }
-  });
-  newProducts.sort(sortFunctionByProperties("id"));
-  return newProducts;
+  })
+  newProducts.sort(sortFunctionByProperties('id'))
+  return newProducts
 }
 
 function sortFunctionByProperties(propertyKeys) {
-  return function(itemA, itemB) {
+  return function (itemA, itemB) {
     for (var key of propertyKeys) {
       if (itemA[key] < itemB[key]) {
-          return -1
-      }
-      else if (itemA[key] > itemB[key]) {
-          return 1
+        return -1
+      } else if (itemA[key] > itemB[key]) {
+        return 1
       }
     }
-    return 0;
+    return 0
   }
 }

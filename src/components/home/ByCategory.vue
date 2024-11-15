@@ -1,6 +1,10 @@
 <template>
   <template v-if="studies.length > 0">
-    <Section :title="category.prettyName" :textColor="category.textColor" :borderColor="category.color">
+    <Section
+      :title="category.prettyName"
+      :textColor="category.textColor"
+      :borderColor="category.color"
+    >
       <CardList>
         <li v-for="item in getStudiesByProduct()" :key="item.product">
           <template v-if="item.studies.length === 1">
@@ -32,7 +36,11 @@
                 :isLocal="false"
                 :isOpen="openedProduct === item.product"
                 :title="getProduct(item.product).prettyName"
-                @click.stop="openedProduct === item.product ? openedProduct = null : openedProduct = item.product"
+                @click.stop="
+                  openedProduct === item.product
+                    ? (openedProduct = null)
+                    : (openedProduct = item.product)
+                "
               >
                 <template #logo>
                   <LogoProductLarge :productName="item.product" />
@@ -47,8 +55,13 @@
               </Card>
               <template #popper>
                 <SubCardsList
-                  v-if="openedProduct === item.product" 
-                  :link="{ name: 'comparison', query: { studies: getStudyListQueryString(item.studies.map(study => study.id)) } }"
+                  v-if="openedProduct === item.product"
+                  :link="{
+                    name: 'comparison',
+                    query: {
+                      studies: getStudyListQueryString(item.studies.map((study) => study.id))
+                    }
+                  }"
                   :linkTitle="`Compare all ${getProduct(item.product).prettyName.toLowerCase()} studies`"
                 >
                   <Card
@@ -77,46 +90,43 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { getLink } from '@utils/router'
 import { getCountry, getProduct } from '@utils/data'
 import { getStudyListQueryString } from '@utils/router.js'
-import LogoCountrySmall from './LogoCountrySmall.vue';
-import LogoCountryLarge from './LogoCountryLarge.vue';
-import LogoProductLarge from './LogoProductLarge.vue';
+import LogoCountrySmall from './LogoCountrySmall.vue'
+import LogoCountryLarge from './LogoCountryLarge.vue'
+import LogoProductLarge from './LogoProductLarge.vue'
 import CardList from './CardList.vue'
-import Section from './Section.vue';
-import CardFooter from './CardFooter.vue';
-import NumberBadge from './NumberBadge.vue';
-import Card from './Card.vue';
+import Section from './Section.vue'
+import CardFooter from './CardFooter.vue'
+import NumberBadge from './NumberBadge.vue'
+import Card from './Card.vue'
 import SubCardsList from './SubCardsList.vue'
-import { Dropdown } from 'floating-vue';
+import { Dropdown } from 'floating-vue'
 
 const props = defineProps({
-    studies: Array,
-    countries: Array,
-    category: Object
+  studies: Array,
+  countries: Array,
+  category: Object
 })
 
 const openedProduct = ref(null)
 
 const closeProduct = () => {
-    openedProduct.value = null
+  openedProduct.value = null
 }
 onMounted(() => {
-    document.addEventListener('click', closeProduct);
-});
+  document.addEventListener('click', closeProduct)
+})
 
 onBeforeUnmount(() => {
-    document.removeEventListener('click', closeProduct);
+  document.removeEventListener('click', closeProduct)
 })
 
 const getStudiesByProduct = () => {
-    const products = [... new Set(props.studies.map(study => study.product))]
-    return products.map(product => ({
-        product,
-        studies: props.studies.filter(study => study.product === product)
-    }))
+  const products = [...new Set(props.studies.map((study) => study.product))]
+  return products.map((product) => ({
+    product,
+    studies: props.studies.filter((study) => study.product === product)
+  }))
 }
-
-
-
 </script>
 
 <style scoped lang="scss"></style>

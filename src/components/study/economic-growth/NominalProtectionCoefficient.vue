@@ -1,8 +1,8 @@
 <template>
-  <Gauge 
-    :value="value" 
-    :minValue="0" 
-    :maxValue="2" 
+  <Gauge
+    :value="value"
+    :minValue="0"
+    :maxValue="2"
     :ticks="[0, 1, 2]"
     :hasBackground="false"
     :texts="[
@@ -14,13 +14,10 @@
 </template>
 
 <script setup>
-import Gauge from '@charts/Gauge.vue';
+import Gauge from '@charts/Gauge.vue'
 defineProps({
-  value: Number,
+  value: Number
 })
-
 </script>
 
-<style>
-    
-</style>
+<style></style>

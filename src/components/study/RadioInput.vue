@@ -8,7 +8,7 @@
         :value="option.value"
         :checked="selected === option.value"
         @input="emits('update:selected', option.value)"
-      >
+      />
       <span class="label">
         <span>{{ option.label }}</span>
         <span class="subtitle">{{ option.subtitle }}</span>
@@ -18,22 +18,22 @@
 </template>
 
 <script setup lang="ts">
-  import { computed, getCurrentInstance } from 'vue';
+import { computed, getCurrentInstance } from 'vue'
 
-  type Option = { label: string; value: string, subtitle: string };
-  defineProps<{
-      options: Option[],
-      selected: string,
-      title: string
-  }>();
+type Option = { label: string; value: string; subtitle: string }
+defineProps<{
+  options: Option[]
+  selected: string
+  title: string
+}>()
 
-  const emits = defineEmits<{
-    "update:selected": [value: string]
-  }>()
+const emits = defineEmits<{
+  'update:selected': [value: string]
+}>()
 
-  const uniqueId = computed(() => {
-    return getCurrentInstance()?.uid; // This is a unique component instance id
-  });
+const uniqueId = computed(() => {
+  return getCurrentInstance()?.uid // This is a unique component instance id
+})
 </script>
 
 <style scoped lang="scss">
@@ -52,7 +52,7 @@
     cursor: pointer;
 
     input {
-      margin-top: 6px
+      margin-top: 6px;
     }
 
     .label {

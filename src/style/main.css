@@ -6,133 +6,144 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-
 /* https://fonts.cdnfonts.com/css/source-sans-pro */
 /* Updated without the local reference, see https://github.com/leonarf/VCA4D/pull/108 */
-@font-face{
-  font-family:source sans pro;
-  font-style:normal;
-  font-weight:400;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-Regular.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-Regular.woff) format('woff');
 }
-@font-face{
-  font-family:source sans pro;
-  font-style:italic;
-  font-weight:400;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-It.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-It.woff) format('woff');
 }
-@font-face{
-  font-family:source sans pro;
-  font-style:normal;
-  font-weight:200;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-ExtraLight.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-ExtraLight.woff) format('woff');
 }
-@font-face{
-  font-family:source sans pro;
-  font-style:italic;
-  font-weight:200;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-ExtraLightIt.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: italic;
+  font-weight: 200;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-ExtraLightIt.woff) format('woff');
 }
-@font-face{
-  font-family:source sans pro;
-  font-style:normal;
-  font-weight:300;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-Light.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-Light.woff) format('woff');
 }
-@font-face{
-  font-family:source sans pro;
-  font-style:italic;
-  font-weight:300;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-LightIt.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-LightIt.woff) format('woff');
 }
-@font-face{
-  font-family:source sans pro;
-  font-style:normal;
-  font-weight:600;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-Semibold.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-Semibold.woff) format('woff');
 }
-@font-face{
-  font-family:source sans pro;
-  font-style:italic;
-  font-weight:600;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-SemiboldIt.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: italic;
+  font-weight: 600;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-SemiboldIt.woff) format('woff');
 }
-@font-face{
-  font-family:source sans pro;
-  font-style:normal;
-  font-weight:700;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-Bold.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-Bold.woff) format('woff');
 }
-@font-face{
-  font-family:source sans pro;
-  font-style:italic;
-  font-weight:700;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-BoldIt.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-BoldIt.woff) format('woff');
 }
-@font-face{font-family:source sans pro;
-  font-style:normal;
-  font-weight:900;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-Black.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: normal;
+  font-weight: 900;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-Black.woff) format('woff');
 }
-@font-face{
-  font-family:source sans pro;
-  font-style:italic;font-weight:900;
-  src:url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-BlackIt.woff) format('woff')
+@font-face {
+  font-family: source sans pro;
+  font-style: italic;
+  font-weight: 900;
+  src: url(https://fonts.cdnfonts.com/s/12183/SourceSansPro-BlackIt.woff) format('woff');
 }
-
 
 body {
-    min-height: 100vh;
-    /* transition: color 0.5s, background-color 0.5s; */
-    /* line-height: 1.6; */
-    font-family: 'Source Sans Pro',-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
-    color: black;
-    accent-color: #3F83F8;
-    /* text-rendering: optimizeLegibility; */
-    /* -webkit-font-smoothing: antialiased; */
-    /* -moz-osx-font-smoothing: grayscale; */
+  min-height: 100vh;
+  /* transition: color 0.5s, background-color 0.5s; */
+  /* line-height: 1.6; */
+  font-family:
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  font-size: 16px;
+  color: black;
+  accent-color: #3f83f8;
+  /* text-rendering: optimizeLegibility; */
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
 }
 
-
-h1{
-    font-size: 56px;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    line-height: 120%;
+h1 {
+  font-size: 56px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  line-height: 120%;
 }
 
-h2, .titre-moyen{
-    font-size: 36px;
-    line-height: 120%;
-    font-weight: 600;
-    margin-top: 1em;
-    margin-bottom: 1rem;
+h2,
+.titre-moyen {
+  font-size: 36px;
+  line-height: 120%;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 1rem;
 }
 
 h3 {
-    font-size: 20px;
-    font-weight: 600;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 h4 {
-    @apply font-semibold
+  @apply font-semibold;
 }
 p {
-    /* @apply text-black text-justify mb-2 */
+  /* @apply text-black text-justify mb-2 */
 }
 #app {
-    width: 100%;
-    min-height: 100vh;
+  width: 100%;
+  min-height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #app > * {
-    width: 100%;
-    padding: 1.5rem 6rem;
+  width: 100%;
+  padding: 1.5rem 6rem;
 }
 
 main {
@@ -140,6 +151,6 @@ main {
 }
 
 select {
-    -webkit-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }

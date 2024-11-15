@@ -32,7 +32,6 @@
  * @property {PerStepImpact} `Water-consumption-human-health`
  */
 
-
 /**
  * @typedef {Object} EnvironmentImpacts
  * @property {EnvironmentImpactsMidPoints} `mid-points`

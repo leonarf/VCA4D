@@ -9,26 +9,26 @@
 
 <script setup>
 defineProps({
-    text: String
+  text: String
 })
 </script>
 
 <style scoped lang="scss">
 .card-footer {
+  display: flex;
+  gap: 5px;
+
+  justify-content: left;
+  align-items: flex-start;
+
+  .logo {
+    flex-shrink: 0;
     display: flex;
-    gap: 5px;
+    align-items: center;
+  }
 
-    justify-content: left;
-    align-items: flex-start;
-
-    .logo {
-        flex-shrink: 0;
-        display: flex;
-        align-items: center;
-    }
-
-    .text {
-        margin-top: 2px;
-    }
+  .text {
+    margin-top: 2px;
+  }
 }
 </style>

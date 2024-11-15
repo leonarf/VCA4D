@@ -12,16 +12,14 @@
 </template>
 
 <script setup>
-import Svg from "@components/Svg.vue";
-import Cross from "../images/icons/cross.svg";
+import Svg from '@components/Svg.vue'
+import Cross from '../images/icons/cross.svg'
 defineProps({
   opened: Boolean
-});
+})
 
-const emits = defineEmits(["close"]);
-
+const emits = defineEmits(['close'])
 </script>
-
 
 <style scoped lang="scss">
 .modal-overlay {
@@ -52,7 +50,7 @@ const emits = defineEmits(["close"]);
       right: 20px;
       height: 20px;
       width: 20px;
-      color: #6B6B6B;
+      color: #6b6b6b;
 
       &:hover {
         color: #404040;

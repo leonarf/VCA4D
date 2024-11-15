@@ -4,16 +4,15 @@
 
 <script setup>
 defineProps({
-    isoCode: String,
+  isoCode: String
 })
-
 </script>
 
 <style scoped lang="scss">
-.logo-country-small{
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-    position: relative;
+.logo-country-small {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  position: relative;
 }
 </style>

@@ -4,11 +4,10 @@
   </h2>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped lang="scss">
-  h2 {
-    font-size: 28px;
-  }
+h2 {
+  font-size: 28px;
+}
 </style>

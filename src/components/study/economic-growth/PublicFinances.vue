@@ -50,7 +50,6 @@ import MiniChartContainer from '@charts/MiniChartContainer.vue'
 import QuestionTitle from '@components/study/QuestionTitle.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 
-
 const props = defineProps({
   studyData: Object,
   currency: String
@@ -94,5 +93,4 @@ const currentStagePublicFinancesData = computed(() => {
 })
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

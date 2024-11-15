@@ -4,11 +4,8 @@
 
 <script setup>
 defineProps({
-    isoCode: String,
+  isoCode: String
 })
-
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

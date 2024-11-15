@@ -3,14 +3,14 @@
   <Skeleton>
     <div class="mx-4 sm:mx-8 md:mx-12 lg:mx-40 xl:mx-48 max-w-[90%]">
       <header>
-        <div v-if="! isDataLoaded && !error" class="loading">Loading...</div>
+        <div v-if="!isDataLoaded && !error" class="loading">Loading...</div>
 
         <div v-if="error" class="error">{{ error }}</div>
 
         <div v-if="isDataLoaded">
           <StudyHeader
             :studyData="studyData"
-            :localCurrency="studyData.targetCurrency" 
+            :localCurrency="studyData.targetCurrency"
             :currency="$route.query.currency || 'LOCAL'"
             :studyUrls="studyUrls"
             @update:currency="updateCurrency"
@@ -18,7 +18,7 @@
         </div>
       </header>
       <div class="w-full text-left my-16">
-        <StudyMenu 
+        <StudyMenu
           v-if="isDataLoaded"
           :views="views"
           :selectedViewKey="view"
@@ -56,7 +56,7 @@ import { isCurrencySupported } from '@utils/currency.js'
 import LocalStudyBanner from '@components/study/LocalStudyBanner.vue'
 import { clearLocalStorage } from '@utils/misc'
 
-const route = useRoute();
+const route = useRoute()
 const router = useRouter()
 
 const studyData = ref(null)
@@ -64,31 +64,35 @@ const studyUrls = ref({})
 const error = ref(undefined)
 
 function updateCurrency(newCurrency) {
-    localStorage.setItem('currency', newCurrency);
-    router.replace({ query: {
+  localStorage.setItem('currency', newCurrency)
+  router.replace({
+    query: {
       ...route.query,
       currency: newCurrency
-    } })
+    }
+  })
 }
 
 const currencySymbol = computed(() => {
   if (route.query.currency) {
-   return route.query.currency === 'LOCAL' ? studyData.value.targetCurrency : route.query.currency
+    return route.query.currency === 'LOCAL' ? studyData.value.targetCurrency : route.query.currency
   }
   return studyData.value.targetCurrency
-});
+})
 
 const views = computed(() => {
-  if (!studyData.value) { return []; }
-  
-  const hasEco = !!studyData.value.ecoData;
-  const hasSocial = !!studyData.value.socialData;
-  const hasACV = !!studyData.value.acvData;
+  if (!studyData.value) {
+    return []
+  }
+
+  const hasEco = !!studyData.value.ecoData
+  const hasSocial = !!studyData.value.socialData
+  const hasACV = !!studyData.value.acvData
   return [
     {
-      key: "overview",
+      key: 'overview',
       label: 'Functional Analysis',
-      accessible: [hasEco, hasSocial, hasACV].filter(hasStudyPart => hasStudyPart).length >= 2,
+      accessible: [hasEco, hasSocial, hasACV].filter((hasStudyPart) => hasStudyPart).length >= 2,
       component: StudyOverview
     },
     {
@@ -116,56 +120,57 @@ const views = computed(() => {
       component: StudyEnvironment
     }
   ]
-});
+})
 
 const view = computed(() => {
-  return route.query.view || findFirstAvailableView();
+  return route.query.view || findFirstAvailableView()
 
   function findFirstAvailableView() {
-    const accessibleViews = views.value.filter(view => view.accessible);
-    return accessibleViews[0].key;
+    const accessibleViews = views.value.filter((view) => view.accessible)
+    return accessibleViews[0].key
   }
 })
 
 const viewComponent = computed(() => {
-  const viewConfig = views.value.find(viewConfig => viewConfig.key === view.value);
-  return viewConfig?.component || null;
-});
+  const viewConfig = views.value.find((viewConfig) => viewConfig.key === view.value)
+  return viewConfig?.component || null
+})
 
 function selectView(viewKey) {
-  router.push({ query: {
-    ...route.query,
-    view: viewKey
-  } });
+  router.push({
+    query: {
+      ...route.query,
+      view: viewKey
+    }
+  })
 }
 
 onMounted(async () => {
   try {
-    studyData.value = await getStudyData(route.query.id);
-    setupCurrency();
-    studyUrls.value = await getStudyUploadUrls(route.query.id);
-  } catch(err) {
-    error.value = err;
+    studyData.value = await getStudyData(route.query.id)
+    setupCurrency()
+    studyUrls.value = await getStudyUploadUrls(route.query.id)
+  } catch (err) {
+    error.value = err
   }
 })
 
 function setupCurrency() {
-  if (studyData.value && ! isCurrencySupported(studyData.value.targetCurrency)) {
-    updateCurrency("LOCAL");
+  if (studyData.value && !isCurrencySupported(studyData.value.targetCurrency)) {
+    updateCurrency('LOCAL')
   } else if (!route.query.currency) {
-    updateCurrency(localStorage.getItem('currency') || "LOCAL");
+    updateCurrency(localStorage.getItem('currency') || 'LOCAL')
   }
 }
 
 const isDataLoaded = computed(() => {
-  return !! studyData.value && !! studyUrls.value;
-});
+  return !!studyData.value && !!studyUrls.value
+})
 
 function removeLocalStudy() {
-  clearLocalStorage();
-  router.replace({ name: "home" });
+  clearLocalStorage()
+  router.replace({ name: 'home' })
 }
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

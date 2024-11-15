@@ -57,7 +57,8 @@ const populatedBarChartData = computed(() => {
   const items = props.studyData.metrics.eco.benefitCostRatio.stages
     .filter((stage) => stage.netOperatingProfits !== 0)
     .map((stage) => {
-      tooltip[stage.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(stage.netOperatingProfits))}<br>
+      tooltip[stage.name] =
+        `Net operating profit = ${prettyAmount.value(convertAmount.value(stage.netOperatingProfits))}<br>
           Total costs = ${prettyAmount.value(convertAmount.value(stage.totalCosts))}<br>
           Benefit/Cost Ratio = ${formatPercent(stage.benefitCostRatio)}`
       return {
@@ -80,11 +81,14 @@ const populatedBarChartData = computed(() => {
 })
 
 const currentStageBenefitCostRatioData = computed(() => {
-  const currentStage = props.studyData.metrics.eco.benefitCostRatio.stages.find(stage => stage.name === selectedStage.value);
-  const currentStageActors = currentStage.actors;
+  const currentStage = props.studyData.metrics.eco.benefitCostRatio.stages.find(
+    (stage) => stage.name === selectedStage.value
+  )
+  const currentStageActors = currentStage.actors
   const tooltip = {}
   const items = currentStageActors.map((actor) => {
-    tooltip[actor.name] = `Net operating profit = ${prettyAmount.value(convertAmount.value(actor.netOperatingProfits))}<br>
+    tooltip[actor.name] =
+      `Net operating profit = ${prettyAmount.value(convertAmount.value(actor.netOperatingProfits))}<br>
           Total costs = ${prettyAmount.value(convertAmount.value(actor.totalCosts))}<br>
           Benefit/Cost Ratio = ${formatPercent(actor.benefitCostRatio)}`
     return {
@@ -96,5 +100,4 @@ const currentStageBenefitCostRatioData = computed(() => {
 })
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

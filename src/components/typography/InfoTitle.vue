@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     v-tooltip.right="{
       content: sanitize(information),
       html: true,
@@ -16,20 +16,20 @@
 
 <script setup>
 import { vTooltip } from 'floating-vue'
-import sanitize from "sanitize-html";
+import sanitize from 'sanitize-html'
 import QuestionMark from '../../images/icons/info-question.svg'
-import Svg from '@components/Svg.vue';
+import Svg from '@components/Svg.vue'
 
 defineProps({
-    title: String,
-    information: String
-});
+  title: String,
+  information: String
+})
 </script>
 
 <style scoped lang="scss">
-    .svg {
-        height: 27px;
-        width: 27px;
-        color: #979797;
-    }
+.svg {
+  height: 27px;
+  width: 27px;
+  color: #979797;
+}
 </style>

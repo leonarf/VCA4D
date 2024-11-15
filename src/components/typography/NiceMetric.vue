@@ -7,17 +7,14 @@
       <div class="label">
         {{ label }}
       </div>
-      <InfoTooltip
-        v-if="description"
-        :text="description"
-      />
+      <InfoTooltip v-if="description" :text="description" />
     </div>
   </div>
 </template>
 
 <script setup>
-import InfoTooltip from "@components/typography/InfoTooltip.vue";
-import { computed } from "vue";
+import InfoTooltip from '@components/typography/InfoTooltip.vue'
+import { computed } from 'vue'
 
 const props = defineProps({
   description: String,
@@ -25,30 +22,30 @@ const props = defineProps({
   label: String
 })
 const displayedValue = computed(() => {
-  if (! props.value && typeof props.value !== "number") {
-    return "-";
+  if (!props.value && typeof props.value !== 'number') {
+    return '-'
   }
-  return props.value;
+  return props.value
 })
 </script>
 
 <style scoped lang="scss">
-  .value {
-    color: #303030;
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-  .title {
-    color: #656565;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.value {
+  color: #303030;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.title {
+  color: #656565;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 
-    .label {
-      font-weight: 600;
-      font-size: 1rem;
-      line-height: 1.5rem;
-      text-transform: uppercase;
-    }
+  .label {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
   }
+}
 </style>

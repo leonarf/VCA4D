@@ -19,7 +19,9 @@
       </RouterLink>
     </p>
 
-    <QuestionTitle>How is <strong>income</strong> distributed among actors in the value chain?</QuestionTitle>
+    <QuestionTitle
+      >How is <strong>income</strong> distributed among actors in the value chain?</QuestionTitle
+    >
     <p>
       Income distribution is a tangible indicator of how households and businesses take advantage of
       the value chain operations. The share of Net Operating Profits across value chain actors helps
@@ -39,10 +41,13 @@
       <NetOperatingProfitPerActor :studyData="studyData" :currency="currency" />
     </div>
 
-    <QuestionTitle class="mt-8">How is <strong>employment</strong> distributed across the value chain?</QuestionTitle>
+    <QuestionTitle class="mt-8"
+      >How is <strong>employment</strong> distributed across the value chain?</QuestionTitle
+    >
     <p>
-      Employment data only relate to waged Full Time Equivalent (FTE) jobs for this specific value chain.
-      The informal family workforce at the agricultural production level is not accounted for.
+      Employment data only relate to waged Full Time Equivalent (FTE) jobs for this specific value
+      chain. The informal family workforce at the agricultural production level is not accounted
+      for.
     </p>
     <div class="flex flex-col gap-y-4 mt-4">
       <EmploymentDistributionActors :studyData="studyData" />

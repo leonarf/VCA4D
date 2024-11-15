@@ -1,15 +1,11 @@
 <template>
-  <component 
-    :is="svg" 
-    class="svg"
-  />
+  <component :is="svg" class="svg" />
 </template>
 
 <script setup>
 defineProps({
   svg: Object
-});
+})
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

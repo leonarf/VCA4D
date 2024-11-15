@@ -9,13 +9,12 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed } from 'vue'
 import Tag from './Tag.vue'
 const props = defineProps({
-  question: Object,
+  question: Object
 })
 const label = computed(() => props.question.text.split(' ').slice(1).join(' '))
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

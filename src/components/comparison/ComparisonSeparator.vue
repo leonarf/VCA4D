@@ -8,9 +8,8 @@
 
 <script setup>
 defineProps({
-    studies: Array,
+  studies: Array
 })
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

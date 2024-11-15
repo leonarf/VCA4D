@@ -35,7 +35,6 @@ import QuestionTitle from '@components/study/QuestionTitle.vue'
 import NoDataBadge from '@components/study/NoDataBadge.vue'
 import InfoTitle from '@typography/InfoTitle.vue'
 
-
 const props = defineProps({
   studyData: Object,
   currency: String

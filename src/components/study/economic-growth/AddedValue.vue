@@ -47,7 +47,10 @@
   <div v-else class="mt-4">
     <NoDataBadge />
   </div>
-  <QuestionTitle>Who <strong>creates and receives</strong> the direct value added of the value chain?</QuestionTitle>
+  <QuestionTitle
+    >Who <strong>creates and receives</strong> the direct value added of the value
+    chain?</QuestionTitle
+  >
   <InfoTitle
     title="Direct Value Added"
     information="
@@ -173,7 +176,8 @@ const addedValueReceiversRingChartData = computed(() => {
       convertAmount.value(props.studyData.ecoData.addedValue[key])
     )}`
     if (key == 'depreciation') {
-      tooltip[key] += `<br><em>Depreciation is part of the Gross Operating Profit and corresponds to renewal cost of invested capital good.
+      tooltip[key] +=
+        `<br><em>Depreciation is part of the Gross Operating Profit and corresponds to renewal cost of invested capital good.
         <br>In this graph, depreciation is shown separately from Net Operating Profits of the actors.</em>`
     }
     items.push({
@@ -200,5 +204,4 @@ const totalAddedValueCreators = computed(() => {
 })
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

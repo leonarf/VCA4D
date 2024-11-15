@@ -22,13 +22,18 @@
         </p>
         <p>
           The European Commission has developed the VCA4D standardised methodological framework for
-          analysis (<a target="_blank" class="link" href="https://capacity4dev.europa.eu/info/1-vca4d-methodology_en">The VCA4D Methodology | Capacity4dev</a>). It aims at understanding to what extent
-          the value chain allows for inclusive economic growth and whether it is both socially and
-          environmentally sustainable.
+          analysis (<a
+            target="_blank"
+            class="link"
+            href="https://capacity4dev.europa.eu/info/1-vca4d-methodology_en"
+            >The VCA4D Methodology | Capacity4dev</a
+          >). It aims at understanding to what extent the value chain allows for inclusive economic
+          growth and whether it is both socially and environmentally sustainable.
         </p>
         <p>
-          Each VCA4D study provides a functional analysis describing the <strong>main functions, flows and actors</strong> of a value chain
-          and elements of reply to four framing questions:
+          Each VCA4D study provides a functional analysis describing the
+          <strong>main functions, flows and actors</strong> of a value chain and elements of reply
+          to four framing questions:
         </p>
         <ul class="list-disc ml-8">
           <li>What is the contribution of the value chain to <strong>economic growth?</strong></li>
@@ -37,21 +42,28 @@
           <li>Is the value chain <strong>environmentally</strong> sustainable?</li>
         </ul>
         <p>
-          The VCA4D Information and Knowledge Management System presents the main economic, social and environmental indicators for each study,
-          to get an insightful overview of the value chain.
+          The VCA4D Information and Knowledge Management System presents the main economic, social
+          and environmental indicators for each study, to get an insightful overview of the value
+          chain.
         </p>
         <p>
-          It also allows users to compare the same products in different countries as well as various VCs within a country.
+          It also allows users to compare the same products in different countries as well as
+          various VCs within a country.
         </p>
         <p>
-          The indicators presented in the economic analysis are gathered from the studies’ Agrifood Chain Analysis (AFA) software files.
-          For the social indicators, the VCA4D studies’ social profiles are employed to inform on the sustainability score levels.
-          Finally, Life Cycle Analysis (LCA) software files are the source of the data for the extraction of the environmental indicators.
+          The indicators presented in the economic analysis are gathered from the studies’ Agrifood
+          Chain Analysis (AFA) software files. For the social indicators, the VCA4D studies’ social
+          profiles are employed to inform on the sustainability score levels. Finally, Life Cycle
+          Analysis (LCA) software files are the source of the data for the extraction of the
+          environmental indicators.
         </p>
       </section>
       <section>
         <h2><strong>Compare study results</strong></h2>
-        <p class="mb-4">Draw comparisons between key indicators presented in VCA4D studies : economic growth, inclusiveness, social impacts and environmental indicators.</p>
+        <p class="mb-4">
+          Draw comparisons between key indicators presented in VCA4D studies : economic growth,
+          inclusiveness, social impacts and environmental indicators.
+        </p>
         <RouterLink class="button" :to="{ name: 'comparison' }">Compare studies</RouterLink>
       </section>
       <section>
@@ -59,22 +71,28 @@
         <div class="filter-section">
           <p>Filter the studies on this page based on the topics addressed.</p>
           <div>
-            <FilterInput label="With economic data" :value="mandatoryStudiesFilter.ecoData" @toggle="toggleFilter('ecoData')" />
-            <FilterInput label="With environnemental data" :value="mandatoryStudiesFilter.acvData" @toggle="toggleFilter('acvData')" />
-            <FilterInput label="With social profil" :value="mandatoryStudiesFilter.socialData" @toggle="toggleFilter('socialData')" />
+            <FilterInput
+              label="With economic data"
+              :value="mandatoryStudiesFilter.ecoData"
+              @toggle="toggleFilter('ecoData')"
+            />
+            <FilterInput
+              label="With environnemental data"
+              :value="mandatoryStudiesFilter.acvData"
+              @toggle="toggleFilter('acvData')"
+            />
+            <FilterInput
+              label="With social profil"
+              :value="mandatoryStudiesFilter.socialData"
+              @toggle="toggleFilter('socialData')"
+            />
           </div>
           <div>
-            <div>
-              Number of studies: {{ filteredStudies.length }}
-            </div>
+            <div>Number of studies: {{ filteredStudies.length }}</div>
           </div>
         </div>
       </section>
-      <ByCategories
-        :categories="categories"
-        :studies="filteredStudies"
-        :countries="countries"
-      />
+      <ByCategories :categories="categories" :studies="filteredStudies" :countries="countries" />
 
       <ByContinents :studies="filteredStudies" :countries="countries" />
     </section>
@@ -82,7 +100,7 @@
 </template>
 
 <script setup>
-import _ from 'lodash';
+import _ from 'lodash'
 import Skeleton from '@components/Skeleton.vue'
 import { RouterLink } from 'vue-router'
 import { computed, onMounted, ref } from 'vue'
@@ -99,43 +117,45 @@ const mandatoryStudiesFilter = ref({
   ecoData: false,
   acvData: false,
   socialData: false
-});
+})
 
 onMounted(async () => {
   const allJsonData = getAllJsonData()
   countries.value = allJsonData.countries
-  studies.value = await populateStudiesData(allJsonData.studies);
+  studies.value = await populateStudiesData(allJsonData.studies)
   continents.value = [...new Set(countries.value.map((country) => country.continent))]
   categories.value = allJsonData.categories
 })
 
 async function populateStudiesData(jsonStudies) {
-  const studiesData = await Promise.all(jsonStudies.map(populateStudyData));
-  logMissingData(studiesData);
-  return studiesData;
+  const studiesData = await Promise.all(jsonStudies.map(populateStudyData))
+  logMissingData(studiesData)
+  return studiesData
 
   async function populateStudyData(jsonStudy) {
-    const studyData = await getStudyData(jsonStudy.id);
+    const studyData = await getStudyData(jsonStudy.id)
     return {
       ...jsonStudy,
-      ..._.pick(studyData, ["ecoData", "acvData", "socialData"])
-    };
+      ..._.pick(studyData, ['ecoData', 'acvData', 'socialData'])
+    }
   }
 }
 
 const filteredStudies = computed(() => {
-  return studies.value.filter(hasMandatoryParts);
+  return studies.value.filter(hasMandatoryParts)
 
   function hasMandatoryParts(study) {
     for (var studyPart in mandatoryStudiesFilter.value) {
-      if (mandatoryStudiesFilter.value[studyPart] && !study[studyPart]) { return false; }
+      if (mandatoryStudiesFilter.value[studyPart] && !study[studyPart]) {
+        return false
+      }
     }
-    return true;
+    return true
   }
 })
 
 function toggleFilter(filterKey) {
-  mandatoryStudiesFilter.value[filterKey] = !mandatoryStudiesFilter.value[filterKey];
+  mandatoryStudiesFilter.value[filterKey] = !mandatoryStudiesFilter.value[filterKey]
 }
 </script>
 
@@ -207,23 +227,22 @@ section.banner {
   gap: 1.5rem;
 }
 
-
 .button {
-  color:white;
+  color: white;
   font-weight: 600;
   padding: 0.5rem 1rem;
-  background-color: #3F83F8;
+  background-color: #3f83f8;
   border-radius: 0.25rem;
   right: 0px;
   width: 200px;
 
   &:hover {
-    background-color: #1A56DB;
+    background-color: #1a56db;
   }
 }
 
 .link {
-  color: #1C64F2;
+  color: #1c64f2;
 
   &:hover {
     text-decoration: underline;

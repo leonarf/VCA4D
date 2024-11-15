@@ -1,48 +1,55 @@
-import _ from "lodash";
-import { ErrorLevels, setImportErrors, getImportErrors, getSheetNameContent, parseActorTypes, checkColumnsExistence } from '@/utils/import/generic.js'
+import _ from 'lodash'
+import {
+  ErrorLevels,
+  setImportErrors,
+  getImportErrors,
+  getSheetNameContent,
+  parseActorTypes,
+  checkColumnsExistence
+} from '@/utils/import/generic.js'
 import { getTotalAddedValue } from '../economics'
 
 export const ECO_SHEET_NAMES = {
-  Home: "Value Chain",
-  StagesDescription: "Stages description",
-  ActorTypes: "Actor types",
-  FarmGate: "Farm gate price In final price",
-  Indicators: "Indicator by actor type",
-  ValueAddedReceivers: "Direct value added receivers",
-  Employment: "Employment",
-  AccountByActor: "Account by actor type",
-  ImportExport: "Imported And exported goods",
-  Translation: "AFA Translations",
-  Flows: "Flow by actor type",
+  Home: 'Value Chain',
+  StagesDescription: 'Stages description',
+  ActorTypes: 'Actor types',
+  FarmGate: 'Farm gate price In final price',
+  Indicators: 'Indicator by actor type',
+  ValueAddedReceivers: 'Direct value added receivers',
+  Employment: 'Employment',
+  AccountByActor: 'Account by actor type',
+  ImportExport: 'Imported And exported goods',
+  Translation: 'AFA Translations',
+  Flows: 'Flow by actor type'
 }
 
 export const HOME_LABELS = {
-  Country: "Country",
-  Commodity: "Commodity",
-  LocalCcy: "Currency unit AFA",
-  TargetCcy: "Currency (ISO)",
-  RatioCcy: "Conversion rate Currency unit AFA to Currency (ISO)",
-  NominalProtectionCoefficient: "Nominal protection coefficient",
-  DomesticResourceCostRatio: "Domestic resource cost ratio",
-  RateOfIntegrationIntoDomesticEconomy: "Rate of integration into domestic economy",
-  PublicFundsBalanceRatio: "Public funds balance / Public budget",
-  ValueAddedShareNationalGdp: "Value added share of national GDP",
-  ValueAddedShareAgriculturalGdp: "Value added share of the agricultural sector GDP",
-  GiniIndex: "Gini index",
-  FTE_Definition: "Full-time equivalent (FTE) definition",
+  Country: 'Country',
+  Commodity: 'Commodity',
+  LocalCcy: 'Currency unit AFA',
+  TargetCcy: 'Currency (ISO)',
+  RatioCcy: 'Conversion rate Currency unit AFA to Currency (ISO)',
+  NominalProtectionCoefficient: 'Nominal protection coefficient',
+  DomesticResourceCostRatio: 'Domestic resource cost ratio',
+  RateOfIntegrationIntoDomesticEconomy: 'Rate of integration into domestic economy',
+  PublicFundsBalanceRatio: 'Public funds balance / Public budget',
+  ValueAddedShareNationalGdp: 'Value added share of national GDP',
+  ValueAddedShareAgriculturalGdp: 'Value added share of the agricultural sector GDP',
+  GiniIndex: 'Gini index',
+  FTE_Definition: 'Full-time equivalent (FTE) definition'
 }
 
 const FARM_GATE_COLUMNS = {
-  Case: "Case of start and end price",
-  FarmPrice: "Farm gate price (local currency)",
-  FarmProduct: "Farm product",
-  EndPrice: "End products unit value",
-  EndProducts: "End products"
+  Case: 'Case of start and end price',
+  FarmPrice: 'Farm gate price (local currency)',
+  FarmProduct: 'Farm product',
+  EndPrice: 'End products unit value',
+  EndProducts: 'End products'
 }
 
 const TRANSLATIONS_COLUMNS = {
   AFAName: 'AFA Names',
-  EnglishTranslation: 'English translation',
+  EnglishTranslation: 'English translation'
 }
 
 const FLOWS_COLUMNS = {
@@ -56,72 +63,73 @@ const FLOWS_COLUMNS = {
 }
 
 const INDICATORS_COLUMNS = {
-  ActorName: "Actor type Name",
-  numberOfActors: "Number of actors in the value chain",
-  directAddedValue: "Direct added value (local currency)",
-  publicFundsBalance: "Public funds balance (local currency)",
-  netOperatingProfit: "Net operating profit (local currency)",
-  totalCosts: "Total costs (local currency)",
+  ActorName: 'Actor type Name',
+  numberOfActors: 'Number of actors in the value chain',
+  directAddedValue: 'Direct added value (local currency)',
+  publicFundsBalance: 'Public funds balance (local currency)',
+  netOperatingProfit: 'Net operating profit (local currency)',
+  totalCosts: 'Total costs (local currency)'
 }
 
 const VALUE_ADDED_COLUMNS = {
-  ReceiverName: "Receiver Name",
-  Value: "Value (local currency)",
+  ReceiverName: 'Receiver Name',
+  Value: 'Value (local currency)'
 }
 
 const EMPLOYMENT_COLUMNS = {
-  actorType: "Actor type Name",
-  tempMale: "Temporary Male",
-  tempFemale: "Temporary Female",
-  unskilledMale: "Permanent Unskilled Male",
-  unskilledFemale: "Permanent Unskilled Female",
-  skilledMale: "Permanent Skilled Male",
-  skilledFemale: "Permanent Skilled Female",
+  actorType: 'Actor type Name',
+  tempMale: 'Temporary Male',
+  tempFemale: 'Temporary Female',
+  unskilledMale: 'Permanent Unskilled Male',
+  unskilledFemale: 'Permanent Unskilled Female',
+  skilledMale: 'Permanent Skilled Male',
+  skilledFemale: 'Permanent Skilled Female'
 }
 
 const ACCOUNT_COLUMNS = {
-  ActorName: "Actor type name",
-  CostOrRevenue: "Cost or Revenue",
-  Item: "Item",
-  Value: "Value",
+  ActorName: 'Actor type name',
+  CostOrRevenue: 'Cost or Revenue',
+  Item: 'Item',
+  Value: 'Value'
 }
 
 const IMPORT_EXPORT_COLUMNS = {
-  Goods: "Goods",
-  ImportOrExport: "Imported or Exported",
-  Value: "Value (local currency)",
+  Goods: 'Goods',
+  ImportOrExport: 'Imported or Exported',
+  Value: 'Value (local currency)'
 }
 
 export const getValueChainProperty = (json, propertyName, mandatory = true) => {
-  let sheetName = "Study id"
+  let sheetName = 'Study id'
   if (!Object.keys(json).includes(sheetName)) {
     sheetName = ECO_SHEET_NAMES.Home
     if (!Object.keys(json).includes(sheetName)) {
       setImportErrors(
         'Study id',
         ErrorLevels.BreaksALot,
-        `Spreadcheet is missing. It should define things such as country, commodity, currency.`,
+        `Spreadcheet is missing. It should define things such as country, commodity, currency.`
       )
       return null
     }
   }
-  var elementFound = json[sheetName].find(element => element["Property"] === propertyName)
+  var elementFound = json[sheetName].find((element) => element['Property'] === propertyName)
   if (elementFound) {
-    return elementFound["Value"]
+    return elementFound['Value']
   }
   if (mandatory) {
     setImportErrors(
       sheetName,
       ErrorLevels.BreaksFunctionalities,
-      `Couldn't find '${propertyName}' in excel's sheet '${sheetName}'`)
+      `Couldn't find '${propertyName}' in excel's sheet '${sheetName}'`
+    )
   }
   return null
 }
 
 const parseStageSheet = (json) => {
   const STAGE_SHEET_COLUMNS = {
-    Stages: "Stages",
-    Description: "Description",
+    Stages: 'Stages',
+    Description: 'Description'
   }
   var sheetName = ECO_SHEET_NAMES.StagesDescription
   var sheetAsJson = getSheetNameContent(json, sheetName)
@@ -137,8 +145,9 @@ const parseStageSheet = (json) => {
       setImportErrors(
         sheetName,
         ErrorLevels.BreaksInformations,
-        `Add a description to stage <b>${stageName}</b> in the sheet <b>${sheetName}</b>`)
-        description = ''
+        `Add a description to stage <b>${stageName}</b> in the sheet <b>${sheetName}</b>`
+      )
+      description = ''
     }
     return {
       name: stageName,
@@ -154,12 +163,18 @@ const parseTranslationSheet = (json) => {
   if (sheetAsJson == null) {
     return
   }
-  checkColumnsExistence(sheetAsJson, TRANSLATIONS_COLUMNS, sheetname, ErrorLevels.BreaksInformations)
+  checkColumnsExistence(
+    sheetAsJson,
+    TRANSLATIONS_COLUMNS,
+    sheetname,
+    ErrorLevels.BreaksInformations
+  )
 
   var translationDict = {}
   for (var row of sheetAsJson) {
     if (row[TRANSLATIONS_COLUMNS.EnglishTranslation] && row[TRANSLATIONS_COLUMNS.AFAName]) {
-      translationDict[row[TRANSLATIONS_COLUMNS.AFAName]] = row[TRANSLATIONS_COLUMNS.EnglishTranslation]
+      translationDict[row[TRANSLATIONS_COLUMNS.AFAName]] =
+        row[TRANSLATIONS_COLUMNS.EnglishTranslation]
     }
   }
   return translationDict
@@ -167,14 +182,15 @@ const parseTranslationSheet = (json) => {
 
 const checkDataConsistencyAfterTranslation = (study) => {
   let uniqueActorName = new Set()
-  study.actors.forEach(actor => {
+  study.actors.forEach((actor) => {
     if (uniqueActorName.has(actor.name)) {
       setImportErrors(
         ECO_SHEET_NAMES.Translation,
         ErrorLevels.BreaksFunctionalities,
-        `In spreadsheet '${ECO_SHEET_NAMES.Translation}', after translation applied, more than one actor with the name '${actor.name}'`, 'info')
-    }
-    else {
+        `In spreadsheet '${ECO_SHEET_NAMES.Translation}', after translation applied, more than one actor with the name '${actor.name}'`,
+        'info'
+      )
+    } else {
       uniqueActorName.add(actor.name)
     }
   })
@@ -191,7 +207,11 @@ const parseFlowsSheet = (json) => {
   var result = []
   for (var row of sheetAsJson) {
     // Ignore row with a lot of emptyness
-    if (!row[FLOWS_COLUMNS.buyerActorName] && !row[FLOWS_COLUMNS.sellerActorName] && !row[FLOWS_COLUMNS.product]) {
+    if (
+      !row[FLOWS_COLUMNS.buyerActorName] &&
+      !row[FLOWS_COLUMNS.sellerActorName] &&
+      !row[FLOWS_COLUMNS.product]
+    ) {
       continue
     }
     var newItem = {}
@@ -212,7 +232,7 @@ const parseIndicatorsSheet = (json, actors) => {
   }
   checkColumnsExistence(sheetAsJson, INDICATORS_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const indicators = sheetAsJson.map(indicator => ({
+  const indicators = sheetAsJson.map((indicator) => ({
     actorName: indicator[INDICATORS_COLUMNS.ActorName],
     data: {
       numberOfActors: indicator[INDICATORS_COLUMNS.numberOfActors] || 0,
@@ -223,21 +243,22 @@ const parseIndicatorsSheet = (json, actors) => {
     }
   }))
 
-  actors = actors.map(actor => {
-    let indicator = indicators.filter(indicator => indicator.actorName === actor.name)
-    if (indicator.length == 0 && actor.stage != "End use") {
+  actors = actors.map((actor) => {
+    let indicator = indicators.filter((indicator) => indicator.actorName === actor.name)
+    if (indicator.length == 0 && actor.stage != 'End use') {
       setImportErrors(
         sheetname,
         ErrorLevels.MayBreakNothing,
-        `In spreadsheet '${sheetname}', data for actor '${actor.name}' were not found`, 'info')
-    }
-    else if (indicator.length > 1) {
+        `In spreadsheet '${sheetname}', data for actor '${actor.name}' were not found`,
+        'info'
+      )
+    } else if (indicator.length > 1) {
       setImportErrors(
         sheetname,
         ErrorLevels.BreaksDataviz,
-        `In spreadsheet '${sheetname}', actor '${actor.name}' appears more than once`)
-    }
-    else if (indicator.length === 1) {
+        `In spreadsheet '${sheetname}', actor '${actor.name}' appears more than once`
+      )
+    } else if (indicator.length === 1) {
       indicator = indicator[0]
       return {
         ...actor,
@@ -257,12 +278,14 @@ const parseValueAddedReceiverSheet = (json, actors) => {
   }
   checkColumnsExistence(sheetAsJson, VALUE_ADDED_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const addedValueItems = sheetAsJson.map(addedValue => ({
+  const addedValueItems = sheetAsJson.map((addedValue) => ({
     receiverName: addedValue[VALUE_ADDED_COLUMNS.ReceiverName],
     value: addedValue[VALUE_ADDED_COLUMNS.Value] || 0
   }))
-  actors = actors.map(actor => {
-    const addedValue = addedValueItems.filter(addedValue => addedValue.receiverName === actor.name)[0]
+  actors = actors.map((actor) => {
+    const addedValue = addedValueItems.filter(
+      (addedValue) => addedValue.receiverName === actor.name
+    )[0]
     return {
       ...actor,
       receivedAddedValue: addedValue?.value || 0
@@ -274,20 +297,22 @@ const parseValueAddedReceiverSheet = (json, actors) => {
     depreciation: 'Depreciation',
     employeeWages: 'Employees (wages)',
     financialInstitutionsInterests: 'Financial institutions (interests on loans)',
-    government: 'Government (taxes - subsidies)',
+    government: 'Government (taxes - subsidies)'
   }
 
   var addedValue = {}
   for (var key in specialsAddedValueKeys) {
-    var filteredItems = addedValueItems.filter(element => element.receiverName === specialsAddedValueKeys[key])
+    var filteredItems = addedValueItems.filter(
+      (element) => element.receiverName === specialsAddedValueKeys[key]
+    )
     if (filteredItems.length == 1) {
       addedValue[key] = filteredItems[0].value
-    }
-    else {
+    } else {
       setImportErrors(
         sheetname,
         ErrorLevels.BreaksDataviz,
-        `In spreadsheet '${sheetname}', couldn't find the following '${VALUE_ADDED_COLUMNS.ReceiverName}' => ${specialsAddedValueKeys[key]}`)
+        `In spreadsheet '${sheetname}', couldn't find the following '${VALUE_ADDED_COLUMNS.ReceiverName}' => ${specialsAddedValueKeys[key]}`
+      )
     }
   }
   return {
@@ -304,11 +329,11 @@ const parseEmploymentSheet = (json, actors) => {
   }
   checkColumnsExistence(sheetAsJson, EMPLOYMENT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const employments = sheetAsJson.map(parseActorEmployment);
-  const { displayContractRatio, displayGenderRatio } = checkEmploymentTypeConsistency(employments);
+  const employments = sheetAsJson.map(parseActorEmployment)
+  const { displayContractRatio, displayGenderRatio } = checkEmploymentTypeConsistency(employments)
 
-  actors = actors.map(actor => {
-    let employment = employments.filter(employment => employment.actorName === actor.name)
+  actors = actors.map((actor) => {
+    let employment = employments.filter((employment) => employment.actorName === actor.name)
     if (employment && employment.length === 1) {
       employment = employment[0]
       return {
@@ -351,61 +376,83 @@ function parseActorEmployment(employment) {
   return result
 
   function parseEmploymentCell(employmentCell) {
-    if (_.isUndefined(employmentCell)) { return null; }
+    if (_.isUndefined(employmentCell)) {
+      return null
+    }
 
-    return parseFloat(employmentCell);
+    return parseFloat(employmentCell)
   }
 }
 
 function checkEmploymentTypeConsistency(employments) {
-  const columnsToCheck = ["tempMale", "tempFemale", "unskilledMale", "unskilledFemale", "skilledMale", "skilledFemale"];
+  const columnsToCheck = [
+    'tempMale',
+    'tempFemale',
+    'unskilledMale',
+    'unskilledFemale',
+    'skilledMale',
+    'skilledFemale'
+  ]
 
-  const columnsCompletions = checkAndBuildFullColumnsCompletion(columnsToCheck);
-  return checkWeHaveTheRightColumnsForAnalyses(columnsCompletions);
+  const columnsCompletions = checkAndBuildFullColumnsCompletion(columnsToCheck)
+  return checkWeHaveTheRightColumnsForAnalyses(columnsCompletions)
 
   function checkAndBuildFullColumnsCompletion(columns) {
-    const completionByColumn = {};
-    columns.forEach(column => completionByColumn[column] = checkIsComplete(column))
-    return completionByColumn;
+    const completionByColumn = {}
+    columns.forEach((column) => (completionByColumn[column] = checkIsComplete(column)))
+    return completionByColumn
   }
 
   function checkIsComplete(column) {
-    if (isAllNull(employments, column)) { return false; }
-    if (isAllNonNull(employments, column)) { return true; }
+    if (isAllNull(employments, column)) {
+      return false
+    }
+    if (isAllNonNull(employments, column)) {
+      return true
+    }
 
     setImportErrors(
       ECO_SHEET_NAMES.Employment,
       ErrorLevels.BreaksALot,
       `Column '${EMPLOYMENT_COLUMNS[column]}' of sheet '${ECO_SHEET_NAMES.Employment}' is missing some values`
     )
-    return false;
+    return false
   }
 }
 function isAllNull(employments, column) {
-  return employments.every(employment => _.isNull(employment.data[column]))
+  return employments.every((employment) => _.isNull(employment.data[column]))
 }
 function isAllNonNull(employments, column) {
-  return employments.every(employment => ! _.isNull(employment.data[column]))
+  return employments.every((employment) => !_.isNull(employment.data[column]))
 }
 
 function checkWeHaveTheRightColumnsForAnalyses(completionByColumn) {
   if (isAllEmpty(Object.values(completionByColumn))) {
-    return { displayContractRatio: false, displayGenderRatio: false };
+    return { displayContractRatio: false, displayGenderRatio: false }
   }
-  let displayGenderRatio, displayContractRatio = null;
+  let displayGenderRatio,
+    displayContractRatio = null
 
-  const femaleCompletionsByContract = [completionByColumn.tempFemale, completionByColumn.unskilledFemale, completionByColumn.skilledFemale];
-  const maleCompletionsByContract = [completionByColumn.tempMale, completionByColumn.unskilledMale, completionByColumn.skilledMale];
+  const femaleCompletionsByContract = [
+    completionByColumn.tempFemale,
+    completionByColumn.unskilledFemale,
+    completionByColumn.skilledFemale
+  ]
+  const maleCompletionsByContract = [
+    completionByColumn.tempMale,
+    completionByColumn.unskilledMale,
+    completionByColumn.skilledMale
+  ]
 
   if (_.isEqual(femaleCompletionsByContract, maleCompletionsByContract)) {
     // We can compare male/female ratio, because the data filled the same type of contracts for both genders
-    displayGenderRatio = true;
+    displayGenderRatio = true
   } else if (isAllEmpty(femaleCompletionsByContract) || isAllEmpty(maleCompletionsByContract)) {
     // We cannot compare male/female ratio, because the data only filled one gender
-    displayGenderRatio = false;
+    displayGenderRatio = false
   } else {
     // We cannot compare the ratio because the data is inconsistent
-    displayGenderRatio = false;
+    displayGenderRatio = false
     setImportErrors(
       ECO_SHEET_NAMES.Employment,
       ErrorLevels.BreaksALot,
@@ -413,34 +460,43 @@ function checkWeHaveTheRightColumnsForAnalyses(completionByColumn) {
     )
   }
 
-  const tempCompletionsByGender = [completionByColumn.tempFemale, completionByColumn.tempMale];
-  const unskiledCompletionsByGender = [completionByColumn.unskilledFemale, completionByColumn.unskilledMale];
-  const skilledCompletionsByGender = [completionByColumn.skilledFemale, completionByColumn.skilledMale];
+  const tempCompletionsByGender = [completionByColumn.tempFemale, completionByColumn.tempMale]
+  const unskiledCompletionsByGender = [
+    completionByColumn.unskilledFemale,
+    completionByColumn.unskilledMale
+  ]
+  const skilledCompletionsByGender = [
+    completionByColumn.skilledFemale,
+    completionByColumn.skilledMale
+  ]
 
-  if (_.isEqual(tempCompletionsByGender, unskiledCompletionsByGender) && _.isEqual(unskiledCompletionsByGender, skilledCompletionsByGender)) {
+  if (
+    _.isEqual(tempCompletionsByGender, unskiledCompletionsByGender) &&
+    _.isEqual(unskiledCompletionsByGender, skilledCompletionsByGender)
+  ) {
     // We can compare contract types, because the data filled the same genders for the 3 type of contracts
-    displayContractRatio = true;
+    displayContractRatio = true
   } else if (
     (isAllEmpty(tempCompletionsByGender) && isAllEmpty(unskiledCompletionsByGender)) ||
     (isAllEmpty(unskiledCompletionsByGender) && isAllEmpty(skilledCompletionsByGender)) ||
     (isAllEmpty(skilledCompletionsByGender) && isAllEmpty(tempCompletionsByGender))
   ) {
     // We cannot compare contract types, because the study  only filled one type of contract
-    displayContractRatio = false;
+    displayContractRatio = false
   } else {
     // Throw error, we cannot compare the ratio because the data is inconsistent
-    displayContractRatio = false;
+    displayContractRatio = false
     setImportErrors(
       ECO_SHEET_NAMES.Employment,
       ErrorLevels.BreaksALot,
-      "Impossible to compare contract types: Please fill out every contract type column for the studied gender"
+      'Impossible to compare contract types: Please fill out every contract type column for the studied gender'
     )
   }
 
-  return { displayContractRatio, displayGenderRatio };
+  return { displayContractRatio, displayGenderRatio }
 
   function isAllEmpty(completions) {
-    return completions.every(completion => ! completion);
+    return completions.every((completion) => !completion)
   }
 }
 
@@ -452,17 +508,16 @@ const parseAccountByActorSheet = (json, actors, stages) => {
   }
   checkColumnsExistence(sheetAsJson, ACCOUNT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const accountItems = sheetAsJson.map(accountItem => ({
+  const accountItems = sheetAsJson.map((accountItem) => ({
     actorName: accountItem[ACCOUNT_COLUMNS.ActorName],
     data: {
       costOrRevenue: accountItem[ACCOUNT_COLUMNS.CostOrRevenue],
       item: accountItem[ACCOUNT_COLUMNS.Item],
       value: accountItem[ACCOUNT_COLUMNS.Value]
     }
-  })
-  )
-  actors = actors.map(actor => {
-    let accountItem = accountItems.filter(element => element.actorName === actor.name)
+  }))
+  actors = actors.map((actor) => {
+    let accountItem = accountItems.filter((element) => element.actorName === actor.name)
     if (accountItem && accountItem.length === 1) {
       accountItem = accountItem[0]
       return {
@@ -475,8 +530,8 @@ const parseAccountByActorSheet = (json, actors, stages) => {
     return actor
   })
   actors.sort((actor1, actor2) => {
-    const stage1 = stages.find(stage => stage.name === actor1.stage)
-    const stage2 = stages.find(stage => stage.name === actor2.stage)
+    const stage1 = stages.find((stage) => stage.name === actor1.stage)
+    const stage2 = stages.find((stage) => stage.name === actor2.stage)
     return (stage1?.index || 0) - (stage2?.index || 0)
   })
 
@@ -491,33 +546,47 @@ const parseImportExportSheet = (json) => {
   }
   checkColumnsExistence(sheetAsJson, IMPORT_EXPORT_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  const importExportItems = sheetAsJson.map(importExportItem => ({
+  const importExportItems = sheetAsJson.map((importExportItem) => ({
     label: importExportItem[IMPORT_EXPORT_COLUMNS.Goods],
     importExport: importExportItem[IMPORT_EXPORT_COLUMNS.ImportOrExport],
-    amount: importExportItem[IMPORT_EXPORT_COLUMNS.Value],
-  })
-  )
+    amount: importExportItem[IMPORT_EXPORT_COLUMNS.Value]
+  }))
 
   var importExport = {
     import: [],
     export: []
   }
 
-  var acceptableImportKeyWord = ["IMPORT", "Imported"]
+  var acceptableImportKeyWord = ['IMPORT', 'Imported']
   for (let keyword of acceptableImportKeyWord) {
-    importExport.import.push(...importExportItems.filter(item => item.importExport?.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
+    importExport.import.push(
+      ...importExportItems.filter(
+        (item) =>
+          item.importExport?.localeCompare(keyword, undefined, { sensitivity: 'base' }) === 0
+      )
+    )
   }
-  var acceptableExportKeyWord = ["EXPORT", "Exported"]
+  var acceptableExportKeyWord = ['EXPORT', 'Exported']
   for (let keyword of acceptableExportKeyWord) {
-    importExport.export.push(...importExportItems.filter(item => item.importExport?.localeCompare(keyword, undefined, { sensitivity: "base" }) === 0))
+    importExport.export.push(
+      ...importExportItems.filter(
+        (item) =>
+          item.importExport?.localeCompare(keyword, undefined, { sensitivity: 'base' }) === 0
+      )
+    )
   }
 
-  if (importExportItems.length > 0 && importExport.import.length == 0 && importExport.import.length == 0) {
+  if (
+    importExportItems.length > 0 &&
+    importExport.import.length == 0 &&
+    importExport.import.length == 0
+  ) {
     setImportErrors(
       sheetname,
       ErrorLevels.BreaksDataviz,
       `Column '${IMPORT_EXPORT_COLUMNS.ImportOrExport}' of excel worksheet '${sheetname}' seems to be wrongly filled.
-      It should contains one of '${acceptableImportKeyWord}' for import or one of '${acceptableExportKeyWord}' for export`)
+      It should contains one of '${acceptableImportKeyWord}' for import or one of '${acceptableExportKeyWord}' for export`
+    )
   }
 
   return importExport
@@ -531,9 +600,10 @@ const parseFarmGatePriceSheet = (json, currencyRatio) => {
   }
   checkColumnsExistence(sheetAsJson, FARM_GATE_COLUMNS, sheetname, ErrorLevels.BreaksDataviz)
 
-  var result = sheetAsJson.map(priceItem => {
+  var result = sheetAsJson.map((priceItem) => {
     if (!priceItem[FARM_GATE_COLUMNS.EndProducts]) {
-      setImportErrors(sheetname,
+      setImportErrors(
+        sheetname,
         ErrorLevels.BreaksInformations,
         `In spreadsheet '${sheetname}', case of start and end price named <b>'${priceItem[FARM_GATE_COLUMNS.Case]}'</b> has its column <b>${FARM_GATE_COLUMNS.EndProducts}</b> empty`
       )
@@ -547,12 +617,12 @@ const parseFarmGatePriceSheet = (json, currencyRatio) => {
     }
   })
   if (currencyRatio && currencyRatio != 1) {
-    result = result.map(item => {
+    result = result.map((item) => {
       return {
         ...item,
         farmPrice: item.farmPrice / currencyRatio,
         endPrice: item.endPrice / currencyRatio
-      };
+      }
     })
   }
   return result
@@ -585,7 +655,8 @@ export const parseEconomicsJson = (json, currencyRatio) => {
       setImportErrors(
         ECO_SHEET_NAMES.ActorTypes,
         ErrorLevels.BreaksALot,
-        `Actor <b>${actor.name}</b> should have a stage defined in worksheet ${ECO_SHEET_NAMES.ActorTypes}`)
+        `Actor <b>${actor.name}</b> should have a stage defined in worksheet ${ECO_SHEET_NAMES.ActorTypes}`
+      )
     }
   }
   const flows = parseFlowsSheet(json)
@@ -596,14 +667,14 @@ export const parseEconomicsJson = (json, currencyRatio) => {
   actors = result.actors
   var addedValue = result.addedValue
 
-  let employmentResult = parseEmploymentSheet(json, actors);
-  actors = employmentResult.actors;
+  let employmentResult = parseEmploymentSheet(json, actors)
+  actors = employmentResult.actors
   const consistencyDisplay = {
     employment: {
       contractRatio: employmentResult.displayContractRatio,
-      genderRatio: employmentResult.displayGenderRatio,
+      genderRatio: employmentResult.displayGenderRatio
     }
-  };
+  }
 
   actors = parseAccountByActorSheet(json, actors, stages)
 
@@ -613,14 +684,25 @@ export const parseEconomicsJson = (json, currencyRatio) => {
 
   // Macro economic indicators
   var macroData = {}
-  macroData["giniIndex"] = getValueChainProperty(json, HOME_LABELS.GiniIndex)
-  macroData["FTE_Definition"] = getValueChainProperty(json, HOME_LABELS.FTE_Definition)
-  macroData["rateOfIntegration"] = (getValueChainProperty(json, HOME_LABELS.RateOfIntegrationIntoDomesticEconomy) / 100.0) || undefined
-  macroData["publicFundsBalance"] = (getValueChainProperty(json, HOME_LABELS.PublicFundsBalanceRatio) / 100.0) || undefined
-  macroData["valueAddedShareNationalGdp"] = (getValueChainProperty(json, HOME_LABELS.ValueAddedShareNationalGdp) / 100.0) || undefined
-  macroData["valueAddedShareAgriculturalGdp"] = (getValueChainProperty(json, HOME_LABELS.ValueAddedShareAgriculturalGdp) / 100.0) || undefined
-  macroData["domesticResourceCostRatio"] = getValueChainProperty(json, HOME_LABELS.DomesticResourceCostRatio)
-  macroData["nominalProtectionCoefficient"] = getValueChainProperty(json, HOME_LABELS.NominalProtectionCoefficient)
+  macroData['giniIndex'] = getValueChainProperty(json, HOME_LABELS.GiniIndex)
+  macroData['FTE_Definition'] = getValueChainProperty(json, HOME_LABELS.FTE_Definition)
+  macroData['rateOfIntegration'] =
+    getValueChainProperty(json, HOME_LABELS.RateOfIntegrationIntoDomesticEconomy) / 100.0 ||
+    undefined
+  macroData['publicFundsBalance'] =
+    getValueChainProperty(json, HOME_LABELS.PublicFundsBalanceRatio) / 100.0 || undefined
+  macroData['valueAddedShareNationalGdp'] =
+    getValueChainProperty(json, HOME_LABELS.ValueAddedShareNationalGdp) / 100.0 || undefined
+  macroData['valueAddedShareAgriculturalGdp'] =
+    getValueChainProperty(json, HOME_LABELS.ValueAddedShareAgriculturalGdp) / 100.0 || undefined
+  macroData['domesticResourceCostRatio'] = getValueChainProperty(
+    json,
+    HOME_LABELS.DomesticResourceCostRatio
+  )
+  macroData['nominalProtectionCoefficient'] = getValueChainProperty(
+    json,
+    HOME_LABELS.NominalProtectionCoefficient
+  )
 
   var studyData = {
     macroData,
@@ -637,19 +719,26 @@ export const parseEconomicsJson = (json, currencyRatio) => {
     studyData = applyTranslation(studyData, translationDictionnary)
     checkDataConsistencyAfterTranslation(studyData)
   }
-  checksActorsAreKnown(studyData);
+  checksActorsAreKnown(studyData)
   return studyData
 }
-
 
 export const checksActorsAreKnown = (ecoData) => {
   let errors = getImportErrors()
 
-  const actorNames = ecoData.actors.map(actor => actor.name)
+  const actorNames = ecoData.actors.map((actor) => actor.name)
   let unknownActorsInFlows = []
-  unknownActorsInFlows = unknownActorsInFlows.concat(ecoData.flows.filter(flow => !actorNames.includes(flow.buyerActorName)).reduce((arr, flow) => arr.concat(flow.buyerActorName), []))
-  unknownActorsInFlows = unknownActorsInFlows.concat(ecoData.flows.filter(flow => !actorNames.includes(flow.sellerActorName)).reduce((arr, flow) => arr.concat(flow.buyerActorName), []))
-  unknownActorsInFlows.map(actor => {
+  unknownActorsInFlows = unknownActorsInFlows.concat(
+    ecoData.flows
+      .filter((flow) => !actorNames.includes(flow.buyerActorName))
+      .reduce((arr, flow) => arr.concat(flow.buyerActorName), [])
+  )
+  unknownActorsInFlows = unknownActorsInFlows.concat(
+    ecoData.flows
+      .filter((flow) => !actorNames.includes(flow.sellerActorName))
+      .reduce((arr, flow) => arr.concat(flow.buyerActorName), [])
+  )
+  unknownActorsInFlows.map((actor) => {
     setImportErrors(
       ECO_SHEET_NAMES.Flows,
       'error',
@@ -658,7 +747,9 @@ export const checksActorsAreKnown = (ecoData) => {
   })
 
   const totalCreatedAddedValue = getTotalAddedValue({ ecoData })
-  let totalReceivedAddedValue = ecoData.actors.map(actor => actor.receivedAddedValue).reduce((res, curr) => res + curr, 0)
+  let totalReceivedAddedValue = ecoData.actors
+    .map((actor) => actor.receivedAddedValue)
+    .reduce((res, curr) => res + curr, 0)
   for (const key in ecoData.addedValue) {
     totalReceivedAddedValue += ecoData.addedValue[key]
   }

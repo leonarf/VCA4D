@@ -11,18 +11,18 @@
 </template>
 
 <script setup>
-import { vTooltip } from "floating-vue";
-import Svg from "@components/Svg.vue";
+import { vTooltip } from 'floating-vue'
+import Svg from '@components/Svg.vue'
 import QuestionMark from '../../images/icons/info-question.svg'
-import sanitize from "sanitize-html";
+import sanitize from 'sanitize-html'
 
 defineProps({
-  text: String,
+  text: String
 })
 </script>
 
 <style scoped lang="scss">
-  .question-mark {
-    height: 1em;
-  }
+.question-mark {
+  height: 1em;
+}
 </style>

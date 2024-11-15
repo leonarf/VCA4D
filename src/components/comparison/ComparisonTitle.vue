@@ -12,14 +12,13 @@
 
 <script setup>
 defineProps({
-    studies: Array,
-    title: String
+  studies: Array,
+  title: String
 })
-
 </script>
 
 <style lang="scss">
-  .comparison-title {
-    @apply uppercase text-[#8A8A8A] font-bold pb-4;
-  }
+.comparison-title {
+  @apply uppercase text-[#8A8A8A] font-bold pb-4;
+}
 </style>

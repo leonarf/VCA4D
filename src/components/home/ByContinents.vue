@@ -13,21 +13,22 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import ByContinent from './ByContinent.vue';
-
+import { computed } from 'vue'
+import ByContinent from './ByContinent.vue'
 
 const props = defineProps({
-    categories: Array,
-    studies: Array,
-    countries: Array,
+  categories: Array,
+  studies: Array,
+  countries: Array
 })
 
-const continents = computed(() => [...new Set(props.countries.map(country => country.continent))])
+const continents = computed(() => [...new Set(props.countries.map((country) => country.continent))])
 
 const getStudiesByContinent = (continent) => {
-    const countries = props.countries.filter(country => country.continent === continent).map(country => country.id)
-    return props.studies.filter(study => countries.includes(study.country))
+  const countries = props.countries
+    .filter((country) => country.continent === continent)
+    .map((country) => country.id)
+  return props.studies.filter((study) => countries.includes(study.country))
 }
 </script>
 
