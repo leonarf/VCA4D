@@ -1,12 +1,15 @@
 <template>
   <div class="rounded-lg p-4 max-w-[100%]" :style="bgColor">
-    <div class="uppercase font-bold">
-      {{ title }}
+    <div class="header">
+      <div class="uppercase font-bold">{{ title }}</div>
+      <Tag :scale="parseFloat(averageValue)" />
     </div>
+    <div class="font-bold mb-1">Selected questions:</div>
+
     <slot />
     <div class="browsable-radar-chart__item__more-info">
       <a class="cursor-pointer font-bold text-[#2e6bad]" @click="slideTo(anchorLink)"
-        >Explore {{ title.toLowerCase() }} &rarr;</a
+        >Explore all questions &rarr;</a
       >
     </div>
   </div>
@@ -15,6 +18,7 @@
 <script setup>
 import { computed } from 'vue'
 import { getSocialScoreColor } from '@utils/social.js'
+import Tag from './Tag.vue'
 const props = defineProps({
   title: String,
   anchor: Number,
@@ -39,4 +43,12 @@ const bgColor = computed(() => {
 })
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.header {
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+</style>
