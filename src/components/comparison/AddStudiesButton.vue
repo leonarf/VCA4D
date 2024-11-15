@@ -15,13 +15,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import PlusLogo from '../../images/icons/plus.svg'
 import Svg from '@components/Svg.vue'
 import Modal from '@components/Modal.vue'
 import StudiesListTable from './StudiesListTable.vue'
 
-defineProps({
+const props = defineProps({
   currentStudySelection: Array
 })
 
@@ -33,6 +33,12 @@ function selectStudies(studySelection) {
   opened.value = false
   emits('select-studies', studySelection)
 }
+
+onMounted(() => {
+  if (props.currentStudySelection.length === 0) {
+    opened.value = true
+  }
+})
 </script>
 
 <style scoped lang="scss">
