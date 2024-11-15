@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 const HomeView = () => import('../views/HomeView.vue')
+const BrowseView = () => import('../views/BrowseView.vue')
 const StudyView = () => import('../views/StudyView.vue')
 const Import = () => import('../views/Import.vue')
 const Comparison = () => import('../views/Comparison.vue')
@@ -11,6 +12,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/browse',
+      name: 'browse',
+      component: BrowseView
     },
     {
       path: '/study',
