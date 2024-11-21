@@ -55,7 +55,7 @@ function getFormat({ type = 'number', value }) {
     case 'percent':
       return '0.00%'
     case 'amount':
-      return '"$"#,##0.00_);\\("$"#,##0.00\\)'
+      return '"$"#,##0.00_);\\-"$"#,##0.00'
     default:
       return ''
   }
