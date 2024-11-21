@@ -67,14 +67,14 @@ const hasOtherStudies = computed(() => {
 <style scoped lang="scss">
 .comparison-link {
   display: flex;
-  height: 20px;
   gap: 0rem;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 25px;
   height: 20px;
   align-items: center;
   color: #656565;
   cursor: pointer;
+  font-weight: 600;
 
   &:hover {
     color: #1c64f2;
