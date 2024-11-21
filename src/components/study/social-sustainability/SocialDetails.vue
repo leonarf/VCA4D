@@ -1,15 +1,22 @@
 <template>
   <div v-for="(part, index) in studyData.socialData" :key="part.title">
-    <h2 :id="`social_anchor_${index + 1}`" class="text-xl text-[#151515] relative">
-      <InfoTitle :title="part.title" :information="getTooltipText(part.title)" />
-    </h2>
+    <div :id="`social_anchor_${index + 1}`" class="details-header">
+      <div class="details-title">
+        <div class="title">{{ part.title }}</div>
+
+        <Tag class="group-tag" :scale="getSocialAverageGroup(part)" v-tooltip="'Aggregated note'" />
+      </div>
+      <div>{{ getTooltipText(part.title) }}</div>
+    </div>
     <SocialDetailsGroup v-for="group in part.groups" :key="group.title" :group="group" />
   </div>
 </template>
 
 <script setup>
+import { vTooltip } from 'floating-vue'
+import Tag from './Tag.vue'
 import SocialDetailsGroup from './SocialDetailsGroup.vue'
-import InfoTitle from '@typography/InfoTitle.vue'
+import { getSocialAverageGroup } from '@utils/social.js'
 
 defineProps({
   studyData: Object
@@ -49,12 +56,36 @@ function getTooltipText(partName) {
 </script>
 
 <style scoped lang="scss">
-h2::before {
-  content: '';
-  width: 90%;
-  height: 1.2rem;
-  border-bottom: solid 4px #151515;
-  position: absolute;
-  bottom: 0;
+.details-header {
+  position: relative;
+  padding-bottom: 10px;
+
+  .details-title {
+    display: flex;
+    gap: 15px;
+    align-items: end;
+    margin-bottom: 10px;
+
+    .title {
+      font-size: 1.25rem !important;
+      line-height: 1.75rem !important;
+      font-weight: 600;
+      color: #151515;
+    }
+  }
+
+  .group-tag {
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 1.2rem;
+    border-bottom: solid 4px #151515;
+    position: absolute;
+    bottom: 0;
+  }
 }
 </style>

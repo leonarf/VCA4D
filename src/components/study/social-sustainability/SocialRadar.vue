@@ -1,5 +1,5 @@
 <template>
-  <Radar :options="chartData" />
+  <Radar class="radar" :options="chartData" />
 </template>
 
 <script setup>
@@ -18,6 +18,14 @@ const averageFood = computed(() => getSocialAverageGroup(props.studyData.socialD
 const averageSocial = computed(() => getSocialAverageGroup(props.studyData.socialData[4]))
 const averageLiving = computed(() => getSocialAverageGroup(props.studyData.socialData[5]))
 
+const indicators = [
+  'Working conditions',
+  'Living\nconditions',
+  'Social\ncapital',
+  'Food & nutrition security',
+  'Gender\nequality',
+  'Land &\nwater\nrights'
+]
 const chartData = computed(() => {
   const values = [
     averageWorking.value,
@@ -30,16 +38,9 @@ const chartData = computed(() => {
 
   return {
     radar: {
-      indicator: [
-        { name: 'Working conditions', max: 4 },
-        { name: 'Living conditions', max: 4 },
-        { name: 'Social capital', max: 4 },
-        { name: 'Food & nutrition security', max: 4 },
-        { name: 'Gender equality', max: 4 },
-        { name: 'Land & water rights', max: 4 }
-      ],
+      indicator: indicators.map((indicatorTitle) => ({ name: indicatorTitle, max: 4 })),
       center: ['50%', '50%'],
-      radius: '100%',
+      radius: '80%',
       splitNumber: 4,
       splitArea: {
         areaStyle: {
@@ -60,26 +61,12 @@ const chartData = computed(() => {
         show: false
       },
       axisName: {
-        show: false,
-        formatter: function (value) {
-          return value
-        },
-        fontWeight: 'bold',
-        fontSize: '18px'
+        show: true,
+        color: 'black'
       }
     },
     tooltip: {
-      show: false,
-      trigger: 'item',
-      formatter: function () {
-        return `Working: ${averageWorking.value}<br />
-                Living: ${averageLiving.value}<br />
-                Social: ${averageSocial.value}<br />
-                Food: ${averageFood.value}<br />
-                Gender: ${averageGender.value}<br />
-                Land: ${averageLand.value}<br />
-                `
-      }
+      show: false
     },
     series: [
       {
@@ -92,7 +79,10 @@ const chartData = computed(() => {
         },
         data: [
           {
-            value: values
+            value: values,
+            label: {
+              show: false
+            }
           }
         ]
       }
@@ -101,4 +91,8 @@ const chartData = computed(() => {
 })
 </script>
 
-<style lang=""></style>
+<style scoped lang="scss">
+.radar {
+  width: 430px;
+}
+</style>
