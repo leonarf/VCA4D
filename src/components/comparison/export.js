@@ -4,6 +4,7 @@ import { slugify } from '@utils/format.js'
 import { getCountry, getProduct } from '@utils/data'
 import * as XLSX from 'xlsx'
 import _ from 'lodash'
+import { getSocialScoreLabel } from '@utils/social.js'
 import { useCurrencyUtils } from '../../utils/format'
 
 export function downloadComparisonXlsx(studies) {
@@ -126,15 +127,17 @@ function getSubRows(studies, indicator) {
 }
 
 function getDataCell(value, format, study) {
-  if (format !== 'amount') {
-    return getCell(value, format)
+  if (format === 'amount') {
+    const { convertAmount } = useCurrencyUtils({
+      studyData: study,
+      currency: 'USD'
+    })
+    return getCell(value ? convertAmount.value(value) : null, 'amount')
+  } else if (format === 'social') {
+    return getCell(getSocialScoreLabel(value), 'social')
   }
 
-  const { convertAmount } = useCurrencyUtils({
-    studyData: study,
-    currency: 'USD'
-  })
-  return getCell(value ? convertAmount.value(value) : null, 'amount')
+  return getCell(value, format)
 }
 
 function getCell(value, type = 'string') {
