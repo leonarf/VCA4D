@@ -44,7 +44,7 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to, from, next) => {
+router.afterEach((_to, _from, next) => {
   window.scrollTo(0, 0)
   next()
 })
