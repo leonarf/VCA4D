@@ -19,13 +19,13 @@
 <script setup>
 import { computed } from 'vue'
 
-import ProcessingLogo from '../images/icons/processing.svg'
-import RetailLogo from '../images/icons/retail.svg'
-import EndUseLogo from '../images/icons/end_use.svg'
-import WholesaleLogo from '../images/icons/wholesale.svg'
-import CollectionLogo from '../images/icons/collection.svg'
-import ProductionLogo from '../images/icons/production.svg'
-import ExportLogo from '../images/icons/export.svg'
+import ProcessingLogo from '@images/icons/processing.svg'
+import RetailLogo from '@images/icons/retail.svg'
+import EndUseLogo from '@images/icons/end_use.svg'
+import WholesaleLogo from '@images/icons/wholesale.svg'
+import CollectionLogo from '@images/icons/collection.svg'
+import ProductionLogo from '@images/icons/production.svg'
+import ExportLogo from '@images/icons/export.svg'
 import Svg from '@components/Svg.vue'
 import { STAGES as DISPLAY_STAGES, getStageLabel } from '@utils/stages'
 

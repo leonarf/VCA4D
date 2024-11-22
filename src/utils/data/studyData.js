@@ -4,6 +4,13 @@ import { computeMetrics } from './metrics'
 
 const cachedDataByStudyId = {}
 
+export async function populateStudyData(jsonStudy) {
+  const studyData = await getStudyData(jsonStudy.id)
+  return {
+    ...jsonStudy,
+    ...studyData
+  }
+}
 export const getStudyData = async (studyId) => {
   if (studyId === LOCAL_STORAGE_ID) {
     const localStudyData = localStorage.getItem('localStudyData')

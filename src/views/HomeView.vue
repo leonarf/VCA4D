@@ -58,105 +58,34 @@
           environmental indicators.
         </p>
       </section>
-      <section>
-        <h2><strong>Compare study results</strong></h2>
-        <p class="mb-4">
-          Draw comparisons between key indicators presented in VCA4D studies : economic growth,
-          inclusiveness, social impacts and environmental indicators.
-        </p>
-        <RouterLink class="button" :to="{ name: 'comparison' }">Compare studies</RouterLink>
-      </section>
-      <section>
-        <h2><strong>Browse studies</strong></h2>
-        <div class="filter-section">
-          <p>Filter the studies on this page based on the topics addressed.</p>
+      <section class="links">
+        <div>
           <div>
-            <FilterInput
-              label="With economic data"
-              :value="mandatoryStudiesFilter.ecoData"
-              @toggle="toggleFilter('ecoData')"
-            />
-            <FilterInput
-              label="With environnemental data"
-              :value="mandatoryStudiesFilter.acvData"
-              @toggle="toggleFilter('acvData')"
-            />
-            <FilterInput
-              label="With social profil"
-              :value="mandatoryStudiesFilter.socialData"
-              @toggle="toggleFilter('socialData')"
-            />
+            <h2><strong>Browse studies</strong></h2>
+            <p class="mb-4">
+              Browse VCA4D's studies by product and by contries. Then, deep dive on the results
+            </p>
           </div>
+          <RouterLink class="button" :to="{ name: 'browse' }">Browse studies →</RouterLink>
+        </div>
+        <div>
           <div>
-            <div>Number of studies: {{ filteredStudies.length }}</div>
+            <h2><strong>Compare study results</strong></h2>
+            <p class="mb-4">
+              Draw comparisons between key indicators presented in VCA4D studies : economic growth,
+              inclusiveness, social impacts and environmental indicators.
+            </p>
           </div>
+          <RouterLink class="button" :to="{ name: 'comparison' }">Compare studies →</RouterLink>
         </div>
       </section>
-      <ByCategories :categories="categories" :studies="filteredStudies" :countries="countries" />
-
-      <ByContinents :studies="filteredStudies" :countries="countries" />
-    </section>
-  </Skeleton>
+    </section></Skeleton
+  >
 </template>
 
 <script setup>
-import _ from 'lodash'
 import Skeleton from '@components/Skeleton.vue'
 import { RouterLink } from 'vue-router'
-import { computed, onMounted, ref } from 'vue'
-import ByCategories from '@components/home/ByCategories.vue'
-import ByContinents from '@components/home/ByContinents.vue'
-import FilterInput from '@components/home/FilterInput.vue'
-import { getAllJsonData, getStudyData, logMissingData } from '@utils/data'
-
-const countries = ref([])
-const studies = ref([])
-const continents = ref([])
-const categories = ref([])
-const mandatoryStudiesFilter = ref({
-  ecoData: false,
-  acvData: false,
-  socialData: false
-})
-
-onMounted(async () => {
-  const allJsonData = getAllJsonData()
-  countries.value = allJsonData.countries
-  studies.value = await populateStudiesData(allJsonData.studies)
-  continents.value = [...new Set(countries.value.map((country) => country.continent))]
-  categories.value = allJsonData.categories
-})
-
-async function populateStudiesData(jsonStudies) {
-  const studiesData = await Promise.all(jsonStudies.map(populateStudyData))
-  logMissingData(studiesData)
-  return studiesData
-
-  async function populateStudyData(jsonStudy) {
-    const studyData = await getStudyData(jsonStudy.id)
-    return {
-      ...jsonStudy,
-      ..._.pick(studyData, ['ecoData', 'acvData', 'socialData'])
-    }
-  }
-}
-
-const filteredStudies = computed(() => {
-  return studies.value.filter(hasMandatoryParts)
-
-  function hasMandatoryParts(study) {
-    for (var studyPart in mandatoryStudiesFilter.value) {
-      if (mandatoryStudiesFilter.value[studyPart] && !study[studyPart]) {
-        return false
-      }
-    }
-    return true
-  }
-})
-
-function toggleFilter(filterKey) {
-  mandatoryStudiesFilter.value[filterKey] = !mandatoryStudiesFilter.value[filterKey]
-}
 </script>
 
 <style scoped lang="scss">
@@ -168,7 +97,7 @@ section.banner {
   height: 25rem;
   width: 100%;
 
-  background-image: url('../images/home-banner.jpg');
+  background-image: url('@images/home-banner.jpg');
   background-position: center center;
 
   display: flex;
@@ -221,12 +150,6 @@ section.banner {
   }
 }
 
-.filter-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
 .button {
   color: white;
   font-weight: 600;
@@ -234,7 +157,6 @@ section.banner {
   background-color: #3f83f8;
   border-radius: 0.25rem;
   right: 0px;
-  width: 200px;
 
   &:hover {
     background-color: #1a56db;
@@ -246,6 +168,29 @@ section.banner {
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  align-items: stretch;
+  justify-content: space-around;
+
+  h2 {
+    margin-top: 0;
+  }
+  > * {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+    justify-content: space-between;
+    background-color: #faf7e6;
+    padding: 27px 32px;
+    border-radius: 15px;
+    max-width: 500px;
   }
 }
 </style>

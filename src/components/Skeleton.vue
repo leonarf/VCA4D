@@ -1,17 +1,30 @@
 <template>
   <header>
-    <RouterLink to="/">VCA4D Information System</RouterLink>
+    <div class="header-title">
+      <div class="title">VCA4D Information System</div>
+      <nav>
+        <RouterLink class="link" :class="{ active: routeName === 'home' }" to="home">
+          <Svg class="icon" :svg="HouseLogo" />Home</RouterLink
+        >
+        <RouterLink class="link" :class="{ active: routeName === 'browse' }" to="browse">
+          <Svg class="icon" :svg="WorldLogo" />Browse studies</RouterLink
+        >
+        <RouterLink class="link" :class="{ active: routeName === 'comparison' }" to="comparison">
+          <Svg class="icon" :svg="ArrowsLogo" />Compare studies</RouterLink
+        >
+      </nav>
+    </div>
 
     <div class="flex flex-row gap-6 items-center">
       <img
-        src="../images/logo/agrinatura.png"
+        src="@images/logo/agrinatura.png"
         height="60"
         width="116"
         alt="agrinatura network logo"
       />
-      <img src="../images/logo/vca4d.jpg" height="62" width="153" alt="VCA4D logo" />
+      <img src="@images/logo/vca4d.jpg" height="62" width="153" alt="VCA4D logo" />
       <img
-        src="../images/logo/european_commission.jpg"
+        src="@images/logo/european_commission.jpg"
         height="81"
         width="117"
         alt="european commission logo"
@@ -51,7 +64,13 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
+const route = useRoute()
+import Svg from '@components/Svg.vue'
+import ArrowsLogo from '@images/icons/left-right-arrows.svg'
+import HouseLogo from '@images/icons/house.svg'
+import WorldLogo from '@images/icons/world.svg'
+import { computed } from 'vue'
 
 defineProps({
   skipFooter: {
@@ -59,6 +78,7 @@ defineProps({
     default: false
   }
 })
+const routeName = computed(() => route.name)
 </script>
 
 <style scoped lang="scss">
@@ -70,14 +90,48 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  padding-left: 50rem;
+  .header-title {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 
-  & > a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #929292;
-    text-transform: uppercase;
-    text-decoration: none;
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #929292;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  height: 25px;
+  align-items: center;
+
+  .link {
+    font-size: 20px;
+
+    color: #3f83f8;
+
+    .icon {
+      height: 20px;
+      margin: 0 5px 6px 0;
+      display: inline-block;
+    }
+
+    &:hover {
+      color: #1a56db;
+    }
+
+    &.active {
+      color: black;
+      cursor: default;
+      pointer-events: none;
+    }
   }
 }
 

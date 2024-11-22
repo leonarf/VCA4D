@@ -4,6 +4,15 @@
 
 <script setup>
 import { RouterView } from 'vue-router'
+
+import { getAllJsonData, getStudyData, logMissingData } from '@utils/data'
+import { onMounted } from 'vue'
+
+onMounted(async () => {
+  const allJsonData = getAllJsonData()
+  const studiesData = await Promise.all(allJsonData.studies.map((study) => getStudyData(study.id)))
+  logMissingData(studiesData)
+})
 </script>
 
 <style lang="scss">

@@ -13,7 +13,7 @@
 <script setup>
 import { vTooltip } from 'floating-vue'
 import Svg from '@components/Svg.vue'
-import QuestionMark from '../../images/icons/info-question.svg'
+import QuestionMark from '@images/icons/info-question.svg'
 import sanitize from 'sanitize-html'
 
 defineProps({

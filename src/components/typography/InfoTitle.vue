@@ -17,7 +17,7 @@
 <script setup>
 import { vTooltip } from 'floating-vue'
 import sanitize from 'sanitize-html'
-import QuestionMark from '../../images/icons/info-question.svg'
+import QuestionMark from '@images/icons/info-question.svg'
 import Svg from '@components/Svg.vue'
 
 defineProps({
