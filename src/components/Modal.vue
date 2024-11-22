@@ -13,7 +13,7 @@
 
 <script setup>
 import Svg from '@components/Svg.vue'
-import Cross from '../images/icons/cross.svg'
+import Cross from '@images/icons/cross.svg'
 defineProps({
   opened: Boolean
 })

@@ -47,7 +47,7 @@ import Card from '@components/home/Card.vue'
 import CardFooter from '@components/home/CardFooter.vue'
 import Svg from '@components/Svg.vue'
 import AddStudiesButton from '@components/comparison/AddStudiesButton.vue'
-import CrossLogo from '../../images/icons/cross.svg'
+import CrossLogo from '@images/icons/cross.svg'
 
 const props = defineProps({
   studies: Array

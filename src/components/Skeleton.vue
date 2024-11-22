@@ -17,14 +17,14 @@
 
     <div class="flex flex-row gap-6 items-center">
       <img
-        src="../images/logo/agrinatura.png"
+        src="@images/logo/agrinatura.png"
         height="60"
         width="116"
         alt="agrinatura network logo"
       />
-      <img src="../images/logo/vca4d.jpg" height="62" width="153" alt="VCA4D logo" />
+      <img src="@images/logo/vca4d.jpg" height="62" width="153" alt="VCA4D logo" />
       <img
-        src="../images/logo/european_commission.jpg"
+        src="@images/logo/european_commission.jpg"
         height="81"
         width="117"
         alt="european commission logo"
@@ -67,9 +67,9 @@
 import { RouterLink, useRoute } from 'vue-router'
 const route = useRoute()
 import Svg from '@components/Svg.vue'
-import ArrowsLogo from '../images/icons/left-right-arrows.svg'
-import HouseLogo from '../images/icons/house.svg'
-import WorldLogo from '../images/icons/world.svg'
+import ArrowsLogo from '@images/icons/left-right-arrows.svg'
+import HouseLogo from '@images/icons/house.svg'
+import WorldLogo from '@images/icons/world.svg'
 import { computed } from 'vue'
 
 defineProps({

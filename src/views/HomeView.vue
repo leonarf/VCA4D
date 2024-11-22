@@ -97,7 +97,7 @@ section.banner {
   height: 25rem;
   width: 100%;
 
-  background-image: url('../images/home-banner.jpg');
+  background-image: url('@images/home-banner.jpg');
   background-position: center center;
 
   display: flex;

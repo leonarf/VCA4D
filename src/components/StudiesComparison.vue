@@ -43,7 +43,7 @@ import ComparisonSeparator from '@components/comparison/ComparisonSeparator.vue'
 import { comparisonConfig } from './comparison/comparisonConfig'
 import ComparisonSection from './comparison/ComparisonSection.vue'
 import Svg from '@components/Svg.vue'
-import DowloadLogo from '../images/icons/download.svg'
+import DowloadLogo from '@images/icons/download.svg'
 import { downloadComparisonXlsx } from './comparison/export'
 
 defineProps({

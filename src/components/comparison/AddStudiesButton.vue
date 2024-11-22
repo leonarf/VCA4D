@@ -16,7 +16,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
-import PlusLogo from '../../images/icons/plus.svg'
+import PlusLogo from '@images/icons/plus.svg'
 import Svg from '@components/Svg.vue'
 import Modal from '@components/Modal.vue'
 import StudiesListTable from './StudiesListTable.vue'

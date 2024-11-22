@@ -68,7 +68,7 @@ If a commodity doesn't have an icon, you can add one in `src/images/icons/produc
 - Import it in `src/views/HomeView.vue`
 
 ```
-import PeanutLogo from '../images/icons/products/peanut.svg'
+import PeanutLogo from '@images/icons/products/peanut.svg'
 ```
 
 - Add a case in this section
