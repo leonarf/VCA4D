@@ -115,16 +115,10 @@ nav {
   .link {
     font-size: 20px;
 
-    color: #3f83f8;
-
     .icon {
       height: 20px;
       margin: 0 5px 6px 0;
       display: inline-block;
-    }
-
-    &:hover {
-      color: #1a56db;
     }
 
     &.active {
@@ -148,5 +142,9 @@ nav {
 footer {
   min-height: 10rem;
   background-color: #d1d5db;
+
+  a {
+    color: inherit;
+  }
 }
 </style>

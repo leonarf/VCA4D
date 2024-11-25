@@ -48,16 +48,11 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #3f83f8;
   text-align: center;
   min-width: 100px;
 
   .plus {
     height: 30px;
-  }
-
-  &:hover {
-    color: #1c64f2;
   }
 }
 .modal-title {

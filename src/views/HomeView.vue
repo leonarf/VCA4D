@@ -164,8 +164,6 @@ section.banner {
 }
 
 .link {
-  color: #1c64f2;
-
   &:hover {
     text-decoration: underline;
   }

@@ -82,7 +82,6 @@ const displayedLinksColumns = computed(() => {
 
     .url-title {
       cursor: pointer;
-      color: #2e6bad;
 
       &:hover {
         text-decoration: underline;

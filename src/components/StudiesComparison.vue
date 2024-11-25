@@ -89,13 +89,9 @@ table {
   display: flex;
   gap: 3px;
   cursor: pointer;
-  color: #3f83f8;
   align-items: baseli;
-
-  &:hover {
-    color: #1c64f2;
-  }
 }
+
 .download-logo {
   height: 20px;
   width: 20px;

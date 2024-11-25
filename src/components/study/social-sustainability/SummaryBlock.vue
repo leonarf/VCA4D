@@ -8,7 +8,7 @@
 
     <slot />
     <div class="browsable-radar-chart__item__more-info">
-      <a class="cursor-pointer font-bold text-[#2e6bad]" @click="slideTo(anchorLink)"
+      <a class="cursor-pointer font-bold" @click="slideTo(anchorLink)"
         >Explore all questions &rarr;</a
       >
     </div>
