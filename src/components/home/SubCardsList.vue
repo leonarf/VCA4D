@@ -4,7 +4,7 @@
       <slot />
     </div>
     <div v-if="link" class="text-center w-full">
-      <RouterLink :to="link" class="text-[#2E6BAD] underline">
+      <RouterLink :to="link" class="underline">
         {{ linkTitle }}
       </RouterLink>
     </div>

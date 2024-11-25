@@ -37,11 +37,6 @@ const emits = defineEmits(['click-clear'])
 
   .remove-action {
     cursor: pointer;
-    color: #3f83f8;
-
-    &:hover {
-      color: #1c64f2;
-    }
   }
 }
 </style>

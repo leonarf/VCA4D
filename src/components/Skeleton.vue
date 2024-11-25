@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header-title">
-      <div class="title">VCA4D Information System</div>
+      <div class="title"><strong>VCA4D</strong> Information System</div>
       <nav>
         <RouterLink class="link" :class="{ active: routeName === 'home' }" to="home">
           <Svg class="icon" :svg="HouseLogo" />Home</RouterLink
@@ -97,7 +97,6 @@ header {
 
     .title {
       font-size: 1.5rem;
-      font-weight: bold;
       color: #929292;
       text-transform: uppercase;
       text-decoration: none;
@@ -115,16 +114,10 @@ nav {
   .link {
     font-size: 20px;
 
-    color: #3f83f8;
-
     .icon {
       height: 20px;
       margin: 0 5px 6px 0;
       display: inline-block;
-    }
-
-    &:hover {
-      color: #1a56db;
     }
 
     &.active {
@@ -148,5 +141,9 @@ nav {
 footer {
   min-height: 10rem;
   background-color: #d1d5db;
+
+  a {
+    color: inherit;
+  }
 }
 </style>

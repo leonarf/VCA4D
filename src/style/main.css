@@ -121,6 +121,13 @@ h2,
   margin-bottom: 1rem;
 }
 
+a {
+  color: #2991cd;
+}
+a:hover {
+  color: #2e6bad;
+}
+
 h3 {
   font-size: 20px;
   font-weight: 600;

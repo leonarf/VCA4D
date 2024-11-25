@@ -1,5 +1,22 @@
 <template>
-  <h2>The various actors and their share in the flows of the value chain</h2>
+  <h2>Flow chart of the value chain</h2>
+  <div class="sankey-description">
+    <p>
+      This Sankey diagram allows you to visualise the flows of physical goods and value within one
+      specific value chain.
+    </p>
+    <p>
+      First, you can see the stages (nodes) of the value chain (coloured vertical bars, from
+      production up to end use) and the different actors within one stage.
+    </p>
+    <p>
+      Second, the nodes are connected thanks to the lines, which width represents the amount of
+      physical goods or value that flow between them.
+    </p>
+    <p>
+      When clicking on one node, you highlight the upstream and downstream flows connected to it.
+    </p>
+  </div>
   <RadioInput
     title="Unit selection"
     :options="sankeyGraphPossibleDisplayModesList"
@@ -87,6 +104,12 @@ function sortOnEarlierStage(stage1, stage2) {
 </script>
 
 <style scoped lang="scss">
+.sankey-description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
 .legend {
   margin-top: 30px;
   display: flex;
