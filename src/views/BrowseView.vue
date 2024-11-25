@@ -17,7 +17,7 @@
               @toggle="toggleFilter('acvData')"
             />
             <FilterInput
-              label="With social profil"
+              label="With social profile"
               :value="mandatoryStudiesFilter.socialData"
               @toggle="toggleFilter('socialData')"
             />
