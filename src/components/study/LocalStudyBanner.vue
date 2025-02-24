@@ -4,7 +4,7 @@
       <div class="warning">⚠️ <b>NOT PUBLISHED : </b>&nbsp;</div>
       <div>
         This study hasn’t been published to the web and is only available on your device. Once
-        ready, publish it by contacting BASIC or &nbsp;<a
+        ready, publish it by adding the files on the GitHub repository, or &nbsp;<a
           class="remove-action"
           @click="emits('click-clear')"
           >click here to remove it from your device</a
