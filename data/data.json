@@ -180,6 +180,10 @@
       "iso": "ke"
     },
     {
+      "id": "liberia",
+      "prettyName": "liberia"
+    },
+    {
       "id": "mali",
       "prettyName": "Mali",
       "continent": "Africa",
@@ -421,6 +425,13 @@
       "year": null,
       "country": "kenya",
       "product": "green beans"
+    },
+    {
+      "id": "cocoa-liberia",
+      "title": "liberia Cocoa",
+      "year": 2023,
+      "country": "liberia",
+      "product": "cocoa"
     },
     {
       "id": "cashew-mali",
