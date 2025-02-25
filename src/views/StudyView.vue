@@ -92,7 +92,8 @@ const views = computed(() => {
     {
       key: 'overview',
       label: 'Functional Analysis',
-      accessible: [hasEco, hasSocial, hasACV].filter((hasStudyPart) => hasStudyPart).length >= 2,
+      accessible:
+        hasEco || [hasEco, hasSocial, hasACV].filter((hasStudyPart) => hasStudyPart).length >= 2,
       component: StudyOverview
     },
     {
