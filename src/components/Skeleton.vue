@@ -39,7 +39,7 @@
   <footer v-if="!skipFooter">
     <ul>
       <li>
-        <a target="_blank" class="hover:underline" href="https://github.com/leonarf/VCA4D"
+        <a target="_blank" class="hover:underline" href="https://github.com/VCA4D/VCA4D"
           >Source code on Github</a
         >
       </li>
