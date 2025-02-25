@@ -181,7 +181,9 @@
     },
     {
       "id": "liberia",
-      "prettyName": "liberia"
+      "prettyName": "Liberia"
+      "continent": "Africa",
+      "iso": "lr"
     },
     {
       "id": "mali",
