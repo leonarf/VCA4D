@@ -1,0 +1,434 @@
+{
+  "id": "cocoa-liberia",
+  "country": "liberia",
+  "commodity": "Cocoa",
+  "year": 2023,
+  "localCurrency": "USD",
+  "targetCurrency": "USD",
+  "currencyRatio": 1,
+  "type": "eco",
+  "ecoData": {
+    "macroData": {
+      "giniIndex": 0.72,
+      "FTE_Definition": 320,
+      "rateOfIntegration": 0.5670000000000001,
+      "publicFundsBalance": 0.002,
+      "valueAddedShareNationalGdp": 0.009000000000000001,
+      "valueAddedShareAgriculturalGdp": 0.026000000000000002,
+      "domesticResourceCostRatio": 0.3,
+      "nominalProtectionCoefficient": 1
+    },
+    "stages": [
+      {
+        "name": "Producers",
+        "description": "blalbala",
+        "index": 0
+      },
+      {
+        "name": "Collectors",
+        "description": "blalbala",
+        "index": 1
+      },
+      {
+        "name": "Processors",
+        "description": "blalbala",
+        "index": 2
+      },
+      {
+        "name": "Wholesellers",
+        "description": "blalbala",
+        "index": 3
+      },
+      {
+        "name": "Retailers",
+        "description": "blalbala",
+        "index": 4
+      },
+      {
+        "name": "End use",
+        "description": "blalbala",
+        "index": 5
+      }
+    ],
+    "actors": [
+      {
+        "name": "ProdCOM",
+        "stage": "Producers",
+        "id": 188,
+        "numberOfActors": 1041.6666252745538,
+        "directAddedValue": 1051829,
+        "publicFundsBalance": -18902.439024390304,
+        "netOperatingProfit": 858536.5853658533,
+        "totalCosts": 301829.2682926834,
+        "receivedAddedValue": 858537
+      },
+      {
+        "name": "ProdCOL",
+        "stage": "Producers",
+        "id": 189,
+        "numberOfActors": 3500.0001092751854,
+        "directAddedValue": 1978491,
+        "publicFundsBalance": 47068.70433262418,
+        "netOperatingProfit": 1337179.7813672195,
+        "totalCosts": 853120.2633293757,
+        "receivedAddedValue": 1337180
+      },
+      {
+        "name": "ProdFAM",
+        "stage": "Producers",
+        "id": 190,
+        "numberOfActors": 8470.588146196518,
+        "directAddedValue": 4058425,
+        "publicFundsBalance": 111157.894736842,
+        "netOperatingProfit": 2921583.0592105226,
+        "totalCosts": 1510736.842105267,
+        "receivedAddedValue": 2921583
+      },
+      {
+        "name": "ProdEXT",
+        "stage": "Producers",
+        "id": 191,
+        "numberOfActors": 9750.000217929488,
+        "directAddedValue": 997265,
+        "publicFundsBalance": 106363.636363636,
+        "netOperatingProfit": -422689.1493363811,
+        "totalCosts": 1786909.090909091,
+        "receivedAddedValue": -422689
+      },
+      {
+        "name": "ProdABA",
+        "stage": "Producers",
+        "id": 192,
+        "numberOfActors": 12372.727339770183,
+        "directAddedValue": 7222864,
+        "publicFundsBalance": 205989.189189189,
+        "netOperatingProfit": 4986410.08894637,
+        "totalCosts": 2744070.2702702684,
+        "receivedAddedValue": 4986410
+      },
+      {
+        "name": "ProdRCI",
+        "stage": "Producers",
+        "id": 193,
+        "numberOfActors": 1,
+        "directAddedValue": 0,
+        "publicFundsBalance": 0,
+        "netOperatingProfit": 0,
+        "totalCosts": 23580900,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "TCOOP",
+        "stage": "Collectors",
+        "id": 194,
+        "numberOfActors": 85,
+        "directAddedValue": -276250,
+        "publicFundsBalance": -8213720,
+        "netOperatingProfit": 4779975,
+        "totalCosts": 6572115,
+        "receivedAddedValue": 4779975
+      },
+      {
+        "name": "TUnlic",
+        "stage": "Wholesellers",
+        "id": 195,
+        "numberOfActors": 1511.7833889833157,
+        "directAddedValue": 4036879,
+        "publicFundsBalance": 92218.7898089172,
+        "netOperatingProfit": 2795705.2367386622,
+        "totalCosts": 15717594.763261339,
+        "receivedAddedValue": 2795705
+      },
+      {
+        "name": "TLic",
+        "stage": "Wholesellers",
+        "id": 196,
+        "numberOfActors": 74.67578125,
+        "directAddedValue": 7301276,
+        "publicFundsBalance": 165110.570625,
+        "netOperatingProfit": 6443388.409945337,
+        "totalCosts": 38975086.96505466,
+        "receivedAddedValue": 6443388.012127772
+      },
+      {
+        "name": "ExpWW",
+        "stage": "Wholesellers",
+        "id": 197,
+        "numberOfActors": 7.996862745098039,
+        "directAddedValue": 8765663,
+        "publicFundsBalance": 3132182.2352470546,
+        "netOperatingProfit": 3315597.9998901873,
+        "totalCosts": 56325823.270698056,
+        "receivedAddedValue": 3315598
+      },
+      {
+        "name": "MarketNC",
+        "stage": "End use",
+        "id": 198,
+        "receivedAddedValue": 0
+      },
+      {
+        "name": "MarketWW",
+        "stage": "End use",
+        "id": 199,
+        "receivedAddedValue": 0
+      }
+    ],
+    "consistencyDisplay": {
+      "employment": {
+        "contractRatio": false,
+        "genderRatio": false
+      }
+    },
+    "flows": [
+      {
+        "sellerActorName": "ProdCOM",
+        "buyerActorName": "TLic",
+        "volumeExchanged": 625,
+        "monetaryValue": 1125000,
+        "unitPrice": 1800,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "ProdCOL",
+        "buyerActorName": "TLic",
+        "volumeExchanged": 195,
+        "monetaryValue": 290550,
+        "unitPrice": 1490,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "ProdCOL",
+        "buyerActorName": "TCOOP",
+        "volumeExchanged": 1275,
+        "monetaryValue": 1899750,
+        "unitPrice": 1490,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "ProdFAM",
+        "buyerActorName": "TUnlic",
+        "volumeExchanged": 2880,
+        "monetaryValue": 4432320,
+        "unitPrice": 1539,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "ProdEXT",
+        "buyerActorName": "TUnlic",
+        "volumeExchanged": 1170,
+        "monetaryValue": 1364220,
+        "unitPrice": 1166,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "ProdABA",
+        "buyerActorName": "TUnlic",
+        "volumeExchanged": 5444,
+        "monetaryValue": 7730480,
+        "unitPrice": 1420,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "ProdRCI",
+        "buyerActorName": "TLic",
+        "volumeExchanged": 12411,
+        "monetaryValue": 23580900,
+        "unitPrice": 1900,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "TCOOP",
+        "buyerActorName": "ExpWW",
+        "volumeExchanged": 1275,
+        "monetaryValue": 2932500,
+        "unitPrice": 2300,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "TUnlic",
+        "buyerActorName": "TLic",
+        "volumeExchanged": 1785.6,
+        "monetaryValue": 3481920,
+        "unitPrice": 1950,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "TUnlic",
+        "buyerActorName": "MarketNC",
+        "volumeExchanged": 1094.4,
+        "monetaryValue": 2134080,
+        "unitPrice": 1950,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "TUnlic",
+        "buyerActorName": "TLic",
+        "volumeExchanged": 3375.28,
+        "monetaryValue": 6581796,
+        "unitPrice": 1950,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "TUnlic",
+        "buyerActorName": "MarketNC",
+        "volumeExchanged": 2068.72,
+        "monetaryValue": 4034003.9999999995,
+        "unitPrice": 1950,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "TUnlic",
+        "buyerActorName": "TLic",
+        "volumeExchanged": 725.4,
+        "monetaryValue": 1414530,
+        "unitPrice": 1950,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "TUnlic",
+        "buyerActorName": "MarketNC",
+        "volumeExchanged": 444.6,
+        "monetaryValue": 866970,
+        "unitPrice": 1950,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "TLic",
+        "buyerActorName": "ExpWW",
+        "volumeExchanged": 625,
+        "monetaryValue": 1484375,
+        "unitPrice": 2375,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "TLic",
+        "buyerActorName": "ExpWW",
+        "volumeExchanged": 195,
+        "monetaryValue": 463125,
+        "unitPrice": 2375,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "TLic",
+        "buyerActorName": "ExpWW",
+        "volumeExchanged": 5886.28,
+        "monetaryValue": 13979915,
+        "unitPrice": 2375,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "TLic",
+        "buyerActorName": "ExpWW",
+        "volumeExchanged": 12411,
+        "monetaryValue": 29476125,
+        "unitPrice": 2375,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "ExpWW",
+        "buyerActorName": "MarketWW",
+        "volumeExchanged": 19117.28,
+        "monetaryValue": 55822457.599999994,
+        "unitPrice": 2920,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      },
+      {
+        "sellerActorName": "ExpWW",
+        "buyerActorName": "MarketWW",
+        "volumeExchanged": 1275,
+        "monetaryValue": 3723000,
+        "unitPrice": 2920,
+        "volumeUnit": "Ton",
+        "product": "Dry bean"
+      }
+    ],
+    "addedValue": {
+      "landOwnersFees": 0,
+      "depreciation": 2058389,
+      "employeeWages": 9744260,
+      "financialInstitutionsInterests": 690638,
+      "government": -4372532.012127778
+    },
+    "importExport": {
+      "import": [
+        {
+          "label": "Assistance farmers",
+          "importExport": "Import",
+          "amount": 153000
+        },
+        {
+          "label": "Chemicals",
+          "importExport": "Import",
+          "amount": 387387
+        },
+        {
+          "label": "Dry bean",
+          "importExport": "Import",
+          "amount": 23580900
+        },
+        {
+          "label": "Energy",
+          "importExport": "Import",
+          "amount": 0
+        },
+        {
+          "label": "Others",
+          "importExport": "Import",
+          "amount": 0
+        },
+        {
+          "label": "Rents",
+          "importExport": "Import",
+          "amount": 0
+        },
+        {
+          "label": "Small Eqpmt",
+          "importExport": "Import",
+          "amount": 869783
+        },
+        {
+          "label": "Transport farmers",
+          "importExport": "Import",
+          "amount": 892500
+        },
+        {
+          "label": "Transportation",
+          "importExport": "Import",
+          "amount": 0
+        },
+        {
+          "label": "A_SERVICE",
+          "importExport": "Import",
+          "amount": 0
+        },
+        {
+          "label": "Others",
+          "importExport": "Import",
+          "amount": 0
+        }
+      ],
+      "export": []
+    },
+    "farmToFinalPricesRatio": []
+  }
+}
