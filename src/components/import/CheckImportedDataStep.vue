@@ -2,7 +2,7 @@
   <div>
     <h2>Step 2 : Check that all data is there.</h2>
     <p>Complete the file for missing data, then re-upload the file (back to step 1).</p>
-    <a href="https://github.com/leonarf/VCA4D/tree/main/data/xls" target="_blank"
+    <a href="https://github.com/VCA4D/VCA4D/tree/main/data/xls" target="_blank"
       >Here you can find example blank file to help you upload your study</a
     >
 

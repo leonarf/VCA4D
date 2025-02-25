@@ -7,7 +7,7 @@
 @import 'tailwindcss/utilities';
 
 /* https://fonts.cdnfonts.com/css/source-sans-pro */
-/* Updated without the local reference, see https://github.com/leonarf/VCA4D/pull/108 */
+/* Updated without the local reference, see https://github.com/VCA4D/VCA4D/pull/108 */
 @font-face {
   font-family: source sans pro;
   font-style: normal;

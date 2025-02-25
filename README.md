@@ -50,7 +50,7 @@ npm run prettier
 
 - Download the two files (using the two blue buttons).
 - With the current github hosting, you just need to replace the `data.json` file and add the study file in the correct folder inside /data/ in a Pull Request on the `main` branch.
-- Merging on main will automatically deploy [the new website](https://leonarf.github.io/VCA4D/dist/)
+- Merging on main will automatically deploy [the new website](https://VCA4D.github.io/VCA4D/dist/)
 - If you have a 6-page PDF summary, or the full report PDF, you can add them in the same folder previously created. The PDF name should have the same name as the study json file. (For example, if the study file is named `banana-mali-social.json` or `banana-mali-eco.json`, the pdf should be named `banana-mali-brief-report.pdf` or `banana-mali-full-report.pdf`)
 
 ### Unknown commodity

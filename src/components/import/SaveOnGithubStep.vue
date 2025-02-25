@@ -28,8 +28,8 @@
 
       <p>
         Go to
-        <a href="https://github.com/leonarf/VCA4D/tree/main/data"
-          >https://github.com/leonarf/VCA4D/tree/main/data</a
+        <a href="https://github.com/VCA4D/VCA4D/tree/main/data"
+          >https://github.com/VCA4D/VCA4D/tree/main/data</a
         >
         with a VCA4D authorised account
       </p>
